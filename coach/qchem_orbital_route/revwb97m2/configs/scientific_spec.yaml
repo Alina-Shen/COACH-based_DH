@@ -1,30 +1,22 @@
 # Authoritative scientific specification for the COACH-form revision of omegaB97M(2).
-schema_version: 3
+schema_version: 2
 status: frozen
 
 scientific_specification:
   name: revwb97m2_coach_form
-  version: 3
-  frozen_on: "2026-08-29"
+  version: 2
+  frozen_on: "2026-08-28"
   authority: revwb97m2/configs/scientific_spec.yaml
-  supersedes: revwb97m2/configs/archive/scientific_spec.v2.yaml
+  supersedes: revwb97m2/configs/archive/scientific_spec.v1.yaml
   amendment:
-    decision: replace_qchem_orbitals_with_fixed_pyscf_wb97m_v_parents
+    decision: follow_authoritative_gscdb_per_species_basis_assignments
     reason: >-
-      The maintained released COACH data-generation route is PySCF-native.
-      The matched h2o_SW49 gateway reproduced the Q-Chem omegaB97M-V parent
-      and scaled opposite-spin RIMP2 contribution within 1.3e-8 hartree, and
-      PySCF density-fitted UMP2 agreed with conventional UMP2 within the frozen
-      0.015 kcal/mol numerical threshold. Q-Chem orbitals are therefore no
-      longer production inputs.
+      COACH/GSCDB does not use a uniform def2-QZVPPD orbital basis. The pinned
+      GSCDB137 manifest assigns 14 basis labels across 13,907 core species.
     changed_fields:
-      - provenance.record_at_runtime
-      - orbital_source
       - orbital_source.basis
       - double_hybrid_energy.pt2.auxiliary_basis
-      - validation.required_gates_before_pilot
-      - execution_protocol
-      - safety
+      - data_policy.metadata_paths
   change_control: >-
     Scientific changes require a version increment, a written rationale, and
     rerunning every affected validation gate.
@@ -50,7 +42,8 @@ project:
       - documentation
       - slurm_submission_scripts
     heavy_data:
-      - parent_scf_checkpoints
+      - orbital_scratch_copies
+      - checkpoints
       - integrated_dv_matrices
       - feature_arrays
       - processed_training_matrices
@@ -70,36 +63,30 @@ provenance:
     - scientific_specification_version
     - scientific_specification_sha256
     - git_commit
-    - input_manifest_sha256
-    - parent_checkpoint_sha256
+    - source_orbital_directory
+    - source_orbital_manifest_sha256
     - python_version
     - pyscf_version
     - libxc_version
     - numpy_version
     - scipy_version
+    - qchem_version
     - gurobi_version
     - hostname
     - timestamp_utc
 
 orbital_source:
-  policy: self_consistent_once_per_species_then_fix_for_all_feature_evaluation
-  source_engine: pyscf
-  checkpoint_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species
-  checkpoint_name: wb97m_v_scf.chk
-  checkpoint_is_immutable_after_validation: true
-  checkpoint_reuse_requires_matching_input_and_specification_hashes: true
+  policy: copy_then_read_without_orbital_optimization
+  source_engine: qchem
+  source_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2
+  verified_copy_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/orbitals/wb97m_v_qchem_scratch
+  original_source_is_immutable: true
+  verified_copy_is_immutable_input: true
+  jobs_use_disposable_per_species_scratch_copy: true
+  source_completion_marker: .staged.ok
   functional: omegaB97M-V
-  pyscf_xc_label: wb97m-v
-  self_consistent: true
-  fixed_during_feature_generation_and_fitting: true
-  qchem_orbitals_are_production_inputs: false
-  qchem_role: cross_engine_regression_and_input_metadata_provenance_only
-  input_definition:
-    policy: preserve_verified_gscdb137_identity_while_changing_only_the_engine
-    metadata_source: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1
-    metadata_fields_used: [geometry, charge, multiplicity, orbital_basis, auxiliary_basis, ecp]
-    orbital_files_used: false
-    require_source_hash_validation: true
+  observed_qchem_method_label: WB97M(OS)
+  method_label_requires_gateway_validation: true
   basis:
     policy: per_species_from_authoritative_gscdb_manifest
     manifest: revwb97m2/manifests/gscdb137/species_manifest.csv
@@ -107,8 +94,8 @@ orbital_source:
     scope_field: scope
     core_scope_value: gscdb137
     basis_field: basis
-    require_pyscf_semantic_translation_validation: true
-    translate_generated_basis_and_ecp_sections: true
+    require_qchem_input_semantic_match: true
+    preserve_generated_basis_sections: true
     forbid_uniform_override: true
     expected_core_species: 13907
     expected_core_distribution:
@@ -127,15 +114,12 @@ orbital_source:
       AUG-CC-PV5Z: 2
       aug-cc-pCV5Z: 2
   counterpoise_correction: false
-  charge_source: verified_input_metadata
-  multiplicity_source: verified_input_metadata
+  charge_source: qchem_molecule_record
+  multiplicity_source: qchem_molecule_record
   reference_policy:
-    closed_shell_singlet: unrestricted
+    closed_shell_singlet: restricted
     open_shell: unrestricted
-    rationale: >-
-      Match the maintained COACH PySCF generator and the successful
-      h2o_SW49 Q-Chem/PySCF RIMP2 comparison. Record spin contamination and
-      stability for every species.
+    preserve_existing_reference: true
   range_separation:
     omega_bohr_inverse: 0.3
     long_range_hf_fraction: 1.0
@@ -144,13 +128,11 @@ orbital_source:
     forbid_hardcoded_wb97xv_fraction_0_167: true
   validation:
     require_expected_species_manifest: true
-    require_input_manifest_hash_match: true
+    require_source_copy_comparison: true
     require_parent_energy_reconstruction: true
     require_reference_type_audit: true
     require_open_shell_gateway_case: true
-    require_checkpoint_reload_identity: true
-    stability_policy: record_and_flag_without_automatic_solution_replacement
-    passed_closed_shell_rimp2_gateway: revwb97m2/results/2026-08-29-pyscf-qchem-rimp2-h2o-sw49.json
+    stability_policy: record_existing_and_flag_unknown
 
 published_reproduction:
   purpose: regression_only
@@ -192,12 +174,12 @@ double_hybrid_energy:
     amplitudes: canonical_mp2
     frozen_core: true
     auxiliary_basis:
-      policy: per_species_verified_input_metadata_translated_to_pyscf
+      policy: preserve_per_species_qchem_input
+      qchem_rem_field: AUX_BASIS_CORR
+      preserve_generated_aux_basis_sections: true
       manifest_advisory_field: aux_basis_corr
-      metadata_field: AUX_BASIS_CORR
-      translate_generated_aux_basis_sections: true
-      require_element_and_shell_coverage_validation: true
-      require_pyscf_alias_mapping_validation: true
+      qchem_input_is_authoritative_on_disagreement: true
+      require_gateway_validation: true
     denominator_regularization: none
     attenuation: none
     fitted_feature: total_pt2_correlation
@@ -384,7 +366,7 @@ data_policy:
   species_manifest: revwb97m2/manifests/gscdb137/species_manifest.csv
   source_provenance: revwb97m2/manifests/gscdb137/source_provenance.json
   must_set_metadata_paths_before_fit: true
-  species_manifest_required_before_parent_generation: true
+  species_manifest_required_before_orbital_copy: true
   external_evaluation:
     BigNC:
       part_of_gscdb137: false
@@ -399,20 +381,6 @@ data_policy:
   weighting_policy: identical_across_comparison_models
   failed_species_policy: stop_and_report
   failed_reaction_policy: stop_and_report
-
-execution_protocol:
-  base_orbital_training_cycles: 1
-  parent_method_for_cycle: omegaB97M-V
-  update_parent_orbitals_from_fitted_model: false
-  fitting_selection_and_weights: updated_coach_si_final_cycle_table_2
-  fitting_weight_manifest: null
-  require_validated_machine_readable_weight_manifest_before_fit: true
-  numerical_grid_optimization_passes: 2
-  pass_1: unconstrained_grid_sensitivity_discovery
-  pass_2: selected_grid_difference_constraints
-  note: >-
-    The two grid passes are part of one fixed-parent training cycle and do not
-    regenerate orbitals or scalar features.
 
 optimization:
   solver: gurobi
@@ -440,17 +408,11 @@ validation:
   published_wb97m2_reaction_tolerance_kcal_per_mol: 1.0e-3
   reaction_matrix_identity_tolerance_hartree: 1.0e-12
   equality_constraint_tolerance: 1.0e-10
-  cross_engine_parent_tolerance_hartree: 2.0e-6
-  cross_engine_scaled_os_rimp2_tolerance_hartree: 5.0e-6
-  ri_mp2_vs_conventional_threshold_kcal_per_mol: 0.015
-  passed_rimp2_gateway_report: revwb97m2/results/2026-08-29-pyscf-qchem-rimp2-h2o-sw49.json
   required_gates_before_pilot:
     - scientific_specification_schema
     - semantic_integrated_dv_rows_match_final_coach_kernels
-    - pyscf_rimp2_h2o_sw49_cross_engine
-    - pyscf_parent_checkpoint_reload_identity
-    - pyscf_open_shell_parent_and_ump2
-    - pyscf_generated_basis_ecp_and_auxiliary_basis_translation
+    - qchem_scratch_gateway_closed_shell
+    - qchem_scratch_gateway_open_shell
     - wb97m_v_parent_energy_from_components
     - published_wb97m2_energy_from_features
     - reaction_features_from_species_stoichiometry
@@ -474,7 +436,4 @@ safety:
   save_failure_reason: true
   never_store_secrets_in_outputs: true
   production_run_requires_dry_run_first: true
-  qchem_orbitals_must_not_be_used_as_production_inputs: true
-  preserve_qchem_route_backup: true
-  qchem_route_code_backup: coach/qchem_orbital_route
-  qchem_route_smoke_backup: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/qchem_orbital_route
+  original_orbital_source_must_remain_unchanged: true

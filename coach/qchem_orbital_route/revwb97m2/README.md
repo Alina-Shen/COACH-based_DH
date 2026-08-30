@@ -5,7 +5,7 @@ omegaB97M(2) practice. The upstream `../coach/` checkout is treated as read-only
 
 ## Authoritative scientific specification
 
-The frozen version-3 specification is
+The frozen version-2 specification is
 [`configs/scientific_spec.yaml`](configs/scientific_spec.yaml), with rationale
 in [`docs/scientific_specification.md`](docs/scientific_specification.md). Run
 its independent validation gate with:
@@ -43,10 +43,9 @@ weighting evidence are explained in
 python scripts/validate_gscdb137_manifest.py
 ```
 
-Specification version 3 follows the manifest's per-species GSCDB basis
-assignments and translates verified named/generated basis, ECP, and auxiliary
-basis metadata into PySCF definitions. The earlier Q-Chem comparison utility
-remains available for provenance auditing:
+Specification version 2 follows the manifest's per-species GSCDB basis
+assignments and preserves generated Q-Chem basis blocks. Validate this policy
+against all core scratch inputs with:
 
 ```bash
 python scripts/validate_gscdb_basis_policy.py
@@ -120,12 +119,9 @@ sbatch /clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_r2_smoke.s
 The run directory is intentionally non-overwriting. A successful calculation
 contains both `CALCULATION_COMPLETE` and `SMOKE_PASS`.
 
-## Archived Q-Chem fixed-orbital gateway
+## Q-Chem fixed-orbital gateway
 
-The Q-Chem-orbital route is retired from production and preserved under
-`../coach/qchem_orbital_route` and
-`/clusterfs/mhg-data/yaoshen/coach-based_dh_data/qchem_orbital_route`. Its
-historical disposable gateway can be prepared with:
+Prepare the first disposable gateway case without running Q-Chem:
 
 ```bash
 python3.9 scripts/prepare_qchem_gateway.py prepare \
@@ -138,6 +134,6 @@ preserves an exact copy of the authoritative input, and creates a derived input
 whose only semantic changes are `MAX_SCF_CYCLES 0` and `GEN_SCFMAN FALSE`.
 `PREPARED.json`, `source_manifest.json`, `qchem_identity.json`, and
 `input.diff` record the provenance. Run `run_qchem.sh` only after reviewing the
-derived input and pinned Q-Chem build. It is reference/provenance material
-only. Production parents must be generated self-consistently in PySCF under
-specification version 3.
+derived input and pinned Q-Chem build. This first case tests gateway mechanics;
+it cannot establish production-feature validity while the same-spin
+integratedDV kernel mismatch remains unresolved.

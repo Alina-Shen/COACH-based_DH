@@ -1,0 +1,75 @@
+{
+  "checks": {
+    "parent_matches_qchem": true,
+    "ri_spin_components_sum": true,
+    "ri_total_matches_conventional": true,
+    "scaled_os_matches_qchem": true
+  },
+  "created_utc": "2026-08-30T03:20:55.514113+00:00",
+  "differences": {
+    "parent_pyscf_minus_qchem_hartree": -1.2962701134711097e-08,
+    "ri_minus_conventional_opposite_spin_hartree": 2.3047128622499802e-05,
+    "ri_minus_conventional_same_spin_hartree": -1.143858482831328e-05,
+    "ri_minus_conventional_total_hartree": 1.1608543794172643e-05,
+    "scaled_os_pyscf_minus_qchem_hartree": -1.1156964629943644e-08
+  },
+  "job": {
+    "atom": "H 0.6746410000 1.2911040000 3.5652750000\nO 0.1014890000 1.9431500000 3.9777450000\nH -0.4085620000 2.3032160000 3.2466410000",
+    "auxiliary_basis_pyscf": "def2-qzvppd-ri",
+    "auxiliary_basis_qchem": "rimp2-def2-QZVPPD",
+    "basis": "DEF2-QZVPPD",
+    "charge": 0,
+    "frozen_core": true,
+    "multiplicity": 1,
+    "spin": 0,
+    "unrestricted": true,
+    "xc_grid": {
+      "angular": 590,
+      "radial": 99
+    }
+  },
+  "passed": true,
+  "provenance": {
+    "numpy_version": "2.4.6",
+    "pyscf_version": "2.14.0",
+    "python_version": "3.11.15",
+    "qchem_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/h2o_SW49.in",
+    "qchem_input_sha256": "24d74f289c237aad78dece0deb231c82d9d6540eec5912e12a6c87cd2a9c5d4a",
+    "qchem_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/h2o_SW49.out",
+    "qchem_output_sha256": "9d5e641e65c64f34b5e227cf53ad45699871b264305a5b33faf31c4b0140d832",
+    "reused_calculation_report": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/2026-08-29-pyscf-qchem-rimp2-h2o-sw49.strict-preliminary.json",
+      "sha256": "01a365c25118ccbd46208392b677cf13940156fdab6c3320160052a0d7e958d1"
+    }
+  },
+  "pyscf": {
+    "conventional_ump2_reference": {
+      "correlation_energy_hartree": -0.3334129010954199,
+      "opposite_spin_energy_hartree": -0.2537413317712441,
+      "same_spin_energy_hartree": -0.07967156932417581
+    },
+    "density_fitted_ump2": {
+      "correlation_energy_hartree": -0.3334012925516257,
+      "opposite_spin_energy_hartree": -0.2537182846426216,
+      "same_spin_energy_hartree": -0.07968300790900412
+    },
+    "frozen_core_orbitals": 1,
+    "parent_energy_hartree": -76.4399676777627
+  },
+  "qchem": {
+    "opposite_spin_scale": 0.4534,
+    "parent_energy_hartree": -76.4399676648,
+    "scaled_opposite_spin_rimp2_hartree": -0.1150358591,
+    "unscaled_opposite_spin_rimp2_hartree": -0.2537182600352889
+  },
+  "schema_version": 1,
+  "tolerance_basis": {
+    "ri_vs_conventional": "COACH numerical-stability threshold: 0.015 kcal/mol converted to hartree",
+    "spin_components": "diagnostic only; the fitted feature is total PT2 correlation"
+  },
+  "tolerances_hartree": {
+    "parent_cross_engine": 2e-06,
+    "ri_vs_conventional": 2.3904021564725822e-05,
+    "scaled_os_cross_engine": 5e-06
+  }
+}

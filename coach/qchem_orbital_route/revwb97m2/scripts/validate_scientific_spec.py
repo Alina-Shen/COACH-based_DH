@@ -86,19 +86,19 @@ class Checks:
 
 def validate(config: dict[str, Any], config_path: Path) -> Checks:
     checks = Checks()
-    checks.check("schema_version_3", config.get("schema_version") == 3)
+    checks.check("schema_version_2", config.get("schema_version") == 2)
     checks.check("status_frozen", config.get("status") == "frozen")
 
     spec = config["scientific_specification"]
-    checks.check("specification_version_3", spec["version"] == 3)
+    checks.check("specification_version_2", spec["version"] == 2)
     checks.check("authority_matches_path", spec["authority"] == "revwb97m2/configs/scientific_spec.yaml")
     checks.check(
-        "version_2_archived",
-        spec["supersedes"] == "revwb97m2/configs/archive/scientific_spec.v2.yaml",
+        "version_1_archived",
+        spec["supersedes"] == "revwb97m2/configs/archive/scientific_spec.v1.yaml",
     )
     checks.check(
-        "pyscf_amendment_recorded",
-        spec["amendment"]["decision"] == "replace_qchem_orbitals_with_fixed_pyscf_wb97m_v_parents",
+        "basis_amendment_recorded",
+        spec["amendment"]["decision"] == "follow_authoritative_gscdb_per_species_basis_assignments",
     )
 
     project = config["project"]
@@ -114,25 +114,10 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     )
 
     orbital = config["orbital_source"]
-    checkpoint_root = Path(orbital["checkpoint_root"])
-    checks.check("orbital_source_pyscf", orbital["source_engine"] == "pyscf")
-    checks.check(
-        "orbital_source_fixed",
-        orbital["policy"] == "self_consistent_once_per_species_then_fix_for_all_feature_evaluation"
-        and orbital["self_consistent"] is True
-        and orbital["fixed_during_feature_generation_and_fitting"] is True,
-    )
-    checks.check("checkpoint_under_heavy_root", checkpoint_root.is_relative_to(data_root), str(checkpoint_root))
-    checks.check("qchem_orbitals_not_inputs", orbital["qchem_orbitals_are_production_inputs"] is False)
-    input_definition = orbital["input_definition"]
-    checks.check("input_metadata_not_orbitals", input_definition["orbital_files_used"] is False)
-    checks.check("input_metadata_root_exists", Path(input_definition["metadata_source"]).is_dir())
-    checks.check("pyscf_wb97m_v_label", orbital["pyscf_xc_label"] == "wb97m-v")
-    checks.check(
-        "unrestricted_reference_policy",
-        orbital["reference_policy"]["closed_shell_singlet"] == "unrestricted"
-        and orbital["reference_policy"]["open_shell"] == "unrestricted",
-    )
+    copy_root = Path(orbital["verified_copy_root"])
+    checks.check("orbital_source_qchem", orbital["source_engine"] == "qchem")
+    checks.check("orbital_source_fixed", orbital["policy"] == "copy_then_read_without_orbital_optimization")
+    checks.check("orbital_copy_under_heavy_root", copy_root.is_relative_to(data_root), str(copy_root))
     checks.check("omega_0p3", orbital["range_separation"]["omega_bohr_inverse"] == 0.3)
     checks.check("full_lr_hf", orbital["range_separation"]["long_range_hf_fraction"] == 1.0)
     checks.check("expected_sr_hf_0p15", orbital["range_separation"]["expected_short_range_hf_fraction"] == 0.15)
@@ -159,11 +144,8 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
         observed_basis_distribution == Counter(basis["expected_core_distribution"]),
         dict(observed_basis_distribution),
     )
-    checks.check(
-        "pyscf_basis_semantic_translation_required",
-        basis["require_pyscf_semantic_translation_validation"] is True,
-    )
-    checks.check("generated_basis_ecp_translation", basis["translate_generated_basis_and_ecp_sections"] is True)
+    checks.check("qchem_basis_semantic_match_required", basis["require_qchem_input_semantic_match"] is True)
+    checks.check("generated_orbital_basis_preserved", basis["preserve_generated_basis_sections"] is True)
 
     energy = config["double_hybrid_energy"]
     checks.check("vv10_b10", energy["vv10"]["b"] == 10.0)
@@ -174,15 +156,15 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     auxiliary_basis = energy["pt2"]["auxiliary_basis"]
     checks.check(
         "per_species_auxiliary_basis_policy",
-        auxiliary_basis["policy"] == "per_species_verified_input_metadata_translated_to_pyscf",
+        auxiliary_basis["policy"] == "preserve_per_species_qchem_input",
     )
     checks.check(
-        "generated_aux_basis_translation",
-        auxiliary_basis["translate_generated_aux_basis_sections"] is True,
+        "generated_aux_basis_preserved",
+        auxiliary_basis["preserve_generated_aux_basis_sections"] is True,
     )
     checks.check(
-        "pyscf_aux_basis_mapping_required",
-        auxiliary_basis["require_pyscf_alias_mapping_validation"] is True,
+        "qchem_aux_basis_authoritative",
+        auxiliary_basis["qchem_input_is_authoritative_on_disagreement"] is True,
     )
     checks.check(
         "fixed_energy_partition",
@@ -284,55 +266,13 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     ):
         path = workspace_root / data_policy[field]
         checks.check(f"{field}_path_exists", path.is_file(), str(path))
-    checks.check("legacy_training_weights_field_open", data_policy["training_weights"] is None)
+    checks.check("training_weights_still_open", data_policy["training_weights"] is None)
     bignc = data_policy["external_evaluation"]["BigNC"]
     checks.check(
         "bignc_separate_external_evaluation",
         bignc["part_of_gscdb137"] is False and bignc["part_of_training"] is False,
     )
     checks.check("random_point_split_forbidden", data_policy["forbid_random_point_level_split"] is True)
-
-    protocol = config["execution_protocol"]
-    checks.check("one_fixed_parent_cycle", protocol["base_orbital_training_cycles"] == 1)
-    checks.check("no_parent_update", protocol["update_parent_orbitals_from_fitted_model"] is False)
-    checks.check(
-        "final_cycle2_weight_source",
-        protocol["fitting_selection_and_weights"] == "updated_coach_si_final_cycle_table_2",
-    )
-    checks.check("weight_manifest_gate_active", protocol["fitting_weight_manifest"] is None)
-    checks.check("two_numerical_grid_passes", protocol["numerical_grid_optimization_passes"] == 2)
-
-    validation = config["validation"]
-    gateway_report = workspace_root / validation["passed_rimp2_gateway_report"]
-    checks.check("rimp2_gateway_report_exists", gateway_report.is_file(), str(gateway_report))
-    if gateway_report.is_file():
-        gateway = json.loads(gateway_report.read_text(encoding="utf-8"))
-        checks.check("rimp2_gateway_passed", gateway["passed"] is True)
-        checks.check(
-            "rimp2_gateway_parent_tolerance",
-            abs(gateway["differences"]["parent_pyscf_minus_qchem_hartree"])
-            <= validation["cross_engine_parent_tolerance_hartree"],
-        )
-        checks.check(
-            "rimp2_gateway_os_tolerance",
-            abs(gateway["differences"]["scaled_os_pyscf_minus_qchem_hartree"])
-            <= validation["cross_engine_scaled_os_rimp2_tolerance_hartree"],
-        )
-        ri_difference_kcal = abs(gateway["differences"]["ri_minus_conventional_total_hartree"]) * project["units"]["hartree_to_kcal_per_mol"]
-        checks.check(
-            "rimp2_gateway_conventional_reference",
-            ri_difference_kcal <= validation["ri_mp2_vs_conventional_threshold_kcal_per_mol"],
-            ri_difference_kcal,
-        )
-
-    required_gates = validation["required_gates_before_pilot"]
-    checks.check("qchem_gateway_removed", not any("qchem_scratch_gateway" in gate for gate in required_gates))
-    checks.check("pyscf_open_shell_gate_required", "pyscf_open_shell_parent_and_ump2" in required_gates)
-
-    safety = config["safety"]
-    checks.check("qchem_production_input_forbidden", safety["qchem_orbitals_must_not_be_used_as_production_inputs"] is True)
-    checks.check("qchem_code_backup_exists", (workspace_root / safety["qchem_route_code_backup"]).is_dir())
-    checks.check("qchem_smoke_backup_exists", Path(safety["qchem_route_smoke_backup"]).is_dir())
 
     checks.details["config"] = str(config_path.resolve())
     return checks

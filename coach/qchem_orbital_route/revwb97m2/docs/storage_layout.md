@@ -36,8 +36,11 @@ The intended production layout is:
 
 ```text
 coach-based_dh_data/revwb97m2/
+├── orbitals/
+│   ├── wb97m_v_qchem_scratch/   verified immutable working copy
+│   └── copy_validation/         heavy copy reports if needed
 ├── species/
-│   ├── gateway/                 PySCF parent/feature gateways
+│   ├── gateway/
 │   ├── pilot/
 │   └── production/
 ├── processed/
@@ -52,10 +55,6 @@ coach-based_dh_data/revwb97m2/
 ├── smoke/                       accepted H2O smoke artifacts
 └── reaction_smoke/              accepted synthetic reaction artifacts
 ```
-
-The retired Q-Chem-orbital route and its smoke/gateway snapshot live outside
-this production tree at
-`/clusterfs/mhg-data/yaoshen/coach-based_dh_data/qchem_orbital_route`.
 
 Directories are created only when a workflow needs them. Every generated
 artifact must record the specification version and SHA-256, code commit,
