@@ -39,6 +39,14 @@ project:
   coach_source_root: /clusterfs/mhg-data/yaoshen/coach-based_dh/coach
   version_controlled_root: /clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2
   heavy_data_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2
+  runtime_environment:
+    policy: verified_existing_complete_conda_environment
+    module: miniconda3/22.11.1-gcc-11.4.0
+    conda_environment_name: coach
+    readable_specification: revwb97m2/environment/environment.yml
+    exact_linux_conda_lock: revwb97m2/environment/conda-linux-64.explicit.txt
+    exact_python_lock: revwb97m2/environment/pip-linux-64.lock.txt
+    captured_baseline: revwb97m2/environment/baseline.json
   storage_policy:
     version_controlled:
       - source_code
@@ -80,6 +88,7 @@ provenance:
     - gurobi_version
     - hostname
     - timestamp_utc
+    - environment_baseline_sha256
 
 orbital_source:
   policy: self_consistent_once_per_species_then_fix_for_all_feature_evaluation

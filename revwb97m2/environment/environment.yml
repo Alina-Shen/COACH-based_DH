@@ -1,0 +1,20 @@
+name: coach
+channels:
+  - defaults
+dependencies:
+  - python=3.11.15
+  - pip=26.1.2
+  - setuptools=83.0.0
+  - wheel=0.47.0
+  - pip:
+      - basis-set-exchange==0.12
+      - dftd4==4.2.0
+      - gurobipy==13.0.3
+      - h5py==3.16.0
+      - numpy==2.4.6
+      - pandas==3.0.5
+      - pyscf==2.14.0
+      - pytest==9.1.1
+      - PyYAML==6.0.3
+      - scipy==1.17.1
+

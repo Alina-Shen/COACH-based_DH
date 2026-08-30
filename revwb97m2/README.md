@@ -17,6 +17,9 @@ python scripts/validate_scientific_spec.py
 The storage policy and organized version-controlled/heavy-data trees are
 defined in [`docs/storage_layout.md`](docs/storage_layout.md).
 
+The reproducible Conda/Python baseline, exact Linux locks, and verification
+commands are documented in [`environment/README.md`](environment/README.md).
+
 The root-level `revwb97m2.yaml` and smoke scripts are retained as the legacy
 configuration used by the already accepted plumbing tests. New scientific
 work must use `configs/scientific_spec.yaml`.

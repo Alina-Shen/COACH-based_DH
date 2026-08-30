@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "environment_verified_with_known_upstream_code_regression_failure",
+  "capture_local_date": "2026-08-29",
+  "code": {
+    "repository": "/clusterfs/mhg-data/yaoshen/coach-based_dh",
+    "source_commit_at_capture": "4a7cddd52acddf08d65806d636a6da0d93315311",
+    "origin_main_at_capture": "58c4063737f76e5d80b02b2aa9cb7a375535c05f",
+    "source_commit_present_on_origin_main": false,
+    "editable_project": "coach-workflow==0.1.0",
+    "editable_project_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach"
+  },
+  "platform": {
+    "operating_system": "Rocky Linux 8",
+    "kernel": "4.18.0-553.150.1.el8_10.x86_64",
+    "architecture": "x86_64",
+    "glibc": "2.28"
+  },
+  "environment": {
+    "choice": "preserve_and_verify_existing_complete_conda_environment",
+    "module": "miniconda3/22.11.1-gcc-11.4.0",
+    "conda_version": "22.11.1",
+    "conda_environment_name": "coach",
+    "conda_prefix": "/global/home/users/yaoshen/.conda/envs/coach",
+    "channels": [
+      "defaults"
+    ],
+    "python": "3.11.15",
+    "libxc": "7.0.0",
+    "packages": {
+      "PyYAML": "6.0.3",
+      "basis-set-exchange": "0.12",
+      "coach-workflow": "0.1.0",
+      "dftd4": "4.2.0",
+      "gurobipy": "13.0.3",
+      "h5py": "3.16.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "pyscf": "2.14.0",
+      "pytest": "9.1.1",
+      "scipy": "1.17.1"
+    }
+  },
+  "artifact_sha256": {
+    "environment.yml": "62b6356c3914a928b44d34b9202f774a597ba42986f5ef1af60e868d0b6a0c10",
+    "conda-linux-64.explicit.txt": "4354eafc4686c59b509670efb90f30ab5df0d963650e23a36a137aa8b3656aad",
+    "pip-linux-64.lock.txt": "61a13350bd2a9386becdc74cc98061ae947167c3932aee8ea62a213c814e2a7c"
+  },
+  "installed_distribution_record_sha256": {
+    "PyYAML": "b0d9ca9f33f9fcf507b73cfa5abab9b157716d4b6ae38190f8eff0fe75f0a04f",
+    "basis-set-exchange": "23c0579d24a9335ee953e956410016b906e502de2c8f088070e65981da3303a5",
+    "coach-workflow": "6b3343e881b32410bcdf00c6710784499fe0dbcec9461d381d55312721a67175",
+    "dftd4": "f00e5184bf9a093221f4b017bd7aa671cf2c2dd782a55299397cd9123efc52b2",
+    "gurobipy": "71938db6fced90d42d69c228a69ab65900dcfe9c6582d59be6036fb36fc10857",
+    "h5py": "d383a2aa8933ba6b6c587cdf21354b4de15c1837ab24ee11a95368b21be2f03e",
+    "numpy": "4e98910a64b532e0340bb9d3821e5f78fb40ac9a1887355c56c2e80f4407b17e",
+    "pandas": "97e24a4abe306f096e85408ed8aeb0cdddebe82e8ac0f9d5e230a352f666bd71",
+    "pyscf": "998dbe1b3b5ce19f878a9a5cb72078675e35d0f787a9a62044ce7249b9e0ade6",
+    "pytest": "cf2afd445fa81be65608816b8f3df7170d0278127ff1505043479fe39b393324",
+    "scipy": "26857d239afeba541141c6006d023d9723db952759425dc3e2ff262c034e9471"
+  },
+  "validation": {
+    "pip_check": "pass",
+    "environment_validator": "pass",
+    "gurobi_license_and_real_solve": {
+      "status": "pass",
+      "license": "restricted_non-production",
+      "license_expiration": "2027-11-29",
+      "optimization_status": 2,
+      "objective": 1.0
+    },
+    "environment_yml_conda_create_dry_run": "pass",
+    "scientific_specification_validator": "pass",
+    "stored_species_smoke_validator": "pass",
+    "stored_synthetic_reaction_smoke_validator": "pass",
+    "functionalcoach_regression_suite": {
+      "status": "fail",
+      "passed": 3,
+      "failed": 1,
+      "duration_seconds": 1286.48,
+      "failed_test": "FunctionalCOACH/tests/test_coach_regression.py::test_16_c_ae18_matches_qchem",
+      "failure_class": "ValueError",
+      "failure_summary": "The carbon AE18 SCF enters invalid COACH scaling/DIIS values; SciPy eigh rejects an array containing infs or NaNs."
+    }
+  }
+}
