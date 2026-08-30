@@ -1,0 +1,138 @@
+dataset,category_short,category,reaction_count,species_count,reported_datapoints,metric_standard_error,rmse_standard_error,mae_standard_error,theory_level,description
+3B-69,NC,Noncovalent,69,483,69.0,0.057484404613565,0.07221507486100433,0.057484404613565,"HF/aQZ+MP2/a[TQ]Z+CCSD(T) /aDZ. For dozen small cases, CCSD(T) /aTZ used",3-Body non-additive interaction energies in three different orientations of 23 molecular crystals 
+3BHET,NC,Noncovalent,20,140,20.0,0.1384851258440553,0.1728002216490217,0.1384851258440553,"HF/a5Z+MP2/a[Q5]Z+CCSD(T) /aDZ. For small cases, CCSD(T) /aTZ used",3-Body non-additive interaction energies in molecular trimers
+3d4dIPSS,TM,Transition Metal,32,52,32.0,5.193466247976917,9.957303213535852,5.193466247976917,Mixed,Spin-state relative energies and ionization potentials for first-row (3d) and second-row (4d) transition metals
+A19Rel6,NC,Noncovalent,114,133,114.0,0.07232670165778747,0.09312882951843687,0.07232670165778747,HF/aQZ+G18+G20,Relative energies of 19 complexes from the A24 set on potential energy curves (PECs)
+A24,NC,Noncovalent,24,72,24.0,0.1000620290139482,0.1217662031319831,0.1000620290139482,CCSD(T)/aug-cc-pV[TQ5(6)]Z + CCSDT(Q)/aDZ,Highly accurate binding energies of small non-covalent complexes 
+ACONF,INC,Intramolecular Noncovalent,15,18,15.0,0.04732497243293058,0.06068910976996673,0.04732497243293058,W1h-val,Isomerization energies of alkane conformers 
+ADIM6,NC,Noncovalent,6,12,6.0,0.1136901985619618,0.137152077534567,0.1136901985619618,W1-F12,Interaction energies of n-alkane dimers
+AE11,TC,Thermochemistry,11,11,11.0,116.9657393697381,166.1470256748129,116.9657393697381,CCSD(T) corrected by MP2,Absolute atomic energies of closed shell atoms from Ca to Rn
+AE18,TC,Thermochemistry,18,18,18.0,4.951586087331369,5.98328901642233,4.951586087331369,Experimental fitting,Absolute atomic energies of hydrogen through argon 
+AHB21,NC,Noncovalent,21,63,21.0,0.3077044999282589,0.402254652711479,0.3077044999282589,"CCSD(T)(many, like F12-[DT]Z, [TQ]Z)",Interaction energies in anion-neutral dimers 
+AL2X6,TC,Thermochemistry,6,11,6.0,0.9578029946347385,1.27705286358771,0.9578029946347385,W2-F12,Dimerisation energies of AlX3 compounds
+ALK8,TC,Thermochemistry,8,17,8.0,2.291862608084174,3.178706952820347,2.291862608084174,CCSD(T)/awCV[TQ]Z//PBEh-3c,Dissociation and other reactions of alkaline compounds
+ALKBDE10,TC,Thermochemistry,10,20,10.0,3.255146458172462,4.160311925209064,3.255146458172462,Exp.,Dissociation energies in group-1 and -2 diatomics (many MR)
+AlkAtom19,TC,Thermochemistry,19,21,19.0,1.423698570682299,1.581201428617318,1.423698570682299,"quasi-W4,W1h and W3.2lite for reaction energies and W4 values for ethane and propane",Atomization energies of n=1-8 alkane
+AlkIsod14,TC,Thermochemistry,14,16,14.0,0.8040966288725685,0.8709155802859248,0.8040966288725685,W1h and W3.2lite,Isodesmic reaction energies in n = 3–8 alkanes.
+AlkIsomer11,ISO,Isomerization,11,16,11.0,0.1318924441475725,0.1610826076917238,0.1318924441475725,W1h and W3.2lite,Isomerization energies of alkanes with 4-8 carbon atoms.
+Amino20x4,INC,Intramolecular Noncovalent,80,100,80.0,0.193032731157904,0.2709476215032441,0.193032731157904,MP2-F12/TZ-F12 + CCSD(Ts)-F12b/DZ-F12,Isomerization energies of amino acid conformers
+BDE99MR,TC,Thermochemistry,16,22,16.0,3.314104787854086,3.83898758049971,3.314104787854086,W4 etc,Multi-reference (MR) bond dissociation energies from W4-11
+BDE99nonMR,TC,Thermochemistry,83,86,83.0,1.930809315364183,2.906016208799641,1.930809315364183,W4 etc,Single-reference (SR) bond dissociation energies from W4-11
+BH28,BH,Barrier Height,28,57,28.0,1.174950884973305,1.567501998789002,1.174950884973305,W3lite-F12,"Highly accurate subset chosen from BHPERI, CRBH20, BHDIV10, and PX13 sets"
+BH46,BH,Barrier Height,46,56,46.0,1.313773195348638,1.736821830932208,1.313773195348638,W2-F12,"Barrier heights of hydrogen transfer, heavy atom transfer, nucleophilic substitution, unimolecular and association reactions. This set comprises the remaining data points from BH76 after excluding those included in DBH22."
+BH76RC,TC,Thermochemistry,30,41,30.0,1.006338025915779,1.269377353417232,1.006338025915779,W2-F12,Reaction energies of the BH76 set
+BH876,BH,Barrier Height,876,1729,876.0,1.612891238481361,2.179234057888615,1.612891238481361,HF/a[TQ]Z+MP2/a[TQ]Z+DLPNO-CCSD(T) /aTZ/tight,Comprehensive reaction barrier heights
+BHDIV7,BH,Barrier Height,7,14,7.0,1.155611986799034,1.475977153818883,1.155611986799034,"W1-F12,W2-F12",Diverse reaction barrier heights
+BHPERI11,BH,Barrier Height,11,22,11.0,1.10234303263047,1.515617478973328,1.10234303263047,"W1-F12,W2-F12",Barrier heights of pericyclic reactions
+BHROT27,BH,Barrier Height,27,40,27.0,0.30150099953296,0.4369403039785038,0.30150099953296,"W1-F12,W2-F12",Barrier heights for rotation around single bonds
+BSR36,TC,Thermochemistry,36,38,36.0,0.5994907677537084,0.7450106311415001,0.5994907677537084,DLPNO-CCSD(T)/TightPNO/CBS(aug-cc-pVTZ/aug-cc-pVQZ),Hydrocarbon bond separation reaction energies
+BUT14DIOL,INC,Intramolecular Noncovalent,64,65,64.0,0.08643202832281964,0.1190238711567707,0.08643202832281964,W1-F12,"Isomerization energies of butane-1,4-diol conformers"
+Bauza30,NC,Noncovalent,30,90,30.0,0.5770324371044778,0.7434752167285228,0.5770324371044778,CCSD(T)/a[Q5]Z half CP,"Binding energies of halogen-, chalcogen-, and pnicogen-bonded dimers "
+BzDC215,NC,Noncovalent,215,235,215.0,0.1414761735805692,0.2013498955438767,0.1414761735805692,HF/aQZ+MP2/a[TQ]Z+CCSD(T) /aTZ,PECs for benzene interacting with two rare-gas atoms and eight first- and second-row hydrides 
+C20C246,ISO,Isomerization,6,8,6.0,9.354917374535233,10.85712780203953,9.354917374535233,MP2-F12/[DT]Z (or MP2/[Q5]Z) +CCSD(T)/TZ,Isomerization energies of C20 and C24 
+C60ISO7,ISO,Isomerization,7,8,7.0,1.97441912098719,2.242918933970609,1.97441912098719,"HF/CBS(2,3) + DLPNO-CCSD(T)/def2-TZVP corrected by MP2/CBS(2,3)",Isomerization energies of C60 isomers
+CARBHB8,NC,Noncovalent,8,24,8.0,0.1472016876447619,0.1791329165590003,0.1472016876447619,W2-F12,"Binding energies of hydrogen-bonded complexes between carbene analogues and H2O, NH3, or HCl "
+CHB6,NC,Noncovalent,6,18,6.0,0.5400467032410349,0.746465890422499,0.5400467032410349,"CCSD(T)(many, like F12-[DT]Z, [TQ]Z)",Interaction energies in cation-neutral dimers 
+CR20,TC,Thermochemistry,20,60,20.0,0.8793954453256537,1.049605558360507,0.8793954453256537,W1w and W1-F12,Cycloreversion reaction energies
+CRBH14,BH,Barrier Height,14,28,14.0,0.8623415037332111,1.076828351088724,0.8623415037332111,W1-F12 and W1w,Barrier heights for cycloreversion of heterocyclic rings 
+CT20,NC,Noncovalent,20,60,20.0,0.08937685088084137,0.1183700775829169,0.08937685088084137,"CCSD(T)-F12b/TZ. For TTF-TCNQ, HF/aQZ+MP2/a[TQ]Z+CCSD(T) /6-31G*(0.25)",Binding energies of charge-transfer complexes 
+CUAGAU83,TM,Transition Metal,83,102,83.0,3.838685949180172,5.732845980385467,3.838685949180172,"CM3 values for reactions 1-3 and CM1 energies for 4-14,W1X-G0 for CUAGAU2","Atomization, ionization, isomerization, and binding energies  of molecular systems containing Cu, Ag, and Au"
+DAPD,TM,Transition Metal,12,24,12.0,2.77676239494215,3.554837403565203,2.77676239494215,W4X-L: up to CCSDTQ(5),Difficult bonding energies of Pd-containing diatomic molecules
+DARC,TC,Thermochemistry,14,22,14.0,1.365807656411657,1.617206287151234,1.365807656411657,W1-F12,Reaction energies of Diels-Alder reactions
+DBH22,BH,Barrier Height,22,41,22.0,1.206541418769373,1.474903453141932,1.206541418769373,W4,Highly accurate subset of BH76 
+DC13,TC,Thermochemistry,13,30,13.0,5.434788904293058,7.121405235974841,5.434788904293058,Various,13 difficult cases for DFT methods
+DIE60,ISO,Isomerization,60,120,60.0,0.5383447583043153,0.6783250961315965,0.5383447583043153,W1-F12 or W2-F12,Isomerization energies for double-bond migration in conjugated dienes
+DIPCS9,TC,Thermochemistry,9,18,9.0,3.382089355723721,3.967099051876223,3.382089355723721,W1-F12,Double-ionisation potentials of closed-shell systems
+DS14,NC,Noncovalent,14,42,14.0,0.1132326133603672,0.1325109523837225,0.1132326133603672,HF/aQZ+MP2/a[TQ]Z+CCSD(T) /aTZ,Binding energies of complexes containing divalent sulfur
+Dip146,EF,Electric field,190,380,190.0,0.03477625881083744,0.09098605985991144,0.05562684917906514,CCSD(T)/aCV[TQ]Z or aCV[Q5]Z,Dipole moments (including individual components) for 146 small systems at equilibrium
+EA50,TC,Thermochemistry,50,100,50.0,1.848985414455162,2.570587366409309,1.848985414455162,EKT-CCSD(T)/aQZ,Vertical electron affinities
+EIE22,ISO,Isomerization,22,44,22.0,0.3118855125097666,0.3605171551689241,0.3118855125097666,W1-F12,Isomerization energies of enecarbonyls 
+FH51,TC,Thermochemistry,51,87,51.0,1.137318028449862,1.524398623781059,1.137318028449862,HF/QZ-F12+CABS +MP2/QZ-F12+CCSD(F12*)/TZ-F12 +(T)/[DT]Z-F12,Reaction energies in various (in-)organic systems
+FmH2O10,NC,Noncovalent,10,120,10.0,1.018304854533095,1.063076492195237,1.018304854533095,HF/aQZ+MP2/a[TQ]Z+ CCSD(T)-F12/aDZ,Binding energies of isomers of F-(H2O)10 
+G21EA,TC,Thermochemistry,25,50,25.0,1.368372659707526,1.941992628716654,1.368372659707526,W3,Adiabatic electron affinities
+G21IP,TC,Thermochemistry,36,71,36.0,2.747846425789931,3.558009989647644,2.747846425789931,W3,Adiabatic ionisation potentials
+G2RC24,TC,Thermochemistry,24,45,24.0,2.214517050576578,2.766369413919894,2.214517050576578,W2-F12,Reaction energies of selected systems from G2/97 set
+H2O16Rel4,NC,Noncovalent,4,5,4.0,0.2654134247712663,0.2938422872529857,0.2654134247712663,CCSD(T)/aTZ,Isomerization energies of (H2O)16 (boat and fused cube structures) 
+H2O20Rel9,NC,Noncovalent,9,210,9.0,0.1336276741400347,0.1664247902420352,0.1336276741400347,HF/aQZ+MP2/a[TQ]Z+ CCSD(T)-F12/aDZ/GEBF,Isomerization energies of (H2O)20 (low-energy structures) 
+HAT707MR,TC,Thermochemistry,202,86,202.0,3.212671141562121,4.084523325156681,3.212671141562121,W4 etc,Heavy-atom transfer energies (MR) from W4-11
+HAT707nonMR,TC,Thermochemistry,505,90,505.0,2.364583621926668,3.177599961503757,2.364583621926668,W4 etc,Heavy-atom transfer energies (SR) from W4-11
+HB262,NC,Noncovalent,262,786,262.0,0.1809753739490524,0.240015932590136,0.1809753739490524,HF/a5Z+MP2/a[Q5]Z+CCSD(T) /haTZ,Binding energies of hydrogen-bonded systems 
+HB49,NC,Noncovalent,49,71,49.0,0.2375355865658054,0.3220319662636162,0.2375355865658054,"W4-like for 16 small ones, then HF/a[56]Z+MP2/a[56]Z+CCSD(T) /a[TQ]Z",Binding energies of small- and medium-sized hydrogen-bonded systems 
+HCP32,NC,Noncovalent,32,96,32.0,0.5719098693602079,0.765876360157435,0.5719098693602079,CCSD(T)/aTZ,"Binding energies of halogen-, chalcogen-, and pnicogen-bonded dimers "
+HEAVY28,NC,Noncovalent,28,38,28.0,0.1890334305732266,0.210119722367497,0.1890334305732266,"CCSD(T)/awCV[TQ]Z-PP, CP-corrected",Binding energies between heavy element hydrides
+HEAVYSB11,TC,Thermochemistry,11,22,11.0,1.985603316548405,2.351073582878275,1.985603316548405,CCSD(T)/awCV[TQ]Z-PP,Dissociation energies in heavy-element (i.e. Ge Se Sb) compounds
+HNBrBDE18,TC,Thermochemistry,18,37,18.0,1.635038054769694,1.936261659367675,1.635038054769694,W2,Homolytic N-Br bond dissociation energies
+HR46,EF,Electric field,128,302,128.0,0.01262463809028224,0.1277695413571604,0.08124128577195656,FPA-a[DT]Z to FPA-a[Q5]Z,Static polarizabilities (including individual components) for 46 systems at equilibrium
+HSG,NC,Noncovalent,21,63,21.0,0.1249911227682356,0.1661574684668884,0.1249911227682356,HF/aQZ+MP2/a[TQ]Z+CCSD(T) /haTZ,Binding energies of small ligands interacting with protein receptors
+HW30,NC,Noncovalent,30,90,30.0,0.1337450559865431,0.1724210499936776,0.1337450559865431,MP2-R12/K2--+CCSD(T) /haTZ,Binding energies of hydrocarbon-water dimers 
+HW6Cl5,NC,Noncovalent,5,30,5.0,0.3733280307964158,0.4332765305631059,0.3733280307964158,CCSD(T)-F12/[DT]Z,Binding energies of Cl-(H2O)n (n = 1-6) 
+HW6F,NC,Noncovalent,6,33,6.0,0.4502032525571478,0.5571200782064852,0.4502032525571478,CCSD(T)-F12/[DT]Z,Binding energies of F-(H2O)n (n =1-6) 
+He3,NC,Noncovalent,49,197,49.0,0.1762081127955191,0.4433945784757813,0.1762081127955191,CCSD(T)/d[67]Z +….+ FCI/a3Z,3-Body non-additive interaction energies in helium trimers
+ICONF,INC,Intramolecular Noncovalent,17,27,17.0,0.2309765896864169,0.3179960763930235,0.2309765896864169,W1-F12,Isomerization energies in conformers of inorganic systems
+IDISP,INC,Intramolecular Noncovalent,6,13,6.0,1.542349022330761,2.056565648635268,1.542349022330761,DLPNO-CCSD(T)/aug-cc-pV[TQ]Z,Intramolecular dispersion interactions
+IHB100,NC,Noncovalent,100,300,100.0,0.3026985350300668,0.4002468712384921,0.3026985350300668,HF/a5Z+MP2/a[Q5]Z+CCSD(T) /haTZ,Binding energies of equilibrium ionic hydrogen-bonded dimers in the HCNO chemical space.
+IHB100x2,NC,Noncovalent,200,400,200.0,0.3589082649264985,0.511462921623805,0.3589082649264985,HF/a5Z+MP2/a[Q5]Z+CCSD(T) /haTZ,Binding energies of ionic hydrogen bonds at 0.8 and 1.5 times the equilibrium disctance in IHB100 
+IL16,NC,Noncovalent,16,48,16.0,0.3680900735735927,0.4259916393006295,0.3680900735735927,"CCSD(T)(many, like F12-[DT]Z, [TQ]Z)",Interaction energies in anion-cation dimers 
+INV23,BH,Barrier Height,23,46,23.0,1.124860652761662,1.587890580534029,1.124860652761662,"W1-F12,W2-F12, DLPNO-CCSD(T)/TightPNO/CBS(def2-[TQ]ZVPP)",Inversion/Racemization barrier heights
+IP23,TC,Thermochemistry,23,46,23.0,2.54050255903928,3.535027075354579,2.54050255903928,,Vertical ionization potentials
+IP30,TC,Thermochemistry,30,60,30.0,3.401931586971472,4.086536244303898,3.401931586971472,IP-EOM-CCSD(T)/QZ + T/TZ,Vertical ionization potentials
+ISO34,ISO,Isomerization,34,63,34.0,0.8677496629213834,1.20947087279634,0.8677496629213834,W1-F12,Isomerisation energies of small- and medium-sized organic molecules
+ISOL23,ISO,Isomerization,23,46,23.0,1.813936964022825,2.526926744888275,1.813936964022825,PNO-LCCSD(T)-F12b/haQZ/Tight,Isomerisation energies of large organic molecules
+ISOMERIZATION20,ISO,Isomerization,20,31,20.0,1.307717895673263,1.672117986146491,1.307717895673263,W4 etc,Isomerization energies from the W4-11 dataset
+MB08-165,TC,Thermochemistry,165,180,165.0,4.573353443431814,5.98343579643705,4.573353443431814,CCSD(T)/[TQ]Z + core/cc-pCVTZ,"Decomposition energies of 165 artificially constructed molecules, each containing 8 atoms"
+MB16-43,TC,Thermochemistry,43,58,43.0,12.01002170252576,15.50106744296764,12.01002170252576,W1-F12,"Decomposition energies of 43 artificially constructed molecules, each containing 16 atoms"
+MCONF,INC,Intramolecular Noncovalent,51,52,51.0,0.2276417240984313,0.2652466356563128,0.2276417240984313,DLPNO-CCSD(T)/a[TQ]Z,Isomerization energies of melatonin conformers
+MME52,TM,Transition Metal,52,66,52.0,2.755491955852249,4.551113106668846,2.755491955852249,DLPNO–CCSD(T)/def2-[TQ]ZVPP,Reaction energies and barrier heights of metalloenzyme models
+MOBH28,TM,Transition Metal,56,86,56.0,1.660350879510097,2.181475138471427,1.660350879510097,"LNO-CCSD/def2-[TQ]ZVPP+(T)/def2-{SVP,TZVPP}+canonical/def2-SVP",Barrier heights involving organometallic complexes compiled from real-life organometallic catalytic problems
+MOR13,TM,Transition Metal,13,37,13.0,2.328361954355179,3.151211144136113,2.5287089159186,,"Statistically significant subsets from MOR41, which contain the reaction energies of closed-shell organometallic reactions"
+MX34,TC,Thermochemistry,34,42,34.0,10.2967803045011,14.04822046832931,10.2967803045011,W2 and W1X-2,Electronic atomization energies for a range of ionic clusters with the NaCl structure
+NBC10,NC,Noncovalent,184,204,184.0,0.1518243460762598,0.2268814468267317,0.1518243460762598,HF/aQZ+MP2/a[TQ]Z+CCSD(T) /aTZ,"PECs for BzBz (5), BzMe (1), MeMe (1), BzH2S (1), and PyPy (2)"
+NBPRC,TC,Thermochemistry,12,19,12.0,1.228716278816153,1.446123120318654,1.228716278816153,W2-F12,"Oligomerizations and H2 fragmentations of NH3/BH3, H2 activation reactions with PH3/BH3 systems"
+NC11,NC,Noncovalent,11,33,11.0,0.05436912994051551,0.06594637406520688,0.05436912994051551,CCSD(T)/CBS + T(Q)/aug-cc-pVTZ,Binding energies of very small non-covalent complexes 
+O24,NC,Noncovalent,24,72,24.0,1.12470266186366,1.345473076871015,0.553179195858393,CCSD(T)/a[Q5]Z,Interaction energies in 24 small high-spin open-shell dimers
+O24x4,NC,Noncovalent,96,144,96.0,0.7010907515243213,1.19849899092976,0.3990294666647585,CCSD(T)/a[Q5]Z,PECs for O24
+OEEF,EF,Electric field,136,154,136.0,0.08761927795136969,0.4433933243942134,0.3000943843640734,CCSD(T)/aQZ,Relative energies in oriented external electric fields compared to zero field
+ORBH35,BH,Barrier Height,35,38,35.0,2.266070964015759,3.829481016634919,2.266070964015759,W3X-L,"Difficult barrier heights for oxygen reactions (e.g., vinylperoxy radical and CO3)"
+P34AE,TC,Thermochemistry,44,55,44.0,3.465999264784183,4.594906260352105,3.465999264784183,W1-P34,The atomization energies of systems containing heavy p-block elements up to xenon
+P34EA,TC,Thermochemistry,9,18,9.0,1.570494885535564,1.829976229463952,1.570494885535564,W1-P34,The electron affinities of systems containing heavy p-block elements up to xenon
+P34IP,TC,Thermochemistry,15,30,15.0,2.015763592177814,2.448475648756252,2.015763592177814,W1-P34,The ionization potentials of systems containing heavy p-block elements up to xenon
+PA26,TC,Thermochemistry,26,52,26.0,1.249001011107978,1.565591201881397,1.249001011107978,"W1-F12,W2-F12, CCSD(T)/def2-[TQ]ZVPP//PBEh-3c ",Adiabatic proton affinities including amino acids
+PArel,ISO,Isomerization,20,31,20.0,0.679906640856077,1.085399596781018,0.679906640856077,CCSD(T)/def2-[TQ]ZVPP,Isomerization energies of protonated isomers
+PCONF21,INC,Intramolecular Noncovalent,18,21,18.0,0.2837468471147271,0.3385615511248368,0.2837468471147271,DLPNO-CCSD(T)/a[TQ]Z,Isomerization energies of tri- and tetrapeptide conformers
+PNICO23,NC,Noncovalent,23,69,23.0,0.2158999722681703,0.2745658475051255,0.2158999722681703,"W2-F12, W1-F12 for 3 large systems",Interaction energies in pnicogen-containing dimers
+PX9,BH,Barrier Height,9,18,9.0,1.146826142817702,1.286655411683976,1.146826142817702,W1-F12,"Proton-exchange barriers in H2O, NH3, and HF clusters"
+Pentane13,INC,Intramolecular Noncovalent,13,14,13.0,0.08066624803541583,0.09644924212106788,0.08066624803541583,CCSD(T)-F12b/TZ,Isomerization energies of stationary points on the n-pentane torsional surface 
+PlatonicRE18,TC,Thermochemistry,18,10,18.0,5.037011349826424,6.178678296736674,5.037011349826424,W1-F12,"Reaction energies of homodesmotic, isodesmic, and isogyric reactions involving platonic hydrocarbon cages, CnHn (n = 4, 6, 8, 10, 12, 20)"
+PlatonicTAE6,TC,Thermochemistry,6,8,6.0,4.715275528567645,4.912266785454384,4.715275528567645,W1-F12,"Total atomization energies of platonic hydrocarbon cages, CnHn (n = 4, 6, 8, 10, 12, 20)"
+Pol130,EF,Electric field,296,722,296.0,0.02377130338585969,0.755638567141142,0.2014598894687428,CCSD(T)/aCV[TQ]Z or aCV[Q5]Z,Static polarizabilities (including individual components) for 130 small systems at equilibrium
+RC21,TC,Thermochemistry,21,41,21.0,1.625124128209805,1.973096362889142,1.625124128209805,W1-F12,Fragmentations and rearrangements in organic radical cations
+RG10N,NC,Noncovalent,275,279,275.0,0.1062802902756736,0.2958232750519089,0.1062802902756736,,PECs for the 10 rare-gas dimers involving helium through krypton 
+RG18,NC,Noncovalent,18,25,18.0,0.07110595115371617,0.09136609876948336,0.07110595115371617,CCSD(T)/a[TQ]Z for all dimer interaction energies and otherwise CCSD(T)/aug-cc-pwCV[TQ]Z,Interaction energies in rare-gas complexes
+ROST61,TM,Transition Metal,61,150,61.0,2.752369590407213,3.79223555384319,2.752369590407213,"Open-Shell DLPNO-CCSD(T, or T1)/def2-[TQ]ZVPP",Reaction energies of reactions involving open-shell single-reference transition-metal complexes
+RSE43,TC,Thermochemistry,43,88,43.0,0.7385734502330391,0.8804093146905094,0.7385734502330391,W1-F12,Radical stabilization energies
+S22,NC,Noncovalent,22,57,22.0,0.2371118979237902,0.3228987136576548,0.2371118979237902,at least HF/aQZ+MP2/a[TQ]Z+CCSD(T) /aTZ,Binding energies of noncovalently bound dimers
+S66,NC,Noncovalent,66,198,66.0,0.1689582479589781,0.2077160200025383,0.1689582479589781,half-CP HF+CABS/aQZ-F12 + CP MP2-F12/a[TQ]Z-F12+ CP CCSD(F12*)/ha[DT]Z-F12+CP (T)/ha[TQ]Z+T(Q) correction,Binding energies of noncovalently bound dimers
+S66Rel7,NC,Noncovalent,462,528,462.0,0.1200838698854348,0.1692852604913068,0.1200838698854348,"MP2(F12,CBS)+ CCSD(F12,TZ)+CCSD(T)(sano-V[DT]Z+)",Relative energies of 66 complexes from the S66 set on PECs
+SCONF,INC,Intramolecular Noncovalent,17,19,17.0,0.1533801504114762,0.2031307848537643,0.1533801504114762,DLPNO-CCSD(T)/aug-cc-pV[TQ]Z,Isomerization energies of sugar conformers
+SIE4x4,TC,Thermochemistry,16,23,16.0,9.176941603098477,10.66819495822218,9.176941603098477,W2-F12,Self-interaction-error related problems
+SN13,TC,Thermochemistry,13,21,13.0,0.6311684500932003,0.820692997688572,0.6311684500932003,W4 etc,Nucleophilic substitution energies 
+SW49Bind22,NC,Noncovalent,22,24,22.0,0.2831359018993541,0.3235832406181975,0.2831359018993541,HF/aQZ+MP2/a[TQ]Z+CCSD(T) /aTZ,Binding energies of isomers of SO42-(H2O) (n = 3 -5) 
+SW49Rel28,NC,Noncovalent,28,31,28.0,0.127720467078279,0.1526357707775326,0.127720467078279,HF/aQZ+MP2/a[TQ]Z+CCSD(T) /aTZ,Isomerization energies of SO42-(H2O)n (n = 3-5) 
+Shields38,NC,Noncovalent,38,39,38.0,0.5125089834489133,0.6156060257349909,0.5125089834489133,PLATINUM: through (H2O)6; GOLD: (H2O)7; and SILVER: (H2O)n=8–10,Binding energies of (H2O)n (n = 2 - 10) 
+Styrene42,ISO,Isomerization,42,43,42.0,1.816744005487891,2.238504330972943,1.816744005487891,W1-F12,Isomerization energies of C8H8 
+T144,EF,Electric field,421,986,421.0,0.01393295223193369,0.2828315781137088,0.1498380655460344,FPA-a[DT]Z to FPA-a[TQ]Z,Static polarizabilities (including individual components) for 144 systems at equilibrium
+TA13,NC,Noncovalent,13,27,13.0,1.356982395772657,2.022972701966871,1.356982395772657,CCSD(T)/a'[Q5]Z+T/TZ+ (Q) /DZ+ core/aQZ,Binding energies of dimers involving radicals 
+TAE_W4-17MR,TC,Thermochemistry,17,24,17.0,3.076167135552818,4.562685128789131,3.076167135552818,W4 etc,Total atomization energies (MR) from W4-17
+TAE_W4-17nonMR,TC,Thermochemistry,183,194,183.0,2.297449622752158,3.089912676561263,2.297449622752158,W4 etc,Total atomization energies (SR) from W4-17 
+TAUT15,ISO,Isomerization,15,25,15.0,0.613296790522916,0.7983475604718683,0.613296790522916,"W1-F12//SCS(1.1,0.6)-MP2/def2-QZVP",Isomerization energies of tautomers
+TMB11,TM,Transition Metal,11,22,11.0,1.481498656396261,1.82899211816876,1.37595353787679,,"Statistically significant subsets from TMB50, which contain reaction barriers involving transition metal complexes"
+TMD10,TM,Transition Metal,10,24,10.0,5.643614741210356,4.985756808872151,3.934026199459476,,"Statistically significant subsets from TMD60, which contain bonding energies for diatomic transition-metal species"
+UPU23,INC,Intramolecular Noncovalent,23,24,23.0,0.4662931216726505,0.6152771086647312,0.4662931216726505,"HF/CBS(2,3) + DLPNO-CCSD(T)/def2-TZVP corrected by MP2/CBS(2,3)",Isomerization energies of RNA-backbone conformers 
+V30,FREQ,Frequency,275,580,275.0,30.04978099978528,48.21437529053748,30.04978099978528,CCSD(T)/haQZ,"Frequencies of small molecular dimers with different polarity combinations (polar-polar, polar-nonpolar, and nonpolar-nonpolar)."
+WATER27,NC,Noncovalent,27,30,27.0,0.9018188402156619,1.078635377913488,0.9018188402156619,"MP2-F12/[Q5]Z CP + CCSD(F12*)/a[DT]Z CP + CCSD(T)/ha[DT]Z CP for neutral and protonated water clusters, [TQ]Z anionic clusters. MP2-F12/[TQ]Z CP + Two-body{CCSD(F12*)/QZ + (T)/ha[TQ]Z} + Three-body{CCSD(F12*)/TZ + (T)/ha[DT]Z} for (H2O)20 ","Binding energies in (H2O)n, H+(H2O)n and OH-(H2O)n"
+WCPT26,BH,Barrier Height,26,36,26.0,1.262107330084094,1.587852199207261,1.262107330084094,"W2.2, W1",Barrier heights of water-catalyzed proton-transfer reactions
+WCPT6,TC,Thermochemistry,6,12,6.0,0.6630951223130768,0.7708551198406295,0.6630951223130768,W2.2,Tautomerization energies for water-catalyzed proton-transfer reactions 
+X40,NC,Noncovalent,40,120,40.0,0.182094206893113,0.2364754830176673,0.182094206893113,half-CP MP2-F12/[TQ]Z-F12 + half-CP CCSD(T)/ha[TQ]Z (or ha[DT]Z),Binding energies of complexes containing halogenated molecules 
+X40x5,NC,Noncovalent,200,280,200.0,0.2968718950723668,0.4382981607880773,0.2968718950723668,half-CP MP2-F12/[TQ]Z-F12 + half-CP CCSD(T)/ha[TQ]Z (or ha[DT]Z),PECs for X40
+XB25,NC,Noncovalent,25,43,25.0,0.3415932650863598,0.4418089640452256,0.3415932650863598,"CCSD(T)/a[Q5]Z, CCSD(T)/aTZ+MP2/a[Q5]Z","Binding energies of halogen-bonded dimers, compiled from XB51 and XB18 after excluding same systems in X40"
+YBDE18,TC,Thermochemistry,18,29,18.0,1.727651721197919,2.091390775230247,1.727651721197919,W2-F12,Bond-dissociation energies in ylides

@@ -1,0 +1,62 @@
+{
+  "allmols_info": {
+    "bytes": 13407118,
+    "gscdb_path": "Allmols_info.json",
+    "reason": "13 MB geometry-bearing source; derived lightweight fields are in species_manifest.csv",
+    "sha256": "6e08be8e52bf5e075e0af6b35e920f683f2b3fdc27976de6739e87924f7ac0dd",
+    "vendored": false
+  },
+  "commit": "f62f5d844d64b4ff451cbfc9320a39d830857099",
+  "commit_date": "2026-08-28T10:17:26-07:00",
+  "commit_subject": "Merge pull request #11 from JiashuLiang/add-external-test-sets",
+  "counts": {
+    "all_metadata_species": 14006,
+    "auxiliary_reactions": 71,
+    "bignc_datasets": 2,
+    "bignc_reactions": 25,
+    "bignc_species": 75,
+    "gscdb137_datasets": 137,
+    "gscdb137_reactions": 8377,
+    "gscdb137_species": 13907
+  },
+  "definition": {
+    "auxiliary_rows": "the appended SC74 and OEEFD rows, explicitly excluded from GSCDB137",
+    "gscdb137_datasets": "the 137 dataset names in Info/Standard_errors.csv",
+    "gscdb137_reactions": "DatasetEval.csv rows whose Dataset is in that 137-name registry",
+    "gscdb137_species": "unique stoichiometric species in those 8377 reactions"
+  },
+  "repository": "https://github.com/JiashuLiang/GSCDB.git",
+  "schema_version": 1,
+  "source_files": [
+    {
+      "bytes": 787984,
+      "gscdb_path": "Info/DatasetEval.csv",
+      "sha256": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe",
+      "vendored_path": "revwb97m2/manifests/gscdb137/source/DatasetEval.csv"
+    },
+    {
+      "bytes": 26095,
+      "gscdb_path": "Info/Datasets.csv",
+      "sha256": "1d828b5e65bf3b14b2f64aef40235e389be1934148057d3818a4b4387bf3817e",
+      "vendored_path": "revwb97m2/manifests/gscdb137/source/Datasets.csv"
+    },
+    {
+      "bytes": 8559,
+      "gscdb_path": "Info/Standard_errors.csv",
+      "sha256": "dcc065a43deadba99265bbdfdb8d7b4b43f8f8eddf547448fd3f308a0e478863",
+      "vendored_path": "revwb97m2/manifests/gscdb137/source/Standard_errors.csv"
+    },
+    {
+      "bytes": 4021,
+      "gscdb_path": "Info/DatasetEval_O24x5_weight.csv",
+      "sha256": "fb345379a0dc3d576ae9d51a84b41c7965e3ca591d1c5e80f169c75bb33b0df3",
+      "vendored_path": "revwb97m2/manifests/gscdb137/source/DatasetEval_O24x5_weight.csv"
+    },
+    {
+      "bytes": 935,
+      "gscdb_path": "Info/DatasetEval_TMC34_weight.csv",
+      "sha256": "fc1353bfe8297808502451a17866a3dbcd58f23482a745aad5a5b0b0c44c5049",
+      "vendored_path": "revwb97m2/manifests/gscdb137/source/DatasetEval_TMC34_weight.csv"
+    }
+  ]
+}

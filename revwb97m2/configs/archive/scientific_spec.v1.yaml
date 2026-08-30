@@ -1,0 +1,391 @@
+# Authoritative scientific specification for the COACH-form revision of omegaB97M(2).
+schema_version: 2
+status: frozen
+
+scientific_specification:
+  name: revwb97m2_coach_form
+  version: 1
+  frozen_on: "2026-08-28"
+  authority: revwb97m2/configs/scientific_spec.yaml
+  change_control: >-
+    Scientific changes require a version increment, a written rationale, and
+    rerunning every affected validation gate.
+
+project:
+  name: revwb97m2
+  objective: >-
+    Fit a non-self-consistent double-hybrid energy on fixed omegaB97M-V
+    orbitals using the final documented COACH semilocal base energy densities,
+    dimensionless variables, correction factors, and polynomial families.
+  repository_root: /clusterfs/mhg-data/yaoshen/coach-based_dh
+  coach_source_root: /clusterfs/mhg-data/yaoshen/coach-based_dh/coach
+  version_controlled_root: /clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2
+  heavy_data_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2
+  storage_policy:
+    version_controlled:
+      - source_code
+      - configuration
+      - tests
+      - small_inputs
+      - lightweight_manifests
+      - lightweight_result_summaries
+      - documentation
+      - slurm_submission_scripts
+    heavy_data:
+      - orbital_scratch_copies
+      - checkpoints
+      - integrated_dv_matrices
+      - feature_arrays
+      - processed_training_matrices
+      - solver_artifacts
+      - full_logs
+      - runtime_environments
+  units:
+    stored_energy: hartree
+    reported_energy_error: kcal_per_mol
+    hartree_to_kcal_per_mol: 627.50947406
+
+provenance:
+  parent_method: omegaB97M-V
+  parent_orbitals_are_fixed_during_fit: true
+  final_double_hybrid_is_self_consistent: false
+  record_at_runtime:
+    - scientific_specification_version
+    - scientific_specification_sha256
+    - git_commit
+    - source_orbital_directory
+    - source_orbital_manifest_sha256
+    - python_version
+    - pyscf_version
+    - libxc_version
+    - numpy_version
+    - scipy_version
+    - qchem_version
+    - gurobi_version
+    - hostname
+    - timestamp_utc
+
+orbital_source:
+  policy: copy_then_read_without_orbital_optimization
+  source_engine: qchem
+  source_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2
+  verified_copy_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/orbitals/wb97m_v_qchem_scratch
+  original_source_is_immutable: true
+  verified_copy_is_immutable_input: true
+  jobs_use_disposable_per_species_scratch_copy: true
+  source_completion_marker: .staged.ok
+  functional: omegaB97M-V
+  observed_qchem_method_label: WB97M(OS)
+  method_label_requires_gateway_validation: true
+  basis: def2-qzvppd
+  counterpoise_correction: false
+  charge_source: qchem_molecule_record
+  multiplicity_source: qchem_molecule_record
+  reference_policy:
+    closed_shell_singlet: restricted
+    open_shell: unrestricted
+    preserve_existing_reference: true
+  range_separation:
+    omega_bohr_inverse: 0.3
+    long_range_hf_fraction: 1.0
+    short_range_hf_fraction_source: query_parent_functional
+    expected_short_range_hf_fraction: 0.15
+    forbid_hardcoded_wb97xv_fraction_0_167: true
+  validation:
+    require_expected_species_manifest: true
+    require_source_copy_comparison: true
+    require_parent_energy_reconstruction: true
+    require_reference_type_audit: true
+    require_open_shell_gateway_case: true
+    stability_policy: record_existing_and_flag_unknown
+
+published_reproduction:
+  purpose: regression_only
+  semilocal_xc_grids:
+    default: {radial: 99, angular: 590}
+    dataset_overrides:
+      AE18: {radial: 500, angular: 974}
+      RG10: {radial: 500, angular: 974}
+  parent_wb97m_v_nonlocal_correlation_grids:
+    default: {scheme: SG-1}
+    dataset_overrides:
+      AE18: {radial: 75, angular: 302}
+      RG10: {radial: 75, angular: 302}
+
+coach_feature_grids:
+  pruning: none
+  radii_adjustment: none
+  fitting_reference: {radial: 250, angular: 974, id: "250974"}
+  practical: {radial: 99, angular: 590, id: "99590"}
+  coarse_analysis: {radial: 75, angular: 302, id: "75302"}
+
+double_hybrid_energy:
+  evaluation: non_self_consistent_on_fixed_wb97m_v_orbitals
+  range_separation:
+    omega_bohr_inverse: 0.3
+    long_range_hf_fraction: 1.0
+  dispersion_policy:
+    include_coach_d4_atm: false
+    rationale: >-
+      D4-ATM belongs to the final COACH hybrid and is not part of the primary
+      omegaB97M(2)-style double-hybrid model.
+  vv10:
+    evaluate_non_self_consistently: true
+    b: 10.0
+    C: 0.01
+    coefficient_is_linear_feature: true
+  pt2:
+    method: RI-MP2
+    amplitudes: canonical_mp2
+    frozen_core: true
+    auxiliary_basis: def2-qzvppd-ri
+    auxiliary_basis_must_be_verified_against_qchem: true
+    denominator_regularization: none
+    attenuation: none
+    fitted_feature: total_pt2_correlation
+    save_spin_components_for_diagnostics: true
+    fit_spin_components_separately: false
+  fixed_energy_terms:
+    - nuclear_repulsion
+    - one_electron
+    - coulomb
+    - full_long_range_hf_exchange
+  fitted_energy_terms:
+    - semilocal_short_range_exchange
+    - semilocal_same_spin_correlation
+    - semilocal_opposite_spin_correlation
+    - short_range_hf_exchange
+    - vv10_correlation_b10_c001
+    - total_pt2_correlation
+  nofit_equation: "E_nuclear + E_one_electron + E_coulomb + E_full_lr_hf"
+
+semilocal_model:
+  source_of_final_form: coach/FunctionalCOACH/COACH.md
+  expansion_terms:
+    u: 8
+    companion: 12
+    tensor_product_terms_per_channel: 96
+  exchange:
+    integrated_dv_row: 64
+    channel_family: range_separated_mgga_with_nonuniform_scaling
+    base_energy_density: spin_resolved_ueg_exchange
+    correction_factors:
+      - short_range_exchange_attenuation_at_omega_0p3
+      - nonuniform_scaling
+    nonuniform_scaling_equation: "1 - exp(-13.815 / (s_sigma_squared ** 0.25))"
+    variables:
+      u:
+        name: u_x_sigma
+        equation: "gamma_x * s_sigma_squared / (1 + gamma_x * s_sigma_squared)"
+        gamma: 0.004
+        domain: "[0,1]"
+        polynomial_family: monomial
+      companion:
+        name: v_sigma
+        equation: "2 * beta_sigma - 1"
+        domain: "[-1,1]"
+        polynomial_family: legendre
+  same_spin_correlation:
+    integrated_dv_row: 154
+    channel_family: scan_alpha1_same_spin_with_self_correlation_correction
+    base_energy_density: scan_alpha1_same_spin
+    correction_factors:
+      - self_correlation_correction_2_beta_sigma
+    variables:
+      u:
+        name: u_c_ss_sigma
+        equation: "gamma_c_ss * s_sigma_squared / (1 + gamma_c_ss * s_sigma_squared)"
+        gamma: 0.01
+        domain: "[0,1]"
+        polynomial_family: monomial
+      companion:
+        name: v_sigma
+        equation: "2 * beta_sigma - 1"
+        domain: "[-1,1]"
+        polynomial_family: legendre
+  opposite_spin_correlation:
+    integrated_dv_row: 166
+    channel_family: scan_alpha1_opposite_spin
+    base_energy_density: >-
+      scan_alpha1_total_minus_scan_alpha1_alpha_only_minus_scan_alpha1_beta_only
+    correction_factors: []
+    variables:
+      u:
+        name: u_c_os
+        equation: "gamma_c_os * s_alpha_beta_squared / (1 + gamma_c_os * s_alpha_beta_squared)"
+        gamma: 0.006
+        domain: "[0,1]"
+        polynomial_family: legendre
+      companion:
+        name: w_c_os
+        equation: "(t_alpha_beta - 1) / (t_alpha_beta + 1)"
+        domain: "[-1,1]"
+        polynomial_family: legendre
+  implementation_gate:
+    status: required_before_pilot_or_production
+    test: semantic_integrated_dv_rows_match_final_coach_kernels
+    rationale: >-
+      The cleaned workflow defaults to same-spin row 153, while the final-form
+      documentation specifies Legendre polynomials in v_sigma, which maps to
+      row 154. The semantic form is frozen here; the mapping must be verified
+      independently before real feature generation.
+
+feature_models:
+  active_for_first_real_fit: R2_coachform_291
+  models:
+    R0_published_wb97m2:
+      purpose: regression_reference_only
+      coefficients: published
+      fit: false
+    R2_coachform_291:
+      purpose: primary_real_training_model
+      integrated_dv_rows:
+        exchange: 64
+        same_spin_correlation: 154
+        opposite_spin_correlation: 166
+      feature_layout:
+        exchange: {start: 0, stop: 96}
+        same_spin_correlation: {start: 96, stop: 192}
+        opposite_spin_correlation: {start: 192, stop: 288}
+        short_range_hf: 288
+        vv10: 289
+        pt2: 290
+        total: 291
+    R3_optional_scs_pt2:
+      enabled: false
+      reason: >-
+        Separate same-spin and opposite-spin PT2 coefficients change the model
+        class and are deferred until the total-PT2 model is complete.
+  legacy_smoke_baseline:
+    model_name: R2_coach291_legacy_smoke
+    integrated_dv_rows: [64, 153, 166]
+    scientific_training_model: false
+    preserve_existing_artifacts: true
+    rationale: >-
+      Existing H2O and synthetic-reaction smoke artifacts validate plumbing and
+      algebra but do not freeze the scientific production basis.
+
+constraint_profiles:
+  active_for_first_real_fit: [C0_minimal_critical, C1_nonlocal_sum]
+  definitions:
+    C0_minimal_critical:
+      coefficient_absolute_bound: 25.0
+      mandatory_nonzero_features: [short_range_hf, pt2]
+      mandatory_features_count_toward_sparsity: true
+      short_range_hf_bounds: {minimum: 0.0, maximum: 1.0}
+      exchange_uniform_electron_gas:
+        enabled: true
+        equation: "gx(0,0) + c_sr_hf = 1"
+      nonlocal_correlation_sum: {enabled: false}
+      exchange_one_electron_bound: {enabled: false}
+      sampled_enhancement_bounds: {enabled: false}
+    C1_nonlocal_sum:
+      extends: C0_minimal_critical
+      nonlocal_correlation_sum:
+        enabled: true
+        equation: "c_pt2 + c_vv10 = 1"
+    C2_one_electron:
+      extends: C1_nonlocal_sum
+      exchange_one_electron_bound:
+        enabled: true
+        maximum: 1.479
+    C3_full_coach_sampled:
+      extends: C2_one_electron
+      sampled_enhancement_bounds:
+        enabled: true
+        exchange: {minimum: 0.0, maximum: 2.2146}
+        same_spin_correlation: {minimum: -10.0, maximum: 10.0}
+        opposite_spin_correlation: {minimum: -10.0, maximum: 10.0}
+  policy: >-
+    Run C0 and C1 first. Audit fitted factors densely. Add C2 or C3 only to
+    address observed pathologies or as a predefined scientific comparison.
+
+grid_sensitivity:
+  classification: numerical_not_physical_constraint
+  enabled_in_pass1: false
+  enabled_in_pass2: true
+  reference_grid: "250974"
+  comparison_grid: "99590"
+  coarse_analysis_grid: "75302"
+  threshold_kcal_per_mol: 0.015
+  selection:
+    largest_model_error_rows_per_candidate: 100
+    largest_global_row_l1_norms: 200
+    deduplicate: true
+  zero_difference_features: [short_range_hf, pt2]
+  vv10_difference_policy: >-
+    Store a nonzero VV10 grid difference only if VV10 is explicitly evaluated
+    on both grids; otherwise store zero and record the reason.
+
+data_policy:
+  target_database: GSCDB137
+  reaction_metadata: null
+  training_weights: null
+  dataset_information: null
+  standard_errors: null
+  must_set_metadata_paths_before_fit: true
+  species_manifest_required_before_orbital_copy: true
+  split_strategy: predefined_by_dataset_or_chemical_family
+  save_explicit_split_manifest: true
+  forbid_random_point_level_split: true
+  test_set_policy: evaluate_once_after_model_and_sparsity_are_frozen
+  final_refit_on_all_gscdb137: optional_after_hyperparameters_are_frozen
+  weighting_policy: identical_across_comparison_models
+  failed_species_policy: stop_and_report
+  failed_reaction_policy: stop_and_report
+
+optimization:
+  solver: gurobi
+  objective: weighted_least_squares
+  random_seed: 0
+  threads: 16
+  time_limit_seconds: 7200
+  repeats_per_warm_start: 2
+  warm_start_pass2_from_pass1: true
+  sparsity_count_includes_mandatory_scalar_features: true
+  sparsity_scan:
+    R2_coachform_291: [14, 24, 32, 40, 48, 64, 80]
+  selection_uses:
+    - validation_error
+    - solver_repeat_stability
+    - solver_optimality_gap
+    - grid_stability
+    - dense_domain_factor_audit
+    - parameter_count
+  selection_must_not_use: [final_test_error]
+
+validation:
+  parent_energy_reconstruction_tolerance_hartree: 1.0e-8
+  published_wb97m2_molecular_tolerance_hartree: 1.0e-7
+  published_wb97m2_reaction_tolerance_kcal_per_mol: 1.0e-3
+  reaction_matrix_identity_tolerance_hartree: 1.0e-12
+  equality_constraint_tolerance: 1.0e-10
+  required_gates_before_pilot:
+    - scientific_specification_schema
+    - semantic_integrated_dv_rows_match_final_coach_kernels
+    - qchem_scratch_gateway_closed_shell
+    - qchem_scratch_gateway_open_shell
+    - wb97m_v_parent_energy_from_components
+    - published_wb97m2_energy_from_features
+    - reaction_features_from_species_stoichiometry
+    - direct_energy_equals_fixed_plus_matrix_times_coefficients
+  comparison_models:
+    - omegaB97M-V
+    - published_omegaB97M(2)
+    - R2_coachform_291_C0
+    - R2_coachform_291_C1
+
+execution_stages:
+  - {name: gateway, approximate_species_count: "5-10", submit_to_slurm: false}
+  - {name: real_reaction_smoke, approximate_reaction_count: "20-50", submit_to_slurm: false}
+  - {name: mio_pilot, approximate_reaction_count: "100-300", submit_to_slurm: true}
+  - {name: production, submit_to_slurm: true, require_all_prior_stages_success: true}
+
+safety:
+  overwrite_existing_species_output: false
+  write_species_outputs_atomically: true
+  require_completion_marker: true
+  save_failure_reason: true
+  never_store_secrets_in_outputs: true
+  production_run_requires_dry_run_first: true
+  original_orbital_source_must_remain_unchanged: true

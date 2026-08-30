@@ -1,0 +1,139 @@
+# revwb97m2
+
+This directory contains the isolated code and configuration for the revised
+omegaB97M(2) practice. The upstream `../coach/` checkout is treated as read-only.
+
+## Authoritative scientific specification
+
+The frozen version-2 specification is
+[`configs/scientific_spec.yaml`](configs/scientific_spec.yaml), with rationale
+in [`docs/scientific_specification.md`](docs/scientific_specification.md). Run
+its independent validation gate with:
+
+```bash
+python scripts/validate_scientific_spec.py
+```
+
+The storage policy and organized version-controlled/heavy-data trees are
+defined in [`docs/storage_layout.md`](docs/storage_layout.md).
+
+The root-level `revwb97m2.yaml` and smoke scripts are retained as the legacy
+configuration used by the already accepted plumbing tests. New scientific
+work must use `configs/scientific_spec.yaml`.
+
+## Experiment registry
+
+Every created experiment receives an immutable config and a short,
+hash-qualified ID. The current human-readable list is
+[`EXPERIMENTS.md`](EXPERIMENTS.md), backed by
+[`experiments/registry.csv`](experiments/registry.csv). Creation, status
+updates after every run attempt, and validation are handled by
+[`scripts/experiment_registry.py`](scripts/experiment_registry.py). See
+[`experiments/README.md`](experiments/README.md) for the naming convention and
+commands.
+
+## Authoritative GSCDB137 manifest
+
+The pinned species, dataset, provenance, and scratch-coverage records are under
+[`manifests/gscdb137/`](manifests/gscdb137). The construction and the COACH SI
+weighting evidence are explained in
+[`docs/gscdb137_species_manifest.md`](docs/gscdb137_species_manifest.md).
+
+```bash
+python scripts/validate_gscdb137_manifest.py
+```
+
+Specification version 2 follows the manifest's per-species GSCDB basis
+assignments and preserves generated Q-Chem basis blocks. Validate this policy
+against all core scratch inputs with:
+
+```bash
+python scripts/validate_gscdb_basis_policy.py
+```
+
+## Accepted legacy smoke baseline
+
+The first implemented target was `R2_coach291`. The smoke calculation uses
+omegaB97M-V/def2-QZVPPD orbitals for water, frozen-core RI-MP2, VV10 with
+`b=10` and `C=0.01`, and the three COACH feature grids. It selects integratedDV
+rows `(64, 153, 166)` and writes a 291-element feature vector. The frozen
+scientific model instead uses semantic rows `(64, 154, 166)`; see the
+row-153/154 decision in the scientific specification. Existing smoke artifacts
+remain plumbing and algebra regression fixtures and are not production
+training data.
+
+## Reaction-level smoke test
+
+`reaction_smoke.yaml` defines three closed-shell species and two balanced
+hydrogen-only reactions. The test exercises a unit stoichiometric difference
+and a coefficient of two without introducing open-shell-reference ambiguity.
+
+The reaction builder uses the configured fixed terms
+
+```text
+Nofit = E_nuclear + E_one-electron + E_Coulomb + E_LR-HF
+```
+
+and constructs, for every reaction,
+
+```text
+A_reaction       = sum_s nu_s A_species
+Nofit_reaction   = sum_s nu_s Nofit_species
+Reference        = sum_s nu_s (Nofit_species + A_species beta_oracle)
+b                = Reference - Nofit_reaction
+```
+
+The reference is deliberately synthetic and is only an algebra/data-plumbing
+oracle. It is not a scientific benchmark and must not be used for fitting.
+
+Run the complete calculation through Slurm with:
+
+```bash
+sbatch slurm/run_reaction_smoke.sh
+```
+
+The script uses the `coach` Conda environment and writes species and processed
+artifacts only under:
+
+```text
+/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/reaction_smoke
+```
+
+Successful completion creates `processed/REACTION_SMOKE_PASS`. No MIO solver is
+called by this workflow.
+
+All generated environments, logs, checkpoint files, matrices, and reports live
+under:
+
+```text
+/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2
+```
+
+Submit the smoke job with:
+
+```bash
+mkdir -p /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/logs
+sbatch /clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_r2_smoke.sh
+```
+
+The run directory is intentionally non-overwriting. A successful calculation
+contains both `CALCULATION_COMPLETE` and `SMOKE_PASS`.
+
+## Q-Chem fixed-orbital gateway
+
+Prepare the first disposable gateway case without running Q-Chem:
+
+```bash
+python3.9 scripts/prepare_qchem_gateway.py prepare \
+  --case-root /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/tmp/qchem_gateway/h2o_SW49-fixed-orbitals-v1
+```
+
+The preparation tool refuses to overwrite an existing case. It copies the
+published `h2o_SW49` orbital scratch into separate baseline and working trees,
+preserves an exact copy of the authoritative input, and creates a derived input
+whose only semantic changes are `MAX_SCF_CYCLES 0` and `GEN_SCFMAN FALSE`.
+`PREPARED.json`, `source_manifest.json`, `qchem_identity.json`, and
+`input.diff` record the provenance. Run `run_qchem.sh` only after reviewing the
+derived input and pinned Q-Chem build. This first case tests gateway mechanics;
+it cannot establish production-feature validity while the same-spin
+integratedDV kernel mismatch remains unresolved.

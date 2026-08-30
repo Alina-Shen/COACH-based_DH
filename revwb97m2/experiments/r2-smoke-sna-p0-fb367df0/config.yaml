@@ -1,0 +1,69 @@
+schema_version: 1
+name: R2_coach291_reaction_smoke
+purpose: >-
+  Validate balanced species stoichiometry, fixed-energy Nofit construction,
+  291-column reaction features, grid-difference construction, and reference
+  energy reconstruction without invoking MIO.
+
+data_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/reaction_smoke
+species_output_subdirectory: species
+processed_output_subdirectory: processed
+
+species:
+  h2_eq:
+    xyz: inputs/reaction_smoke/h2_eq.xyz
+    formula: {H: 2}
+    charge: 0
+    multiplicity: 1
+  h2_stretched:
+    xyz: inputs/reaction_smoke/h2_stretched.xyz
+    formula: {H: 2}
+    charge: 0
+    multiplicity: 1
+  h4_dimer:
+    xyz: inputs/reaction_smoke/h4_dimer.xyz
+    formula: {H: 4}
+    charge: 0
+    multiplicity: 1
+
+# Positive coefficients are products and negative coefficients are reactants.
+reactions:
+  h2_deformation:
+    stoichiometry:
+      h2_eq: -1.0
+      h2_stretched: 1.0
+  h2_dimerization:
+    stoichiometry:
+      h2_eq: -2.0
+      h4_dimer: 1.0
+
+nofit:
+  convention: fixed_terms_from_revwb97m2_yaml
+  species_terms:
+    - nuclear_repulsion
+    - one_electron
+    - coulomb
+    - unscaled_long_range_hf_exchange
+  long_range_hf_coefficient: 1.0
+
+reference:
+  type: synthetic_linear_oracle
+  scientific_benchmark: false
+  warning: >-
+    These references test algebra and data plumbing only. They must never be
+    used as training or validation benchmark values.
+  coefficient_width: 291
+  nonzero_coefficients:
+    0: 0.85
+    96: 0.70
+    192: 0.90
+    288: 0.15
+    289: 0.80
+    290: 0.20
+
+validation:
+  balance_tolerance: 0.0
+  array_tolerance_hartree: 1.0e-12
+  reconstruction_tolerance_hartree: 1.0e-10
+  required_feature_width: 291
+  required_reaction_count: 2

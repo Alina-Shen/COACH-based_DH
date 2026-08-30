@@ -1,0 +1,61 @@
+# Copy this file to a draft location, replace every placeholder, and run
+# scripts/experiment_registry.py create. Do not edit the frozen copy afterward.
+schema_version: 1
+
+experiment:
+  model: r2
+  profile: c0
+  sparsity: "32"
+  pass: "1"
+  description: <fill-before-create>
+
+provenance:
+  scientific_specification:
+    path: revwb97m2/configs/scientific_spec.yaml
+    version: 2
+    sha256: <fill-before-create>
+  git_commit: <fill-before-create>
+  created_by: <fill-before-create>
+
+inputs:
+  species_manifest:
+    path: revwb97m2/manifests/gscdb137/species_manifest.csv
+    sha256: <fill-before-create>
+  reaction_metadata:
+    path: revwb97m2/manifests/gscdb137/source/DatasetEval.csv
+    sha256: <fill-before-create>
+  training_weights:
+    path: <fill-before-create>
+    sha256: <fill-before-create>
+  split_manifest:
+    path: <fill-before-create>
+    sha256: <fill-before-create>
+  orbital_manifest:
+    path: <fill-before-create>
+    sha256: <fill-before-create>
+
+model:
+  feature_model: R2_coachform_291
+  integrated_dv_rows: [64, 154, 166]
+  constraint_profile: C0_minimal_critical
+  sparsity: 32
+  feature_count: 291
+  basis_policy: per_species_from_authoritative_gscdb_manifest
+
+grids:
+  fitting_reference: "250974"
+  practical: "99590"
+  coarse_analysis: "75302"
+  grid_constraint_enabled: false
+
+solver:
+  name: gurobi
+  random_seed: 0
+  threads: 16
+  time_limit_seconds: 7200
+  repeats_per_warm_start: 2
+
+execution:
+  heavy_output_root: <fill-before-create>
+  overwrite: false
+  require_dry_run: true
