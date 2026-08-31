@@ -5,7 +5,7 @@ omegaB97M(2) practice. The upstream `../coach/` checkout is treated as read-only
 
 ## Authoritative scientific specification
 
-The frozen version-3 specification is
+The frozen version-4 specification is
 [`configs/scientific_spec.yaml`](configs/scientific_spec.yaml), with rationale
 in [`docs/scientific_specification.md`](docs/scientific_specification.md). Run
 its independent validation gate with:
@@ -116,6 +116,26 @@ python scripts/validate_step10_gateway_results.py
 The summary is intentionally an early Step-12 measurement, not a production
 resource authorization. In particular, it refuses to infer CPU-hours from
 only the small gateways while the high-cost counterpoise case is incomplete.
+
+## Published omegaB97M(2) R0 comparator
+
+Step 11 treats the uploaded 2018 omegaB97M(2) paper as a hash-pinned authority
+only for the conventions and five-decimal coefficients it states explicitly.
+[`published_wb97m2.py`](published_wb97m2.py) implements the resulting named
+component algebra as an immutable, non-fitted `R0` comparator; it cannot
+silently reinterpret the project's distinct 291-column `R2` feature vector.
+The source boundary, coefficients, unresolved authorities, and validation
+status are recorded in the
+[`published_wb97m2` manifest](manifests/published_wb97m2/README.md).
+
+```bash
+python scripts/validate_published_wb97m2.py
+```
+
+The full R0 density evaluator and trusted molecular/reaction fixtures remain
+open until authoritative semilocal definitions and implementation-level
+conventions are supplied. This is an explicit Step-11 authority gate, not a
+failure of the coefficient-algebra scaffold.
 
 ## Reaction-level smoke test
 

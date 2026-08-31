@@ -1,0 +1,128 @@
+schema_version: 1
+status: source_audit_complete_r0_density_kernel_blocked
+purpose: published_omegaB97M2_unfitted_R0_comparator_and_convention_baseline
+
+source:
+  path: revwb97m2/wb97m2_paper/ωB97M(2).pdf
+  sha256: c631e99b54e70859f55a159e783c2b7cc85a50e2d20d384480add5be52cc4642
+  title: "Survival of the most transferable at the top of Jacob's ladder: Defining and testing the ωB97M(2) double hybrid density functional"
+  authors: [Narbe Mardirossian, Martin Head-Gordon]
+  journal: Journal of Chemical Physics
+  volume: 148
+  article: 241736
+  year: 2018
+  doi: 10.1063/1.5025226
+  authority_scope: paper_only_at_displayed_precision
+
+model_role:
+  id: R0_published_wb97m2
+  fit: false
+  may_seed_or_constrain_R1_or_R2: false
+  may_change_R2_feature_space: false
+  scientific_use:
+    - energy_convention_oracle
+    - unfitted_performance_comparator_on_locked_assessment_data
+  exact_reproduction_is_refit_target: false
+
+paper_established_conventions:
+  energy_definition:
+    source: equations_2_to_4
+    exchange: semilocal_short_range_plus_scaled_short_range_HF_plus_full_long_range_HF
+    correlation: semilocal_same_spin_plus_semilocal_opposite_spin_plus_scaled_VV10_plus_scaled_PT2
+    parent_orbitals: self_consistent_omegaB97M_V_then_fixed_xDH
+    semilocal_strategy: complete_repartitioning_not_perturbation_of_parent_energy
+  nonlinear:
+    omega_bohr_inverse: 0.3
+    vv10_b: 10.0
+    vv10_C: 0.01
+    vv10_evaluation: non_self_consistent_on_parent_density
+  candidate_space:
+    source: equations_5_to_8
+    semilocal_channels: [exchange, same_spin_correlation, opposite_spin_correlation]
+    polynomial_form: "sum_ij c_ij w^i u^j"
+    maximum_i: 4
+    maximum_j: 4
+    semilocal_candidate_features: 75
+    scalar_candidate_features: [short_range_hf, vv10, pt2]
+    total_candidate_features: 78
+    mandatory_features: [short_range_hf, pt2]
+    constraints:
+      - "c_x + c_x_00 = 1"
+      - "c_PT2 + c_VV10 = 1"
+  calculation:
+    production_basis: def2-QZVPPD
+    counterpoise: false
+    fitting_semilocal_grid_default: {radial: 99, angular: 590}
+    fitting_semilocal_grid_overrides:
+      AE18: {radial: 500, angular: 974}
+      RG10: {radial: 500, angular: 974}
+    fitting_vv10_grid_default: SG-1
+    fitting_vv10_grid_overrides:
+      AE18: {radial: 75, angular: 302}
+      RG10: {radial: 75, angular: 302}
+    engine: development_Q-Chem_4
+    pt2: canonical_unattenuated_unregularized
+    frozen_core: true
+    resolution_of_identity: true
+    auxiliary_basis_statement: appropriate_auxiliary_basis_for_def2-QZVPPD
+  recommended_application_grids:
+    coarse: "(75,302)/SG-0"
+    medium: "(75,590)/SG-1"
+    fine: "(99,590)/SG-1"
+
+table_II:
+  source_pdf_page: 9
+  source_journal_page: 241736-8
+  displayed_decimal_places: 5
+  displayed_nonzero_coefficients: 16
+  independent_parameters_after_two_constraints: 14
+  semilocal:
+    exchange_00: 0.37806
+    exchange_20: 0.28193
+    exchange_30: -0.21886
+    exchange_01: 0.13642
+    exchange_41: 0.70767
+    same_spin_00: 0.54846
+    same_spin_10: -1.17724
+    same_spin_20: -3.67267
+    opposite_spin_00: 0.46152
+    opposite_spin_20: 2.30490
+    opposite_spin_01: -1.94794
+    opposite_spin_02: 3.24910
+    opposite_spin_22: -2.26280
+  scalars:
+    short_range_hf: 0.62194
+    vv10: 0.65904
+    pt2: 0.34096
+
+implemented_now:
+  coefficient_algebra: revwb97m2/published_wb97m2.py
+  validator: revwb97m2/scripts/validate_published_wb97m2.py
+  generates_density_features: false
+  runs_parent_or_pt2_calculations: false
+  trusted_molecular_or_reaction_fixture: false
+
+unresolved_authority_requirements:
+  - id: exact_semilocal_base_definitions
+    reason: uploaded_paper_delegates_definitions_to_section_V_of_reference_31
+    required_source: "Mardirossian and Head-Gordon, J. Chem. Phys. 144, 214110 (2016), or an authoritative implementation"
+  - id: nonlinear_gamma_values_and_spin_resolved_variables
+    reason: not_stated_in_uploaded_paper
+    warning: do_not_substitute_COACH_R2_gamma_ss_0p01
+  - id: coefficient_precision_beyond_printed_table
+    reason: uploaded_table_displays_only_five_decimal_places
+  - id: exact_auxiliary_basis_identifier
+    reason: paper_only_says_appropriate_auxiliary_basis_for_def2-QZVPPD
+  - id: element_specific_frozen_core_policy
+    reason: paper_states_frozen_core_but_not_exact_element_rules
+  - id: closed_and_open_shell_reference_policy
+    reason: paper_does_not_state_restricted_unrestricted_policy
+  - id: trusted_molecular_and_reaction_energy_fixtures
+    reason: paper_reports_aggregate_errors_not_reproducible_component_energies
+
+step11_gate:
+  coefficient_source_audit_complete: true
+  component_algebra_scaffold_complete: true
+  full_R0_evaluator_ready: false
+  trusted_fixture_validation_complete: false
+  gate_complete: false
