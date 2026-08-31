@@ -408,6 +408,38 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
         )
     checks.details["decoded_integrated_dv_rows"] = decoded_rows
 
+    kernel_gate = semilocal["implementation_gate"]
+    kernel_path = workspace_root / kernel_gate["kernel"]
+    kernel_validator_path = workspace_root / kernel_gate["validator"]
+    kernel_report_path = workspace_root / kernel_gate["validation_report"]
+    checks.check("integrated_dv_gate_passed", kernel_gate["status"] == "passed_step_7")
+    checks.check(
+        "integrated_dv_gate_names_feature_semantics",
+        kernel_gate["test"] == "selected_integrated_dv_features_match_frozen_semantics",
+    )
+    checks.check("integrated_dv_selected_shape", kernel_gate["output_shape"] == [3, 96])
+    checks.check(
+        "integrated_dv_not_coach_coefficient_reproduction",
+        kernel_gate["published_coach_coefficients_used"] is False,
+    )
+    checks.check("integrated_dv_kernel_exists", kernel_path.is_file(), str(kernel_path))
+    checks.check(
+        "integrated_dv_validator_exists", kernel_validator_path.is_file(), str(kernel_validator_path)
+    )
+    checks.check("integrated_dv_report_exists", kernel_report_path.is_file(), str(kernel_report_path))
+    if kernel_path.is_file() and kernel_report_path.is_file():
+        kernel_report = json.loads(kernel_report_path.read_text(encoding="utf-8"))
+        checks.check("integrated_dv_report_passed", kernel_report["passed"] is True)
+        checks.check(
+            "integrated_dv_report_source_hash",
+            kernel_report["kernel_source_sha256"] == sha256(kernel_path),
+        )
+        checks.check(
+            "integrated_dv_report_target",
+            kernel_report["target"]
+            == "new omegaB97M(2)-form fit on fixed omegaB97M-V densities",
+        )
+
     model = config["feature_models"]["models"]["R2_coachform_291"]
     checks.check(
         "model_rows_match_semantics",

@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "all_features_finite": true,
+    "alpha_beta_swap_invariance": true,
+    "fit_target_not_coach_reproduction": true,
+    "frozen_parameters": true,
+    "gamma_ss_only_changes_same_spin_coordinate": true,
+    "grid_block_partition_invariance": true,
+    "independent_polynomial_coordinate_identity": true,
+    "kernel_metadata_matches_independent_decoder": true,
+    "legacy_gamma_ss_0p2_negative_regression": true,
+    "pyscf_grid_and_mgga_adapter": true,
+    "semantic_rows_64_154_166": true,
+    "shape_3_by_96": true,
+    "upstream_legacy_same_spin_mismatch_detected": true,
+    "upstream_protocol_exchange_row64_equivalence": true,
+    "upstream_protocol_opposite_spin_row166_equivalence": true,
+    "upstream_protocol_same_spin_equivalence_at_legacy_gamma": true,
+    "zero_density_safe_and_zero": true
+  },
+  "details": {
+    "decoded_rows": {
+      "64": {
+        "companion_polynomial": "legendre",
+        "companion_variable": "beta_f",
+        "family": "range_separated_mgga_with_nonuniform_scaling",
+        "row": 64,
+        "u_polynomial": "monomial"
+      },
+      "154": {
+        "companion_polynomial": "legendre",
+        "companion_variable": "beta_f",
+        "family": "scan_alpha1_same_spin_with_self_correlation_correction",
+        "row": 154,
+        "u_polynomial": "monomial"
+      },
+      "166": {
+        "companion_polynomial": "legendre",
+        "companion_variable": "w",
+        "family": "scan_alpha1_opposite_spin",
+        "row": 166,
+        "u_polynomial": "legendre"
+      }
+    },
+    "legacy_gamma_ss_max_abs_same_spin_feature_delta": 0.007768994740725371,
+    "one_point_coordinates": {
+      "beta_f": -0.5910883514376295,
+      "s_squared": 0.4689692861330526,
+      "u_os": 0.0028059203739500107,
+      "u_ss": 0.0046678023021958165,
+      "u_x": 0.0018723648181635912,
+      "w_os": 0.5708840751433895
+    },
+    "pyscf_adapter": {
+      "grid_id": "10050",
+      "grid_points": 504,
+      "molecule": "He/STO-3G synthetic spin density"
+    },
+    "upstream_legacy_row154_max_abs_delta": 0.007768994740725373
+  },
+  "kernel_source": "revwb97m2/integrated_dv.py",
+  "kernel_source_sha256": "c0b1e0d41caaea3da3445d4133f17187e8d12c8c23c1c6831857dedd7ac5d2e6",
+  "passed": true,
+  "published_coach_coefficients_used": false,
+  "schema_version": 1,
+  "target": "new omegaB97M(2)-form fit on fixed omegaB97M-V densities",
+  "validated_utc": "2026-08-31T04:16:14.100790+00:00"
+}

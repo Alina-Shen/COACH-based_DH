@@ -342,13 +342,21 @@ semilocal_model:
         domain: "[-1,1]"
         polynomial_family: legendre
   implementation_gate:
-    status: required_before_pilot_or_production
-    test: semantic_integrated_dv_rows_match_final_coach_kernels
+    status: passed_step_7
+    test: selected_integrated_dv_features_match_frozen_semantics
+    kernel: revwb97m2/integrated_dv.py
+    validator: revwb97m2/scripts/validate_integrated_dv.py
+    validation_report: revwb97m2/manifests/integrated_dv/validation.json
+    output_shape: [3, 96]
+    published_coach_coefficients_used: false
     rationale: >-
       The cleaned workflow defaults to same-spin row 153, while the final-form
       documentation specifies Legendre polynomials in v_sigma, which maps to
-      row 154. The semantic form is frozen here; the mapping must be verified
-      independently before real feature generation.
+      row 154. The project-owned kernel directly generates the three selected
+      rows with the frozen nonlinear coordinates. Validation concerns the
+      COACH feature-construction protocol, not reproduction of the published
+      COACH coefficient vector: the target is a new omegaB97M(2)-form fit on
+      fixed omegaB97M-V densities.
 
 feature_models:
   active_for_first_real_fit: R2_coachform_291
@@ -577,11 +585,12 @@ validation:
   passed_data_role_validation: revwb97m2/manifests/data_roles/validation.json
   passed_pyscf_input_validation: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1/validation.json
   passed_basis_bridge_validation: revwb97m2/manifests/basis_bridge/validation.json
+  passed_integrated_dv_validation: revwb97m2/manifests/integrated_dv/validation.json
   required_gates_before_pilot:
     - scientific_specification_schema
     - locked_data_roles_and_qchem_input_metadata
     - immutable_all_uks_pyscf_input_manifest
-    - semantic_integrated_dv_rows_match_final_coach_kernels
+    - selected_integrated_dv_features_match_frozen_semantics
     - pyscf_rimp2_h2o_sw49_cross_engine
     - pyscf_parent_checkpoint_reload_identity
     - pyscf_open_shell_parent_and_ump2

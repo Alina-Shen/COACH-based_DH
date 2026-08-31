@@ -66,6 +66,15 @@ row-153/154 decision in the scientific specification. Existing smoke artifacts
 remain plumbing and algebra regression fixtures and are not production
 training data.
 
+## Production semilocal feature kernel
+
+[`integrated_dv.py`](integrated_dv.py) implements the three frozen semilocal
+rows `(64,154,166)` with `gamma_x=0.004`, `gamma_ss=0.01`, and
+`gamma_os=0.006`. It follows the COACH feature-construction protocol on fixed
+omegaB97M-V densities but deliberately contains no final COACH coefficients:
+the 288 semilocal columns are inputs to a new omegaB97M(2)-form fit. See the
+Step 7 [validation record](manifests/integrated_dv/validation.json).
+
 ## Reaction-level smoke test
 
 `reaction_smoke.yaml` defines three closed-shell species and two balanced

@@ -63,8 +63,13 @@ The fitted vector remains exactly 291 columns:
 | Opposite-spin correlation | Legendre in `u_c,os` and `w` | 166 |
 
 The compression parameters remain `gamma_x=0.004`, `gamma_c,ss=0.01`, and
-`gamma_c,os=0.006`. The legacy row-153 smoke remains a plumbing fixture but is
-not a production scientific definition.
+`gamma_c,os=0.006`. The project-owned production implementation is
+[`../integrated_dv.py`](../integrated_dv.py), whose independent validation is
+recorded in
+[`../manifests/integrated_dv/validation.json`](../manifests/integrated_dv/validation.json).
+It returns the three selected rows as a `3 x 96` matrix and contains no
+published COACH coefficients. The legacy row-153 smoke remains a plumbing
+fixture but is not a production scientific definition.
 
 ## Training and numerical passes
 
@@ -122,15 +127,13 @@ verified explicit all-electron orbital and auxiliary blocks with no ECP.
 
 ## Remaining gates before a real pilot
 
-1. Verify semantic integratedDV rows `(64,154,166)` against the final COACH
-   kernels.
-2. Prove checkpoint reload gives identical densities and features.
-3. Pass an open-shell PySCF parent/UMP2 gateway.
-4. Obtain the authoritative published omegaB97M(2) coefficients and reproduce
+1. Prove checkpoint reload gives identical densities and features.
+2. Pass an open-shell PySCF parent/UMP2 gateway.
+3. Obtain the authoritative published omegaB97M(2) coefficients and reproduce
    trusted molecular and reaction energies.
 
 The Cycle-2 fitting-weight, locked data-role, immutable all-UKS molecular-input,
-and PySCF basis-bridge gates are complete.
+PySCF basis-bridge, and project-owned integratedDV-kernel gates are complete.
 
 Changing the parent method, fixed-orbital policy, 291-feature layout,
 semilocal forms, nonlinear parameters, or energy partition requires a new
