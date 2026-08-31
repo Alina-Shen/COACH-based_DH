@@ -44,8 +44,9 @@ has 14,004 canonical `qarchive.h5` files; the missing files are for
 canonical `qarchive.h5` files, but only 13,167 canonical `.staged.ok` markers.
 Its 17 noncanonical debug/backup directories are never treated as species.
 
-The BigNC source has exactly 75 expected directories and 75 `qarchive.h5`
-files, with no extras. BigNC is not part of GSCDB137 and must remain a separate
+The BigNC source has exactly 75 official, hash-pinned Q-Chem inputs. Available
+orbital directories and `qarchive.h5` files are not metadata sources. BigNC is
+not part of GSCDB137 and must remain a separate
 external evaluation manifest.
 
 The authoritative molecular metadata assigns def2-QZVPPD to only 8,276 of the
@@ -71,25 +72,22 @@ COACH SI Sections 3.4-3.5 distinguish three different kinds of weighting:
   weights used by the corresponding evaluation metrics. They are preserved
   verbatim in `source/` and must not automatically be used as global training
   weights.
-- Table 2 reports 46 dataset/subset rows, 1,766 selected points, and the
-  least-squares weights for COACH's first training cycle. The transcription is
-  in `manifests/weights/coach_si_table2_first_cycle.csv`.
+- Updated final/Cycle-2 Table 2 reports 49 dataset/subset rows and 1,498
+  coefficient-fitting entries. All ten partial selections are printed in full;
+  every other row uses the complete DatasetEval order. The adopted 49-row and
+  expanded manifests are in `manifests/weights/`.
 
-The SI says most training used the thesis-era GSCDB138, that weights began from
-the omegaB97M-V scheme and were adjusted by active learning, and that weights
-were finalized before each design exploration. It also explicitly says the
-weights for the remaining cycle are available upon request. Consequently,
-Table 2 is not the final COACH weight set. Eight published names are
-predecessors/subsets of current GSCDB137 names, five current datasets use only
-an unpublished selected subset, and `TMC34` is a composite/subset case. These
-must not be mapped automatically.
+The updated SI resolves the earlier incomplete-weight evidence: it states that
+the final-cycle inclusion and weights were fixed before best-subset
+optimization. Every published selection was mapped to an exact pinned
+`DatasetEval.csv` reaction ID and independently validated. `RG10N1` and
+`RG10N2` are two disjoint selections within dataset `RG10N`; `CUAGAU83` uses
+the explicitly printed `CUAGAU_*` reaction list.
 
-For AE18, Table 2 uses `Shrink2`; its footnote defines the objective weight as
-`1/sqrt(Z)`. The released COACH preprocessing instead expands `Shrink2` as
-`1/i` and later multiplies the least-squares rows by `sqrt(weight)`. If AE18 is
-ordered by atomic number, this means objective weight `1/Z`, not
-`1/sqrt(Z)`. This paper/code discrepancy must be resolved before adopting the
-AE18 rule.
+For AE18, updated Table 2 directly specifies objective weight `1/sqrt(j)` for
+the jth listed atom. The production CSV represents this with the released
+COACH keyword `Shrink`, whose implementation expands to the same values. The
+old first-cycle `Shrink2` ambiguity is historical and is not used.
 
 ## Rebuild and validate
 

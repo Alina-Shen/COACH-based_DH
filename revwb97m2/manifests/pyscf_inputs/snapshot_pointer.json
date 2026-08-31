@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "immutable_complete",
+  "snapshot_name": "revwb97m2_pyscf_molecular_inputs_all_uks_v1",
+  "snapshot_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1",
+  "record_count": 17658,
+  "energy_role_species": 17452,
+  "opt_geometry_species": 206,
+  "reference_policy": "UKS_for_all_species",
+  "basis_bridge_status": "pending_step_6_semantic_translation_and_validation",
+  "qchem_orbitals_used": false,
+  "artifacts": {
+    "IMMUTABLE.json": "7ff601dc7eae57920c17e272a9548b50a9b92961ad92c9f037f71a8dad22dc8b",
+    "MANIFEST.sha256": "c4f2d596a5b779bc6bb25d6fb31a2ab79c285374af6388ec960b1461b40238bb",
+    "policy.yaml": "1796d2ec6e0014de23951ccd4e9584c2be0f63f92a6909de0096cfbb70a2f368",
+    "provenance.json": "3104f20e5f5c1154662e268d583ef1011ee980b20779a271b45a151a5f5092e9",
+    "pyscf_input_index.csv": "253df7b6b7a3012dd903e05b0a05df1691ba13f195d1c193ee72a07a0c597e88",
+    "pyscf_input_records.jsonl": "2e17d35d5b75a5d282ccb9b9f6619e4f6c13327e8ee9d3b5e5db63cc59905bf0",
+    "validation.json": "48b3f9c4e3dd021397a8324ba04a48ce4cf6d28a23aa985685618afbd149fffb"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "authority": {
+    "si_pdf_sha256": "751b32e29c5a0cfb660d2f912be7d447014697294e9ef317eedd07f26d61956b",
+    "section": "3.5 Training cycles, data selection, and weighting",
+    "table": 2,
+    "pdf_pages": [18, 19, 20]
+  },
+  "dataset_eval_sha256": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe",
+  "checks": {
+    "si_pdf_sha256": true,
+    "dataset_eval_sha256": true,
+    "source_section_and_table": true,
+    "row_count_49": true,
+    "entry_count_1498": true,
+    "every_si_row_matches_row_manifest_and_dataset_eval": true,
+    "every_entry_dataset_reaction_order_and_weight": true,
+    "explicit_partial_selection_rows_10": true,
+    "ae18_18_entries": true,
+    "ae18_exact_one_over_sqrt_j": true,
+    "ae18_matches_released_coach_shrink_implementation": true,
+    "no_duplicate_set_reaction_pairs": true,
+    "positive_finite_weights": true,
+    "provenance_output_hashes": true
+  },
+  "counts": {
+    "table_rows": 49,
+    "expanded_entries": 1498,
+    "dataset_eval_datasets_used": 48,
+    "partial_selection_rows": 10,
+    "entries_by_property_class": {
+      "BH": 91,
+      "EF": 203,
+      "ISO": 75,
+      "INC": 32,
+      "NC": 427,
+      "TC": 568,
+      "TM": 102
+    }
+  },
+  "artifact_sha256": {
+    "transcription_yaml": "007783da520e0707fba3f592f2b14331944da433aff115c087501c3b2af885f1",
+    "training_weights_csv": "d4279ee9cb19144685ae45b92d0f1af1d87f62d135e63625120158ff12c3f474",
+    "expanded_entries_csv": "2d8a1e2340d980c0e236bdd0c425abd9b0c4654a1610f94b4de2644e0b73abcf",
+    "provenance_json": "3a8307c60bf08bba2b3eba3cb584ba1730ebfac9904e961366f2bdb293fe64cc"
+  }
+}

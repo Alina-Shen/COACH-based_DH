@@ -15,7 +15,22 @@ python scripts/build_gscdb137_manifest.py --gscdb-root /path/to/GSCDB
 python scripts/validate_gscdb137_manifest.py
 ```
 
-The SI Table 2 transcription in
-[`weights/coach_si_table2_first_cycle.csv`](weights/coach_si_table2_first_cycle.csv)
-is evidence about COACH's first training cycle. It is not yet an adopted
-revwb97m2 weight configuration.
+The adopted final/Cycle-2 fitting manifest is
+[`weights/coach_si_table2_final_cycle_training_weights.csv`](weights/coach_si_table2_final_cycle_training_weights.csv).
+Its 49 SI rows and expanded 1,498-entry record are documented and validated in
+[`weights/README.md`](weights/README.md). The older first-cycle transcription
+is retained as historical evidence only.
+
+The locked fitting, model-selection, overfitting-diagnostic, and external
+final-assessment roles are in [`data_roles/`](data_roles). These manifests also
+contain the exact unique species lists and non-orbital geometry/basis metadata
+parsed from verified, hash-pinned Q-Chem input snapshots. The official GSCDB
+AdditionalSets snapshot supplies BigNC, GDB9-W1-F12, and OPT inputs; no
+geometry or basis metadata is inferred from orbitals.
+
+The frozen all-UKS PySCF molecular-input policy and reproducible build commands
+are in [`pyscf_inputs/`](pyscf_inputs). The 17,658-record immutable snapshot is
+stored under the heavy-data authoritative-input tree; it preserves source
+geometry, charge, multiplicity, basis/ECP blocks, ghost centers, dataset roles,
+and hashes, but deliberately remains non-runnable until the step-6 basis bridge
+is validated.

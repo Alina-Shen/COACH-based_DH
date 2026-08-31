@@ -1,0 +1,68 @@
+{
+  "known_limitations": [
+    "GSCDB137 model selection overlaps the coefficient-fitting data by design",
+    "MB16-43 is both coefficient-fitting and an overfitting diagnostic",
+    "COACH tuned its D4-ATM parameters on BigNC; revwb97m2 may call BigNC final only if it never tunes any parameter on L14/vL11",
+    "OPT has verified inputs but is a separate geometry-optimization assessment outside this fixed-geometry energy role table"
+  ],
+  "outputs": {
+    "dataset_roles.csv": {
+      "rows": 142,
+      "sha256": "eb7fcce6075bafaac4d75fa62e31f20356e6688f3571efa5f40fa7a8baefc09d"
+    },
+    "qchem_input_metadata.csv": {
+      "rows": 17658,
+      "sha256": "22e2375e4dc9e2319741eccb73eb3c5c2a0f0b9d04d51ce297e6ef2fefbc26b7"
+    },
+    "reaction_roles.csv": {
+      "rows": 11839,
+      "sha256": "7e0c87da5c8492c489b41f0c0416c49237c89021cb8a70260a0ea38ad24a3d59"
+    },
+    "species_roles.csv": {
+      "rows": 17452,
+      "sha256": "3a52626136d3f16f0bac9fdcc91c4573aea7de2c667ccf8be704ee7977909b4e"
+    }
+  },
+  "policy": {
+    "path": "revwb97m2/manifests/data_roles/revwb97m2_data_roles_v2.yaml",
+    "sha256": "d526cc34fa4d9e959d9b2a815ac06aece10618114b99c7383dcf196ed3e1fb1f"
+  },
+  "qchem_input_authority": {
+    "input_manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/input_manifest.csv",
+    "input_manifest_sha256": "75db32bdd10efbcefa8281a05a1d56ff3205b72f2aabee277622e0c27b3e64cf",
+    "orbital_files_used": false
+  },
+  "role_counts": {
+    "coefficient_fitting": {
+      "reaction_count": 1498,
+      "species_count": 2799
+    },
+    "final_assessment": {
+      "reaction_count": 3462,
+      "species_count": 3573
+    },
+    "model_selection": {
+      "reaction_count": 8377,
+      "species_count": 13907
+    },
+    "overfitting_diagnostic": {
+      "reaction_count": 219,
+      "species_count": 249
+    }
+  },
+  "schema_version": 1,
+  "sources": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/BigNC/Allmols_info.json": "7dd4b905d8f94818537e57d4ba55feeb523185df938d140b73ffa8b51c46adeb",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/BigNC/DatasetEval.csv": "2a54ebde09cd60ed9d37d714d9b912b992e44f098896a092d85d56510449d7fa",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/GDB9-W1-F12/Allmols_info.json": "75aa8f24ead7d3ba2b8fca76f7aa1e203490e9396b2deeaa0d758ba90ab02cd6",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/GDB9-W1-F12/DatasetEval.csv": "b8829847420390137015a7b55c2a6fc3d6f74bd9cbb9839695227b4d3a8dc303",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/OPT/Allmols_info.json": "1d65870451d8b4518eccdb1723afe7186c37c5878ab62291b4f35cce59f4888f",
+    "revwb97m2/manifests/additional_sets/MANIFEST.sha256": "b780f1b58a57bf19c19784dd8978a4b6a09271e6a6d0d3f42e6aaf46d1fdc96d",
+    "revwb97m2/manifests/gscdb137/bignc_species_manifest.csv": "203aaacb8f161f130f5b055d15915637e5e9e4fb2fcb89567956281df81fcce9",
+    "revwb97m2/manifests/gscdb137/dataset_manifest.csv": "bcd4336e44388d857e08812aa8f1a5367afc9408913bba5f5cdcfcd19aea76c2",
+    "revwb97m2/manifests/gscdb137/source/DatasetEval.csv": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe",
+    "revwb97m2/manifests/gscdb137/species_manifest.csv": "71e53daa9ffcf5cd6a2415bf3d3e77983db385e454a680f2838cb0814b7176de",
+    "revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv": "2d8a1e2340d980c0e236bdd0c425abd9b0c4654a1610f94b4de2644e0b73abcf"
+  },
+  "status": "generated_pending_independent_validation"
+}

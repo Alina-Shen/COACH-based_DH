@@ -1,0 +1,87 @@
+schema_version: 1
+status: frozen
+frozen_on: "2026-08-30"
+name: revwb97m2_data_roles_v1
+
+evidence:
+  coach_main:
+    path: coach/paper/COACH_2026MHG.pdf
+    sha256: 84aafcc55f566837f0ec34b04a32a2d338848af652bedde2a7758baccbfe03f1
+    role: establishes GSCDB-wide NER model/design selection and external assessment
+  coach_si:
+    path: coach/paper/SI_COACH_2026MHG.pdf
+    sha256: 751b32e29c5a0cfb660d2f912be7d447014697294e9ef317eedd07f26d61956b
+    role: establishes final Cycle-2 fitting membership, weights, NER, and overfitting diagnostic
+  dataset_eval:
+    path: revwb97m2/manifests/gscdb137/source/DatasetEval.csv
+    sha256: 0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe
+  standard_errors:
+    path: revwb97m2/manifests/gscdb137/source/Standard_errors.csv
+    sha256: dcc065a43deadba99265bbdfdb8d7b4b43f8f8eddf547448fd3f308a0e478863
+  source_provenance: revwb97m2/manifests/gscdb137/source_provenance.json
+
+geometry_and_basis_authority:
+  policy: parse_verified_immutable_qchem_inputs_but_never_qchem_orbitals
+  snapshot_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1
+  input_manifest: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/input_manifest.csv
+  input_manifest_sha256: 75db32bdd10efbcefa8281a05a1d56ff3205b72f2aabee277622e0c27b3e64cf
+  completion_marker: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/INPUTS_COMPLETE.json
+  validation_record: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/validation.json
+  fields_parsed:
+    - molecule_geometry
+    - charge
+    - multiplicity
+    - orbital_basis_definition
+    - auxiliary_basis_definition
+    - ecp_definition
+  orbital_files_used: false
+  qarchive_files_used: false
+  scratch_orbital_directories_used: false
+  bignc_status: blocked_no_verified_authoritative_qchem_input_snapshot
+
+roles:
+  coefficient_fitting:
+    source: revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv
+    expected_reactions: 1498
+    semantics: rows enter the weighted least-squares objective and determine coefficients
+  model_selection:
+    datasets: all_137_gscdb137_datasets
+    expected_reactions: 8377
+    granularity: whole_datasets
+    metric: dataset_specific_error_then_ner_then_category_and_overall_mean
+    may_choose:
+      - constraint_profile
+      - sparsity
+      - functional_design
+      - numerical_stability_policy
+    caveat: intentionally_COACH_faithful_and_not_an_independent_holdout_from_fitting
+  overfitting_diagnostic:
+    datasets: [AE11, MB08-165, MB16-43]
+    expected_reactions: 219
+    metric: mean_of_the_three_dataset_NERs
+    may_veto_candidate: true
+    may_directly_choose_best_candidate: false
+    caveat: MB16-43_is_also_in_the_Cycle-2_coefficient_fitting_set_so_the_diagnostic_is_not_fully_independent
+  final_assessment:
+    evaluate_once_after_model_and_sparsity_are_frozen: true
+    may_change_model: false
+    appended_external_reaction_groups:
+      datasets: [SC74, OEEFD]
+      expected_reactions: 71
+      source: revwb97m2/manifests/gscdb137/source/DatasetEval.csv
+      geometry_status: available_in_verified_qchem_input_snapshot
+    BigNC:
+      datasets: [L14, vL11]
+      expected_reactions: 25
+      expected_species: 75
+      species_manifest: revwb97m2/manifests/gscdb137/bignc_species_manifest.csv
+      geometry_status: blocked_no_verified_authoritative_qchem_input_snapshot
+      rule: do_not_infer_geometry_or_basis_from_orbitals
+
+leakage_policy:
+  random_point_level_split_forbidden: true
+  role_overlap_must_be_explicit: true
+  final_assessment_must_not_influence_any_model_choice: true
+  gscdb137_post_freeze_reporting_label: development_domain_assessment_not_untouched_test
+  partial_Cycle-2_dataset_remainders: model_selection_only_as_part_of_the_complete_dataset_NER
+

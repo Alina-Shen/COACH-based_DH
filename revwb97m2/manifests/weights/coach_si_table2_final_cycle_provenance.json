@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "generated_pending_independent_validation",
+  "authority": {
+    "si_pdf": "coach/paper/SI_COACH_2026MHG.pdf",
+    "si_pdf_sha256": "751b32e29c5a0cfb660d2f912be7d447014697294e9ef317eedd07f26d61956b",
+    "si_section": "3.5 Training cycles, data selection, and weighting",
+    "si_table": 2,
+    "si_pdf_pages": [
+      18,
+      19,
+      20
+    ],
+    "transcription": "revwb97m2/manifests/weights/coach_si_table2_final_cycle.yaml",
+    "transcription_sha256": "007783da520e0707fba3f592f2b14331944da433aff115c087501c3b2af885f1"
+  },
+  "dataset_eval": {
+    "path": "revwb97m2/manifests/gscdb137/source/DatasetEval.csv",
+    "sha256": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe"
+  },
+  "outputs": {
+    "row_manifest": "revwb97m2/manifests/weights/coach_si_table2_final_cycle_training_weights.csv",
+    "row_manifest_sha256": "d4279ee9cb19144685ae45b92d0f1af1d87f62d135e63625120158ff12c3f474",
+    "entry_manifest": "revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv",
+    "entry_manifest_sha256": "2d8a1e2340d980c0e236bdd0c425abd9b0c4654a1610f94b4de2644e0b73abcf",
+    "row_count": 49,
+    "entry_count": 1498
+  },
+  "weight_definition": {
+    "non_ae18": "constant SI Table 2 wk multiplying each squared residual",
+    "ae18": "objective_weight(j) = 1/sqrt(j), j is the 1-based listed-atom order"
+  }
+}

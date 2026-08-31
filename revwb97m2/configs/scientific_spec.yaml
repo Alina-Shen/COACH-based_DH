@@ -106,9 +106,29 @@ orbital_source:
   input_definition:
     policy: preserve_verified_gscdb137_identity_while_changing_only_the_engine
     metadata_source: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1
+    parsed_metadata_manifest: revwb97m2/manifests/data_roles/qchem_input_metadata.csv
     metadata_fields_used: [geometry, charge, multiplicity, orbital_basis, auxiliary_basis, ecp]
     orbital_files_used: false
+    qarchive_files_used: false
+    scratch_orbital_directories_used: false
     require_source_hash_validation: true
+    immutable_pyscf_manifest:
+      policy: revwb97m2/manifests/pyscf_inputs/pyscf_input_policy_v1.yaml
+      pointer: revwb97m2/manifests/pyscf_inputs/snapshot_pointer.json
+      snapshot_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1
+      records: pyscf_input_records.jsonl
+      index: pyscf_input_index.csv
+      provenance: provenance.json
+      validation: validation.json
+      checksum_manifest: MANIFEST.sha256
+      immutable_marker: IMMUTABLE.json
+      manifest_sha256: c4f2d596a5b779bc6bb25d6fb31a2ab79c285374af6388ec960b1461b40238bb
+      records_sha256: 2e17d35d5b75a5d282ccb9b9f6619e4f6c13327e8ee9d3b5e5db63cc59905bf0
+      record_count: 17658
+      energy_role_species: 17452
+      opt_geometry_species: 206
+      reference_policy: UKS_for_all_species
+      basis_bridge_status: pending_step_6_semantic_translation_and_validation
   basis:
     policy: per_species_from_authoritative_gscdb_manifest
     manifest: revwb97m2/manifests/gscdb137/species_manifest.csv
@@ -142,9 +162,18 @@ orbital_source:
     closed_shell_singlet: unrestricted
     open_shell: unrestricted
     rationale: >-
-      Match the maintained COACH PySCF generator and the successful
-      h2o_SW49 Q-Chem/PySCF RIMP2 comparison. Record spin contamination and
-      stability for every species.
+      The COACH paper and SI do not state an RKS/UKS reference policy. Match
+      the maintained COACH PySCF generator, which constructs UKS
+      unconditionally, and the released Q-Chem inputs: all 14,006 core and
+      all 3,652 AdditionalSets inputs set UNRESTRICTED True. A spin-zero UKS
+      result may still converge to equal alpha/beta densities and does not by
+      itself imply broken symmetry. Record spin contamination and stability
+      for every species.
+    evidence:
+      maintained_generator: coach/1_data_generation/pyscf_integrated_dv.py
+      core_qchem_input_count_unrestricted_true: 14006
+      additional_sets_qchem_input_count_unrestricted_true: 3652
+      manuscript_and_si_explicit_reference_policy: absent
   range_separation:
     omega_bohr_inverse: 0.3
     long_range_hf_fraction: 1.0
@@ -387,24 +416,89 @@ grid_sensitivity:
 data_policy:
   target_database: GSCDB137
   reaction_metadata: revwb97m2/manifests/gscdb137/source/DatasetEval.csv
-  training_weights: null
+  training_weights: revwb97m2/manifests/weights/coach_si_table2_final_cycle_training_weights.csv
+  training_weight_entries: revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv
+  training_weight_source: revwb97m2/manifests/weights/coach_si_table2_final_cycle.yaml
+  training_weight_provenance: revwb97m2/manifests/weights/coach_si_table2_final_cycle_provenance.json
+  training_weight_validation: revwb97m2/manifests/weights/coach_si_table2_final_cycle_validation.json
   dataset_information: revwb97m2/manifests/gscdb137/source/Datasets.csv
   standard_errors: revwb97m2/manifests/gscdb137/source/Standard_errors.csv
   species_manifest: revwb97m2/manifests/gscdb137/species_manifest.csv
   source_provenance: revwb97m2/manifests/gscdb137/source_provenance.json
+  data_role_policy: revwb97m2/manifests/data_roles/revwb97m2_data_roles_v2.yaml
+  dataset_roles: revwb97m2/manifests/data_roles/dataset_roles.csv
+  reaction_roles: revwb97m2/manifests/data_roles/reaction_roles.csv
+  species_roles: revwb97m2/manifests/data_roles/species_roles.csv
+  qchem_input_metadata: revwb97m2/manifests/data_roles/qchem_input_metadata.csv
+  data_role_provenance: revwb97m2/manifests/data_roles/provenance.json
+  data_role_validation: revwb97m2/manifests/data_roles/validation.json
   must_set_metadata_paths_before_fit: true
   species_manifest_required_before_parent_generation: true
+  roles:
+    coefficient_fitting:
+      reactions: 1498
+      unique_species: 2799
+      determines_coefficients: true
+    model_selection:
+      scope: all_137_gscdb137_datasets
+      reactions: 8377
+      unique_species: 13907
+      metric: dataset_specific_error_then_ner_then_category_and_overall_mean
+      independent_holdout_from_fitting: false
+    overfitting_diagnostic:
+      datasets: [AE11, MB08-165, MB16-43]
+      reactions: 219
+      unique_species: 249
+      metric: mean_of_the_three_dataset_NERs
+      independent_holdout_from_fitting: false
+      caveat: MB16-43_is_also_in_the_coefficient_fitting_set
+    final_assessment:
+      appended_datasets: [SC74, OEEFD]
+      appended_reactions: 71
+      BigNC_datasets: [L14, vL11]
+      BigNC_reactions: 25
+      GDB9_W1_F12_datasets: [GDB_W1-F12]
+      GDB9_W1_F12_reactions: 3366
+      total_energy_reactions: 3462
+      total_unique_species: 3573
+      evaluate_once_after_model_and_sparsity_are_frozen: true
+      may_change_model: false
   external_evaluation:
+    appended_groups:
+      datasets: [SC74, OEEFD]
+      part_of_gscdb137: false
+      part_of_training: false
+      input_metadata_status: available_in_verified_qchem_input_snapshot
     BigNC:
       part_of_gscdb137: false
       part_of_training: false
       manifest: revwb97m2/manifests/gscdb137/bignc_species_manifest.csv
-      basis_policy: per_species_from_manifest
-  split_strategy: predefined_by_dataset_or_chemical_family
+      official_source: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/BigNC
+      basis_policy: parse_authoritative_qchem_input
+      input_metadata_status: available_in_verified_pinned_official_qchem_input_snapshot
+      forbid_geometry_or_basis_inference_from_orbitals: true
+      coach_protocol_caveat: COACH_optimized_D4_ATM_parameters_on_L14_and_vL11
+      untouched_for_revwb97m2_only_if: no_model_or_dispersion_parameter_uses_BigNC
+    GDB9_W1_F12:
+      part_of_gscdb137: false
+      part_of_training: false
+      official_source: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/GDB9-W1-F12
+      input_metadata_status: available_in_verified_pinned_official_qchem_input_snapshot
+      role: untouched_post_freeze_robustness_assessment
+    OPT:
+      part_of_gscdb137: false
+      part_of_training: false
+      official_source: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/OPT
+      input_metadata_status: available_in_verified_pinned_official_qchem_input_snapshot
+      role: separate_geometry_optimization_assessment
+      included_in_fixed_geometry_energy_roles: false
+  role_strategy: coach_faithful_overlapping_development_roles_with_external_final_assessment
+  split_strategy: no_random_split_roles_are_explicit_and_versioned
   save_explicit_split_manifest: true
   forbid_random_point_level_split: true
   test_set_policy: evaluate_once_after_model_and_sparsity_are_frozen
-  final_refit_on_all_gscdb137: optional_after_hyperparameters_are_frozen
+  final_refit_on_all_gscdb137: forbidden_without_new_specification_version
+  gscdb137_post_freeze_label: development_domain_assessment_not_untouched_test
   weighting_policy: identical_across_comparison_models
   failed_species_policy: stop_and_report
   failed_reaction_policy: stop_and_report
@@ -414,7 +508,9 @@ execution_protocol:
   parent_method_for_cycle: omegaB97M-V
   update_parent_orbitals_from_fitted_model: false
   fitting_selection_and_weights: updated_coach_si_final_cycle_table_2
-  fitting_weight_manifest: null
+  fitting_weight_manifest: revwb97m2/manifests/weights/coach_si_table2_final_cycle_training_weights.csv
+  fitting_weight_entries_manifest: revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv
+  fitting_weight_validation: revwb97m2/manifests/weights/coach_si_table2_final_cycle_validation.json
   require_validated_machine_readable_weight_manifest_before_fit: true
   numerical_grid_optimization_passes: 2
   pass_1: unconstrained_grid_sensitivity_discovery
@@ -435,13 +531,14 @@ optimization:
   sparsity_scan:
     R2_coachform_291: [14, 24, 32, 40, 48, 64, 80]
   selection_uses:
-    - validation_error
+    - gscdb137_dataset_and_category_NER
+    - overfitting_diagnostic_mean_NER
     - solver_repeat_stability
     - solver_optimality_gap
     - grid_stability
     - dense_domain_factor_audit
     - parameter_count
-  selection_must_not_use: [final_test_error]
+  selection_must_not_use: [SC74_error, OEEFD_error, BigNC_error, GDB9_W1_F12_error, OPT_error, final_test_error]
 
 validation:
   parent_energy_reconstruction_tolerance_hartree: 1.0e-8
@@ -453,8 +550,12 @@ validation:
   cross_engine_scaled_os_rimp2_tolerance_hartree: 5.0e-6
   ri_mp2_vs_conventional_threshold_kcal_per_mol: 0.015
   passed_rimp2_gateway_report: revwb97m2/results/2026-08-29-pyscf-qchem-rimp2-h2o-sw49.json
+  passed_data_role_validation: revwb97m2/manifests/data_roles/validation.json
+  passed_pyscf_input_validation: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1/validation.json
   required_gates_before_pilot:
     - scientific_specification_schema
+    - locked_data_roles_and_qchem_input_metadata
+    - immutable_all_uks_pyscf_input_manifest
     - semantic_integrated_dv_rows_match_final_coach_kernels
     - pyscf_rimp2_h2o_sw49_cross_engine
     - pyscf_parent_checkpoint_reload_identity

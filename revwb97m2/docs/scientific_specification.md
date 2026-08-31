@@ -69,16 +69,44 @@ not a production scientific definition.
 ## Training and numerical passes
 
 Use one fixed-parent training cycle with the selection and weights from the
-updated COACH SI final/Cycle-2 Table 2. A validated machine-readable
-transcription is still mandatory before fitting. Within that one training
-cycle, retain two numerical optimization passes: pass 1 identifies
+updated COACH SI final/Cycle-2 Table 2. The validated machine-readable 49-row
+input and expanded 1,498-entry manifest are published under
+`revwb97m2/manifests/weights/`. Within that one training cycle, retain two
+numerical optimization passes: pass 1 identifies
 grid-sensitive rows and pass 2 applies the selected grid-difference
 constraints. These passes never regenerate parent orbitals or scalar features.
 
-The Cycle-2 table fixes coefficient-fitting membership and weights but does not
-assign every remaining point to model-selection or final-assessment roles.
-Those roles must be versioned before model selection; random point-level splits
-remain forbidden.
+The Cycle-2 table fixes coefficient-fitting membership and weights. Data-role
+policy v2 now assigns the four downstream roles explicitly. The 1,498 Cycle-2
+entries determine coefficients; all 137 GSCDB137 datasets supply the
+COACH-faithful dataset/category NER model-selection metric; `AE11`, `MB08-165`,
+and `MB16-43` supply the published overfitting diagnostic; and the appended
+`SC74`/`OEEFD`, BigNC, and GDB9-W1-F12 are reserved for final energy
+assessment. GDB9-W1-F12 is the strongest untouched robustness test. BigNC is
+post-freeze here, but COACH itself tuned D4-ATM on L14/vL11, so no project
+parameter may be selected from BigNC. OPT is a separate geometry assessment.
+These roles
+are intentionally overlapping where the source protocol overlaps: GSCDB137 is
+not an independent validation set, and `MB16-43` is both fitting data and an
+overfitting diagnostic. Final external errors may not change the model.
+
+The exact roles and unique species lists are versioned under
+`revwb97m2/manifests/data_roles/`. Geometry, charge, multiplicity, basis,
+auxiliary basis, ECP, and counterpoise ghost-center metadata are parsed from
+verified, hash-pinned Q-Chem input snapshots. Q-Chem orbitals, `qarchive.h5`,
+and orbital scratch directories are prohibited as inputs. The official GSCDB
+AdditionalSets snapshot supplies BigNC, GDB9-W1-F12, and OPT inputs.
+
+The corresponding 17,658 all-UKS molecular definitions are now frozen in the
+read-only heavy-data snapshot
+`/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1`.
+Every record stores `spin = multiplicity - 1`, requests UKS/UMP2 without an
+exception path, and carries its source-input and normalized PySCF-geometry
+hashes. The checksum-manifest SHA-256 is
+`c4f2d596a5b779bc6bb25d6fb31a2ab79c285374af6388ec960b1461b40238bb`.
+This completes the molecular-input freeze, not the basis bridge: all records
+remain explicitly blocked from calculation until step 6 validates named and
+generated orbital, auxiliary, and ECP translations.
 
 ## Remaining gates before a real pilot
 
@@ -89,7 +117,9 @@ remain forbidden.
 4. Validate all needed named, generated, ECP, and auxiliary basis translations.
 5. Obtain the authoritative published omegaB97M(2) coefficients and reproduce
    trusted molecular and reaction energies.
-6. Publish the validated Cycle-2 weight manifest and locked data-role manifest.
+
+The Cycle-2 fitting-weight, locked data-role, and immutable all-UKS molecular-
+input manifest gates are complete.
 
 Changing the parent method, fixed-orbital policy, 291-feature layout,
 semilocal forms, nonlinear parameters, or energy partition requires a new

@@ -1,0 +1,73 @@
+{
+  "artifact_sha256": {
+    "dataset_roles_csv": "eb7fcce6075bafaac4d75fa62e31f20356e6688f3571efa5f40fa7a8baefc09d",
+    "policy_yaml": "d526cc34fa4d9e959d9b2a815ac06aece10618114b99c7383dcf196ed3e1fb1f",
+    "provenance_json": "07127af9c1356a7fa59df13efab7ffdd53fc7e714d1c318c28a9fb59ba12f943",
+    "qchem_input_metadata_csv": "22e2375e4dc9e2319741eccb73eb3c5c2a0f0b9d04d51ce297e6ef2fefbc26b7",
+    "reaction_roles_csv": "7e0c87da5c8492c489b41f0c0416c49237c89021cb8a70260a0ea38ad24a3d59",
+    "species_roles_csv": "3a52626136d3f16f0bac9fdcc91c4573aea7de2c667ccf8be704ee7977909b4e"
+  },
+  "checks": {
+    "additional_sets_manifest_hash_pinned": true,
+    "additional_sets_snapshot_complete_and_hashed": true,
+    "all_gscdb_datasets_are_model_selection": true,
+    "all_role_qchem_inputs_are_unrestricted": true,
+    "available_qchem_inputs_17452": true,
+    "bignc_geometry_is_verified": true,
+    "coefficient_fitting_exact_1498": true,
+    "coefficient_fitting_species_exact": true,
+    "coefficient_weights_exact": true,
+    "dataset_role_rows_142_unique": true,
+    "dataset_scope_counts": true,
+    "every_qchem_input_metadata_row_reparsed_and_hashed": true,
+    "final_assessment_reactions_exact_3462": true,
+    "final_assessment_species_exact": true,
+    "final_cannot_change_model": true,
+    "mb16_fitting_diagnostic_overlap_43": true,
+    "model_selection_exact_gscdb137": true,
+    "model_selection_species_exact": true,
+    "no_blocked_external_species": true,
+    "only_external_datasets_are_final": true,
+    "overfitting_datasets_exact": true,
+    "overfitting_diagnostic_species_exact": true,
+    "overfitting_reactions_exact_219": true,
+    "policy_frozen_v2": true,
+    "provenance_output_hashes": true,
+    "provenance_policy_hash": true,
+    "qchem_metadata_rows_17658_unique": true,
+    "qchem_metadata_species_exact": true,
+    "qchem_orbitals_explicitly_forbidden": true,
+    "random_point_split_forbidden": true,
+    "reaction_rows_match_pinned_dataset_eval": true,
+    "species_identity_union": true,
+    "species_rows_17452_unique": true
+  },
+  "details": {
+    "BigNC_counterpoise_ghost_center_count": 2771,
+    "BigNC_counterpoise_ghost_species_count": 50,
+    "BigNC_reaction_count": 25,
+    "GDB9_W1_F12_reaction_count": 3366,
+    "OPT_verified_qchem_input_count_separate_geometry_assessment": 206,
+    "coefficient_fitting_species_count": 2799,
+    "dataset_scope_counts": {
+      "BigNC_external": 2,
+      "GDB9_W1_F12_external": 1,
+      "appended_external": 2,
+      "gscdb137": 137
+    },
+    "ecp_section_count": 97,
+    "final_assessment_species_count": 3573,
+    "generated_auxiliary_basis_section_count": 1,
+    "generated_basis_section_count": 593,
+    "model_selection_species_count": 13907,
+    "overfitting_diagnostic_species_count": 249,
+    "reaction_counts": {
+      "coefficient_fitting": 1498,
+      "final_assessment": 3462,
+      "model_selection": 8377,
+      "overfitting_diagnostic": 219
+    }
+  },
+  "schema_version": 1,
+  "status": "passed"
+}

@@ -1,0 +1,65 @@
+schema_version: 2
+status: frozen
+frozen_on: "2026-08-30"
+name: revwb97m2_pyscf_molecular_inputs_all_uks_v2
+
+scope:
+  qchem_metadata_records: 17658
+  energy_role_species: 17452
+  opt_geometry_species: 206
+  energy_roles:
+    coefficient_fitting: 2799
+    model_selection: 13907
+    overfitting_diagnostic: 249
+    final_assessment: 3573
+
+authority:
+  geometry_charge_multiplicity_basis_auxiliary_basis_ecp: verified_qchem_inputs
+  core_qchem_snapshot: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1
+  additional_sets_qchem_snapshot: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5
+  parsed_qchem_metadata: revwb97m2/manifests/data_roles/qchem_input_metadata.csv
+  species_roles: revwb97m2/manifests/data_roles/species_roles.csv
+  reaction_roles: revwb97m2/manifests/data_roles/reaction_roles.csv
+  qchem_orbitals_used: false
+  qarchive_files_used: false
+  scratch_orbital_directories_used: false
+
+pyscf_molecule:
+  unit: Angstrom
+  geometry_conversion: preserve_cartesian_coordinates_and_convert_qchem_at_ghosts_to_pyscf_Ghost_symbols
+  charge: exact_qchem_molecule_charge
+  spin: multiplicity_minus_one
+  reference_policy:
+    scf_class: UKS
+    post_scf_mp2_class: UMP2
+    closed_shell_singlet: UKS
+    open_shell: UKS
+    exceptions_allowed: false
+
+basis_bridge_boundary:
+  status: pending_step_6_semantic_translation_and_validation
+  record_qchem_named_labels: true
+  preserve_embedded_basis_blocks: true
+  preserve_embedded_auxiliary_basis_blocks: true
+  preserve_embedded_ecp_blocks: true
+  do_not_claim_pyscf_runnable_basis_before_step_6: true
+  missing_auxiliary_basis: unassigned_pending_step_6
+
+counterpoise:
+  runtime_counterpoise_algorithm: false
+  preserve_authoritative_ghost_centers: true
+  rationale: BigNC counterpoise monomer definitions already encode ghost centers in the immutable molecular input
+
+provenance:
+  hash_only_builder_inputs: true
+  exclude_scientific_specification: true
+  rationale: the scientific specification points back to this snapshot, so hashing it would create a circular dependency
+
+output:
+  snapshot_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v2
+  records: pyscf_input_records.jsonl
+  index: pyscf_input_index.csv
+  provenance: provenance.json
+  validation: validation.json
+  checksum_manifest: MANIFEST.sha256
+  immutable_marker: IMMUTABLE.json

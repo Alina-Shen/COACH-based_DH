@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "pinned_and_hash_verified",
+  "repository": "https://github.com/JiashuLiang/GSCDB.git",
+  "commit": "8f2c7e5f683824c79c7035714de215ec22d0f04a",
+  "commit_date": "2026-03-18T21:23:04-07:00",
+  "commit_subject": "add additional sets used for COACH functional",
+  "source_path": "AdditionalSets",
+  "snapshot_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5",
+  "manifest": "revwb97m2/manifests/additional_sets/MANIFEST.sha256",
+  "manifest_sha256": "b780f1b58a57bf19c19784dd8978a4b6a09271e6a6d0d3f42e6aaf46d1fdc96d",
+  "manifest_file_count": 7310,
+  "counts": {
+    "BigNC": {"qchem_inputs": 75, "xyz_files": 75, "reactions": 25},
+    "GDB9-W1-F12": {"qchem_inputs": 3371, "xyz_files": 3371, "reactions": 3366},
+    "OPT": {"qchem_inputs": 206, "xyz_files": 206, "systems": 206}
+  },
+  "geometry_authority": "qchem_inputs",
+  "derived_xyz_is_authoritative": false,
+  "qchem_orbitals_used": false
+}
