@@ -1,0 +1,148 @@
+{
+  "checks": {
+    "ae11_yb_exact_dimensions": true,
+    "ae11_yb_prior_evidence_hashes": true,
+    "ae11_yb_qchem_job_completed": true,
+    "all_dimensions_positive": true,
+    "electron_spin_parity_valid": true,
+    "every_resolution_recomputed_from_immutable_record": true,
+    "missing_auxiliary_policy_counts_exact": true,
+    "no_qchem_orbitals_or_qarchive": true,
+    "output_hash_matches_provenance": true,
+    "qchem_auxiliary_sources_hash_pinned": true,
+    "qchem_structural_regressions_match": true,
+    "record_count_sorted_unique_17658": true,
+    "representative_pyscf_molecules_build": true,
+    "source_snapshot_hashes": true,
+    "translation_counts_exact": true
+  },
+  "details": {
+    "ae11_yb": {
+      "auxiliary_resolution": "embedded_qchem_block",
+      "auxiliary_shells": "65",
+      "auxiliary_spherical_aos": "285",
+      "ecp_electrons": "0",
+      "ecp_resolution": "not_applicable",
+      "electron_count": "70",
+      "orbital_resolution": "embedded_qchem_block",
+      "orbital_shells": "50",
+      "orbital_spherical_aos": "184"
+    },
+    "counters": {
+      "auxiliary_resolution": {
+        "embedded_qchem_block": 1,
+        "explicit_scope_policy": 3652,
+        "hash_pinned_qchem_named_library": 14005
+      },
+      "ecp_resolution": {
+        "embedded_qchem_block": 97,
+        "implicit_named_def2_ecp": 367,
+        "not_applicable": 17194
+      },
+      "orbital_resolution": {
+        "embedded_qchem_block": 593,
+        "named_alias": 17065
+      },
+      "scope": {
+        "BigNC_external": 75,
+        "GDB9_W1_F12_external": 3371,
+        "OPT_external": 206,
+        "auxiliary_only": 99,
+        "gscdb137": 13907
+      }
+    },
+    "qchem_structural_regressions": {
+      "3BHET_1.1_dimAB": {
+        "auxiliary_spherical_aos": 931,
+        "electron_count": 44,
+        "orbital_spherical_aos": 385,
+        "output_hash": "aac8d2333a44a1a38de73737d14d79898b3933d3181d77025cef1cddbffd1442",
+        "passed": true,
+        "pyscf_auxiliary_shells": 223,
+        "pyscf_orbital_shells": 119
+      },
+      "3d4dIPSS_Ag_GS": {
+        "auxiliary_spherical_aos": 252,
+        "electron_count": 19,
+        "orbital_spherical_aos": 180,
+        "output_hash": "f5bc1fa507e87f07863f788b7bc93a48dd508fb04b1f63daf92f102b12466a9f",
+        "passed": true,
+        "pyscf_auxiliary_shells": 46,
+        "pyscf_orbital_shells": 27
+      },
+      "DAPD_Pd": {
+        "auxiliary_spherical_aos": 252,
+        "electron_count": 18,
+        "orbital_spherical_aos": 180,
+        "output_hash": "2a8a379ec8a93faa91a7fe6cb2d30886d93843fe7df90874383e4a8f072879f4",
+        "passed": true,
+        "pyscf_auxiliary_shells": 46,
+        "pyscf_orbital_shells": 27
+      },
+      "h2o_SW49": {
+        "auxiliary_spherical_aos": 287,
+        "electron_count": 10,
+        "orbital_spherical_aos": 132,
+        "output_hash": "9d5e641e65c64f34b5e227cf53ad45699871b264305a5b33faf31c4b0140d832",
+        "passed": true,
+        "pyscf_auxiliary_shells": 75,
+        "pyscf_orbital_shells": 42
+      }
+    },
+    "representative_results": {
+      "3BHET_1.1_dimAB": {
+        "auxiliary_shells": 223,
+        "auxiliary_spherical_aos": 931,
+        "electrons": 44,
+        "orbital_shells": 119,
+        "orbital_spherical_aos": 385
+      },
+      "3d4dIPSS_Ag_GS": {
+        "auxiliary_shells": 46,
+        "auxiliary_spherical_aos": 252,
+        "electrons": 19,
+        "orbital_shells": 27,
+        "orbital_spherical_aos": 180
+      },
+      "AE11_Yb": {
+        "auxiliary_shells": 65,
+        "auxiliary_spherical_aos": 285,
+        "electrons": 70,
+        "orbital_shells": 50,
+        "orbital_spherical_aos": 184
+      },
+      "DAPD_Pd": {
+        "auxiliary_shells": 46,
+        "auxiliary_spherical_aos": 252,
+        "electrons": 18,
+        "orbital_shells": 27,
+        "orbital_spherical_aos": 180
+      },
+      "L14_2a_monA": {
+        "auxiliary_shells": 1950,
+        "auxiliary_spherical_aos": 6662,
+        "electrons": 282,
+        "orbital_shells": 992,
+        "orbital_spherical_aos": 2724
+      },
+      "dsgdb9nsd_000018": {
+        "auxiliary_shells": 130,
+        "auxiliary_spherical_aos": 394,
+        "electrons": 32,
+        "orbital_shells": 68,
+        "orbital_spherical_aos": 160
+      },
+      "h2o_SW49": {
+        "auxiliary_shells": 75,
+        "auxiliary_spherical_aos": 287,
+        "electrons": 10,
+        "orbital_shells": 42,
+        "orbital_spherical_aos": 132
+      }
+    }
+  },
+  "schema_version": 1,
+  "status": "passed",
+  "validator": "revwb97m2/scripts/validate_basis_bridge.py",
+  "validator_sha256": "0ff9cf303f6dc7977acd1197b44f81db0cd7d141ba2869dfb6a180954910fd09"
+}

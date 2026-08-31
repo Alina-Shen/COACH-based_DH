@@ -1,0 +1,62 @@
+{
+  "bridge_module": "revwb97m2/scripts/pyscf_basis_bridge.py",
+  "bridge_module_sha256": "738b4fa05fec28f7928f7313cf667f5b2a99166c649f14ee64cd20af9e1aec2a",
+  "builder": "revwb97m2/scripts/build_basis_bridge.py",
+  "builder_sha256": "e73f42c3612335228fd6eec04792814ee27409bb182b3c4d00092af0e9f9bb07",
+  "counters": {
+    "auxiliary_resolution": {
+      "embedded_qchem_block": 1,
+      "explicit_scope_policy": 3652,
+      "hash_pinned_qchem_named_library": 14005
+    },
+    "ecp_resolution": {
+      "embedded_qchem_block": 97,
+      "implicit_named_def2_ecp": 367,
+      "not_applicable": 17194
+    },
+    "orbital_resolution": {
+      "embedded_qchem_block": 593,
+      "named_alias": 17065
+    },
+    "scope": {
+      "BigNC_external": 75,
+      "GDB9_W1_F12_external": 3371,
+      "OPT_external": 206,
+      "auxiliary_only": 99,
+      "gscdb137": 13907
+    }
+  },
+  "outputs": {
+    "resolved_basis_records.csv": {
+      "rows": 17658,
+      "sha256": "cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6"
+    }
+  },
+  "policy": "revwb97m2/manifests/basis_bridge/step6_basis_bridge_v1.yaml",
+  "policy_sha256": "d4a100fc725af6711604b30a78f8013f62e8841bfc3254c8eaaf875ad772ba98",
+  "qarchive_used": false,
+  "qchem_auxiliary_sources": {
+    "rimp2-def2-QZVPP": {
+      "path": "/global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis/rimp2-def2-QZVPP.bas",
+      "sha256": "994a9e828ec2ec59ee3a09e1e421c68cb925a1958840be55d2c255ee7af03cc4"
+    },
+    "rimp2-def2-QZVPPD": {
+      "path": "/global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis/rimp2-def2-QZVPPD.bas",
+      "sha256": "ffbdd2221fabb9bf68b436a26d4385bc15a28577b44477e900654a2722f1f74b"
+    },
+    "rimp2-def2-TZVP": {
+      "path": "/global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis/rimp2-def2-TZVP.bas",
+      "sha256": "091bc773c09376b6c80fb0d075e49b27f49538026cd6f65f4cda0a6dc9111e0c"
+    },
+    "rimp2-def2-TZVPPD": {
+      "path": "/global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis/rimp2-def2-TZVPPD.bas",
+      "sha256": "76f734580105743aa6c21cbc6ea22fe98efd02c3670df373a7dc63b7e8ef13ff"
+    }
+  },
+  "qchem_orbitals_used": false,
+  "record_count": 17658,
+  "schema_version": 1,
+  "source_records": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1/pyscf_input_records.jsonl",
+  "source_records_sha256": "2e17d35d5b75a5d282ccb9b9f6619e4f6c13327e8ee9d3b5e5db63cc59905bf0",
+  "status": "built_pending_independent_validation"
+}

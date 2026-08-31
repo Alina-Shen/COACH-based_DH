@@ -129,6 +129,21 @@ orbital_source:
       opt_geometry_species: 206
       reference_policy: UKS_for_all_species
       basis_bridge_status: pending_step_6_semantic_translation_and_validation
+    validated_basis_bridge:
+      status: passed
+      policy: revwb97m2/manifests/basis_bridge/step6_basis_bridge_v1.yaml
+      resolved_records: revwb97m2/manifests/basis_bridge/resolved_basis_records.csv
+      provenance: revwb97m2/manifests/basis_bridge/provenance.json
+      validation: revwb97m2/manifests/basis_bridge/validation.json
+      bridge_module: revwb97m2/scripts/pyscf_basis_bridge.py
+      record_count: 17658
+      policy_sha256: d4a100fc725af6711604b30a78f8013f62e8841bfc3254c8eaaf875ad772ba98
+      resolved_records_sha256: cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6
+      provenance_sha256: 16b997715a0f18746f4d9129dcafb286013fb276fb74ced33c930e830ee4515b
+      validation_sha256: 445857ce1b593b03d1db29528cae37e02b6ecfb7f2a26207fb0f2b593d0ced6f
+      source_snapshot_remains_immutable: true
+      source_snapshot_pending_marker_is_superseded_by_this_overlay: true
+      qchem_orbitals_used: false
   basis:
     policy: per_species_from_authoritative_gscdb_manifest
     manifest: revwb97m2/manifests/gscdb137/species_manifest.csv
@@ -137,6 +152,8 @@ orbital_source:
     core_scope_value: gscdb137
     basis_field: basis
     require_pyscf_semantic_translation_validation: true
+    pyscf_semantic_translation_status: passed_step_6
+    pyscf_semantic_translation_validation: revwb97m2/manifests/basis_bridge/validation.json
     translate_generated_basis_and_ecp_sections: true
     forbid_uniform_override: true
     expected_core_species: 13907
@@ -230,12 +247,19 @@ double_hybrid_energy:
     amplitudes: canonical_mp2
     frozen_core: true
     auxiliary_basis:
-      policy: per_species_verified_input_metadata_translated_to_pyscf
+      policy: source_preserving_translation_with_explicit_external_scope_fallbacks
       manifest_advisory_field: aux_basis_corr
       metadata_field: AUX_BASIS_CORR
       translate_generated_aux_basis_sections: true
       require_element_and_shell_coverage_validation: true
       require_pyscf_alias_mapping_validation: true
+      named_library_source: /global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis
+      missing_source_assignments:
+        BigNC_external: rimp2-def2-TZVPPD
+        GDB9_W1_F12_external: rimp2-def2-TZVP
+        OPT_external: rimp2-def2-QZVPPD
+      automatic_runtime_auxiliary_basis_generation: forbidden
+      bridge_validation: revwb97m2/manifests/basis_bridge/validation.json
     denominator_regularization: none
     attenuation: none
     fitted_feature: total_pt2_correlation
@@ -552,6 +576,7 @@ validation:
   passed_rimp2_gateway_report: revwb97m2/results/2026-08-29-pyscf-qchem-rimp2-h2o-sw49.json
   passed_data_role_validation: revwb97m2/manifests/data_roles/validation.json
   passed_pyscf_input_validation: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1/validation.json
+  passed_basis_bridge_validation: revwb97m2/manifests/basis_bridge/validation.json
   required_gates_before_pilot:
     - scientific_specification_schema
     - locked_data_roles_and_qchem_input_metadata

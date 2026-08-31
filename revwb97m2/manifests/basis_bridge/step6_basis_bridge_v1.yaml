@@ -1,0 +1,140 @@
+schema_version: 1
+status: frozen
+frozen_on: "2026-08-30"
+name: revwb97m2_qchem_metadata_to_pyscf_basis_bridge_v1
+
+source_snapshot:
+  root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1
+  records: pyscf_input_records.jsonl
+  checksum_manifest_sha256: c4f2d596a5b779bc6bb25d6fb31a2ab79c285374af6388ec960b1461b40238bb
+  records_sha256: 2e17d35d5b75a5d282ccb9b9f6619e4f6c13327e8ee9d3b5e5db63cc59905bf0
+  record_count: 17658
+
+translation:
+  orbitals_used: false
+  qarchive_used: false
+  generated_basis_format: qchem_gaussian
+  generated_ecp_format: qchem_gaussian_ecp
+  pyscf_spherical_basis: true
+  require_every_molecular_element_in_orbital_and_auxiliary_basis: true
+  require_electron_spin_parity: true
+  orbital_aliases:
+    AUG-CC-PCV5Z: aug-cc-pcv5z
+    AUG-CC-PV5Z: aug-cc-pv5z
+    AUG-CC-PVQZ: aug-cc-pvqz
+    AUG-CC-PWCVQZ: aug-cc-pwcvqz
+    AUG-PC-3: aug-pc-3
+    AUG-PC-4: aug-pc-4
+    DEF2-QZVPP: def2-qzvpp
+    DEF2-QZVPPD: def2-qzvppd
+    DEF2-TZVP: def2-tzvp
+    DEF2-TZVPD: def2-tzvpd
+    DEF2-TZVPPD: def2-tzvppd
+  auxiliary_aliases:
+    RIMP2-DEF2-QZVPP: rimp2-def2-QZVPP
+    RIMP2-DEF2-QZVPPD: rimp2-def2-QZVPPD
+  missing_source_auxiliary_policy:
+    BigNC_external: rimp2-def2-TZVPPD
+    GDB9_W1_F12_external: rimp2-def2-TZVP
+    OPT_external: rimp2-def2-QZVPPD
+  missing_source_auxiliary_rationale: >-
+    Freeze the matching PySCF RI/MP2-fit member of each source orbital-basis
+    family from the same hash-pinned Q-Chem auxiliary library used by the
+    source calculations. Resolve it explicitly rather than allowing a runtime
+    automatic auxiliary-basis guess.
+  qchem_auxiliary_library:
+    root: /global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis
+    files:
+      rimp2-def2-QZVPP:
+        path: rimp2-def2-QZVPP.bas
+        sha256: 994a9e828ec2ec59ee3a09e1e421c68cb925a1958840be55d2c255ee7af03cc4
+      rimp2-def2-QZVPPD:
+        path: rimp2-def2-QZVPPD.bas
+        sha256: ffbdd2221fabb9bf68b436a26d4385bc15a28577b44477e900654a2722f1f74b
+      rimp2-def2-TZVP:
+        path: rimp2-def2-TZVP.bas
+        sha256: 091bc773c09376b6c80fb0d075e49b27f49538026cd6f65f4cda0a6dc9111e0c
+      rimp2-def2-TZVPPD:
+        path: rimp2-def2-TZVPPD.bas
+        sha256: 76f734580105743aa6c21cbc6ea22fe98efd02c3670df373a7dc63b7e8ef13ff
+  implicit_named_def2_ecp_policy: >-
+    Q-Chem automatically attaches the standard def2 ECP to elements that
+    require it. PySCF does not do so when only ``basis`` is assigned; the
+    bridge must explicitly load the matching def2 ECP for those elements.
+
+ae11_yb_exception:
+  policy: preserve_verified_explicit_all_electron_orbital_and_auxiliary_blocks
+  source_input: /clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/AE11_Yb.in
+  source_output: /clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/AE11_Yb.out
+  source_job_script: /clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/AE11_Yb.sh
+  source_input_sha256: 73747ab34844db86d4f10ef83edd1499de06cd1a4e1ec9a4138facc90b1c91d2
+  source_output_sha256: 762a2a3a287438fe83be2a44024f32bbb8cd2e4fc2ac156eade1cfa250f85f2c
+  source_job_script_sha256: 85d8767820b50489e37878ca8a014dad4ff88f99028f6f4e01e1185e28cdafef
+  qchem_settings:
+    basis: GEN
+    auxiliary_basis_corr: GEN
+    n_frozen_core: 0
+    unrestricted: true
+  expected:
+    electrons: 70
+    ecp_electrons: 0
+    orbital_shells: 50
+    orbital_spherical_aos: 184
+    auxiliary_shells: 65
+    auxiliary_spherical_aos: 285
+    qchem_job_completed: true
+  rationale: >-
+    The earlier OS-MP2 attempt failed because Yb had no available auxiliary
+    basis. The successful rerun supplied explicit orbital and auxiliary blocks;
+    those exact immutable blocks are therefore authoritative for PySCF too.
+
+qchem_structural_regressions:
+  h2o_SW49:
+    output: /clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/h2o_SW49.out
+    output_sha256: 9d5e641e65c64f34b5e227cf53ad45699871b264305a5b33faf31c4b0140d832
+    electrons: 10
+    qchem_orbital_shells: 42
+    pyscf_orbital_shells: 42
+    orbital_spherical_aos: 132
+    qchem_auxiliary_shells: 75
+    pyscf_auxiliary_shells: 75
+    auxiliary_spherical_aos: 287
+  3BHET_1.1_dimAB:
+    output: /clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3BHET_1.1_dimAB.out
+    output_sha256: aac8d2333a44a1a38de73737d14d79898b3933d3181d77025cef1cddbffd1442
+    electrons: 44
+    qchem_orbital_shells: 119
+    pyscf_orbital_shells: 119
+    orbital_spherical_aos: 385
+    qchem_auxiliary_shells: 223
+    pyscf_auxiliary_shells: 223
+    auxiliary_spherical_aos: 931
+  3d4dIPSS_Ag_GS:
+    output: /clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ag_GS.out
+    output_sha256: f5bc1fa507e87f07863f788b7bc93a48dd508fb04b1f63daf92f102b12466a9f
+    electrons: 19
+    qchem_orbital_shells: 38
+    pyscf_orbital_shells: 27
+    orbital_spherical_aos: 180
+    qchem_auxiliary_shells: 46
+    pyscf_auxiliary_shells: 46
+    auxiliary_spherical_aos: 252
+  DAPD_Pd:
+    output: /clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/DAPD_Pd.out
+    output_sha256: 2a8a379ec8a93faa91a7fe6cb2d30886d93843fe7df90874383e4a8f072879f4
+    electrons: 18
+    qchem_orbital_shells: 38
+    pyscf_orbital_shells: 27
+    orbital_spherical_aos: 180
+    qchem_auxiliary_shells: 46
+    pyscf_auxiliary_shells: 46
+    auxiliary_spherical_aos: 252
+  contraction_note: >-
+    PySCF contraction optimization merges some generated contraction shells,
+    so its internal nbas can be smaller than Q-Chem's shell count while the
+    spherical AO dimension remains exactly identical.
+
+outputs:
+  records: revwb97m2/manifests/basis_bridge/resolved_basis_records.csv
+  provenance: revwb97m2/manifests/basis_bridge/provenance.json
+  validation: revwb97m2/manifests/basis_bridge/validation.json

@@ -33,4 +33,7 @@ are in [`pyscf_inputs/`](pyscf_inputs). The 17,658-record immutable snapshot is
 stored under the heavy-data authoritative-input tree; it preserves source
 geometry, charge, multiplicity, basis/ECP blocks, ghost centers, dataset roles,
 and hashes, but deliberately remains non-runnable until the step-6 basis bridge
-is validated.
+is validated. That validation is now complete in [`basis_bridge/`](basis_bridge):
+the immutable Step-5 records are unchanged, while the bridge supplies the
+resolved PySCF orbital, auxiliary, and ECP definitions plus a 17,658-row audit
+index and independent passing report.

@@ -245,6 +245,39 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
             and input_manifest["opt_geometry_species"] == 206,
         )
     checks.check("pyscf_wb97m_v_label", orbital["pyscf_xc_label"] == "wb97m-v")
+    bridge = orbital["input_definition"]["validated_basis_bridge"]
+    bridge_paths = {
+        key: workspace_root / bridge[key]
+        for key in ("policy", "resolved_records", "provenance", "validation", "bridge_module")
+    }
+    bridge_policy = yaml.safe_load(bridge_paths["policy"].read_text(encoding="utf-8"))
+    bridge_provenance = json.loads(bridge_paths["provenance"].read_text(encoding="utf-8"))
+    bridge_validation = json.loads(bridge_paths["validation"].read_text(encoding="utf-8"))
+    with bridge_paths["resolved_records"].open(newline="", encoding="utf-8") as handle:
+        bridge_rows = list(csv.DictReader(handle))
+    checks.check(
+        "pyscf_basis_bridge_artifact_hashes",
+        sha256(bridge_paths["policy"]) == bridge["policy_sha256"]
+        and sha256(bridge_paths["resolved_records"]) == bridge["resolved_records_sha256"]
+        and sha256(bridge_paths["provenance"]) == bridge["provenance_sha256"]
+        and sha256(bridge_paths["validation"]) == bridge["validation_sha256"],
+    )
+    checks.check(
+        "pyscf_basis_bridge_passed_all_records",
+        bridge["status"] == "passed"
+        and bridge["record_count"] == len(bridge_rows) == 17658
+        and bridge_validation["status"] == "passed"
+        and all(bridge_validation["checks"].values())
+        and all(row["runnable_status"] == "runnable_basis_metadata_validated" for row in bridge_rows),
+    )
+    checks.check(
+        "pyscf_basis_bridge_source_boundary",
+        bridge["source_snapshot_remains_immutable"] is True
+        and bridge["source_snapshot_pending_marker_is_superseded_by_this_overlay"] is True
+        and bridge["qchem_orbitals_used"] is False
+        and bridge_policy["translation"]["orbitals_used"] is False
+        and bridge_provenance["qchem_orbitals_used"] is False,
+    )
     checks.check(
         "unrestricted_reference_policy",
         orbital["reference_policy"]["closed_shell_singlet"] == "unrestricted"
@@ -279,6 +312,12 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
         "pyscf_basis_semantic_translation_required",
         basis["require_pyscf_semantic_translation_validation"] is True,
     )
+    checks.check(
+        "pyscf_basis_semantic_translation_passed",
+        basis["pyscf_semantic_translation_status"] == "passed_step_6"
+        and workspace_root / basis["pyscf_semantic_translation_validation"]
+        == bridge_paths["validation"],
+    )
     checks.check("generated_basis_ecp_translation", basis["translate_generated_basis_and_ecp_sections"] is True)
 
     energy = config["double_hybrid_energy"]
@@ -290,7 +329,8 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     auxiliary_basis = energy["pt2"]["auxiliary_basis"]
     checks.check(
         "per_species_auxiliary_basis_policy",
-        auxiliary_basis["policy"] == "per_species_verified_input_metadata_translated_to_pyscf",
+        auxiliary_basis["policy"]
+        == "source_preserving_translation_with_explicit_external_scope_fallbacks",
     )
     checks.check(
         "generated_aux_basis_translation",
@@ -299,6 +339,16 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     checks.check(
         "pyscf_aux_basis_mapping_required",
         auxiliary_basis["require_pyscf_alias_mapping_validation"] is True,
+    )
+    checks.check(
+        "pyscf_aux_basis_external_policy_frozen",
+        auxiliary_basis["missing_source_assignments"]
+        == {
+            "BigNC_external": "rimp2-def2-TZVPPD",
+            "GDB9_W1_F12_external": "rimp2-def2-TZVP",
+            "OPT_external": "rimp2-def2-QZVPPD",
+        }
+        and auxiliary_basis["automatic_runtime_auxiliary_basis_generation"] == "forbidden",
     )
     checks.check(
         "fixed_energy_partition",
@@ -612,6 +662,13 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
         and Path(validation["passed_pyscf_input_validation"])
         == input_snapshot_paths["validation"]
         and input_snapshot_paths["validation"].is_file(),
+    )
+    checks.check(
+        "pyscf_basis_bridge_gate_required_and_passed",
+        "pyscf_generated_basis_ecp_and_auxiliary_basis_translation" in required_gates
+        and workspace_root / validation["passed_basis_bridge_validation"]
+        == bridge_paths["validation"]
+        and bridge_validation["status"] == "passed",
     )
 
     safety = config["safety"]

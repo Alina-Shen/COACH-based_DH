@@ -12,6 +12,12 @@ verbatim. These records deliberately say that basis translation is pending:
 Step 6 must validate aliases and translate generated blocks before the inputs
 are considered runnable PySCF jobs.
 
+Step 6 has since passed through the separate
+[`../basis_bridge/`](../basis_bridge/) overlay. This directory and the heavy
+snapshot remain unchanged as immutable Step-5 evidence; production code must
+combine each source record with the validated bridge rather than rewriting
+the record's historical pending marker.
+
 Build into a new empty staging directory and validate independently:
 
 ```bash

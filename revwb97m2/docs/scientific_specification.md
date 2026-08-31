@@ -104,9 +104,21 @@ Every record stores `spin = multiplicity - 1`, requests UKS/UMP2 without an
 exception path, and carries its source-input and normalized PySCF-geometry
 hashes. The checksum-manifest SHA-256 is
 `c4f2d596a5b779bc6bb25d6fb31a2ab79c285374af6388ec960b1461b40238bb`.
-This completes the molecular-input freeze, not the basis bridge: all records
-remain explicitly blocked from calculation until step 6 validates named and
-generated orbital, auxiliary, and ECP translations.
+The immutable source snapshot deliberately retains its original Step-5
+``blocked_pending_step_6`` marker. Step 6 is now complete as a separate,
+versioned overlay under `revwb97m2/manifests/basis_bridge/`: all 17,658 records
+have resolved orbital, auxiliary, and ECP definitions and passed independent
+dimension, element-coverage, electron-count, and representative PySCF-build
+checks. Production code must combine the immutable molecular record with this
+validated bridge; it must not edit or reinterpret the Step-5 snapshot.
+
+Named RI bases are translated from hash-pinned files in the Q-Chem auxiliary
+library, which preserves heavy-element coverage that PySCF's packaged aliases
+do not always provide. Q-Chem's implicit def2 ECP behavior is made explicit in
+PySCF. Missing source RI assignments are frozen as `rimp2-def2-TZVPPD` for
+BigNC, `rimp2-def2-TZVP` for GDB9-W1-F12, and `rimp2-def2-QZVPPD` for OPT;
+runtime automatic auxiliary generation is forbidden. `AE11_Yb` preserves its
+verified explicit all-electron orbital and auxiliary blocks with no ECP.
 
 ## Remaining gates before a real pilot
 
@@ -114,12 +126,11 @@ generated orbital, auxiliary, and ECP translations.
    kernels.
 2. Prove checkpoint reload gives identical densities and features.
 3. Pass an open-shell PySCF parent/UMP2 gateway.
-4. Validate all needed named, generated, ECP, and auxiliary basis translations.
-5. Obtain the authoritative published omegaB97M(2) coefficients and reproduce
+4. Obtain the authoritative published omegaB97M(2) coefficients and reproduce
    trusted molecular and reaction energies.
 
-The Cycle-2 fitting-weight, locked data-role, and immutable all-UKS molecular-
-input manifest gates are complete.
+The Cycle-2 fitting-weight, locked data-role, immutable all-UKS molecular-input,
+and PySCF basis-bridge gates are complete.
 
 Changing the parent method, fixed-orbital policy, 291-feature layout,
 semilocal forms, nonlinear parameters, or energy partition requires a new
