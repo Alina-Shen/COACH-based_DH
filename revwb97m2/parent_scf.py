@@ -7,10 +7,12 @@ import hashlib
 import json
 import os
 import platform
+import resource
 import shutil
 import socket
 import subprocess
 import sys
+import time
 import traceback
 from datetime import datetime, timezone
 from functools import lru_cache
@@ -56,6 +58,12 @@ def array_sha256(value: np.ndarray) -> str:
     digest.update(json.dumps(list(array.shape)).encode())
     digest.update(array.tobytes())
     return digest.hexdigest()
+
+
+def max_rss_mb() -> float:
+    """Return process peak resident memory on Linux in MiB."""
+
+    return float(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss) / 1024.0
 
 
 def git_commit() -> str | None:
@@ -418,6 +426,8 @@ def run_parent(
 ) -> dict[str, Any]:
     """Run and atomically publish one immutable-manifest parent artifact."""
 
+    total_started = time.perf_counter()
+    rss_started = max_rss_mb()
     spec_path = spec_path.resolve()
     output_dir = output_dir.resolve()
     if output_dir.exists():
@@ -428,6 +438,7 @@ def run_parent(
     output_dir.parent.mkdir(parents=True, exist_ok=True)
     temp_dir.mkdir()
     try:
+        validation_started = time.perf_counter()
         spec = load_spec(spec_path)
         authority_hashes = validate_input_authorities(spec, spec_path)
         artifacts = input_artifact_paths(spec)
@@ -435,25 +446,33 @@ def run_parent(
         bridge_row = load_bridge_row(spec, species)
         validate_record(record, bridge_row)
         mol, auxmol, resolved = build_molecules(record)
+        validation_seconds = time.perf_counter() - validation_started
         checkpoint = temp_dir / spec["orbital_source"]["checkpoint_name"]
         mf, grids = configure_parent(
             mol, record, spec, checkpoint, max_memory_mb, verbose
         )
+        scf_started = time.perf_counter()
         energy = mf.kernel()
+        scf_seconds = time.perf_counter() - scf_started
         if not mf.converged:
             raise RuntimeError(f"omegaB97M-V UKS did not converge for {species}")
+        component_started = time.perf_counter()
         dm_a, dm_b = spin_density_matrices(mf)
         np.save(temp_dir / "density_alpha.npy", dm_a)
         np.save(temp_dir / "density_beta.npy", dm_b)
         components = evaluate_parent_components(mf, dm_a, dm_b)
+        component_seconds = time.perf_counter() - component_started
         spin_square, spin_multiplicity = mf.spin_square()
+        stability_started = time.perf_counter()
         diagnostics = {
             "orbital_gradient_norm": float(np.linalg.norm(mf.get_grad(mf.mo_coeff, mf.mo_occ))),
             "spin_square": float(spin_square),
             "spin_multiplicity": float(spin_multiplicity),
             "stability": stability_diagnostic(mf, attempted=run_stability_diagnostic),
         }
+        stability_seconds = time.perf_counter() - stability_started
 
+        roundtrip_started = time.perf_counter()
         reloaded = load_checkpoint_parent(
             checkpoint, mol, record, spec, max_memory_mb
         )
@@ -499,6 +518,7 @@ def run_parent(
         }
         if not roundtrip["passed"]:
             raise RuntimeError(f"checkpoint roundtrip identity failed for {species}: {roundtrip}")
+        roundtrip_seconds = time.perf_counter() - roundtrip_started
 
         baseline = PROJECT_ROOT / "environment" / "baseline.json"
         artifact_names = [
@@ -547,6 +567,21 @@ def run_parent(
                 "diagnostics": diagnostics,
             },
             "checkpoint_roundtrip": roundtrip,
+            "resource_usage": {
+                "timings_seconds": {
+                    "authority_record_and_basis_validation": validation_seconds,
+                    "parent_scf": scf_seconds,
+                    "component_reconstruction": component_seconds,
+                    "stability_diagnostic": stability_seconds,
+                    "checkpoint_and_feature_roundtrip": roundtrip_seconds,
+                    "total": time.perf_counter() - total_started,
+                },
+                "max_rss_mb_start": rss_started,
+                "max_rss_mb_end": max_rss_mb(),
+                "scratch_bytes": 0,
+                "checkpoint_bytes": checkpoint.stat().st_size,
+                "max_memory_setting_mb": max_memory_mb,
+            },
             "integrated_dv_kernel": integrated_dv.kernel_metadata(),
             "provenance": {
                 **authority_hashes,

@@ -1,0 +1,76 @@
+schema_version: 1
+status: selected_not_yet_executed
+purpose: step10_scientific_gateway_matrix_and_early_step12_measurements
+
+required_categories:
+  - closed_shell
+  - multi_electron_open_shell
+  - charged
+  - noncovalent_counterpoise_ghost
+  - transition_metal
+  - heavy_all_electron_AE11_Yb
+  - GEN
+  - ECP
+  - larger_high_cost
+
+species:
+  - name: h2o_SW49
+    specification: revwb97m2/configs/archive/scientific_spec.v3.yaml
+    categories: [closed_shell]
+    expected: {charge: 0, multiplicity: 1, real_atoms: 3, ghost_atoms: 0, electrons: 10, orbital_aos: 132, auxiliary_aos: 287}
+    parent_preexisting: true
+    scalar_preexisting: true
+  - name: 12_NH2rad_HNBrBDE18
+    specification: revwb97m2/configs/scientific_spec.yaml
+    categories: [multi_electron_open_shell]
+    expected: {charge: 0, multiplicity: 2, real_atoms: 3, ghost_atoms: 0, electrons: 9, orbital_aos: 129, auxiliary_aos: 287}
+    parent_preexisting: true
+    scalar_preexisting: true
+  - name: BH9_08_1R2
+    specification: revwb97m2/configs/scientific_spec.yaml
+    categories: [charged]
+    expected: {charge: -1, multiplicity: 1, real_atoms: 1, ghost_atoms: 0, electrons: 10, orbital_aos: 57, auxiliary_aos: 157}
+  - name: CUAGAU_Au01N0_H
+    specification: revwb97m2/configs/scientific_spec.yaml
+    categories: [transition_metal, ECP]
+    expected: {charge: 0, multiplicity: 1, real_atoms: 2, ghost_atoms: 0, electrons: 20, orbital_aos: 121, auxiliary_aos: 317}
+    expected_ecp_resolution: implicit_named_def2_ecp
+  - name: AE11_Yb
+    specification: revwb97m2/configs/scientific_spec.yaml
+    categories: [heavy_all_electron_AE11_Yb, GEN]
+    expected: {charge: 0, multiplicity: 1, real_atoms: 1, ghost_atoms: 0, electrons: 70, orbital_aos: 184, auxiliary_aos: 285}
+    expected_orbital_resolution: embedded_qchem_block
+    expected_auxiliary_resolution: embedded_qchem_block
+    expected_ecp_resolution: not_applicable
+  - name: DAPD_B
+    specification: revwb97m2/configs/scientific_spec.yaml
+    categories: [GEN, ECP, multi_electron_open_shell]
+    expected: {charge: 0, multiplicity: 2, real_atoms: 1, ghost_atoms: 0, electrons: 5, orbital_aos: 109, auxiliary_aos: 157}
+    expected_orbital_resolution: embedded_qchem_block
+    expected_ecp_resolution: embedded_qchem_block
+  - name: L14_GGG_monB
+    specification: revwb97m2/configs/scientific_spec.yaml
+    categories: [noncovalent_counterpoise_ghost, larger_high_cost]
+    expected: {charge: 0, multiplicity: 1, real_atoms: 32, ghost_atoms: 16, electrons: 156, orbital_aos: 1485, auxiliary_aos: 3621}
+    expected_auxiliary_resolution: explicit_scope_policy
+    resource_class: high_cost
+
+execution:
+  standard:
+    species: [h2o_SW49, 12_NH2rad_HNBrBDE18, BH9_08_1R2, CUAGAU_Au01N0_H, AE11_Yb, DAPD_B]
+    slurm: {partition: mhg, account: mhg, qos: normal, cpus: 8, memory_gb: 40, wall_hours: 4}
+  high_cost:
+    species: [L14_GGG_monB]
+    slurm: {partition: mhg, account: mhg, qos: normal, cpus: 16, memory_gb: 240, wall_hours: 12}
+
+preflight_stop_conditions:
+  maximum_orbital_aos: 1800
+  maximum_auxiliary_aos: 4500
+  maximum_estimated_df_3center_gib_fraction_of_requested_memory: 0.50
+  stop_on_parent_nonconvergence: true
+  stop_on_any_hash_or_identity_failure: true
+  stop_on_slurm_out_of_memory_or_timeout: true
+  rationale: >-
+    These are gateway measurement limits, not production limits. They allow the
+    smallest available counterpoise-ghost species to measure the current route
+    while preventing silent expansion to larger BigNC cases before Step-12 sign-off.

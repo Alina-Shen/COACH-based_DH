@@ -95,6 +95,16 @@ complete fixed-energy partition. Atomic artifacts, direct-energy identities,
 resource measurements, and validation commands are described in the
 [Step 9 manifest](manifests/scalar_features/README.md).
 
+## Three-grid scientific gateways
+
+[`semilocal_features.py`](semilocal_features.py) consumes a validated parent
+checkpoint and independently publishes the selected `(64,154,166)` `3 x 96`
+matrix on each frozen COACH grid: `250974`, `99590`, and `75302`. It records
+per-grid point counts, wall time, peak memory, hashes, and reference-grid
+differences without rerunning SCF. The Step-10 matrix definition and static
+resource preflight are in
+[`step10_gateway_matrix_v1.yaml`](manifests/gateway_matrix/step10_gateway_matrix_v1.yaml).
+
 ## Reaction-level smoke test
 
 `reaction_smoke.yaml` defines three closed-shell species and two balanced
