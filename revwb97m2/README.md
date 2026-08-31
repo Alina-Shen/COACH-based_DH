@@ -46,7 +46,7 @@ weighting evidence are explained in
 python scripts/validate_gscdb137_manifest.py
 ```
 
-Specification version 3 follows the manifest's per-species GSCDB basis
+Specification version 4 follows the manifest's per-species GSCDB basis
 assignments and translates verified named/generated basis, ECP, and auxiliary
 basis metadata into PySCF definitions. The earlier Q-Chem comparison utility
 remains available for provenance auditing:
@@ -84,6 +84,16 @@ checkpoint density and selected-feature identity before making the checkpoint
 read-only. The Step 8 `h2o_SW49` gateway and its recorded PySCF stability/NLC
 limitation are documented in the
 [parent-SCF manifest](manifests/parent_scf/README.md).
+
+## Checkpoint-only scalar double-hybrid features
+
+[`scalar_features.py`](scalar_features.py) consumes a validated parent
+checkpoint without rerunning SCF. It appends unscaled SR-HF, fixed-grid VV10
+at `b=10,C=0.01`, and total frozen-core canonical DF-UMP2 as columns
+`288:291`, while preserving same-spin/opposite-spin PT2 diagnostics and the
+complete fixed-energy partition. Atomic artifacts, direct-energy identities,
+resource measurements, and validation commands are described in the
+[Step 9 manifest](manifests/scalar_features/README.md).
 
 ## Reaction-level smoke test
 
@@ -162,4 +172,4 @@ whose only semantic changes are `MAX_SCF_CYCLES 0` and `GEN_SCFMAN FALSE`.
 `input.diff` record the provenance. Run `run_qchem.sh` only after reviewing the
 derived input and pinned Q-Chem build. It is reference/provenance material
 only. Production parents must be generated self-consistently in PySCF under
-specification version 3.
+specification version 4.

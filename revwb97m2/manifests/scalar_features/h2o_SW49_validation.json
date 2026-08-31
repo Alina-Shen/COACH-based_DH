@@ -1,0 +1,67 @@
+{
+  "checks": {
+    "artifact_hashes": true,
+    "authority_hashes": true,
+    "checkpoint_only_no_qchem_orbitals": true,
+    "completion_marker": true,
+    "direct_energy_identity": true,
+    "feature_layout_and_values": true,
+    "fixed_energy_partition": true,
+    "grid_difference_scalar_columns_zero": true,
+    "manifest_status": true,
+    "parent_checkpoint_hash": true,
+    "parent_manifest_hash": true,
+    "parent_validation": true,
+    "pt2_spin_component_sum": true,
+    "vv10_parameters": true
+  },
+  "details": {
+    "direct_energy_identity": {
+      "cases": {
+        "dense_deterministic": {
+          "coefficient_sha256": "e035a278b37a36d3022cc285a8fdd02b18792befb577f0be40684b24c6993a78",
+          "difference_hartree": 0.0,
+          "named_direct_energy_hartree": -69.53207289486006,
+          "vector_dot_energy_hartree": -69.53207289486006
+        },
+        "scalar_and_channel_edges": {
+          "coefficient_sha256": "827035c9ffdf8e86bc1708c6f732f719b3383706d3115c335682646ef8be2569",
+          "difference_hartree": 0.0,
+          "named_direct_energy_hartree": -72.5790338981173,
+          "vector_dot_energy_hartree": -72.5790338981173
+        }
+      },
+      "maximum_absolute_difference_hartree": 0.0,
+      "passed": true,
+      "tolerance_hartree": 1e-12
+    },
+    "fixed_energy_hartree": -68.72474418665635,
+    "resource_usage": {
+      "max_memory_setting_mb": 40000,
+      "max_rss_mb_end": 275.6171875,
+      "max_rss_mb_start": 96.84765625,
+      "scratch_peak_bytes": 0,
+      "scratch_retained_bytes": 0,
+      "timings_seconds": {
+        "checkpoint_and_authority_validation_seconds": 41.14320862200111,
+        "ri_ump2_seconds": 6.533859426039271,
+        "total_seconds": 51.713892747997306,
+        "vv10_seconds": 4.025130718015134
+      }
+    },
+    "scalar_dir": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/scalar/gateway/h2o_SW49",
+    "scalar_features_hartree": {
+      "pt2": -0.3334012925516243,
+      "short_range_hf": -7.336839258204929,
+      "vv10": 0.020787561237750714
+    },
+    "species": "h2o_SW49"
+  },
+  "scalar_module": "revwb97m2/scalar_features.py",
+  "scalar_module_sha256": "df717df36a5ff2ef4e820adbd020099a319614f226f92943d4101608030e34ab",
+  "schema_version": 1,
+  "status": "passed",
+  "validated_utc": "2026-08-31T17:52:36.448543+00:00",
+  "validator": "revwb97m2/scripts/validate_scalar_features.py",
+  "validator_sha256": "684efd56f4ed61b8bd99fbe9e2c7fb86d324a5f6a06f8b66ef72f3122322ba89"
+}

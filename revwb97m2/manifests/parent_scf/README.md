@@ -7,9 +7,11 @@ It never reads Q-Chem orbitals or `qarchive.h5`.
 
 Every species uses UKS, including closed-shell singlets. The driver queries
 the omega, short-range-HF, and long-range-HF fractions from PySCF at runtime,
-reconstructs the parent energy from components, records spin/stability
-diagnostics without adopting an alternative solution, and refuses to
-overwrite any published species directory.
+reconstructs the parent energy from components, and refuses to overwrite any
+published species directory. Specification v4 separates stability from
+authoritative parent publication: selected gateway/model-critical or flagged
+species may receive a timed diagnostic, but no alternative solution is
+adopted automatically.
 
 [`record_byte_offsets.csv`](record_byte_offsets.csv) provides a hash-checked
 seek index into the immutable JSONL snapshot. This avoids reparsing all 17,658
@@ -21,15 +23,18 @@ offset, length, species identity, record hash, and line number.
 Before publication, the checkpoint is reloaded into a newly configured UKS
 object. Alpha/beta density matrices and the selected Step 7 integratedDV
 features on the `75,302` identity grid must be bitwise identical to their
-fresh-SCF values. The validated checkpoint is then made read-only.
+fresh-SCF values. The validated checkpoint is then made read-only. A later
+independent process audits that recorded bitwise proof and repeats the reload
+with strict `1e-14` density and `1e-12` feature tolerances; cross-process BLAS
+reduction order is not required to reproduce identical bytes.
 
 The `h2o_SW49` gateway exposed that PySCF's internal stability response is both
 expensive and incomplete for omegaB97M-V: PySCF warns that NLC is omitted from
 `gen_response`. The diagnostic was interrupted after more than 30 minutes and
 recorded as indeterminate; no alternative orbitals were adopted. The already
 converged checkpoint was recovered without restarting SCF, then independently
-passed density and feature identity. A change to the universal stability
-policy requires an explicit scientific-specification amendment.
+passed density and feature identity. Specification v4 records this as the
+rationale for making stability a separate, non-authoritative diagnostic.
 
 Gateway commands:
 

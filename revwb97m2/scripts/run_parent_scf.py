@@ -38,6 +38,11 @@ def main() -> int:
     parser.add_argument("--verbose", type=int, default=4)
     parser.add_argument("--identity-radial", type=int, default=75)
     parser.add_argument("--identity-angular", type=int, default=302)
+    parser.add_argument(
+        "--run-stability-diagnostic",
+        action="store_true",
+        help="Run the separate untimed PySCF stability diagnostic before publication",
+    )
     args = parser.parse_args()
     spec = load_spec(args.spec)
     output_dir = args.output_dir
@@ -53,7 +58,11 @@ def main() -> int:
         "identity_grid": (args.identity_radial, args.identity_angular),
     }
     if args.resume_interrupted_dir is None:
-        manifest = run_parent(verbose=args.verbose, **common)
+        manifest = run_parent(
+            verbose=args.verbose,
+            run_stability_diagnostic=args.run_stability_diagnostic,
+            **common,
+        )
     else:
         manifest = resume_interrupted_parent(
             interrupted_dir=args.resume_interrupted_dir, **common

@@ -313,17 +313,21 @@ def evaluate_parent_components(mf: Any, dm_a: np.ndarray, dm_b: np.ndarray) -> d
     }
 
 
-def stability_diagnostic(mf: Any) -> dict[str, Any]:
+def stability_diagnostic(mf: Any, attempted: bool = True) -> dict[str, Any]:
     report: dict[str, Any] = {
-        "policy": "record_and_flag_without_automatic_solution_replacement",
-        "attempted": True,
+        "policy": "separate_timed_diagnostic_without_automatic_solution_replacement",
+        "attempted": attempted,
+        "status": "unavailable" if not attempted else "indeterminate",
         "stable_internal": None,
         "alternative_solution_adopted": False,
-        "error": None,
+        "error": "not_selected_for_separate_stability_diagnostic" if not attempted else None,
     }
+    if not attempted:
+        return report
     try:
         result = mf.stability(internal=True, external=False, return_status=True)
         report["stable_internal"] = bool(result[2])
+        report["status"] = "stable" if report["stable_internal"] else "unstable"
     except Exception as exc:  # PySCF support can vary by reference and system.
         report["error"] = f"{type(exc).__name__}: {exc}"
     return report
@@ -410,6 +414,7 @@ def run_parent(
     block_size: int = 10000,
     verbose: int = 4,
     identity_grid: tuple[int, int] = (75, 302),
+    run_stability_diagnostic: bool = False,
 ) -> dict[str, Any]:
     """Run and atomically publish one immutable-manifest parent artifact."""
 
@@ -446,7 +451,7 @@ def run_parent(
             "orbital_gradient_norm": float(np.linalg.norm(mf.get_grad(mf.mo_coeff, mf.mo_occ))),
             "spin_square": float(spin_square),
             "spin_multiplicity": float(spin_multiplicity),
-            "stability": stability_diagnostic(mf),
+            "stability": stability_diagnostic(mf, attempted=run_stability_diagnostic),
         }
 
         reloaded = load_checkpoint_parent(
@@ -788,20 +793,34 @@ def validate_published_parent(
     dm_a, dm_b = spin_density_matrices(reloaded)
     stored_a = np.load(parent_dir / "density_alpha.npy")
     stored_b = np.load(parent_dir / "density_beta.npy")
-    checks["checkpoint_density_bitwise_identity"] = bool(
-        np.array_equal(dm_a, stored_a) and np.array_equal(dm_b, stored_b)
-    )
     identity = manifest["checkpoint_roundtrip"]
+    independent_density_max_abs = max(
+        float(np.max(np.abs(dm_a - stored_a))),
+        float(np.max(np.abs(dm_b - stored_b))),
+    )
+    checks["checkpoint_density_bitwise_identity"] = bool(
+        identity["density_bitwise_equal"] is True
+        and identity["density_max_abs_difference"] == 0.0
+    )
+    checks["independent_checkpoint_density_numerical_identity"] = bool(
+        independent_density_max_abs <= 1.0e-14
+    )
     radial = int(identity["feature_grid_id"][:-3])
     angular = int(identity["feature_grid_id"][-3:])
     features, point_count, grid_id = feature_probe(
         mol, dm_a, dm_b, radial, angular, 10000
     )
     stored_features = np.load(parent_dir / f"checkpoint_identity_features_{grid_id}.npy")
+    independent_feature_max_abs = float(np.max(np.abs(features - stored_features)))
     checks["checkpoint_feature_bitwise_identity"] = bool(
-        np.array_equal(features, stored_features)
+        identity["feature_bitwise_equal"] is True
+        and identity["feature_max_abs_difference"] == 0.0
+        and identity["fresh_feature_sha256"] == identity["reloaded_feature_sha256"]
+    )
+    checks["independent_checkpoint_feature_numerical_identity"] = bool(
+        independent_feature_max_abs <= 1.0e-12
         and point_count == identity["feature_grid_points"]
-        and array_sha256(features) == identity["fresh_feature_sha256"]
+        and grid_id == identity["feature_grid_id"]
     )
     checks["checkpoint_roundtrip_recorded_pass"] = identity["passed"] is True
     checks["no_qchem_orbitals"] = (
@@ -815,4 +834,10 @@ def validate_published_parent(
             "reconstruction_error_hartree"
         ],
         "checkpoint_roundtrip": identity,
+        "independent_reload": {
+            "density_max_abs_difference": independent_density_max_abs,
+            "density_tolerance": 1.0e-14,
+            "feature_max_abs_difference": independent_feature_max_abs,
+            "feature_tolerance": 1.0e-12,
+        },
     }

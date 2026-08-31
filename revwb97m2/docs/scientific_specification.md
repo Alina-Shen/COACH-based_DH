@@ -1,4 +1,4 @@
-# Frozen scientific specification, version 3
+# Frozen scientific specification, version 4
 
 The authoritative machine-readable specification is
 [`../configs/scientific_spec.yaml`](../configs/scientific_spec.yaml). Version 2
@@ -138,6 +138,11 @@ density/feature-identity gate are also complete for the closed-shell
 `h2o_SW49` gateway. Its PySCF stability response remained indeterminate because
 the response omits NLC and was prohibitively slow; this is recorded rather
 than interpreted as a stable or unstable solution.
+
+Version 4 therefore makes the validated parent checkpoint authoritative
+independently of stability. Stability is a separate timed diagnostic for
+gateway/model-critical or flagged species and records `stable`, `unstable`,
+`indeterminate`, or `unavailable`; it never changes orbitals automatically.
 
 Changing the parent method, fixed-orbital policy, 291-feature layout,
 semilocal forms, nonlinear parameters, or energy partition requires a new

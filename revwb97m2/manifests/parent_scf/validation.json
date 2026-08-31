@@ -8,6 +8,8 @@
     "checkpoint_read_only": true,
     "checkpoint_roundtrip_recorded_pass": true,
     "completion_marker": true,
+    "independent_checkpoint_density_numerical_identity": true,
+    "independent_checkpoint_feature_numerical_identity": true,
     "manifest_status": true,
     "no_qchem_orbitals": true,
     "parent_energy_reconstruction": true,
@@ -23,27 +25,33 @@
       "feature_grid_points": 67952,
       "feature_max_abs_difference": 0.0,
       "fresh_density_sha256": {
-        "alpha": "7bda3b6023b5aba681fbcf7fc9139457503a3a8c053721f96fea0bc02f6e4a0b",
-        "beta": "989a09b4333dfafb925f7eaae040e4d3cd164a07da45ed934cb1e2a9c38172f1"
+        "alpha": "6967eb591a7c393e81615f25d5490f28a8dcdc0407355e6337d8bb62722bba33",
+        "beta": "8b668dbd0431cda05665e308524bb208ea7ae3c11e9969abb181383e12d1055c"
       },
-      "fresh_feature_sha256": "85c5527eacaa84ed02e84f9488d12e3c2a90a809e7c4212a131187799aeedd5f",
+      "fresh_feature_sha256": "3f184d77a8aea8484e88864d43643cf95e1b83414bd5e93e24f2eb37c5fcae9a",
       "passed": true,
       "reloaded_density_sha256": {
-        "alpha": "7bda3b6023b5aba681fbcf7fc9139457503a3a8c053721f96fea0bc02f6e4a0b",
-        "beta": "989a09b4333dfafb925f7eaae040e4d3cd164a07da45ed934cb1e2a9c38172f1"
+        "alpha": "6967eb591a7c393e81615f25d5490f28a8dcdc0407355e6337d8bb62722bba33",
+        "beta": "8b668dbd0431cda05665e308524bb208ea7ae3c11e9969abb181383e12d1055c"
       },
-      "reloaded_feature_sha256": "85c5527eacaa84ed02e84f9488d12e3c2a90a809e7c4212a131187799aeedd5f"
+      "reloaded_feature_sha256": "3f184d77a8aea8484e88864d43643cf95e1b83414bd5e93e24f2eb37c5fcae9a"
     },
-    "parent_dir": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/gateway/h2o_SW49",
-    "parent_energy_hartree": -76.43996767776265,
-    "reconstruction_error_hartree": 1.4210854715202004e-14,
-    "species": "h2o_SW49"
+    "independent_reload": {
+      "density_max_abs_difference": 2.7755575615628914e-17,
+      "density_tolerance": 1e-14,
+      "feature_max_abs_difference": 4.440892098500626e-16,
+      "feature_tolerance": 1e-12
+    },
+    "parent_dir": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/gateway/12_NH2rad_HNBrBDE18",
+    "parent_energy_hartree": -55.87821037601809,
+    "reconstruction_error_hartree": 7.105427357601002e-15,
+    "species": "12_NH2rad_HNBrBDE18"
   },
   "parent_module": "revwb97m2/parent_scf.py",
-  "parent_module_sha256": "f59a9d2a2a79759b1002c13f9101ac7b711b054b8ceb0e2beffe31a9dc7c19c6",
+  "parent_module_sha256": "e2e985a4edc6f17504ac8b2e2bee27c3858201aec646bf9612eb23e8a936f6d9",
   "schema_version": 1,
   "status": "passed",
-  "validated_utc": "2026-08-31T06:17:40.506510+00:00",
+  "validated_utc": "2026-08-31T17:53:07.145034+00:00",
   "validator": "revwb97m2/scripts/validate_parent_scf.py",
   "validator_sha256": "41c20c48060b5b28f36b09061e67ffe62a95ad95ade2f891472ef90e79019672"
 }

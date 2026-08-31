@@ -1,0 +1,63 @@
+schema_version: 1
+status: passed_step_9_gateways
+purpose: checkpoint_only_scalar_double_hybrid_feature_stage
+
+implementation:
+  module: revwb97m2/scalar_features.py
+  runner: revwb97m2/scripts/run_scalar_features.py
+  validator: revwb97m2/scripts/validate_scalar_features.py
+  scientific_specification: revwb97m2/configs/scientific_spec.yaml
+
+policies:
+  parent: independently_validated_step8_checkpoint_only
+  parent_scf_rerun: forbidden
+  reference: all_uks_parent_and_ump2
+  semilocal_storage: selected_rows_64_154_166_as_3_by_96
+  qchem_orbitals: forbidden
+  qarchive: forbidden
+  overwrite: forbidden
+  publication: atomic_directory_rename_after_internal_validation
+
+feature_layout:
+  semilocal: {start: 0, stop: 288, shape: [3, 96]}
+  short_range_hf: {index: 288, scaling: unscaled}
+  vv10: {index: 289, b: 10.0, C: 0.01, evaluations_per_species: 1}
+  pt2: {index: 290, fitted_component: total}
+  total: 291
+
+pt2:
+  method: canonical_density_fitted_UMP2
+  frozen_core: true
+  auxiliary_definition: explicit_step6_basis_bridge
+  diagnostic_components: [same_spin, opposite_spin]
+  component_sum_tolerance_hartree: 1.0e-12
+
+validation:
+  direct_energy_identity_tolerance_hartree: 1.0e-12
+  require_resource_measurements: [wall_time, peak_memory, scratch]
+  require_closed_shell_gateway: h2o_SW49
+  require_open_shell_gateway: true
+  open_shell_requirements:
+    - multiple_electrons
+    - nonzero_total_ump2_correlation
+    - nonzero_opposite_spin_ump2_correlation
+
+gateways:
+  closed_shell:
+    species: h2o_SW49
+    parent_specification: revwb97m2/configs/archive/scientific_spec.v3.yaml
+    scalar_directory: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/scalar/gateway/h2o_SW49
+    validation: revwb97m2/manifests/scalar_features/h2o_SW49_validation.json
+    status: passed
+  open_shell:
+    species: 12_NH2rad_HNBrBDE18
+    rationale: neutral_doublet_9_electron_NH2_with_nonzero_UMP2_correlation
+    scientific_specification: revwb97m2/configs/scientific_spec.yaml
+    slurm_job: 25426183
+    slurm_partition: mhg
+    scalar_directory: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/scalar/gateway/12_NH2rad_HNBrBDE18
+    parent_validation: revwb97m2/manifests/parent_scf/validation.json
+    scalar_validation: revwb97m2/manifests/scalar_features/12_NH2rad_HNBrBDE18_validation.json
+    total_pt2_correlation_hartree: -0.23521668710122212
+    opposite_spin_pt2_correlation_hartree: -0.18489093208330282
+    status: passed

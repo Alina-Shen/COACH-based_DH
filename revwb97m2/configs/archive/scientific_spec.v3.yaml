@@ -1,25 +1,30 @@
 # Authoritative scientific specification for the COACH-form revision of omegaB97M(2).
-schema_version: 4
+schema_version: 3
 status: frozen
 
 scientific_specification:
   name: revwb97m2_coach_form
-  version: 4
-  frozen_on: "2026-08-31"
+  version: 3
+  frozen_on: "2026-08-29"
   authority: revwb97m2/configs/scientific_spec.yaml
-  supersedes: revwb97m2/configs/archive/scientific_spec.v3.yaml
+  supersedes: revwb97m2/configs/archive/scientific_spec.v2.yaml
   amendment:
-    decision: separate_stability_diagnostic_from_authoritative_parent_publication
+    decision: replace_qchem_orbitals_with_fixed_pyscf_wb97m_v_parents
     reason: >-
-      The Step-8 h2o_SW49 diagnostic remained CPU-bound for more than 30
-      minutes and PySCF warned that its response omits NLC. A validated parent
-      checkpoint is therefore authoritative independently of stability.
-      Stability is a separate timed diagnostic for gateway/model-critical or
-      flagged species; its result is stable, unstable, indeterminate, or
-      unavailable, and an alternative solution is never adopted automatically.
+      The maintained released COACH data-generation route is PySCF-native.
+      The matched h2o_SW49 gateway reproduced the Q-Chem omegaB97M-V parent
+      and scaled opposite-spin RIMP2 contribution within 1.3e-8 hartree, and
+      PySCF density-fitted UMP2 agreed with conventional UMP2 within the frozen
+      0.015 kcal/mol numerical threshold. Q-Chem orbitals are therefore no
+      longer production inputs.
     changed_fields:
-      - orbital_source.convergence.stability_analysis
-      - orbital_source.validation.stability_policy
+      - provenance.record_at_runtime
+      - orbital_source
+      - orbital_source.basis
+      - double_hybrid_energy.pt2.auxiliary_basis
+      - validation.required_gates_before_pilot
+      - execution_protocol
+      - safety
   change_control: >-
     Scientific changes require a version increment, a written rationale, and
     rerunning every affected validation gate.
@@ -99,7 +104,7 @@ orbital_source:
     maximum_cycles: 200
     require_converged: true
     record_orbital_gradient: true
-    stability_analysis: separate_timed_diagnostic_for_gateway_model_critical_or_flagged_species
+    stability_analysis: record_and_flag
     use_alternate_solution_automatically: false
   self_consistent: true
   fixed_during_feature_generation_and_fitting: true
@@ -206,9 +211,7 @@ orbital_source:
     require_reference_type_audit: true
     require_open_shell_gateway_case: true
     require_checkpoint_reload_identity: true
-    stability_policy: >-
-      record_stable_unstable_indeterminate_or_unavailable_without_automatic_solution_replacement;
-      parent_checkpoint_authority_does_not_depend_on_stability
+    stability_policy: record_and_flag_without_automatic_solution_replacement
     passed_closed_shell_rimp2_gateway: revwb97m2/results/2026-08-29-pyscf-qchem-rimp2-h2o-sw49.json
 
 published_reproduction:

@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "all_uks_policy": true,
+    "artifact_hashes": true,
+    "authority_hashes": true,
+    "checkpoint_density_bitwise_identity": true,
+    "checkpoint_feature_bitwise_identity": true,
+    "checkpoint_read_only": true,
+    "checkpoint_roundtrip_recorded_pass": true,
+    "completion_marker": true,
+    "manifest_status": true,
+    "no_qchem_orbitals": true,
+    "parent_energy_reconstruction": true,
+    "record_line_and_hash": true,
+    "runtime_rsh_parameters": true
+  },
+  "details": {
+    "checkpoint_roundtrip": {
+      "density_bitwise_equal": true,
+      "density_max_abs_difference": 0.0,
+      "feature_bitwise_equal": true,
+      "feature_grid_id": "75302",
+      "feature_grid_points": 67952,
+      "feature_max_abs_difference": 0.0,
+      "fresh_density_sha256": {
+        "alpha": "7bda3b6023b5aba681fbcf7fc9139457503a3a8c053721f96fea0bc02f6e4a0b",
+        "beta": "989a09b4333dfafb925f7eaae040e4d3cd164a07da45ed934cb1e2a9c38172f1"
+      },
+      "fresh_feature_sha256": "85c5527eacaa84ed02e84f9488d12e3c2a90a809e7c4212a131187799aeedd5f",
+      "passed": true,
+      "reloaded_density_sha256": {
+        "alpha": "7bda3b6023b5aba681fbcf7fc9139457503a3a8c053721f96fea0bc02f6e4a0b",
+        "beta": "989a09b4333dfafb925f7eaae040e4d3cd164a07da45ed934cb1e2a9c38172f1"
+      },
+      "reloaded_feature_sha256": "85c5527eacaa84ed02e84f9488d12e3c2a90a809e7c4212a131187799aeedd5f"
+    },
+    "parent_dir": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/gateway/h2o_SW49",
+    "parent_energy_hartree": -76.43996767776265,
+    "reconstruction_error_hartree": 1.4210854715202004e-14,
+    "species": "h2o_SW49"
+  },
+  "parent_module": "revwb97m2/parent_scf.py",
+  "parent_module_sha256": "e238aaa6f234c9ab00f46a4778b65fce5509031415962ee869a4054d48b35988",
+  "schema_version": 1,
+  "status": "passed",
+  "validated_utc": "2026-08-31T17:38:36.841776+00:00",
+  "validator": "revwb97m2/scripts/validate_parent_scf.py",
+  "validator_sha256": "41c20c48060b5b28f36b09061e67ffe62a95ad95ade2f891472ef90e79019672"
+}

@@ -93,19 +93,20 @@ class Checks:
 def validate(config: dict[str, Any], config_path: Path) -> Checks:
     checks = Checks()
     workspace_root = config_path.resolve().parents[2]
-    checks.check("schema_version_3", config.get("schema_version") == 3)
+    checks.check("schema_version_4", config.get("schema_version") == 4)
     checks.check("status_frozen", config.get("status") == "frozen")
 
     spec = config["scientific_specification"]
-    checks.check("specification_version_3", spec["version"] == 3)
+    checks.check("specification_version_4", spec["version"] == 4)
     checks.check("authority_matches_path", spec["authority"] == "revwb97m2/configs/scientific_spec.yaml")
     checks.check(
-        "version_2_archived",
-        spec["supersedes"] == "revwb97m2/configs/archive/scientific_spec.v2.yaml",
+        "version_3_archived",
+        spec["supersedes"] == "revwb97m2/configs/archive/scientific_spec.v3.yaml",
     )
     checks.check(
-        "pyscf_amendment_recorded",
-        spec["amendment"]["decision"] == "replace_qchem_orbitals_with_fixed_pyscf_wb97m_v_parents",
+        "stability_amendment_recorded",
+        spec["amendment"]["decision"]
+        == "separate_stability_diagnostic_from_authoritative_parent_publication",
     )
 
     project = config["project"]
@@ -131,6 +132,13 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     )
     checks.check("checkpoint_under_heavy_root", checkpoint_root.is_relative_to(data_root), str(checkpoint_root))
     checks.check("qchem_orbitals_not_inputs", orbital["qchem_orbitals_are_production_inputs"] is False)
+    checks.check(
+        "stability_is_separate_and_non_authoritative",
+        orbital["convergence"]["stability_analysis"]
+        == "separate_timed_diagnostic_for_gateway_model_critical_or_flagged_species"
+        and "parent_checkpoint_authority_does_not_depend_on_stability"
+        in orbital["validation"]["stability_policy"],
+    )
     input_definition = orbital["input_definition"]
     checks.check("input_metadata_not_orbitals", input_definition["orbital_files_used"] is False)
     checks.check(
