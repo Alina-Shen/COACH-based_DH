@@ -440,6 +440,31 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
             == "new omegaB97M(2)-form fit on fixed omegaB97M-V densities",
         )
 
+    parent_policy_path = workspace_root / "revwb97m2/manifests/parent_scf/step8_parent_scf_v1.yaml"
+    parent_report_path = workspace_root / "revwb97m2/manifests/parent_scf/validation.json"
+    checks.check("parent_scf_policy_exists", parent_policy_path.is_file(), str(parent_policy_path))
+    checks.check("parent_scf_report_exists", parent_report_path.is_file(), str(parent_report_path))
+    if parent_policy_path.is_file() and parent_report_path.is_file():
+        parent_policy = yaml.safe_load(parent_policy_path.read_text(encoding="utf-8"))
+        parent_report = json.loads(parent_report_path.read_text(encoding="utf-8"))
+        checks.check("parent_scf_step8_passed", parent_policy["status"] == "passed_step_8_gateway")
+        checks.check("parent_scf_validation_passed", parent_report["status"] == "passed")
+        checks.check(
+            "parent_scf_module_hash_valid",
+            parent_report["parent_module_sha256"]
+            == sha256(workspace_root / parent_report["parent_module"]),
+        )
+        checks.check(
+            "parent_checkpoint_density_feature_identity",
+            parent_report["checks"]["checkpoint_density_bitwise_identity"] is True
+            and parent_report["checks"]["checkpoint_feature_bitwise_identity"] is True,
+        )
+        checks.check(
+            "parent_scf_all_uks_and_no_qchem_orbitals",
+            parent_report["checks"]["all_uks_policy"] is True
+            and parent_report["checks"]["no_qchem_orbitals"] is True,
+        )
+
     model = config["feature_models"]["models"]["R2_coachform_291"]
     checks.check(
         "model_rows_match_semantics",

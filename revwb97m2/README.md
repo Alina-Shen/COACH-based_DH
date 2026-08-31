@@ -75,6 +75,16 @@ omegaB97M-V densities but deliberately contains no final COACH coefficients:
 the 288 semilocal columns are inputs to a new omegaB97M(2)-form fit. See the
 Step 7 [validation record](manifests/integrated_dv/validation.json).
 
+## Manifest-driven parent SCF
+
+[`parent_scf.py`](parent_scf.py) combines immutable molecular records with the
+validated basis bridge and runs omegaB97M-V using UKS for every species. It
+publishes non-overwriting checkpoint/density directories atomically and proves
+checkpoint density and selected-feature identity before making the checkpoint
+read-only. The Step 8 `h2o_SW49` gateway and its recorded PySCF stability/NLC
+limitation are documented in the
+[parent-SCF manifest](manifests/parent_scf/README.md).
+
 ## Reaction-level smoke test
 
 `reaction_smoke.yaml` defines three closed-shell species and two balanced

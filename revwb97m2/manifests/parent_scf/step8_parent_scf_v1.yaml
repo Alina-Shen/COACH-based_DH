@@ -1,0 +1,65 @@
+schema_version: 1
+status: passed_step_8_gateway
+purpose: validate_manifest_driven_fixed_omegaB97M_V_parent_and_checkpoint_roundtrip
+
+implementation:
+  module: revwb97m2/parent_scf.py
+  runner: revwb97m2/scripts/run_parent_scf.py
+  validator: revwb97m2/scripts/validate_parent_scf.py
+  scientific_specification: revwb97m2/configs/scientific_spec.yaml
+  integrated_dv_kernel: revwb97m2/integrated_dv.py
+  basis_bridge: revwb97m2/scripts/pyscf_basis_bridge.py
+  immutable_record_byte_offsets: revwb97m2/manifests/parent_scf/record_byte_offsets.csv
+  immutable_record_byte_offset_validation: revwb97m2/manifests/parent_scf/record_index_validation.json
+
+policies:
+  source_records: immutable_step5_jsonl_plus_validated_step6_basis_overlay
+  record_lookup: hash_checked_byte_offset_without_reparsing_all_records
+  reference: UKS_for_every_species_without_exceptions
+  checkpoint_reuse: require_matching_record_specification_and_artifact_hashes
+  stability: record_and_flag_without_adopting_alternative_solution
+  overwrite: forbidden
+  publication: atomic_directory_rename_after_validation
+  qchem_orbitals: forbidden
+  qarchive: forbidden
+
+gateway:
+  species: h2o_SW49
+  rationale: >-
+    This closed-shell real GSCDB137 species already has an accepted PySCF/Q-Chem
+    parent-energy comparison and exercises the common def2-QZVPPD basis path.
+  stage: gateway
+  output: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/gateway/h2o_SW49
+  checkpoint_identity_grid: {radial: 75, angular: 302, id: "75302"}
+  expected:
+    scf_class: UKS
+    charge: 0
+    spin: 0
+    electrons: 10
+    orbital_spherical_aos: 132
+    auxiliary_spherical_aos: 287
+    omega: 0.3
+    short_range_hf_fraction: 0.15
+    long_range_hf_fraction: 1.0
+  observed:
+    status: passed
+    validation: revwb97m2/manifests/parent_scf/validation.json
+    parent_energy_hartree: -76.43996767776265
+    parent_reconstruction_error_hartree: 1.4210854715202004e-14
+    feature_grid_points: 67952
+    density_bitwise_equal_after_checkpoint_reload: true
+    selected_features_bitwise_equal_after_checkpoint_reload: true
+    stability_diagnostic: interrupted_and_flagged
+    stability_limitation: PySCF_gen_response_omits_NLC
+
+required_checks:
+  - immutable_input_and_basis_bridge_hashes
+  - all_uks_reference_policy
+  - parent_convergence
+  - runtime_range_separation_parameters
+  - parent_energy_component_reconstruction
+  - checkpoint_density_bitwise_identity
+  - checkpoint_integrated_dv_feature_bitwise_identity
+  - checkpoint_read_only_after_validation
+  - atomic_non_overwriting_publication
+  - no_qchem_orbitals_or_qarchive

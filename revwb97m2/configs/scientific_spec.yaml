@@ -99,6 +99,13 @@ orbital_source:
   checkpoint_reuse_requires_matching_input_and_specification_hashes: true
   functional: omegaB97M-V
   pyscf_xc_label: wb97m-v
+  convergence:
+    energy_tolerance_hartree: 1.0e-9
+    maximum_cycles: 200
+    require_converged: true
+    record_orbital_gradient: true
+    stability_analysis: record_and_flag
+    use_alternate_solution_automatically: false
   self_consistent: true
   fixed_during_feature_generation_and_fitting: true
   qchem_orbitals_are_production_inputs: false

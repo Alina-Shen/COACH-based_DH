@@ -127,13 +127,17 @@ verified explicit all-electron orbital and auxiliary blocks with no ECP.
 
 ## Remaining gates before a real pilot
 
-1. Prove checkpoint reload gives identical densities and features.
-2. Pass an open-shell PySCF parent/UMP2 gateway.
-3. Obtain the authoritative published omegaB97M(2) coefficients and reproduce
+1. Pass an open-shell PySCF parent/UMP2 gateway.
+2. Obtain the authoritative published omegaB97M(2) coefficients and reproduce
    trusted molecular and reaction energies.
 
 The Cycle-2 fitting-weight, locked data-role, immutable all-UKS molecular-input,
 PySCF basis-bridge, and project-owned integratedDV-kernel gates are complete.
+The manifest-driven all-UKS parent driver and bitwise checkpoint
+density/feature-identity gate are also complete for the closed-shell
+`h2o_SW49` gateway. Its PySCF stability response remained indeterminate because
+the response omits NLC and was prohibitively slow; this is recorded rather
+than interpreted as a stable or unstable solution.
 
 Changing the parent method, fixed-orbital policy, 291-feature layout,
 semilocal forms, nonlinear parameters, or energy partition requires a new

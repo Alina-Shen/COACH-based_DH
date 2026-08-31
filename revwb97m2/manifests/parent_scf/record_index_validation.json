@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "count_17658": true,
+    "every_offset_decodes_expected_record": true,
+    "line_numbers_exact_1_through_17658": true,
+    "species_sorted_unique": true
+  },
+  "index": "revwb97m2/manifests/parent_scf/record_byte_offsets.csv",
+  "index_sha256": "73c3baa4930af302b9b1d317eb7561e5916dad780e79ef5df3755ac0fcf97e13",
+  "schema_version": 1,
+  "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1/pyscf_input_records.jsonl",
+  "source_sha256": "2e17d35d5b75a5d282ccb9b9f6619e4f6c13327e8ee9d3b5e5db63cc59905bf0",
+  "status": "passed",
+  "validated_utc": "2026-08-31T06:19:43.278704+00:00"
+}
