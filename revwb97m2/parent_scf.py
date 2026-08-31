@@ -227,6 +227,24 @@ def grid_policy(record: dict[str, Any], spec: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def sg1_prune_all_elements(nuclear_charge: int, radial_points: np.ndarray, n_angular: int) -> np.ndarray:
+    """Return the published SG-1 angular-shell pattern for every element.
+
+    PySCF's built-in SG-1 radii table implements H--Ar only. The published
+    remaining-elements branch is radius independent: 12 shells with 38
+    angular points followed by 38 shells with 194 points.
+    """
+
+    if nuclear_charge <= 18:
+        return dft.gen_grid.sg1_prune(nuclear_charge, radial_points, n_angular)
+    if len(radial_points) != 50 or n_angular != 194:
+        raise ValueError(
+            "heavy-element SG-1 requires the published (50,194) parent grid; "
+            f"received ({len(radial_points)},{n_angular})"
+        )
+    return np.asarray([38] * 12 + [194] * 38, dtype=np.int32)
+
+
 def configure_parent(
     mol: Any,
     record: dict[str, Any],
@@ -255,7 +273,7 @@ def configure_parent(
         grids["nonlocal"]["radial"],
         grids["nonlocal"]["angular"],
     )
-    mf.nlcgrids.prune = dft.gen_grid.sg1_prune if grids["nonlocal"]["pruning"] == "SG-1" else None
+    mf.nlcgrids.prune = sg1_prune_all_elements if grids["nonlocal"]["pruning"] == "SG-1" else None
     mf.nlcgrids.radii_adjust = None
     return mf, grids
 

@@ -33,6 +33,7 @@ from revwb97m2.parent_scf import (
     load_record,
     load_spec,
     sha256,
+    sg1_prune_all_elements,
     software_versions,
     spin_density_matrices,
     utc_now,
@@ -61,7 +62,7 @@ def _max_rss_mb() -> float:
 def _configure_nlc_grid(mol: Any, policy: dict[str, Any]) -> Any:
     grids = dft.Grids(mol)
     grids.atom_grid = (int(policy["radial"]), int(policy["angular"]))
-    grids.prune = dft.gen_grid.sg1_prune if policy["pruning"] == "SG-1" else None
+    grids.prune = sg1_prune_all_elements if policy["pruning"] == "SG-1" else None
     grids.radii_adjust = None
     grids.build(with_non0tab=True)
     return grids
