@@ -1,0 +1,235 @@
+{
+  "checks": {
+    "all_required_categories_covered": true,
+    "all_species_passed": false,
+    "species_count_5_to_10": true
+  },
+  "covered_categories": [
+    "ECP",
+    "GEN",
+    "charged",
+    "closed_shell",
+    "heavy_all_electron_AE11_Yb",
+    "larger_high_cost",
+    "multi_electron_open_shell",
+    "noncovalent_counterpoise_ghost",
+    "transition_metal"
+  ],
+  "schema_version": 1,
+  "species": [
+    {
+      "categories": [
+        "closed_shell"
+      ],
+      "checks": {
+        "all_grid_point_counts_positive": true,
+        "all_independent_validators_passed": true,
+        "checkpoint_only": true,
+        "gateway_marker": true,
+        "parent_manifest_exists": true,
+        "parent_marker": true,
+        "parent_status": true,
+        "parent_validation_exists": true,
+        "scalar_manifest_exists": true,
+        "scalar_marker": true,
+        "scalar_status": true,
+        "scalar_validation_exists": true,
+        "scalar_vector_shape": true,
+        "semilocal_250974_shape": true,
+        "semilocal_75302_shape": true,
+        "semilocal_99590_shape": true,
+        "semilocal_manifest_exists": true,
+        "semilocal_marker": true,
+        "semilocal_shape_declaration": true,
+        "semilocal_status": true,
+        "semilocal_validation_exists": true,
+        "species_names_match": true,
+        "three_frozen_grids": true
+      },
+      "species": "h2o_SW49",
+      "status": "passed"
+    },
+    {
+      "categories": [
+        "multi_electron_open_shell"
+      ],
+      "checks": {
+        "all_grid_point_counts_positive": true,
+        "all_independent_validators_passed": true,
+        "checkpoint_only": true,
+        "gateway_marker": true,
+        "parent_manifest_exists": true,
+        "parent_marker": true,
+        "parent_status": true,
+        "parent_validation_exists": true,
+        "scalar_manifest_exists": true,
+        "scalar_marker": true,
+        "scalar_status": true,
+        "scalar_validation_exists": true,
+        "scalar_vector_shape": true,
+        "semilocal_250974_shape": true,
+        "semilocal_75302_shape": true,
+        "semilocal_99590_shape": true,
+        "semilocal_manifest_exists": true,
+        "semilocal_marker": true,
+        "semilocal_shape_declaration": true,
+        "semilocal_status": true,
+        "semilocal_validation_exists": true,
+        "species_names_match": true,
+        "three_frozen_grids": true
+      },
+      "species": "12_NH2rad_HNBrBDE18",
+      "status": "passed"
+    },
+    {
+      "categories": [
+        "charged"
+      ],
+      "checks": {
+        "all_grid_point_counts_positive": true,
+        "all_independent_validators_passed": true,
+        "checkpoint_only": true,
+        "gateway_marker": true,
+        "parent_manifest_exists": true,
+        "parent_marker": true,
+        "parent_status": true,
+        "parent_validation_exists": true,
+        "scalar_manifest_exists": true,
+        "scalar_marker": true,
+        "scalar_status": true,
+        "scalar_validation_exists": true,
+        "scalar_vector_shape": true,
+        "semilocal_250974_shape": true,
+        "semilocal_75302_shape": true,
+        "semilocal_99590_shape": true,
+        "semilocal_manifest_exists": true,
+        "semilocal_marker": true,
+        "semilocal_shape_declaration": true,
+        "semilocal_status": true,
+        "semilocal_validation_exists": true,
+        "species_names_match": true,
+        "three_frozen_grids": true
+      },
+      "species": "BH9_08_1R2",
+      "status": "passed"
+    },
+    {
+      "categories": [
+        "transition_metal",
+        "ECP"
+      ],
+      "checks": {
+        "all_grid_point_counts_positive": true,
+        "all_independent_validators_passed": true,
+        "checkpoint_only": true,
+        "gateway_marker": true,
+        "parent_manifest_exists": true,
+        "parent_marker": true,
+        "parent_status": true,
+        "parent_validation_exists": true,
+        "scalar_manifest_exists": true,
+        "scalar_marker": true,
+        "scalar_status": true,
+        "scalar_validation_exists": true,
+        "scalar_vector_shape": true,
+        "semilocal_250974_shape": true,
+        "semilocal_75302_shape": true,
+        "semilocal_99590_shape": true,
+        "semilocal_manifest_exists": true,
+        "semilocal_marker": true,
+        "semilocal_shape_declaration": true,
+        "semilocal_status": true,
+        "semilocal_validation_exists": true,
+        "species_names_match": true,
+        "three_frozen_grids": true
+      },
+      "species": "CUAGAU_Au01N0_H",
+      "status": "passed"
+    },
+    {
+      "categories": [
+        "heavy_all_electron_AE11_Yb",
+        "GEN"
+      ],
+      "checks": {
+        "all_grid_point_counts_positive": true,
+        "all_independent_validators_passed": true,
+        "checkpoint_only": true,
+        "gateway_marker": true,
+        "parent_manifest_exists": true,
+        "parent_marker": true,
+        "parent_status": true,
+        "parent_validation_exists": true,
+        "scalar_manifest_exists": true,
+        "scalar_marker": true,
+        "scalar_status": true,
+        "scalar_validation_exists": true,
+        "scalar_vector_shape": true,
+        "semilocal_250974_shape": true,
+        "semilocal_75302_shape": true,
+        "semilocal_99590_shape": true,
+        "semilocal_manifest_exists": true,
+        "semilocal_marker": true,
+        "semilocal_shape_declaration": true,
+        "semilocal_status": true,
+        "semilocal_validation_exists": true,
+        "species_names_match": true,
+        "three_frozen_grids": true
+      },
+      "species": "AE11_Yb",
+      "status": "passed"
+    },
+    {
+      "categories": [
+        "GEN",
+        "ECP",
+        "multi_electron_open_shell"
+      ],
+      "checks": {
+        "all_grid_point_counts_positive": true,
+        "all_independent_validators_passed": true,
+        "checkpoint_only": true,
+        "gateway_marker": true,
+        "parent_manifest_exists": true,
+        "parent_marker": true,
+        "parent_status": true,
+        "parent_validation_exists": true,
+        "scalar_manifest_exists": true,
+        "scalar_marker": true,
+        "scalar_status": true,
+        "scalar_validation_exists": true,
+        "scalar_vector_shape": true,
+        "semilocal_250974_shape": true,
+        "semilocal_75302_shape": true,
+        "semilocal_99590_shape": true,
+        "semilocal_manifest_exists": true,
+        "semilocal_marker": true,
+        "semilocal_shape_declaration": true,
+        "semilocal_status": true,
+        "semilocal_validation_exists": true,
+        "species_names_match": true,
+        "three_frozen_grids": true
+      },
+      "species": "DAPD_B",
+      "status": "passed"
+    },
+    {
+      "checks": {
+        "gateway_marker": false,
+        "parent_manifest_exists": false,
+        "parent_marker": false,
+        "parent_validation_exists": false,
+        "scalar_manifest_exists": false,
+        "scalar_marker": false,
+        "scalar_validation_exists": false,
+        "semilocal_manifest_exists": false,
+        "semilocal_marker": false,
+        "semilocal_validation_exists": false
+      },
+      "species": "L14_GGG_monB",
+      "status": "incomplete"
+    }
+  ],
+  "status": "failed",
+  "validated_utc": "2026-08-31T21:25:43.955157+00:00"
+}

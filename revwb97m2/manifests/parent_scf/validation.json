@@ -48,10 +48,10 @@
     "species": "12_NH2rad_HNBrBDE18"
   },
   "parent_module": "revwb97m2/parent_scf.py",
-  "parent_module_sha256": "e2e985a4edc6f17504ac8b2e2bee27c3858201aec646bf9612eb23e8a936f6d9",
+  "parent_module_sha256": "ea6acf12837d91937469bc4338c613ecef7f962ae053c94478567b2144f8a568",
   "schema_version": 1,
   "status": "passed",
-  "validated_utc": "2026-08-31T17:53:07.145034+00:00",
+  "validated_utc": "2026-08-31T21:35:57.430914+00:00",
   "validator": "revwb97m2/scripts/validate_parent_scf.py",
   "validator_sha256": "41c20c48060b5b28f36b09061e67ffe62a95ad95ade2f891472ef90e79019672"
 }

@@ -1,0 +1,542 @@
+{
+  "created_utc": "2026-08-31T21:38:44.653184+00:00",
+  "early_step12_decision": {
+    "interpretation": "These are evidence-preserving gateway limits, not production resource claims. No CPU-hour extrapolation is reported until the largest gateway finishes; extrapolating from only the small cases would be misleading.",
+    "measured_restart_boundaries": [
+      "parent_scf_checkpoint",
+      "three_grid_semilocal_features",
+      "vv10_and_ri_mp2_scalar_features"
+    ],
+    "production_submission_authorized": false,
+    "quantitative_provisional_stops": {
+      "auxiliary_aos": 4500,
+      "orbital_aos": 1800,
+      "static_df_three_center_fraction_of_requested_memory": 0.5,
+      "stop_on_nonconvergence_hash_identity_oom_or_timeout": true
+    },
+    "reason": "The high-cost gateway measurement is not yet complete."
+  },
+  "gateway": {
+    "complete_count": 6,
+    "high_cost_measurement_complete": false,
+    "species": [
+      {
+        "auxiliary_aos": 287,
+        "categories": [
+          "closed_shell"
+        ],
+        "complete": true,
+        "estimated_df_three_center_gib": 0.018770143389701843,
+        "orbital_aos": 132,
+        "species": "h2o_SW49",
+        "stages": {
+          "parent": {
+            "resource_usage": {},
+            "retained_directory_bytes": 585803,
+            "status": "parent_complete_and_checkpoint_validated"
+          },
+          "scalar": {
+            "resource_usage": {
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 275.6171875,
+              "max_rss_mb_start": 96.84765625,
+              "scratch_peak_bytes": 0,
+              "scratch_retained_bytes": 0,
+              "timings_seconds": {
+                "checkpoint_and_authority_validation_seconds": 41.14320862200111,
+                "ri_ump2_seconds": 6.533859426039271,
+                "total_seconds": 51.713892747997306,
+                "vv10_seconds": 4.025130718015134
+              }
+            },
+            "retained_directory_bytes": 8224,
+            "status": "scalar_features_complete_and_validated"
+          },
+          "semilocal": {
+            "grid_measurements": {
+              "250974": {
+                "grid_points": 730504,
+                "wall_seconds": 18.49637901096139
+              },
+              "75302": {
+                "grid_points": 67952,
+                "wall_seconds": 1.6733485140139237
+              },
+              "99590": {
+                "grid_points": 175232,
+                "wall_seconds": 4.368392852018587
+              }
+            },
+            "resource_usage": {
+              "authority_and_parent_validation_seconds": 3.894958136952482,
+              "block_size": 10000,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb": 287.1875,
+              "scratch_bytes": 0,
+              "total_seconds": 28.462398685980588
+            },
+            "retained_directory_bytes": 13470,
+            "status": "three_grid_semilocal_features_complete_and_validated"
+          }
+        },
+        "validation": {
+          "parent": "passed",
+          "scalar": "passed",
+          "semilocal": "passed"
+        }
+      },
+      {
+        "auxiliary_aos": 287,
+        "categories": [
+          "multi_electron_open_shell"
+        ],
+        "complete": true,
+        "estimated_df_three_center_gib": 0.017929784953594208,
+        "orbital_aos": 129,
+        "species": "12_NH2rad_HNBrBDE18",
+        "stages": {
+          "parent": {
+            "resource_usage": {},
+            "retained_directory_bytes": 560133,
+            "status": "parent_complete_and_checkpoint_validated"
+          },
+          "scalar": {
+            "resource_usage": {
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 243.00390625,
+              "max_rss_mb_start": 97.1796875,
+              "scratch_peak_bytes": 0,
+              "scratch_retained_bytes": 0,
+              "timings_seconds": {
+                "checkpoint_and_authority_validation_seconds": 3.914314955007285,
+                "ri_ump2_seconds": 1.3315640590153635,
+                "total_seconds": 5.95113094500266,
+                "vv10_seconds": 0.6938685439527035
+              }
+            },
+            "retained_directory_bytes": 8279,
+            "status": "scalar_features_complete_and_validated"
+          },
+          "semilocal": {
+            "grid_measurements": {
+              "250974": {
+                "grid_points": 730504,
+                "wall_seconds": 17.467178018996492
+              },
+              "75302": {
+                "grid_points": 67952,
+                "wall_seconds": 1.729374818969518
+              },
+              "99590": {
+                "grid_points": 175232,
+                "wall_seconds": 4.3713259670184925
+              }
+            },
+            "resource_usage": {
+              "authority_and_parent_validation_seconds": 4.367514188052155,
+              "block_size": 10000,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb": 298.48046875,
+              "scratch_bytes": 0,
+              "total_seconds": 27.962814950966276
+            },
+            "retained_directory_bytes": 13514,
+            "status": "three_grid_semilocal_features_complete_and_validated"
+          }
+        },
+        "validation": {
+          "parent": "passed",
+          "scalar": "passed",
+          "semilocal": "passed"
+        }
+      },
+      {
+        "auxiliary_aos": 157,
+        "categories": [
+          "charged"
+        ],
+        "complete": true,
+        "estimated_df_three_center_gib": 0.0019335821270942688,
+        "orbital_aos": 57,
+        "species": "BH9_08_1R2",
+        "stages": {
+          "parent": {
+            "resource_usage": {
+              "checkpoint_bytes": 66336,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 374.32421875,
+              "max_rss_mb_start": 96.4765625,
+              "scratch_bytes": 0,
+              "timings_seconds": {
+                "authority_record_and_basis_validation": 1.3888292519841343,
+                "checkpoint_and_feature_roundtrip": 0.687235344084911,
+                "component_reconstruction": 0.78597415110562,
+                "parent_scf": 5.785587257007137,
+                "stability_diagnostic": 0.5411942329956219,
+                "total": 9.197548275929876
+              }
+            },
+            "retained_directory_bytes": 128000,
+            "status": "parent_complete_and_checkpoint_validated"
+          },
+          "scalar": {
+            "resource_usage": {
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 178.62109375,
+              "max_rss_mb_start": 97.7734375,
+              "scratch_peak_bytes": 0,
+              "scratch_retained_bytes": 0,
+              "timings_seconds": {
+                "checkpoint_and_authority_validation_seconds": 2.206823921063915,
+                "ri_ump2_seconds": 0.9319064470473677,
+                "total_seconds": 3.2207699560094625,
+                "vv10_seconds": 0.07109962799586356
+              }
+            },
+            "retained_directory_bytes": 8214,
+            "status": "scalar_features_complete_and_validated"
+          },
+          "semilocal": {
+            "grid_measurements": {
+              "250974": {
+                "grid_points": 243504,
+                "wall_seconds": 3.440017974935472
+              },
+              "75302": {
+                "grid_points": 22656,
+                "wall_seconds": 0.3484219319652766
+              },
+              "99590": {
+                "grid_points": 58416,
+                "wall_seconds": 0.8371803350746632
+              }
+            },
+            "resource_usage": {
+              "authority_and_parent_validation_seconds": 2.2140222360612825,
+              "block_size": 10000,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb": 185.39453125,
+              "scratch_bytes": 0,
+              "total_seconds": 6.861065827892162
+            },
+            "retained_directory_bytes": 13495,
+            "status": "three_grid_semilocal_features_complete_and_validated"
+          }
+        },
+        "validation": {
+          "parent": "passed",
+          "scalar": "passed",
+          "semilocal": "passed"
+        }
+      },
+      {
+        "auxiliary_aos": 317,
+        "categories": [
+          "transition_metal",
+          "ECP"
+        ],
+        "complete": true,
+        "estimated_df_three_center_gib": 0.017432697117328644,
+        "orbital_aos": 121,
+        "species": "CUAGAU_Au01N0_H",
+        "stages": {
+          "parent": {
+            "resource_usage": {
+              "checkpoint_bytes": 252944,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 871.9765625,
+              "max_rss_mb_start": 96.640625,
+              "scratch_bytes": 0,
+              "timings_seconds": {
+                "authority_record_and_basis_validation": 0.9588398180203512,
+                "checkpoint_and_feature_roundtrip": 2.211938873049803,
+                "component_reconstruction": 4.499504406005144,
+                "parent_scf": 61.81409448303748,
+                "stability_diagnostic": 3.167857276974246,
+                "total": 72.66441329801455
+              }
+            },
+            "retained_directory_bytes": 496908,
+            "status": "parent_complete_and_checkpoint_validated"
+          },
+          "scalar": {
+            "resource_usage": {
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 237.87890625,
+              "max_rss_mb_start": 97.421875,
+              "scratch_peak_bytes": 0,
+              "scratch_retained_bytes": 0,
+              "timings_seconds": {
+                "checkpoint_and_authority_validation_seconds": 3.1106044680345803,
+                "ri_ump2_seconds": 0.6077607509214431,
+                "total_seconds": 4.32484332495369,
+                "vv10_seconds": 0.5954082139069214
+              }
+            },
+            "retained_directory_bytes": 8236,
+            "status": "scalar_features_complete_and_validated"
+          },
+          "semilocal": {
+            "grid_measurements": {
+              "250974": {
+                "grid_points": 487000,
+                "wall_seconds": 11.652652802993543
+              },
+              "75302": {
+                "grid_points": 45304,
+                "wall_seconds": 1.094640080933459
+              },
+              "99590": {
+                "grid_points": 116824,
+                "wall_seconds": 2.7578336630249396
+              }
+            },
+            "resource_usage": {
+              "authority_and_parent_validation_seconds": 3.2002286630449817,
+              "block_size": 10000,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb": 249.26171875,
+              "scratch_bytes": 0,
+              "total_seconds": 18.729579314007424
+            },
+            "retained_directory_bytes": 13507,
+            "status": "three_grid_semilocal_features_complete_and_validated"
+          }
+        },
+        "validation": {
+          "parent": "passed",
+          "scalar": "passed",
+          "semilocal": "passed"
+        }
+      },
+      {
+        "auxiliary_aos": 285,
+        "categories": [
+          "heavy_all_electron_AE11_Yb",
+          "GEN"
+        ],
+        "complete": true,
+        "estimated_df_three_center_gib": 0.03614053130149841,
+        "orbital_aos": 184,
+        "species": "AE11_Yb",
+        "stages": {
+          "parent": {
+            "resource_usage": {
+              "checkpoint_bytes": 563888,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 2021.625,
+              "max_rss_mb_start": 96.57421875,
+              "scratch_bytes": 0,
+              "timings_seconds": {
+                "authority_record_and_basis_validation": 0.7739908338990062,
+                "checkpoint_and_feature_roundtrip": 1.8460648640757427,
+                "component_reconstruction": 6.531268028076738,
+                "parent_scf": 104.3298788779648,
+                "stability_diagnostic": 5.390065185027197,
+                "total": 118.88632345700171
+              }
+            },
+            "retained_directory_bytes": 1115282,
+            "status": "parent_complete_and_checkpoint_validated"
+          },
+          "scalar": {
+            "resource_usage": {
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 334.24609375,
+              "max_rss_mb_start": 97.5,
+              "scratch_peak_bytes": 0,
+              "scratch_retained_bytes": 0,
+              "timings_seconds": {
+                "checkpoint_and_authority_validation_seconds": 2.444665021961555,
+                "ri_ump2_seconds": 0.8348646659869701,
+                "total_seconds": 3.6381094339303672,
+                "vv10_seconds": 0.34798810898792
+              }
+            },
+            "retained_directory_bytes": 8212,
+            "status": "scalar_features_complete_and_validated"
+          },
+          "semilocal": {
+            "grid_measurements": {
+              "250974": {
+                "grid_points": 243504,
+                "wall_seconds": 9.099613859085366
+              },
+              "75302": {
+                "grid_points": 22656,
+                "wall_seconds": 0.9463493219809607
+              },
+              "99590": {
+                "grid_points": 58416,
+                "wall_seconds": 2.865014737006277
+              }
+            },
+            "resource_usage": {
+              "authority_and_parent_validation_seconds": 2.4500113929389045,
+              "block_size": 10000,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb": 301.92578125,
+              "scratch_bytes": 0,
+              "total_seconds": 15.384928619023412
+            },
+            "retained_directory_bytes": 13479,
+            "status": "three_grid_semilocal_features_complete_and_validated"
+          }
+        },
+        "validation": {
+          "parent": "passed",
+          "scalar": "passed",
+          "semilocal": "passed"
+        }
+      },
+      {
+        "auxiliary_aos": 157,
+        "categories": [
+          "GEN",
+          "ECP",
+          "multi_electron_open_shell"
+        ],
+        "complete": true,
+        "estimated_df_three_center_gib": 0.007012598216533661,
+        "orbital_aos": 109,
+        "species": "DAPD_B",
+        "stages": {
+          "parent": {
+            "resource_usage": {
+              "checkpoint_bytes": 208800,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 749.0234375,
+              "max_rss_mb_start": 96.953125,
+              "scratch_bytes": 0,
+              "timings_seconds": {
+                "authority_record_and_basis_validation": 1.0095026269555092,
+                "checkpoint_and_feature_roundtrip": 1.0247313380241394,
+                "component_reconstruction": 2.427122152992524,
+                "parent_scf": 22.24487762793433,
+                "stability_diagnostic": 1.7234702920541167,
+                "total": 28.439684756915085
+              }
+            },
+            "retained_directory_bytes": 408590,
+            "status": "parent_complete_and_checkpoint_validated"
+          },
+          "scalar": {
+            "resource_usage": {
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb_end": 193.2578125,
+              "max_rss_mb_start": 97.51953125,
+              "scratch_peak_bytes": 0,
+              "scratch_retained_bytes": 0,
+              "timings_seconds": {
+                "checkpoint_and_authority_validation_seconds": 2.560165069065988,
+                "ri_ump2_seconds": 1.0557029669871554,
+                "total_seconds": 3.7298869360238314,
+                "vv10_seconds": 0.10344544495455921
+              }
+            },
+            "retained_directory_bytes": 8268,
+            "status": "scalar_features_complete_and_validated"
+          },
+          "semilocal": {
+            "grid_measurements": {
+              "250974": {
+                "grid_points": 243504,
+                "wall_seconds": 5.465176822035573
+              },
+              "75302": {
+                "grid_points": 22656,
+                "wall_seconds": 0.508835242013447
+              },
+              "99590": {
+                "grid_points": 58416,
+                "wall_seconds": 1.5137184329796582
+              }
+            },
+            "resource_usage": {
+              "authority_and_parent_validation_seconds": 2.518020521965809,
+              "block_size": 10000,
+              "max_memory_setting_mb": 40000,
+              "max_rss_mb": 235.11328125,
+              "scratch_bytes": 0,
+              "total_seconds": 10.02730944310315
+            },
+            "retained_directory_bytes": 13484,
+            "status": "three_grid_semilocal_features_complete_and_validated"
+          }
+        },
+        "validation": {
+          "parent": "passed",
+          "scalar": "passed",
+          "semilocal": "passed"
+        }
+      },
+      {
+        "auxiliary_aos": 3621,
+        "categories": [
+          "noncovalent_counterpoise_ghost",
+          "larger_high_cost"
+        ],
+        "complete": false,
+        "estimated_df_three_center_gib": 29.766920618712902,
+        "orbital_aos": 1485,
+        "species": "L14_GGG_monB",
+        "stages": {
+          "parent": {
+            "status": "missing"
+          },
+          "scalar": {
+            "status": "missing"
+          },
+          "semilocal": {
+            "status": "missing"
+          }
+        },
+        "validation": {
+          "parent": "missing",
+          "scalar": "missing",
+          "semilocal": "missing"
+        }
+      }
+    ],
+    "species_count": 7
+  },
+  "role_minimal_population": {
+    "auxiliary_aos": {
+      "above_step10_stop_4500": 646,
+      "maximum": 12132,
+      "median": 742.5,
+      "minimum": 15,
+      "p90": 2794.0,
+      "p95": 3900.0,
+      "p99": 6785.0
+    },
+    "definition": "union of locked fixed-geometry energy roles; OPT excluded",
+    "orbital_aos": {
+      "above_step10_stop_1800": 652,
+      "maximum": 5135,
+      "median": 356.0,
+      "minimum": 6,
+      "p90": 1170.0,
+      "p95": 1605.0,
+      "p99": 2735.880000000019
+    },
+    "scope_counts": {
+      "BigNC_external": 75,
+      "GDB9_W1_F12_external": 3371,
+      "auxiliary_only": 99,
+      "gscdb137": 13907
+    },
+    "species_count": 17452,
+    "static_df_three_center_gib": {
+      "above_100_gib": 387,
+      "above_20_gib": 1405,
+      "maximum": 1146.2643411755562,
+      "median": 0.3366987109184265,
+      "p90": 14.505606405436993,
+      "p95": 36.42200220376253,
+      "p99": 182.05282330513
+    }
+  },
+  "schema_version": 1,
+  "status": "measurement_in_progress"
+}

@@ -1,5 +1,5 @@
 schema_version: 1
-status: selected_not_yet_executed
+status: gateway_execution_in_progress
 purpose: step10_scientific_gateway_matrix_and_early_step12_measurements
 
 required_categories:
@@ -62,6 +62,19 @@ execution:
   high_cost:
     species: [L14_GGG_monB]
     slurm: {partition: mhg, account: mhg, qos: normal, cpus: 16, memory_gb: 240, wall_hours: 12}
+
+attempts:
+  - job_id: "25431771"
+    species: [h2o_SW49, 12_NH2rad_HNBrBDE18, BH9_08_1R2, CUAGAU_Au01N0_H, AE11_Yb, DAPD_B]
+    outcome: >-
+      Four species completed; AuH and Yb stopped before SCF because PySCF's
+      built-in SG-1 pruning table is defined only through Ar.
+  - job_id: "25432784"
+    species: [CUAGAU_Au01N0_H, AE11_Yb]
+    outcome: completed_after_published_remaining_element_SG1_pattern
+  - job_id: "25431773"
+    species: [L14_GGG_monB]
+    outcome: running_high_cost_measurement
 
 preflight_stop_conditions:
   maximum_orbital_aos: 1800

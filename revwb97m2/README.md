@@ -104,6 +104,18 @@ per-grid point counts, wall time, peak memory, hashes, and reference-grid
 differences without rerunning SCF. The Step-10 matrix definition and static
 resource preflight are in
 [`step10_gateway_matrix_v1.yaml`](manifests/gateway_matrix/step10_gateway_matrix_v1.yaml).
+The non-overwriting Slurm arrays preserve the parent, semilocal, and scalar
+restart boundaries separately. Aggregate the measured stage costs and the
+exact role-minimal fixed-geometry population, then validate every gateway with:
+
+```bash
+python scripts/summarize_step10_resources.py
+python scripts/validate_step10_gateway_results.py
+```
+
+The summary is intentionally an early Step-12 measurement, not a production
+resource authorization. In particular, it refuses to infer CPU-hours from
+only the small gateways while the high-cost counterpoise case is incomplete.
 
 ## Reaction-level smoke test
 
