@@ -24,9 +24,12 @@ components. It cannot accept the R2 291-vector as though it were the original
 functional. Tests cover coefficient signs and constraints, named assembly,
 and refusal of missing/non-finite components.
 
-## Deliberately unresolved
+## Completed gate
 
-The full density evaluator and trusted molecular/reaction regression remain
-blocked pending authority for the exact semilocal definitions/nonlinear values,
-precision beyond the printed table, exact auxiliary/frozen-core/reference
-policies, and trusted component-energy fixtures. No values were inferred.
+The uploaded omegaB97M-V paper and implementation SI resolved the exact
+semilocal definitions and nonlinear values. The R0 density evaluator reproduces
+a matched native Q-Chem H2O energy within `7.46e-9 Eh` and H2 dissociation within
+`1.61e-6 kcal/mol`; the six-case representative fixture array also completed.
+The immutable comparison schema now separates published `R0`, the original
+78-feature family refitted by COACH as `R1`, and the expanded 291-feature COACH
+model as `R2`. Step 11 is complete with no unresolved convention bug.

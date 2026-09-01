@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
-"""Validate the paper-backed Step-11 R0 source and algebra scaffold."""
+"""Validate the completed paper-backed Step-11 R0 record."""
 
 from __future__ import annotations
 
 import argparse
 import hashlib
 import json
-import math
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
-
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
@@ -31,95 +29,108 @@ def main() -> int:
     parser.add_argument(
         "--manifest",
         type=Path,
-        default=ROOT
-        / "manifests"
-        / "published_wb97m2"
-        / "published_wb97m2_r0_v1.yaml",
+        default=ROOT / "manifests/published_wb97m2/published_wb97m2_r0_v2.yaml",
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "manifests" / "published_wb97m2" / "validation.json",
+        default=ROOT / "manifests/published_wb97m2/validation.json",
     )
     args = parser.parse_args()
     manifest = yaml.safe_load(args.manifest.read_text(encoding="utf-8"))
-    source = WORKSPACE / manifest["source"]["path"]
-    table = manifest["table_II"]
-    unresolved = manifest["unresolved_authority_requirements"]
-
+    sources = manifest["sources"]
+    paths = {
+        "paper2": WORKSPACE / sources["omegaB97M2_paper"]["path"],
+        "paperv": WORKSPACE / sources["omegaB97M_V_paper"]["path"],
+        "si_pdf": WORKSPACE
+        / sources["omegaB97M_V_supporting_information"]["pdf_path"],
+        "si_src": WORKSPACE
+        / sources["omegaB97M_V_supporting_information"]["source_path"],
+    }
+    molecular = json.loads(
+        (WORKSPACE / manifest["validation"]["molecular"]["report"]).read_text()
+    )
+    reaction = json.loads(
+        (WORKSPACE / manifest["validation"]["reaction"]["report"]).read_text()
+    )
+    comparison_path = WORKSPACE / manifest["comparison_schemas"]["path"]
+    comparison = yaml.safe_load(comparison_path.read_text(encoding="utf-8"))
+    expected_hashes = {
+        "paper2": r0.PAPER_SHA256,
+        "paperv": r0.WB97M_V_PAPER_SHA256,
+        "si_pdf": r0.WB97M_V_SI_PDF_SHA256,
+        "si_src": r0.WB97M_V_SI_SOURCE_SHA256,
+    }
     checks = {
-        "schema_version_1": manifest["schema_version"] == 1,
-        "status_marks_density_kernel_blocked": manifest["status"]
-        == "source_audit_complete_r0_density_kernel_blocked",
-        "paper_exists": source.is_file(),
-        "paper_hash_matches": source.is_file()
-        and sha256(source) == manifest["source"]["sha256"] == r0.PAPER_SHA256,
-        "doi_matches_module": manifest["source"]["doi"] == r0.DOI,
-        "paper_authority_scope_is_limited": manifest["source"]["authority_scope"]
-        == "paper_only_at_displayed_precision",
-        "semilocal_coefficients_match_module": dict(r0.SEMILOCAL_COEFFICIENTS)
-        == table["semilocal"],
-        "scalar_coefficients_match_module": dict(r0.SCALAR_COEFFICIENTS)
-        == table["scalars"],
-        "displayed_nonzero_count_16": table["displayed_nonzero_coefficients"]
-        == len(r0.SEMILOCAL_COEFFICIENTS) + len(r0.SCALAR_COEFFICIENTS)
-        == 16,
-        "independent_parameter_count_14": table[
-            "independent_parameters_after_two_constraints"
-        ]
-        == r0.independent_parameter_count()
-        == 14,
-        "exchange_constraint_at_printed_precision": math.isclose(
-            table["semilocal"]["exchange_00"] + table["scalars"]["short_range_hf"],
-            1.0,
-            rel_tol=0.0,
-            abs_tol=1e-15,
+        "schema_version_2": manifest["schema_version"] == 2,
+        "all_uploaded_authority_hashes_match": all(
+            sha256(path) == expected_hashes[name] for name, path in paths.items()
         ),
-        "nonlocal_constraint_at_printed_precision": math.isclose(
-            table["scalars"]["vv10"] + table["scalars"]["pt2"],
-            1.0,
-            rel_tol=0.0,
-            abs_tol=1e-15,
-        ),
-        "R0_is_unfitted_and_isolated_from_R2": manifest["model_role"]["fit"]
-        is False
+        "nonlinear_parameters_match": manifest["published_conventions"]
+        ["nonlinear_gamma"]
+        == {
+            "exchange": r0.GAMMA_X,
+            "same_spin": r0.GAMMA_SS,
+            "opposite_spin": r0.GAMMA_OS,
+        },
+        "semilocal_coefficients_match": dict(r0.SEMILOCAL_COEFFICIENTS)
+        == manifest["table_II"]["semilocal"],
+        "scalar_coefficients_match": dict(r0.SCALAR_COEFFICIENTS)
+        == manifest["table_II"]["scalars"],
+        "R0_is_unfitted_and_isolated": manifest["model_role"]["fit"] is False
         and manifest["model_role"]["may_seed_or_constrain_R1_or_R2"] is False
         and manifest["model_role"]["may_change_R2_feature_space"] is False,
-        "no_density_generator_claim": manifest["implemented_now"][
-            "generates_density_features"
-        ]
-        is False,
-        "no_trusted_fixture_claim": manifest["implemented_now"][
-            "trusted_molecular_or_reaction_fixture"
-        ]
-        is False,
-        "unresolved_authorities_are_explicit": len(unresolved) == 7
-        and len({entry["id"] for entry in unresolved}) == 7,
-        "gate_remains_open": manifest["step11_gate"]["gate_complete"] is False
-        and manifest["step11_gate"]["full_R0_evaluator_ready"] is False
-        and manifest["step11_gate"]["trusted_fixture_validation_complete"] is False,
+        "comparison_schema_hash_matches": sha256(comparison_path)
+        == manifest["comparison_schemas"]["sha256"],
+        "R0_R1_R2_schemas_frozen": comparison["status"] == "frozen_before_fitting"
+        and list(comparison["models"])
+        == ["R0_published_wb97m2", "R1_coach_refit_original78", "R2_coach291"]
+        and comparison["models"]["R1_coach_refit_original78"]
+        ["total_candidate_feature_count"]
+        == 78
+        and comparison["models"]["R2_coach291"]["total_candidate_feature_count"]
+        == 291
+        and comparison["models"]["R2_coach291"]["semilocal_space"]
+        ["selected_rows"]
+        == [64, 154, 166],
+        "density_evaluator_complete": manifest["implementation"]
+        ["density_feature_definitions_complete"]
+        is True,
+        "molecular_report_passes": molecular["status"] == "passed",
+        "reaction_report_passes": reaction["status"] == "passed",
+        "molecular_tolerance_met": abs(
+            molecular["local_minus_qchem_hartree"]["final_r0_energy_hartree"]
+        )
+        <= manifest["validation"]["molecular"]["tolerance_hartree"],
+        "reaction_tolerance_met": abs(
+            reaction["local_minus_qchem"]["dissociation_kcal_mol"]
+        )
+        <= manifest["validation"]["reaction"]["tolerance_kcal_mol"],
+        "all_authority_requirements_resolved": len(
+            manifest["resolved_authority_requirements"]
+        )
+        == 7,
+        "step11_gate_complete": manifest["step11_gate"]["gate_complete"] is True
+        and manifest["step11_gate"]
+        ["no_unresolved_semantic_or_energy_definition_bug"]
+        is True,
     }
+    passed = all(checks.values())
     report = {
-        "schema_version": 1,
-        "status": "passed_source_and_algebra_scaffold"
-        if all(checks.values())
-        else "failed",
-        "step11_gate_complete": False,
+        "schema_version": 2,
+        "status": "passed_step11_complete" if passed else "failed",
+        "step11_gate_complete": passed,
         "validated_utc": datetime.now(timezone.utc).isoformat(),
-        "validator": str(Path(__file__).relative_to(WORKSPACE)),
-        "validator_sha256": sha256(Path(__file__)),
         "manifest": str(args.manifest.relative_to(WORKSPACE)),
         "manifest_sha256": sha256(args.manifest),
-        "paper_sha256": sha256(source) if source.is_file() else None,
-        "module": "revwb97m2/published_wb97m2.py",
         "module_sha256": sha256(ROOT / "published_wb97m2.py"),
         "checks": checks,
-        "unresolved_authority_ids": [entry["id"] for entry in unresolved],
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    args.output.write_text(
+        json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
     print(json.dumps(report, indent=2, sort_keys=True))
-    return 0 if report["status"] == "passed_source_and_algebra_scaffold" else 1
+    return 0 if passed else 1
 
 
 if __name__ == "__main__":

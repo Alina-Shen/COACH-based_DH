@@ -1,0 +1,81 @@
+schema_version: 1
+status: frozen_before_fitting
+purpose: separate_COACH_workflow_and_expanded_representation_effects
+
+shared_energy_convention:
+  parent_orbitals: fixed_all_UKS_omegaB97M_V
+  omega_bohr_inverse: 0.3
+  scalar_terms: [short_range_hf, vv10_b10_c0p01, frozen_core_total_ri_mp2]
+  fixed_terms: [nuclear_repulsion, one_electron, coulomb, full_long_range_hf_exchange]
+  constraints:
+    - exchange_00_plus_short_range_hf_equals_1
+    - vv10_plus_total_pt2_equals_1
+  assessment_roles: locked_identical_data_and_reaction_conventions
+
+models:
+  R0_published_wb97m2:
+    fit: false
+    purpose: published_unfitted_comparator_and_energy_convention_oracle
+    semilocal_space:
+      definition: published_selected_Table_II_support
+      nonlinear_gamma: {exchange: 0.004, same_spin: 0.2, opposite_spin_average_form: 0.006}
+      selected_feature_count: 13
+      selected_features:
+        - exchange_00
+        - exchange_20
+        - exchange_30
+        - exchange_01
+        - exchange_41
+        - same_spin_00
+        - same_spin_10
+        - same_spin_20
+        - opposite_spin_00
+        - opposite_spin_20
+        - opposite_spin_01
+        - opposite_spin_02
+        - opposite_spin_22
+    scalar_feature_count: 3
+    coefficient_source: omegaB97M2_Table_II_five_decimal_values
+
+  R1_coach_refit_original78:
+    fit: true
+    purpose: isolate_COACH_fitting_and_selection_workflow_effect
+    semilocal_space:
+      definition: original_omegaB97M2_candidate_space
+      polynomial_orders: {w: [0, 4], u: [0, 4]}
+      channels: [exchange, same_spin_correlation, opposite_spin_correlation]
+      features_per_channel: 25
+      feature_count: 75
+      nonlinear_gamma: {exchange: 0.004, same_spin: 0.2, opposite_spin_average_form: 0.006}
+    scalar_feature_count: 3
+    total_candidate_feature_count: 78
+    mandatory_nonzero_coefficients: [short_range_hf, total_pt2]
+    coefficient_policy: refit_and_select_only_with_locked_COACH_fit_and_development_roles
+
+  R2_coach291:
+    fit: true
+    purpose: measure_COACH_workflow_plus_expanded_representation_effect
+    semilocal_space:
+      definition: frozen_project_integratedDV_selected_rows
+      selected_rows: [64, 154, 166]
+      channels: [exchange, same_spin_correlation, opposite_spin_correlation]
+      features_per_channel: 96
+      feature_count: 288
+      nonlinear_gamma: {exchange: 0.004, same_spin: 0.01, opposite_spin: 0.006}
+    scalar_feature_count: 3
+    total_candidate_feature_count: 291
+    mandatory_nonzero_coefficients: [short_range_hf, total_pt2]
+    coefficient_policy: refit_and_select_only_with_locked_COACH_fit_and_development_roles
+
+interpretation:
+  R1_minus_R0: COACH_data_weighting_fitting_and_model_selection_effect_with_original_candidate_family
+  R2_minus_R1: expanded_integratedDV_representation_effect_under_the_same_COACH_workflow
+  forbidden:
+    - use_final_assessment_data_for_selection
+    - seed_or_constrain_R1_or_R2_from_R0_coefficients
+    - substitute_R2_same_spin_gamma_for_R0_or_R1
+    - compare_models_on_different_species_reactions_or_energy_conventions
+
+authorities:
+  R0_and_R1_candidate_family: omegaB97M2_paper_Section_II_Eqs_5_to_8_and_Table_II
+  R2: revwb97m2/configs/scientific_spec.yaml_and_integrated_dv_validation

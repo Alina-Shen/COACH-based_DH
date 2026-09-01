@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import math
 
+import numpy as np
 import pytest
 
 from revwb97m2.published_wb97m2 import (
@@ -10,6 +11,7 @@ from revwb97m2.published_wb97m2 import (
     SEMILOCAL_COEFFICIENTS,
     evaluate_r0_components,
     independent_parameter_count,
+    published_semilocal_components_block,
 )
 
 
@@ -49,3 +51,52 @@ def test_component_assembly_refuses_missing_or_nonfinite_values() -> None:
     components["pt2"] = float("nan")
     with pytest.raises(ValueError, match="non-finite"):
         evaluate_r0_components(components)
+
+
+def test_uniform_reference_point_selects_only_00_terms() -> None:
+    rho = np.asarray([0.2])
+    tau_ueg = (3.0 / 5.0) * (6.0 * math.pi**2) ** (2.0 / 3.0) * rho ** (5.0 / 3.0)
+    values = published_semilocal_components_block(
+        np.ones(1),
+        rho,
+        rho,
+        np.zeros((1, 3)),
+        np.zeros((1, 3)),
+        tau_ueg,
+        tau_ueg,
+    )
+    assert values["exchange_00"] < 0.0
+    assert values["same_spin_00"] < 0.0
+    assert values["opposite_spin_00"] < 0.0
+    assert all(value == 0.0 for name, value in values.items() if not name.endswith("_00"))
+
+
+def test_semilocal_block_is_additive_and_refuses_bad_shapes() -> None:
+    weights = np.asarray([0.4, 0.6])
+    rho_a = np.asarray([0.2, 0.15])
+    rho_b = np.asarray([0.18, 0.12])
+    grad_a = np.asarray([[0.03, -0.01, 0.02], [0.01, 0.04, -0.02]])
+    grad_b = np.asarray([[0.02, 0.01, -0.01], [-0.02, 0.03, 0.01]])
+    tau_a = np.asarray([0.3, 0.22])
+    tau_b = np.asarray([0.28, 0.19])
+    combined = published_semilocal_components_block(
+        weights, rho_a, rho_b, grad_a, grad_b, tau_a, tau_b
+    )
+    split = {name: 0.0 for name in combined}
+    for index in range(2):
+        part = published_semilocal_components_block(
+            weights[index : index + 1],
+            rho_a[index : index + 1],
+            rho_b[index : index + 1],
+            grad_a[index : index + 1],
+            grad_b[index : index + 1],
+            tau_a[index : index + 1],
+            tau_b[index : index + 1],
+        )
+        for name, value in part.items():
+            split[name] += value
+    assert combined == pytest.approx(split, abs=1.0e-15)
+    with pytest.raises(ValueError, match="gradients"):
+        published_semilocal_components_block(
+            weights, rho_a, rho_b, np.zeros((2, 2)), grad_b, tau_a, tau_b
+        )

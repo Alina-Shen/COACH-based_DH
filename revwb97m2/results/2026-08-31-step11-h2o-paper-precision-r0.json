@@ -1,0 +1,85 @@
+{
+  "coefficient_authority": "omegaB97M(2)_Table_II_five_decimal_printed_precision",
+  "components_hartree": {
+    "coulomb": 46.64492607791829,
+    "exchange_00": -6.648027084876175,
+    "exchange_01": -0.730154112719552,
+    "exchange_20": -0.633783692376767,
+    "exchange_30": 0.11501390230856087,
+    "exchange_41": -0.02622707733012835,
+    "full_long_range_hf_exchange": -1.5849749298028522,
+    "nuclear_repulsion": 9.156881450229582,
+    "one_electron": -122.94157678500137,
+    "opposite_spin_00": -0.3394741429793393,
+    "opposite_spin_01": -0.058379036149585305,
+    "opposite_spin_02": -0.016226774344185985,
+    "opposite_spin_20": -0.03836457492475345,
+    "opposite_spin_22": -0.0054399489485050115,
+    "pt2": -0.3334012925516243,
+    "same_spin_00": -0.32007024153826474,
+    "same_spin_10": 0.04236660623528131,
+    "same_spin_20": -0.03612271783268419,
+    "short_range_hf": -7.336839258204929,
+    "vv10": 0.020787561237750714
+  },
+  "created_utc": "2026-08-31T23:43:00.505026+00:00",
+  "elapsed_seconds": 183.57249298901297,
+  "energy": {
+    "fitted_energy_hartree": -7.7629751349006,
+    "fixed_energy_hartree": -68.72474418665635,
+    "fixed_terms_hartree": {
+      "coulomb": 46.64492607791829,
+      "full_long_range_hf_exchange": -1.5849749298028522,
+      "nuclear_repulsion": 9.156881450229582,
+      "one_electron": -122.94157678500137
+    },
+    "total_energy_hartree": -76.48771932155695,
+    "weighted_scalars_hartree": {
+      "pt2": -0.11367650470840182,
+      "short_range_hf": -4.563073808247974,
+      "vv10": 0.01369983435812723
+    },
+    "weighted_semilocal_hartree": {
+      "exchange_00": -2.513353119708287,
+      "exchange_01": -0.09960762405720129,
+      "exchange_20": -0.17868263639178195,
+      "exchange_30": -0.02517194265925163,
+      "exchange_41": -0.01856011581421193,
+      "opposite_spin_00": -0.15667410646782468,
+      "opposite_spin_01": 0.1137188596772232,
+      "opposite_spin_02": -0.052722412521694684,
+      "opposite_spin_20": -0.08842650874406423,
+      "opposite_spin_22": 0.01230951648067714,
+      "same_spin_00": -0.17554572467407667,
+      "same_spin_10": -0.04987566352442257,
+      "same_spin_20": 0.13266682210256425
+    }
+  },
+  "grid": {
+    "angular": 590,
+    "id": "99590",
+    "points": 175232,
+    "radial": 99
+  },
+  "immutable_record_line": 17625,
+  "inputs": {
+    "checkpoint_sha256": "8d4dda85765e964fa521d63dd482b02e3ae71faaa49f27c759e3bb2fdd83fa1e",
+    "parent_manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/gateway/h2o_SW49/parent_manifest.json",
+    "parent_manifest_sha256": "9e6f2ac7a9a886ebd13fae7d1d2b662320000da7d174c523dad844c34f28a87a",
+    "scalar_manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/scalar/gateway/h2o_SW49/scalar_manifest.json",
+    "scalar_manifest_sha256": "d556fc4dc2b328ed83776c71c1d987117b623303f337f3faed87849ca7a5d53b"
+  },
+  "qchem_orbitals_used": false,
+  "reference": {
+    "charge": 0,
+    "electron_count": 10,
+    "multiplicity": 1,
+    "policy": "UKS_for_all_species_without_exceptions",
+    "scf_class": "UKS",
+    "spin": 0
+  },
+  "schema_version": 1,
+  "semilocal_authority": "omegaB97M-V_Section_V_and_uploaded_SI_source",
+  "species": "h2o_SW49",
+  "status": "paper_precision_r0_fixture_complete"
+}

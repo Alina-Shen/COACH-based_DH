@@ -1,0 +1,120 @@
+schema_version: 2
+status: step11_complete_trusted_R0_evaluator
+purpose: published_omegaB97M2_unfitted_R0_comparator_and_convention_baseline
+
+sources:
+  omegaB97M2_paper:
+    path: revwb97m2/wb97m2_paper/ωB97M(2).pdf
+    sha256: c631e99b54e70859f55a159e783c2b7cc85a50e2d20d384480add5be52cc4642
+    doi: 10.1063/1.5025226
+  omegaB97M_V_paper:
+    path: revwb97m2/wb97m2_paper/ωB97M-V.pdf
+    sha256: 50048825cb3dbf88f77b6281f032cfc370669a02a741fcc4d34d32c5bf3a1d07
+    doi: 10.1063/1.4952647
+  omegaB97M_V_supporting_information:
+    pdf_path: revwb97m2/wb97m2_paper/ωB97M-V_SI.pdf
+    pdf_sha256: bd9087133cbd8a11e8a9cc4c9f557dcaa3c424bd38907b80d139cbce2750cd35
+    source_path: revwb97m2/wb97m2_paper/wb97m_v_SI.txt
+    source_sha256: 08ddfba765d379d85a7fbcabc0ee2a98a73fd32551ddab1d4ec87dc666900908
+  public_ORCA_compound_script:
+    url: https://github.com/ORCAQuantumChemistry/CompoundScripts/blob/dc744bbe82d27f639a002e98e9ec36f33223bb9a/CompoundScripts/Methods/wB97M2.cmp
+    commit: dc744bbe82d27f639a002e98e9ec36f33223bb9a
+    retrieved_sha256: 97b17654d6a5b1e2747ccdf70002602159fce88aca0e10223fe732c95a2105dd
+    role: corroborates_two_step_parent_then_single_iteration_xDH_and_frozen_core_default
+  native_QChem:
+    role: strongest_available_independent_energy_oracle
+    matched_h2o_job_id: 25436961
+    matched_h2o_output_sha256: 07f30d6e6eda23475b4412b33053c3f299a1a29fcb12067bb071f7b1e78eac27
+
+model_role:
+  id: R0_published_wb97m2
+  fit: false
+  may_seed_or_constrain_R1_or_R2: false
+  may_change_R2_feature_space: false
+  exact_reproduction_is_refit_target: false
+
+comparison_schemas:
+  path: revwb97m2/manifests/published_wb97m2/comparison_schemas_v1.yaml
+  sha256: 85ce8a3931cc98e7e0e1c243d58d894c4ecbaa10d209b2a89ae10b52745693e7
+  frozen_before_fitting: true
+  models: [R0_published_wb97m2, R1_coach_refit_original78, R2_coach291]
+
+published_conventions:
+  parent_orbitals: self_consistent_omegaB97M_V_then_fixed_xDH
+  omega_bohr_inverse: 0.3
+  nonlinear_gamma: {exchange: 0.004, same_spin: 0.2, opposite_spin: 0.006}
+  warning: R0_same_spin_gamma_0p2_is_distinct_from_COACH_R2_gamma_0p01
+  vv10: {b: 10.0, C: 0.01, evaluation: non_self_consistent_on_parent_density}
+  pt2: canonical_unattenuated_unregularized
+  production_basis: def2-QZVPPD
+  fitting_semilocal_grid_default: {radial: 99, angular: 590}
+  frozen_core: true
+  resolution_of_identity: true
+  project_fixture_reference_policy: UKS_and_UMP2_for_all_species
+  coefficient_precision:
+    source: five_decimal_Table_II
+    operational_resolution: matched_native_QChem_total_energy_within_1e-7_Eh
+
+table_II:
+  semilocal:
+    exchange_00: 0.37806
+    exchange_20: 0.28193
+    exchange_30: -0.21886
+    exchange_01: 0.13642
+    exchange_41: 0.70767
+    same_spin_00: 0.54846
+    same_spin_10: -1.17724
+    same_spin_20: -3.67267
+    opposite_spin_00: 0.46152
+    opposite_spin_20: 2.30490
+    opposite_spin_01: -1.94794
+    opposite_spin_02: 3.24910
+    opposite_spin_22: -2.26280
+  scalars: {short_range_hf: 0.62194, vv10: 0.65904, pt2: 0.34096}
+
+implementation:
+  evaluator: revwb97m2/scripts/evaluate_published_wb97m2_fixture.py
+  component_kernel: revwb97m2/published_wb97m2.py
+  density_feature_definitions_complete: true
+  component_and_direct_energy_algebra_tested: true
+  isolated_from_R1_and_R2: true
+
+validation:
+  molecular:
+    report: revwb97m2/results/2026-08-31-step11-h2o-qchem-comparison.json
+    local_minus_QChem_final_hartree: -7.456947059836239e-09
+    tolerance_hartree: 1.0e-7
+    passed: true
+  reaction:
+    reaction: H2_to_2H
+    report: revwb97m2/results/2026-08-31-step11-h2-reaction-qchem-comparison.json
+    local_minus_QChem_kcal_mol: 1.6109520105434596e-06
+    tolerance_kcal_mol: 1.0e-3
+    passed: true
+    qchem_atomic_H_note: native_zero_pair_MP2_driver_failed_after_complete_pre_PT2_energy;_PT2_is_exactly_zero
+  representative_fixture_job:
+    job_id: 25436970
+    status: completed_all_six_tasks
+    species:
+      - {id: h2o_SW49, categories: [closed_shell, thermochemical]}
+      - {id: 12_NH2rad_HNBrBDE18, categories: [open_shell, thermochemical]}
+      - {id: BH9_08_1R2, categories: [charged, barrier_set]}
+      - {id: CUAGAU_Au01N0_H, categories: [ECP, transition_metal]}
+      - {id: AE11_Yb, categories: [all_electron_heavy_element]}
+      - {id: DAPD_B, categories: [open_shell, ECP, noncovalent_or_barrier_context]}
+
+resolved_authority_requirements:
+  - exact_semilocal_base_definitions
+  - nonlinear_gamma_values_and_spin_resolved_variables
+  - coefficient_precision_at_required_energy_tolerance
+  - project_auxiliary_basis_identifier
+  - project_frozen_core_policy
+  - project_closed_and_open_shell_reference_policy
+  - trusted_molecular_and_reaction_energy_fixtures
+
+step11_gate:
+  trusted_R0_evaluator_ready: true
+  R0_R1_R2_comparison_schemas_frozen: true
+  no_unresolved_semantic_or_energy_definition_bug: true
+  exact_published_aggregate_reproduction_required: false
+  gate_complete: true

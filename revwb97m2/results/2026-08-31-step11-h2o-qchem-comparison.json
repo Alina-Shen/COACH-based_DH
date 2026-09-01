@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "final_agreement": true,
+    "local_fixture_complete": true,
+    "parent_agreement": true,
+    "pre_pt2_agreement": true,
+    "qchem_coefficients": true,
+    "qchem_grid": true,
+    "qchem_native_method": true,
+    "qchem_one_frozen_core_orbital": true,
+    "qchem_parent_ready": true,
+    "qchem_terminal_success": true
+  },
+  "created_utc": "2026-08-31T23:49:44.216705+00:00",
+  "energies_hartree": {
+    "local_final_r0": -76.48771932155695,
+    "local_parent": -76.43996767776265,
+    "local_pre_pt2_r0": -76.37404281684854,
+    "qchem_final_r0": -76.4877193141,
+    "qchem_parent": -76.4399676195,
+    "qchem_pre_pt2_r0": -76.37404283
+  },
+  "local_minus_qchem_hartree": {
+    "final_r0_energy_hartree": -7.456947059836239e-09,
+    "parent_energy_hartree": -5.826265692121524e-08,
+    "pre_pt2_r0_energy_hartree": 1.315144970703841e-08
+  },
+  "schema_version": 1,
+  "sources": {
+    "local_fixture": "revwb97m2/results/2026-08-31-step11-h2o-paper-precision-r0.json",
+    "local_fixture_sha256": "3d3b886685350b9354cb51c1496d074c665d0f9f6b3c5b9099e0b0ff70cf1f40",
+    "qchem_job_id": 25436961,
+    "qchem_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step11/qchem_h2o_sw49_probe/25436961/qchem.out",
+    "qchem_output_sha256": "07f30d6e6eda23475b4412b33053c3f299a1a29fcb12067bb071f7b1e78eac27"
+  },
+  "status": "passed",
+  "tolerance_hartree": 1e-07
+}

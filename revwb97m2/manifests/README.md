@@ -37,3 +37,9 @@ is validated. That validation is now complete in [`basis_bridge/`](basis_bridge)
 the immutable Step-5 records are unchanged, while the bridge supplies the
 resolved PySCF orbital, auxiliary, and ECP definitions plus a 17,658-row audit
 index and independent passing report.
+
+The resource-neutral Step-13 resumability and dry-run contract is under
+[`production_generator/`](production_generator). It covers the exact 17,452
+fixed-geometry energy-role species but deliberately contains no production
+tiers, resource requests, concurrency limits, or submission authorization
+until Step 12 is signed off.

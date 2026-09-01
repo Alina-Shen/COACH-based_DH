@@ -1,0 +1,377 @@
+C     EXCHANGE ROUTINE FOR WB97M-V
+
+      SUBROUTINE wb97m_v_x(F,D1F,RhoA,RhoB,D1RhoA,D1RhoB,TauA,TauB,NGrid)
+      IMPLICIT REAL*8 (a-h,o-z)
+      REAL*8 F(NGrid)
+      REAL*8 D1F(NGrid,N_D1_META)
+      REAL*8 RhoA(NGrid),RhoB(NGrid)
+      REAL*8 D1RhoA(NGrid,3),D1RhoB(NGrid,3)
+      REAL*8 TauA(NGrid),TauB(NGrid)
+      CALL VRload(F,NGrid,0D0)
+      CALL VRload(D1F,NGrid*N_D1_META,0D0)
+      Tol=1D-14
+      Pi=ConvFac(VALUE_OF_PI)
+      E=2.718281828459045D0
+
+      CALL RemGet(Iomega,REM_OMEGA)
+      omega = Iomega/1000D0
+      cLDA=-(3D0/2D0)*((3D0/(4D0*Pi))**(1D0/3D0))
+      cGGA=1D0/(4D0*(6D0*(Pi**2D0))**(2D0/3D0))
+      cMGGA=(3D0/5D0)*((6D0*(Pi**2D0))**(2D0/3D0))
+      cgamma=0.004D0
+      caa=0.85D0
+      cab=0.259D0
+      cac=1.007D0
+
+      DO i = 1,NGrid
+       RA = MAX(RhoA(i),0D0)
+       RB = MAX(RhoB(i),0D0)
+       GA = D1RhoA(i,1)**2D0+D1RhoA(i,2)**2D0+D1RhoA(i,3)**2D0
+       GB = D1RhoB(i,1)**2D0+D1RhoB(i,2)**2D0+D1RhoB(i,3)**2D0
+       TA = MAX(TauA(i),0D0)
+       TB = MAX(TauB(i),0D0)
+       IF ((RA.gt.Tol).OR.(RB.gt.Tol).OR.(TA.gt.Tol).OR.(TB.gt.Tol)) THEN
+        IF ((RA.gt.Tol).AND.(TA.gt.Tol)) THEN
+         ExUEG = cLDA*RA**(4D0/3D0)
+         dExUEGdRA = (4D0*cLDA*RA**(1D0/3D0))/3D0
+         xs = GA/RA**(8D0/3D0)
+         dxsdRA = (-8D0*GA)/(3D0*RA**(11D0/3D0))
+         dxsdGA = RA**(-8D0/3D0)
+         ts = (cMGGA*RA**(5D0/3D0))/TA
+         dtsdRA = (5D0*cMGGA*RA**(2D0/3D0))/(3D0*TA)
+         dtsdTA = -((cMGGA*RA**(5D0/3D0))/TA**2D0)
+         a = omega/(6D0**(1D0/3D0)*Pi**(2D0/3D0)*RA**(1D0/3D0))
+         dadRA = -omega/(3D0*6D0**(1D0/3D0)*Pi**(2D0/3D0)*RA**(4D0/3D0))
+         u = (cgamma*xs)/(1D0+cgamma*xs)
+         dudxs = cgamma/(1D0+cgamma*xs)**2D0
+         w = (-1D0+ts)/(1D0+ts)
+         dwdts = 2D0/(1D0+ts)**2D0
+         Fn = 1D0-(2D0*a*(-3D0*a+a**3D0+(2D0*a-a**3D0)/E**a**(-2D0)+2D0*SQRT(Pi)*ERF(a**(-1D0))))/3D0
+         dFnda = (-4D0*(a*(-3D0+E**(-a**(-2D0))-2D0*a**2D0*(-1D0+E**(-a**(-2D0))))+SQRT(Pi)*ERF(a**(-1D0))))/3D0
+         gx = caa+cac*u+cab*w
+         dgxdu = cac
+         dgxdw = cab
+         Ex = ExUEG*Fn*gx
+         dExdRA = dgxdw*dtsdRA*dwdts*ExUEG*Fn+dgxdu*dudxs*dxsdRA*ExUEG*Fn+dadRA*dFnda*ExUEG*gx+dExUEGdRA*Fn*gx
+         dExdGA = dgxdu*dudxs*dxsdGA*ExUEG*Fn
+         dExdTA = dgxdw*dtsdTA*dwdts*ExUEG*Fn
+         F(i) = F(i)+Ex
+         D1F(i,POS_RA) = D1F(i,POS_RA)+dExdRA
+         D1F(i,POS_GAA) = D1F(i,POS_GAA)+dExdGA
+         D1F(i,POS_TA) = D1F(i,POS_TA)+dExdTA
+        ENDIF
+        IF ((RB.gt.Tol).AND.(TB.gt.Tol)) THEN
+         ExUEG = cLDA*RB**(4D0/3D0)
+         dExUEGdRB = (4D0*cLDA*RB**(1D0/3D0))/3D0
+         xs = GB/RB**(8D0/3D0)
+         dxsdRB = (-8D0*GB)/(3D0*RB**(11D0/3D0))
+         dxsdGB = RB**(-8D0/3D0)
+         ts = (cMGGA*RB**(5D0/3D0))/TB
+         dtsdRB = (5D0*cMGGA*RB**(2D0/3D0))/(3D0*TB)
+         dtsdTB = -((cMGGA*RB**(5D0/3D0))/TB**2D0)
+         a = omega/(6D0**(1D0/3D0)*Pi**(2D0/3D0)*RB**(1D0/3D0))
+         dadRB = -omega/(3D0*6D0**(1D0/3D0)*Pi**(2D0/3D0)*RB**(4D0/3D0))
+         u = (cgamma*xs)/(1D0+cgamma*xs)
+         dudxs = cgamma/(1D0+cgamma*xs)**2D0
+         w = (-1D0+ts)/(1D0+ts)
+         dwdts = 2D0/(1D0+ts)**2D0
+         Fn = 1D0-(2D0*a*(-3D0*a+a**3D0+(2D0*a-a**3D0)/E**a**(-2D0)+2D0*SQRT(Pi)*ERF(a**(-1D0))))/3D0
+         dFnda = (-4D0*(a*(-3D0+E**(-a**(-2D0))-2D0*a**2D0*(-1D0+E**(-a**(-2D0))))+SQRT(Pi)*ERF(a**(-1D0))))/3D0
+         gx = caa+cac*u+cab*w
+         dgxdu = cac
+         dgxdw = cab
+         Ex = ExUEG*Fn*gx
+         dExdRB = dgxdw*dtsdRB*dwdts*ExUEG*Fn+dgxdu*dudxs*dxsdRB*ExUEG*Fn+dadRB*dFnda*ExUEG*gx+dExUEGdRB*Fn*gx
+         dExdGB = dgxdu*dudxs*dxsdGB*ExUEG*Fn
+         dExdTB = dgxdw*dtsdTB*dwdts*ExUEG*Fn
+         F(i) = F(i)+Ex
+         D1F(i,POS_RB) = D1F(i,POS_RB)+dExdRB
+         D1F(i,POS_GBB) = D1F(i,POS_GBB)+dExdGB
+         D1F(i,POS_TB) = D1F(i,POS_TB)+dExdTB
+        ENDIF
+       ENDIF
+      ENDDO
+      RETURN
+      END
+
+C     SAME-SPIN CORRELATION ROUTINE FOR WB97M-V
+
+      SUBROUTINE wb97m_v_css(F,D1F,RhoA,RhoB,D1RhoA,D1RhoB,TauA,TauB,NGrid)
+      IMPLICIT REAL*8 (a-h,o-z)
+      REAL*8 F(NGrid)
+      REAL*8 D1F(NGrid,N_D1_META)
+      REAL*8 RhoA(NGrid),RhoB(NGrid)
+      REAL*8 D1RhoA(NGrid,3),D1RhoB(NGrid,3)
+      REAL*8 TauA(NGrid),TauB(NGrid)
+      CALL VRload(F,NGrid,0D0)
+      CALL VRload(D1F,NGrid*N_D1_META,0D0)
+      Tol=1D-14
+      Pi=ConvFac(VALUE_OF_PI)
+      E=2.718281828459045D0
+      cLDA=-(3D0/2D0)*((3D0/(4D0*Pi))**(1D0/3D0))
+      paa=0.0621814D0/2D0
+      pab=0.0621814D0/4D0
+      pac=0.0168869D0
+      pba=0.2137D0
+      pbb=0.20548D0
+      pbc=0.11125D0
+      pca=7.5957D0
+      pcb=14.1189D0
+      pcc=10.357D0
+      pda=3.5876D0
+      pdb=6.1977D0
+      pdc=3.6231D0
+      pea=1.6382D0
+      peb=3.3662D0
+      pec=0.88026D0
+      pfa=0.49294D0
+      pfb=0.62517D0
+      pfc=0.49671D0
+      fppz=4D0/(9D0*(2D0**(1D0/3D0)-1D0))
+      ppa=1D0
+      ppb=1D0
+      ppc=1D0
+      cGGA=1D0/(4D0*(6D0*(Pi**2D0))**(2D0/3D0))
+      cMGGA=(3D0/5D0)*((6D0*(Pi**2D0))**(2D0/3D0))
+      cgamma=0.2D0
+      caa=0.443D0
+      cab=-4.535D0
+      cac=-3.39D0
+      cad=4.278D0
+      cae=-1.437D0
+
+      DO i = 1,NGrid
+       RA = MAX(RhoA(i),0D0)
+       RB = MAX(RhoB(i),0D0)
+       GA = D1RhoA(i,1)**2D0+D1RhoA(i,2)**2D0+D1RhoA(i,3)**2D0
+       GB = D1RhoB(i,1)**2D0+D1RhoB(i,2)**2D0+D1RhoB(i,3)**2D0
+       TA = MAX(TauA(i),0D0)
+       TB = MAX(TauB(i),0D0)
+       IF ((RA.gt.Tol).OR.(RB.gt.Tol).OR.(TA.gt.Tol).OR.(TB.gt.Tol)) THEN
+        IF ((RA.gt.Tol).AND.(TA.gt.Tol)) THEN
+         rs = ((3D0/Pi)**(1D0/3D0)*(RA**(-1D0))**(1D0/3D0))/2D0**(2D0/3D0)
+         drsdRA = -((RA**(-1D0))**(4D0/3D0)/(6D0**(2D0/3D0)*Pi**(1D0/3D0)))
+         GPWb = -2D0*pab*(1D0+pbb*rs)*LOG(1D0+1D0/(2D0*pab*(pcb*SQRT(rs)+rs*(pdb+peb*SQRT(rs)+pfb*rs**ppb))))
+         dGPWbdrs = (pab*(1D0+pbb*rs)*(pcb+2D0*pdb*SQRT(rs)+3D0*peb*rs+2D0*pfb*rs**(1D0/2D0+ppb)+2D0*pfb*ppb*rs**(1D0/2D0+ppb)))/(rs
+     $              *(pcb+pdb*SQRT(rs)+peb*rs+pfb*rs**(1D0/2D0+ppb))*(1D0+2D0*pab*SQRT(rs)*(pcb+pdb*SQRT(rs)+peb*rs+pfb*rs**(1D0/2D0
+     $              +ppb))))-2D0*pab*pbb*LOG(1D0+1D0/(2D0*pab*(pcb*SQRT(rs)+rs*(pdb+peb*SQRT(rs)+pfb*rs**ppb))))
+         EcUEG = GPWb
+         dEcUEGdGPWb = 1D0
+         xs = GA/RA**(8D0/3D0)
+         dxsdRA = (-8D0*GA)/(3D0*RA**(11D0/3D0))
+         dxsdGA = RA**(-8D0/3D0)
+         ts = (cMGGA*RA**(5D0/3D0))/TA
+         dtsdRA = (5D0*cMGGA*RA**(2D0/3D0))/(3D0*TA)
+         dtsdTA = -((cMGGA*RA**(5D0/3D0))/TA**2D0)
+         u = (cgamma*xs)/(1D0+cgamma*xs)
+         dudxs = cgamma/(1D0+cgamma*xs)**2D0
+         w = (-1D0+ts)/(1D0+ts)
+         dwdts = 2D0/(1D0+ts)**2D0
+         gx = caa+cae*u**4D0+w*(cab+cac*w+cad*u**3D0*w**3D0)
+         dgxdu = u**2D0*(4D0*cae*u+3D0*cad*w**4D0)
+         dgxdw = cab+2D0*cac*w+4D0*cad*u**3D0*w**3D0
+         Ecss = EcUEG*gx*RA
+         dEcssdRA = dEcUEGdGPWb*dGPWbdrs*drsdRA*gx*RA+EcUEG*(gx+dgxdw*dtsdRA*dwdts*RA+dgxdu*dudxs*dxsdRA*RA)
+         dEcssdGA = dgxdu*dudxs*dxsdGA*EcUEG*RA
+         dEcssdTA = dgxdw*dtsdTA*dwdts*EcUEG*RA
+         F(i) = F(i)+Ecss
+         D1F(i,POS_RA) = D1F(i,POS_RA)+dEcssdRA
+         D1F(i,POS_GAA) = D1F(i,POS_GAA)+dEcssdGA
+         D1F(i,POS_TA) = D1F(i,POS_TA)+dEcssdTA
+        ENDIF
+        IF ((RB.gt.Tol).AND.(TB.gt.Tol)) THEN
+         rs = ((3D0/Pi)**(1D0/3D0)*(RB**(-1D0))**(1D0/3D0))/2D0**(2D0/3D0)
+         drsdRB = -((RB**(-1D0))**(4D0/3D0)/(6D0**(2D0/3D0)*Pi**(1D0/3D0)))
+         GPWb = -2D0*pab*(1D0+pbb*rs)*LOG(1D0+1D0/(2D0*pab*(pcb*SQRT(rs)+rs*(pdb+peb*SQRT(rs)+pfb*rs**ppb))))
+         dGPWbdrs = (pab*(1D0+pbb*rs)*(pcb+2D0*pdb*SQRT(rs)+3D0*peb*rs+2D0*pfb*rs**(1D0/2D0+ppb)+2D0*pfb*ppb*rs**(1D0/2D0+ppb)))/(rs
+     $              *(pcb+pdb*SQRT(rs)+peb*rs+pfb*rs**(1D0/2D0+ppb))*(1D0+2D0*pab*SQRT(rs)*(pcb+pdb*SQRT(rs)+peb*rs+pfb*rs**(1D0/2D0
+     $              +ppb))))-2D0*pab*pbb*LOG(1D0+1D0/(2D0*pab*(pcb*SQRT(rs)+rs*(pdb+peb*SQRT(rs)+pfb*rs**ppb))))
+         EcUEG = GPWb
+         dEcUEGdGPWb = 1D0
+         xs = GB/RB**(8D0/3D0)
+         dxsdRB = (-8D0*GB)/(3D0*RB**(11D0/3D0))
+         dxsdGB = RB**(-8D0/3D0)
+         ts = (cMGGA*RB**(5D0/3D0))/TB
+         dtsdRB = (5D0*cMGGA*RB**(2D0/3D0))/(3D0*TB)
+         dtsdTB = -((cMGGA*RB**(5D0/3D0))/TB**2D0)
+         u = (cgamma*xs)/(1D0+cgamma*xs)
+         dudxs = cgamma/(1D0+cgamma*xs)**2D0
+         w = (-1D0+ts)/(1D0+ts)
+         dwdts = 2D0/(1D0+ts)**2D0
+         gx = caa+cae*u**4D0+w*(cab+cac*w+cad*u**3D0*w**3D0)
+         dgxdu = u**2D0*(4D0*cae*u+3D0*cad*w**4D0)
+         dgxdw = cab+2D0*cac*w+4D0*cad*u**3D0*w**3D0
+         Ecss = EcUEG*gx*RB
+         dEcssdRB = dEcUEGdGPWb*dGPWbdrs*drsdRB*gx*RB+EcUEG*(gx+dgxdw*dtsdRB*dwdts*RB+dgxdu*dudxs*dxsdRB*RB)
+         dEcssdGB = dgxdu*dudxs*dxsdGB*EcUEG*RB
+         dEcssdTB = dgxdw*dtsdTB*dwdts*EcUEG*RB
+         F(i) = F(i)+Ecss
+         D1F(i,POS_RB) = D1F(i,POS_RB)+dEcssdRB
+         D1F(i,POS_GBB) = D1F(i,POS_GBB)+dEcssdGB
+         D1F(i,POS_TB) = D1F(i,POS_TB)+dEcssdTB
+        ENDIF
+       ENDIF
+      ENDDO
+      RETURN
+      END
+
+C     OPPOSITE-SPIN CORRELATION ROUTINE FOR WB97M-V
+
+      SUBROUTINE wb97m_v_cos(F,D1F,RhoA,RhoB,D1RhoA,D1RhoB,TauA,TauB,NGrid)
+      IMPLICIT REAL*8 (a-h,o-z)
+      REAL*8 F(NGrid)
+      REAL*8 D1F(NGrid,N_D1_META)
+      REAL*8 RhoA(NGrid),RhoB(NGrid)
+      REAL*8 D1RhoA(NGrid,3),D1RhoB(NGrid,3)
+      REAL*8 TauA(NGrid),TauB(NGrid)
+      Tol=1D-14
+      Pi=ConvFac(VALUE_OF_PI)
+      E=2.718281828459045D0
+      cLDA=-(3D0/2D0)*((3D0/(4D0*Pi))**(1D0/3D0))
+      paa=0.0621814D0/2D0
+      pab=0.0621814D0/4D0
+      pac=0.0168869D0
+      pba=0.2137D0
+      pbb=0.20548D0
+      pbc=0.11125D0
+      pca=7.5957D0
+      pcb=14.1189D0
+      pcc=10.357D0
+      pda=3.5876D0
+      pdb=6.1977D0
+      pdc=3.6231D0
+      pea=1.6382D0
+      peb=3.3662D0
+      pec=0.88026D0
+      pfa=0.49294D0
+      pfb=0.62517D0
+      pfc=0.49671D0
+      fppz=4D0/(9D0*(2D0**(1D0/3D0)-1D0))
+      ppa=1D0
+      ppb=1D0
+      ppc=1D0
+      cGGA=1D0/(4D0*(6D0*(Pi**2D0))**(2D0/3D0))
+      cMGGA=(3D0/5D0)*((6D0*(Pi**2D0))**(2D0/3D0))
+      cgamma=0.003D0
+      caa=1D0
+      cab=1.358D0
+      cac=2.924D0
+      cad=-1.39D0
+      cae=-8.812D0
+      caf=9.142D0
+
+      DO i = 1,NGrid
+       RA = MAX(RhoA(i),0D0)
+       RB = MAX(RhoB(i),0D0)
+       GA = D1RhoA(i,1)**2D0+D1RhoA(i,2)**2D0+D1RhoA(i,3)**2D0
+       GB = D1RhoB(i,1)**2D0+D1RhoB(i,2)**2D0+D1RhoB(i,3)**2D0
+       GAB = D1RhoA(i,1)*D1RhoB(i,1)+D1RhoA(i,2)*D1RhoB(i,2)+D1RhoA(i,3)*D1RhoB(i,3)
+       TA = MAX(TauA(i),0D0)
+       TB = MAX(TauB(i),0D0)
+       IF ((RA.gt.Tol).OR.(RB.gt.Tol).OR.(TA.gt.Tol).OR.(TB.gt.Tol)) THEN
+        IF ((RA.gt.Tol).AND.(RB.gt.Tol).AND.(TA.gt.Tol).AND.(TB.gt.Tol)) THEN
+         rs = ((3D0/Pi)**(1D0/3D0)*((RA+RB)**(-1D0))**(1D0/3D0))/2D0**(2D0/3D0)
+         drsdRA = -(((RA+RB)**(-1D0))**(4D0/3D0)/(6D0**(2D0/3D0)*Pi**(1D0/3D0)))
+         drsdRB = -(((RA+RB)**(-1D0))**(4D0/3D0)/(6D0**(2D0/3D0)*Pi**(1D0/3D0)))
+         zeta = (RA-RB)/(RA+RB)
+         dzetadRA = (2D0*RB)/(RA+RB)**2D0
+         dzetadRB = (-2D0*RA)/(RA+RB)**2D0
+         IF (ABS(zeta).lt.Tol) THEN
+          zeta = 0D0
+         ENDIF
+         GPWa = -2D0*paa*(1D0+pba*rs)*LOG(1D0+1D0/(2D0*paa*(pca*SQRT(rs)+rs*(pda+pea*SQRT(rs)+pfa*rs**ppa))))
+         dGPWadrs = (paa*(1D0+pba*rs)*(pca+2D0*pda*SQRT(rs)+3D0*pea*rs+2D0*pfa*rs**(1D0/2D0+ppa)+2D0*pfa*ppa*rs**(1D0/2D0+ppa)))/(rs
+     $              *(pca+pda*SQRT(rs)+pea*rs+pfa*rs**(1D0/2D0+ppa))*(1D0+2D0*paa*SQRT(rs)*(pca+pda*SQRT(rs)+pea*rs+pfa*rs**(1D0/2D0
+     $              +ppa))))-2D0*paa*pba*LOG(1D0+1D0/(2D0*paa*(pca*SQRT(rs)+rs*(pda+pea*SQRT(rs)+pfa*rs**ppa))))
+         GPWb = -2D0*pab*(1D0+pbb*rs)*LOG(1D0+1D0/(2D0*pab*(pcb*SQRT(rs)+rs*(pdb+peb*SQRT(rs)+pfb*rs**ppb))))
+         dGPWbdrs = (pab*(1D0+pbb*rs)*(pcb+2D0*pdb*SQRT(rs)+3D0*peb*rs+2D0*pfb*rs**(1D0/2D0+ppb)+2D0*pfb*ppb*rs**(1D0/2D0+ppb)))/(rs
+     $              *(pcb+pdb*SQRT(rs)+peb*rs+pfb*rs**(1D0/2D0+ppb))*(1D0+2D0*pab*SQRT(rs)*(pcb+pdb*SQRT(rs)+peb*rs+pfb*rs**(1D0/2D0
+     $              +ppb))))-2D0*pab*pbb*LOG(1D0+1D0/(2D0*pab*(pcb*SQRT(rs)+rs*(pdb+peb*SQRT(rs)+pfb*rs**ppb))))
+         GPWc = -2D0*pac*(1D0+pbc*rs)*LOG(1D0+1D0/(2D0*pac*(pcc*SQRT(rs)+rs*(pdc+pec*SQRT(rs)+pfc*rs**ppc))))
+         dGPWcdrs = (pac*(1D0+pbc*rs)*(pcc+2D0*pdc*SQRT(rs)+3D0*pec*rs+2D0*pfc*rs**(1D0/2D0+ppc)+2D0*pfc*ppc*rs**(1D0/2D0+ppc)))/(rs
+     $              *(pcc+pdc*SQRT(rs)+pec*rs+pfc*rs**(1D0/2D0+ppc))*(1D0+2D0*pac*SQRT(rs)*(pcc+pdc*SQRT(rs)+pec*rs+pfc*rs**(1D0/2D0
+     $              +ppc))))-2D0*pac*pbc*LOG(1D0+1D0/(2D0*pac*(pcc*SQRT(rs)+rs*(pdc+pec*SQRT(rs)+pfc*rs**ppc))))
+         fpol = (-2D0+(1D0-zeta)**(4D0/3D0)+(1D0+zeta)**(4D0/3D0))/(-2D0+2D0*2D0**(1D0/3D0))
+         dfpoldzeta = (2D0*(1D0-zeta)**(1D0/3D0)-2D0*(1D0+zeta)**(1D0/3D0))/(3D0-3D0*2D0**(1D0/3D0))
+         EcUEG = GPWa+fpol*(-GPWa+GPWb)*zeta**4D0+(fpol*GPWc*(-1D0+zeta**4D0))/fppz
+         dEcUEGdGPWa = 1D0-fpol*zeta**4D0
+         dEcUEGdGPWb = fpol*zeta**4D0
+         dEcUEGdGPWc = (fpol*(-1D0+zeta**4D0))/fppz
+         dEcUEGdfpol = (fppz*(-GPWa+GPWb)*zeta**4D0+GPWc*(-1D0+zeta**4D0))/fppz
+         dEcUEGdzeta = (4D0*fpol*(fppz*(-GPWa+GPWb)+GPWc)*zeta**3D0)/fppz
+         rsa = ((3D0/Pi)**(1D0/3D0)*(RA**(-1D0))**(1D0/3D0))/2D0**(2D0/3D0)
+         drsadRA = -((RA**(-1D0))**(4D0/3D0)/(6D0**(2D0/3D0)*Pi**(1D0/3D0)))
+         GPWba = -2D0*pab*(1D0+pbb*rsa)*LOG(1D0+1D0/(2D0*pab*(pcb*SQRT(rsa)+rsa*(pdb+peb*SQRT(rsa)+pfb*rsa))))
+         dGPWbadrsa = (pab*(1D0+pbb*rsa)*(pcb+2D0*pdb*SQRT(rsa)+3D0*peb*rsa+4D0*pfb*rsa**(3D0/2D0)))/(rsa*(pcb+pdb*SQRT(rsa)+peb*rsa
+     $                +pfb*rsa**(3D0/2D0))*(1D0+2D0*pab*(pcb*SQRT(rsa)+rsa*(pdb+peb*SQRT(rsa)+pfb*rsa))))-2D0*pab*pbb*LOG(1D0+1D0/(2
+     $                D0*pab*(pcb*SQRT(rsa)+rsa*(pdb+peb*SQRT(rsa)+pfb*rsa))))
+         EcUEGa = GPWba
+         dEcUEGadGPWba = 1D0
+         rsb = ((3D0/Pi)**(1D0/3D0)*(RB**(-1D0))**(1D0/3D0))/2D0**(2D0/3D0)
+         drsbdRB = -((RB**(-1D0))**(4D0/3D0)/(6D0**(2D0/3D0)*Pi**(1D0/3D0)))
+         GPWbb = -2D0*pab*(1D0+pbb*rsb)*LOG(1D0+1D0/(2D0*pab*(pcb*SQRT(rsb)+rsb*(pdb+peb*SQRT(rsb)+pfb*rsb))))
+         dGPWbbdrsb = (pab*(1D0+pbb*rsb)*(pcb+2D0*pdb*SQRT(rsb)+3D0*peb*rsb+4D0*pfb*rsb**(3D0/2D0)))/(rsb*(pcb+pdb*SQRT(rsb)+peb*rsb
+     $                +pfb*rsb**(3D0/2D0))*(1D0+2D0*pab*(pcb*SQRT(rsb)+rsb*(pdb+peb*SQRT(rsb)+pfb*rsb))))-2D0*pab*pbb*LOG(1D0+1D0/(2
+     $                D0*pab*(pcb*SQRT(rsb)+rsb*(pdb+peb*SQRT(rsb)+pfb*rsb))))
+         EcUEGb = GPWbb
+         dEcUEGbdGPWbb = 1D0
+         xs = GA/RA**(8D0/3D0)+GB/RB**(8D0/3D0)
+         dxsdRA = (-8D0*GA)/(3D0*RA**(11D0/3D0))
+         dxsdRB = (-8D0*GB)/(3D0*RB**(11D0/3D0))
+         dxsdGA = RA**(-8D0/3D0)
+         dxsdGB = RB**(-8D0/3D0)
+         ts = (cMGGA*(RA**(5D0/3D0)/TA+RB**(5D0/3D0)/TB))/2D0
+         dtsdRA = (5D0*cMGGA*RA**(2D0/3D0))/(6D0*TA)
+         dtsdRB = (5D0*cMGGA*RB**(2D0/3D0))/(6D0*TB)
+         dtsdTA = -(cMGGA*RA**(5D0/3D0))/(2D0*TA**2D0)
+         dtsdTB = -(cMGGA*RB**(5D0/3D0))/(2D0*TB**2D0)
+         u = (cgamma*xs)/(1D0+cgamma*xs)
+         dudxs = cgamma/(1D0+cgamma*xs)**2D0
+         w = (-1D0+ts)/(1D0+ts)
+         dwdts = 2D0/(1D0+ts)**2D0
+         gx = caa+w*(cab+w*(cac+cae*u+cad*w**4D0+caf*u*w**4D0))
+         dgxdu = w**2D0*(cae+caf*w**4D0)
+         dgxdw = cab+2D0*w*(cac+cae*u+3D0*(cad+caf*u)*w**4D0)
+         Ecos = gx*(-(EcUEGa*RA)-EcUEGb*RB+EcUEG*(RA+RB))
+         dEcosdRA = gx*(EcUEG-EcUEGa-dEcUEGadGPWba*dGPWbadrsa*drsadRA*RA+(dEcUEGdGPWa*dGPWadrs*drsdRA+dEcUEGdGPWb*dGPWbdrs*drsdRA+dE
+     $              cUEGdGPWc*dGPWcdrs*drsdRA+dEcUEGdzeta*dzetadRA+dEcUEGdfpol*dfpoldzeta*dzetadRA)*(RA+RB))+(dgxdw*dtsdRA*dwdts+dgx
+     $              du*dudxs*dxsdRA)*(-(EcUEGa*RA)-EcUEGb*RB+EcUEG*(RA+RB))
+         dEcosdRB = gx*(EcUEG-EcUEGb-dEcUEGbdGPWbb*dGPWbbdrsb*drsbdRB*RB+(dEcUEGdGPWa*dGPWadrs*drsdRB+dEcUEGdGPWb*dGPWbdrs*drsdRB+dE
+     $              cUEGdGPWc*dGPWcdrs*drsdRB+dEcUEGdzeta*dzetadRB+dEcUEGdfpol*dfpoldzeta*dzetadRB)*(RA+RB))+(dgxdw*dtsdRB*dwdts+dgx
+     $              du*dudxs*dxsdRB)*(-(EcUEGa*RA)-EcUEGb*RB+EcUEG*(RA+RB))
+         dEcosdGA = dgxdu*dudxs*dxsdGA*(-(EcUEGa*RA)-EcUEGb*RB+EcUEG*(RA+RB))
+         dEcosdGB = dgxdu*dudxs*dxsdGB*(-(EcUEGa*RA)-EcUEGb*RB+EcUEG*(RA+RB))
+         dEcosdTA = dgxdw*dtsdTA*dwdts*(-(EcUEGa*RA)-EcUEGb*RB+EcUEG*(RA+RB))
+         dEcosdTB = dgxdw*dtsdTB*dwdts*(-(EcUEGa*RA)-EcUEGb*RB+EcUEG*(RA+RB))
+         F(i) = F(i)+Ecos
+         D1F(i,POS_RA) = D1F(i,POS_RA)+dEcosdRA
+         D1F(i,POS_RB) = D1F(i,POS_RB)+dEcosdRB
+         D1F(i,POS_GAA) = D1F(i,POS_GAA)+dEcosdGA
+         D1F(i,POS_GBB) = D1F(i,POS_GBB)+dEcosdGB
+         D1F(i,POS_TA) = D1F(i,POS_TA)+dEcosdTA
+         D1F(i,POS_TB) = D1F(i,POS_TB)+dEcosdTB
+        ENDIF
+        IF ((RA.gt.Tol).AND.(RB.lt.Tol).AND.(TA.gt.Tol).AND.(TB.lt.Tol)) THEN
+         Ecos = 0D0
+         dEcosdRA = 0D0
+         dEcosdGA = 0D0
+         dEcosdTA = 0D0
+         F(i) = F(i)+Ecos
+         D1F(i,POS_RA) = D1F(i,POS_RA)+dEcosdRA
+         D1F(i,POS_GAA) = D1F(i,POS_GAA)+dEcosdGA
+         D1F(i,POS_TA) = D1F(i,POS_TA)+dEcosdTA
+        ENDIF
+        IF ((RA.lt.Tol).AND.(RB.gt.Tol).AND.(TA.lt.Tol).AND.(TB.gt.Tol)) THEN
+         Ecos = 0D0
+         dEcosdRB = 0D0
+         dEcosdGB = 0D0
+         dEcosdTB = 0D0
+         F(i) = F(i)+Ecos
+         D1F(i,POS_RB) = D1F(i,POS_RB)+dEcosdRB
+         D1F(i,POS_GBB) = D1F(i,POS_GBB)+dEcosdGB
+         D1F(i,POS_TB) = D1F(i,POS_TB)+dEcosdTB
+        ENDIF
+       ENDIF
+      ENDDO
+      RETURN
+      END

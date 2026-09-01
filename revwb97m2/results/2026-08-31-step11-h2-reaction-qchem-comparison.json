@@ -1,0 +1,56 @@
+{
+  "checks": {
+    "h2_energy_agreement": true,
+    "h_energy_agreement": true,
+    "h_pt2_exactly_zero": true,
+    "local_h2_complete": true,
+    "local_h_complete": true,
+    "qchem_h2_terminal_success": true,
+    "qchem_h_expected_zero_pair_edge_recorded": true,
+    "reaction_agreement": true
+  },
+  "created_utc": "2026-08-31T23:56:06.206568+00:00",
+  "energies_hartree": {
+    "local_dissociation": 0.17303128926721556,
+    "local_h": -0.49953537756760563,
+    "local_h2": -1.1721020444024268,
+    "qchem_dissociation": 0.17303128670000012,
+    "qchem_h": -0.49953538,
+    "qchem_h2": -1.1721020467
+  },
+  "local_minus_qchem": {
+    "dissociation_hartree": 2.567215440230086e-09,
+    "dissociation_kcal_mol": 1.6109520105434596e-06,
+    "h2_hartree": 2.2975732427710227e-09,
+    "h_hartree": 2.4323943415005544e-09
+  },
+  "reaction": "H2 -> 2 H",
+  "schema_version": 1,
+  "sources": {
+    "local_h": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step11/h2_reaction/25437043/r0/W4-17_h.json",
+      "sha256": "66721af79475e8137f9e5a537511e527560edd365d4eb98e41ea259307d89dbf"
+    },
+    "local_h2": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step11/h2_reaction/25437043/r0/W4-17_h2.json",
+      "sha256": "7d46df0dc84680a3e1438521b867d227ff297015150930f6efb8e97071379c8d"
+    },
+    "qchem_h": {
+      "job_id": 25437044,
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step11/qchem_w4_17_h/25437044/qchem.out",
+      "process_status": "failed_after_complete_pre_pt2_energy",
+      "sha256": "b872e0e50322f8c5a5929e2c6586d219fc1f0fef2abc0a470aaee5eaee285d0e"
+    },
+    "qchem_h2": {
+      "job_id": 25437046,
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step11/qchem_w4_17_h2/25437046/qchem.out",
+      "process_status": "completed",
+      "sha256": "3e6e35de69dfcbdded0a3e6c7fd15886716b5d974aebf705f9942e14c7c48293"
+    }
+  },
+  "status": "passed",
+  "tolerances": {
+    "reaction_kcal_mol": 0.001,
+    "species_hartree": 1e-07
+  }
+}

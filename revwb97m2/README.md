@@ -117,6 +117,21 @@ The summary is intentionally an early Step-12 measurement, not a production
 resource authorization. In particular, it refuses to infer CPU-hours from
 only the small gateways while the high-cost counterpoise case is incomplete.
 
+## Preparatory production generator
+
+Step 13 has begun only at its resource-independent boundary. The
+[`production_generator.py`](production_generator.py) planner joins the exact
+17,452-species fixed-geometry role union to the validated basis and immutable
+record authorities, inventories seven independently resumable boundaries, and
+publishes non-overwriting dry-run plans. It never runs chemistry, chooses
+resources, renders SBATCH scripts, or submits jobs.
+
+The contract and its validation commands are documented under the
+[`production_generator` manifest](manifests/production_generator/README.md).
+All tiering, resource requests, concurrency, retry limits, direct/out-of-core
+routing, quantitative size stops, and production authorization remain blocked
+on terminal Step-12 measurement and explicit sign-off.
+
 ## Published omegaB97M(2) R0 comparator
 
 Step 11 treats the uploaded 2018 omegaB97M(2) paper as a hash-pinned authority
@@ -132,10 +147,11 @@ status are recorded in the
 python scripts/validate_published_wb97m2.py
 ```
 
-The full R0 density evaluator and trusted molecular/reaction fixtures remain
-open until authoritative semilocal definitions and implementation-level
-conventions are supplied. This is an explicit Step-11 authority gate, not a
-failure of the coefficient-algebra scaffold.
+The uploaded omegaB97M-V paper and implementation SI complete the R0 density
+definitions. Matched native Q-Chem molecular and reaction comparisons pass the
+declared tolerances, and the immutable R0/R1/R2 comparison schema is frozen in
+the manifest. Step 11 is complete; regenerate its audit with the validator
+above.
 
 ## Reaction-level smoke test
 
