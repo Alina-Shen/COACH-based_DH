@@ -46,6 +46,12 @@ from revwb97m2.scripts.pyscf_basis_bridge import build_molecules, canonical_hash
 
 SCALAR_INDICES = {"short_range_hf": 288, "vv10": 289, "pt2": 290}
 FEATURE_COUNT = 291
+MODEL_FEATURE_COUNTS = {"R1": 78, "R2": 291}
+MODEL_SEMILOCAL_COUNTS = {"R1": 75, "R2": 288}
+MODEL_SCALAR_INDICES = {
+    "R1": {"short_range_hf": 75, "vv10": 76, "pt2": 77},
+    "R2": SCALAR_INDICES,
+}
 PT2_COMPONENT_TOLERANCE_HARTREE = 1.0e-12
 IDENTITY_TOLERANCE_HARTREE = 1.0e-12
 
@@ -106,10 +112,16 @@ def evaluate_ri_ump2(
     calculation.max_memory = max_memory_mb
     cderi = scratch_dir / "ri_3c.h5"
     calculation.with_df._cderi_to_save = str(cderi)
-    correlation, _ = calculation.kernel()
+    # Production needs only the correlation energy and its SS/OS components.
+    # Retaining the full O^2 V^2 amplitude tensors is unnecessary and can make
+    # otherwise feasible species fail PySCF's pre-allocation memory check.
+    correlation, amplitudes = calculation.kernel(with_t2=False)
+    if amplitudes is not None:
+        raise RuntimeError("energy-only DF-UMP2 unexpectedly retained amplitudes")
     result = {
         "method": type(calculation).__name__,
-        "canonical_mp2_amplitudes": True,
+        "canonical_orbitals": True,
+        "mp2_amplitudes_retained": False,
         "density_fitted": True,
         "frozen_core": True,
         "frozen_orbitals": frozen,
@@ -154,6 +166,151 @@ def assemble_feature_vector(
     if not np.all(np.isfinite(vector)):
         raise FloatingPointError("assembled feature vector contains NaN or infinity")
     return vector
+
+
+def assemble_r1_r2_feature_vectors(
+    r1_semilocal_features: np.ndarray,
+    r2_semilocal_features: np.ndarray,
+    short_range_hf: float,
+    vv10: float,
+    pt2: float,
+) -> dict[str, np.ndarray]:
+    """Attach one shared scalar triple to the production R1 and R2 spaces."""
+
+    semilocal = {
+        "R1": np.asarray(r1_semilocal_features, dtype=np.float64).reshape(-1),
+        "R2": np.asarray(r2_semilocal_features, dtype=np.float64).reshape(-1),
+    }
+    scalars = np.asarray((short_range_hf, vv10, pt2), dtype=np.float64)
+    if not np.all(np.isfinite(scalars)):
+        raise FloatingPointError("shared scalar feature triple contains NaN or infinity")
+    vectors: dict[str, np.ndarray] = {}
+    for space in ("R1", "R2"):
+        expected = MODEL_SEMILOCAL_COUNTS[space]
+        if semilocal[space].shape != (expected,):
+            raise ValueError(
+                f"expected {space} semilocal length {expected}, got {semilocal[space].shape}"
+            )
+        vector = np.concatenate((semilocal[space], scalars))
+        if vector.shape != (MODEL_FEATURE_COUNTS[space],) or not np.all(
+            np.isfinite(vector)
+        ):
+            raise FloatingPointError(f"invalid assembled {space} feature vector")
+        vectors[space] = vector
+    return vectors
+
+
+def publish_r1_r2_assembly(
+    semilocal_dir: Path,
+    scalar_dir: Path,
+    output_dir: Path,
+    grid_id: str = "250974",
+) -> dict[str, Any]:
+    """Atomically publish final R1-78 and R2-291 vectors for one species.
+
+    The semilocal arrays must come from the schema-2 shared-density evaluator;
+    the scalar triple is loaded once and appended identically to both spaces.
+    """
+
+    semilocal_dir = semilocal_dir.resolve()
+    scalar_dir = scalar_dir.resolve()
+    output_dir = output_dir.resolve()
+    if output_dir.exists():
+        raise FileExistsError(f"refusing to overwrite existing assembly artifact: {output_dir}")
+    temp_dir = output_dir.parent / f".{output_dir.name}.tmp.{os.getpid()}"
+    if temp_dir.exists():
+        raise FileExistsError(f"refusing to reuse stale temporary directory: {temp_dir}")
+    output_dir.parent.mkdir(parents=True, exist_ok=True)
+    temp_dir.mkdir()
+    try:
+        semilocal_manifest_path = semilocal_dir / "semilocal_manifest.json"
+        scalar_manifest_path = scalar_dir / "scalar_manifest.json"
+        semilocal_manifest = json.loads(semilocal_manifest_path.read_text(encoding="utf-8"))
+        scalar_manifest = json.loads(scalar_manifest_path.read_text(encoding="utf-8"))
+        if semilocal_manifest.get("schema_version") != 2 or not semilocal_manifest.get(
+            "shared_grid_density_evaluation"
+        ):
+            raise ValueError("R1/R2 assembly requires a shared-density schema-2 semilocal artifact")
+        if semilocal_manifest.get("status") != (
+            "three_grid_r1_r2_semilocal_features_complete_and_validated"
+        ) or scalar_manifest.get("status") != "scalar_features_complete_and_validated":
+            raise ValueError("semilocal or scalar input is not complete and validated")
+        if semilocal_manifest["species"] != scalar_manifest["species"]:
+            raise ValueError("semilocal and scalar artifacts belong to different species")
+        r1_path = semilocal_dir / f"r1_semilocal_features_75_{grid_id}.npy"
+        r2_path = semilocal_dir / f"r2_semilocal_features_288_{grid_id}.npy"
+        scalars_path = scalar_dir / "scalar_features_288_290.npy"
+        for path in (r1_path, r2_path, scalars_path):
+            if not path.is_file():
+                raise FileNotFoundError(path)
+        for path, source_manifest in (
+            (r1_path, semilocal_manifest),
+            (r2_path, semilocal_manifest),
+            (scalars_path, scalar_manifest),
+        ):
+            expected_hash = source_manifest.get("artifacts_sha256", {}).get(path.name)
+            if expected_hash is None or sha256(path) != expected_hash:
+                raise ValueError(f"input artifact hash mismatch or absent: {path}")
+        scalars = np.load(scalars_path)
+        if scalars.shape != (3,):
+            raise ValueError(f"expected scalar triple, got {scalars.shape}")
+        vectors = assemble_r1_r2_feature_vectors(
+            np.load(r1_path), np.load(r2_path), *[float(value) for value in scalars]
+        )
+        filenames = {"R1": "feature_vector_78.npy", "R2": "feature_vector_291.npy"}
+        for space, filename in filenames.items():
+            np.save(temp_dir / filename, vectors[space])
+        artifacts_sha256 = {
+            filename: sha256(temp_dir / filename) for filename in filenames.values()
+        }
+        manifest = {
+            "schema_version": 1,
+            "status": "r1_r2_species_assembly_complete_and_validated",
+            "created_utc": utc_now(),
+            "species": semilocal_manifest["species"],
+            "grid_id": grid_id,
+            "shared_grid_density_evaluation": True,
+            "shared_scalar_evaluation": True,
+            "feature_vectors": {
+                space: {
+                    "length": MODEL_FEATURE_COUNTS[space],
+                    "semilocal_count": MODEL_SEMILOCAL_COUNTS[space],
+                    "scalar_indices": MODEL_SCALAR_INDICES[space],
+                    "array_sha256": array_sha256(vectors[space]),
+                    "filename": filenames[space],
+                }
+                for space in ("R1", "R2")
+            },
+            "inputs": {
+                "semilocal_manifest": str(semilocal_manifest_path),
+                "semilocal_manifest_sha256": sha256(semilocal_manifest_path),
+                "scalar_manifest": str(scalar_manifest_path),
+                "scalar_manifest_sha256": sha256(scalar_manifest_path),
+            },
+            "artifacts_sha256": artifacts_sha256,
+        }
+        (temp_dir / "assembly_manifest.json").write_text(
+            json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        )
+        (temp_dir / "ASSEMBLY_COMPLETE").write_text(utc_now() + "\n", encoding="utf-8")
+        temp_dir.rename(output_dir)
+        return manifest
+    except BaseException:
+        (temp_dir / "FAILURE.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": 1,
+                    "status": "r1_r2_species_assembly_failed",
+                    "created_utc": utc_now(),
+                    "exception": traceback.format_exc(),
+                },
+                indent=2,
+                sort_keys=True,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        raise
 
 
 def direct_energy_identity(

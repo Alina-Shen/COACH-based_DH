@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "D12_9_still_pending": true,
+    "all_requests_strictly_fit_snapshot": true,
+    "candidate_not_authorized": true,
+    "energy_only_dfump2_does_not_retain_t2": true,
+    "exact_population": true,
+    "identical_timeout_retry_forbidden": true,
+    "lr8_336h": true,
+    "mandatory_seven_boundaries": true,
+    "memory_classes_exact": true,
+    "mhg_72h": true,
+    "other_failures_require_user": true,
+    "sbatch_memory_requests_are_1p5x": true,
+    "scripts_exist": true,
+    "two_tier_counts": true
+  },
+  "production_submission_authorized": false,
+  "schema_version": 1,
+  "species_count": 2799,
+  "status": "passed_candidate_pilots_pending",
+  "tier_counts": {
+    "large_lr8": 34,
+    "small_mhg": 2765
+  },
+  "validated_utc": "2026-09-02T04:54:25.269892+00:00"
+}

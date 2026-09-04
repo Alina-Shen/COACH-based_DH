@@ -35,7 +35,7 @@ failure never removes an earlier completed directory.
 | `CUAGAU_Au01N0_H` | 72.66 / 872 | 18.73 / 249 | 4.32 / 238 |
 | `AE11_Yb` | 118.89 / 2022 | 15.38 / 302 | 3.64 / 334 |
 | `DAPD_B` | 28.44 / 749 | 10.03 / 235 | 3.73 / 193 |
-| `L14_GGG_monB` | measurement in progress | measurement in progress | measurement in progress |
+| `L14_GGG_monB` | timed out after 10 unconverged SCF cycles / 12 h / 7.74 GiB peak RSS | not reached | not reached |
 
 The detailed record is generated as `step10_resources.json`; it includes every
 individual grid's point count and wall time, scratch, checkpoint size, retained
@@ -70,6 +70,20 @@ array. Full Step 12 must use the completed high-cost observation to define
 size tiers, concurrency, and an out-of-core/direct strategy for the upper tail.
 It would be scientifically misleading to extrapolate CPU-hours from only the
 six small completed gateways.
+
+The high-cost observation is complete as a feasibility measurement, not a mandatory
+successful chemistry gate for fitting. By explicit project decision, a
+terminal timeout and parent nonconvergence from `L14_GGG_monB` is accepted
+Step-12 evidence. R1/R2 fitting may proceed without this
+BigNC species; it is final-assessment-only because the frozen omegaB97M(2)-form
+model contains no D4-ATM term. A successful engineered retry is deferred until
+the complete post-freeze BigNC assessment is wanted.
+
+Job `25431773` reached `TIMEOUT` at `12:00:01`. It completed ten oscillatory
+parent-SCF cycles and produced no completed parent or downstream artifact.
+Terminal `MaxRSS` was `8,119,928K`, so the limiting observation is SCF
+convergence/walltime rather than memory. The preserved record is
+`revwb97m2/results/2026-09-01-step10-job25431773-terminal.json`.
 
 Regenerate and independently validate the records with:
 

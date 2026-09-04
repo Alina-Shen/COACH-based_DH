@@ -27,9 +27,9 @@ def test_frozen_grid_order_and_policies() -> None:
 
 
 def test_grid_difference_summaries() -> None:
-    reference = np.zeros((3, 96))
-    practical = np.ones((3, 96))
-    coarse = np.full((3, 96), -2.0)
+    reference = {"R1": np.zeros((3, 25)), "R2": np.zeros((3, 96))}
+    practical = {"R1": np.ones((3, 25)), "R2": np.ones((3, 96))}
+    coarse = {"R1": np.full((3, 25), -2.0), "R2": np.full((3, 96), -2.0)}
     report = grid_differences(
         {
             "fitting_reference": reference,
@@ -37,7 +37,7 @@ def test_grid_difference_summaries() -> None:
             "coarse_analysis": coarse,
         }
     )
-    assert report["practical"]["comparison_minus_reference_max_abs_hartree"] == 1.0
-    assert report["practical"]["comparison_minus_reference_l1_hartree"] == 288.0
-    assert report["coarse_analysis"]["comparison_minus_reference_max_abs_hartree"] == 2.0
-    assert report["coarse_analysis"]["comparison_minus_reference_l1_hartree"] == 576.0
+    assert report["R1"]["practical"]["comparison_minus_reference_l1_hartree"] == 75.0
+    assert report["R2"]["practical"]["comparison_minus_reference_l1_hartree"] == 288.0
+    assert report["R1"]["coarse_analysis"]["comparison_minus_reference_l1_hartree"] == 150.0
+    assert report["R2"]["coarse_analysis"]["comparison_minus_reference_l1_hartree"] == 576.0

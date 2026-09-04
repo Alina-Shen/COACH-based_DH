@@ -1,7 +1,7 @@
 {
-  "created_utc": "2026-08-31T21:38:44.653184+00:00",
+  "created_utc": "2026-09-01T16:46:28.589293+00:00",
   "early_step12_decision": {
-    "interpretation": "These are evidence-preserving gateway limits, not production resource claims. No CPU-hour extrapolation is reported until the largest gateway finishes; extrapolating from only the small cases would be misleading.",
+    "interpretation": "The largest gateway established a parent-SCF walltime/convergence limit rather than an OOM limit. It is accepted upper-tail evidence, not a fitting requirement or permission for production submission.",
     "measured_restart_boundaries": [
       "parent_scf_checkpoint",
       "three_grid_semilocal_features",
@@ -14,11 +14,12 @@
       "static_df_three_center_fraction_of_requested_memory": 0.5,
       "stop_on_nonconvergence_hash_identity_oom_or_timeout": true
     },
-    "reason": "The high-cost gateway measurement is not yet complete."
+    "reason": "All seven gateway measurements are resolved: six chemistry passes and one accepted high-cost declared stop. Step-12 tier validation and sign-off remain required."
   },
   "gateway": {
     "complete_count": 6,
-    "high_cost_measurement_complete": false,
+    "high_cost_measurement_complete": true,
+    "measurement_complete_count": 7,
     "species": [
       {
         "auxiliary_aos": 287,
@@ -27,6 +28,7 @@
         ],
         "complete": true,
         "estimated_df_three_center_gib": 0.018770143389701843,
+        "measurement_complete": true,
         "orbital_aos": 132,
         "species": "h2o_SW49",
         "stages": {
@@ -92,6 +94,7 @@
         ],
         "complete": true,
         "estimated_df_three_center_gib": 0.017929784953594208,
+        "measurement_complete": true,
         "orbital_aos": 129,
         "species": "12_NH2rad_HNBrBDE18",
         "stages": {
@@ -157,6 +160,7 @@
         ],
         "complete": true,
         "estimated_df_three_center_gib": 0.0019335821270942688,
+        "measurement_complete": true,
         "orbital_aos": 57,
         "species": "BH9_08_1R2",
         "stages": {
@@ -237,6 +241,7 @@
         ],
         "complete": true,
         "estimated_df_three_center_gib": 0.017432697117328644,
+        "measurement_complete": true,
         "orbital_aos": 121,
         "species": "CUAGAU_Au01N0_H",
         "stages": {
@@ -317,6 +322,7 @@
         ],
         "complete": true,
         "estimated_df_three_center_gib": 0.03614053130149841,
+        "measurement_complete": true,
         "orbital_aos": 184,
         "species": "AE11_Yb",
         "stages": {
@@ -398,6 +404,7 @@
         ],
         "complete": true,
         "estimated_df_three_center_gib": 0.007012598216533661,
+        "measurement_complete": true,
         "orbital_aos": 109,
         "species": "DAPD_B",
         "stages": {
@@ -471,6 +478,55 @@
         }
       },
       {
+        "accepted_terminal_measurement": {
+          "artifacts": {
+            "parent_completion_marker": false,
+            "preserved_checkpoint_bytes": 35253120,
+            "preserved_temporary_directory": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/gateway/.L14_GGG_monB.tmp.84577",
+            "scalar_completion_marker": false,
+            "semilocal_completion_marker": false,
+            "stderr": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/logs/step10_ghost_25431773.err",
+            "stderr_sha256": "f6aeab394f00389ff0b2c43417d4db73387dec4aa314b3885648515871d0cfbb",
+            "stdout": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/logs/step10_ghost_25431773.out",
+            "stdout_sha256": "b419267a93d7b99755f7693a111747df1b516ba0e4ac550addbbb5ce3b9a786a"
+          },
+          "decision": {
+            "automatic_retry": false,
+            "chemistry_gateway_complete": false,
+            "fitting_gate": false,
+            "future_retry": "optional_engineered_336_hour_lr8_attempt_for_post_fit_BigNC_assessment_only",
+            "step10_high_cost_measurement_complete": true
+          },
+          "evidence_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/2026-09-01-step10-job25431773-terminal.json",
+          "evidence_sha256": "4453e856f7f777dd792d1676a6f6adc1d5429a9d13de48edb9a7b22489fea5ec",
+          "job": {
+            "account": "mhg",
+            "batch_exit_code": "0:15",
+            "batch_state": "CANCELLED",
+            "cpus": 16,
+            "elapsed": "12:00:01",
+            "exit_code": "0:0",
+            "job_id": 25431773,
+            "max_disk_read": "104.05M",
+            "max_disk_write": "335.88M",
+            "max_rss_kib": 8119928,
+            "partition": "mhg",
+            "qos": "normal",
+            "requested_memory_gib": 240,
+            "species": "L14_GGG_monB",
+            "state": "TIMEOUT"
+          },
+          "parent_scf": {
+            "completed_cycles": 10,
+            "converged": false,
+            "diagnosis": "parent_scf_walltime_and_convergence_limit_not_oom",
+            "last_density_matrix_change": 13.8,
+            "last_energy_hartree": -1084.86519453521,
+            "last_rms_gradient": 0.885,
+            "overlap_eigenvectors_removed": 5
+          },
+          "valid": true
+        },
         "auxiliary_aos": 3621,
         "categories": [
           "noncovalent_counterpoise_ghost",
@@ -478,6 +534,7 @@
         ],
         "complete": false,
         "estimated_df_three_center_gib": 29.766920618712902,
+        "measurement_complete": true,
         "orbital_aos": 1485,
         "species": "L14_GGG_monB",
         "stages": {
@@ -538,5 +595,5 @@
     }
   },
   "schema_version": 1,
-  "status": "measurement_in_progress"
+  "status": "gateway_measurement_complete"
 }

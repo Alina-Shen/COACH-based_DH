@@ -1,0 +1,203 @@
+schema_version: 1
+status: first_pilot_batch_complete_energy_only_pt2_retry_pending
+purpose: step12_two_tier_resource_signoff_candidate
+production_submission_authorized: false
+
+D12_1_terminal_gateway:
+  status: complete
+  evidence: revwb97m2/results/2026-09-01-step10-job25431773-terminal.json
+  job_id: 25431773
+  outcome: timeout_after_12h_during_unconverged_parent_scf_cycle_10
+  diagnosis: parent_scf_walltime_and_convergence_limit_not_oom
+  fitting_gate: false
+
+D12_2_population:
+  status: complete
+  definition: locked_coefficient_fitting_species_only
+  reaction_count: 1498
+  species_count: 2799
+  scope: gscdb137
+  inventory: revwb97m2/manifests/step12/step12_fitting_inventory_v1.csv
+  inventory_sha256: 6abe300fb10212ec30e4f5a3add9a6c7136c85f72597e09c32d7e28b8c0d29a3
+  excluded_initially: [model_selection_only, overfitting_diagnostic_only, final_assessment_only, BigNC]
+
+D12_3_mandatory_stage_work:
+  status: frozen
+  stages:
+    - {name: parent, work: fixed_all_UKS_omegaB97M_V, dependencies: []}
+    - {name: semilocal_250974, work: shared_density_R1_25_and_R2_96, dependencies: [parent]}
+    - {name: semilocal_99590, work: shared_density_R1_25_and_R2_96, dependencies: [parent]}
+    - {name: semilocal_75302, work: shared_density_R1_25_and_R2_96, dependencies: [parent]}
+    - {name: vv10, work: one_fixed_density_evaluation, dependencies: [parent]}
+    - {name: ri_mp2, work: one_frozen_core_total_RI_UMP2_evaluation, dependencies: [parent]}
+    - {name: assembly, work: hash_validated_R1_78_and_R2_291, dependencies: [semilocal_250974, semilocal_99590, semilocal_75302, vv10, ri_mp2]}
+  restart_policy: never_recompute_a_completed_hash_validated_boundary
+  invalid_artifact_policy: preserve_stop_and_report
+  fitting_species_skip_policy: forbidden
+  pilot_measurement_note: >-
+    The review scripts use the existing combined three-grid and combined
+    VV10/RI-MP2 implementations to measure each internal timing. Final Step-13
+    production publication must expose the seven frozen restart boundaries.
+    RI-UMP2 is energy-only: PySCF runs with_t2=False because amplitudes are not
+    a project artifact; total, same-spin, and opposite-spin energies remain
+    available and are validated.
+
+D12_4_two_tier_routes:
+  status: frozen_pending_pilot_validation
+  tier_predicate_authority: Q-Chem_MEM_TOTAL_from_hash_pinned_GSCDB137_input
+  small_mhg:
+    predicate: MEM_TOTAL_MB_le_60000
+    species_count: 2765
+    partition: mhg
+    account: mhg
+    qos: normal
+    cpus: 8
+    walltime: "72:00:00"
+    block_size: {default: 10000, MEM_TOTAL_60000: 5000}
+    maximum_array_concurrency: 16
+  large_lr8:
+    predicate: MEM_TOTAL_MB_gt_60000
+    species_count: 34
+    partition: lr8
+    account: lr_mhg2
+    qos: mhg2_lr8_normal
+    cpus: 16
+    walltime: "336:00:00"
+    block_size: 2000
+    maximum_array_concurrency: 1
+  live_partition_snapshot_2026_09_01:
+    mhg: {nodes: 72, minimum_physical_memory_mb: 257830, maximum_physical_memory_mb: 515986, idle: 4, mixed: 45}
+    lr8: {nodes: 76, physical_memory_mb: 773569, idle: 0, mixed: 4, allocated: 54, drained: 18}
+  account_qos_associations_verified_live: true
+
+D12_5_memory:
+  status: frozen_pending_pilot_validation
+  qchem_MEM_TOTAL_classes_mb: {3750: 2145, 7500: 298, 15000: 186, 30000: 107, 60000: 29, 120000: 26, 300000: 8}
+  scheduler_memory_formula: ceil(1.5_times_max(8_GiB,_ceil((1.25_times_MEM_TOTAL_MB_plus_4096_MB)_div_1024)))
+  scheduler_memory_classes_gib: {3750: 14, 7500: 21, 15000: 35, 30000: 62, 60000: 117, 120000: 227, 300000: 557}
+  pyscf_max_memory_mb: exact_Q-Chem_MEM_TOTAL
+  strict_node_fit:
+    mhg_max_request_gib: 117
+    mhg_minimum_physical_memory_mb: 257830
+    lr8_max_request_gib: 557
+    lr8_physical_memory_mb: 773569
+  conservative_static_RI_three_center_predictor:
+    maximum_gib: 1017.457065359
+    warning: routing_and_scratch_predictor_not_observed_RSS_or_mandatory_in_core_allocation
+
+D12_6_retry_policy:
+  status: frozen
+  maximum_resubmissions: 1
+  identical_timeout_automatic_retry: forbidden
+  mhg_top_small_tier_timeout_or_oom:
+    confirmed_predicate: MEM_TOTAL_MB_eq_60000
+    species_count: 29
+    timeout_change: route_to_lr8_with_336h_and_same_117_GiB_memory
+    oom_change: route_to_lr8_with_336h_and_176_GiB_memory
+    scientific_inputs_unchanged: true
+  other_timeout: diagnose_then_change_engineered_cause_before_one_retry
+  oom:
+    change: same_partition_memory_request_times_1p5_rounded_up_GiB
+    strict_physical_node_fit_required: true
+  other_failure_or_failed_resubmission:
+    action: append_failure_ledger_and_ask_user
+    ledger: revwb97m2/manifests/step12/step12_failure_ledger_v1.csv
+    required_fields: [job, species, stage, inputs, outputs, state, diagnosis, retry_change]
+  current_approval_rule: every_sbatch_submission_requires_user_approval
+
+D12_7_partition_policy:
+  status: complete_for_candidate
+  cpu_only: true
+  partition_skill_helper_available: false
+  fallback: manual_live_sinfo_sacctmgr_scontrol_validation
+  physical_memory_must_be_strictly_greater_than_request: true
+
+D12_8_concurrency_storage_failure:
+  status: frozen_pending_pilot_validation
+  concurrency_caps: {small_mhg: 16, large_lr8: 1}
+  shared_filesystem:
+    path: /clusterfs
+    capacity: 3.7P
+    available_at_snapshot: 2.5P
+    user_quota: none_reported
+  conservative_scratch:
+    largest_species_static_RI_predictor_gib: 1017.457065359
+    lr8_concurrency_one_reason: avoid_multiple_simultaneous_upper_tail_three_center_files
+  retained_storage_estimate:
+    model: six_times_orbital_AO_squared_times_8_bytes_per_species
+    population_total_gib: 41.51605099439621
+    largest_species_gib: 1.1082190722227097
+    caveat: validate_against_pilots_before_final_signoff
+  no_silent_skip: true
+
+D12_9_signoff_gate:
+  status: pending_energy_only_pt2_real_validation
+  pilot_selection: revwb97m2/manifests/step12/step12_pilot_selection_v1.csv
+  pilot_selection_sha256: efc7aaff26252d881150f812cfeeb6e2f58cbfcdebfd11fd7d530da6735ed8a3
+  sbatch_scripts_reviewed: true
+  sbatch_test_only_complete: true
+  sbatch_test_only_script_count: 7
+  small_real_array_submitted: true
+  small_real_array_complete: false
+  stratified_pilot_results_complete: false
+  first_batch_result:
+    status: two_complete_three_failed_at_ri_mp2
+    terminal_evidence: revwb97m2/results/2026-09-01-step12-pilot-terminal-evidence.json
+    completed_tasks: [25452149_0, 25452149_1]
+    failed_tasks: [25452149_2, 25452150_0, 25452151_0]
+    failure_cause: unnecessary_incore_t2_amplitude_retention
+    slurm_oom: false
+    completed_parent_and_semilocal_artifacts_preserved: true
+    failed_scalar_temporary_artifacts_preserved: true
+    engineering_change: PySCF_DFUMP2_kernel_with_t2_false
+    scientific_change: false
+    local_energy_only_regression:
+      species: 3d4dIPSS_Ag_GS
+      validation: passed
+      pt2_difference_from_amplitude_retaining_run_hartree: -9.43689570931383e-15
+    corrected_common_script: revwb97m2/slurm/run_step12_resource_pilot_task.sh
+    corrected_resubmission_authorized: true
+    corrected_resubmission_jobs: [25452149, 25452150, 25452151]
+    corrected_ten_minute_checkpoint:
+      completed: [25452149_0]
+      running: [25452149_1, 25452149_2, 25452150_0, 25452151_0]
+      completed_elapsed: {25452149_0: "00:02:17"}
+      completed_validation: passed
+  required_before_final_signoff:
+    - resume_the_three_failed_PT2_cases_with_energy_only_DFUMP2
+    - run_the_unmeasured_30000_60000_120000_and_300000_MB_class_pilots
+    - run_the_exact_Step13_seven_boundary_executor_as_a_small_real_array
+  real_retry_submission_approved: false
+  final_resource_signoff_published: false
+  production_submission_authorized: false
+
+pilot_scripts:
+  common: revwb97m2/slurm/run_step12_resource_pilot_task.sh
+  memory_classes:
+    - revwb97m2/slurm/run_step12_mhg_mem3750_pilot.sh
+    - revwb97m2/slurm/run_step12_mhg_mem7500_pilot.sh
+    - revwb97m2/slurm/run_step12_mhg_mem15000_pilot.sh
+    - revwb97m2/slurm/run_step12_mhg_mem30000_pilot.sh
+    - revwb97m2/slurm/run_step12_mhg_mem60000_pilot.sh
+    - revwb97m2/slurm/run_step12_lr8_mem120000_pilot.sh
+    - revwb97m2/slurm/run_step12_lr8_mem300000_pilot.sh
+
+approval_request:
+  requested_now: false
+  approval_received: true
+  no_jobs_submitted: false
+  submitted_first_batch:
+    - {job_id: 25452125, script: revwb97m2/slurm/run_step12_mhg_mem3750_pilot.sh, tasks: 3, initial_state: PENDING}
+    - {job_id: 25452127, script: revwb97m2/slurm/run_step12_mhg_mem7500_pilot.sh, tasks: 1, initial_state: PENDING}
+    - {job_id: 25452126, script: revwb97m2/slurm/run_step12_mhg_mem15000_pilot.sh, tasks: 1, initial_state: PENDING}
+  submitted_first_batch_terminal_state: all_five_tasks_failed_exit_2_before_chemistry
+  corrected_resubmission_requested: false
+  corrected_resubmission_approved: true
+  corrected_resubmission_jobs: [25452149, 25452150, 25452151]
+  defer_until_first_batch_reviewed:
+    - revwb97m2/slurm/run_step12_mhg_mem30000_pilot.sh
+    - revwb97m2/slurm/run_step12_mhg_mem60000_pilot.sh
+    - revwb97m2/slurm/run_step12_lr8_mem120000_pilot.sh
+    - revwb97m2/slurm/run_step12_lr8_mem300000_pilot.sh
+  energy_only_retry_requested: true
+  energy_only_retry_approved: false

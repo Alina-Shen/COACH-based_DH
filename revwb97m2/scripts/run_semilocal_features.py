@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the three frozen selected COACH feature grids from a parent checkpoint."""
+"""Run shared-density R1 and R2 features on the three frozen grids."""
 
 from __future__ import annotations
 

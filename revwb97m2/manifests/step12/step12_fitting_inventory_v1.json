@@ -1,0 +1,66 @@
+{
+  "authority": {
+    "bridge_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/basis_bridge/resolved_basis_records.csv",
+    "bridge_sha256": "cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6",
+    "metadata_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/qchem_input_metadata.csv",
+    "metadata_sha256": "22e2375e4dc9e2319741eccb73eb3c5c2a0f0b9d04d51ce297e6ef2fefbc26b7",
+    "roles_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/species_roles.csv",
+    "roles_sha256": "3a52626136d3f16f0bac9fdcc91c4573aea7de2c667ccf8be704ee7977909b4e"
+  },
+  "created_utc": "2026-09-01T17:12:50.606931+00:00",
+  "inventory_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/step12/step12_fitting_inventory_v1.csv",
+  "inventory_sha256": "6abe300fb10212ec30e4f5a3add9a6c7136c85f72597e09c32d7e28b8c0d29a3",
+  "memory_class_counts": {
+    "120000": 26,
+    "15000": 186,
+    "30000": 107,
+    "300000": 8,
+    "3750": 2145,
+    "60000": 29,
+    "7500": 298
+  },
+  "memory_rule": {
+    "base_minimum_gib": 8,
+    "classes": {
+      "120000": 227,
+      "15000": 35,
+      "30000": 62,
+      "300000": 557,
+      "3750": 14,
+      "60000": 117,
+      "7500": 21
+    },
+    "final_sbatch_multiplier": 1.5,
+    "formula": "ceil(1.5 * max(8, ceil((1.25 * qchem_MEM_TOTAL_MB + 4096 MB) / 1024))) GiB"
+  },
+  "population": "coefficient_fitting_only",
+  "routes": {
+    "large_lr8": {
+      "account": "lr_mhg2",
+      "array_concurrency": 1,
+      "cpus": 16,
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal",
+      "wall_hours": 336
+    },
+    "small_mhg": {
+      "account": "mhg",
+      "array_concurrency": 16,
+      "cpus": 8,
+      "partition": "mhg",
+      "qos": "normal",
+      "wall_hours": 72
+    }
+  },
+  "schema_version": 1,
+  "species_count": 2799,
+  "status": "two_tier_inventory_complete",
+  "tier_counts": {
+    "large_lr8": 34,
+    "small_mhg": 2765
+  },
+  "tier_predicate": {
+    "large_lr8": "Q-Chem MEM_TOTAL > 60000 MB",
+    "small_mhg": "Q-Chem MEM_TOTAL <= 60000 MB"
+  }
+}

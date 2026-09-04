@@ -12,8 +12,9 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+from pyscf import dft
 
-from revwb97m2 import integrated_dv
+from revwb97m2 import integrated_dv, published_wb97m2
 from revwb97m2.parent_scf import (
     DEFAULT_SPEC,
     PROJECT_ROOT,
@@ -31,7 +32,6 @@ from revwb97m2.parent_scf import (
     validate_input_authorities,
     validate_published_parent,
     validate_record,
-    feature_probe,
 )
 from revwb97m2.scripts.pyscf_basis_bridge import build_molecules, canonical_hash
 
@@ -59,20 +59,54 @@ def frozen_grids(spec: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return grids
 
 
+def feature_probe_r1_r2(
+    mol: Any,
+    dm_a: np.ndarray,
+    dm_b: np.ndarray,
+    radial: int,
+    angular: int,
+    block_size: int,
+) -> tuple[dict[str, np.ndarray], int, str]:
+    """Evaluate both spaces from one AO/spin-density evaluation per block."""
+
+    coords, weights, grid_id = integrated_dv.build_grid(mol, radial, angular)
+    r1_features = np.zeros((3, 25), dtype=np.float64)
+    r2_features = np.zeros((3, 96), dtype=np.float64)
+    numint = dft.numint.NumInt()
+    for start in range(0, weights.size, block_size):
+        stop = min(start + block_size, weights.size)
+        ao = numint.eval_ao(mol, coords[start:stop], deriv=1)
+        rho_a_mgga = numint.eval_rho(mol, ao, dm_a, xctype="MGGA", with_lapl=False)
+        rho_b_mgga = numint.eval_rho(mol, ao, dm_b, xctype="MGGA", with_lapl=False)
+        rho_a, grad_a, tau_a = integrated_dv.unpack_mgga_rho(rho_a_mgga)
+        rho_b, grad_b, tau_b = integrated_dv.unpack_mgga_rho(rho_b_mgga)
+        block_arguments = (
+            weights[start:stop], rho_a, rho_b, grad_a, grad_b, tau_a, tau_b
+        )
+        r1_features += published_wb97m2.r1_candidate_semilocal_block(*block_arguments)
+        integrated_dv.accumulate_selected_integrated_dv_block(
+            r2_features, *block_arguments
+        )
+    spaces = {"R1": r1_features, "R2": r2_features}
+    if not all(np.all(np.isfinite(value)) for value in spaces.values()):
+        raise FloatingPointError("non-finite R1/R2 feature probe")
+    return spaces, int(weights.size), grid_id
+
+
 def evaluate_three_grids(
     mol: Any,
     dm_a: np.ndarray,
     dm_b: np.ndarray,
     grids: dict[str, dict[str, Any]],
     block_size: int,
-) -> tuple[dict[str, np.ndarray], dict[str, dict[str, Any]]]:
-    matrices: dict[str, np.ndarray] = {}
+) -> tuple[dict[str, dict[str, np.ndarray]], dict[str, dict[str, Any]]]:
+    matrices: dict[str, dict[str, np.ndarray]] = {}
     measurements: dict[str, dict[str, Any]] = {}
     for name in GRID_ORDER:
         policy = grids[name]
         started = time.perf_counter()
         rss_before = _max_rss_mb()
-        matrix, point_count, grid_id = feature_probe(
+        spaces, point_count, grid_id = feature_probe_r1_r2(
             mol,
             dm_a,
             dm_b,
@@ -82,30 +116,40 @@ def evaluate_three_grids(
         )
         if grid_id != policy["id"]:
             raise ValueError(f"grid ID mismatch for {name}: {grid_id} != {policy['id']}")
-        if matrix.shape != (3, 96) or not np.all(np.isfinite(matrix)):
-            raise FloatingPointError(f"invalid selected feature matrix on grid {name}")
-        matrices[name] = matrix
+        expected_shapes = {"R1": (3, 25), "R2": (3, 96)}
+        if any(
+            spaces[space].shape != shape or not np.all(np.isfinite(spaces[space]))
+            for space, shape in expected_shapes.items()
+        ):
+            raise FloatingPointError(f"invalid R1/R2 feature matrices on grid {name}")
+        matrices[name] = spaces
         measurements[name] = {
             **policy,
             "grid_points": point_count,
             "wall_seconds": time.perf_counter() - started,
             "max_rss_mb_before": rss_before,
             "max_rss_mb_after": _max_rss_mb(),
-            "array_sha256": array_sha256(matrix),
+            "array_sha256": {
+                space: array_sha256(matrix) for space, matrix in spaces.items()
+            },
         }
     return matrices, measurements
 
 
-def grid_differences(matrices: dict[str, np.ndarray]) -> dict[str, Any]:
-    reference = matrices["fitting_reference"]
+def grid_differences(
+    matrices: dict[str, dict[str, np.ndarray]],
+) -> dict[str, Any]:
     comparisons: dict[str, Any] = {}
-    for name in ("practical", "coarse_analysis"):
-        difference = matrices[name] - reference
-        comparisons[name] = {
-            "comparison_minus_reference_max_abs_hartree": float(np.max(np.abs(difference))),
-            "comparison_minus_reference_l1_hartree": float(np.sum(np.abs(difference))),
-            "comparison_minus_reference_array_sha256": array_sha256(difference),
-        }
+    for space in ("R1", "R2"):
+        reference = matrices["fitting_reference"][space]
+        comparisons[space] = {}
+        for name in ("practical", "coarse_analysis"):
+            difference = matrices[name][space] - reference
+            comparisons[space][name] = {
+                "comparison_minus_reference_max_abs_hartree": float(np.max(np.abs(difference))),
+                "comparison_minus_reference_l1_hartree": float(np.sum(np.abs(difference))),
+                "comparison_minus_reference_array_sha256": array_sha256(difference),
+            }
     return comparisons
 
 
@@ -116,7 +160,7 @@ def run_semilocal_stage(
     max_memory_mb: int = 40000,
     block_size: int = 10000,
 ) -> dict[str, Any]:
-    """Evaluate and atomically publish all three selected COACH feature grids."""
+    """Publish R1 and R2 features from one density pass on each frozen grid."""
 
     total_started = time.perf_counter()
     parent_dir = parent_dir.resolve()
@@ -155,13 +199,18 @@ def run_semilocal_stage(
         )
         artifact_names: list[str] = []
         for name in GRID_ORDER:
-            filename = f"selected_features_{grids[name]['id']}.npy"
-            np.save(temp_dir / filename, matrices[name])
-            artifact_names.append(filename)
+            grid_id = grids[name]["id"]
+            r1_name = f"r1_semilocal_features_75_{grid_id}.npy"
+            r2_name = f"r2_semilocal_features_288_{grid_id}.npy"
+            legacy_name = f"selected_features_{grid_id}.npy"
+            np.save(temp_dir / r1_name, matrices[name]["R1"].reshape(-1))
+            np.save(temp_dir / r2_name, matrices[name]["R2"].reshape(-1))
+            np.save(temp_dir / legacy_name, matrices[name]["R2"])
+            artifact_names.extend((r1_name, r2_name, legacy_name))
         artifacts_sha256 = {name: sha256(temp_dir / name) for name in artifact_names}
         manifest = {
-            "schema_version": 1,
-            "status": "three_grid_semilocal_features_complete_and_validated",
+            "schema_version": 2,
+            "status": "three_grid_r1_r2_semilocal_features_complete_and_validated",
             "created_utc": utc_now(),
             "species": species,
             "parent": {
@@ -181,9 +230,28 @@ def run_semilocal_stage(
                 "orbital_spherical_aos": mol.nao_nr(),
                 "auxiliary_spherical_aos": auxmol.nao_nr(),
             },
-            "kernel": integrated_dv.kernel_metadata(),
-            "selected_rows": list(integrated_dv.SELECTED_ROWS),
-            "matrix_shape_per_grid": [3, 96],
+            "feature_spaces": {
+                "R1": {
+                    "semilocal_count": 75,
+                    "matrix_shape_per_grid": [3, 25],
+                    "channel_order": [
+                        "exchange", "same_spin_correlation", "opposite_spin_correlation"
+                    ],
+                    "polynomial_order": "w_degree_outer_u_degree_inner_00_through_44",
+                    "nonlinear_gamma": {
+                        "exchange": 0.004,
+                        "same_spin": 0.2,
+                        "opposite_spin": 0.006,
+                    },
+                },
+                "R2": {
+                    "semilocal_count": 288,
+                    "matrix_shape_per_grid": [3, 96],
+                    "selected_rows": list(integrated_dv.SELECTED_ROWS),
+                    "kernel": integrated_dv.kernel_metadata(),
+                },
+            },
+            "shared_grid_density_evaluation": True,
             "grids": measurements,
             "grid_differences": grid_differences(matrices),
             "resource_usage": {
@@ -256,17 +324,49 @@ def validate_semilocal_artifact(
     recomputed, measurements = evaluate_three_grids(
         mol, dm_a, dm_b, grids, block_size
     )
-    maximum_differences: dict[str, float] = {}
+    schema_version = int(manifest.get("schema_version", 1))
+    maximum_differences: dict[str, Any] = {}
     arrays_match = True
     for name in GRID_ORDER:
-        stored = np.load(semilocal_dir / f"selected_features_{grids[name]['id']}.npy")
-        difference = float(np.max(np.abs(stored - recomputed[name])))
-        maximum_differences[name] = difference
-        arrays_match = arrays_match and difference <= INDEPENDENT_FEATURE_TOLERANCE
+        grid_id = grids[name]["id"]
+        if schema_version == 1:
+            stored = np.load(semilocal_dir / f"selected_features_{grid_id}.npy")
+            difference = float(np.max(np.abs(stored - recomputed[name]["R2"])))
+            maximum_differences[name] = {"R2": difference}
+            arrays_match = arrays_match and difference <= INDEPENDENT_FEATURE_TOLERANCE
+        else:
+            maximum_differences[name] = {}
+            for space, count in (("R1", 75), ("R2", 288)):
+                stored = np.load(
+                    semilocal_dir / f"{space.lower()}_semilocal_features_{count}_{grid_id}.npy"
+                )
+                difference = float(
+                    np.max(np.abs(stored - recomputed[name][space].reshape(-1)))
+                )
+                maximum_differences[name][space] = difference
+                arrays_match = arrays_match and difference <= INDEPENDENT_FEATURE_TOLERANCE
+    expected_status = (
+        "three_grid_semilocal_features_complete_and_validated"
+        if schema_version == 1
+        else "three_grid_r1_r2_semilocal_features_complete_and_validated"
+    )
+    if schema_version == 1:
+        layout_valid = manifest["selected_rows"] == [64, 154, 166] and manifest[
+            "matrix_shape_per_grid"
+        ] == [3, 96]
+    else:
+        spaces = manifest.get("feature_spaces", {})
+        layout_valid = (
+            manifest.get("shared_grid_density_evaluation") is True
+            and spaces.get("R1", {}).get("matrix_shape_per_grid") == [3, 25]
+            and spaces.get("R1", {}).get("semilocal_count") == 75
+            and spaces.get("R2", {}).get("matrix_shape_per_grid") == [3, 96]
+            and spaces.get("R2", {}).get("semilocal_count") == 288
+            and spaces.get("R2", {}).get("selected_rows") == [64, 154, 166]
+        )
     checks = {
         "completion_marker": (semilocal_dir / "SEMILOCAL_COMPLETE").is_file(),
-        "manifest_status": manifest["status"]
-        == "three_grid_semilocal_features_complete_and_validated",
+        "manifest_status": manifest["status"] == expected_status,
         "parent_validation": all(parent_checks.values()),
         "parent_hashes": sha256(parent_manifest_path) == manifest["parent"]["manifest_sha256"]
         and sha256(checkpoint) == manifest["parent"]["checkpoint_sha256"],
@@ -277,8 +377,7 @@ def validate_semilocal_artifact(
             (semilocal_dir / name).is_file() and sha256(semilocal_dir / name) == digest
             for name, digest in manifest["artifacts_sha256"].items()
         ),
-        "selected_rows_and_shape": manifest["selected_rows"] == [64, 154, 166]
-        and manifest["matrix_shape_per_grid"] == [3, 96],
+        "feature_space_layouts": layout_valid,
         "all_three_grid_policies": all(
             all(manifest["grids"][name][key] == value for key, value in grids[name].items())
             for name in GRID_ORDER

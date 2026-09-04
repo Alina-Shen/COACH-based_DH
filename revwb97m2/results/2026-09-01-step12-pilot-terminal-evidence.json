@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "two_complete_three_failed_at_ri_mp2",
+  "reviewed_utc": "2026-09-02T04:50:21Z",
+  "jobs": [25452149, 25452150, 25452151],
+  "tasks": [
+    {"task_id": "25452149_0", "species": "3d4dIPSS_Ag_GS", "state": "COMPLETED", "elapsed": "00:02:17", "requested_memory_gib": 14, "max_rss_kib": 1953668, "validation": "passed"},
+    {"task_id": "25452149_1", "species": "RG10N_KrKr_2p200", "state": "COMPLETED", "elapsed": "01:04:05", "requested_memory_gib": 14, "max_rss_kib": 1839644, "validation": "passed"},
+    {"task_id": "25452149_2", "species": "IHB100x10_11.002_CH-Oa__ethene--oxalate_100", "state": "FAILED", "elapsed": "02:00:16", "requested_memory_gib": 14, "max_rss_kib": 3143968, "failed_stage": "ri_mp2", "diagnosis": "PySCF_incore_t2_preallocation_MemoryError_not_Slurm_OOM"},
+    {"task_id": "25452150_0", "species": "MOR26_pr05", "state": "FAILED", "elapsed": "09:05:56", "requested_memory_gib": 21, "max_rss_kib": 5788384, "failed_stage": "ri_mp2", "diagnosis": "PySCF_incore_t2_preallocation_MemoryError_not_Slurm_OOM"},
+    {"task_id": "25452151_0", "species": "MB16-43_42", "state": "FAILED", "elapsed": "07:52:55", "requested_memory_gib": 35, "max_rss_kib": 10949288, "failed_stage": "ri_mp2", "diagnosis": "PySCF_incore_t2_preallocation_MemoryError_not_Slurm_OOM"}
+  ],
+  "engineering_change": {
+    "implementation": "PySCF_DFUMP2_kernel_with_t2_false",
+    "amplitudes_required": false,
+    "total_same_spin_opposite_spin_energies_preserved": true,
+    "scientific_policy_changed": false
+  },
+  "production_submission_authorized": false
+}

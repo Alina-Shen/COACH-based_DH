@@ -12,6 +12,7 @@ from revwb97m2.published_wb97m2 import (
     evaluate_r0_components,
     independent_parameter_count,
     published_semilocal_components_block,
+    r1_candidate_semilocal_block,
 )
 
 
@@ -100,3 +101,25 @@ def test_semilocal_block_is_additive_and_refuses_bad_shapes() -> None:
         published_semilocal_components_block(
             weights, rho_a, rho_b, np.zeros((2, 2)), grad_b, tau_a, tau_b
         )
+
+
+def test_r1_candidate_space_contains_published_terms_with_frozen_order() -> None:
+    weights = np.asarray([0.4, 0.6])
+    rho_a = np.asarray([0.2, 0.15])
+    rho_b = np.asarray([0.18, 0.12])
+    grad_a = np.asarray([[0.03, -0.01, 0.02], [0.01, 0.04, -0.02]])
+    grad_b = np.asarray([[0.02, 0.01, -0.01], [-0.02, 0.03, 0.01]])
+    tau_a = np.asarray([0.3, 0.22])
+    tau_b = np.asarray([0.28, 0.19])
+    matrix = r1_candidate_semilocal_block(
+        weights, rho_a, rho_b, grad_a, grad_b, tau_a, tau_b
+    )
+    selected = published_semilocal_components_block(
+        weights, rho_a, rho_b, grad_a, grad_b, tau_a, tau_b
+    )
+    channel_rows = {"exchange": 0, "same_spin": 1, "opposite_spin": 2}
+    assert matrix.shape == (3, 25)
+    for name, value in selected.items():
+        channel, indices = name.rsplit("_", 1)
+        index = 5 * int(indices[0]) + int(indices[1])
+        assert matrix[channel_rows[channel], index] == pytest.approx(value, abs=1.0e-15)

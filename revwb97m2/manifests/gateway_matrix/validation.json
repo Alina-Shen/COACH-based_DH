@@ -1,7 +1,7 @@
 {
   "checks": {
     "all_required_categories_covered": true,
-    "all_species_passed": false,
+    "all_species_resolved": true,
     "species_count_5_to_10": true
   },
   "covered_categories": [
@@ -214,22 +214,25 @@
       "status": "passed"
     },
     {
+      "categories": [
+        "noncovalent_counterpoise_ghost",
+        "larger_high_cost"
+      ],
       "checks": {
-        "gateway_marker": false,
-        "parent_manifest_exists": false,
-        "parent_marker": false,
-        "parent_validation_exists": false,
-        "scalar_manifest_exists": false,
-        "scalar_marker": false,
-        "scalar_validation_exists": false,
-        "semilocal_manifest_exists": false,
-        "semilocal_marker": false,
-        "semilocal_validation_exists": false
+        "accepted_status": true,
+        "automatic_retry_forbidden": true,
+        "not_a_fitting_gate": true,
+        "not_oom": true,
+        "parent_not_converged": true,
+        "species_matches": true,
+        "terminal_evidence_exists": true,
+        "terminal_evidence_hash": true,
+        "timeout_recorded": true
       },
       "species": "L14_GGG_monB",
-      "status": "incomplete"
+      "status": "accepted_declared_stop"
     }
   ],
-  "status": "failed",
-  "validated_utc": "2026-08-31T21:25:43.955157+00:00"
+  "status": "passed",
+  "validated_utc": "2026-09-01T16:46:29.531213+00:00"
 }

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import statistics
 from datetime import datetime, timezone
@@ -21,6 +22,10 @@ DEFAULT_HEAVY_ROOT = Path(
 
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def percentile(values: list[int], fraction: float) -> float:
@@ -119,6 +124,7 @@ def measured_species(entry: dict, heavy_root: Path) -> dict:
         "orbital_aos": entry["expected"]["orbital_aos"],
         "auxiliary_aos": entry["expected"]["auxiliary_aos"],
         "complete": False,
+        "measurement_complete": False,
         "estimated_df_three_center_gib": entry["expected"]["auxiliary_aos"]
         * entry["expected"]["orbital_aos"]
         * (entry["expected"]["orbital_aos"] + 1)
@@ -157,6 +163,26 @@ def measured_species(entry: dict, heavy_root: Path) -> dict:
         (validation_dir / "GATEWAY_COMPLETE").is_file()
         and all(status == "passed" for status in validation.values())
     )
+    report["measurement_complete"] = report["complete"]
+    terminal_record = entry.get("accepted_terminal_measurement")
+    if terminal_record:
+        evidence_path = ROOT.parent / terminal_record["path"]
+        evidence = load_json(evidence_path)
+        evidence_valid = (
+            sha256(evidence_path) == terminal_record["sha256"]
+            and evidence["status"] == terminal_record["accepted_status"]
+            and evidence["job"]["species"] == name
+        )
+        report["accepted_terminal_measurement"] = {
+            "valid": evidence_valid,
+            "evidence_path": str(evidence_path),
+            "evidence_sha256": sha256(evidence_path),
+            "job": evidence["job"],
+            "parent_scf": evidence["parent_scf"],
+            "artifacts": evidence["artifacts"],
+            "decision": evidence["decision"],
+        }
+        report["measurement_complete"] = evidence_valid
     return report
 
 
@@ -177,18 +203,22 @@ def main() -> int:
     matrix = yaml.safe_load(args.matrix.read_text(encoding="utf-8"))
     measured = [measured_species(entry, args.heavy_root) for entry in matrix["species"]]
     complete_count = sum(entry["complete"] for entry in measured)
+    measurement_complete_count = sum(entry["measurement_complete"] for entry in measured)
     high_cost_complete = all(
-        entry["complete"]
+        entry["measurement_complete"]
         for entry in measured
         if "larger_high_cost" in entry["categories"]
     )
     report = {
         "schema_version": 1,
         "created_utc": datetime.now(timezone.utc).isoformat(),
-        "status": "complete" if complete_count == len(measured) else "measurement_in_progress",
+        "status": "gateway_measurement_complete"
+        if measurement_complete_count == len(measured)
+        else "measurement_in_progress",
         "gateway": {
             "species_count": len(measured),
             "complete_count": complete_count,
+            "measurement_complete_count": measurement_complete_count,
             "high_cost_measurement_complete": high_cost_complete,
             "species": measured,
         },
@@ -196,10 +226,11 @@ def main() -> int:
         "early_step12_decision": {
             "production_submission_authorized": False,
             "reason": (
-                "Step-10 matrix complete; Step-11 reproduction and full Step-12 cost "
-                "extrapolation/sign-off remain required."
-                if complete_count == len(measured)
-                else "The high-cost gateway measurement is not yet complete."
+                "All seven gateway measurements are resolved: six chemistry passes "
+                "and one accepted high-cost declared stop. Step-12 tier validation "
+                "and sign-off remain required."
+                if measurement_complete_count == len(measured)
+                else "At least one gateway measurement is not yet resolved."
             ),
             "measured_restart_boundaries": [
                 "parent_scf_checkpoint",
@@ -215,9 +246,9 @@ def main() -> int:
                 "stop_on_nonconvergence_hash_identity_oom_or_timeout": True,
             },
             "interpretation": (
-                "These are evidence-preserving gateway limits, not production resource "
-                "claims. No CPU-hour extrapolation is reported until the largest gateway "
-                "finishes; extrapolating from only the small cases would be misleading."
+                "The largest gateway established a parent-SCF walltime/convergence "
+                "limit rather than an OOM limit. It is accepted upper-tail evidence, "
+                "not a fitting requirement or permission for production submission."
             ),
         },
     }

@@ -27,6 +27,15 @@ GAMMA_X = 0.004
 GAMMA_SS = 0.2
 GAMMA_OS = 0.006
 TOL = 1.0e-14
+R1_ORDERS = tuple(range(5))
+R1_CHANNELS = ("exchange", "same_spin", "opposite_spin")
+R1_FEATURE_NAMES = tuple(
+    f"{channel}_{w_order}{u_order}"
+    for channel in R1_CHANNELS
+    for w_order in R1_ORDERS
+    for u_order in R1_ORDERS
+)
+R1_FEATURE_COUNT = 75
 
 # Table II values at the five-decimal precision printed in the paper.  The
 # names preserve the paper's channel and (i,j) polynomial indices.
@@ -87,7 +96,7 @@ def _channel_term(name: str) -> tuple[int, int]:
     return int(indices[0]), int(indices[1])
 
 
-def published_semilocal_components_block(
+def _semilocal_components_block(
     weights: np.ndarray,
     rho_a: np.ndarray,
     rho_b: np.ndarray,
@@ -95,8 +104,9 @@ def published_semilocal_components_block(
     grad_b: np.ndarray,
     tau_a: np.ndarray,
     tau_b: np.ndarray,
+    feature_names: tuple[str, ...],
 ) -> dict[str, float]:
-    """Integrate the 13 selected published semilocal terms over one grid block.
+    """Integrate requested original-family semilocal terms over one grid block.
 
     The implementation follows Eqs. (10)--(28) of the omegaB97M-V paper and
     Eqs. (5)--(7) plus Table II of the omegaB97M(2) paper. ``tau`` uses the
@@ -116,7 +126,7 @@ def published_semilocal_components_block(
     if not all(np.isfinite(value).all() for value in arrays):
         raise ValueError("published semilocal inputs must all be finite")
 
-    result = {name: 0.0 for name in SEMILOCAL_COEFFICIENTS}
+    result = {name: 0.0 for name in feature_names}
     rho = (np.maximum(rho_a, 0.0), np.maximum(rho_b, 0.0))
     grad = (grad_a, grad_b)
     tau = (np.maximum(tau_a, 0.0), np.maximum(tau_b, 0.0))
@@ -196,6 +206,55 @@ def published_semilocal_components_block(
     if not all(math.isfinite(value) for value in result.values()):
         raise FloatingPointError("non-finite published semilocal component")
     return result
+
+
+def r1_candidate_semilocal_block(
+    weights: np.ndarray,
+    rho_a: np.ndarray,
+    rho_b: np.ndarray,
+    grad_a: np.ndarray,
+    grad_b: np.ndarray,
+    tau_a: np.ndarray,
+    tau_b: np.ndarray,
+) -> np.ndarray:
+    """Return the frozen R1 3-by-25 candidate matrix for one grid block.
+
+    Each channel is ordered with the ``w`` degree outermost and the ``u``
+    degree innermost: ``(00, 01, ..., 04, 10, ..., 44)``.  R1 uses the
+    original omegaB97M(2) nonlinear definitions, including ``gamma_ss=0.2``.
+    """
+
+    values = _semilocal_components_block(
+        weights, rho_a, rho_b, grad_a, grad_b, tau_a, tau_b, R1_FEATURE_NAMES
+    )
+    matrix = np.asarray([values[name] for name in R1_FEATURE_NAMES], dtype=np.float64)
+    matrix = matrix.reshape(len(R1_CHANNELS), 25)
+    if matrix.shape != (3, 25) or not np.all(np.isfinite(matrix)):
+        raise FloatingPointError("invalid R1 candidate feature matrix")
+    return matrix
+
+
+def published_semilocal_components_block(
+    weights: np.ndarray,
+    rho_a: np.ndarray,
+    rho_b: np.ndarray,
+    grad_a: np.ndarray,
+    grad_b: np.ndarray,
+    tau_a: np.ndarray,
+    tau_b: np.ndarray,
+) -> dict[str, float]:
+    """Integrate the 13 selected published R0 terms over one grid block."""
+
+    return _semilocal_components_block(
+        weights,
+        rho_a,
+        rho_b,
+        grad_a,
+        grad_b,
+        tau_a,
+        tau_b,
+        tuple(SEMILOCAL_COEFFICIENTS),
+    )
 
 
 def independent_parameter_count() -> int:

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "accepted_declared_stop_measurement",
+  "job": {
+    "job_id": 25431773,
+    "species": "L14_GGG_monB",
+    "partition": "mhg",
+    "account": "mhg",
+    "qos": "normal",
+    "state": "TIMEOUT",
+    "elapsed": "12:00:01",
+    "exit_code": "0:0",
+    "batch_state": "CANCELLED",
+    "batch_exit_code": "0:15",
+    "cpus": 16,
+    "requested_memory_gib": 240,
+    "max_rss_kib": 8119928,
+    "max_disk_read": "104.05M",
+    "max_disk_write": "335.88M"
+  },
+  "parent_scf": {
+    "converged": false,
+    "completed_cycles": 10,
+    "last_energy_hartree": -1084.86519453521,
+    "last_rms_gradient": 0.885,
+    "last_density_matrix_change": 13.8,
+    "overlap_eigenvectors_removed": 5,
+    "diagnosis": "parent_scf_walltime_and_convergence_limit_not_oom"
+  },
+  "artifacts": {
+    "parent_completion_marker": false,
+    "semilocal_completion_marker": false,
+    "scalar_completion_marker": false,
+    "preserved_temporary_directory": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/gateway/.L14_GGG_monB.tmp.84577",
+    "preserved_checkpoint_bytes": 35253120,
+    "stdout": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/logs/step10_ghost_25431773.out",
+    "stdout_sha256": "b419267a93d7b99755f7693a111747df1b516ba0e4ac550addbbb5ce3b9a786a",
+    "stderr": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/logs/step10_ghost_25431773.err",
+    "stderr_sha256": "f6aeab394f00389ff0b2c43417d4db73387dec4aa314b3885648515871d0cfbb"
+  },
+  "decision": {
+    "step10_high_cost_measurement_complete": true,
+    "chemistry_gateway_complete": false,
+    "fitting_gate": false,
+    "automatic_retry": false,
+    "future_retry": "optional_engineered_336_hour_lr8_attempt_for_post_fit_BigNC_assessment_only"
+  }
+}

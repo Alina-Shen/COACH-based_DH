@@ -75,7 +75,7 @@ omegaB97M-V densities but deliberately contains no final COACH coefficients:
 the 288 semilocal columns are inputs to a new omegaB97M(2)-form fit. See the
 Step 7 [validation record](manifests/integrated_dv/validation.json).
 
-## Manifest-driven parent SCF
+## Validated PySCF parent-SCF fallback
 
 [`parent_scf.py`](parent_scf.py) combines immutable molecular records with the
 validated basis bridge and runs omegaB97M-V using UKS for every species. It
@@ -84,6 +84,12 @@ checkpoint density and selected-feature identity before making the checkpoint
 read-only. The Step 8 `h2o_SW49` gateway and its recorded PySCF stability/NLC
 limitation are documented in the
 [parent-SCF manifest](manifests/parent_scf/README.md).
+
+This remains a validated fallback and cross-code reference. It is no longer the
+planned production density-generation path: production planning now reuses the
+complete copied Q-Chem omegaB97M-V `qarchive.h5` inventory and evaluates
+integratedDV inside Q-Chem without a fresh PySCF SCF. See
+[`docs/qchem_integrated_dv_workflow.md`](docs/qchem_integrated_dv_workflow.md).
 
 ## Checkpoint-only scalar double-hybrid features
 
@@ -116,6 +122,9 @@ python scripts/validate_step10_gateway_results.py
 The summary is intentionally an early Step-12 measurement, not a production
 resource authorization. In particular, it refuses to infer CPU-hours from
 only the small gateways while the high-cost counterpoise case is incomplete.
+The high-cost case need not pass before fitting: its terminal outcome is
+resource evidence, while BigNC remains post-freeze final assessment because
+the frozen omegaB97M(2)-form model deliberately has no D4-ATM term.
 
 ## Preparatory production generator
 
@@ -210,12 +219,13 @@ sbatch /clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_r2_smoke.s
 The run directory is intentionally non-overwriting. A successful calculation
 contains both `CALCULATION_COMPLETE` and `SMOKE_PASS`.
 
-## Archived Q-Chem fixed-orbital gateway
+## Q-Chem fixed-orbital integratedDV route
 
-The Q-Chem-orbital route is retired from production and preserved under
-`../coach/qchem_orbital_route` and
-`/clusterfs/mhg-data/yaoshen/coach-based_dh_data/qchem_orbital_route`. Its
-historical disposable gateway can be prepared with:
+The fixed-orbital route is the new planned production direction. The validated
+inventory contains all 14,006 canonical GSCDB molecular directories with
+`qarchive.h5` under `/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2`.
+The historical disposable gateway under `../coach/qchem_orbital_route` supplies
+the non-overwriting copy/provenance mechanics and can be prepared with:
 
 ```bash
 python3.9 scripts/prepare_qchem_gateway.py prepare \
@@ -227,7 +237,9 @@ published `h2o_SW49` orbital scratch into separate baseline and working trees,
 preserves an exact copy of the authoritative input, and creates a derived input
 whose only semantic changes are `MAX_SCF_CYCLES 0` and `GEN_SCFMAN FALSE`.
 `PREPARED.json`, `source_manifest.json`, `qchem_identity.json`, and
-`input.diff` record the provenance. Run `run_qchem.sh` only after reviewing the
-derived input and pinned Q-Chem build. It is reference/provenance material
-only. Production parents must be generated self-consistently in PySCF under
-specification version 4.
+`input.diff` record the provenance. The new Q-Chem trunk emits a full 96x180
+matrix when `QCHEM_PRINT_INTEGRATED_DV=1`; without that environment variable,
+normal Q-Chem behavior is unchanged. A pinned build, native closed/open-shell
+smoke comparison, extractor, and scientific-specification amendment remain
+required before production submission. Production is not authorized by this
+workflow change alone.

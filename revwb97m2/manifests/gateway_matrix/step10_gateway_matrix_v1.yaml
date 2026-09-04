@@ -1,5 +1,5 @@
 schema_version: 1
-status: gateway_execution_in_progress
+status: gateway_measurement_complete_six_pass_one_accepted_declared_stop
 purpose: step10_scientific_gateway_matrix_and_early_step12_measurements
 
 required_categories:
@@ -54,6 +54,10 @@ species:
     expected: {charge: 0, multiplicity: 1, real_atoms: 32, ghost_atoms: 16, electrons: 156, orbital_aos: 1485, auxiliary_aos: 3621}
     expected_auxiliary_resolution: explicit_scope_policy
     resource_class: high_cost
+    accepted_terminal_measurement:
+      path: revwb97m2/results/2026-09-01-step10-job25431773-terminal.json
+      sha256: 4453e856f7f777dd792d1676a6f6adc1d5429a9d13de48edb9a7b22489fea5ec
+      accepted_status: accepted_declared_stop_measurement
 
 execution:
   standard:
@@ -74,7 +78,9 @@ attempts:
     outcome: completed_after_published_remaining_element_SG1_pattern
   - job_id: "25431773"
     species: [L14_GGG_monB]
-    outcome: running_high_cost_measurement
+    outcome: >-
+      TIMEOUT_at_12h_during_unconverged_parent_SCF_after_10_cycles;
+      accepted_as_terminal_upper_tail_measurement_not_a_fitting_gate
 
 preflight_stop_conditions:
   maximum_orbital_aos: 1800

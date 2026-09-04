@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -22,8 +23,33 @@ def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def validate_species(entry: dict, heavy_root: Path) -> dict:
     name = entry["name"]
+    terminal_record = entry.get("accepted_terminal_measurement")
+    if terminal_record:
+        path = ROOT.parent / terminal_record["path"]
+        evidence = load_json(path)
+        checks = {
+            "terminal_evidence_exists": path.is_file(),
+            "terminal_evidence_hash": sha256(path) == terminal_record["sha256"],
+            "accepted_status": evidence["status"] == terminal_record["accepted_status"],
+            "species_matches": evidence["job"]["species"] == name,
+            "timeout_recorded": evidence["job"]["state"] == "TIMEOUT",
+            "parent_not_converged": evidence["parent_scf"]["converged"] is False,
+            "not_oom": evidence["parent_scf"]["diagnosis"].endswith("not_oom"),
+            "not_a_fitting_gate": evidence["decision"]["fitting_gate"] is False,
+            "automatic_retry_forbidden": evidence["decision"]["automatic_retry"] is False,
+        }
+        return {
+            "species": name,
+            "categories": entry["categories"],
+            "status": "accepted_declared_stop" if all(checks.values()) else "failed",
+            "checks": checks,
+        }
     parent_dir = heavy_root / "gateway" / name
     semilocal_dir = heavy_root / "semilocal" / "gateway" / name
     scalar_dir = heavy_root / "scalar" / "gateway" / name
@@ -119,7 +145,10 @@ def main() -> int:
     checks = {
         "species_count_5_to_10": 5 <= len(species) <= 10,
         "all_required_categories_covered": set(matrix["required_categories"]) <= covered,
-        "all_species_passed": all(entry["status"] == "passed" for entry in species),
+        "all_species_resolved": all(
+            entry["status"] in {"passed", "accepted_declared_stop"}
+            for entry in species
+        ),
     }
     report = {
         "schema_version": 1,

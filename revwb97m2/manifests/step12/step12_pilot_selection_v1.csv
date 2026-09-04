@@ -1,0 +1,11 @@
+pilot_index,species,memory_class_mb,tier,coverage
+0,3d4dIPSS_Ag_GS,3750,small_mhg,ECP_open_shell
+1,RG10N_KrKr_2p200,3750,small_mhg,GEN_heavy_element
+2,IHB100x10_11.002_CH-Oa__ethene--oxalate_100,3750,small_mhg,memory_class_upper_size
+0,MOR26_pr05,7500,small_mhg,memory_class_upper_size
+0,MB16-43_42,15000,small_mhg,open_shell_memory_class_upper_size
+0,TMB28_C1,30000,small_mhg,transition_metal_memory_class_upper_size
+0,TMB26_C1,60000,small_mhg,mhg_tier_upper_boundary
+0,MOR33_pr28,120000,large_lr8,lr8_lower_memory_class_upper_size
+0,MOR28_pr09,300000,large_lr8,large_upper_tail
+1,MOR32_pr24,300000,large_lr8,largest_fitting_species
