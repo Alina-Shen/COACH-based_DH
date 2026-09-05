@@ -8,7 +8,6 @@ from pathlib import Path
 from typing import Any
 
 from revwb97m2.production_generator import (
-    BOUNDARIES,
     DEFAULT_PRODUCTION_ROOT,
     canonical_sha256,
     sha256,
@@ -17,6 +16,58 @@ from revwb97m2.production_generator import (
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 DEFAULT_INVENTORY = PROJECT_ROOT / "manifests/step12/step12_fitting_inventory_v1.csv"
+Q4_VALIDATION = PROJECT_ROOT / "manifests/qchem_gateway/q4_validation_v1.json"
+Q6_PILOT_MANIFEST = PROJECT_ROOT / "manifests/qchem_gateway/q6_resource_pilots_v1.yaml"
+QCHEM_BOUNDARIES = (
+    {"name": "qchem_archive", "dependencies": []},
+    *(
+        {"name": f"integrated_dv_{grid}", "dependencies": ["qchem_archive"]}
+        for grid in ("250974", "99590", "75302")
+    ),
+    {"name": "vv10", "dependencies": ["qchem_archive"]},
+    {"name": "ri_mp2", "dependencies": ["qchem_archive"]},
+    {"name": "d4_atm", "dependencies": []},
+    {
+        "name": "assembly",
+        "dependencies": [
+            "integrated_dv_250974", "integrated_dv_99590", "integrated_dv_75302",
+            "vv10", "ri_mp2", "d4_atm",
+        ],
+    },
+)
+QCHEM_BOUNDARY_NAMES = tuple(row["name"] for row in QCHEM_BOUNDARIES)
+PRESERVED_STOP_STATES = {
+    "failed_preserved", "partial_preserved", "corrupt_preserved",
+    "stale_authority_preserved",
+}
+
+
+def qchem_boundary_actions(states: dict[str, str]) -> dict[str, str]:
+    """Resolve immutable-boundary restart actions without running or submitting."""
+
+    if set(states) != set(QCHEM_BOUNDARY_NAMES):
+        raise ValueError("Q-Chem boundary states must name all eight boundaries exactly")
+    actions: dict[str, str] = {}
+    for boundary in QCHEM_BOUNDARIES:
+        name = boundary["name"]
+        state = states[name]
+        if state == "complete_validated":
+            actions[name] = "reuse"
+        elif state in PRESERVED_STOP_STATES:
+            actions[name] = "stop_and_report_without_overwrite"
+        elif state == "interrupted_temporary_present":
+            actions[name] = "review_temporary_without_overwrite"
+        elif state != "missing":
+            raise ValueError(f"unknown Q-Chem boundary state for {name}: {state}")
+        elif name in {"vv10", "ri_mp2"}:
+            actions[name] = "blocked_pending_step9_same_archive_implementation"
+        elif all(states[dependency] == "complete_validated" for dependency in boundary["dependencies"]):
+            actions[name] = "eligible_bounded_execution_not_submission_authorized"
+        elif any(states[dependency] in PRESERVED_STOP_STATES or states[dependency] == "interrupted_temporary_present" for dependency in boundary["dependencies"]):
+            actions[name] = "blocked_by_preserved_dependency_review"
+        else:
+            actions[name] = "blocked_by_missing_dependencies"
+    return actions
 
 
 def load_initial_inventory(path: Path = DEFAULT_INVENTORY) -> list[dict[str, Any]]:
@@ -24,7 +75,7 @@ def load_initial_inventory(path: Path = DEFAULT_INVENTORY) -> list[dict[str, Any
         rows = list(csv.DictReader(handle))
     required = {
         "scope", "species", "tier", "memory_class_mb", "requested_memory_gib",
-        "pyscf_max_memory_mb", "partition", "account", "qos", "wall_hours", "cpus",
+        "qchem_mem_total_mb", "partition", "account", "qos", "wall_hours", "cpus",
         "source_record_sha256",
     }
     if not rows or required - set(rows[0]):
@@ -43,7 +94,7 @@ def load_initial_inventory(path: Path = DEFAULT_INVENTORY) -> list[dict[str, Any
                 "tier": row["tier"],
                 "memory_class_mb": int(row["memory_class_mb"]),
                 "requested_memory_gib": int(row["requested_memory_gib"]),
-                "pyscf_max_memory_mb": int(row["pyscf_max_memory_mb"]),
+                "qchem_mem_total_mb": int(row["qchem_mem_total_mb"]),
                 "partition": row["partition"],
                 "account": row["account"],
                 "qos": row["qos"],
@@ -84,16 +135,57 @@ def build_initial_resource_plan(
                 "maximum_array_concurrency": concurrency,
             }
         )
-    identity = [(row["scope"], row["species"], row["source_record_sha256"]) for row in inventory]
+    authorities = {
+        "inventory_sha256": sha256(DEFAULT_INVENTORY),
+        "q4_validation_sha256": sha256(Q4_VALIDATION),
+        "q6_pilot_manifest_sha256": sha256(Q6_PILOT_MANIFEST),
+        "planner_module_sha256": sha256(Path(__file__)),
+    }
+    identity = {
+        "authorities": authorities,
+        "boundaries": QCHEM_BOUNDARIES,
+        "species": [(row["scope"], row["species"], row["source_record_sha256"]) for row in inventory],
+    }
     return {
         "schema_version": 1,
         "status": "resource_specific_plan_not_submission_authorized",
-        "purpose": "step13_initial_2799_species_seven_boundary_execution",
+        "purpose": "step13_initial_2799_species_qchem_archive_eight_boundary_plan",
         "inventory": str(DEFAULT_INVENTORY.relative_to(PROJECT_ROOT.parent)),
-        "inventory_sha256": sha256(DEFAULT_INVENTORY),
+        "inventory_sha256": authorities["inventory_sha256"],
+        "authorities": authorities,
         "production_root": str(production_root),
         "species_count": len(inventory),
-        "boundaries": [boundary.name for boundary in BOUNDARIES],
+        "boundaries": list(QCHEM_BOUNDARIES),
+        "density_route": "reuse_validated_qchem_wb97m_v_archive_without_scf",
+        "q4_feature_boundary": {
+            "publisher": "revwb97m2/qchem_feature_publisher.py",
+            "artifacts": [
+                "integrated_dv_180x96.npy",
+                "selected_features_3x96.npy",
+                "semilocal_features_288.npy",
+            ],
+            "status": "implemented_and_validated",
+        },
+        "restart_policy": {
+            "complete_validated": "reuse_without_rewrite",
+            "missing": "run_only_after_dependencies_and_separate_authorization",
+            "failed_partial_corrupt_or_stale": "preserve_and_stop",
+            "interrupted_temporary": "review_without_overwrite",
+        },
+        "empty_root_dependency_actions": qchem_boundary_actions(
+            {name: "missing" for name in QCHEM_BOUNDARY_NAMES}
+        ),
+        "resource_calibration_status": "conservative_step12_assignments_pending_q6_measurement_update",
+        "boundary_implementation_status": {
+            "qchem_archive": "q6_pilot_implemented_production_adapter_pending",
+            "integrated_dv_250974": "q4_implemented_and_validated",
+            "integrated_dv_99590": "q4_implemented_and_validated",
+            "integrated_dv_75302": "q4_implemented_and_validated",
+            "vv10": "pending_step9_same_qchem_archive_implementation",
+            "ri_mp2": "pending_step9_same_qchem_archive_implementation",
+            "d4_atm": "geometry_only_implementation_validated",
+            "assembly": "implemented_but_blocked_on_qchem_scalar_boundaries",
+        },
         "retry_policy": "inherit_step12_failure_ledger_and_one_engineered_resubmission_maximum",
         "submission_authorized": False,
         "class_summaries": class_summaries,

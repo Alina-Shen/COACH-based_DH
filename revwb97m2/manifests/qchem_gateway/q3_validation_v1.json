@@ -1,0 +1,180 @@
+{
+  "case_reports": [
+    {
+      "grid": "250974",
+      "hashes": {
+        "derived_input": "1dd0bf650bb109d2149f6c3cf217ad9b9026417f7ad29d56716c6cc352e3ac73",
+        "diagnostic_inputs": "a2048fc568251c65fd36e9bca7cca5e0643bacefdf28ad89caf340d6cb6d5331",
+        "native_matrix": "1bf1eab1a80db399e850d37f1860b1964289a23c912f139c9aaf405cb187c05c",
+        "prepared_json": "f5638305fcbed36ec46cfd4db46eb79372060d6d827cce3e720abbc2c7c04ef6",
+        "python_reference_matrix": "4112d186bea11f215fc33954a2726da31041a662db462349904f8f6d16c664f1",
+        "qchem_output": "c52d06ac558c18af05adc1068cf9d287bf3dd65003727a6de3ed9d01be2ed2e4"
+      },
+      "heavy_validation_report": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q3_native_v1/h2o_SW49/250974/validation.json",
+      "heavy_validation_report_sha256": "23f2629ef667a586d74c6e4a2abddac7ca6d24f889d1c6c73111abe243e93d0c",
+      "metrics": {
+        "complete_block_count": 1,
+        "diagnostic_batch_count": 620,
+        "diagnostic_grid_point_count": 603880,
+        "full_matrix_max_abs_hartree": 2.6645352591003757e-15,
+        "full_matrix_max_relative_scaled": 4.649236874131159e-12,
+        "selected_rows_max_abs_hartree": 1.7763568394002505e-15,
+        "selected_rows_max_relative_scaled": 9.806890063851266e-14
+      },
+      "passed": true,
+      "role": "closed_shell_singlet_uks",
+      "species": "h2o_SW49"
+    },
+    {
+      "grid": "99590",
+      "hashes": {
+        "derived_input": "ad4b0b254a66944f608fb92139f362521402c4be90797b5c086a01781792f93d",
+        "diagnostic_inputs": "d8f1dc226bb8dd5bf2c2515e6dd62b63b89e69236d5c968fe5ea288254b9e2d8",
+        "native_matrix": "1af872ca76e6b05b5fcb80f0223d326b21f0228e961e5194c58315afa08309a3",
+        "prepared_json": "8470c22f632ddc4fe74bc8725e0b6e490c00faab3ca20c628706da060db3e7b8",
+        "python_reference_matrix": "5042a94d9ea1d44a5d586a060b99756927a5d98457c50a892be0aefa733a26e4",
+        "qchem_output": "47867470ef7e91824a71b1695e5818503e1066e079430377bf725bba14fd049a"
+      },
+      "heavy_validation_report": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q3_native_v1/h2o_SW49/99590/validation.json",
+      "heavy_validation_report_sha256": "4e46a0ab81e756ea63db3f708f3ce3ef33e6038d2d48464fc31eaa2f350af453",
+      "metrics": {
+        "complete_block_count": 1,
+        "diagnostic_batch_count": 246,
+        "diagnostic_grid_point_count": 145140,
+        "full_matrix_max_abs_hartree": 3.552713678800501e-15,
+        "full_matrix_max_relative_scaled": 7.195911712220157e-13,
+        "selected_rows_max_abs_hartree": 1.7763568394002505e-15,
+        "selected_rows_max_relative_scaled": 1.2735075508017453e-13
+      },
+      "passed": true,
+      "role": "closed_shell_singlet_uks",
+      "species": "h2o_SW49"
+    },
+    {
+      "grid": "75302",
+      "hashes": {
+        "derived_input": "782b739665969b530cf88914dcab22f9f65b3a0618295f606fb1c749bdfed43c",
+        "diagnostic_inputs": "1cceaa7abe619fe6e5b0e32ecc3c0c869a14d6ad203d11851be8ef959c35923b",
+        "native_matrix": "c70061125836a0eefe098ccff23921737387ded7f08b5501975f44b8d96739e3",
+        "prepared_json": "f7ffeb852c6834b7a56df0041fa2ed6667f1b2fea6f8583e7caaf9f3f55a073e",
+        "python_reference_matrix": "2be8b7db34e546277c42d1b686516a468301ccca8d7d451226a7fa11f3dfc073",
+        "qchem_output": "5cf4580ff73446638bd89a997081c8297a349b8d3a3aa085480b72102cae7615"
+      },
+      "heavy_validation_report": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q3_native_v1/h2o_SW49/75302/validation.json",
+      "heavy_validation_report_sha256": "62be8d43fd26badb9586449e67d3b5be62739ba9d58174308f646240bab92ad8",
+      "metrics": {
+        "complete_block_count": 1,
+        "diagnostic_batch_count": 188,
+        "diagnostic_grid_point_count": 56776,
+        "full_matrix_max_abs_hartree": 2.6645352591003757e-15,
+        "full_matrix_max_relative_scaled": 1.3386945650506446e-12,
+        "selected_rows_max_abs_hartree": 8.881784197001252e-16,
+        "selected_rows_max_relative_scaled": 5.1077490854784123e-14
+      },
+      "passed": true,
+      "role": "closed_shell_singlet_uks",
+      "species": "h2o_SW49"
+    },
+    {
+      "grid": "250974",
+      "hashes": {
+        "derived_input": "ccc1df254d012d5692a34647ba3d934d2cabaf1be5ea31c648cf3ecd2a5649a7",
+        "diagnostic_inputs": "3b6705685709604d6856de4ef9d1906aef27937498bd79bb8fa9106405d65065",
+        "native_matrix": "92693ee14ed3578fe476ae6400f1c9dcbb6ab107f32c8c9804b68670414cb446",
+        "prepared_json": "a3e4c18601ed2ab4e11fda71fb81db02e6462454a2ce5f274d677e215b7a1e07",
+        "python_reference_matrix": "8f2fac54df78fcc3a409a947e440e22b3586d6adf350696b20812e8ffd0ca9bf",
+        "qchem_output": "ddde2dee2b6829726cd0fe9fbfb48a1be1bcd27e14673a5edc1b8984e2e46a92"
+      },
+      "heavy_validation_report": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q3_native_v1/12_NH2rad_HNBrBDE18/250974/validation.json",
+      "heavy_validation_report_sha256": "c59742315d1f7764df522e506bf8ce8c5df78c6965ace278245572d761e28e53",
+      "metrics": {
+        "complete_block_count": 1,
+        "diagnostic_batch_count": 614,
+        "diagnostic_grid_point_count": 598036,
+        "full_matrix_max_abs_hartree": 2.6645352591003757e-15,
+        "full_matrix_max_relative_scaled": 1.5591466364071583e-11,
+        "selected_rows_max_abs_hartree": 1.7763568394002505e-15,
+        "selected_rows_max_relative_scaled": 8.652482245900369e-13
+      },
+      "passed": true,
+      "role": "open_shell_doublet_uks",
+      "species": "12_NH2rad_HNBrBDE18"
+    },
+    {
+      "grid": "99590",
+      "hashes": {
+        "derived_input": "9abcec1fe065f96491abdd7c26af96f0dc2d3654b4202eac305b7e5ef84e3f4f",
+        "diagnostic_inputs": "0cbb7280bebee322b75a86f0d474892fb3a82af415238a1a43d71dc942a1be5e",
+        "native_matrix": "827e372bbe2b14e33331f66e4aacd8206545703e2723d317508cf1ec2beab79e",
+        "prepared_json": "4d98550fbd1620eebe9a6baa67d8387a784f068de5bd95e2e0019a6de96df9af",
+        "python_reference_matrix": "cecf580c34b31286ed60bf81524b885f3899b137fea245399bfc1f895cd7b206",
+        "qchem_output": "998e2b7036f04c33b1ebcf6749e7e8e3b3a18074d256b7462ea25bafa3f804e6"
+      },
+      "heavy_validation_report": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q3_native_v1/12_NH2rad_HNBrBDE18/99590/validation.json",
+      "heavy_validation_report_sha256": "0b0af394fe8da5f4ffa1215ccd184cda55ef2c8664cccf9b42776026b3b473d6",
+      "metrics": {
+        "complete_block_count": 1,
+        "diagnostic_batch_count": 244,
+        "diagnostic_grid_point_count": 143960,
+        "full_matrix_max_abs_hartree": 2.220446049250313e-15,
+        "full_matrix_max_relative_scaled": 2.1567059138575266e-11,
+        "selected_rows_max_abs_hartree": 1.7763568394002505e-15,
+        "selected_rows_max_relative_scaled": 6.095259226229451e-13
+      },
+      "passed": true,
+      "role": "open_shell_doublet_uks",
+      "species": "12_NH2rad_HNBrBDE18"
+    },
+    {
+      "grid": "75302",
+      "hashes": {
+        "derived_input": "bba7f77b6acbf43d16128b856573d38abcb7229f038ddc6a26893d00f2e89f53",
+        "diagnostic_inputs": "00d9e81d6689a586dc900ffaa39f02293d1c8cd94a840ad39a71755702c072d9",
+        "native_matrix": "c9ead9593341f77a125f09c8bfb9457a37c096df7fd8dac8fb460f1aab10bc6a",
+        "prepared_json": "5f3e3d96efbbb1484fad8b64bf39d29e0c9c2a661b315ed15ffe5821dc69b78d",
+        "python_reference_matrix": "26b35ef04c9e4a7858e500610b2248aca16667fe4cb6e086394e880eb30bd009",
+        "qchem_output": "d67696bc61abf18074c87991ccbd656f10f7c42a20250b85897940f16a9cf968"
+      },
+      "heavy_validation_report": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q3_native_v1/12_NH2rad_HNBrBDE18/75302/validation.json",
+      "heavy_validation_report_sha256": "a39282c8c9812b2c669bfc21bd768405d8c05ade49e7c0e1918a55fd97ff15ae",
+      "metrics": {
+        "complete_block_count": 1,
+        "diagnostic_batch_count": 186,
+        "diagnostic_grid_point_count": 56172,
+        "full_matrix_max_abs_hartree": 1.7763568394002505e-15,
+        "full_matrix_max_relative_scaled": 1.101035415987221e-11,
+        "selected_rows_max_abs_hartree": 1.7763568394002505e-15,
+        "selected_rows_max_relative_scaled": 1.1255580520087316e-12
+      },
+      "passed": true,
+      "role": "open_shell_doublet_uks",
+      "species": "12_NH2rad_HNBrBDE18"
+    }
+  ],
+  "checks": {
+    "authoritative_inputs_unchanged": true,
+    "authoritative_qarchives_unchanged": true,
+    "case_12_NH2rad_HNBrBDE18_250974": true,
+    "case_12_NH2rad_HNBrBDE18_75302": true,
+    "case_12_NH2rad_HNBrBDE18_99590": true,
+    "case_h2o_SW49_250974": true,
+    "case_h2o_SW49_75302": true,
+    "case_h2o_SW49_99590": true,
+    "closed_and_open_shell_each_three_grids": true,
+    "diagnostic_build_record_complete": true,
+    "executable_hash_pinned": true,
+    "installed_libks_hash_pinned": true,
+    "live_libks_diff_pinned": true,
+    "manifest_frozen_before_results": true,
+    "six_case_reports_present": true,
+    "tolerances_frozen": true,
+    "user_approved_uks_interpretation": true
+  },
+  "diagnostic_build_manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q3_diagnostic_build_v1.yaml",
+  "diagnostic_build_manifest_sha256": "d4b1b3cd16369963bd85fda98fa2b151c044025286f7fe9efdc93e4f8eb7ada1",
+  "manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q3_native_gateway_v1.yaml",
+  "manifest_sha256": "1d277c97489fe0f84ae2494005d93b42b4d6d253513299dae75d68cc9f8068a0",
+  "passed": true,
+  "schema_version": 1,
+  "status": "passed"
+}

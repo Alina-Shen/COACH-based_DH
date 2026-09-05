@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Execute or reuse the exact seven Step-13 boundaries for one species."""
+"""Execute or reuse the exact eight Step-13 boundaries for one species."""
 
 from __future__ import annotations
 
@@ -23,6 +23,7 @@ from revwb97m2.production_generator import (  # noqa: E402
 )
 from revwb97m2.step13_stages import (  # noqa: E402
     publish_assembly,
+    publish_d4_atm,
     publish_parent,
     publish_ri_mp2,
     publish_semilocal_grid,
@@ -52,6 +53,7 @@ def main() -> int:
         "semilocal_75302": species_root / "semilocal/75302",
         "vv10": species_root / "vv10",
         "ri_mp2": species_root / "ri_mp2",
+        "d4_atm": species_root / "d4_atm",
         "assembly": species_root / "assembly",
     }
     actions = []
@@ -76,6 +78,8 @@ def main() -> int:
             publish_vv10(paths["parent"], paths[contract.name], args.spec, args.max_memory_mb)
         elif contract.name == "ri_mp2":
             publish_ri_mp2(paths["parent"], paths[contract.name], args.spec, args.max_memory_mb)
+        elif contract.name == "d4_atm":
+            publish_d4_atm(paths["parent"], paths[contract.name], args.spec, args.max_memory_mb)
         else:
             publish_assembly(species_root, paths[contract.name])
         actions.append({"boundary": contract.name, "action": "publish"})
@@ -85,4 +89,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

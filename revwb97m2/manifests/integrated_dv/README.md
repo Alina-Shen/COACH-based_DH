@@ -14,7 +14,7 @@ returns only the three frozen rows needed by the new omegaB97M(2)-form fit:
 
 The frozen nonlinear values are `gamma_x=0.004`, `gamma_ss=0.01`, and
 `gamma_os=0.006`. The output shape is `3 x 96`, which is flattened to the 288
-semilocal columns of the 291-feature fitting model. The kernel contains no
+semilocal columns of the 292-feature fitting model. The kernel contains no
 published COACH coefficients: its purpose is to construct a basis in which a
 new functional is fitted.
 

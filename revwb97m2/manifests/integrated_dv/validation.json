@@ -59,10 +59,10 @@
     "upstream_legacy_row154_max_abs_delta": 0.007768994740725373
   },
   "kernel_source": "revwb97m2/integrated_dv.py",
-  "kernel_source_sha256": "c0b1e0d41caaea3da3445d4133f17187e8d12c8c23c1c6831857dedd7ac5d2e6",
+  "kernel_source_sha256": "d3b56a6a0b45967dd7caccc379517777379466c85963203f4fd5782d30d3ff2e",
   "passed": true,
   "published_coach_coefficients_used": false,
   "schema_version": 1,
   "target": "new omegaB97M(2)-form fit on fixed omegaB97M-V densities",
-  "validated_utc": "2026-08-31T04:16:14.100790+00:00"
+  "validated_utc": "2026-09-05T05:58:35.073746+00:00"
 }

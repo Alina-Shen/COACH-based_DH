@@ -1,4 +1,4 @@
-"""Exact seven-boundary Step-13 production execution stages."""
+"""Exact eight-boundary Step-13 production execution stages."""
 
 from __future__ import annotations
 
@@ -39,6 +39,7 @@ from revwb97m2.scalar_features import (
     PT2_COMPONENT_TOLERANCE_HARTREE,
     assemble_r1_r2_feature_vectors,
     direct_energy_identity,
+    evaluate_d4_atm,
     evaluate_ri_ump2,
     evaluate_vv10,
     fixed_energy_partition,
@@ -51,6 +52,7 @@ BOUNDARY_FILES = {
     "semilocal": ("semilocal_grid_manifest.json", "SEMILOCAL_GRID_COMPLETE"),
     "vv10": ("vv10_manifest.json", "VV10_COMPLETE"),
     "ri_mp2": ("ri_mp2_manifest.json", "RI_MP2_COMPLETE"),
+    "d4_atm": ("d4_atm_manifest.json", "D4_ATM_COMPLETE"),
     "assembly": ("assembly_manifest.json", "ASSEMBLY_COMPLETE"),
 }
 
@@ -421,6 +423,62 @@ def publish_ri_mp2(
     return _atomic_publish(output_dir, "ri_mp2_failed", operation)
 
 
+def publish_d4_atm(
+    parent_dir: Path,
+    output_dir: Path,
+    spec_path: Path = DEFAULT_SPEC,
+    max_memory_mb: int = 40000,
+) -> dict[str, Any]:
+    """Publish the geometry-only, frozen-parameter COACH D4-ATM energy feature."""
+
+    context = _context(parent_dir, spec_path, max_memory_mb)
+
+    def operation(temporary: Path) -> dict[str, Any]:
+        started = time.perf_counter()
+        d4_spec = context["spec"]["double_hybrid_energy"]["dispersion_policy"]["d4_atm"]
+        parameters = {name: float(value) for name, value in d4_spec["damping_parameters"].items()}
+        energy = evaluate_d4_atm(context["mol"], parameters)
+        payload = {
+            "energy_hartree": energy,
+            "definition": d4_spec["definition"],
+            "damping_parameters": parameters,
+        }
+        payload_name = "d4_atm.json"
+        (temporary / payload_name).write_text(
+            json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        )
+        artifacts = {payload_name: sha256(temporary / payload_name)}
+        manifest = {
+            "schema_version": 1,
+            "status": "d4_atm_complete_and_validated",
+            "created_utc": utc_now(),
+            "scope": context["identity"]["scope"],
+            "species": context["species"],
+            "source_record_sha256": context["identity"]["source_record_sha256"],
+            "authority_fingerprint_sha256": context["fingerprint"],
+            "parent_manifest_sha256": context["parent_manifest_sha256"],
+            "orbital_independent": True,
+            "resource_usage": {
+                "wall_seconds": time.perf_counter() - started,
+                "max_rss_mb": _max_rss_mb(),
+            },
+            "artifacts_sha256": artifacts,
+        }
+        checks = {
+            "finite_energy": bool(np.isfinite(energy)),
+            "frozen_definition": payload["definition"] == "pure_three_body_coach_d4_atm"
+            and parameters
+            == {"s6": 0.0, "s8": 0.0, "s9": 1.0, "a1": 0.215, "a2": 5.8, "alp": 16.0},
+            "artifact_hashes": sha256(temporary / payload_name) == artifacts[payload_name],
+        }
+        _write_manifest_validation_marker(
+            temporary, *BOUNDARY_FILES["d4_atm"], manifest, checks
+        )
+        return manifest
+
+    return _atomic_publish(output_dir, "d4_atm_failed", operation)
+
+
 def publish_assembly(species_root: Path, output_dir: Path) -> dict[str, Any]:
     species_root = species_root.resolve()
     parent_manifest = json.loads((species_root / "parent/parent_manifest.json").read_text(encoding="utf-8"))
@@ -429,7 +487,12 @@ def publish_assembly(species_root: Path, output_dir: Path) -> dict[str, Any]:
 
     def operation(temporary: Path) -> dict[str, Any]:
         semilocal_dirs = {grid: species_root / "semilocal" / grid for grid in ("250974", "99590", "75302")}
-        for directory in (*semilocal_dirs.values(), species_root / "vv10", species_root / "ri_mp2"):
+        for directory in (
+            *semilocal_dirs.values(),
+            species_root / "vv10",
+            species_root / "ri_mp2",
+            species_root / "d4_atm",
+        ):
             validation = json.loads((directory / "validation.json").read_text(encoding="utf-8"))
             if validation.get("status") != "passed":
                 raise ValueError(f"dependency validation failed: {directory}")
@@ -437,15 +500,18 @@ def publish_assembly(species_root: Path, output_dir: Path) -> dict[str, Any]:
         r2 = np.load(semilocal_dirs["250974"] / "r2_semilocal_features_288_250974.npy")
         vv10 = json.loads((species_root / "vv10/vv10.json").read_text(encoding="utf-8"))["energy_hartree"]
         pt2 = json.loads((species_root / "ri_mp2/ri_mp2.json").read_text(encoding="utf-8"))["total_correlation_hartree"]
+        d4_atm = json.loads((species_root / "d4_atm/d4_atm.json").read_text(encoding="utf-8"))["energy_hartree"]
         sr_hf = float(parent_manifest["scf"]["components"]["unscaled_short_range_hf_exchange"])
-        vectors = assemble_r1_r2_feature_vectors(r1, r2, sr_hf, vv10, pt2)
-        filenames = {"R1": "feature_vector_78.npy", "R2": "feature_vector_291.npy"}
+        vectors = assemble_r1_r2_feature_vectors(r1, r2, sr_hf, vv10, pt2, d4_atm)
+        filenames = {"R1": "feature_vector_79.npy", "R2": "feature_vector_292.npy"}
         for space, filename in filenames.items():
             np.save(temporary / filename, vectors[space])
         fixed = fixed_energy_partition(parent_manifest)
         (temporary / "fixed_energy.json").write_text(json.dumps(fixed, indent=2, sort_keys=True) + "\n", encoding="utf-8")
         artifacts = {name: sha256(temporary / name) for name in (*filenames.values(), "fixed_energy.json")}
-        identity_check = direct_energy_identity(fixed["total_hartree"], r2.reshape(3, 96), (sr_hf, vv10, pt2))
+        identity_check = direct_energy_identity(
+            fixed["total_hartree"], r2.reshape(3, 96), (sr_hf, vv10, pt2, d4_atm)
+        )
         manifest = {
             "schema_version": 1,
             "status": "species_assembly_complete_and_validated",
@@ -454,16 +520,21 @@ def publish_assembly(species_root: Path, output_dir: Path) -> dict[str, Any]:
             "species": species,
             "source_record_sha256": identity["source_record_sha256"],
             "authority_fingerprint_sha256": fingerprint,
-            "feature_counts": {"R1": 78, "R2": 291},
+            "feature_counts": {"R1": 79, "R2": 292},
             "fitting_grid_id": "250974",
-            "shared_scalar_values": {"short_range_hf": sr_hf, "vv10": vv10, "pt2": pt2},
+            "shared_scalar_values": {
+                "short_range_hf": sr_hf,
+                "vv10": vv10,
+                "pt2": pt2,
+                "d4_atm": d4_atm,
+            },
             "direct_energy_identity": identity_check,
             "artifacts_sha256": artifacts,
         }
         checks = {
-            "r1_shape_finite": vectors["R1"].shape == (78,) and bool(np.all(np.isfinite(vectors["R1"]))),
-            "r2_shape_finite": vectors["R2"].shape == (291,) and bool(np.all(np.isfinite(vectors["R2"]))),
-            "shared_scalar_tail": bool(np.array_equal(vectors["R1"][-3:], vectors["R2"][-3:])),
+            "r1_shape_finite": vectors["R1"].shape == (79,) and bool(np.all(np.isfinite(vectors["R1"]))),
+            "r2_shape_finite": vectors["R2"].shape == (292,) and bool(np.all(np.isfinite(vectors["R2"]))),
+            "shared_scalar_tail": bool(np.array_equal(vectors["R1"][-4:], vectors["R2"][-4:])),
             "direct_energy_identity": identity_check["passed"],
             "artifact_hashes": all(sha256(temporary / name) == digest for name, digest in artifacts.items()),
         }
@@ -471,4 +542,3 @@ def publish_assembly(species_root: Path, output_dir: Path) -> dict[str, Any]:
         return manifest
 
     return _atomic_publish(output_dir, "species_assembly_failed", operation)
-

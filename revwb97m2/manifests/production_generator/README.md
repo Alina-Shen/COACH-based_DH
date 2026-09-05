@@ -6,17 +6,18 @@ not assign tiers, choose resources, render SBATCH scripts, or submit work.
 
 The planner joins the exact 17,452-species fixed-geometry role union to the
 validated basis bridge and immutable record index. It then performs a read-only
-inventory of seven future restart boundaries per species:
+inventory of eight future restart boundaries per species:
 
 1. fixed omegaB97M-V parent;
 2. selected semilocal features on grid `250974`;
 3. selected semilocal features on grid `99590`;
 4. selected semilocal features on grid `75302`;
 5. fixed-density VV10;
-6. frozen-core total RI-UMP2; and
-7. final 291-feature species assembly.
+6. frozen-core total RI-UMP2;
+7. frozen-parameter COACH pure three-body D4-ATM; and
+8. final 292-feature species assembly.
 
-Splitting the three grids and the two expensive scalar calculations prevents a
+Splitting the three grids and the scalar calculations prevents a
 later failure from invalidating a successfully published earlier result. The
 accepted combined Step 9/10 gateway artifacts remain unchanged; the split is a
 contract for future Step 13 production artifacts.

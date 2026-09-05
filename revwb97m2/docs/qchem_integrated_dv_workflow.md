@@ -2,8 +2,10 @@
 
 Date: 2026-09-03
 
-Status: implementation landed in the new Q-Chem trunk; build and native smoke
-validation remain gates before production.
+Status: Q4 complete. The pinned Q3 native comparisons pass, and the strict
+final-complete-block extractor, atomic no-overwrite publisher, and restart
+validator pass fixtures plus all six real three-grid cases. Q6 resource and
+Step-13 integration work remains before production review.
 
 ## Decision
 
@@ -26,9 +28,10 @@ count—is authoritative.
    require its copied `qarchive.h5` before preparing a job.
 2. Copy the source orbital directory into a non-overwriting run directory. Keep
    the authoritative Q-Chem input immutable and record hashes/provenance.
-3. Derive one input per required feature grid. The orbital-reuse changes remain
-   `MAX_SCF_CYCLES 0` and `GEN_SCFMAN FALSE`; set the requested Q-Chem XC grid
-   for `250974`, `99590`, or `75302` without changing the omegaB97M-V method.
+3. Derive one input per required feature grid. Set `MAX_SCF_CYCLES 0` and
+   `GEN_SCFMAN FALSE`, select the libks XC Fock engine with `XC_FXC 3`, and set
+   the requested Q-Chem XC grid for `250974`, `99590`, or `75302` without
+   changing the omegaB97M-V method or imported density.
 4. Run the pinned build with `QCHEM_PRINT_INTEGRATED_DV=1`. The switch is
    opt-in and accepted only for an MGGA functional.
 5. Require one final complete block delimited by `COACH integratedDV begin`
@@ -49,7 +52,10 @@ Only `/clusterfs/mhg-data/yaoshen/qchem/trunk/libks` was changed. The historical
 and was not modified. The port does not inject a functional, alter omegaB97M-V,
 or change SCF convergence behavior.
 
-The driver recomputes Q-Chem's existing 10 meta-GGA density variables for each
+The active fixed-orbital route must use `XC_FXC 3`: Q-Chem's default legacy XC
+Fock engine does not enter the libks dispatcher. The libks dispatcher performs
+the ordinary XC Fock build, then invokes the energy driver for the opt-in
+integratedDV emission. The driver recomputes Q-Chem's existing 10 meta-GGA density variables for each
 screened grid batch, passes them to the isolated COACH integratedDV accumulator,
 sums the full 96x180 result across OpenMP batches, and prints it only when the
 environment switch is enabled.
@@ -68,13 +74,30 @@ silently make selected semantic row 154 incompatible with this project.
   `(64,154,166)` after transposition: shape 3x96, maximum absolute difference
   `3.4694469519536142e-18`, and `numpy.allclose=True` at
   `rtol=2e-13, atol=2e-14`.
-- Build a pinned full Q-Chem executable and record its SVN revisions and binary
-  hash.
-- Run at least one restricted and one unrestricted imported-orbital smoke case
-  on all three grids. Compare full matrices and selected rows to the maintained
-  reference implementation within a declared tolerance.
-- Implement and test the delimited-block extractor, atomic artifact publication,
-  restart behavior, and missing/corrupt-archive refusal.
+- The pinned full Q-Chem build at revisions 48798/1666 passes: executable
+  SHA-256 `0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084`,
+  complete libks diff SHA-256
+  `a7d9660e8fccc293691639cab38c4fe29a1496b1974383aa46ade92ba9eb92c3`,
+  and zero unresolved dynamic dependencies.
+- An unrestricted H2 archive-read probe with zero SCF cycles and `XC_FXC 3`
+  emitted exactly one finite 96x180 block and terminated normally. This closes
+  Q2 capability validation but does not substitute for Q3.
+- Q3 passed after freezing `rtol=2e-12` and `atol=2e-12` hartree before results.
+  `h2o_SW49` (closed-shell singlet UKS) and `12_NH2rad_HNBrBDE18`
+  (open-shell doublet UKS) each passed on grids `250974`, `99590`, and `75302`.
+  All six runs read the copied MO archive, terminated normally, emitted one
+  finite 96x180 block, and agreed for the full matrix and selected rows. The
+  largest absolute full-matrix error was `3.552713678800501e-15` hartree.
+  See `../results/2026-09-04-q3-native-qchem-gateway-complete.md` and
+  `../manifests/qchem_gateway/q3_validation_v1.json`.
+- Q4 passed. The strict extractor rejects zero, malformed, truncated,
+  wrong-shaped, nonnumeric, and nonfinite blocks; records and selects the final
+  valid block when multiple complete blocks exist; and publishes 180x96, 3x96,
+  and flattened 288 arrays through a validated atomic rename. Restart mode
+  reuses only an independently valid immutable boundary. Missing, changed, or
+  ambiguous archives and invalid existing boundaries stop without overwrite.
+  See `../results/2026-09-04-q4-qchem-feature-publication-complete.md` and
+  `../manifests/qchem_gateway/q4_validation_v1.json`.
 - Amend and revalidate the frozen scientific specification before changing the
   production generator. No bulk job submission is authorized until those gates
   pass and the user gives separate approval.

@@ -91,7 +91,7 @@ def test_locked_population_is_exact_role_minimal_union() -> None:
     assert len({(row["scope"], row["species"]) for row in population}) == 17452
 
 
-def test_boundary_layout_has_seven_independent_restart_points(tmp_path: Path) -> None:
+def test_boundary_layout_has_eight_independent_restart_points(tmp_path: Path) -> None:
     root = tmp_path / "scope" / "species"
     assert [boundary.name for boundary in BOUNDARIES] == [
         "parent",
@@ -100,11 +100,13 @@ def test_boundary_layout_has_seven_independent_restart_points(tmp_path: Path) ->
         "semilocal_75302",
         "vv10",
         "ri_mp2",
+        "d4_atm",
         "assembly",
     ]
     assert boundary_directory(root, "parent") == root / "parent"
     assert boundary_directory(root, "semilocal_99590") == root / "semilocal/99590"
     assert boundary_directory(root, "ri_mp2") == root / "ri_mp2"
+    assert boundary_directory(root, "d4_atm") == root / "d4_atm"
 
 
 def test_complete_boundary_is_reused_only_after_all_hash_checks(tmp_path: Path) -> None:
@@ -165,6 +167,7 @@ def test_species_plan_is_dependency_aware_and_resource_gated(tmp_path: Path) -> 
         "semilocal_75302",
         "vv10",
         "ri_mp2",
+        "d4_atm",
     ]
 
     parent_path = Path(plan["stages"]["parent"]["path"])

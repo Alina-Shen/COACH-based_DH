@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-04",
+  "purpose": "Q2 archive-read integratedDV dispatcher and output-contract probe",
+  "input": {
+    "path": "/tmp/revwb97m2_q2_archive_read.in",
+    "sha256": "9eb96f6f21d685b025e16c77d53b0a25e61e313cefc6790217b03dd273460816",
+    "method": "wB97M-V",
+    "basis": "STO-3G",
+    "unrestricted": true,
+    "scf_guess": "READ",
+    "maximum_scf_cycles": 0,
+    "gen_scfman": false,
+    "xc_fxc": 3
+  },
+  "output": {
+    "path": "/tmp/revwb97m2_q2_archive_read_dispatch.out",
+    "sha256": "ef2024c15267f821420d4f891763d02f9d1ea2b10277b16136ae24a437a5e757"
+  },
+  "expected": {
+    "rows": 96,
+    "columns": 180
+  },
+  "observed": {
+    "mo_coefficient_read_messages": 2,
+    "begin_markers": 1,
+    "end_markers": 1,
+    "matrix_labels": 1,
+    "rows": 96,
+    "columns": 180,
+    "wrong_width_rows": 0,
+    "nonnumeric_values": 0,
+    "nonfinite_values": 0,
+    "normal_qchem_termination": true
+  },
+  "scope": "Q2 capability only; not the Q3 restricted/unrestricted three-grid parity matrix"
+}

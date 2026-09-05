@@ -1,8 +1,8 @@
 """Checkpoint-only scalar double-hybrid features for revwb97m2.
 
 This stage consumes a validated Step-8 omegaB97M-V checkpoint.  It never
-executes SCF and it keeps the fitted SR-HF, VV10, and total RI-UMP2 terms
-separate from the fixed nuclear/one-electron/Coulomb/LR-HF partition.
+executes SCF and it keeps the fitted SR-HF, VV10, total RI-UMP2, and pure
+three-body D4-ATM terms separate from the fixed energy partition.
 """
 
 from __future__ import annotations
@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+from dftd4.interface import DampingParam, DispersionModel
 from pyscf import dft, lib, mp
 from pyscf.data import elements
 
@@ -44,12 +45,12 @@ from revwb97m2.parent_scf import (
 from revwb97m2.scripts.pyscf_basis_bridge import build_molecules, canonical_hash
 
 
-SCALAR_INDICES = {"short_range_hf": 288, "vv10": 289, "pt2": 290}
-FEATURE_COUNT = 291
-MODEL_FEATURE_COUNTS = {"R1": 78, "R2": 291}
+SCALAR_INDICES = {"short_range_hf": 288, "vv10": 289, "pt2": 290, "d4_atm": 291}
+FEATURE_COUNT = 292
+MODEL_FEATURE_COUNTS = {"R1": 79, "R2": 292}
 MODEL_SEMILOCAL_COUNTS = {"R1": 75, "R2": 288}
 MODEL_SCALAR_INDICES = {
-    "R1": {"short_range_hf": 75, "vv10": 76, "pt2": 77},
+    "R1": {"short_range_hf": 75, "vv10": 76, "pt2": 77, "d4_atm": 78},
     "R2": SCALAR_INDICES,
 }
 PT2_COMPONENT_TOLERANCE_HARTREE = 1.0e-12
@@ -137,6 +138,18 @@ def evaluate_ri_ump2(
     return result, _directory_bytes(scratch_dir)
 
 
+def evaluate_d4_atm(mol: Any, damping_parameters: dict[str, float]) -> float:
+    """Evaluate the frozen COACH pure three-body D4-ATM feature."""
+
+    model = DispersionModel(
+        numbers=np.asarray(mol.atom_charges(), dtype=int),
+        positions=np.asarray(mol.atom_coords(), dtype=float),
+        charge=float(mol.charge),
+    )
+    parameters = DampingParam(**damping_parameters)
+    return float(model.get_dispersion(parameters, grad=False)["energy"])
+
+
 def fixed_energy_partition(parent_manifest: dict[str, Any]) -> dict[str, float]:
     components = parent_manifest["scf"]["components"]
     partition = {
@@ -156,13 +169,14 @@ def assemble_feature_vector(
     short_range_hf: float,
     vv10: float,
     pt2: float,
+    d4_atm: float,
 ) -> np.ndarray:
     semilocal = np.asarray(semilocal_features, dtype=np.float64)
     if semilocal.shape != (3, integrated_dv.FEATURES_PER_CHANNEL):
         raise ValueError(f"expected selected semilocal shape (3, 96), got {semilocal.shape}")
     vector = np.empty(FEATURE_COUNT, dtype=np.float64)
     vector[:288] = semilocal.reshape(-1)
-    vector[288:] = (short_range_hf, vv10, pt2)
+    vector[288:] = (short_range_hf, vv10, pt2, d4_atm)
     if not np.all(np.isfinite(vector)):
         raise FloatingPointError("assembled feature vector contains NaN or infinity")
     return vector
@@ -174,16 +188,17 @@ def assemble_r1_r2_feature_vectors(
     short_range_hf: float,
     vv10: float,
     pt2: float,
+    d4_atm: float,
 ) -> dict[str, np.ndarray]:
-    """Attach one shared scalar triple to the production R1 and R2 spaces."""
+    """Attach four shared scalar features to the production R1 and R2 spaces."""
 
     semilocal = {
         "R1": np.asarray(r1_semilocal_features, dtype=np.float64).reshape(-1),
         "R2": np.asarray(r2_semilocal_features, dtype=np.float64).reshape(-1),
     }
-    scalars = np.asarray((short_range_hf, vv10, pt2), dtype=np.float64)
+    scalars = np.asarray((short_range_hf, vv10, pt2, d4_atm), dtype=np.float64)
     if not np.all(np.isfinite(scalars)):
-        raise FloatingPointError("shared scalar feature triple contains NaN or infinity")
+        raise FloatingPointError("shared scalar features contain NaN or infinity")
     vectors: dict[str, np.ndarray] = {}
     for space in ("R1", "R2"):
         expected = MODEL_SEMILOCAL_COUNTS[space]
@@ -206,10 +221,10 @@ def publish_r1_r2_assembly(
     output_dir: Path,
     grid_id: str = "250974",
 ) -> dict[str, Any]:
-    """Atomically publish final R1-78 and R2-291 vectors for one species.
+    """Atomically publish final R1-79 and R2-292 vectors for one species.
 
     The semilocal arrays must come from the schema-2 shared-density evaluator;
-    the scalar triple is loaded once and appended identically to both spaces.
+    the four scalar features are loaded once and appended identically to both spaces.
     """
 
     semilocal_dir = semilocal_dir.resolve()
@@ -239,7 +254,7 @@ def publish_r1_r2_assembly(
             raise ValueError("semilocal and scalar artifacts belong to different species")
         r1_path = semilocal_dir / f"r1_semilocal_features_75_{grid_id}.npy"
         r2_path = semilocal_dir / f"r2_semilocal_features_288_{grid_id}.npy"
-        scalars_path = scalar_dir / "scalar_features_288_290.npy"
+        scalars_path = scalar_dir / "scalar_features_288_291.npy"
         for path in (r1_path, r2_path, scalars_path):
             if not path.is_file():
                 raise FileNotFoundError(path)
@@ -252,12 +267,12 @@ def publish_r1_r2_assembly(
             if expected_hash is None or sha256(path) != expected_hash:
                 raise ValueError(f"input artifact hash mismatch or absent: {path}")
         scalars = np.load(scalars_path)
-        if scalars.shape != (3,):
-            raise ValueError(f"expected scalar triple, got {scalars.shape}")
+        if scalars.shape != (4,) or not np.all(np.isfinite(scalars)):
+            raise ValueError(f"expected four finite scalar features, got {scalars.shape}")
         vectors = assemble_r1_r2_feature_vectors(
             np.load(r1_path), np.load(r2_path), *[float(value) for value in scalars]
         )
-        filenames = {"R1": "feature_vector_78.npy", "R2": "feature_vector_291.npy"}
+        filenames = {"R1": "feature_vector_79.npy", "R2": "feature_vector_292.npy"}
         for space, filename in filenames.items():
             np.save(temp_dir / filename, vectors[space])
         artifacts_sha256 = {
@@ -316,16 +331,16 @@ def publish_r1_r2_assembly(
 def direct_energy_identity(
     fixed_energy: float,
     semilocal_features: np.ndarray,
-    scalars: tuple[float, float, float],
+    scalars: tuple[float, float, float, float],
 ) -> dict[str, Any]:
-    """Compare named-channel assembly with a 291-vector dot product."""
+    """Compare named-channel assembly with a 292-vector dot product."""
 
     vector = assemble_feature_vector(semilocal_features, *scalars)
     coefficient_sets = {
         "dense_deterministic": np.linspace(-0.25, 0.25, FEATURE_COUNT),
         "scalar_and_channel_edges": np.zeros(FEATURE_COUNT, dtype=np.float64),
     }
-    coefficient_sets["scalar_and_channel_edges"][[0, 95, 96, 191, 192, 287, 288, 289, 290]] = (
+    coefficient_sets["scalar_and_channel_edges"][[0, 95, 96, 191, 192, 287, 288, 289, 290, 291]] = (
         0.11,
         -0.07,
         0.05,
@@ -335,6 +350,7 @@ def direct_energy_identity(
         0.41,
         0.73,
         0.29,
+        0.37,
     )
     cases: dict[str, Any] = {}
     for name, coefficients in coefficient_sets.items():
@@ -345,6 +361,7 @@ def direct_energy_identity(
         named += float(scalars[0] * coefficients[288])
         named += float(scalars[1] * coefficients[289])
         named += float(scalars[2] * coefficients[290])
+        named += float(scalars[3] * coefficients[291])
         vector_result = float(fixed_energy + np.dot(vector, coefficients))
         cases[name] = {
             "named_direct_energy_hartree": named,
@@ -423,6 +440,14 @@ def run_scalar_stage(
         timings["vv10_seconds"] = time.perf_counter() - mark
 
         mark = time.perf_counter()
+        d4_spec = spec["double_hybrid_energy"]["dispersion_policy"]["d4_atm"]
+        d4_parameters = {
+            key: float(value) for key, value in d4_spec["damping_parameters"].items()
+        }
+        d4_atm = evaluate_d4_atm(mol, d4_parameters)
+        timings["d4_atm_seconds"] = time.perf_counter() - mark
+
+        mark = time.perf_counter()
         previous_tmpdir = lib.param.TMPDIR
         lib.param.TMPDIR = str(scratch_dir)
         try:
@@ -439,10 +464,10 @@ def run_scalar_stage(
         semilocal_path = parent_dir / f"checkpoint_identity_features_{identity_grid}.npy"
         semilocal = np.load(semilocal_path)
         vector = assemble_feature_vector(
-            semilocal, short_range_hf, vv10, pt2["total_correlation_hartree"]
+            semilocal, short_range_hf, vv10, pt2["total_correlation_hartree"], d4_atm
         )
-        np.save(temp_dir / "feature_vector_291.npy", vector)
-        np.save(temp_dir / "scalar_features_288_290.npy", vector[288:])
+        np.save(temp_dir / "feature_vector_292.npy", vector)
+        np.save(temp_dir / "scalar_features_288_291.npy", vector[288:])
         fixed = fixed_energy_partition(parent_manifest)
         identity = direct_energy_identity(
             fixed["total_hartree"], semilocal, tuple(float(x) for x in vector[288:])
@@ -455,10 +480,10 @@ def run_scalar_stage(
                 item.unlink()
         scratch_dir.rmdir()
         timings["total_seconds"] = time.perf_counter() - started
-        artifact_names = ("feature_vector_291.npy", "scalar_features_288_290.npy")
+        artifact_names = ("feature_vector_292.npy", "scalar_features_288_291.npy")
         artifacts_sha256 = {name: sha256(temp_dir / name) for name in artifact_names}
         manifest = {
-            "schema_version": 1,
+            "schema_version": 2,
             "status": "scalar_features_complete_and_validated",
             "created_utc": utc_now(),
             "species": species,
@@ -501,6 +526,13 @@ def run_scalar_stage(
                     "coefficient_applied": False,
                 },
                 "pt2": {"index": 290, **pt2, "coefficient_applied": False},
+                "d4_atm": {
+                    "index": 291,
+                    "energy_hartree": d4_atm,
+                    "damping_parameters": d4_parameters,
+                    "definition": d4_spec["definition"],
+                    "coefficient_applied": False,
+                },
             },
             "feature_vector": {
                 "layout": SCALAR_INDICES,
@@ -511,12 +543,13 @@ def run_scalar_stage(
                 "sha256": array_sha256(vector),
             },
             "grid_differences": {
-                "zero_indices": [288, 289, 290],
-                "values_hartree": [0.0, 0.0, 0.0],
+                "zero_indices": [288, 289, 290, 291],
+                "values_hartree": [0.0, 0.0, 0.0, 0.0],
                 "reasons": {
                     "short_range_hf": "fixed parent density and orbitals; independent of semilocal feature grid",
                     "vv10": "evaluated once on the frozen nonlocal grid and reused for every semilocal grid",
                     "pt2": "fixed parent orbitals; independent of semilocal feature grid",
+                    "d4_atm": "geometry/charge-only feature; independent of orbitals and grid",
                 },
             },
             "direct_energy_identity": identity,
@@ -579,8 +612,8 @@ def validate_scalar_artifact(
     parent_manifest_path = parent_dir / "parent_manifest.json"
     parent_manifest = json.loads(parent_manifest_path.read_text(encoding="utf-8"))
     parent_checks, _ = validate_published_parent(parent_dir, spec_path)
-    vector = np.load(scalar_dir / "feature_vector_291.npy")
-    scalars = np.load(scalar_dir / "scalar_features_288_290.npy")
+    vector = np.load(scalar_dir / "feature_vector_292.npy")
+    scalars = np.load(scalar_dir / "scalar_features_288_291.npy")
     fixed = fixed_energy_partition(parent_manifest)
     identity_grid = manifest["feature_vector"]["semilocal_grid_id"]
     semilocal = np.load(parent_dir / f"checkpoint_identity_features_{identity_grid}.npy")
@@ -589,9 +622,11 @@ def validate_scalar_artifact(
         fixed["total_hartree"], semilocal, tuple(float(x) for x in scalars)
     )
     pt2 = manifest["scalar_features"]["pt2"]
+    d4_atm = manifest["scalar_features"]["d4_atm"]
     checks = {
         "completion_marker": (scalar_dir / "SCALAR_COMPLETE").is_file(),
-        "manifest_status": manifest["status"] == "scalar_features_complete_and_validated",
+        "manifest_status": manifest["schema_version"] == 2
+        and manifest["status"] == "scalar_features_complete_and_validated",
         "parent_validation": all(parent_checks.values()),
         "parent_manifest_hash": sha256(parent_manifest_path)
         == manifest["parent"]["manifest_sha256"],
@@ -607,7 +642,7 @@ def validate_scalar_artifact(
             for name, digest in manifest["artifacts_sha256"].items()
         ),
         "feature_layout_and_values": vector.shape == (FEATURE_COUNT,)
-        and scalars.shape == (3,)
+        and scalars.shape == (4,)
         and np.array_equal(vector, rebuilt)
         and array_sha256(vector) == manifest["feature_vector"]["sha256"],
         "fixed_energy_partition": fixed == manifest["fixed_energy"],
@@ -617,9 +652,13 @@ def validate_scalar_artifact(
         == float(spec["double_hybrid_energy"]["vv10"]["b"])
         and manifest["scalar_features"]["vv10"]["C"]
         == float(spec["double_hybrid_energy"]["vv10"]["C"]),
+        "d4_atm_definition": d4_atm["definition"]
+        == spec["double_hybrid_energy"]["dispersion_policy"]["d4_atm"]["definition"]
+        and d4_atm["damping_parameters"]
+        == spec["double_hybrid_energy"]["dispersion_policy"]["d4_atm"]["damping_parameters"],
         "grid_difference_scalar_columns_zero": manifest["grid_differences"]["zero_indices"]
-        == [288, 289, 290]
-        and manifest["grid_differences"]["values_hartree"] == [0.0, 0.0, 0.0],
+        == [288, 289, 290, 291]
+        and manifest["grid_differences"]["values_hartree"] == [0.0, 0.0, 0.0, 0.0],
         "direct_energy_identity": rebuilt_identity["passed"]
         and manifest["direct_energy_identity"]["passed"],
         "checkpoint_only_no_qchem_orbitals": manifest["parent"]["scf_rerun"] is False

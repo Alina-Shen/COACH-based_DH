@@ -1,25 +1,52 @@
-# Frozen scientific specification, version 4
+# Frozen scientific specification, version 6
 
 The authoritative machine-readable specification is
-[`../configs/scientific_spec.yaml`](../configs/scientific_spec.yaml). Version 2
+[`../configs/scientific_spec.yaml`](../configs/scientific_spec.yaml). Version 5
 is preserved byte-for-byte at
-[`../configs/archive/scientific_spec.v2.yaml`](../configs/archive/scientific_spec.v2.yaml).
+[`../configs/archive/scientific_spec.v5.yaml`](../configs/archive/scientific_spec.v5.yaml)
+with SHA-256
+`527d4d04a4c77cf6cbc591ad77113330664bf06466a384fab3368e0b450e2dc4`.
 
-## Version-3 engine decision
+## Version-6 dispersion and coefficient decision
 
-Each species receives one self-consistent PySCF unrestricted omegaB97M-V
-calculation. Its checkpoint and density are fixed for integratedDV, SR-HF,
-VV10, frozen-core RI-MP2, reaction assembly, and all coefficient searches. The
-fitted double hybrid does not update or reoptimize the parent orbitals.
+The revised model contains both the original-form VV10 feature (`b=10`,
+`C=0.01`) and the pure three-body D4-ATM feature used by COACH. The raw D4
+feature freezes COACH's damping definition at `s6=0`, `s8=0`, `s9=1`,
+`a1=0.215`, `a2=5.8`, and `alp=16`; therefore it contains ATM only, with no
+two-body D4 contribution. Its fitted linear coefficient `c_d4_atm` is distinct
+from the internal `s9=1` used to define the feature.
 
-The verified immutable GSCDB137/Q-Chem input publication remains the metadata
-source for geometry, charge, multiplicity, orbital basis, auxiliary basis, and
-ECP definitions. Q-Chem orbital files are not read by the production workflow.
-Generated basis, auxiliary-basis, and ECP definitions must be translated to
-PySCF and validated before the corresponding species can run.
+`c_vv10`, `c_pt2`, and `c_d4_atm` are fitted independently. The published
+omegaB97M(2) relation `c_vv10 + c_pt2 = 1` is not imposed on the revised model.
+Each coefficient has conceptual domain `(0,1)`. Since MIO solvers do not
+represent strict inequalities, the executable bounds are
+`1e-8 <= c <= 0.99999999`. No equality couples these three coefficients.
 
-The old route is preserved under `coach/qchem_orbital_route` and
-`/clusterfs/mhg-data/yaoshen/coach-based_dh_data/qchem_orbital_route`.
+## Version-5 orbital-source decision
+
+Production reuses the existing self-consistent Q-Chem unrestricted
+omegaB97M-V archives. A live versioned authority check confirms a regular,
+nonempty `qarchive.h5` for all 14,006 canonical GSCDB and auxiliary-only
+species under `/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2`. Every
+feature job copies the source archive into an isolated non-overwriting run
+directory, verifies source/copy hashes, sets `MAX_SCF_CYCLES 0` and
+`GEN_SCFMAN FALSE`, and never updates the orbitals.
+
+The matching verified Q-Chem input remains the authority for geometry, charge,
+multiplicity, orbital basis, auxiliary basis, ECP, and unrestricted-reference
+settings. IntegratedDV, SR-HF, VV10, and RI-MP2 must use the same imported
+archive; mixing a Q-Chem integratedDV density with independently optimized
+PySCF orbitals is forbidden. PySCF inputs, basis translation, checkpoints, and
+pilots remain validated fallback/regression evidence but are never selected
+silently.
+
+The orbital authority and its validation are versioned under
+`revwb97m2/manifests/qchem_orbitals/`. BigNC has 75/75 source archives, which
+must be copied into project-owned non-overwriting storage before post-freeze
+use. GDB9-W1-F12 has verified input metadata but no validated Q-Chem orbital
+authority, so that final assessment is explicitly blocked pending a new
+versioned inventory; PySCF regeneration is not an implicit substitute. OPT is
+outside the fixed-geometry energy workflow.
 
 ## RI-MP2 decision gate
 
@@ -38,7 +65,7 @@ threshold. Total PT2 is the fitted feature; same- and opposite-spin values are
 stored as diagnostics only. The initial stricter diagnostic report is retained
 beside the accepted report rather than discarded.
 
-## Frozen 291-feature energy model
+## Frozen 292-feature energy model
 
 The fixed energy is
 
@@ -47,7 +74,7 @@ E_{\mathrm{fixed}} = E_{\mathrm{nuc}} + E_{\mathrm{one}} + E_J
                    + E_x^{\mathrm{LR-HF}}.
 \]
 
-The fitted vector remains exactly 291 columns:
+The fitted vector has exactly 292 columns:
 
 - columns `0:96`: semilocal short-range exchange;
 - columns `96:192`: semilocal same-spin correlation;
@@ -55,6 +82,14 @@ The fitted vector remains exactly 291 columns:
 - column `288`: unscaled short-range HF exchange;
 - column `289`: VV10 correlation at `b=10`, `C=0.01`;
 - column `290`: total frozen-core canonical RI-MP2 correlation.
+- column `291`: frozen-parameter COACH pure three-body D4-ATM energy.
+
+Thus the fitted scalar contribution is
+
+\[
+c_{\mathrm{srHF}}E_x^{\mathrm{srHF}} + c_{\mathrm{VV10}}E_c^{\mathrm{VV10}}
++ c_{\mathrm{PT2}}E_c^{\mathrm{PT2}} + c_{\mathrm{D4ATM}}E^{\mathrm{D4ATM}}.
+\]
 
 | Channel | Expansion | integratedDV row |
 | --- | --- | ---: |
@@ -99,11 +134,14 @@ The exact roles and unique species lists are versioned under
 `revwb97m2/manifests/data_roles/`. Geometry, charge, multiplicity, basis,
 auxiliary basis, ECP, and counterpoise ghost-center metadata are parsed from
 verified, hash-pinned Q-Chem input snapshots. Q-Chem orbitals, `qarchive.h5`,
-and orbital scratch directories are prohibited as inputs. The official GSCDB
-AdditionalSets snapshot supplies BigNC, GDB9-W1-F12, and OPT inputs.
+and orbital scratch directories were excluded by the version-4 metadata policy;
+version 5 separately authorized the matching Q-Chem archive as the fixed
+orbital input. This does not change the data-role manifest's narrower metadata
+provenance claim. The official GSCDB AdditionalSets snapshot supplies BigNC,
+GDB9-W1-F12, and OPT input metadata.
 
-The corresponding 17,658 all-UKS molecular definitions are now frozen in the
-read-only heavy-data snapshot
+The corresponding 17,658 all-UKS PySCF molecular definitions remain frozen as
+a nonproduction fallback in the read-only heavy-data snapshot
 `/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1`.
 Every record stores `spin = multiplicity - 1`, requests UKS/UMP2 without an
 exception path, and carries its source-input and normalized PySCF-geometry
@@ -114,36 +152,55 @@ The immutable source snapshot deliberately retains its original Step-5
 versioned overlay under `revwb97m2/manifests/basis_bridge/`: all 17,658 records
 have resolved orbital, auxiliary, and ECP definitions and passed independent
 dimension, element-coverage, electron-count, and representative PySCF-build
-checks. Production code must combine the immutable molecular record with this
+checks. Fallback code must combine the immutable molecular record with this
 validated bridge; it must not edit or reinterpret the Step-5 snapshot.
 
-Named RI bases are translated from hash-pinned files in the Q-Chem auxiliary
-library, which preserves heavy-element coverage that PySCF's packaged aliases
-do not always provide. Q-Chem's implicit def2 ECP behavior is made explicit in
-PySCF. Missing source RI assignments are frozen as `rimp2-def2-TZVPPD` for
-BigNC, `rimp2-def2-TZVP` for GDB9-W1-F12, and `rimp2-def2-QZVPPD` for OPT;
-runtime automatic auxiliary generation is forbidden. `AE11_Yb` preserves its
-verified explicit all-electron orbital and auxiliary blocks with no ECP.
+Production Q-Chem uses each matching named or embedded orbital, ECP, and
+auxiliary-basis definition directly. The validated PySCF translations remain
+available only for fallback and cross-engine checks. Missing source RI
+assignments are frozen as `rimp2-def2-TZVPPD` for BigNC,
+`rimp2-def2-TZVP` for GDB9-W1-F12, and `rimp2-def2-QZVPPD` for OPT; runtime
+automatic auxiliary generation is forbidden. `AE11_Yb` preserves its verified
+explicit all-electron orbital and auxiliary blocks with no ECP.
+
+## Version-5/6 integratedDV output contract
+
+The current Q-Chem trunk prints integratedDV only when
+`QCHEM_PRINT_INTEGRATED_DV=1`. A feature run must use a meta-GGA functional and
+emit a final complete block delimited by `COACH integratedDV begin` and
+`COACH integratedDV end`, with label `integratedDV` and printed shape 96x180.
+The extractor records the number of complete blocks, retains the final complete
+block, transposes it to the COACH 180x96 convention, and selects rows
+`(64,154,166)`. Grid `250974` supplies the 288 semilocal fitting columns;
+`99590` and `75302` supply grid-difference constraints.
+
+The Q-Chem port follows the historical layout but uses the frozen revised-model
+`gamma_c,ss=0.01`, not historical `0.2`. Source-level selected-feature parity
+against `revwb97m2/integrated_dv.py` passed with maximum absolute difference
+`3.4694469519536142e-18`. Native Q-Chem build and smoke validation remain
+Step-7/Step-10 execution gates; they are not prerequisites for freezing the
+scientific policy in Step 1.
 
 ## Remaining gates before a real pilot
 
-1. Pass an open-shell PySCF parent/UMP2 gateway.
-2. Obtain the authoritative published omegaB97M(2) coefficients and reproduce
-   trusted molecular and reaction energies.
+1. Build and provenance-pin the current Q-Chem executable.
+2. Pass restricted and unrestricted archive-reuse gateways on all three feature
+   grids, including archive hash identity and native integratedDV comparison.
+3. Complete: the final-complete-block extractor, immutable atomic publisher,
+   restart reuse, and missing/corrupt-archive refusal pass fixtures and all six
+   native Q3 cases.
+4. Prove that integratedDV and scalar features use the same imported archive.
+5. Validate the COACH D4-ATM definition and independent open-interval solver
+   bounds.
+6. Reproduce the parent/component, published omegaB97M(2), reaction, and direct
+   energy identities required by the machine-readable specification.
 
-The Cycle-2 fitting-weight, locked data-role, immutable all-UKS molecular-input,
-PySCF basis-bridge, and project-owned integratedDV-kernel gates are complete.
-The manifest-driven all-UKS parent driver and bitwise checkpoint
-density/feature-identity gate are also complete for the closed-shell
-`h2o_SW49` gateway. Its PySCF stability response remained indeterminate because
-the response omits NLC and was prohibitively slow; this is recorded rather
-than interpreted as a stable or unstable solution.
+The Cycle-2 fitting-weight, locked data-role, Q-Chem orbital-authority, immutable
+PySCF fallback-input, PySCF basis-bridge fallback, and project-owned Python
+integratedDV reference gates are complete. The previous parent/checkpoint and
+stability evidence remains regression evidence. Version 6 performs no new SCF
+or stability search and never substitutes an alternative solution.
 
-Version 4 therefore makes the validated parent checkpoint authoritative
-independently of stability. Stability is a separate timed diagnostic for
-gateway/model-critical or flagged species and records `stable`, `unstable`,
-`indeterminate`, or `unavailable`; it never changes orbitals automatically.
-
-Changing the parent method, fixed-orbital policy, 291-feature layout,
+Changing the parent method, fixed-orbital policy, 292-feature layout,
 semilocal forms, nonlinear parameters, or energy partition requires a new
 specification version.

@@ -6,7 +6,41 @@ import numpy as np
 import pytest
 
 from revwb97m2.production_generator import BOUNDARY_BY_NAME, inspect_boundary
-from revwb97m2.step13_stages import publish_assembly
+from revwb97m2.step13_stages import publish_assembly, publish_d4_atm
+
+
+def test_d4_atm_boundary_publishes_frozen_coach_feature(tmp_path, monkeypatch) -> None:
+    parameters = {"s6": 0.0, "s8": 0.0, "s9": 1.0, "a1": 0.215, "a2": 5.8, "alp": 16.0}
+    monkeypatch.setattr(
+        "revwb97m2.step13_stages._context",
+        lambda *_args: {
+            "spec": {
+                "double_hybrid_energy": {
+                    "dispersion_policy": {
+                        "d4_atm": {
+                            "definition": "pure_three_body_coach_d4_atm",
+                            "damping_parameters": parameters,
+                        }
+                    }
+                }
+            },
+            "mol": object(),
+            "identity": {"scope": "gscdb137", "source_record_sha256": "a" * 64},
+            "species": "fixture",
+            "fingerprint": "b" * 64,
+            "parent_manifest_sha256": "c" * 64,
+        },
+    )
+    monkeypatch.setattr(
+        "revwb97m2.step13_stages.evaluate_d4_atm",
+        lambda _mol, observed: -0.005 if observed == parameters else float("nan"),
+    )
+    output = tmp_path / "d4_atm"
+    manifest = publish_d4_atm(tmp_path / "parent", output)
+    assert manifest["status"] == "d4_atm_complete_and_validated"
+    assert json.loads((output / "d4_atm.json").read_text())["energy_hartree"] == pytest.approx(-0.005)
+    assert (output / "D4_ATM_COMPLETE").is_file()
+    assert json.loads((output / "validation.json").read_text())["status"] == "passed"
 
 
 def test_split_assembly_publishes_contract_complete_boundary(tmp_path, monkeypatch) -> None:
@@ -61,12 +95,20 @@ def test_split_assembly_publishes_contract_complete_boundary(tmp_path, monkeypat
     (root / "ri_mp2/validation.json").write_text(
         json.dumps({"status": "passed"}), encoding="utf-8"
     )
+    (root / "d4_atm").mkdir()
+    (root / "d4_atm/d4_atm.json").write_text(
+        json.dumps({"energy_hartree": -0.005}), encoding="utf-8"
+    )
+    (root / "d4_atm/validation.json").write_text(
+        json.dumps({"status": "passed"}), encoding="utf-8"
+    )
 
     output = root / "assembly"
     manifest = publish_assembly(root, output)
     assert manifest["status"] == "species_assembly_complete_and_validated"
-    assert np.load(output / "feature_vector_78.npy").shape == (78,)
-    assert np.load(output / "feature_vector_291.npy").shape == (291,)
+    assert np.load(output / "feature_vector_79.npy").shape == (79,)
+    assert np.load(output / "feature_vector_292.npy").shape == (292,)
+    assert manifest["shared_scalar_values"]["d4_atm"] == pytest.approx(-0.005)
     report = inspect_boundary(
         output,
         BOUNDARY_BY_NAME["assembly"],

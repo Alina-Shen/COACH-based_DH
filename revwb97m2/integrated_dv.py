@@ -94,6 +94,9 @@ def _series(x: np.ndarray, size: int, family: str) -> np.ndarray:
                 (2.0 * degree - 1.0) * x * out[:, order - 1]
                 - (degree - 1.0) * out[:, order - 2]
             ) / degree
+    elif family == "chebyshev":
+        for order in range(2, size):
+            out[:, order] = 2.0 * x * out[:, order - 1] - out[:, order - 2]
     else:
         raise ValueError(f"Unsupported polynomial family: {family}")
     return out

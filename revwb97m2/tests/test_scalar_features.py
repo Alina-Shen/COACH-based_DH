@@ -12,6 +12,7 @@ from revwb97m2.scalar_features import (
     assemble_feature_vector,
     assemble_r1_r2_feature_vectors,
     direct_energy_identity,
+    evaluate_d4_atm,
     evaluate_ri_ump2,
     fixed_energy_partition,
     publish_r1_r2_assembly,
@@ -61,20 +62,20 @@ def test_ri_ump2_uses_energy_only_kernel_without_retaining_t2(
 
 def test_feature_layout_and_scalar_indices() -> None:
     semilocal = np.arange(288, dtype=np.float64).reshape(3, 96)
-    vector = assemble_feature_vector(semilocal, -1.25, 0.02, -0.31)
+    vector = assemble_feature_vector(semilocal, -1.25, 0.02, -0.31, -0.004)
     assert vector.shape == (FEATURE_COUNT,)
     assert np.array_equal(vector[:288], semilocal.reshape(-1))
-    assert np.array_equal(vector[288:], np.asarray([-1.25, 0.02, -0.31]))
+    assert np.array_equal(vector[288:], np.asarray([-1.25, 0.02, -0.31, -0.004]))
 
 
 def test_feature_layout_rejects_wrong_selected_shape() -> None:
     with pytest.raises(ValueError, match="expected selected semilocal shape"):
-        assemble_feature_vector(np.zeros((180, 96)), -1.0, 0.0, -0.1)
+        assemble_feature_vector(np.zeros((180, 96)), -1.0, 0.0, -0.1, -0.001)
 
 
 def test_named_direct_energy_matches_vector_dot() -> None:
     semilocal = np.linspace(-0.8, 0.9, 288).reshape(3, 96)
-    report = direct_energy_identity(-7.5, semilocal, (-1.2, 0.03, -0.4))
+    report = direct_energy_identity(-7.5, semilocal, (-1.2, 0.03, -0.4, -0.005))
     assert report["passed"]
     assert report["maximum_absolute_difference_hartree"] <= 1.0e-12
 
@@ -101,20 +102,22 @@ def test_fixed_energy_partition_uses_full_unscaled_lr_hf() -> None:
     }
 
 
-def test_shared_scalars_assemble_r1_78_and_r2_291() -> None:
+def test_shared_scalars_assemble_r1_79_and_r2_292() -> None:
     r1 = np.arange(75, dtype=np.float64)
     r2 = np.arange(288, dtype=np.float64) + 100.0
-    vectors = assemble_r1_r2_feature_vectors(r1, r2, -1.25, 0.02, -0.31)
+    vectors = assemble_r1_r2_feature_vectors(r1, r2, -1.25, 0.02, -0.31, -0.004)
     assert vectors["R1"].shape == (MODEL_FEATURE_COUNTS["R1"],)
     assert vectors["R2"].shape == (MODEL_FEATURE_COUNTS["R2"],)
     assert np.array_equal(vectors["R1"][:75], r1)
     assert np.array_equal(vectors["R2"][:288], r2)
-    assert np.array_equal(vectors["R1"][-3:], vectors["R2"][-3:])
+    assert np.array_equal(vectors["R1"][-4:], vectors["R2"][-4:])
 
 
 def test_shared_assembly_rejects_wrong_semilocal_length() -> None:
     with pytest.raises(ValueError, match="R1 semilocal length 75"):
-        assemble_r1_r2_feature_vectors(np.zeros(74), np.zeros(288), -1.0, 0.0, -0.2)
+        assemble_r1_r2_feature_vectors(
+            np.zeros(74), np.zeros(288), -1.0, 0.0, -0.2, -0.001
+        )
 
 
 def test_atomic_r1_r2_artifact_uses_one_semilocal_and_scalar_source(tmp_path) -> None:
@@ -125,10 +128,10 @@ def test_atomic_r1_r2_artifact_uses_one_semilocal_and_scalar_source(tmp_path) ->
     scalar.mkdir()
     r1_path = semilocal / "r1_semilocal_features_75_250974.npy"
     r2_path = semilocal / "r2_semilocal_features_288_250974.npy"
-    scalars_path = scalar / "scalar_features_288_290.npy"
+    scalars_path = scalar / "scalar_features_288_291.npy"
     np.save(r1_path, np.arange(75.0))
     np.save(r2_path, np.arange(288.0))
-    np.save(scalars_path, np.asarray([-1.2, 0.03, -0.4]))
+    np.save(scalars_path, np.asarray([-1.2, 0.03, -0.4, -0.005]))
     digest = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
     (semilocal / "semilocal_manifest.json").write_text(
         json.dumps({
@@ -141,7 +144,7 @@ def test_atomic_r1_r2_artifact_uses_one_semilocal_and_scalar_source(tmp_path) ->
     )
     (scalar / "scalar_manifest.json").write_text(
         json.dumps({
-            "schema_version": 1,
+            "schema_version": 2,
             "status": "scalar_features_complete_and_validated",
             "species": "fixture",
             "artifacts_sha256": {scalars_path.name: digest(scalars_path)},
@@ -150,8 +153,44 @@ def test_atomic_r1_r2_artifact_uses_one_semilocal_and_scalar_source(tmp_path) ->
     manifest = publish_r1_r2_assembly(semilocal, scalar, output)
     assert manifest["shared_grid_density_evaluation"] is True
     assert manifest["shared_scalar_evaluation"] is True
-    assert np.load(output / "feature_vector_78.npy").shape == (78,)
-    assert np.load(output / "feature_vector_291.npy").shape == (291,)
+    assert np.load(output / "feature_vector_79.npy").shape == (79,)
+    assert np.load(output / "feature_vector_292.npy").shape == (292,)
     assert (output / "ASSEMBLY_COMPLETE").is_file()
     with pytest.raises(FileExistsError, match="refusing to overwrite"):
         publish_r1_r2_assembly(semilocal, scalar, output)
+
+
+def test_d4_atm_uses_frozen_coach_definition(monkeypatch) -> None:
+    calls = {}
+
+    class FakeMol:
+        charge = -1
+
+        def atom_charges(self):
+            return np.asarray([1, 8])
+
+        def atom_coords(self):
+            return np.asarray([[0.0, 0.0, 0.0], [0.0, 0.0, 1.7]])
+
+    class FakeModel:
+        def __init__(self, numbers, positions, charge):
+            calls["model"] = (numbers, positions, charge)
+
+        def get_dispersion(self, param, grad):
+            calls["dispersion"] = (param, grad)
+            return {"energy": -0.006}
+
+    class FakeParam:
+        def __init__(self, **kwargs):
+            calls["parameters"] = kwargs
+
+    monkeypatch.setattr("revwb97m2.scalar_features.DispersionModel", FakeModel)
+    monkeypatch.setattr("revwb97m2.scalar_features.DampingParam", FakeParam)
+    parameters = {"s6": 0.0, "s8": 0.0, "s9": 1.0, "a1": 0.215, "a2": 5.8, "alp": 16.0}
+    assert evaluate_d4_atm(FakeMol(), parameters) == pytest.approx(-0.006)
+    numbers, positions, charge = calls["model"]
+    assert np.array_equal(numbers, np.asarray([1, 8]))
+    assert positions.shape == (2, 3)
+    assert charge == -1
+    assert calls["parameters"] == parameters
+    assert calls["dispersion"][1] is False

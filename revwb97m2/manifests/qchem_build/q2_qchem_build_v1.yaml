@@ -1,0 +1,70 @@
+schema_version: 1
+status: submitted
+prepared_on: "2026-09-03"
+name: revwb97m2_qchem_integrated_dv_build_v1
+
+source:
+  qchem_root: /clusterfs/mhg-data/yaoshen/qchem/trunk
+  qchem_svn_url: https://jubilee.q-chem.com/svnroot/qchem/trunk
+  qchem_svn_revision: 48798
+  libks_root: /clusterfs/mhg-data/yaoshen/qchem/trunk/libks
+  libks_svn_url: https://jubilee.q-chem.com/svnroot/libks/trunk
+  libks_svn_revision: 1666
+  libks_local_diff_sha256: 8d40ca02fac8edd3f1d99886755a0a7794c462bbcb606f2378f23eabb5570bf0
+  allowed_local_changes:
+    - path: libks/libks/CMakeLists.txt
+      svn_status: modified
+      sha256: afa25d4a7d744b84ac395fbf599cb1ff4ce2161cbd863c03218206128e0b04db
+    - path: libks/libks/drivers/ks_driver_exc.C
+      svn_status: modified
+      sha256: 35d752de612ea206a6e4d72f2ef7ed6fc7aac8535e5ead4da9c12a5af2b36d22
+    - path: libks/libks/exc_fxc/integrated_dv.C
+      svn_status: added
+      sha256: 7c1ce184380c2b79f96c9b8b3fe99823f4b23ae43a1ca6277d92697f99ef1199
+    - path: libks/libks/exc_fxc/integrated_dv.h
+      svn_status: added
+      sha256: 193ec198bd088bfca9cea13cf300537f426b84198043ca889aed94236ab4912c
+
+build:
+  id: qchem-r48798-libks-r1666-idv-8d40ca02
+  install_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_builds/qchem-r48798-libks-r1666-idv-8d40ca02
+  build_directory_name: build
+  configuration: relwithdebinfo_shared_openmp
+  configure_arguments: [gnu, openmp, relwdeb, version]
+  compiler_family: GNU
+  compiler_version: 10.5.0
+  compiler_root: /global/software/rocky-8.x86_64/gcc/linux-rocky8-x86_64/gcc-8.5.0/gcc-10.5.0-obvhoavhjnrlqxypkfzr53nbrlywiuws
+  expected_executable: exe/qcprog.exe
+  provenance_outputs:
+    - configure.log
+    - build.log
+    - install.log
+    - build_provenance.txt
+    - executable.sha256
+    - executable.ldd.txt
+  validator: revwb97m2/scripts/validate_q2_qchem_build.py
+  validation_report: revwb97m2/manifests/qchem_build/validation.json
+
+slurm:
+  script: revwb97m2/slurm/run_q2_qchem_build.sh
+  partition: cm1
+  account: lr_qchem
+  qos: condo_qchem
+  cpus_per_task: 16
+  memory: 128G
+  time_limit: "12:00:00"
+  job_id: 25523453
+  submitted_at: "2026-09-03T21:28:15-07:00"
+  predicted_start_at_submission: "2026-09-03T21:28:54-07:00"
+  initial_state: PENDING
+  initial_reason: Resources
+
+completion_gates:
+  configure_exit_zero: pending
+  full_build_exit_zero: pending
+  install_exit_zero: pending
+  executable_regular_nonempty: pending
+  executable_sha256_recorded: pending
+  dynamic_dependencies_recorded_and_resolved: pending
+  compiler_recorded: pending
+  source_revisions_and_diff_revalidated_at_build_start: pending

@@ -5,7 +5,7 @@ omegaB97M(2) practice. The upstream `../coach/` checkout is treated as read-only
 
 ## Authoritative scientific specification
 
-The frozen version-4 specification is
+The frozen version-6 specification is
 [`configs/scientific_spec.yaml`](configs/scientific_spec.yaml), with rationale
 in [`docs/scientific_specification.md`](docs/scientific_specification.md). Run
 its independent validation gate with:
@@ -13,6 +13,10 @@ its independent validation gate with:
 ```bash
 python scripts/validate_scientific_spec.py
 ```
+
+The versioned [Q-Chem orbital authority](manifests/qchem_orbitals/README.md)
+defines the 14,006-species canonical inventory, external-scope gaps, and the
+nonmutating copy-and-hash contract.
 
 The storage policy and organized version-controlled/heavy-data trees are
 defined in [`docs/storage_layout.md`](docs/storage_layout.md).
@@ -46,10 +50,10 @@ weighting evidence are explained in
 python scripts/validate_gscdb137_manifest.py
 ```
 
-Specification version 4 follows the manifest's per-species GSCDB basis
-assignments and translates verified named/generated basis, ECP, and auxiliary
-basis metadata into PySCF definitions. The earlier Q-Chem comparison utility
-remains available for provenance auditing:
+Specification version 6 follows the manifest's per-species GSCDB basis
+assignments and matching Q-Chem inputs/archives directly for production.
+The validated named/generated basis, ECP, and auxiliary-basis translations into
+PySCF remain a nonproduction fallback and cross-engine audit utility:
 
 ```bash
 python scripts/validate_gscdb_basis_policy.py
@@ -95,8 +99,9 @@ integratedDV inside Q-Chem without a fresh PySCF SCF. See
 
 [`scalar_features.py`](scalar_features.py) consumes a validated parent
 checkpoint without rerunning SCF. It appends unscaled SR-HF, fixed-grid VV10
-at `b=10,C=0.01`, and total frozen-core canonical DF-UMP2 as columns
-`288:291`, while preserving same-spin/opposite-spin PT2 diagnostics and the
+at `b=10,C=0.01`, total frozen-core canonical DF-UMP2, and frozen-parameter
+COACH pure three-body D4-ATM as columns `288:292`, while preserving
+same-spin/opposite-spin PT2 diagnostics and the
 complete fixed-energy partition. Atomic artifacts, direct-energy identities,
 resource measurements, and validation commands are described in the
 [Step 9 manifest](manifests/scalar_features/README.md).
@@ -123,15 +128,15 @@ The summary is intentionally an early Step-12 measurement, not a production
 resource authorization. In particular, it refuses to infer CPU-hours from
 only the small gateways while the high-cost counterpoise case is incomplete.
 The high-cost case need not pass before fitting: its terminal outcome is
-resource evidence, while BigNC remains post-freeze final assessment because
-the frozen omegaB97M(2)-form model deliberately has no D4-ATM term.
+resource evidence. BigNC remains post-freeze final assessment and cannot tune
+the newly added D4-ATM coefficient.
 
 ## Preparatory production generator
 
 Step 13 has begun only at its resource-independent boundary. The
 [`production_generator.py`](production_generator.py) planner joins the exact
 17,452-species fixed-geometry role union to the validated basis and immutable
-record authorities, inventories seven independently resumable boundaries, and
+record authorities, inventories eight independently resumable boundaries, and
 publishes non-overwriting dry-run plans. It never runs chemistry, chooses
 resources, renders SBATCH scripts, or submits jobs.
 
@@ -147,7 +152,7 @@ Step 11 treats the uploaded 2018 omegaB97M(2) paper as a hash-pinned authority
 only for the conventions and five-decimal coefficients it states explicitly.
 [`published_wb97m2.py`](published_wb97m2.py) implements the resulting named
 component algebra as an immutable, non-fitted `R0` comparator; it cannot
-silently reinterpret the project's distinct 291-column `R2` feature vector.
+silently reinterpret the project's distinct 292-column `R2` feature vector.
 The source boundary, coefficients, unresolved authorities, and validation
 status are recorded in the
 [`published_wb97m2` manifest](manifests/published_wb97m2/README.md).
@@ -235,11 +240,14 @@ python3.9 scripts/prepare_qchem_gateway.py prepare \
 The preparation tool refuses to overwrite an existing case. It copies the
 published `h2o_SW49` orbital scratch into separate baseline and working trees,
 preserves an exact copy of the authoritative input, and creates a derived input
-whose only semantic changes are `MAX_SCF_CYCLES 0` and `GEN_SCFMAN FALSE`.
+whose orbital-reuse controls are `MAX_SCF_CYCLES 0` and `GEN_SCFMAN FALSE`.
+Feature inputs must also set `XC_FXC 3` to select the libks XC Fock engine;
+this is a numerical-engine selector and does not change omegaB97M-V or the
+imported density.
 `PREPARED.json`, `source_manifest.json`, `qchem_identity.json`, and
 `input.diff` record the provenance. The new Q-Chem trunk emits a full 96x180
 matrix when `QCHEM_PRINT_INTEGRATED_DV=1`; without that environment variable,
-normal Q-Chem behavior is unchanged. A pinned build, native closed/open-shell
-smoke comparison, extractor, and scientific-specification amendment remain
-required before production submission. Production is not authorized by this
-workflow change alone.
+normal Q-Chem behavior is unchanged. The pinned Q2 build and archive-read
+capability probe pass. The native closed/open-shell three-grid comparison,
+extractor, and remaining workflow gates are still required before production
+submission. Production is not authorized by this workflow change alone.

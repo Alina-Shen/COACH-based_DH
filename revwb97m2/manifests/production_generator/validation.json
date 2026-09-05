@@ -1,35 +1,35 @@
 {
-  "boundary_count_per_species": 7,
+  "boundary_count_per_species": 8,
   "checks": {
     "all_empty_root_boundaries_missing": true,
     "authority_hashes_match": true,
     "boundary_dependencies_match": true,
     "boundary_names_and_order_match": true,
     "dependent_actions_resource_gated": true,
+    "eight_boundaries_per_species": true,
     "exact_role_minimal_population": true,
     "full_dry_run_population": true,
     "parent_actions_resource_gated": true,
     "planner_and_cli_exist": true,
     "preparatory_status": true,
-    "schema_version_1": true,
-    "seven_boundaries_per_species": true,
+    "schema_version_2": true,
     "step12_fields_unset": true,
     "submission_globally_forbidden": true
   },
   "dry_run_summary": {
     "boundary_states": {
-      "missing": 122164
+      "missing": 139616
     },
     "planned_actions": {
-      "eligible_after_dependencies_pending_step12_resources": 104712,
+      "eligible_after_dependencies_pending_step12_resources": 122164,
       "eligible_pending_step12_resources": 17452
     }
   },
-  "policy": "revwb97m2/manifests/production_generator/step13_preparatory_v1.yaml",
-  "policy_sha256": "2fa90d80f3578aac26a6ef79840bb4d90fca3a20d0928c19407447622485d8d4",
+  "policy": "revwb97m2/manifests/production_generator/step13_preparatory_v2.yaml",
+  "policy_sha256": "936c3dd6756c0db066eefac5136604482ed31b06572ab35172f32576471303ce",
   "population_count": 17452,
   "schema_version": 1,
   "status": "passed",
   "submission_authorized": false,
-  "validated_utc": "2026-09-01T03:48:04.366576+00:00"
+  "validated_utc": "2026-09-05T06:29:48.007102+00:00"
 }

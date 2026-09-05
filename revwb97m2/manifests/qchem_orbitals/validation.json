@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "bignc_copy_required": true,
+    "bignc_count_unique": true,
+    "bignc_manifest_hash": true,
+    "bignc_source_archives_complete": true,
+    "canonical_archives_complete": true,
+    "canonical_count": true,
+    "canonical_manifest_hash": true,
+    "canonical_scopes": true,
+    "canonical_unique": true,
+    "gdb_gap_explicit": true,
+    "nonmutating_archive_policy": true,
+    "opt_outside_fixed_geometry_workflow": true,
+    "schema_v1_frozen": true
+  },
+  "details": {
+    "bignc_inventory": {
+      "empty": [],
+      "expected": 75,
+      "missing": [],
+      "nonregular": [],
+      "present_regular_nonempty": 75
+    },
+    "canonical_inventory": {
+      "empty": [],
+      "expected": 14006,
+      "missing": [],
+      "nonregular": [],
+      "present_regular_nonempty": 14006
+    }
+  },
+  "passed": true,
+  "policy": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_orbitals/qchem_orbital_authority_v1.yaml",
+  "policy_sha256": "4023af161a35a66a771cd3ad746655a9ef48b64499b6ad66b4be1c284c94b39b",
+  "schema_version": 1,
+  "status": "passed"
+}

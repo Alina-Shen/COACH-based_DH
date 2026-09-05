@@ -1,25 +1,33 @@
 # Authoritative scientific specification for the COACH-form revision of omegaB97M(2).
-schema_version: 4
+schema_version: 6
 status: frozen
 
 scientific_specification:
   name: revwb97m2_coach_form
-  version: 4
-  frozen_on: "2026-08-31"
+  version: 6
+  frozen_on: "2026-09-04"
   authority: revwb97m2/configs/scientific_spec.yaml
-  supersedes: revwb97m2/configs/archive/scientific_spec.v3.yaml
+  supersedes: revwb97m2/configs/archive/scientific_spec.v5.yaml
+  validator: revwb97m2/scripts/validate_scientific_spec.py
+  validation_report: revwb97m2/manifests/scientific_spec/scientific_spec_v6_validation.json
   amendment:
-    decision: separate_stability_diagnostic_from_authoritative_parent_publication
+    decision: add_independently_fitted_coach_d4_atm_and_remove_vv10_pt2_sum
     reason: >-
-      The Step-8 h2o_SW49 diagnostic remained CPU-bound for more than 30
-      minutes and PySCF warned that its response omits NLC. A validated parent
-      checkpoint is therefore authoritative independently of stability.
-      Stability is a separate timed diagnostic for gateway/model-critical or
-      flagged species; its result is stable, unstable, indeterminate, or
-      unavailable, and an alternative solution is never adopted automatically.
+      Retain VV10 and total frozen-core RI-MP2 as independent linear features,
+      append the COACH pure three-body D4-ATM energy as a fourth scalar feature,
+      and fit all three nonlocal/correlation coefficients independently. Remove
+      the omegaB97M(2) constraint c_vv10 + c_pt2 = 1. The conceptual domain for
+      c_vv10, c_pt2, and c_d4_atm is the open interval (0,1); the numerical MIO
+      implementation uses an explicit 1e-8 interior margin because mathematical
+      programming solvers cannot encode strict inequalities directly.
+    previous_specification_sha256: 527d4d04a4c77cf6cbc591ad77113330664bf06466a384fab3368e0b450e2dc4
     changed_fields:
-      - orbital_source.convergence.stability_analysis
-      - orbital_source.validation.stability_policy
+      - double_hybrid_energy.dispersion_policy
+      - double_hybrid_energy.fitted_energy_terms
+      - feature_models
+      - constraint_profiles
+      - grid_sensitivity
+      - validation.required_gates_before_pilot
   change_control: >-
     Scientific changes require a version increment, a written rationale, and
     rerunning every affected validation gate.
@@ -54,6 +62,8 @@ project:
       - slurm_submission_scripts
     heavy_data:
       - parent_scf_checkpoints
+      - qchem_working_archive_copies
+      - qchem_integrated_dv_outputs
       - integrated_dv_matrices
       - feature_arrays
       - processed_training_matrices
@@ -74,47 +84,92 @@ provenance:
     - scientific_specification_sha256
     - git_commit
     - input_manifest_sha256
-    - parent_checkpoint_sha256
+    - source_qarchive_sha256
+    - working_qarchive_sha256
+    - qchem_input_sha256
+    - qchem_output_sha256
+    - qchem_main_svn_url
+    - qchem_main_svn_revision
+    - qchem_libks_svn_url
+    - qchem_libks_svn_revision
+    - qchem_local_diff_sha256
+    - qchem_executable_sha256
+    - integrated_dv_full_matrix_sha256
+    - integrated_dv_selected_matrix_sha256
+    - integrated_dv_complete_block_count
+    - d4_atm_feature_sha256
     - python_version
-    - pyscf_version
-    - libxc_version
     - numpy_version
     - scipy_version
     - gurobi_version
     - hostname
     - timestamp_utc
     - environment_baseline_sha256
+  fallback_runtime_only:
+    - parent_checkpoint_sha256
+    - pyscf_version
+    - libxc_version
 
 orbital_source:
-  policy: self_consistent_once_per_species_then_fix_for_all_feature_evaluation
-  source_engine: pyscf
-  checkpoint_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species
-  checkpoint_name: wb97m_v_scf.chk
-  checkpoint_is_immutable_after_validation: true
-  checkpoint_reuse_requires_matching_input_and_specification_hashes: true
+  policy: reuse_validated_qchem_qarchive_without_orbital_optimization
+  source_engine: qchem
+  orbital_authority: revwb97m2/manifests/qchem_orbitals/qchem_orbital_authority_v1.yaml
+  orbital_authority_validation: revwb97m2/manifests/qchem_orbitals/validation.json
+  canonical_archive_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2
+  archive_name: qarchive.h5
+  canonical_archive_count: 14006
+  require_regular_nonempty_archive: true
+  authoritative_archives_are_read_only_inputs: true
+  run_from_isolated_nonoverwriting_copy: true
+  archive_copy_requires_matching_source_and_copy_sha256: true
   functional: omegaB97M-V
-  pyscf_xc_label: wb97m-v
-  convergence:
-    energy_tolerance_hartree: 1.0e-9
-    maximum_cycles: 200
-    require_converged: true
-    record_orbital_gradient: true
-    stability_analysis: separate_timed_diagnostic_for_gateway_model_critical_or_flagged_species
-    use_alternate_solution_automatically: false
-  self_consistent: true
+  source_orbitals_were_generated_self_consistently: true
+  self_consistent_in_this_workflow: false
+  orbital_optimization_in_this_workflow: forbidden
   fixed_during_feature_generation_and_fitting: true
-  qchem_orbitals_are_production_inputs: false
-  qchem_role: cross_engine_regression_and_input_metadata_provenance_only
+  qchem_orbitals_are_production_inputs: true
+  qchem_role: authoritative_parent_orbital_and_density_source
+  missing_or_invalid_archive_policy: stop_and_report_without_silent_scf_fallback
+  qchem_execution:
+    source_root: /clusterfs/mhg-data/yaoshen/qchem/trunk
+    historical_reference_root: /clusterfs/mhg/yaoshen/qchem/IDV_print
+    historical_reference_is_read_only: true
+    maximum_scf_cycles: 0
+    gen_scfman: false
+    forbid_orbital_update: true
+    integrated_dv_environment_variable: QCHEM_PRINT_INTEGRATED_DV
+    integrated_dv_environment_value: "1"
+    integrated_dv_requires_mgga: true
+    printed_matrix_shape: [96, 180]
+    printed_matrix_begin_marker: COACH integratedDV begin
+    printed_matrix_label: integratedDV
+    printed_matrix_end_marker: COACH integratedDV end
+    complete_block_policy: retain_final_complete_block_and_record_count
+    stored_matrix_convention: transpose_printed_matrix_to_180x96
+    selected_rows_after_transpose: [64, 154, 166]
+    same_spin_gamma: 0.01
+    historical_same_spin_gamma_not_adopted: 0.2
+    feature_grids: [250974, 99590, 75302]
+    reference_grid: 250974
+    comparison_grids: [99590, 75302]
+  pyscf_fallback:
+    status: validated_nonproduction_fallback_and_cross_engine_regression
+    checkpoint_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species
+    checkpoint_name: wb97m_v_scf.chk
+    use_requires_explicit_new_authorization: true
+    never_selected_automatically: true
+    stability_analysis: separate_timed_diagnostic_for_gateway_model_critical_or_flagged_species
   input_definition:
-    policy: preserve_verified_gscdb137_identity_while_changing_only_the_engine
+    policy: preserve_verified_qchem_input_and_matching_qarchive_identity
     metadata_source: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1
     parsed_metadata_manifest: revwb97m2/manifests/data_roles/qchem_input_metadata.csv
     metadata_fields_used: [geometry, charge, multiplicity, orbital_basis, auxiliary_basis, ecp]
-    orbital_files_used: false
-    qarchive_files_used: false
-    scratch_orbital_directories_used: false
+    orbital_files_used: true
+    qarchive_files_used: true
+    scratch_orbital_directories_used: true
     require_source_hash_validation: true
     immutable_pyscf_manifest:
+      role: validated_nonproduction_fallback
       policy: revwb97m2/manifests/pyscf_inputs/pyscf_input_policy_v1.yaml
       pointer: revwb97m2/manifests/pyscf_inputs/snapshot_pointer.json
       snapshot_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1
@@ -132,6 +187,7 @@ orbital_source:
       reference_policy: UKS_for_all_species
       basis_bridge_status: pending_step_6_semantic_translation_and_validation
     validated_basis_bridge:
+      role: validated_nonproduction_pyscf_fallback
       status: passed
       policy: revwb97m2/manifests/basis_bridge/step6_basis_bridge_v1.yaml
       resolved_records: revwb97m2/manifests/basis_bridge/resolved_basis_records.csv
@@ -153,10 +209,12 @@ orbital_source:
     scope_field: scope
     core_scope_value: gscdb137
     basis_field: basis
-    require_pyscf_semantic_translation_validation: true
-    pyscf_semantic_translation_status: passed_step_6
-    pyscf_semantic_translation_validation: revwb97m2/manifests/basis_bridge/validation.json
-    translate_generated_basis_and_ecp_sections: true
+    production_definition_source: matching_verified_qchem_input
+    require_pyscf_semantic_translation_validation: false
+    use_qchem_named_or_embedded_basis_and_ecp_directly: true
+    pyscf_fallback_semantic_translation_status: passed_step_6
+    pyscf_fallback_semantic_translation_validation: revwb97m2/manifests/basis_bridge/validation.json
+    translate_generated_basis_and_ecp_sections_in_production: false
     forbid_uniform_override: true
     expected_core_species: 13907
     expected_core_distribution:
@@ -181,15 +239,11 @@ orbital_source:
     closed_shell_singlet: unrestricted
     open_shell: unrestricted
     rationale: >-
-      The COACH paper and SI do not state an RKS/UKS reference policy. Match
-      the maintained COACH PySCF generator, which constructs UKS
-      unconditionally, and the released Q-Chem inputs: all 14,006 core and
-      all 3,652 AdditionalSets inputs set UNRESTRICTED True. A spin-zero UKS
-      result may still converge to equal alpha/beta densities and does not by
-      itself imply broken symmetry. Record spin contamination and stability
-      for every species.
+      Preserve the reference encoded by the matching released Q-Chem input and
+      archive. All 14,006 canonical inputs and all 3,652 AdditionalSets inputs
+      set UNRESTRICTED True. No new SCF or stability search is performed, and a
+      spin-zero unrestricted archive is not reinterpreted or replaced.
     evidence:
-      maintained_generator: coach/1_data_generation/pyscf_integrated_dv.py
       core_qchem_input_count_unrestricted_true: 14006
       additional_sets_qchem_input_count_unrestricted_true: 3652
       manuscript_and_si_explicit_reference_policy: absent
@@ -202,13 +256,16 @@ orbital_source:
   validation:
     require_expected_species_manifest: true
     require_input_manifest_hash_match: true
+    require_qchem_orbital_authority_validation: true
+    require_source_and_copy_archive_hash_identity: true
+    require_zero_scf_cycles: true
+    require_integrated_dv_delimiters_and_shape: true
     require_parent_energy_reconstruction: true
     require_reference_type_audit: true
     require_open_shell_gateway_case: true
-    require_checkpoint_reload_identity: true
-    stability_policy: >-
-      record_stable_unstable_indeterminate_or_unavailable_without_automatic_solution_replacement;
-      parent_checkpoint_authority_does_not_depend_on_stability
+    require_checkpoint_reload_identity: false
+    missing_archive_policy: stop_and_report_without_silent_pyscf_regeneration
+    stability_policy: preserve_imported_archive_no_new_stability_search_or_solution_replacement
     passed_closed_shell_rimp2_gateway: revwb97m2/results/2026-08-29-pyscf-qchem-rimp2-h2o-sw49.json
 
 published_reproduction:
@@ -233,30 +290,47 @@ coach_feature_grids:
 
 double_hybrid_energy:
   evaluation: non_self_consistent_on_fixed_wb97m_v_orbitals
+  orbital_source: same_imported_qchem_qarchive_for_all_orbital_dependent_terms
+  forbid_mixing_qchem_semilocal_with_independently_optimized_pyscf_orbitals: true
   range_separation:
     omega_bohr_inverse: 0.3
     long_range_hf_fraction: 1.0
   dispersion_policy:
-    include_coach_d4_atm: false
-    rationale: >-
-      D4-ATM belongs to the final COACH hybrid and is not part of the primary
-      omegaB97M(2)-style double-hybrid model.
+    include_coach_d4_atm: true
+    d4_atm:
+      definition: pure_three_body_coach_d4_atm
+      implementation: dftd4_python_interface
+      implementation_version: 4.2.0
+      geometry_and_charge_only: true
+      orbital_and_grid_independent: true
+      damping_parameters: {s6: 0.0, s8: 0.0, s9: 1.0, a1: 0.215, a2: 5.8, alp: 16.0}
+      parameter_source: coach/FunctionalCOACH/COACH.md
+      reference_implementation: coach/FunctionalCOACH/coach_pyscf.py
+      coefficient_is_linear_feature: true
+      fitted_coefficient_name: c_d4_atm
+      note: >-
+        s9=1 defines the unscaled pure ATM feature. c_d4_atm is a separate
+        revwb97m2 fitting coefficient and must not be folded into s9.
   vv10:
     evaluate_non_self_consistently: true
+    engine: qchem_on_same_imported_archive
     b: 10.0
     C: 0.01
     coefficient_is_linear_feature: true
+    fitted_coefficient_name: c_vv10
   pt2:
     method: RI-MP2
+    engine: qchem_on_same_imported_archive
     amplitudes: canonical_mp2
     frozen_core: true
     auxiliary_basis:
-      policy: source_preserving_translation_with_explicit_external_scope_fallbacks
+      policy: use_matching_qchem_input_named_or_embedded_auxiliary_basis
       manifest_advisory_field: aux_basis_corr
       metadata_field: AUX_BASIS_CORR
-      translate_generated_aux_basis_sections: true
+      translate_generated_aux_basis_sections: false
       require_element_and_shell_coverage_validation: true
-      require_pyscf_alias_mapping_validation: true
+      require_pyscf_alias_mapping_validation: false
+      pyscf_translation_role: validated_nonproduction_fallback
       named_library_source: /global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis
       missing_source_assignments:
         BigNC_external: rimp2-def2-TZVPPD
@@ -267,6 +341,7 @@ double_hybrid_energy:
     denominator_regularization: none
     attenuation: none
     fitted_feature: total_pt2_correlation
+    fitted_coefficient_name: c_pt2
     save_spin_components_for_diagnostics: true
     fit_spin_components_separately: false
   fixed_energy_terms:
@@ -281,6 +356,7 @@ double_hybrid_energy:
     - short_range_hf_exchange
     - vv10_correlation_b10_c001
     - total_pt2_correlation
+    - coach_pure_three_body_d4_atm
   nofit_equation: "E_nuclear + E_one_electron + E_coulomb + E_full_lr_hf"
 
 semilocal_model:
@@ -346,13 +422,23 @@ semilocal_model:
         domain: "[-1,1]"
         polynomial_family: legendre
   implementation_gate:
-    status: passed_step_7
+    status: python_reference_passed_qchem_native_validation_pending_step_7
     test: selected_integrated_dv_features_match_frozen_semantics
     kernel: revwb97m2/integrated_dv.py
     validator: revwb97m2/scripts/validate_integrated_dv.py
     validation_report: revwb97m2/manifests/integrated_dv/validation.json
     output_shape: [3, 96]
     published_coach_coefficients_used: false
+    production_emitter:
+      engine: qchem
+      source_root: /clusterfs/mhg-data/yaoshen/qchem/trunk/libks
+      activation: QCHEM_PRINT_INTEGRATED_DV=1
+      printed_shape: [96, 180]
+      stored_shape_after_transpose: [180, 96]
+      selected_rows: [64, 154, 166]
+      deterministic_selected_feature_parity_max_abs: 3.4694469519536142e-18
+      source_level_status: passed
+      native_qchem_status: pending_step_7
     rationale: >-
       The cleaned workflow defaults to same-spin row 153, while the final-form
       documentation specifies Legendre polynomials in v_sigma, which maps to
@@ -363,13 +449,13 @@ semilocal_model:
       fixed omegaB97M-V densities.
 
 feature_models:
-  active_for_first_real_fit: R2_coachform_291
+  active_for_first_real_fit: R2_coachform_292
   models:
     R0_published_wb97m2:
       purpose: regression_reference_only
       coefficients: published
       fit: false
-    R2_coachform_291:
+    R2_coachform_292:
       purpose: primary_real_training_model
       integrated_dv_rows:
         exchange: 64
@@ -382,7 +468,8 @@ feature_models:
         short_range_hf: 288
         vv10: 289
         pt2: 290
-        total: 291
+        d4_atm: 291
+        total: 292
     R3_optional_scs_pt2:
       enabled: false
       reason: >-
@@ -398,26 +485,30 @@ feature_models:
       algebra but do not freeze the scientific production basis.
 
 constraint_profiles:
-  active_for_first_real_fit: [C0_minimal_critical, C1_nonlocal_sum]
+  active_for_first_real_fit: [C0_minimal_critical]
   definitions:
     C0_minimal_critical:
       coefficient_absolute_bound: 25.0
-      mandatory_nonzero_features: [short_range_hf, pt2]
+      mandatory_nonzero_features: [short_range_hf, vv10, pt2, d4_atm]
       mandatory_features_count_toward_sparsity: true
       short_range_hf_bounds: {minimum: 0.0, maximum: 1.0}
+      independently_fitted_scalar_bounds:
+        conceptual_domain: "(0,1)"
+        strict_inequality_solver_policy: use_fixed_interior_margin
+        solver_margin: 1.0e-8
+        features:
+          vv10: {coefficient: c_vv10, minimum: 1.0e-8, maximum: 0.99999999}
+          pt2: {coefficient: c_pt2, minimum: 1.0e-8, maximum: 0.99999999}
+          d4_atm: {coefficient: c_d4_atm, minimum: 1.0e-8, maximum: 0.99999999}
+        cross_feature_equalities: []
       exchange_uniform_electron_gas:
         enabled: true
         equation: "gx(0,0) + c_sr_hf = 1"
       nonlocal_correlation_sum: {enabled: false}
       exchange_one_electron_bound: {enabled: false}
       sampled_enhancement_bounds: {enabled: false}
-    C1_nonlocal_sum:
-      extends: C0_minimal_critical
-      nonlocal_correlation_sum:
-        enabled: true
-        equation: "c_pt2 + c_vv10 = 1"
     C2_one_electron:
-      extends: C1_nonlocal_sum
+      extends: C0_minimal_critical
       exchange_one_electron_bound:
         enabled: true
         maximum: 1.479
@@ -429,8 +520,10 @@ constraint_profiles:
         same_spin_correlation: {minimum: -10.0, maximum: 10.0}
         opposite_spin_correlation: {minimum: -10.0, maximum: 10.0}
   policy: >-
-    Run C0 and C1 first. Audit fitted factors densely. Add C2 or C3 only to
-    address observed pathologies or as a predefined scientific comparison.
+    Run C0 first with independent bounded VV10, PT2, and D4-ATM coefficients.
+    Audit fitted factors densely. Add C2 or C3 only to address observed
+    pathologies or as a predefined scientific comparison. No constraint couples
+    c_vv10 to c_pt2 or c_d4_atm.
 
 grid_sensitivity:
   classification: numerical_not_physical_constraint
@@ -444,10 +537,13 @@ grid_sensitivity:
     largest_model_error_rows_per_candidate: 100
     largest_global_row_l1_norms: 200
     deduplicate: true
-  zero_difference_features: [short_range_hf, pt2]
+  zero_difference_features: [short_range_hf, pt2, d4_atm]
   vv10_difference_policy: >-
     Store a nonzero VV10 grid difference only if VV10 is explicitly evaluated
     on both grids; otherwise store zero and record the reason.
+  d4_atm_difference_policy: >-
+    Always zero because the frozen D4-ATM feature depends only on geometry,
+    nuclear charges, and molecular charge, not on the numerical DFT grid.
 
 data_policy:
   target_database: GSCDB137
@@ -540,7 +636,8 @@ data_policy:
   failed_reaction_policy: stop_and_report
 
 execution_protocol:
-  base_orbital_training_cycles: 1
+  base_orbital_training_cycles: 0
+  source_orbitals: precomputed_self_consistent_qchem_wb97m_v_archives
   parent_method_for_cycle: omegaB97M-V
   update_parent_orbitals_from_fitted_model: false
   fitting_selection_and_weights: updated_coach_si_final_cycle_table_2
@@ -552,8 +649,10 @@ execution_protocol:
   pass_1: unconstrained_grid_sensitivity_discovery
   pass_2: selected_grid_difference_constraints
   note: >-
-    The two grid passes are part of one fixed-parent training cycle and do not
-    regenerate orbitals or scalar features.
+    The two grid passes reuse the same imported Q-Chem archive and do not
+    regenerate orbitals or scalar features. The precomputed source orbitals
+    represent the single fixed omegaB97M-V parent; this workflow performs zero
+    new parent-orbital optimization cycles.
 
 optimization:
   solver: gurobi
@@ -565,7 +664,7 @@ optimization:
   warm_start_pass2_from_pass1: true
   sparsity_count_includes_mandatory_scalar_features: true
   sparsity_scan:
-    R2_coachform_291: [14, 24, 32, 40, 48, 64, 80]
+    R2_coachform_292: [14, 24, 32, 40, 48, 64, 80]
   selection_uses:
     - gscdb137_dataset_and_category_NER
     - overfitting_diagnostic_mean_NER
@@ -590,15 +689,20 @@ validation:
   passed_pyscf_input_validation: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/pyscf/revwb97m2_all_uks_inputs_v1/validation.json
   passed_basis_bridge_validation: revwb97m2/manifests/basis_bridge/validation.json
   passed_integrated_dv_validation: revwb97m2/manifests/integrated_dv/validation.json
+  passed_qchem_orbital_authority_validation: revwb97m2/manifests/qchem_orbitals/validation.json
   required_gates_before_pilot:
     - scientific_specification_schema
     - locked_data_roles_and_qchem_input_metadata
-    - immutable_all_uks_pyscf_input_manifest
+    - qchem_orbital_authority_14006_complete
+    - qchem_full_build_and_binary_provenance
+    - qchem_archive_copy_hash_identity
     - selected_integrated_dv_features_match_frozen_semantics
-    - pyscf_rimp2_h2o_sw49_cross_engine
-    - pyscf_parent_checkpoint_reload_identity
-    - pyscf_open_shell_parent_and_ump2
-    - pyscf_generated_basis_ecp_and_auxiliary_basis_translation
+    - qchem_integrated_dv_delimiters_shape_and_finite_values
+    - qchem_restricted_and_unrestricted_three_grid_gateway
+    - qchem_final_complete_block_extractor
+    - qchem_same_archive_scalar_feature_identity
+    - coach_d4_atm_definition_and_energy_validation
+    - independent_open_interval_scalar_coefficient_bounds
     - wb97m_v_parent_energy_from_components
     - published_wb97m2_energy_from_features
     - reaction_features_from_species_stoichiometry
@@ -606,8 +710,7 @@ validation:
   comparison_models:
     - omegaB97M-V
     - published_omegaB97M(2)
-    - R2_coachform_291_C0
-    - R2_coachform_291_C1
+    - R2_coachform_292_C0
 
 execution_stages:
   - {name: gateway, approximate_species_count: "5-10", submit_to_slurm: false}
@@ -622,7 +725,12 @@ safety:
   save_failure_reason: true
   never_store_secrets_in_outputs: true
   production_run_requires_dry_run_first: true
-  qchem_orbitals_must_not_be_used_as_production_inputs: true
+  qchem_orbitals_must_be_used_as_production_inputs: true
+  authoritative_qchem_archives_must_not_be_modified: true
+  qchem_runs_require_isolated_verified_archive_copy: true
+  missing_or_invalid_qchem_archive_must_stop: true
+  silent_pyscf_scf_fallback_forbidden: true
+  production_qchem_requires_zero_scf_cycles: true
   preserve_qchem_route_backup: true
   qchem_route_code_backup: coach/qchem_orbital_route
   qchem_route_smoke_backup: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/qchem_orbital_route

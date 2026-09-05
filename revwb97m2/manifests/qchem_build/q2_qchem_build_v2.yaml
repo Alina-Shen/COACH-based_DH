@@ -1,0 +1,79 @@
+schema_version: 2
+status: complete
+completed_on: "2026-09-04"
+name: revwb97m2_qchem_integrated_dv_inplace_build_v2
+
+source:
+  qchem_root: /clusterfs/mhg-data/yaoshen/qchem/trunk
+  qchem_svn_revision: 48798
+  libks_root: /clusterfs/mhg-data/yaoshen/qchem/trunk/libks
+  libks_svn_revision: 1666
+  libks_local_diff_sha256: a7d9660e8fccc293691639cab38c4fe29a1496b1974383aa46ade92ba9eb92c3
+  allowed_local_changes:
+    - path: libks/libks/CMakeLists.txt
+      svn_status: modified
+      sha256: afa25d4a7d744b84ac395fbf599cb1ff4ce2161cbd863c03218206128e0b04db
+    - path: libks/libks/drivers/ks_driver_exc.C
+      svn_status: modified
+      sha256: 35d752de612ea206a6e4d72f2ef7ed6fc7aac8535e5ead4da9c12a5af2b36d22
+    - path: libks/libks/exc_fxc/integrated_dv.C
+      svn_status: added
+      sha256: 7c1ce184380c2b79f96c9b8b3fe99823f4b23ae43a1ca6277d92697f99ef1199
+    - path: libks/libks/exc_fxc/integrated_dv.h
+      svn_status: added
+      sha256: 193ec198bd088bfca9cea13cf300537f426b84198043ca889aed94236ab4912c
+    - path: libks/qchem/ks_main.C
+      svn_status: modified
+      sha256: ab3510caca1208d164d955f5f0a65f999063bd3efa2af09739d2bd7a2051657c
+
+build:
+  mode: user_directed_in_place
+  configuration: gnu_openmp_relwithdebinfo
+  configure_command: ./configure gnu openmp relwdeb
+  configure_rerun_for_final_patch: false
+  configure_rerun_reason: dispatcher-only source change did not alter CMake configuration
+  build_directory: /clusterfs/mhg-data/yaoshen/qchem/trunk/build
+  build_command: make install -j8
+  build_exit_zero: true
+  install_exit_zero: true
+  compiler_family: GNU
+  compiler_version: 10.5.0
+  openmp_enabled: true
+  executable: /clusterfs/mhg-data/yaoshen/qchem/trunk/exe/qcprog.exe
+  executable_size_bytes: 198414032
+  executable_sha256: 0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084
+  installed_libks: /clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks.so
+  installed_libks_sha256: 36a8f41a10d7541c25731be398ae270814dde7c5f23d2aeea52a6023e3b629a7
+  dynamic_dependencies_resolved: true
+  module_stack_source: user_supplied
+  module_load_warnings: >-
+    Lmod reported default/dependency notices for HDF5 and Intel modules; the
+    already-configured build retained absolute GNU 10.5, MKL, and HDF5 paths,
+    and build/install plus dependency resolution completed successfully.
+
+runtime_contract:
+  orbital_source: existing_qchem_qarchive
+  maximum_scf_cycles: 0
+  gen_scfman: false
+  xc_fxc: 3
+  xc_fxc_role: select_libks_xc_fock_engine
+  integrated_dv_environment: QCHEM_PRINT_INTEGRATED_DV=1
+  printed_shape: [96, 180]
+  note: >-
+    XC_FXC 3 is required because the default legacy XC Fock path does not
+    dispatch through libks. It selects the numerical implementation and does
+    not change the requested omegaB97M-V functional or imported density.
+
+runtime_probe_record: q2_runtime_probe_v2.json
+validator: revwb97m2/scripts/validate_q2_qchem_build.py
+validation_report: revwb97m2/manifests/qchem_build/validation_v2.json
+
+completion_gates:
+  revisions_and_complete_diff_pinned: passed
+  full_build_and_install_exit_zero: passed
+  executable_and_installed_libks_hashed: passed
+  dynamic_dependencies_resolved: passed
+  archive_read_with_zero_scf_cycles: passed
+  one_delimited_96x180_numeric_finite_block: passed
+  normal_qchem_termination: passed
+

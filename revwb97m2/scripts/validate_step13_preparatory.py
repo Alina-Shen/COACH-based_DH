@@ -36,7 +36,7 @@ def main() -> int:
         "--policy",
         type=Path,
         default=ROOT
-        / "manifests/production_generator/step13_preparatory_v1.yaml",
+        / "manifests/production_generator/step13_preparatory_v2.yaml",
     )
     parser.add_argument(
         "--output",
@@ -65,7 +65,7 @@ def main() -> int:
     resource_gate = policy["resource_gate"]
     expected_boundary_total = len(population) * len(BOUNDARIES)
     checks = {
-        "schema_version_1": policy["schema_version"] == 1,
+        "schema_version_2": policy["schema_version"] == 2,
         "preparatory_status": policy["status"]
         == "preparatory_implementation_in_progress_step12_resources_pending",
         "authority_hashes_match": authorities["species_roles_sha256"]
@@ -85,8 +85,8 @@ def main() -> int:
             boundary_rows[index]["dependencies"] == list(boundary.dependencies)
             for index, boundary in enumerate(BOUNDARIES)
         ),
-        "seven_boundaries_per_species": len(BOUNDARIES) == 7
-        and plan["boundary_count_per_species"] == 7,
+        "eight_boundaries_per_species": len(BOUNDARIES) == 8
+        and plan["boundary_count_per_species"] == 8,
         "full_dry_run_population": plan["population_count"] == 17452,
         "all_empty_root_boundaries_missing": plan["summary"]["boundary_states"]
         == {"missing": expected_boundary_total},
@@ -97,7 +97,7 @@ def main() -> int:
         "dependent_actions_resource_gated": plan["summary"]["planned_actions"].get(
             "eligible_after_dependencies_pending_step12_resources"
         )
-        == 17452 * 6,
+        == 17452 * 7,
         "submission_globally_forbidden": plan["submission_authorized"] is False
         and all(row["submission_authorized"] is False for row in plan["species"]),
         "step12_fields_unset": resource_gate["step12_signoff_required"] is True

@@ -1,0 +1,57 @@
+schema_version: 1
+status: frozen
+frozen_on: "2026-09-03"
+name: revwb97m2_qchem_orbital_authority_v1
+
+scientific_role: >-
+  Authoritative fixed omegaB97M-V Q-Chem orbital archives for revwb97m2
+  feature generation without a new SCF optimization.
+
+canonical_gscdb:
+  species_manifest: revwb97m2/manifests/gscdb137/species_manifest.csv
+  species_manifest_sha256: 71e53daa9ffcf5cd6a2415bf3d3e77983db385e454a680f2838cb0814b7176de
+  orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2
+  archive_filename: qarchive.h5
+  expected_species: 14006
+  expected_scopes:
+    gscdb137: 13907
+    auxiliary_only: 99
+  require_regular_nonempty_archive: true
+  missing_archive_policy: stop_and_report
+  allow_manifest_excluded_directories: true
+  authority_is_manifest_membership_not_raw_directory_count: true
+
+external_scopes:
+  BigNC:
+    role: post_freeze_final_assessment
+    status: source_archives_available_copy_and_validate_before_use
+    species_manifest: revwb97m2/manifests/gscdb137/bignc_species_manifest.csv
+    species_manifest_sha256: 203aaacb8f161f130f5b055d15915637e5e9e4fb2fcb89567956281df81fcce9
+    source_orbital_root: /global/scratch/users/jsliang/BigNC/wB97M-V
+    expected_species: 75
+    archive_filename: qarchive.h5
+    require_project_owned_nonoverwriting_copy_before_execution: true
+  GDB9_W1_F12:
+    role: post_freeze_final_assessment
+    status: blocked_no_validated_qchem_orbital_archive_authority
+    expected_species: 3371
+    metadata_only_source: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/additionalsets_gscdb_8f2c7e5/GDB9-W1-F12
+    prohibit_silent_pyscf_regeneration: true
+    unblock_requires: new_versioned_orbital_inventory_and_validation
+  OPT:
+    role: separate_geometry_assessment
+    status: outside_fixed_geometry_energy_and_training_workflow
+    expected_species: 206
+
+execution_safety:
+  authoritative_roots_are_read_only_inputs: true
+  run_from_isolated_nonoverwriting_copy: true
+  hash_source_archive_before_copy: true
+  verify_copy_hash_before_qchem: true
+  record_source_and_copy_hashes: true
+  never_repair_or_replace_archive_in_place: true
+  never_fall_back_to_new_scf_silently: true
+
+validation:
+  validator: revwb97m2/scripts/validate_qchem_orbital_authority.py
+  report: revwb97m2/manifests/qchem_orbitals/validation.json

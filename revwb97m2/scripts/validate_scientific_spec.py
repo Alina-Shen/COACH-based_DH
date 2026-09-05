@@ -52,6 +52,7 @@ def parse_args() -> argparse.Namespace:
         help="Frozen scientific specification YAML",
     )
     parser.add_argument("--json", action="store_true", help="Emit JSON instead of a text report")
+    parser.add_argument("--output", type=Path, help="Optional path for the complete JSON report")
     return parser.parse_args()
 
 
@@ -93,20 +94,36 @@ class Checks:
 def validate(config: dict[str, Any], config_path: Path) -> Checks:
     checks = Checks()
     workspace_root = config_path.resolve().parents[2]
-    checks.check("schema_version_4", config.get("schema_version") == 4)
+    checks.check("schema_version_6", config.get("schema_version") == 6)
     checks.check("status_frozen", config.get("status") == "frozen")
 
     spec = config["scientific_specification"]
-    checks.check("specification_version_4", spec["version"] == 4)
+    checks.check("specification_version_6", spec["version"] == 6)
     checks.check("authority_matches_path", spec["authority"] == "revwb97m2/configs/scientific_spec.yaml")
     checks.check(
-        "version_3_archived",
-        spec["supersedes"] == "revwb97m2/configs/archive/scientific_spec.v3.yaml",
+        "validator_matches_path",
+        spec["validator"] == "revwb97m2/scripts/validate_scientific_spec.py"
+        and (workspace_root / spec["validator"]).is_file(),
     )
     checks.check(
-        "stability_amendment_recorded",
+        "validation_report_path_versioned",
+        spec["validation_report"]
+        == "revwb97m2/manifests/scientific_spec/scientific_spec_v6_validation.json",
+    )
+    checks.check(
+        "version_5_archived",
+        spec["supersedes"] == "revwb97m2/configs/archive/scientific_spec.v5.yaml",
+    )
+    archived_v5 = workspace_root / spec["supersedes"]
+    checks.check(
+        "version_5_archive_hash",
+        archived_v5.is_file()
+        and sha256(archived_v5) == spec["amendment"]["previous_specification_sha256"],
+    )
+    checks.check(
+        "independent_dispersion_amendment_recorded",
         spec["amendment"]["decision"]
-        == "separate_stability_diagnostic_from_authoritative_parent_publication",
+        == "add_independently_fitted_coach_d4_atm_and_remove_vv10_pt2_sum",
     )
 
     project = config["project"]
@@ -122,29 +139,90 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     )
 
     orbital = config["orbital_source"]
-    checkpoint_root = Path(orbital["checkpoint_root"])
-    checks.check("orbital_source_pyscf", orbital["source_engine"] == "pyscf")
+    checks.check("orbital_source_qchem", orbital["source_engine"] == "qchem")
     checks.check(
         "orbital_source_fixed",
-        orbital["policy"] == "self_consistent_once_per_species_then_fix_for_all_feature_evaluation"
-        and orbital["self_consistent"] is True
+        orbital["policy"] == "reuse_validated_qchem_qarchive_without_orbital_optimization"
+        and orbital["source_orbitals_were_generated_self_consistently"] is True
+        and orbital["self_consistent_in_this_workflow"] is False
+        and orbital["orbital_optimization_in_this_workflow"] == "forbidden"
         and orbital["fixed_during_feature_generation_and_fitting"] is True,
     )
-    checks.check("checkpoint_under_heavy_root", checkpoint_root.is_relative_to(data_root), str(checkpoint_root))
-    checks.check("qchem_orbitals_not_inputs", orbital["qchem_orbitals_are_production_inputs"] is False)
+    checks.check("qchem_orbitals_are_inputs", orbital["qchem_orbitals_are_production_inputs"] is True)
     checks.check(
-        "stability_is_separate_and_non_authoritative",
-        orbital["convergence"]["stability_analysis"]
-        == "separate_timed_diagnostic_for_gateway_model_critical_or_flagged_species"
-        and "parent_checkpoint_authority_does_not_depend_on_stability"
-        in orbital["validation"]["stability_policy"],
+        "no_silent_scf_fallback",
+        orbital["missing_or_invalid_archive_policy"]
+        == "stop_and_report_without_silent_scf_fallback"
+        and orbital["pyscf_fallback"]["never_selected_automatically"] is True,
+    )
+
+    authority_path = workspace_root / orbital["orbital_authority"]
+    authority_report_path = workspace_root / orbital["orbital_authority_validation"]
+    checks.check("qchem_orbital_authority_exists", authority_path.is_file(), str(authority_path))
+    checks.check(
+        "qchem_orbital_authority_report_exists",
+        authority_report_path.is_file(),
+        str(authority_report_path),
+    )
+    if authority_path.is_file() and authority_report_path.is_file():
+        authority = yaml.safe_load(authority_path.read_text(encoding="utf-8"))
+        authority_report = json.loads(authority_report_path.read_text(encoding="utf-8"))
+        checks.check(
+            "qchem_orbital_authority_passed",
+            authority_report["passed"] is True
+            and authority_report["status"] == "passed"
+            and all(authority_report["checks"].values())
+            and authority_report["policy_sha256"] == sha256(authority_path),
+        )
+        checks.check(
+            "qchem_canonical_archive_contract",
+            authority["canonical_gscdb"]["expected_species"]
+            == orbital["canonical_archive_count"]
+            == authority_report["details"]["canonical_inventory"]["present_regular_nonempty"]
+            == 14006
+            and authority["canonical_gscdb"]["orbital_root"]
+            == orbital["canonical_archive_root"],
+        )
+        checks.check(
+            "qchem_external_scope_policy",
+            authority_report["details"]["bignc_inventory"]["present_regular_nonempty"] == 75
+            and authority["external_scopes"]["GDB9_W1_F12"]["status"]
+            == "blocked_no_validated_qchem_orbital_archive_authority"
+            and authority["external_scopes"]["GDB9_W1_F12"]["prohibit_silent_pyscf_regeneration"]
+            is True,
+        )
+
+    qchem_execution = orbital["qchem_execution"]
+    checks.check(
+        "qchem_zero_scf_contract",
+        qchem_execution["maximum_scf_cycles"] == 0
+        and qchem_execution["gen_scfman"] is False
+        and qchem_execution["forbid_orbital_update"] is True,
+    )
+    checks.check(
+        "qchem_integrated_dv_output_contract",
+        qchem_execution["integrated_dv_environment_variable"] == "QCHEM_PRINT_INTEGRATED_DV"
+        and qchem_execution["integrated_dv_environment_value"] == "1"
+        and qchem_execution["integrated_dv_requires_mgga"] is True
+        and qchem_execution["printed_matrix_shape"] == [96, 180]
+        and qchem_execution["stored_matrix_convention"] == "transpose_printed_matrix_to_180x96"
+        and qchem_execution["selected_rows_after_transpose"] == [64, 154, 166]
+        and qchem_execution["feature_grids"] == [250974, 99590, 75302]
+        and qchem_execution["same_spin_gamma"] == 0.01
+        and qchem_execution["historical_same_spin_gamma_not_adopted"] == 0.2,
+    )
+    checks.check(
+        "qchem_archive_copy_safety",
+        orbital["authoritative_archives_are_read_only_inputs"] is True
+        and orbital["run_from_isolated_nonoverwriting_copy"] is True
+        and orbital["archive_copy_requires_matching_source_and_copy_sha256"] is True,
     )
     input_definition = orbital["input_definition"]
-    checks.check("input_metadata_not_orbitals", input_definition["orbital_files_used"] is False)
+    checks.check("qchem_orbital_files_used", input_definition["orbital_files_used"] is True)
     checks.check(
-        "input_metadata_excludes_all_qchem_orbital_sources",
-        input_definition["qarchive_files_used"] is False
-        and input_definition["scratch_orbital_directories_used"] is False,
+        "qchem_archive_and_scratch_used",
+        input_definition["qarchive_files_used"] is True
+        and input_definition["scratch_orbital_directories_used"] is True,
     )
     checks.check("input_metadata_root_exists", Path(input_definition["metadata_source"]).is_dir())
     input_manifest = input_definition["immutable_pyscf_manifest"]
@@ -252,7 +330,13 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
             input_manifest["energy_role_species"] == 17452
             and input_manifest["opt_geometry_species"] == 206,
         )
-    checks.check("pyscf_wb97m_v_label", orbital["pyscf_xc_label"] == "wb97m-v")
+    checks.check(
+        "pyscf_snapshot_is_fallback_only",
+        input_manifest["role"] == "validated_nonproduction_fallback"
+        and orbital["pyscf_fallback"]["status"]
+        == "validated_nonproduction_fallback_and_cross_engine_regression"
+        and orbital["pyscf_fallback"]["use_requires_explicit_new_authorization"] is True,
+    )
     bridge = orbital["input_definition"]["validated_basis_bridge"]
     bridge_paths = {
         key: workspace_root / bridge[key]
@@ -280,7 +364,8 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     )
     checks.check(
         "pyscf_basis_bridge_source_boundary",
-        bridge["source_snapshot_remains_immutable"] is True
+        bridge["role"] == "validated_nonproduction_pyscf_fallback"
+        and bridge["source_snapshot_remains_immutable"] is True
         and bridge["source_snapshot_pending_marker_is_superseded_by_this_overlay"] is True
         and bridge["qchem_orbitals_used"] is False
         and bridge_policy["translation"]["orbitals_used"] is False
@@ -317,39 +402,67 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
         dict(observed_basis_distribution),
     )
     checks.check(
-        "pyscf_basis_semantic_translation_required",
-        basis["require_pyscf_semantic_translation_validation"] is True,
+        "qchem_basis_used_directly",
+        basis["production_definition_source"] == "matching_verified_qchem_input"
+        and basis["require_pyscf_semantic_translation_validation"] is False
+        and basis["use_qchem_named_or_embedded_basis_and_ecp_directly"] is True
+        and basis["translate_generated_basis_and_ecp_sections_in_production"] is False,
     )
     checks.check(
-        "pyscf_basis_semantic_translation_passed",
-        basis["pyscf_semantic_translation_status"] == "passed_step_6"
-        and workspace_root / basis["pyscf_semantic_translation_validation"]
+        "pyscf_fallback_basis_semantic_translation_passed",
+        basis["pyscf_fallback_semantic_translation_status"] == "passed_step_6"
+        and workspace_root / basis["pyscf_fallback_semantic_translation_validation"]
         == bridge_paths["validation"],
     )
-    checks.check("generated_basis_ecp_translation", basis["translate_generated_basis_and_ecp_sections"] is True)
 
     energy = config["double_hybrid_energy"]
+    checks.check(
+        "same_qchem_archive_for_all_orbital_features",
+        energy["orbital_source"] == "same_imported_qchem_qarchive_for_all_orbital_dependent_terms"
+        and energy["forbid_mixing_qchem_semilocal_with_independently_optimized_pyscf_orbitals"]
+        is True
+        and energy["vv10"]["engine"] == "qchem_on_same_imported_archive"
+        and energy["pt2"]["engine"] == "qchem_on_same_imported_archive",
+    )
     checks.check("vv10_b10", energy["vv10"]["b"] == 10.0)
     checks.check("vv10_c001", energy["vv10"]["C"] == 0.01)
-    checks.check("no_coach_d4", energy["dispersion_policy"]["include_coach_d4_atm"] is False)
+    d4 = energy["dispersion_policy"]["d4_atm"]
+    checks.check(
+        "coach_d4_atm_definition",
+        energy["dispersion_policy"]["include_coach_d4_atm"] is True
+        and d4["definition"] == "pure_three_body_coach_d4_atm"
+        and d4["geometry_and_charge_only"] is True
+        and d4["orbital_and_grid_independent"] is True
+        and d4["damping_parameters"]
+        == {"s6": 0.0, "s8": 0.0, "s9": 1.0, "a1": 0.215, "a2": 5.8, "alp": 16.0}
+        and d4["fitted_coefficient_name"] == "c_d4_atm",
+    )
     checks.check("total_pt2_fit", energy["pt2"]["fitted_feature"] == "total_pt2_correlation")
     checks.check("scs_pt2_diagnostic_only", energy["pt2"]["fit_spin_components_separately"] is False)
+    checks.check(
+        "three_independently_fitted_scalar_terms",
+        energy["vv10"]["fitted_coefficient_name"] == "c_vv10"
+        and energy["pt2"]["fitted_coefficient_name"] == "c_pt2"
+        and energy["fitted_energy_terms"][-3:]
+        == ["vv10_correlation_b10_c001", "total_pt2_correlation", "coach_pure_three_body_d4_atm"],
+    )
     auxiliary_basis = energy["pt2"]["auxiliary_basis"]
     checks.check(
         "per_species_auxiliary_basis_policy",
         auxiliary_basis["policy"]
-        == "source_preserving_translation_with_explicit_external_scope_fallbacks",
+        == "use_matching_qchem_input_named_or_embedded_auxiliary_basis",
     )
     checks.check(
-        "generated_aux_basis_translation",
-        auxiliary_basis["translate_generated_aux_basis_sections"] is True,
+        "qchem_aux_basis_used_directly",
+        auxiliary_basis["translate_generated_aux_basis_sections"] is False,
     )
     checks.check(
-        "pyscf_aux_basis_mapping_required",
-        auxiliary_basis["require_pyscf_alias_mapping_validation"] is True,
+        "pyscf_aux_basis_mapping_is_fallback_only",
+        auxiliary_basis["require_pyscf_alias_mapping_validation"] is False
+        and auxiliary_basis["pyscf_translation_role"] == "validated_nonproduction_fallback",
     )
     checks.check(
-        "pyscf_aux_basis_external_policy_frozen",
+        "aux_basis_external_policy_frozen",
         auxiliary_basis["missing_source_assignments"]
         == {
             "BigNC_external": "rimp2-def2-TZVPPD",
@@ -420,7 +533,10 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     kernel_path = workspace_root / kernel_gate["kernel"]
     kernel_validator_path = workspace_root / kernel_gate["validator"]
     kernel_report_path = workspace_root / kernel_gate["validation_report"]
-    checks.check("integrated_dv_gate_passed", kernel_gate["status"] == "passed_step_7")
+    checks.check(
+        "integrated_dv_reference_passed_native_pending",
+        kernel_gate["status"] == "python_reference_passed_qchem_native_validation_pending_step_7",
+    )
     checks.check(
         "integrated_dv_gate_names_feature_semantics",
         kernel_gate["test"] == "selected_integrated_dv_features_match_frozen_semantics",
@@ -429,6 +545,17 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     checks.check(
         "integrated_dv_not_coach_coefficient_reproduction",
         kernel_gate["published_coach_coefficients_used"] is False,
+    )
+    emitter = kernel_gate["production_emitter"]
+    checks.check(
+        "qchem_integrated_dv_emitter_contract",
+        emitter["engine"] == "qchem"
+        and emitter["activation"] == "QCHEM_PRINT_INTEGRATED_DV=1"
+        and emitter["printed_shape"] == [96, 180]
+        and emitter["stored_shape_after_transpose"] == [180, 96]
+        and emitter["selected_rows"] == [64, 154, 166]
+        and emitter["source_level_status"] == "passed"
+        and emitter["native_qchem_status"] == "pending_step_7",
     )
     checks.check("integrated_dv_kernel_exists", kernel_path.is_file(), str(kernel_path))
     checks.check(
@@ -450,30 +577,30 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
 
     parent_policy_path = workspace_root / "revwb97m2/manifests/parent_scf/step8_parent_scf_v1.yaml"
     parent_report_path = workspace_root / "revwb97m2/manifests/parent_scf/validation.json"
-    checks.check("parent_scf_policy_exists", parent_policy_path.is_file(), str(parent_policy_path))
-    checks.check("parent_scf_report_exists", parent_report_path.is_file(), str(parent_report_path))
+    checks.check("pyscf_fallback_parent_policy_exists", parent_policy_path.is_file(), str(parent_policy_path))
+    checks.check("pyscf_fallback_parent_report_exists", parent_report_path.is_file(), str(parent_report_path))
     if parent_policy_path.is_file() and parent_report_path.is_file():
         parent_policy = yaml.safe_load(parent_policy_path.read_text(encoding="utf-8"))
         parent_report = json.loads(parent_report_path.read_text(encoding="utf-8"))
-        checks.check("parent_scf_step8_passed", parent_policy["status"] == "passed_step_8_gateway")
-        checks.check("parent_scf_validation_passed", parent_report["status"] == "passed")
+        checks.check("pyscf_fallback_parent_step8_passed", parent_policy["status"] == "passed_step_8_gateway")
+        checks.check("pyscf_fallback_parent_validation_passed", parent_report["status"] == "passed")
         checks.check(
-            "parent_scf_module_hash_valid",
+            "pyscf_fallback_parent_module_hash_valid",
             parent_report["parent_module_sha256"]
             == sha256(workspace_root / parent_report["parent_module"]),
         )
         checks.check(
-            "parent_checkpoint_density_feature_identity",
+            "pyscf_fallback_checkpoint_density_feature_identity",
             parent_report["checks"]["checkpoint_density_bitwise_identity"] is True
             and parent_report["checks"]["checkpoint_feature_bitwise_identity"] is True,
         )
         checks.check(
-            "parent_scf_all_uks_and_no_qchem_orbitals",
+            "pyscf_fallback_all_uks_and_no_qchem_orbitals",
             parent_report["checks"]["all_uks_policy"] is True
             and parent_report["checks"]["no_qchem_orbitals"] is True,
         )
 
-    model = config["feature_models"]["models"]["R2_coachform_291"]
+    model = config["feature_models"]["models"]["R2_coachform_292"]
     checks.check(
         "model_rows_match_semantics",
         list(model["integrated_dv_rows"].values()) == [64, 154, 166],
@@ -482,8 +609,12 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     checks.check("exchange_slice", layout["exchange"] == {"start": 0, "stop": 96})
     checks.check("same_spin_slice", layout["same_spin_correlation"] == {"start": 96, "stop": 192})
     checks.check("opposite_spin_slice", layout["opposite_spin_correlation"] == {"start": 192, "stop": 288})
-    checks.check("scalar_layout", [layout["short_range_hf"], layout["vv10"], layout["pt2"]] == [288, 289, 290])
-    checks.check("feature_width_291", layout["total"] == 291)
+    checks.check(
+        "scalar_layout",
+        [layout["short_range_hf"], layout["vv10"], layout["pt2"], layout["d4_atm"]]
+        == [288, 289, 290, 291],
+    )
+    checks.check("feature_width_292", layout["total"] == 292)
     checks.check(
         "legacy_smoke_preserved",
         config["feature_models"]["legacy_smoke_baseline"]["integrated_dv_rows"] == [64, 153, 166],
@@ -491,17 +622,38 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
 
     constraints = config["constraint_profiles"]
     c0 = constraints["definitions"]["C0_minimal_critical"]
-    c1 = constraints["definitions"]["C1_nonlocal_sum"]
-    checks.check("first_profiles_c0_c1", constraints["active_for_first_real_fit"] == ["C0_minimal_critical", "C1_nonlocal_sum"])
+    checks.check("first_profile_c0_only", constraints["active_for_first_real_fit"] == ["C0_minimal_critical"])
     checks.check("c0_ueg_enabled", c0["exchange_uniform_electron_gas"]["enabled"] is True)
     checks.check("c0_sampled_bounds_disabled", c0["sampled_enhancement_bounds"]["enabled"] is False)
     checks.check("c0_nonlocal_sum_disabled", c0["nonlocal_correlation_sum"]["enabled"] is False)
-    checks.check("c1_nonlocal_sum_enabled", c1["nonlocal_correlation_sum"]["enabled"] is True)
+    scalar_bounds = c0["independently_fitted_scalar_bounds"]
+    checks.check(
+        "independent_open_interval_scalar_bounds",
+        scalar_bounds["conceptual_domain"] == "(0,1)"
+        and scalar_bounds["strict_inequality_solver_policy"] == "use_fixed_interior_margin"
+        and scalar_bounds["solver_margin"] == 1.0e-8
+        and scalar_bounds["cross_feature_equalities"] == []
+        and scalar_bounds["features"]
+        == {
+            "vv10": {"coefficient": "c_vv10", "minimum": 1.0e-8, "maximum": 0.99999999},
+            "pt2": {"coefficient": "c_pt2", "minimum": 1.0e-8, "maximum": 0.99999999},
+            "d4_atm": {"coefficient": "c_d4_atm", "minimum": 1.0e-8, "maximum": 0.99999999},
+        },
+    )
+    checks.check(
+        "vv10_pt2_sum_constraint_removed",
+        "C1_nonlocal_sum" not in constraints["definitions"]
+        and "c_vv10 + c_pt2" not in str(constraints),
+    )
 
     grids = config["coach_feature_grids"]
     checks.check("feature_grid_ids", [grids[k]["id"] for k in ("fitting_reference", "practical", "coarse_analysis")] == ["250974", "99590", "75302"])
     checks.check("grid_constraint_pass2_only", config["grid_sensitivity"]["enabled_in_pass1"] is False and config["grid_sensitivity"]["enabled_in_pass2"] is True)
     checks.check("grid_threshold_0p015", config["grid_sensitivity"]["threshold_kcal_per_mol"] == 0.015)
+    checks.check(
+        "grid_independent_d4_zero_difference",
+        "d4_atm" in config["grid_sensitivity"]["zero_difference_features"],
+    )
 
     data_policy = config["data_policy"]
     checks.check("target_gscdb137", data_policy["target_database"] == "GSCDB137")
@@ -657,7 +809,11 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
     )
 
     protocol = config["execution_protocol"]
-    checks.check("one_fixed_parent_cycle", protocol["base_orbital_training_cycles"] == 1)
+    checks.check(
+        "zero_new_parent_orbital_cycles",
+        protocol["base_orbital_training_cycles"] == 0
+        and protocol["source_orbitals"] == "precomputed_self_consistent_qchem_wb97m_v_archives",
+    )
     checks.check("no_parent_update", protocol["update_parent_orbitals_from_fitted_model"] is False)
     checks.check(
         "final_cycle2_weight_source",
@@ -714,34 +870,53 @@ def validate(config: dict[str, Any], config_path: Path) -> Checks:
         )
 
     required_gates = validation["required_gates_before_pilot"]
-    checks.check("qchem_gateway_removed", not any("qchem_scratch_gateway" in gate for gate in required_gates))
-    checks.check("pyscf_open_shell_gate_required", "pyscf_open_shell_parent_and_ump2" in required_gates)
+    expected_qchem_gates = {
+        "qchem_orbital_authority_14006_complete",
+        "qchem_full_build_and_binary_provenance",
+        "qchem_archive_copy_hash_identity",
+        "qchem_integrated_dv_delimiters_shape_and_finite_values",
+        "qchem_restricted_and_unrestricted_three_grid_gateway",
+        "qchem_final_complete_block_extractor",
+        "qchem_same_archive_scalar_feature_identity",
+    }
+    checks.check("qchem_production_gates_required", expected_qchem_gates.issubset(required_gates))
+    checks.check(
+        "d4_and_independent_bound_gates_required",
+        {"coach_d4_atm_definition_and_energy_validation", "independent_open_interval_scalar_coefficient_bounds"}
+        .issubset(required_gates),
+    )
+    checks.check(
+        "pyscf_production_gates_removed",
+        not any(gate.startswith("pyscf_") or "all_uks_pyscf" in gate for gate in required_gates),
+    )
     checks.check(
         "locked_data_role_gate_required_and_passed",
         "locked_data_roles_and_qchem_input_metadata" in required_gates
         and (workspace_root / validation["passed_data_role_validation"]).is_file(),
     )
     checks.check(
-        "immutable_all_uks_pyscf_input_gate_required_and_passed",
-        "immutable_all_uks_pyscf_input_manifest" in required_gates
-        and Path(validation["passed_pyscf_input_validation"])
-        == input_snapshot_paths["validation"]
-        and input_snapshot_paths["validation"].is_file(),
-    )
-    checks.check(
-        "pyscf_basis_bridge_gate_required_and_passed",
-        "pyscf_generated_basis_ecp_and_auxiliary_basis_translation" in required_gates
-        and workspace_root / validation["passed_basis_bridge_validation"]
-        == bridge_paths["validation"]
-        and bridge_validation["status"] == "passed",
+        "qchem_orbital_authority_gate_passed",
+        "qchem_orbital_authority_14006_complete" in required_gates
+        and workspace_root / validation["passed_qchem_orbital_authority_validation"]
+        == authority_report_path,
     )
 
     safety = config["safety"]
-    checks.check("qchem_production_input_forbidden", safety["qchem_orbitals_must_not_be_used_as_production_inputs"] is True)
+    checks.check(
+        "qchem_production_input_and_archive_safety",
+        safety["qchem_orbitals_must_be_used_as_production_inputs"] is True
+        and safety["authoritative_qchem_archives_must_not_be_modified"] is True
+        and safety["qchem_runs_require_isolated_verified_archive_copy"] is True
+        and safety["missing_or_invalid_qchem_archive_must_stop"] is True
+        and safety["silent_pyscf_scf_fallback_forbidden"] is True
+        and safety["production_qchem_requires_zero_scf_cycles"] is True,
+    )
     checks.check("qchem_code_backup_exists", (workspace_root / safety["qchem_route_code_backup"]).is_dir())
     checks.check("qchem_smoke_backup_exists", Path(safety["qchem_route_smoke_backup"]).is_dir())
 
     checks.details["config"] = str(config_path.resolve())
+    checks.details["config_sha256"] = sha256(config_path)
+    checks.details["validator_sha256"] = sha256(Path(__file__).resolve())
     return checks
 
 
@@ -751,6 +926,12 @@ def main() -> int:
         config = yaml.safe_load(handle)
     checks = validate(config, args.config)
     report = {"passed": checks.passed, "checks": checks.results, "details": checks.details}
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(
+            json.dumps(report, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
     if args.json:
         print(json.dumps(report, indent=2, sort_keys=True))
     else:

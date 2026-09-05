@@ -1,0 +1,55 @@
+schema_version: 1
+status: complete
+completed_on: "2026-09-04"
+purpose: opt_in_same_grid_full_matrix_reference_export_for_q3_only
+
+source:
+  qchem_root: /clusterfs/mhg-data/yaoshen/qchem/trunk
+  qchem_svn_revision: 48798
+  libks_root: /clusterfs/mhg-data/yaoshen/qchem/trunk/libks
+  libks_svn_revision: 1666
+  libks_diff_sha256: f3d1b85f35ac7add2113b51c9303506853d56a78802fc92f267f61b88dbb6517
+  files:
+    libks/libks/CMakeLists.txt: afa25d4a7d744b84ac395fbf599cb1ff4ce2161cbd863c03218206128e0b04db
+    libks/libks/drivers/ks_driver_exc.C: 4f37431b24a55032c113dd550e8e5dca896fa4410461264d0811be9147d1982f
+    libks/libks/exc_fxc/integrated_dv.C: 7c1ce184380c2b79f96c9b8b3fe99823f4b23ae43a1ca6277d92697f99ef1199
+    libks/libks/exc_fxc/integrated_dv.h: 193ec198bd088bfca9cea13cf300537f426b84198043ca889aed94236ab4912c
+    libks/qchem/ks_main.C: ab3510caca1208d164d955f5f0a65f999063bd3efa2af09739d2bd7a2051657c
+
+build:
+  configure_rerun: false
+  existing_configuration: ./configure gnu openmp relwdeb
+  command: make install -j8
+  module_stack: user_supplied
+  build_and_install_exit_zero: true
+  executable: /clusterfs/mhg-data/yaoshen/qchem/trunk/exe/qcprog.exe
+  executable_sha256: 0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084
+  installed_libks: /clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks.so
+  installed_libks_sha256: 95441cef4e010a334ffa9e73f5342c10ad639471c17d33ab0c6f7295fad39081
+  unresolved_dynamic_dependencies: 0
+
+diagnostic:
+  environment_variable: QCHEM_DUMP_INTEGRATED_DV_INPUTS
+  requires: QCHEM_PRINT_INTEGRATED_DV
+  format_magic: COACHDV1
+  values_per_point: 11
+  values: [weight, rho_alpha, rho_beta, grad_alpha_x, grad_alpha_y, grad_alpha_z, grad_beta_x, grad_beta_y, grad_beta_z, tau_alpha, tau_beta]
+  refuses_overwrite: true
+  production_default: disabled
+  archive_read_smoke:
+    native_blocks: 1
+    diagnostic_batches: 78
+    diagnostic_points: 15132
+    full_matrix_max_abs_hartree: 3.3306690738754696e-16
+    selected_rows_max_abs_hartree: 1.6653345369377348e-16
+    tolerance_passed: true
+
+cluster_route:
+  selected_at: "2026-09-04"
+  partition: cm1
+  account: lr_qchem
+  qos: condo_qchem
+  rationale: >-
+    Current CPU-only query showed cm1 with 12 pending jobs versus 256 on mhg,
+    774 on lr8, and 966 on lr6. Its approximately 242 GB physical nodes are
+    strictly larger than the unchanged 16 GB request.

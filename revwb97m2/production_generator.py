@@ -24,7 +24,7 @@ DEFAULT_POLICY = (
     PROJECT_ROOT
     / "manifests"
     / "production_generator"
-    / "step13_preparatory_v1.yaml"
+    / "step13_preparatory_v2.yaml"
 )
 DEFAULT_ROLES = PROJECT_ROOT / "manifests/data_roles/species_roles.csv"
 DEFAULT_BRIDGE = PROJECT_ROOT / "manifests/basis_bridge/resolved_basis_records.csv"
@@ -89,13 +89,21 @@ BOUNDARIES = (
         ("parent",),
     ),
     BoundaryContract(
+        "d4_atm",
+        "d4_atm_manifest.json",
+        "D4_ATM_COMPLETE",
+        "validation.json",
+        "d4_atm_complete_and_validated",
+        ("parent",),
+    ),
+    BoundaryContract(
         "assembly",
         "assembly_manifest.json",
         "ASSEMBLY_COMPLETE",
         "validation.json",
         "species_assembly_complete_and_validated",
         tuple(f"semilocal_{grid_id}" for grid_id in GRID_IDS)
-        + ("vv10", "ri_mp2"),
+        + ("vv10", "ri_mp2", "d4_atm"),
     ),
 )
 BOUNDARY_BY_NAME = {boundary.name: boundary for boundary in BOUNDARIES}

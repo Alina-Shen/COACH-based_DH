@@ -1,0 +1,107 @@
+schema_version: 2
+status: preparatory_implementation_in_progress_step12_resources_pending
+purpose: resource_neutral_resumable_species_generation_contract
+
+locked_population:
+  definition: union_of_fixed_geometry_energy_roles_OPT_excluded
+  expected_species_count: 17452
+  roles_path: revwb97m2/manifests/data_roles/species_roles.csv
+  roles_sha256: 3a52626136d3f16f0bac9fdcc91c4573aea7de2c667ccf8be704ee7977909b4e
+  basis_bridge_path: revwb97m2/manifests/basis_bridge/resolved_basis_records.csv
+  basis_bridge_sha256: cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6
+  record_index_path: revwb97m2/manifests/parent_scf/record_byte_offsets.csv
+  record_index_sha256: 73c3baa4930af302b9b1d317eb7561e5916dad780e79ef5df3755ac0fcf97e13
+  scientific_specification_path: revwb97m2/configs/scientific_spec.yaml
+  scientific_specification_sha256: 5c7a03994f75ea0076188f20a679647b9cfc2e0ec1c72874b0cc463326a3212e
+
+implementation:
+  planner_module: revwb97m2/production_generator.py
+  planner_cli: revwb97m2/scripts/plan_step13_production.py
+  validator: revwb97m2/scripts/validate_step13_preparatory.py
+  production_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/production
+  path_layout: production_root/scope/species/boundary
+  dry_run_only: true
+  atomic_plan_publication: true
+  overwrite_forbidden: true
+
+boundaries:
+  - name: parent
+    dependencies: []
+    manifest: parent_manifest.json
+    marker: PARENT_COMPLETE
+    validation: validation.json
+  - name: semilocal_250974
+    dependencies: [parent]
+    manifest: semilocal_grid_manifest.json
+    marker: SEMILOCAL_GRID_COMPLETE
+    validation: validation.json
+  - name: semilocal_99590
+    dependencies: [parent]
+    manifest: semilocal_grid_manifest.json
+    marker: SEMILOCAL_GRID_COMPLETE
+    validation: validation.json
+  - name: semilocal_75302
+    dependencies: [parent]
+    manifest: semilocal_grid_manifest.json
+    marker: SEMILOCAL_GRID_COMPLETE
+    validation: validation.json
+  - name: vv10
+    dependencies: [parent]
+    manifest: vv10_manifest.json
+    marker: VV10_COMPLETE
+    validation: validation.json
+  - name: ri_mp2
+    dependencies: [parent]
+    manifest: ri_mp2_manifest.json
+    marker: RI_MP2_COMPLETE
+    validation: validation.json
+  - name: d4_atm
+    dependencies: [parent]
+    manifest: d4_atm_manifest.json
+    marker: D4_ATM_COMPLETE
+    validation: validation.json
+  - name: assembly
+    dependencies: [semilocal_250974, semilocal_99590, semilocal_75302, vv10, ri_mp2, d4_atm]
+    manifest: assembly_manifest.json
+    marker: ASSEMBLY_COMPLETE
+    validation: validation.json
+
+artifact_state_policy:
+  reusable_only_if:
+    - completion_marker_present
+    - manifest_identity_and_complete_status_match
+    - source_record_and_authority_fingerprint_match
+    - independent_validation_status_passed
+    - validation_pins_manifest_sha256
+    - every_declared_artifact_hash_matches
+  preserve_and_stop_states:
+    - failed_preserved
+    - partial_preserved
+    - corrupt_preserved
+    - stale_authority_preserved
+  interrupted_temporary_policy: review_or_resume_without_overwrite
+  missing_policy: eligible_only_after_dependencies_and_step12_resources
+
+resource_gate:
+  step12_signoff_required: true
+  submission_authorized: false
+  production_subset: null
+  size_tiers: null
+  partition_account_qos: null
+  cpu_memory_walltime: null
+  array_concurrency: null
+  retry_limits: null
+  direct_or_out_of_core_routes: null
+  quantitative_ao_stops: null
+  rationale: >-
+    These choices depend on terminal resource measurements and explicit Step-12
+    sign-off. The preparatory planner must not infer them, render SBATCH
+    scripts, or submit work.
+
+forbidden_actions:
+  - run_chemistry
+  - modify_existing_artifacts
+  - delete_failed_partial_or_stale_artifacts
+  - choose_or_infer_resources
+  - render_or_submit_slurm_jobs
+  - authorize_production

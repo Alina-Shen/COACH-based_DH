@@ -35,11 +35,11 @@ inputs:
     sha256: <fill-before-create>
 
 model:
-  feature_model: R2_coachform_291
+  feature_model: R2_coachform_292
   integrated_dv_rows: [64, 154, 166]
   constraint_profile: C0_minimal_critical
   sparsity: 32
-  feature_count: 291
+  feature_count: 292
   basis_policy: per_species_from_authoritative_gscdb_manifest
 
 grids:

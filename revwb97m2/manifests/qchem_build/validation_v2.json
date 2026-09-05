@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "current_source_matches": true,
+    "dynamic_dependencies_resolved": true,
+    "executable_hash_matches": true,
+    "executable_regular_nonempty": true,
+    "installed_libks_hash_matches": true,
+    "live_probe_contract_matches": true,
+    "live_probe_hashes_match": true,
+    "manifest_complete": true,
+    "probe_archive_read": true,
+    "probe_matrix_shape": true,
+    "probe_normal_termination": true,
+    "probe_numeric_finite": true,
+    "probe_one_complete_block": true,
+    "runtime_probe_record_exists": true
+  },
+  "details": {
+    "current_source_checks": {
+      "libks/libks/CMakeLists.txt": true,
+      "libks/libks/drivers/ks_driver_exc.C": true,
+      "libks/libks/exc_fxc/integrated_dv.C": true,
+      "libks/libks/exc_fxc/integrated_dv.h": true,
+      "libks/qchem/ks_main.C": true,
+      "libks_diff": true,
+      "libks_revision": true,
+      "qchem_revision": true
+    },
+    "executable": "/clusterfs/mhg-data/yaoshen/qchem/trunk/exe/qcprog.exe",
+    "executable_sha256": "0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084",
+    "installed_libks": "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks.so",
+    "installed_libks_sha256": "36a8f41a10d7541c25731be398ae270814dde7c5f23d2aeea52a6023e3b629a7",
+    "ldd_entries": 165,
+    "runtime_probe": {
+      "live": {
+        "all_rows_same_width": true,
+        "all_values_finite": true,
+        "begin_markers": 1,
+        "columns": 180,
+        "end_markers": 1,
+        "input_sha256": "9eb96f6f21d685b025e16c77d53b0a25e61e313cefc6790217b03dd273460816",
+        "label_ok": true,
+        "mo_coefficient_read_messages": 2,
+        "normal_qchem_termination": true,
+        "output_sha256": "ef2024c15267f821420d4f891763d02f9d1ea2b10277b16136ae24a437a5e757",
+        "rows": 96
+      },
+      "live_files_checked": true,
+      "recorded": {
+        "begin_markers": 1,
+        "columns": 180,
+        "end_markers": 1,
+        "matrix_labels": 1,
+        "mo_coefficient_read_messages": 2,
+        "nonfinite_values": 0,
+        "nonnumeric_values": 0,
+        "normal_qchem_termination": true,
+        "rows": 96,
+        "wrong_width_rows": 0
+      }
+    }
+  },
+  "manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_build/q2_qchem_build_v2.yaml",
+  "manifest_sha256": "a9fb9e46b849b23d04d62796709655de72d4409bb8acc8b6637d489b0ec7f664",
+  "passed": true,
+  "schema_version": 2,
+  "status": "passed"
+}

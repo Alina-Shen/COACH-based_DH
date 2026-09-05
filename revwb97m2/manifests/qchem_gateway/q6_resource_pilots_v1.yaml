@@ -1,0 +1,81 @@
+schema_version: 1
+status: frozen_before_results
+frozen_at: "2026-09-04T23:14:00-07:00"
+purpose: q6_qchem_archive_grid_extraction_d4_restart_resource_measurement
+production_submission_authorized: false
+
+authorities:
+  step12_pilot_selection: revwb97m2/manifests/step12/step12_pilot_selection_v1.csv
+  step12_pilot_selection_sha256: efc7aaff26252d881150f812cfeeb6e2f58cbfcdebfd11fd7d530da6735ed8a3
+  q4_validation: revwb97m2/manifests/qchem_gateway/q4_validation_v1.json
+  q4_validation_sha256: 10d4a84b7f2173963cec84143c71114fcd68f2ec4e728ccff2f909b8d560c501
+  orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2
+  authoritative_input_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species
+
+grids:
+  - {id: "250974", qchem_value: "000250000974", role: fitting_reference}
+  - {id: "99590", qchem_value: "000099000590", role: practical_comparison}
+  - {id: "75302", qchem_value: "000075000302", role: coarse_analysis}
+
+cases:
+  - species: 3d4dIPSS_Ag_GS
+    size_role: small
+    selection_authority: step12_pilot_selection_v1_ECP_open_shell
+    memory_class_mb: 3750
+    source_record_sha256: bd54d7053b144c3b09b98fdea16f3dcab684d9c3ce44c541b92a8560d3e73c59
+    authoritative_input_sha256: 765c67a32af4cdef7ef1cd8063d51129a0e873c521c09db9618305565476ebe5
+    source_tree: {files: 72, bytes: 23963031, manifest_sha256: 7b66fd89fa74efc7c164f85addd234377b3e303eee778b8db77813af75c35572}
+    resources: {partition: lr8, account: lr_mhg2, qos: mhg2_lr8_normal, cpus: 8, memory_gib: 14, walltime: "02:00:00"}
+  - species: TMB28_C1
+    size_role: medium
+    selection_authority: step12_pilot_selection_v1_30000_MB_upper_size
+    memory_class_mb: 30000
+    source_record_sha256: 13aeaa56eb2341c9fd23726091c60e8c4904b6158ec031140cf003e073e5e76d
+    authoritative_input_sha256: d3f2f5b74ec787c3013ee58399e51b65ac0c1e93627515c6033806a2cea725bf
+    source_tree: {files: 70, bytes: 646662413, manifest_sha256: 710609c6df53eb50acca06e1453784215be0e4b4a510680648a20b6abf626fda}
+    resources: {partition: lr8, account: lr_mhg2, qos: mhg2_lr8_normal, cpus: 8, memory_gib: 62, walltime: "08:00:00"}
+  - species: MOR32_pr24
+    size_role: high
+    selection_authority: step12_pilot_selection_v1_largest_fitting_species
+    memory_class_mb: 300000
+    source_record_sha256: c6864eb376d88281a8bf8523412d5605f274500b0ad673606d876edf7887050c
+    authoritative_input_sha256: 97241c9a576398dc690ae5dab7d8a796f1e0922a7fbe8942e8ee58fd71e5e703
+    source_tree: {files: 71, bytes: 6533609433, manifest_sha256: 05fbc418e6aad5fbe958e8628217d1b460e63b903925ca7475fdc6980f0bd213}
+    resources: {partition: lr8, account: lr_mhg2, qos: mhg2_lr8_normal, cpus: 16, memory_gib: 557, walltime: "24:00:00"}
+
+measurement_contract:
+  - authoritative_tree_hash_seconds
+  - source_to_stage_copy_seconds_and_bytes
+  - staged_copy_hash_identity
+  - per_grid_stage_to_isolated_copy_seconds
+  - per_grid_qchem_wall_seconds
+  - per_grid_output_bytes
+  - per_grid_extraction_publication_seconds
+  - per_grid_valid_restart_reuse_seconds
+  - d4_atm_wall_seconds_and_energy
+  - slurm_elapsed_total_cpu_and_peak_rss
+  - total_retained_bytes
+  - missing_or_invalid_artifact_must_stop
+
+runtime_contract:
+  method: wB97M-V
+  unrestricted: true
+  scf_guess: READ
+  maximum_scf_cycles: 0
+  gen_scfman: false
+  xc_fxc: 3
+  integrated_dv_environment: QCHEM_PRINT_INTEGRATED_DV=1
+  diagnostic_export: disabled
+  isolated_nonoverwriting_copy_per_grid: true
+  q4_atomic_publisher_required: true
+  qchem_rebuild_required: false
+
+route_rationale: >-
+  Cases and size coverage come from the existing frozen Step-12 pilot selection.
+  The live 2026-09-04 query showed that mhg nodes fit the unchanged 14 and 62
+  GiB requests but sbatch predicted September 24 starts. Skill-approved lr8
+  test-only checks predicted immediate starts for all three pilots, and its
+  approximately 756 GiB nodes are also the only routine route fitting the
+  unchanged 557 GiB high-case request. The partition helper was unavailable,
+  so live sinfo, sacctmgr, and sbatch test-only data were used according to the
+  skill fallback. Only partition/account/QOS changed after route comparison.

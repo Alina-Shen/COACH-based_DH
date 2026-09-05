@@ -1,0 +1,88 @@
+schema_version: 1
+status: frozen_before_results
+frozen_at: "2026-09-04T21:40:47-07:00"
+name: revwb97m2_q3_native_imported_orbital_gateway_v1
+
+interpretation:
+  user_approved: true
+  requested_phrase: restricted_and_unrestricted
+  adopted_meaning: closed_shell_singlet_and_open_shell_species_both_using_authoritative_uks_archives
+  rationale: >-
+    All canonical production Q-Chem inputs use UNRESTRICTED TRUE, including
+    closed-shell singlets. This preserves the frozen v6 reference policy and
+    tests both spin-zero and spin-polarized densities without inventing a new
+    restricted archive.
+
+cases:
+  - species: h2o_SW49
+    role: closed_shell_singlet_uks
+    charge: 0
+    multiplicity: 1
+    atom_count: 3
+    basis: def2-QZVPPD
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/h2o_SW49/input0
+    authoritative_input_sha256: 24d74f289c237aad78dece0deb231c82d9d6540eec5912e12a6c87cd2a9c5d4a
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/h2o_SW49
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+  - species: 12_NH2rad_HNBrBDE18
+    role: open_shell_doublet_uks
+    charge: 0
+    multiplicity: 2
+    atom_count: 3
+    basis: def2-QZVPPD
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/12_NH2rad_HNBrBDE18/input0
+    authoritative_input_sha256: 8267b6bcd48735917be1d5891cd78290678dacdb604937add4ec53918997008b
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/12_NH2rad_HNBrBDE18
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+
+grids:
+  - {id: "250974", qchem_value: "000250000974", role: fitting_reference}
+  - {id: "99590", qchem_value: "000099000590", role: practical_comparison}
+  - {id: "75302", qchem_value: "000075000302", role: coarse_analysis}
+
+execution_contract:
+  method: wB97M-V
+  unrestricted: true
+  scf_guess: READ
+  maximum_scf_cycles: 0
+  gen_scfman: false
+  xc_fxc: 3
+  integrated_dv_environment: QCHEM_PRINT_INTEGRATED_DV=1
+  diagnostic_environment: QCHEM_DUMP_INTEGRATED_DV_INPUTS
+  isolated_nonoverwriting_archive_copy: true
+  source_copy_hash_identity_required: true
+  inherited_qcprog_must_be_unset: true
+
+comparison_contract:
+  frozen_before_results: true
+  full_matrix_shape: [96, 180]
+  selected_rows_after_transpose: [64, 154, 166]
+  selected_shape: [3, 96]
+  relative_tolerance: 2.0e-12
+  absolute_tolerance_hartree: 2.0e-12
+  require_allclose_full_matrix: true
+  require_allclose_selected_rows: true
+  record_maximum_absolute_error: true
+  record_maximum_relative_error: true
+  require_numeric_finite_values: true
+  require_exactly_one_complete_delimited_block: true
+  require_normal_qchem_termination: true
+  require_mo_archive_read_evidence: true
+
+diagnostic_contract:
+  purpose: >-
+    Export the exact quadrature weights and ten meta-GGA density variables
+    consumed by the native evaluator so an independent Python implementation
+    can recompute the molecular 96x180 matrix on identical inputs.
+  activation_is_opt_in: true
+  output_is_heavy_data: true
+  production_default: disabled
+
+completion_requires:
+  - diagnostic_qchem_build_pinned
+  - six_archive_read_runs_complete
+  - six_full_matrices_well_formed_and_finite
+  - six_full_matrix_python_comparisons_pass
+  - six_selected_row_python_comparisons_pass
+  - source_and_isolated_copy_hashes_match
+  - validation_report_passes
