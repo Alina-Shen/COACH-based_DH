@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "status": 2,
+  "solution_count": 4,
+  "runtime_seconds": 0.21355605125427246,
+  "artifacts": {
+    "coefficients.npy": "15cc84e8e0c7c3565616316f5ac860b2e342620d8094a205bf8b53000d9b6580",
+    "selected.npy": "dd057b199f2fb1a3a6e4500f96be129feda089f6af2fe9553085d1e9a0226322"
+  },
+  "audit": {
+    "checks": {
+      "finite": true,
+      "coefficient_bound": true,
+      "ueg": true,
+      "support_budget": true,
+      "unselected_zero": true,
+      "mandatory_selected": true,
+      "sr_bounds": true,
+      "independent_scalar_bounds": true
+    },
+    "passed": true,
+    "weighted_sse_hartree2": 0.0,
+    "ridge_penalty_hartree2": 1.000224719057945e-10,
+    "regularized_objective_hartree2": 1.000224719057945e-10
+  },
+  "objective": 1.0002247190579452e-10,
+  "objective_agrees": true,
+  "bound": 1.0002247197690894e-10,
+  "gap": 0.0,
+  "gap_state": "finite",
+  "gap_absolute": 7.111442332119718e-20,
+  "gap_recomputed": 7.109844614535803e-10,
+  "gap_recomputed_state": "finite",
+  "gap_consistent": false,
+  "grid_max_kcal_mol": {
+    "99590": 0.018049710713688116,
+    "75302": 0.03609942142737623
+  }
+}

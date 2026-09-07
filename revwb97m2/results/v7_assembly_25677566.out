@@ -1,0 +1,7 @@
+Independent fitter readback PASS
+Manifest /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/reactions/inputs.json SHA256 4bb27b1bfac3fdf1eb739783581652a2c1ec9225bb4899e31dc0660dc3693b4f
+feature_matrix (20, 292)
+target (20,)
+objective_weight (20,)
+grid_difference_99590 (20, 292)
+grid_difference_75302 (20, 292)

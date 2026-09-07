@@ -1,0 +1,75 @@
+{
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "input_manifest_sha256": "4bb27b1bfac3fdf1eb739783581652a2c1ec9225bb4899e31dc0660dc3693b4f",
+  "resolved_settings": {
+    "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+    "ridge": 1e-10,
+    "grid_limit": 2.38801175431611e-05,
+    "grid_public_limit": 2.3904021564725822e-05,
+    "conversion": 627.50947406,
+    "seconds": 7200,
+    "threads": 16,
+    "seed": 0,
+    "solver_parameters": [
+      [
+        "FeasibilityTol",
+        1e-09
+      ],
+      [
+        "IntFeasTol",
+        1e-09
+      ],
+      [
+        "MIPGap",
+        0.0001
+      ],
+      [
+        "MIPGapAbs",
+        1e-10
+      ]
+    ],
+    "budgets": [
+      14,
+      24,
+      32,
+      40,
+      48,
+      64,
+      80
+    ],
+    "candidate_rows": 100,
+    "global_rows": 200,
+    "vv10_b": 5.5,
+    "vv10_c": 0.01
+  },
+  "budget": 14,
+  "seconds": 120,
+  "threads": 16,
+  "purpose": "bounded_validation_not_bulk_authorization",
+  "start": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_real20_25679856/pass2",
+  "grid_candidates": [
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_real20_25679856/pass1"
+  ],
+  "code_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_v7_fit.py": "47c2a25fc42e2ecc8b32e215da7aaa496c6037758580446902ddf5f30f5cc2be",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/mio.py": "544cf9005966062245f3ffbeb091b536ab429495a1c7fed1af44f2bc3c915908",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_spec.py": "913f1d184be37477ba5fe5e58bec2acad6e9b5663d06ac11561d12d87409b078",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_inputs.py": "ab356c8d30ae62ac7d3269e5602bd597057bc8ec97be1912b76293a6d449c62c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/grid_selection.py": "a11dd30e2ab8c9bf1b7065afa1a9f3512bd94aef62a3c64c7180565941d828ff",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/solver_reporting.py": "9e5fc4b742d9dc6212ee84bbcd935d80d8ced0da4da9f062002b1fcf70491c60"
+  },
+  "parent_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_real20_25679856/pass2": {
+      "contract.json": "4b3c80bf24aea2be3f501213cd16df75cec90d5727a191854a6bd33868417cea",
+      "result.json": "8317845c29613fc395fab2f027aca1ad9591458733be8e924825ab2fd453649e",
+      "coefficients.npy": "b4ee2bc5e58afe9c68b1115836582144bbf42400a8fc3ebaf144788cf7c3103c",
+      "selected.npy": "a26e8839937ce591e9234314578ad28667f53dbbe099ade5e41978ef5a360f93"
+    },
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_real20_25679856/pass1": {
+      "contract.json": "c1a36cc1b3cae2b2ba421490f38c53f7e75765a419ac78ecd18a37b8a2c6a237",
+      "result.json": "44bcee52f22ed532f43029ac0107b2180db5aaf5ecd91e2da40927f2a84abb6b",
+      "coefficients.npy": "b4ee2bc5e58afe9c68b1115836582144bbf42400a8fc3ebaf144788cf7c3103c",
+      "selected.npy": "a26e8839937ce591e9234314578ad28667f53dbbe099ade5e41978ef5a360f93"
+    }
+  }
+}

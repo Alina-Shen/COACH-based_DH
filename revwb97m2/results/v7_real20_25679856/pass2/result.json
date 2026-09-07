@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "status": 9,
+  "solution_count": 1,
+  "runtime_seconds": 120.01211285591125,
+  "artifacts": {
+    "coefficients.npy": "b4ee2bc5e58afe9c68b1115836582144bbf42400a8fc3ebaf144788cf7c3103c",
+    "grid_rows.npy": "23e2a6c05b68c26a66f958ad39be3045c2a84901611fb83fa44ce8cfa582f018",
+    "selected.npy": "a26e8839937ce591e9234314578ad28667f53dbbe099ade5e41978ef5a360f93"
+  },
+  "audit": {
+    "checks": {
+      "finite": true,
+      "coefficient_bound": true,
+      "ueg": true,
+      "support_budget": true,
+      "unselected_zero": true,
+      "mandatory_selected": true,
+      "sr_bounds": true,
+      "independent_scalar_bounds": true,
+      "grid": true
+    },
+    "passed": true,
+    "weighted_sse_hartree2": 2.0958641022824694e-07,
+    "ridge_penalty_hartree2": 2.2708743411019994e-08,
+    "regularized_objective_hartree2": 2.3229515363926694e-07
+  },
+  "objective": 2.3229515363925622e-07,
+  "objective_agrees": true,
+  "bound": 3.1314859143052587e-10,
+  "gap": null,
+  "gap_state": "positive_infinity",
+  "gap_absolute": 2.319820050478257e-07,
+  "gap_recomputed": 0.9986519366137236,
+  "gap_recomputed_state": "finite",
+  "gap_consistent": false,
+  "grid_max_kcal_mol": {
+    "99590": 0.001481086045066296,
+    "75302": 0.04922288191342823
+  }
+}

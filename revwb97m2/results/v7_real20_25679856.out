@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": {
+    "pass1": true,
+    "pass2": true,
+    "restart": true,
+    "resume": true,
+    "resume_did_not_overwrite": true,
+    "pass1_violates_grid": true,
+    "pass2_public_limit": true,
+    "coefficients_changed": true,
+    "pass1_objective": true,
+    "pass2_objective": true,
+    "tamper_rejected": true,
+    "input_restored": true
+  },
+  "purpose": "synthetic_only_not_real_data",
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc"
+}
+Bounded real20 passes, restart and readbacks complete
