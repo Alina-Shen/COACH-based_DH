@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 from revwb97m2.fit_spec import ROOT, load_fit_settings
 from revwb97m2.fit_inputs import ARRAYS, digest, load_inputs
-from revwb97m2.qchem_scalar_features import derive_scalar_input, tree_manifest
+from revwb97m2.qchem_scalar_features import derive_scalar_input, tree_manifest, parse_qchem_fixed_energy_output
 from revwb97m2.qchem_feature_publisher import validate_published_artifact
 from revwb97m2.step14_recovery_v2 import scalar_values, fixed_energy
 from revwb97m2.reaction_assembly import assemble_reaction_arrays
@@ -41,6 +41,12 @@ def checked_vector(path):
     return value
 
 
+def legacy_fixed_values(text, sr_hf, *, recovered):
+    """Preserve the validated ordinary/recovery parser, including print precision."""
+    parser=fixed_energy if recovered else parse_qchem_fixed_energy_output
+    return parser(text,sr_hf)
+
+
 def legacy_species(case, entry, cohort):
     """Recheck recovery semantics without rerunning historical hash-pinned drivers."""
     name=case['species'];artifact=Path(entry['artifact'])
@@ -60,7 +66,7 @@ def legacy_species(case, entry, cohort):
     fixed_file=artifact/'fixed_energy.json';payload=read(fixed_file)
     fixed_values=payload if recovered else payload['values']
     fixed_output=artifact/'fixed/qchem.out' if recovered else original/'gateway_work/fixed_energy/qchem.out'
-    rederived=fixed_energy(fixed_output.read_text(),vector[288])
+    rederived=legacy_fixed_values(fixed_output.read_text(),vector[288],recovered=recovered)
     require(abs(rederived['fixed_energy_hartree']-fixed_values['fixed_energy_hartree'])<=1e-10,
             'legacy fixed-energy/field mismatch')
     require(abs(rederived['pure_hf_reconstruction_error_hartree'])<=2e-8,'legacy HF identity failed')

@@ -1,0 +1,2050 @@
+{
+  "build_hashes": {
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/bin/qchem": "eb8848914711cc8346ea98c96e41dde7a6cb60e79f1cbb1268a906dc8ac0ede7",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/exe/qcprog.exe": "0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks.so": "95441cef4e010a334ffa9e73f5342c10ad639471c17d33ab0c6f7295fad39081",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_ham.so": "5ab4e78e304560433bdde891c0fa474290ea59eb48e07655ced00800579b1ae2",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_ref.so": "ca620f924f1a289928b4ba231c3145f4bc8408e0f36eeb4616bbd4c419687f2d",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_utils.so": "4c82b7c0bdede7e5b739e5bef86ebdc24afd8b0addd0074d93b282281183bdb1"
+  },
+  "bulk_submission_authorized": false,
+  "cases": [
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/11_Reactant1_EIE22/input0",
+      "authoritative_input_sha256": "7410e76acb770c0c0df653e545d6880902cc583ff742868a5aed021b5c56c596",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/reaction_ready",
+        "recovered": false,
+        "species": "11_Reactant1_EIE22",
+        "vector_sha256": "d67d008e5f091a8086e2c2ff6da593bbaa04bc3a797678dcc5a2f3e14f901e23"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/11_Reactant1_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/gateway_work/fixed_energy/qchem.out": "a5d59405feeb8699eb3275b9e8e93f0ed4e9424e0f4260c533ca9103fe945526",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/gateway_work/q4/250974/semilocal_features_288.npy": "a90220ccb37d19324b6466bde60d4875fcab3f33674b9bc2041899554953bedf",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/gateway_work/q4/75302/semilocal_features_288.npy": "268eaf3799830d4f7cca56188046f35d0810b707e2237e980bbe29e4fed587a8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/gateway_work/q4/99590/semilocal_features_288.npy": "7faa2fefca2a1520bda218fc7630489a6d776f048d018e5abe268bd00b6390ea",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/gateway_work/scalar/qchem.out": "fa9ee482dabc46f12cdb9f083a56d94820bb6965398e9b30bdd63e91a39e5feb",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/gateway_work/scalar/qchem.pt2.out": "e8eaa92e148ea2732dcb5b3a581884b44d93784041fdb6507194c710bfe585b8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/reaction_ready/feature_vector_292.npy": "d67d008e5f091a8086e2c2ff6da593bbaa04bc3a797678dcc5a2f3e14f901e23",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/reaction_ready/fixed_energy.json": "cd455436bf8ca45896d64b3686bc16f6b5ad199401eebf4be767331d50b3d624",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/reaction_ready/grid_difference_75302_minus_250974.npy": "bff9b126f2bf0d9434ab34ea482cf2fcc02208d3c4616adf0f4737f45d14b548",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/reaction_ready/grid_difference_99590_minus_250974.npy": "e1d051fc53b9b3841e6dc34a58bcb20c4b6d097bdbea0891c8bec52c1e504613",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/reaction_ready/reaction_ready_manifest.json": "10e23ed0c646d49a776a77bf7c5fa523390d54f16a7a64c6d0b10a4b1cbd7706"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "841856b53842fe0e5682bcf991f8b23f9ae09d472c68afd72f20d382ccd8dbdf",
+      "source_tree": {
+        "bytes": 148901120,
+        "files": 68,
+        "manifest_sha256": "28f8cbe4c3544d4d24f0d42d2d92a22e74e833c79fc4db1cf77a337f308f5441"
+      },
+      "species": "11_Reactant1_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/12_Product1_EIE22/input0",
+      "authoritative_input_sha256": "56d3a298ac438b5e5d0ea2e4dd92b96d46c58d4664fe10f9700f2a2b26fbc31f",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/reaction_ready",
+        "recovered": false,
+        "species": "12_Product1_EIE22",
+        "vector_sha256": "792fb521abe2b6836aa1c2eb5f5a4784399c21e583b261857ee70f2c5f91e8df"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/12_Product1_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/gateway_work/fixed_energy/qchem.out": "a46b3a27571c9bb58f99d9fcff4696869ab6335efad8854b13f4dc80559e957a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/gateway_work/q4/250974/semilocal_features_288.npy": "3103ee5d66955de46a68809843128323ff1a9425eee800a111e264cf6b82e58d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/gateway_work/q4/75302/semilocal_features_288.npy": "780e44ae1d91fae24aab00e4fc67a4c0b378188ffa44b21ac6279f7936518e20",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/gateway_work/q4/99590/semilocal_features_288.npy": "4ef679235a7f3c76d212e98b231df853f1eec45365c7509588145724bc716eb4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/gateway_work/scalar/qchem.out": "956f14c01d19899dd60304d52d24538dfa3ff28190dd09574c91cf70fbe338af",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/gateway_work/scalar/qchem.pt2.out": "85d3902c447c2cd23e31baae1f82102c6d901df9e092d8010b09dff6d3b9249e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/reaction_ready/feature_vector_292.npy": "792fb521abe2b6836aa1c2eb5f5a4784399c21e583b261857ee70f2c5f91e8df",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/reaction_ready/fixed_energy.json": "918e5c557be6bf514c3e90496cb433c2a3ea8e5a555a7eb90fe3d4e4308be12e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/reaction_ready/grid_difference_75302_minus_250974.npy": "4da9b1eb6262ff2d65403b8c3f28fca9a319db91cd2451e22b46f8407d4ec1ac",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/reaction_ready/grid_difference_99590_minus_250974.npy": "0047e5b6f04e9c6aa66d4e360cb2cb12e43026295006434c9a2dca2a1ed72fbd",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/reaction_ready/reaction_ready_manifest.json": "0b6ae4f424048e38dfe1eb65caeca2822b5021c91898cf242758085c2c1f2a23"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ccbd3bfa3be305aad16bc3080c981d632e3eb5de2643c6c99cee60e0ae5c5f59",
+      "source_tree": {
+        "bytes": 150229231,
+        "files": 68,
+        "manifest_sha256": "5ee07aa2490aa85554e010e67223d2ba5c97acf7fc308f0ec2dd4e3d2f2985cc"
+      },
+      "species": "12_Product1_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/21_Reactant6_EIE22/input0",
+      "authoritative_input_sha256": "3e3a0e3990a3bda968e0237930147b502dab8a4adcd18cb0724447124e9ada2f",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/reaction_ready",
+        "recovered": false,
+        "species": "21_Reactant6_EIE22",
+        "vector_sha256": "40afc450bd583bfc1fdb1c3809020d2b3dc2fd82702fda90327172efeb099a2b"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/21_Reactant6_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/gateway_work/fixed_energy/qchem.out": "a85d4e1fe3e61edcd5835a6b9bbea5c21dc51561574b9d477b87106c28ea3b27",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/gateway_work/q4/250974/semilocal_features_288.npy": "afb8e8c35ab34a3b16c878604366fcb67c8c6ebc67141745cb74ea2b2225ef62",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/gateway_work/q4/75302/semilocal_features_288.npy": "775d9e0be103e342d60a00645308f229a98a70939314e58d1c9842173eb07164",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/gateway_work/q4/99590/semilocal_features_288.npy": "06d96de47040378edb1016d3270b725cced09e576b1b3d080157f23239cdc080",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/gateway_work/scalar/qchem.out": "2ae917481593a850172c691369e7c141ce67a5b965ad789b574fcb63465638d6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/gateway_work/scalar/qchem.pt2.out": "0933fb0c5e7510ff7ef8bed0ef4f27b179a7c119c94c8bd0c8ab4192e5a95df5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/reaction_ready/feature_vector_292.npy": "40afc450bd583bfc1fdb1c3809020d2b3dc2fd82702fda90327172efeb099a2b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/reaction_ready/fixed_energy.json": "9588bd431d24d25ea556745b526f0bbfda2e3476908758b41f9e04c4191128ad",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/reaction_ready/grid_difference_75302_minus_250974.npy": "7433b2679bced28c10a73ae48199ffe564e42d8018e9f3ca58fc3a82294b13fb",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/reaction_ready/grid_difference_99590_minus_250974.npy": "c0a279ba3bb153758a8cff55746636dcd84a0448f9f3b7c48f328e3464707e7a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/reaction_ready/reaction_ready_manifest.json": "c20d14304181e59ed5ba246d350d6b605f437164ef64275b823d3332692d6953"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "04ad912b433a555023e2e80595d8dd231ed1d0c3b79a9f7e80db3fd64ca723e6",
+      "source_tree": {
+        "bytes": 160856374,
+        "files": 68,
+        "manifest_sha256": "5536454f3fbf37a677b4c43c95a51ef5077c3ecb9ea52900e9f2cf70b094f102"
+      },
+      "species": "21_Reactant6_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/22_Product6_EIE22/input0",
+      "authoritative_input_sha256": "772d95321e811381afe328d9f2bb994a3ac110a89e034870fadac3dc52687abb",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/reaction_ready",
+        "recovered": false,
+        "species": "22_Product6_EIE22",
+        "vector_sha256": "307bc12e211e37523949bd9bb158b0046ad4584c049bbe9c81622297220f99f0"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/22_Product6_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/gateway_work/fixed_energy/qchem.out": "85b487fd2d3cb063bbed26aa494b46c3b6a4c813d6bd40a059667ea88f32bb11",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/gateway_work/q4/250974/semilocal_features_288.npy": "00538b0f28edba8988bb5ec2e11a1162ff143c8955cc8d6338c1cda33e261ef2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/gateway_work/q4/75302/semilocal_features_288.npy": "1d5367b8c49ccb5f6d0ef75b7a8918967529ab033855c2b95e3ef6a5f2a2f0bd",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/gateway_work/q4/99590/semilocal_features_288.npy": "c1e612eceb88d488c1b7abab663f30536dfea2a0fbd08183d9a66da5da52b962",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/gateway_work/scalar/qchem.out": "a2f016e7e9da8b38204ad5a57a2947513332ae64a49e66c46e2b5ef0bd9af79a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/gateway_work/scalar/qchem.pt2.out": "43c4d1ed17ccfd46f44a48753182cb216327793ce7f5ff3cf974c64fb3fb229c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/reaction_ready/feature_vector_292.npy": "307bc12e211e37523949bd9bb158b0046ad4584c049bbe9c81622297220f99f0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/reaction_ready/fixed_energy.json": "da0fe12c63ba0f6c2f5a4ee755e784737662fd77b4a9d7970353d6fa6dadf90f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/reaction_ready/grid_difference_75302_minus_250974.npy": "cc078acbeb8ed5c633cdacc99ba3c59ac16a38c5ae47959d90456d25615ecdec",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/reaction_ready/grid_difference_99590_minus_250974.npy": "dc3389e6eec4bb8ffe95bf7104038253ad984d233ee36a06c2b10cbf090b6604",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/reaction_ready/reaction_ready_manifest.json": "f7e67234d93a046511745153837df7586877483c83427836a903fab75aa8dabe"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "a0f5f1fa9c0285a3ed3d16e6263bffdf1ab16fc236cdf06a92661dacf61d8de4",
+      "source_tree": {
+        "bytes": 161999817,
+        "files": 68,
+        "manifest_sha256": "0652bd8cd9d255afe54c432ab03d56ddff4226b3a050aa06c21210a0282d9499"
+      },
+      "species": "22_Product6_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/2699_01WaterWater090_dim_S66x8/input0",
+      "authoritative_input_sha256": "1ccb872bdbcb0b03c2402ee8b92b9fe488f89f8e16e223e18624607342293c81",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/reaction_ready",
+        "recovered": false,
+        "species": "2699_01WaterWater090_dim_S66x8",
+        "vector_sha256": "4d2b13dbebe2e191478572c727ae352a621ee976c9106646ad7fdbea05ea123d"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/2699_01WaterWater090_dim_S66x8",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/gateway_work/fixed_energy/qchem.out": "876879aa4dafbc8b9af9a03167508e08554dff5e3563ba44a482d3df3f3dd8f3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/gateway_work/q4/250974/semilocal_features_288.npy": "c7a944e98a5e9cedd2161c2f577e7272408030fa14ed53777313edccc7acd047",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/gateway_work/q4/75302/semilocal_features_288.npy": "c15f56965af25b38305fa2f0c4b1a76c32d76f30299a24dcfd544d4a4e29f1f9",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/gateway_work/q4/99590/semilocal_features_288.npy": "6342aec122f4e9949c3ece2da746945c201ae2d416f4dd432f2e3d770cee7bc4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/gateway_work/scalar/qchem.out": "2258419992968e35f3b5c63d902d471b1ed26137bb335bf6e85506e6bba6fa74",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/gateway_work/scalar/qchem.pt2.out": "f656d076f704854f12c80f0a05ad8abf8e5a19cd8e952ddad88a3e3581aaa068",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/reaction_ready/feature_vector_292.npy": "4d2b13dbebe2e191478572c727ae352a621ee976c9106646ad7fdbea05ea123d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/reaction_ready/fixed_energy.json": "4d339032562abda6681d808975a2f8d1ef3c2d2163531f6b15fb6cbdfa3587f3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/reaction_ready/grid_difference_75302_minus_250974.npy": "2fea542db4cf8a20f13ca50a013b089a6c66271db4b7467a1417e0115bbbe50e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/reaction_ready/grid_difference_99590_minus_250974.npy": "2163d219a1cca80c3826f3b75335f20924275aac12420220f4aecaddb9990997",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/reaction_ready/reaction_ready_manifest.json": "9c34c6c526fc7617bbbd39d129f066ae12bbf73f153f3c2787ec3cc0325a3c83"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "1dd66476673f25b322d849a5c581f9b24e84dfc3ddcf1b93baa11c9607e14f54",
+      "source_tree": {
+        "bytes": 79874302,
+        "files": 69,
+        "manifest_sha256": "1a5bc3d14c140b258f6ed41ef0fb624b5c52064bd67bf89df9f8852f7a437dc1"
+      },
+      "species": "2699_01WaterWater090_dim_S66x8"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/2701_01WaterWater100_dim_S66x8/input0",
+      "authoritative_input_sha256": "6036e17ff48a60f032d6c9afffa21195c9d20ae87736d7c7506fe5e2667c7762",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/reaction_ready",
+        "recovered": false,
+        "species": "2701_01WaterWater100_dim_S66x8",
+        "vector_sha256": "1403dc77ede408637bc8f29f445b9ca5598fe8b284afd8978260b25b0cf0e78a"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/2701_01WaterWater100_dim_S66x8",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/gateway_work/fixed_energy/qchem.out": "ab03ba1400cff4b7fb67bba59a9102f06e0f83b9111c8f43680bb72464cd8fe3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/gateway_work/q4/250974/semilocal_features_288.npy": "8fd59898db3c01d376ff28b4ad7616e557c1c8436a0fdfb59306297c7055ae87",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/gateway_work/q4/75302/semilocal_features_288.npy": "c85ef220c3ad5398e4aff575899051b8cd472c927e28548892a4134c1da8ff87",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/gateway_work/q4/99590/semilocal_features_288.npy": "1008af0623b2179ca0ba9b803727b9cdf630a74eaa27f7e566d982d674ef856b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/gateway_work/scalar/qchem.out": "721617b56f064b8bb46ac247ab0925e8f59a61c08bb3c087fe563ecf3679d1e8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/gateway_work/scalar/qchem.pt2.out": "b3d5154c3710142c8508102f916330024eb780a9ad592b67a3361b7140743469",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/reaction_ready/feature_vector_292.npy": "1403dc77ede408637bc8f29f445b9ca5598fe8b284afd8978260b25b0cf0e78a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/reaction_ready/fixed_energy.json": "cbd628c915cb1ab6156a8f2446c1e5add935bf005f97a7a39e6a927792a0cd0c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/reaction_ready/grid_difference_75302_minus_250974.npy": "a6a161d75895a5cb69218095345e0fcbf4eb543a6fbf7d49d80e9c5388a295b7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/reaction_ready/grid_difference_99590_minus_250974.npy": "e897ef9dc28d337675b4259e7d0d50b8ce6ccd0e9f0fcd51ee465256b5572aa8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/reaction_ready/reaction_ready_manifest.json": "70d9d97b9202b39d9b026ae801547be8f3d5b0d3c8f95811e6534ee4fc16327b"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "a0dd13e34b4ce179d7eebce088278c3be31aeffa5b33b0bf2c8a42349c59f72a",
+      "source_tree": {
+        "bytes": 79632018,
+        "files": 68,
+        "manifest_sha256": "38c6bea46eda41e100bb976f0f0842cc7ac76edbc25e875bfc3b523f3368c7ec"
+      },
+      "species": "2701_01WaterWater100_dim_S66x8"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3163_59EthyneWaterCHO090_dim_S66x8/input0",
+      "authoritative_input_sha256": "8657054d3d54074adaf6e2faec3f858b6d62ec6c7f855e6810531828861d89d2",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/reaction_ready",
+        "recovered": false,
+        "species": "3163_59EthyneWaterCHO090_dim_S66x8",
+        "vector_sha256": "4bdf77672327c3e9c4b3f872f6f9306209a6cdbaface404cc2e132e687a8d74b"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/3163_59EthyneWaterCHO090_dim_S66x8",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/gateway_work/fixed_energy/qchem.out": "6b99bcb08afce93f9b6c7c3884b088ae844322fc9f7ff3a9dafdf54bf50b3dd2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/gateway_work/q4/250974/semilocal_features_288.npy": "046bcd87bffabe185835a5783109f04f999d1e917602c13f1ccb8a5e7ba594b0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/gateway_work/q4/75302/semilocal_features_288.npy": "41444046180047ea82313fd1e33be61bfea1bb771f371723d3a4cad1077048c0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/gateway_work/q4/99590/semilocal_features_288.npy": "18c91564e00944ed6b6808aaed9b2857230a9b41bb257df5c3c1bd3a1ec423d2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/gateway_work/scalar/qchem.out": "37e5b79c54248b5e4f361e098b418e4a650975a68289e4c5bb7862e031d0e749",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/gateway_work/scalar/qchem.pt2.out": "622301af78a8fe4236c81904a68d1772f1bf6c3049d5f51e402a13fb8277968d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/reaction_ready/feature_vector_292.npy": "4bdf77672327c3e9c4b3f872f6f9306209a6cdbaface404cc2e132e687a8d74b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/reaction_ready/fixed_energy.json": "2462510841a29c56e8e57f5902d5bd519b02532910cbee9d39d75ed1341dac4a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/reaction_ready/grid_difference_75302_minus_250974.npy": "e58a4e02828180f01c305f73a8480a9fe33e52f4fa4121585ca658b5dc39a9e9",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/reaction_ready/grid_difference_99590_minus_250974.npy": "6f8f14ff5b427b3a04d137c877876e39f7380dfe124ac75cf6ab69ba14044746",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/reaction_ready/reaction_ready_manifest.json": "89fb817c08c7049f4474ba598e2e599d3483bb7b76f423394d7f2fcea693d4d6"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ded8d1a41606dbdaf3a03a3e9ae1ace9cdd536ef7e412363ac25f86c34765e38",
+      "source_tree": {
+        "bytes": 91154685,
+        "files": 68,
+        "manifest_sha256": "4b95ed0f1cb01a221245b72c76c3a6f1b421048543e7bcd7f3d58393dbcd4f76"
+      },
+      "species": "3163_59EthyneWaterCHO090_dim_S66x8"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3165_59EthyneWaterCHO100_dim_S66x8/input0",
+      "authoritative_input_sha256": "7eacd1087a3e3c8054fa0a3123074e22c25d201801f8b0184d87e4bedfcafad6",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/reaction_ready",
+        "recovered": false,
+        "species": "3165_59EthyneWaterCHO100_dim_S66x8",
+        "vector_sha256": "ab1d388506e57b2efaabbab47e5f65e02a1fefe5e2865ed8d72dd74064b9d8bd"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/3165_59EthyneWaterCHO100_dim_S66x8",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/gateway_work/fixed_energy/qchem.out": "61d8ba6a04f5dd22cc10f8480e2caea0752120bf57f68859c323ed955562506c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/gateway_work/q4/250974/semilocal_features_288.npy": "65047a1aa77026f87ecd15c03957241998bb816f449d043cf0d57e4b556730dd",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/gateway_work/q4/75302/semilocal_features_288.npy": "c8047012180a4ff312195ad22eb423dbfd27ce06b24b8809c3f38a2b508a7d30",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/gateway_work/q4/99590/semilocal_features_288.npy": "847fe7dba5e6c57a4d4317ab27c9ed716bd0be334bb26517b45f4a99f8607501",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/gateway_work/scalar/qchem.out": "2ec3104c8a8ef77b1492256ae8183a34149eef70e0d791db0f8ddef9fd580dd7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/gateway_work/scalar/qchem.pt2.out": "cd421e909fe87a62fc5c3f6925b17318066904284abc3d8f2fc07e0df0ce81c0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/reaction_ready/feature_vector_292.npy": "ab1d388506e57b2efaabbab47e5f65e02a1fefe5e2865ed8d72dd74064b9d8bd",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/reaction_ready/fixed_energy.json": "6cb9d32bae08afa430f21bbca7af81c1099f76cb09e775cd0fc25aa0598441f4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/reaction_ready/grid_difference_75302_minus_250974.npy": "c108538eed398539fb280e8614ff4269d573b62c2f4b70def7bac9c33ff4177c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/reaction_ready/grid_difference_99590_minus_250974.npy": "b2536cd454665f970809d04ba6fe1facb09895062cb1a02f7ee730f788affe13",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/reaction_ready/reaction_ready_manifest.json": "7f0566a4273f74221038450fc0315cb5567721f85bbf43fd68c56679a9271d21"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "2f160bcb3c0fccbb8982136df91431af1c8c00673b0374ee92b64643f2c6a92d",
+      "source_tree": {
+        "bytes": 90798969,
+        "files": 68,
+        "manifest_sha256": "5ac3fa496dbaa7da7eda4432421a837e0c251bb8bdae7f3f7bebe9f0cc449d56"
+      },
+      "species": "3165_59EthyneWaterCHO100_dim_S66x8"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/45_Reactant18_EIE22/input0",
+      "authoritative_input_sha256": "1ad5748ebff35bc3a16064db27cc5bc68a632ed28828270eb4bd498a74ec4125",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/reaction_ready",
+        "recovered": false,
+        "species": "45_Reactant18_EIE22",
+        "vector_sha256": "d399827a742f6546b860dc3d19088218f5fc6d28e005e3fa5b96849948f664bd"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/45_Reactant18_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/gateway_work/fixed_energy/qchem.out": "d6ab6a0f10c2922899fbc427c83d962a8918b8484e1afba30d5e2f9e34331669",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/gateway_work/q4/250974/semilocal_features_288.npy": "6b0fa15be961a153ee9681c7505a1c552347852036613b7a0e7189802471cbb3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/gateway_work/q4/75302/semilocal_features_288.npy": "32c14dc9eac1a702fefae3cfb11278e9ac5ca88227efce583327106edee4d663",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/gateway_work/q4/99590/semilocal_features_288.npy": "3adf457b440752e60d85d3dbd29eecc9d1e351e6825755c34f819aaf16563f2b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/gateway_work/scalar/qchem.out": "a1d941a17b58fb757f420628dd0cedb71b410bccfab0ef512aeae1e8209f7799",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/gateway_work/scalar/qchem.pt2.out": "25bec1e70c8de06d45413c5417517a2e7ef9e619d7e6ad93b30d6c445401696f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/reaction_ready/feature_vector_292.npy": "d399827a742f6546b860dc3d19088218f5fc6d28e005e3fa5b96849948f664bd",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/reaction_ready/fixed_energy.json": "c38a25c95dcb49786f22057e669ecc3efe93569fc99d42a3b481c7527e1dce49",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/reaction_ready/grid_difference_75302_minus_250974.npy": "79f1c04d161a84c5e682118115d8a0fd9d161c8d0ae82b01e857f05247145aa6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/reaction_ready/grid_difference_99590_minus_250974.npy": "612160f28baec801fe4ea7802314c473e05e675bd4ab237b03b6e9617c586f4e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/reaction_ready/reaction_ready_manifest.json": "c5edd92ee153fe2dbb88516d3bea3088451b69c320c447a9024301bbc186276b"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "3f1b4800342500b6cbc5f04756d34a32b9ada41855c5ba5a06479bd7f3e56aae",
+      "source_tree": {
+        "bytes": 128060502,
+        "files": 68,
+        "manifest_sha256": "46a66da791d43656c933d97099e7a5bd53ffeb4bc6970468d23b91c5f080dc41"
+      },
+      "species": "45_Reactant18_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/46_Product18_EIE22/input0",
+      "authoritative_input_sha256": "12cdb67382e699e807cc5d6d301a4ad3d33af522c6b90fb5e293888b402f1938",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/reaction_ready",
+        "recovered": false,
+        "species": "46_Product18_EIE22",
+        "vector_sha256": "465633c1c7fdc3b3b90ee8cd64f0fd91ca68011d01c1e9520b6fcf3b70f911cb"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/46_Product18_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/gateway_work/fixed_energy/qchem.out": "3c101ea5be257c6211cb7086fc82b1472d1ec8bb2dfdfcaa3e608422b3f3582d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/gateway_work/q4/250974/semilocal_features_288.npy": "5beaf8d6eb5d0d7964bdc86a53e79fead0a24929a088f4b710ba6c5b95d661ae",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/gateway_work/q4/75302/semilocal_features_288.npy": "beb0d00643efe44c0912c5f4ae74efe580d06301916bb918161a4e12d8174fb1",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/gateway_work/q4/99590/semilocal_features_288.npy": "bcb53fd1e3125a147988dc5cb6dba1320bbb60fde86be6bd783ec3d04ac6fe47",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/gateway_work/scalar/qchem.out": "4f289afd8d0aed6e1e22a14b3ab19e73a25cad02f40ea41b42cc02c1e35822de",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/gateway_work/scalar/qchem.pt2.out": "7161c63a10c9ac4e6feae34ddbbfb7529129dbea1f3b1b426af9f37f0bdaf532",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/reaction_ready/feature_vector_292.npy": "465633c1c7fdc3b3b90ee8cd64f0fd91ca68011d01c1e9520b6fcf3b70f911cb",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/reaction_ready/fixed_energy.json": "9e3b710c09a05fdae26833f08ba301a71de8dc9cb27ea92ac18b0d3bc94391e6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/reaction_ready/grid_difference_75302_minus_250974.npy": "12e3d9a3c3625ba4849762e942ccc9567826fc8d820c502d9b579ff9d9e7226c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/reaction_ready/grid_difference_99590_minus_250974.npy": "bb7ab154afe70b0c2f8d9a9c566b8433ebc49020cac7a66756abdb341feed2c2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/reaction_ready/reaction_ready_manifest.json": "f983be181726782144488f912136e7cecd8982ce9a3c22ae5d0be055de7da3a1"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "27c42571752991a4516b852ac2a1ab0950f6f59b7f27ca00feb623e79c2be639",
+      "source_tree": {
+        "bytes": 128430045,
+        "files": 68,
+        "manifest_sha256": "67730820bcc89f7cb88a0daa410ea13a3beea8a5c15f7b137bf91604565e32b3"
+      },
+      "species": "46_Product18_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/48_hcn_BH76/input0",
+      "authoritative_input_sha256": "400695754e0ff0c56eaed9eeef776e239e21687c08c9f48a5f4e734c0019ec36",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/reaction_ready",
+        "recovered": false,
+        "species": "48_hcn_BH76",
+        "vector_sha256": "c08420f76b5cf504d30c52078727a162006210f5729468d9585f99b066bc0af5"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/48_hcn_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/gateway_work/fixed_energy/qchem.out": "b8b20bc2c4b7018ebf22c75dc6c4b205ea324861d98c1208bf6b5dd8b071a4f9",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/gateway_work/q4/250974/semilocal_features_288.npy": "219f05e6395cea3f873ea2ece024a35f2be884b1cb2a86122eaedd39eb0ce8c2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/gateway_work/q4/75302/semilocal_features_288.npy": "7f669d8d0cc9440120f17cf7edda9c416281114bad236da26e7b36bc1cfc7ed4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/gateway_work/q4/99590/semilocal_features_288.npy": "2c919fb877be67f61a9bda76ceee2e36fe2a609205cfea280699d9a3dd95a8b0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/gateway_work/scalar/qchem.out": "35ebe1122439872f54859408d2a363a4af2eff467ed73b23d83e51e417c86f8e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/gateway_work/scalar/qchem.pt2.out": "cbe92e710fe9dc6648ea05f951a35883f0ad66a795ebb3a6ac3a009f1f0621fa",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/reaction_ready/feature_vector_292.npy": "c08420f76b5cf504d30c52078727a162006210f5729468d9585f99b066bc0af5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/reaction_ready/fixed_energy.json": "7277b961a602ab0c20d65a70ac49741b2e8c40abc24265f41b11ee4ab54ef55c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/reaction_ready/grid_difference_75302_minus_250974.npy": "0530d32fb46fc855ca742f18a762963d7ea7cea108f28d2aa6c753ec844383be",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/reaction_ready/grid_difference_99590_minus_250974.npy": "b8426be806979efbf1bcc08e0f3337001a670bcdfd27ba7f83f22690527d78cc",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/reaction_ready/reaction_ready_manifest.json": "d18162fd78e49a4ee154d18d5e1398a92305e0afdf41f432d6b39717e8c03ce5"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "895dd70830d9c312ee88d01b6588a69dfcb032efd65fe4cd4a8311f0ff5b6f05",
+      "source_tree": {
+        "bytes": 63694764,
+        "files": 67,
+        "manifest_sha256": "a9951db0f1822bb62a2d968b7fa5bbb6e8c4ff3062254b6bb113a9b71386fd9b"
+      },
+      "species": "48_hcn_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/49_hcnts_BH76/input0",
+      "authoritative_input_sha256": "52d6201a86b7df20adc90a1cb8044edc02fe8c7e3906a3ee95ffd6338c302046",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/reaction_ready",
+        "recovered": false,
+        "species": "49_hcnts_BH76",
+        "vector_sha256": "84d49170dc65ea3e1780c08f6e7ffa73e93e4a98557c3b5e1a592461f5473f68"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/49_hcnts_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/gateway_work/fixed_energy/qchem.out": "fa65e620da49aacd1962d7b6739c9f92092f9d810b733a5766c11270f65cf15f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/gateway_work/q4/250974/semilocal_features_288.npy": "5c81a1298d73b994b7bac4491354c41dd69031fda821f0d7f78962ff779fb0fb",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/gateway_work/q4/75302/semilocal_features_288.npy": "1b8ba51611137fae6d26885869b226516976b501520222153fadfea1dd8addf2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/gateway_work/q4/99590/semilocal_features_288.npy": "b4efa1089c35d639b579f0bbee810519f761f50c91b42c4cc1e8f2831b166438",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/gateway_work/scalar/qchem.out": "36b5f73003ce64a010d4a0566da4b9506be8e658406d021a5ac655a063c29fdd",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/gateway_work/scalar/qchem.pt2.out": "da7a2e8b1e8c4b07129f071e4f37b9428b0865146170ce81f3692a3a9b6c04d9",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/reaction_ready/feature_vector_292.npy": "84d49170dc65ea3e1780c08f6e7ffa73e93e4a98557c3b5e1a592461f5473f68",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/reaction_ready/fixed_energy.json": "1701471805e2bc1fb0c42775215ba9bc3cf9346a201a8fb8b01eb0ecd6092e39",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/reaction_ready/grid_difference_75302_minus_250974.npy": "37fb424f3e18dc4e96eb7e09d80150182e4a379914aa724006eb608e6ed78761",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/reaction_ready/grid_difference_99590_minus_250974.npy": "5269a18807c987e7d0ed7771897020cb6edd9f62da0754bbaa7c1b5d65ad7d1b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/reaction_ready/reaction_ready_manifest.json": "871455b75b21c89ca72b2c8d6ec9d90f0776737cf55c0c7a9a3b992a258e1987"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "947a4bb126ed345f4ebc7d64b002152445eb19f63e3675ee5009cb128b2349da",
+      "source_tree": {
+        "bytes": 63699202,
+        "files": 67,
+        "manifest_sha256": "c2512044df7e321828bbb92a020e394f013c61455202325d50dab941855452e3"
+      },
+      "species": "49_hcnts_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/58_hn2_BH76/input0",
+      "authoritative_input_sha256": "dab934f1f174994b7c91571a22b9bd1e4bc64d8abe2ad544b51c381b50be43ef",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/reaction_ready",
+        "recovered": false,
+        "species": "58_hn2_BH76",
+        "vector_sha256": "bcca56eb5182c50fd136dca8f7bd22d303ea2ba8a4dae45787a38f78175cb471"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/58_hn2_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/gateway_work/fixed_energy/qchem.out": "6f146fd8c961a564911c9b0fb2a70900051dee4c23cc8cc918e80749ca7be4f3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/gateway_work/q4/250974/semilocal_features_288.npy": "ab4b2e49899f419a7bf46a956446982512652005dff97664c1333a9543e4b628",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/gateway_work/q4/75302/semilocal_features_288.npy": "3214af19124de27604782d2528c640599d1702ca04f5128f6d7be5d2e9cc03a6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/gateway_work/q4/99590/semilocal_features_288.npy": "c7ea5d968b2562ef8e0c7b644aa9eda21b336d703fa2420104b2f4fb9c16dcd8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/gateway_work/scalar/qchem.out": "6bcaa7d4d49ca6ae88d041cf0cce72d2d9b5aa815c748e6fbd109f22c895892f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/gateway_work/scalar/qchem.pt2.out": "d71e0570fe5b288f321aad374f85447f5058f795595dbaf7c432f1844ce18ae7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/reaction_ready/feature_vector_292.npy": "bcca56eb5182c50fd136dca8f7bd22d303ea2ba8a4dae45787a38f78175cb471",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/reaction_ready/fixed_energy.json": "c1f6302c63e7070793e9bf6789fa4ce2d0530b69256b25b3779be1fb39e019d0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/reaction_ready/grid_difference_75302_minus_250974.npy": "0b517f07a1bbeed256c85aa60dfbc773352ac09338fc67de5d935db3175459d8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/reaction_ready/grid_difference_99590_minus_250974.npy": "c981402835d580d5f3c2c42896519e4920d23372ca2be7bb9dd221195e20a287",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/reaction_ready/reaction_ready_manifest.json": "08024fedaecc878009558e898b13cb49c6a47d7bd54c0836ec7b5af781915020"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "b33de99740c7e3d617187d9cab49150ef8f115f301208c3cab7d7966f8a23278",
+      "source_tree": {
+        "bytes": 63729864,
+        "files": 68,
+        "manifest_sha256": "04cebd7533b62e3fe57392faa803262ae0b52b86f43950cc788d79df3c781cf8"
+      },
+      "species": "58_hn2_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/59_hn2ts_BH76/input0",
+      "authoritative_input_sha256": "96bb34e7322ac214e61349aeea70706c0523e522c3050af3c6d9732a0d1c1d4f",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/reaction_ready",
+        "recovered": false,
+        "species": "59_hn2ts_BH76",
+        "vector_sha256": "ec959d447edfaf00d0675b9cc87378c5673447365abaee9fe605ca7599839aa2"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/59_hn2ts_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/gateway_work/fixed_energy/qchem.out": "597736529ad657ff392a3f710013247f714438c019fb028734b4c4d09bcfd110",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/gateway_work/q4/250974/semilocal_features_288.npy": "3a0c4824ddf7f8f85e43592d9c25a2d07c73017e0d308c2c4110b6ff0d66ae0e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/gateway_work/q4/75302/semilocal_features_288.npy": "9496da3e9d3887b94a72228f1afb0342166f1e2d4e96ce50c55b501a828a9350",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/gateway_work/q4/99590/semilocal_features_288.npy": "9536429119186cd7692312f8eea07f33d36ce1b4c9e35e210592c8c921174dd5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/gateway_work/scalar/qchem.out": "601ed08c092c2deffb03204b3d9c62e204789ae060f044e5f36342422848b2df",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/gateway_work/scalar/qchem.pt2.out": "a6e8d9b74eaf23b18ab283bc693fe9d69adcd4c3306b8b8e10cddb08384c0106",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/reaction_ready/feature_vector_292.npy": "ec959d447edfaf00d0675b9cc87378c5673447365abaee9fe605ca7599839aa2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/reaction_ready/fixed_energy.json": "5d6927f65030cc944a857c0c6358700b7d4b03064f4df9d93f98ea1025a86521",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/reaction_ready/grid_difference_75302_minus_250974.npy": "d5c904eed4466b86453f5d3ccbc3331d3dc7c5afc9c33616972bbbc9feaf7979",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/reaction_ready/grid_difference_99590_minus_250974.npy": "9d2b4132855325d78ce0846666c746aabef519df8b754d5d251f1c0e846e7392",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/reaction_ready/reaction_ready_manifest.json": "a744ce49fcda71ec0f90d47936e326dce80c6f872f04f5d77f6f71217e079c3e"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "3b1faebe5ae226bd77cbc14332fc55f95ce5ec4791b93d46fcb0002a54ac924d",
+      "source_tree": {
+        "bytes": 63707302,
+        "files": 67,
+        "manifest_sha256": "1e51703e83628d3c5aee53b82fdaf8000b6dad66fc0e3670060377f5a3998c60"
+      },
+      "species": "59_hn2ts_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/60_hnc_BH76/input0",
+      "authoritative_input_sha256": "aaaf835cf87af05a94925932f7436bc8fdafea1ac18f79b22bf50a8583004636",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/reaction_ready",
+        "recovered": false,
+        "species": "60_hnc_BH76",
+        "vector_sha256": "c2cf14851d2bcda2e3d3ce3a6c87e4d2ec0b99e3450406ab6fb30d0d9d97ac4f"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/60_hnc_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/gateway_work/fixed_energy/qchem.out": "8517f2c6ca8937af919afd37d32f06793d6956445fa4b9fc17896a7c84998900",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/gateway_work/q4/250974/semilocal_features_288.npy": "872d1e0f1ef4c61610e542c604d22bfc945d2fbdfff5ccf6c57520bff60f0c61",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/gateway_work/q4/75302/semilocal_features_288.npy": "f64dcb4cb2d9a36244898a1e60cfe3d07ec02834213dbd343e10fd623474d36f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/gateway_work/q4/99590/semilocal_features_288.npy": "195ceb5640b08b8965475117f9e3211346210ebb1de88118a9b732e40159d1a9",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/gateway_work/scalar/qchem.out": "08321ef99b19d1ec9ed4014038cfae48b0ffa4bf7548b088084feac5586adaf9",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/gateway_work/scalar/qchem.pt2.out": "02fbcb376d5bebeba8a701a6c7301a441aba5923003fabd040d125284a6d56b3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/reaction_ready/feature_vector_292.npy": "c2cf14851d2bcda2e3d3ce3a6c87e4d2ec0b99e3450406ab6fb30d0d9d97ac4f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/reaction_ready/fixed_energy.json": "6274b8bd86024a4ee3565fd1ec3fbf3de902d7b976336ff5085e1fb40933bf4d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/reaction_ready/grid_difference_75302_minus_250974.npy": "581974797dd37da47c0584d81256e51d9e7151fba652a9c3f9fe4de3f30a26d6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/reaction_ready/grid_difference_99590_minus_250974.npy": "9f40e29a3a3087539fc65a6de8dba1c30539e07e25133f026f9519240c09f70c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/reaction_ready/reaction_ready_manifest.json": "584a4327b76d7845942e0c0256f648c5bfaafa31ca2980905aa5e02c9c59aa50"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ddb14f5358fd4d1fbd099cce9e1c390e1a87101f836263cf7fce57a74a9f8337",
+      "source_tree": {
+        "bytes": 63698226,
+        "files": 67,
+        "manifest_sha256": "11f09b46bdfe1086eaf3c12c07fcdac8b12a4b6f149198a5a032179524a7aa8a"
+      },
+      "species": "60_hnc_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/BUT14DIOL_B1/input0",
+      "authoritative_input_sha256": "d576fc39cc37171b922baaf58e5884c022d6057913ec801cf5313fbc9b3abf64",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/reaction_ready",
+        "recovered": false,
+        "species": "BUT14DIOL_B1",
+        "vector_sha256": "d6738ba1f63b6e4488f4868ded91ff7a2af901ba0d967a962704a5d8020e6101"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/BUT14DIOL_B1",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 7500,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 21,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/gateway_work/fixed_energy/qchem.out": "97fb14dafdab15816482425b7a081753bbdce0891aec6e0348d4ecbde89cfa5f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/gateway_work/q4/250974/semilocal_features_288.npy": "1885f5a23cf76d3723d887afab18e111b0298dcb6a2027cd8929320d1286c5e5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/gateway_work/q4/75302/semilocal_features_288.npy": "012f54d55990e3a32daeed131fc7f6b031ce84978be752f13754d7fa4bed4d13",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/gateway_work/q4/99590/semilocal_features_288.npy": "a0008c398db5cf77809b6a857ea25f5ebcaf24134b21cde83cdefc8a46ae615e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/gateway_work/scalar/qchem.out": "0fca153827c72d67edfca5e30eeb1b1be1ca606ab4d4c5b55c41494b9efe7db5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/gateway_work/scalar/qchem.pt2.out": "0ebd561e82874dda33ca8cb2d2e49588e75caac61e16830d8192f461e0d47277",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/reaction_ready/feature_vector_292.npy": "d6738ba1f63b6e4488f4868ded91ff7a2af901ba0d967a962704a5d8020e6101",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/reaction_ready/fixed_energy.json": "e8a8cbd0cb535f068489e97a3272a23ea43a5970fc252719fcf7fa8f721ba455",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/reaction_ready/grid_difference_75302_minus_250974.npy": "599f467699b98f3b1f30066e03b2f5c9f2a6c334e3ca1c87b7620b337f11af47",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/reaction_ready/grid_difference_99590_minus_250974.npy": "47f387c6071912413381af5bb561eadbda1ca70efd5bc7673396af5c0034af45",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/reaction_ready/reaction_ready_manifest.json": "96aa4deb0cd2c3e91694fa829b88db11ea71a9dfd635fe31f54f9cd64a9444ed"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "adeb07201e6101b554c765d4e1f850436b25e39015cf514a5a3415be7734bcb8",
+      "source_tree": {
+        "bytes": 236136361,
+        "files": 68,
+        "manifest_sha256": "c5ff50d4d4d9cb22d2d0724ef663749e4fc7c5ff785aa34f2e2b3d70c27a33b9"
+      },
+      "species": "BUT14DIOL_B1"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/BUT14DIOL_B4/input0",
+      "authoritative_input_sha256": "e2b6f9063a07714c491d621e029137244434d4d0659613b3b0f492b0f2b53471",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/reaction_ready",
+        "recovered": false,
+        "species": "BUT14DIOL_B4",
+        "vector_sha256": "297e261bdeb361c9f9e4e7808894d848411bd1861de0f34fe3f969232d76b3d5"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/BUT14DIOL_B4",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 7500,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 21,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/gateway_work/fixed_energy/qchem.out": "c6714c89011127adf3dcf1565d808af2957a21bac394bbc767e2cb7036f7a290",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/gateway_work/q4/250974/semilocal_features_288.npy": "9b0711d327ab1edc0c408c95251c18694924d628bbc16cdf941690097e7ea2d3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/gateway_work/q4/75302/semilocal_features_288.npy": "c697e24029fb7f4320d2d7297c60a8bb18e7a23e94157407fb409ff9e36a3895",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/gateway_work/q4/99590/semilocal_features_288.npy": "4c448ccbdf865d4a0a0dd279182154451c67b748971f9f7974f259bb0814d91f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/gateway_work/scalar/qchem.out": "eb6b7e1214a9a4f0c56c28038ce16db732f4a937023f61debbc7c15df880ae68",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/gateway_work/scalar/qchem.pt2.out": "46be11381d7790f279207ba0f2d8112d095023e62f54e191fd453f4d695aa6ef",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/reaction_ready/feature_vector_292.npy": "297e261bdeb361c9f9e4e7808894d848411bd1861de0f34fe3f969232d76b3d5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/reaction_ready/fixed_energy.json": "5c8a0e5efe812436706230c975b79cc16a2aff602d4f19827f84973b5d322e6d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/reaction_ready/grid_difference_75302_minus_250974.npy": "70bccc32fbfe15e4c9b3638a54fcab6d2ccf7e24d316772e72f40a11134411cb",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/reaction_ready/grid_difference_99590_minus_250974.npy": "05395335f96b82bbede7f627d1fcbabd4ad33abf588d47bf79d75f53f722ac66",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/reaction_ready/reaction_ready_manifest.json": "2074aee386fff9352cfabc92da99bf6d817996c30e77656b2f0abd76ffc6e194"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "a0349d3914bd57780f72c2632b1929c48e1466c463030b95700cebe8cab16743",
+      "source_tree": {
+        "bytes": 236771691,
+        "files": 68,
+        "manifest_sha256": "5796a918bb5515439fa6e3a50f2525114c13bd4c28360f9698845524fd82e36d"
+      },
+      "species": "BUT14DIOL_B4"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/BUT14DIOL_B5/input0",
+      "authoritative_input_sha256": "64d4b28308b98d0c53708db67a8fc6fde5c1a67367cf6f0e1f9f56368ce865ce",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/reaction_ready",
+        "recovered": false,
+        "species": "BUT14DIOL_B5",
+        "vector_sha256": "8ab940af3354805c87e51221fa1bf0935260ba741b49849cb7bcc0c3822cb765"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/BUT14DIOL_B5",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 7500,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 21,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/gateway_work/fixed_energy/qchem.out": "11cfdbe8c32fef0fdf11893ace2e152146605a16cda15df7240e880b8490bdbc",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/gateway_work/q4/250974/semilocal_features_288.npy": "49b090516ab2002aa5a007beb730af654bdc6a4ca34009a9d7e5772e5018c7a2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/gateway_work/q4/75302/semilocal_features_288.npy": "7cebcb3d38630402c3599a4368d11f501ee7b5e14d38ded947ec38312477c34a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/gateway_work/q4/99590/semilocal_features_288.npy": "1aee270b5c33f3015bb6d32baf1628478b65fab43de06a316ec941346b7e323e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/gateway_work/scalar/qchem.out": "2e8067b9ff4c8df55f993baab5629b9471c3cdf53559ffbcec5dd30fb5ee5084",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/gateway_work/scalar/qchem.pt2.out": "f634fa2abca7009a0d3319d92dffaf600381fba96146ad9ace48fe063d57a6fe",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/reaction_ready/feature_vector_292.npy": "8ab940af3354805c87e51221fa1bf0935260ba741b49849cb7bcc0c3822cb765",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/reaction_ready/fixed_energy.json": "f60c705545491409e569d771dd45fe2830def085c10fb5a77e2ad7c19d15f2cc",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/reaction_ready/grid_difference_75302_minus_250974.npy": "75f9cd61939c6b435d7a19f03681e7a8a0dc8070e99b94520262048efa045545",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/reaction_ready/grid_difference_99590_minus_250974.npy": "f8233400558183c2f2bc650b1aac8c587e4b1f509d555cc46b375dea25d8dbe3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/reaction_ready/reaction_ready_manifest.json": "fefd0e3a14bd0ae30db6892764c10b0ce83311998e702a6852a49ff3841983b8"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "3232f0f1c983795760113de1e5d74fabab46ca7448fa6cac3ea01d9be293a886",
+      "source_tree": {
+        "bytes": 236749047,
+        "files": 68,
+        "manifest_sha256": "6de638593555ad4cf035e100572cbd55646a8b5212c4e8d88de2880eedd5a2f4"
+      },
+      "species": "BUT14DIOL_B5"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/CUAGAU_Ag01N0/input0",
+      "authoritative_input_sha256": "73f2ec73f4ac44b4c5247fe4ab3892ee529af5a6a178486e7c7918e377d1b7d4",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/reaction_ready",
+        "recovered": false,
+        "species": "CUAGAU_Ag01N0",
+        "vector_sha256": "becdcb3956c1b77ae462259779444ac97b444bb80bf02a8fec09ee60f9c6e994"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/CUAGAU_Ag01N0",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/gateway_work/fixed_energy/qchem.out": "9e423897d407f4961478827ee302436b9e81fdddc824758b052835ce664f8e0e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/gateway_work/q4/250974/semilocal_features_288.npy": "26d0a34fa38d9d0b67f02f212ceffe7d629fd8805f2896e87ff81faeac8c76e0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/gateway_work/q4/75302/semilocal_features_288.npy": "f78450d9fc565da996226f62f44c3e87976a6a4b55ee793016118740556e8122",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/gateway_work/q4/99590/semilocal_features_288.npy": "d55f6b23b226460fb3a5b6439cd9b384c57fa7274a53dcaf72af321a5fd359e5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/gateway_work/scalar/qchem.out": "67ca87ce6428df1b596f3d66dd2e7df5a9b84619c5113334753ae92a1880fc00",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/gateway_work/scalar/qchem.pt2.out": "f3ee45448a7f6227b84867756fcdc3dd60b5bc62bdee38c8a53b0e85fa436ea4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/reaction_ready/feature_vector_292.npy": "becdcb3956c1b77ae462259779444ac97b444bb80bf02a8fec09ee60f9c6e994",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/reaction_ready/fixed_energy.json": "3e70be70731c11a4795c963731fc82872b56816fd537500ff3b68431c7832172",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/reaction_ready/grid_difference_75302_minus_250974.npy": "a6e4945ba8fb77b42b95e1333edbebb10d5296988507a90ee481887a1fd3fa8d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/reaction_ready/grid_difference_99590_minus_250974.npy": "a73a41482ad960b75e2a81f0c5083d34d111b6e62de15db03c977a83283406ac",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/reaction_ready/reaction_ready_manifest.json": "e59e0dae9894d45dd73d95ccaedea1b852db67cb73fba594103a6591fa68e1fe"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "02a45aff77ac3aa532809e22069f50ede6be33d38db896d5cd6827744471ec19",
+      "source_tree": {
+        "bytes": 57355011,
+        "files": 70,
+        "manifest_sha256": "10ed6224d8d30bb7c4d75fb55617d734f1d0cc225d0af7385cb4848d17023687"
+      },
+      "species": "CUAGAU_Ag01N0"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/CUAGAU_Ag02N0/input0",
+      "authoritative_input_sha256": "0cf33fdcd8efd691198e2cdf5743266b9ee356240c2b86aefc65070cf1708a5b",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/reaction_ready",
+        "recovered": false,
+        "species": "CUAGAU_Ag02N0",
+        "vector_sha256": "513518c3e62a8c9960f7bb13b2accfc0b85ce443867597254de3baa7f72582bd"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/CUAGAU_Ag02N0",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/gateway_work/fixed_energy/qchem.out": "36b82ad4e38d544fa50ffd45b30e39dd0ad11eba20679cbf19e17d26e29af3c2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/gateway_work/q4/250974/semilocal_features_288.npy": "c88e7d6dd4d6f5ac212eb09fefa5047b8a484da12ddf757bf7166448a3493aa6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/gateway_work/q4/75302/semilocal_features_288.npy": "7c25fde9262ff5d319f3d9eb9393a93db8ff53fee6ad03a78d6234a50abd2ced",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/gateway_work/q4/99590/semilocal_features_288.npy": "eb68a8e847302059ddfc22e1ba6ded2b93d501e79b2ac7189f2c7339a78997e6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/gateway_work/scalar/qchem.out": "63743042dad40dcd2634bae9c991274d5e1c00553e89a5e11b6f9c70212bb0d0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/gateway_work/scalar/qchem.pt2.out": "ae8a44ccc57d9ecf1b594820ed104d7a24790ac92d77050d64decf6296d3d266",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/reaction_ready/feature_vector_292.npy": "513518c3e62a8c9960f7bb13b2accfc0b85ce443867597254de3baa7f72582bd",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/reaction_ready/fixed_energy.json": "02c21ebd9a29a446891cc3b83416b6c14dc7123dd3b39d044d946b8ad1357035",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/reaction_ready/grid_difference_75302_minus_250974.npy": "8c918651e298e8b8bee42e48e583a2ed7a7633c69ea720274fbace491a8c19dc",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/reaction_ready/grid_difference_99590_minus_250974.npy": "530e6cb0bc0c2b472f20ee4efdd82bffe2f326d06aea6ac5b10ce8ee076b4440",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/reaction_ready/reaction_ready_manifest.json": "d614598574dbaa67999da379adce5f871f9b796e40e1aa30391ac1e74d0b7151"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "054a1e487b961fef0ff47abc669132341860ad06825b0dc65fe0bd9ed1ace1a2",
+      "source_tree": {
+        "bytes": 66382516,
+        "files": 70,
+        "manifest_sha256": "d00654131aa0bd86670fa089f8cb08fc8d37d5712d152d5bf43ab7a93612b99b"
+      },
+      "species": "CUAGAU_Ag02N0"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/CUAGAU_Au01N0/input0",
+      "authoritative_input_sha256": "beaf3368bcd805f7331296ae22637aeed4131e5889a0b84ad69cb6c14bba3e50",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/reaction_ready",
+        "recovered": false,
+        "species": "CUAGAU_Au01N0",
+        "vector_sha256": "7d9ea1726912c1de1c83173baec989b3ddccb5e6142a1bc43447671f2f3d7be4"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/CUAGAU_Au01N0",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/gateway_work/fixed_energy/qchem.out": "670da76021ba832e29bfaf900532f01bd5b412e07c8a4f6e692dbcc015006ced",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/gateway_work/q4/250974/semilocal_features_288.npy": "0b1e518e493994c577e84bb97772b3526d1f39dcfc138a97237b8c5884827806",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/gateway_work/q4/75302/semilocal_features_288.npy": "a82f4e4cbc36dd0188f5e97c651c5718b517016077e70638bae5c481f187f6ee",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/gateway_work/q4/99590/semilocal_features_288.npy": "8e890465a9f31d2be20fcdbfcc3795fa47ccb5272673297eb7e9435a3f90c0a2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/gateway_work/scalar/qchem.out": "b15d2e6398cd532473c9cffadd0788c6e3380937f293cc9b125c1e2135d61a27",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/gateway_work/scalar/qchem.pt2.out": "d8c57b180b553fada3743e080ff4f133e15ecc406944a9933a25df0daef96bbe",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/reaction_ready/feature_vector_292.npy": "7d9ea1726912c1de1c83173baec989b3ddccb5e6142a1bc43447671f2f3d7be4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/reaction_ready/fixed_energy.json": "66f39eb130d8d18dbfd68e74c2023403d9788c6b9bd03e09e0aae55f97dc7ece",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/reaction_ready/grid_difference_75302_minus_250974.npy": "71db4d627fb87666fd741d5011acf7f6e5e148023292068d2441eb5f71654345",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/reaction_ready/grid_difference_99590_minus_250974.npy": "51ffb5bcb63a10e77a14234d81caf8d91cfd3fa4873948ce458de185ee9f5cf3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/reaction_ready/reaction_ready_manifest.json": "da88616227e3aaac85d21f31c435314e81e4be35ca15e2e950547ca591141752"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "8197fc0568630a594a0f7546eb695e001e3c01857dd5cc0ad25910129435d04c",
+      "source_tree": {
+        "bytes": 57343203,
+        "files": 70,
+        "manifest_sha256": "381c12a81d7d58c53c1f6f4acf42da436611576e0996e277128421123582fcf4"
+      },
+      "species": "CUAGAU_Au01N0"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/CUAGAU_Au02N0/input0",
+      "authoritative_input_sha256": "e4363198e4077f9cbd668ac6c59d98549a4a09ff2b0d9e597d9fc45f9b952776",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/reaction_ready",
+        "recovered": false,
+        "species": "CUAGAU_Au02N0",
+        "vector_sha256": "5431d6c3a9ed9ab486a8dded0610597010e6022947806d9e85f06bb2e8af02eb"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/CUAGAU_Au02N0",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/gateway_work/fixed_energy/qchem.out": "4e316b8bb70796748f31938c45661447be854ce7a325a95bdee6e24136c558d7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/gateway_work/q4/250974/semilocal_features_288.npy": "5099cc59b494106a4fe7d4ba294ce6f659a212326476cee5d8fa84bd03a0e183",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/gateway_work/q4/75302/semilocal_features_288.npy": "e7fa55e1910527abc591e43065e5fb683d001811697cc7164c66f8092901bf3d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/gateway_work/q4/99590/semilocal_features_288.npy": "277193a491e6357a84d0f7db21a9efbebcea6ac315b80243fb9bfd3ed9ca8c8a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/gateway_work/scalar/qchem.out": "c16a20e08f0e6bb90bccbe0ab10c272d7534313c96d5614d6cb45bc9e49c498e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/gateway_work/scalar/qchem.pt2.out": "3c5f755347b0b2dd25bc2c83311cbda75cee83d15eecec149bd2cbfb75b842da",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/reaction_ready/feature_vector_292.npy": "5431d6c3a9ed9ab486a8dded0610597010e6022947806d9e85f06bb2e8af02eb",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/reaction_ready/fixed_energy.json": "1291936e8d5eb7bc4419f88b71e7ad79eca1bf1f7369e878e5784bdc8a8191b5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/reaction_ready/grid_difference_75302_minus_250974.npy": "4c1ef0335bba4e31e98e652f010bea22e3938920a5ad691789b90dd7ff0f5c21",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/reaction_ready/grid_difference_99590_minus_250974.npy": "940c4fbdab337d30e71756770ffd8fa57c38532f54ef055b1ead25e2d611380f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/reaction_ready/reaction_ready_manifest.json": "95692b63b1d2c70e1dae7f5d42923a8cfbcbfb244965519ec93af809ca2d8715"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "94e59a062f9e260a50eb1206857fd74918017d1447d8c30275453d56abf11687",
+      "source_tree": {
+        "bytes": 66395988,
+        "files": 70,
+        "manifest_sha256": "5a737fc1f3901c15fa1b165c956140688a8a11bf427ff18b1b17abc45c6c6742"
+      },
+      "species": "CUAGAU_Au02N0"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/DIPCS10_be/input0",
+      "authoritative_input_sha256": "b77fbe583edbf9488eb610416aac5773d935632ea709ed3aa8e9de97387cf6ee",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/reaction_ready",
+        "recovered": false,
+        "species": "DIPCS10_be",
+        "vector_sha256": "8ded04a17c5632086919190d8d082a46222d20856afc54f9b7a71262cb378289"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/DIPCS10_be",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/gateway_work/fixed_energy/qchem.out": "e54a0c7be73b0662a4fbb7c348ac56b19339469ae485463abaed22554f10422d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/gateway_work/q4/250974/semilocal_features_288.npy": "e21f36e3aa01e041b7117efcc831cf02d5eae22609b3dfd332e823c78132af37",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/gateway_work/q4/75302/semilocal_features_288.npy": "6d54f9e454cded6d2f689cf0949ec37abd76db4e6016ea50eb96c23610570b55",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/gateway_work/q4/99590/semilocal_features_288.npy": "573733ebaf3e3e000036df363fd23c33e7f7bf43f32fa5ca3d604befe629228f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/gateway_work/scalar/qchem.out": "cde14d337c29ea86f1322aaca002cf1f5c1d6c820e800251753e5f87cf8b1a21",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/gateway_work/scalar/qchem.pt2.out": "93374cb33e00c93e9a323411b05cdce38860bbb07847f00688bed18f78f206e6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/reaction_ready/feature_vector_292.npy": "8ded04a17c5632086919190d8d082a46222d20856afc54f9b7a71262cb378289",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/reaction_ready/fixed_energy.json": "24192e6068dbcb83e1780cc9c5f9b495edf0e10b34f546f6b1ed7fdc83a22a34",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/reaction_ready/grid_difference_75302_minus_250974.npy": "fee0e4a0a75fb928ac513f1439ff4d46c6fe3e04260e64ae2859eb058ee11bc7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/reaction_ready/grid_difference_99590_minus_250974.npy": "4589774ab1bebf64e2f681c19d77dea85376c063a7ba6db5965c0149078f925d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/reaction_ready/reaction_ready_manifest.json": "d49a7e4b23fa48ef74e25e774d8d3671ef4a8325d2fb76a79f2b97ffe5657120"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "2dfa3a71c0515df1216d90a84ab71bfa1bff2dbdf47aa4536f2c7922c9ba649b",
+      "source_tree": {
+        "bytes": 54641144,
+        "files": 67,
+        "manifest_sha256": "89c440f9c30d69dddd814704832a28cc736f5bdb4f36fc3946f6432c20b30b23"
+      },
+      "species": "DIPCS10_be"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/DIPCS10_be_2+/input0",
+      "authoritative_input_sha256": "156e3a8e313f503f8292f49d56f5a351ca23d9188a5875f143b254bec070ce9b",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/reaction_ready",
+        "recovered": false,
+        "species": "DIPCS10_be_2+",
+        "vector_sha256": "23b4ade3f2c88812a6835b0e3858972006fbbf0991f246ba4caab79879dc1ae7"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/DIPCS10_be_2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/gateway_work/fixed_energy/qchem.out": "d17c920d0a107c033a0451449eff47d5853cb32a634202bad2b86708f4a861a2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/gateway_work/q4/250974/semilocal_features_288.npy": "e662e5dca894f55fe90d0cc64b21c73a445abfe042266b5826de75a6f3ebef1c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/gateway_work/q4/75302/semilocal_features_288.npy": "e013c9b39e1b5ee36cc55cebaa82cd1e3e516c7a1bbdb9e4f06e159cfd8c1f3e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/gateway_work/q4/99590/semilocal_features_288.npy": "e92ea5ec8e3fa42d6c3204ab48afc5ceda7d7d55049f3b80e6e3cd5b76dab825",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/gateway_work/scalar/qchem.out": "f71dd10347cf7c3cb76f470b83b6a62f4f3f6d04c8df6cc4dad07eabc65034c1",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/gateway_work/scalar/qchem.pt2.out": "994739b2c0bfe17e7944857875bac12cdd0ded1bff0ee2089093cdf0a684ce09",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/reaction_ready/feature_vector_292.npy": "23b4ade3f2c88812a6835b0e3858972006fbbf0991f246ba4caab79879dc1ae7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/reaction_ready/fixed_energy.json": "490634e5d0ed8586036a8034f5253db09ce9797877488b959e5e1d9c734156a7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/reaction_ready/grid_difference_75302_minus_250974.npy": "480a7887f8f9ffa9d7975ba1b3b4132ce29dcb40a9ac31dfe0a66d90f14758d7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/reaction_ready/grid_difference_99590_minus_250974.npy": "ab287eabef3392bdc5fc155c8ef7e77a8b8e1f7a78f51baf9ed4d7fd0f42aaf1",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/reaction_ready/reaction_ready_manifest.json": "666d69d583bc173eaad6d8ccb5fb2706960e5fd784ce5acc2ab4aa69adac77e2"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "9b49980eeb4663b5ccdb05bb481ebafc0c155b413c9e2f15d969f483b91087f1",
+      "source_tree": {
+        "bytes": 54635867,
+        "files": 67,
+        "manifest_sha256": "f48da86a833b3b65437f445f82ec99295b1b981924c6695b157618adbd523286"
+      },
+      "species": "DIPCS10_be_2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/DIPCS10_mg/input0",
+      "authoritative_input_sha256": "69e3f353880aaf07f5f64a2edbcf582f9439102492f4f929c163da8ef4ab0a0e",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/reaction_ready",
+        "recovered": false,
+        "species": "DIPCS10_mg",
+        "vector_sha256": "c3896aca2a540933361c28efc7e229b7081f4fb9725c4d6468adaffe2c513ac2"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/DIPCS10_mg",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/gateway_work/fixed_energy/qchem.out": "d09ad228339c272df01b2e7e818aa882b3d2b893b0413e3c6c55a9f581a7c766",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/gateway_work/q4/250974/semilocal_features_288.npy": "e8a4351cb854757f2392385eda5b7f29304ec2664e08cc67330d5d5b2ef49506",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/gateway_work/q4/75302/semilocal_features_288.npy": "801fff45de7e2875362ddc806d8275044c4665b612a61f623196b3e177965547",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/gateway_work/q4/99590/semilocal_features_288.npy": "30024f908de7cbf35c70a002e165b07051e7f364fba37ee5a6fcb871eb12b794",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/gateway_work/scalar/qchem.out": "4df1704e2cd9e1db09beb04b38bd096a2a7e156a2b5bce58d49d36a8e5cba54e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/gateway_work/scalar/qchem.pt2.out": "b91ade79fb03a6c1672167a424cbfc481debcde90fe12357d0fa0278c94fc816",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/reaction_ready/feature_vector_292.npy": "c3896aca2a540933361c28efc7e229b7081f4fb9725c4d6468adaffe2c513ac2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/reaction_ready/fixed_energy.json": "c234e6a234853ce4eaf01db706666f6b7879b41026d17000c6fc2811927bf4e2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/reaction_ready/grid_difference_75302_minus_250974.npy": "3063d3f5e29c4397d0acc5a147b8ba907ce45d3dc838c4e38fd09c5080d89fa5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/reaction_ready/grid_difference_99590_minus_250974.npy": "115de5ca268579d453804c6497edf9ed5938bb9a48fd53b3cadfe4b19cd2c4c4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/reaction_ready/reaction_ready_manifest.json": "1c156058f2d6d21b7bd3fd60cc26d45e6fde5cfee605bdad255bd49dbd9c5306"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "bb07ab59f0ddb10ccafd799548cb5111e8fdaa05af7365f9ef4fe973484f9968",
+      "source_tree": {
+        "bytes": 55826293,
+        "files": 67,
+        "manifest_sha256": "df6fc4c5c711c73fe84b4f0a9e9fff04350d8898f82a32f63c7206d0a3bb7f6c"
+      },
+      "species": "DIPCS10_mg"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/DIPCS10_mg_2+/input0",
+      "authoritative_input_sha256": "08a725b51aad5d7ba7f42fc6100363887f38167860c62f3e4c930cee1a356189",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/reaction_ready",
+        "recovered": false,
+        "species": "DIPCS10_mg_2+",
+        "vector_sha256": "754496fe2d4e4c17d24070ec9d74fc9770ed9587a25c4685fc7d79f0c911601d"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/DIPCS10_mg_2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/gateway_work/fixed_energy/qchem.out": "56157b1ffee721a6a23c3060c4829e343b3eca22d115874aa3eccc5d6651280e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/gateway_work/q4/250974/semilocal_features_288.npy": "2efcb45e74bd1b3342efacabc95bc57d6168d56a987bdc630e4a5a604d52a5ac",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/gateway_work/q4/75302/semilocal_features_288.npy": "ff2e3c0f631e2c5b7bce79f5b867b6faab8e0f1d02494e49f27bd45ec9a9f2f1",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/gateway_work/q4/99590/semilocal_features_288.npy": "a126aa86e4b5fce6c72d3673144db9ae6d124b382cce8c00ac9e72b1c09b7477",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/gateway_work/scalar/qchem.out": "753ababd8032dbe95afba288e32b8a69dbab5b2a435568c36dc07008074a3baa",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/gateway_work/scalar/qchem.pt2.out": "80f2fc22b444960ecc54ac5ff6ad1dd87e3d4449d23a2c3c0b549bb90eb85bb7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/reaction_ready/feature_vector_292.npy": "754496fe2d4e4c17d24070ec9d74fc9770ed9587a25c4685fc7d79f0c911601d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/reaction_ready/fixed_energy.json": "308dfffacd6d62eaae2e90a00548bb2e3d5b924f87f3dee345b4b1b067ca4637",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/reaction_ready/grid_difference_75302_minus_250974.npy": "36d5ce8f2879c5d0940d520d0bd4bf6a34057882bacc679d702352eaed43b916",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/reaction_ready/grid_difference_99590_minus_250974.npy": "934ddb0db9e0f70ca240d5a2eb49eae2ce10ac70d7dbceb9f2c22ee48503fec1",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/reaction_ready/reaction_ready_manifest.json": "16515aee45558bb4ede5491693e4c70f5526305cfb684bb3856fe20d878184c3"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "45c972359bd283d83964ab2a799bc256a94662a1dd58186291e788fa84814e6f",
+      "source_tree": {
+        "bytes": 55817975,
+        "files": 67,
+        "manifest_sha256": "70bb6724aba0fb9eb4813146e9d20081ff879a5d3027bedea0fda656d67ad065"
+      },
+      "species": "DIPCS10_mg_2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_HF2+/input0",
+      "authoritative_input_sha256": "cf80090b1d72f5a74c6bca14dd37655d154db557956b948dcb9fbd745bc0f132",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+",
+        "recovered": true,
+        "species": "Dip146_HF2+",
+        "vector_sha256": "c62ec75ff14ab2dd5b10e3537c2281e9abd85d038e4ba7252c2275313d23616a"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_HF2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2+/gateway_work/q4/250974/semilocal_features_288.npy": "d381ee12474be4094542b6a030d0b2cad652a48a3cebe7fd4d00e30b26b957c2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2+/gateway_work/q4/75302/semilocal_features_288.npy": "28e89edc15c60f727a1d8157d8c89d6df6fbcd266b00aeae173f3aa95eedd607",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2+/gateway_work/q4/99590/semilocal_features_288.npy": "467f932180c3281ab9f0bc3913a332eb8ae0d025cd39940a05d555ba84bc4f57",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2+/gateway_work/scalar/qchem.out": "e867ee86563a1d46b9569692c276c6dedeb92b2e5dc6bfab5ce4f24441fb2b6c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2+/gateway_work/scalar/qchem.pt2.out": "fc974084797f76370b09d829ec4b1295f3e3784d9efc6d66652ad13cf3d934b8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+/feature_vector_292.npy": "c62ec75ff14ab2dd5b10e3537c2281e9abd85d038e4ba7252c2275313d23616a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+/fixed/qchem.out": "3aa22178e9d77469872764276ed37dcc54639c7fc8fbde3b49503b6a5fe7e61c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+/fixed_energy.json": "9c484ba9814b338831a7023e12e67a9adade470e84a6d52c90747d14f84a90b6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+/grid_difference_75302_minus_250974.npy": "f214bc28a7d7efd3f965a94347adf8aec824bcea8e880e95aebc680f1931c996",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+/grid_difference_99590_minus_250974.npy": "1992314db475d58fde1360c0f4e9027b8d48168233a1a60b17e7fcbcdf2e1263",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+/validation.json": "2cce128b6c378d527678e08edd8c59767b8adf8b9d40dd93b9cb9a0810f932db"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "f7a3c7eb01ed5b180b4db76ddcc1f2cb4fe7b0d0e9a5d353f8706372b367815b",
+      "source_tree": {
+        "bytes": 65827367,
+        "files": 72,
+        "manifest_sha256": "3b82e6cd085b289ae781dc64f750f90cf963d30ca1adeb8d4dca6741a9f908b5"
+      },
+      "species": "Dip146_HF2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_HF2-/input0",
+      "authoritative_input_sha256": "0d1c4c096d4b2e4545024db49bc2d4143f2fb810f750ced1f2dea98d9f093921",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-",
+        "recovered": true,
+        "species": "Dip146_HF2-",
+        "vector_sha256": "61b78f7d7d9d80c79c72e4684d19213b667c284b7616c59567ffa4efb597919a"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_HF2-",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2-/gateway_work/q4/250974/semilocal_features_288.npy": "f62251c8ec0d570247155338b8d6cc577e0cb775850031471e19560345e1ed7d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2-/gateway_work/q4/75302/semilocal_features_288.npy": "25a1664ce9427d650eba824d507ef5d8155eb1a485470a071d9c8653b550c672",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2-/gateway_work/q4/99590/semilocal_features_288.npy": "c7440ae8d1aa08d537516180902f68a31bc8e44710f1dde46a081a4887d1424d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2-/gateway_work/scalar/qchem.out": "2b8a4ab72069de676ba7d2a6406bef1dca6d25b28eaf9259f196a4ad8fffe8c8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_HF2-/gateway_work/scalar/qchem.pt2.out": "85e2234ef62bbcb5511f3eb9f87c66e30844605b4851d825d7d2a382869fd405",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-/feature_vector_292.npy": "61b78f7d7d9d80c79c72e4684d19213b667c284b7616c59567ffa4efb597919a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-/fixed/qchem.out": "4666d77b31319fdf4d441d2a03690d22c2301075257a2e7a32aeb0a4d191d763",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-/fixed_energy.json": "cd07c5e884d2d46e19c55c0219c615a50bc02cef272158f468adefe84baeb29f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-/grid_difference_75302_minus_250974.npy": "f94606640fdf94f9b910d232cb0fee760dc8e0ba38fe216b66abcfcfe79c06a8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-/grid_difference_99590_minus_250974.npy": "feae972db3955b07982b694bb9acbeabebd9f9b365fe174d4e743d70686ac0ef",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-/validation.json": "87eaf9f6c2c2c26c8534bfe332950bc59851bb55497feeca7a4d87bcc22085ab"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "9bf41e182e111bcd36d9456f1d77962fa32584596cac73b984523e4187a5fd8b",
+      "source_tree": {
+        "bytes": 65827368,
+        "files": 72,
+        "manifest_sha256": "ca6b22b97668b479a9553ae1aca4c36b0e1fdff7a852a2afe3518029e19fdbb0"
+      },
+      "species": "Dip146_HF2-"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_LiN2+/input0",
+      "authoritative_input_sha256": "4eee42c6afe0040310f1873a5419f0b7d7bdcf00f075c8e595be42c6175131d1",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+",
+        "recovered": true,
+        "species": "Dip146_LiN2+",
+        "vector_sha256": "1a0f815bed38ce6adeb8b064ebd6f8efbfd99d889dcdd16a30abf71135b40418"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_LiN2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2+/gateway_work/q4/250974/semilocal_features_288.npy": "96afc8b9eded540a177c3053a9e3f08a0ea60510a650646532206a35674e98a6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2+/gateway_work/q4/75302/semilocal_features_288.npy": "6663b58a3198862cf34200e67b8ccb2cae3156c1b7341f32b205b8b6398dcdfa",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2+/gateway_work/q4/99590/semilocal_features_288.npy": "f896b98b6831c89e2a5dfc9235be99406522e7ee4289fc227c62f7e1a70aff4a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2+/gateway_work/scalar/qchem.out": "ae4c65a6b86d3652d0dc3c28de2bed81bca39b4dc7353c07fdb96fa83411d81d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2+/gateway_work/scalar/qchem.pt2.out": "a491f8ce39ffa8f10c4a99469c2f1ea5406bcd74e8ed7b0222f3ccd346480b9a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+/feature_vector_292.npy": "1a0f815bed38ce6adeb8b064ebd6f8efbfd99d889dcdd16a30abf71135b40418",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+/fixed/qchem.out": "67e81d5a7c5fa85f0328f6c1748b360822a1df2d405157c9495264ce54d2e6a3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+/fixed_energy.json": "9fc746af1118bf6c3a2bf8be5179095bd52a7b63424678ec641e7beae167f99e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+/grid_difference_75302_minus_250974.npy": "8087984afa145dddc19f1eabb8e632cb80b98f5e25d453a089dd72cad298187b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+/grid_difference_99590_minus_250974.npy": "e94e97653d1d3f197beea504f3651b863169fb7b565d30cdbf96677c68e85154",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+/validation.json": "6b47503648db51238ec46b0bb9e770d496923ba6a3eb2216636b5754bee50773"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "af0537875e57785a4d8cf21f6917e6670a3e3e4e454a0764e522255cb0309662",
+      "source_tree": {
+        "bytes": 65307366,
+        "files": 72,
+        "manifest_sha256": "0da8d5b7073ca386820ede3f2b90d8dd1d598f45faa737fe307bea36c5196a38"
+      },
+      "species": "Dip146_LiN2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_LiN2-/input0",
+      "authoritative_input_sha256": "2dd4c682f33765074e8abb9da3eb1037589e829ef4de35e8125b73cd723da579",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-",
+        "recovered": true,
+        "species": "Dip146_LiN2-",
+        "vector_sha256": "b3e33f3c331b7f671554209440491f1c84b11cea1c3ab2de252887accf58e01d"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_LiN2-",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2-/gateway_work/q4/250974/semilocal_features_288.npy": "67647b8c2d192a20707661ecf3777a60e7415777d5bb1a69bd94105bbb0744a8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2-/gateway_work/q4/75302/semilocal_features_288.npy": "e43a186a02fcf71aefec2c59558d09dc30e2ae71079eb81d94afa12d39b61d91",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2-/gateway_work/q4/99590/semilocal_features_288.npy": "75567c687f49999a81f2f3d85c93b4735f1af4df0345a8f71b3cd949338b270d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2-/gateway_work/scalar/qchem.out": "37ebdb1522a19f6edeb3efcaf727582dd3e21ed856305472e6f88a5168dfd7e2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_LiN2-/gateway_work/scalar/qchem.pt2.out": "76fafd90c55d6a6ff90ac6fd77732cfe591858dd8f93a4af5813e4105304968f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-/feature_vector_292.npy": "b3e33f3c331b7f671554209440491f1c84b11cea1c3ab2de252887accf58e01d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-/fixed/qchem.out": "416354965c5f6740bc1cf41ed64c2c462ff891619b7f3909147d757c25fc28de",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-/fixed_energy.json": "775a69a5e31698891667f727a36c49dad081d5258a1bf10dfc4eee5aa188f2a8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-/grid_difference_75302_minus_250974.npy": "60f0def419e933d3e7975fafa358a6482733a26fdda7e6b02bf42612cfc038c0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-/grid_difference_99590_minus_250974.npy": "740ed7a571787a474dbb5113b65cffd80eb8f55e5911ee316c48a17aa7103dce",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-/validation.json": "4cf4c315ba5c06c6584200a62f9f750c25a77d27ac6a461ede3046a7557a6f96"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ae543c6561d3538fbdc91400971107d5678c987ce82848e9a96809dab7999ec6",
+      "source_tree": {
+        "bytes": 65307367,
+        "files": 72,
+        "manifest_sha256": "53862c2b1b8d5e661d851d7d44228493a6be64d93855dd7927e7e39b626e6bcd"
+      },
+      "species": "Dip146_LiN2-"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_NaLi2+/input0",
+      "authoritative_input_sha256": "0a3a65d897b25b6376edaf3b0757d2b22f950f3c396865d2561444fc7eb3ae5b",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+",
+        "recovered": true,
+        "species": "Dip146_NaLi2+",
+        "vector_sha256": "ceb84ace282bd0b53b8f80f947518560566905ca733d4fd5db84d59d9f46aaa5"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_NaLi2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2+/gateway_work/q4/250974/semilocal_features_288.npy": "694cd6b2be9f43d439bb3402da6db3ddaf6605fee83495de0b414b2d77f00488",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2+/gateway_work/q4/75302/semilocal_features_288.npy": "85f8b1c59757540b19c2024aa331f5315b6e0e1be6d4a07c4a70fd864fe03d29",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2+/gateway_work/q4/99590/semilocal_features_288.npy": "239290af5303bb4a8ea7eaeda75a527b306a82b7a9067834e8e72a56c191deba",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2+/gateway_work/scalar/qchem.out": "ef1f7f8d9a32cdb78f0fe8c29bd5e393ef3bbbda1345607e5288cca39b687cca",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2+/gateway_work/scalar/qchem.pt2.out": "f5cb8d8a647695c7212bfd43859a3d0e9287f70e54eb344aaf25fc15d6822b6d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+/feature_vector_292.npy": "ceb84ace282bd0b53b8f80f947518560566905ca733d4fd5db84d59d9f46aaa5",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+/fixed/qchem.out": "becdc3434db87a37007b05b14c75a5bad7220abe9d34e4affffe0845a3f3a722",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+/fixed_energy.json": "8452db6b9272e56e3deac8a5b29e27d9fed473bfd11e7f3298a36cad55edce8b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+/grid_difference_75302_minus_250974.npy": "ec8b7c29a50106b364a7ef696a27bfddde2cee573e37dd2958f2be8bb589ed39",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+/grid_difference_99590_minus_250974.npy": "cd13e958d56cd89e7c10e0671ca6c6049d5db0db5ce2671a476b0fa00c5cb406",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+/validation.json": "e60e897689615170ca2fae253c84f922a43fd1ff2dc28f3688db138f131105b3"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "3868994d58d4e8409a87954199ac71e6086984f5eda2569970f5166e149cf0d6",
+      "source_tree": {
+        "bytes": 59702544,
+        "files": 72,
+        "manifest_sha256": "754dbacc1201f133d2bc2d475c36d50864e5cf86fa05ab317c0146efc11ae31c"
+      },
+      "species": "Dip146_NaLi2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_NaLi2-/input0",
+      "authoritative_input_sha256": "121390880c7d7c6f391711bb481512487e5d37c7b2a482beb2f564a8d86f6205",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-",
+        "recovered": true,
+        "species": "Dip146_NaLi2-",
+        "vector_sha256": "3c90d88d63f2dd6b369378b645fce94d60989f9e8d8ea7acab8b99d0ee3332e0"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_NaLi2-",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2-/gateway_work/q4/250974/semilocal_features_288.npy": "e30f0f957304bc093ac1f7e00e8ef791d561727b5cb7371de535c3186177f46f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2-/gateway_work/q4/75302/semilocal_features_288.npy": "ff88af15abb04421d4a1c7d6ab941fd87a08d3702ea043637a9e553fca42e5b7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2-/gateway_work/q4/99590/semilocal_features_288.npy": "3e8f1d089a99dee8426f0a6695fa328d21a899438f31239b8c10ea3a8109cc69",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2-/gateway_work/scalar/qchem.out": "55b085c3f745816d6ede232cf2532dd4c3f8434dd0d05778b08f0a0457c76d48",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/Dip146_NaLi2-/gateway_work/scalar/qchem.pt2.out": "e9c490f676664e02946e54d80e65c2673e7e133376d7d4f4e886a28fa6d8ab70",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-/feature_vector_292.npy": "3c90d88d63f2dd6b369378b645fce94d60989f9e8d8ea7acab8b99d0ee3332e0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-/fixed/qchem.out": "53283ebad75a1c39d2eeab7b07d305a867f20ab577717f78de29f811d814b1cc",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-/fixed_energy.json": "48f49b206f70fb169075d91858d60e5ddbd024591e9faf4d1887bb85ab488646",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-/grid_difference_75302_minus_250974.npy": "0a4bec48e34aa05761daaa701aa5cddd865214639056b069e81c47c2178e98b7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-/grid_difference_99590_minus_250974.npy": "441d3ddc08c019f20a24715df9dad9f17ab013624609e68199268770efa99c13",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-/validation.json": "1314ad83533c5c90c004ccfc34d83f5f3e8cd4d6acee227791de40c4d021209e"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ec963520b1987c6c45824cfceb30863eaa7577afb53ff3de85ee59fd01b8b677",
+      "source_tree": {
+        "bytes": 59702545,
+        "files": 72,
+        "manifest_sha256": "c01166507afa2dc237c91731350ce149c8ac92359d8b66294c7b2a69f6ff9d68"
+      },
+      "species": "Dip146_NaLi2-"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/S22_01/input0",
+      "authoritative_input_sha256": "8c4a003b13cefbedb1f07fe7433f324540c93ce236a007239a7b4d94469a6565",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/reaction_ready",
+        "recovered": false,
+        "species": "S22_01",
+        "vector_sha256": "44f5d2e8f50708286411cebc8131b0be46c2af9099dee77df8eb227f40bf47d3"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/S22_01",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/gateway_work/fixed_energy/qchem.out": "1944556baa550aff013443ab00c0194217602dfd82e9a5c2b07fbc3966334c5e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/gateway_work/q4/250974/semilocal_features_288.npy": "aa73e0bebe8582b82e1abded5ee426ebc81fa351d62140748f2f9b65ae178429",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/gateway_work/q4/75302/semilocal_features_288.npy": "c88a277b54c813963196f14b2c22fcad68ed6d618df0149aab2cab8ad4b868e1",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/gateway_work/q4/99590/semilocal_features_288.npy": "013763b771c2e1462dcd2621cfead7f31931f43d574ec1c95c93818e5723524f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/gateway_work/scalar/qchem.out": "f0465916db97870c99f3661123b2006b8d4f0472c67f68da1ca3dd393b8e654c",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/gateway_work/scalar/qchem.pt2.out": "e6bd2cb9b7eb423e554428af38e9df9ee4ab7c8de529467ea79689202cd410f7",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/reaction_ready/feature_vector_292.npy": "44f5d2e8f50708286411cebc8131b0be46c2af9099dee77df8eb227f40bf47d3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/reaction_ready/fixed_energy.json": "37c26632c33823f9a5d985779bd9a2495340eacc2c13a62defe1a848f82631f3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/reaction_ready/grid_difference_75302_minus_250974.npy": "b8a489146968db50ccde2c11282324e3c1a1fc8d44325acd36b986f0d9a73712",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/reaction_ready/grid_difference_99590_minus_250974.npy": "edbcc5ffb2ad60a564dfc2e9cbe4e7cc2497d9d85b5eba57682e22393ab680d6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/reaction_ready/reaction_ready_manifest.json": "41b073af26a987e41cdf3cb2c864337f9cad4e3e7a760f585a5e7ee365bc0cca"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "c14aa9ff0bfe1746e40cba2c2da002021229a190c2dfa46ae59edfe91c1f91c4",
+      "source_tree": {
+        "bytes": 91756890,
+        "files": 68,
+        "manifest_sha256": "c2345eb87dfcd972ea2b35998b6545eaec3e02adc86fd42f0a638512f9b693a2"
+      },
+      "species": "S22_01"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/S22_01a/input0",
+      "authoritative_input_sha256": "ca0b22b1c2308b55e2781b9b03935cb0b93d24ee2ad6e9fa1487e151285aa288",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/reaction_ready",
+        "recovered": false,
+        "species": "S22_01a",
+        "vector_sha256": "84abe11abeff1f66b3a85a1e11e62d6e0aa35514f78338486afb00aa3a4f8adf"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/S22_01a",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/gateway_work/fixed_energy/qchem.out": "64b9767cc5e4abe77021cd391981a30bffe33474496bd48d5d88d359cfc9c3da",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/gateway_work/q4/250974/semilocal_features_288.npy": "7265c7de5cc70b67bb1b4c03755c6e4ffe375460e5cffb2799c937e8f13d39d8",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/gateway_work/q4/75302/semilocal_features_288.npy": "ab9d5924adc9ec22b26af6646de2eda8b38b6e99a2fb3dfc0cc9417f7aed0b99",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/gateway_work/q4/99590/semilocal_features_288.npy": "a1e2ec20b0381cdb4ed1917877e47ac036627d3929241e0b28925e75edbcd445",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/gateway_work/scalar/qchem.out": "a5cac13d9664512b48e9f2be5ce4ce4762c1d24adb7c9f6475850ffb1213aa29",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/gateway_work/scalar/qchem.pt2.out": "f0c81279ad480388ba5045281820385dcdca129243232151ddd8040db1728089",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/reaction_ready/feature_vector_292.npy": "84abe11abeff1f66b3a85a1e11e62d6e0aa35514f78338486afb00aa3a4f8adf",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/reaction_ready/fixed_energy.json": "f944656bd5d6266fde559f678d98dc1b245e40eaa77513a919e6ac4094785a9a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/reaction_ready/grid_difference_75302_minus_250974.npy": "de8e72e09495f4ec89076e8134972c323369ab2fdb1421ad5bf0e168c95805f3",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/reaction_ready/grid_difference_99590_minus_250974.npy": "1806be19c82515bd27157336453309bfc43016c2dfee2753efee1b89cb79fcc4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/reaction_ready/reaction_ready_manifest.json": "8712cd0deef61d2da2814354e04e63e33af6145171937a8687b0b03a0362e9dc"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "d01f6c6717d2fa2164849b9736c10d2e7696bd47b074652b36ae270f33a3b6a1",
+      "source_tree": {
+        "bytes": 63933635,
+        "files": 67,
+        "manifest_sha256": "0cd2332f1fdbe3f8b61c7a5fb1a63ae7017d5ed5f942cbc2d67af2ecb8119985"
+      },
+      "species": "S22_01a"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/S22_08/input0",
+      "authoritative_input_sha256": "61e3251f17dc2901c8814bd78f8de4a6139541a985160dd19bcd6d134a9f8915",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/reaction_ready",
+        "recovered": false,
+        "species": "S22_08",
+        "vector_sha256": "ffc0a70adc325fc368bf71a33943c6370e2d485cf41065811b328ae1fde764f6"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/S22_08",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/gateway_work/fixed_energy/qchem.out": "3a6544944bc54d51144d8fe6a52c56913eeb93663df11ce33bca37f0299904af",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/gateway_work/q4/250974/semilocal_features_288.npy": "fc1c1b7efe411bde0280d7e695bab01ab513a1a36e7773209577d6ea39e1a5a4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/gateway_work/q4/75302/semilocal_features_288.npy": "8c1d5de4e027c45118a639e32173450ec30590e6754ca17cf3d0a7b839e3627f",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/gateway_work/q4/99590/semilocal_features_288.npy": "37f19e42813d1189b3f05cd68c7c4ada7a2a72184d4f4a949815da70563dcf16",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/gateway_work/scalar/qchem.out": "a1373736f21a3bca243c9c3dbea8c625ff47ae910c316267e59a6ae1b2c55313",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/gateway_work/scalar/qchem.pt2.out": "6cf93699d14bbd14b419a316684fe8101d8c29bd4f489434c4db56483415b4ae",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/reaction_ready/feature_vector_292.npy": "ffc0a70adc325fc368bf71a33943c6370e2d485cf41065811b328ae1fde764f6",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/reaction_ready/fixed_energy.json": "401313d35d8fff68e87fc3d2cb29535ee4f501417aac4dbeb09dbfe39bcb0a87",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/reaction_ready/grid_difference_75302_minus_250974.npy": "f84c4e6773d80d99a931251c06b64395f8645a311fd7f8e27b24799fcea59bd0",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/reaction_ready/grid_difference_99590_minus_250974.npy": "c8768c8e619df4fb58bbfaea92af1959aee4031c7be5ac039fc58e25a14e282e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/reaction_ready/reaction_ready_manifest.json": "8ccfd0df5e682e1d26535ee58baae7e14371c5d4ed121f4c6d49c1b0d17fa281"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "cb801df0db84383c7ce29d3b5c4e1c8e6f67962f740d0e879b7508b5450e8510",
+      "source_tree": {
+        "bytes": 107653023,
+        "files": 68,
+        "manifest_sha256": "56ba41302c3119c83e979023f886afd005f1c2ba273d3242e82813f26f1b80f7"
+      },
+      "species": "S22_08"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/S22_08a/input0",
+      "authoritative_input_sha256": "f02c72191fd0f871fe6498bad8d2e605f86b322b39520863f580c5fb5c8bd2a6",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/reaction_ready",
+        "recovered": false,
+        "species": "S22_08a",
+        "vector_sha256": "b6bff282cefc519ade5629dff24af3ce70e86968719d11035953c11a5682df3a"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/S22_08a",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/gateway_work/fixed_energy/qchem.out": "96f6248be31dacd44ee784e6c9124b5f16dc56306afc64af6cc6111eaf48b7ed",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/gateway_work/q4/250974/semilocal_features_288.npy": "32375ba21a84253ea3b27f732bc779a6ead509dc50fef8b63cab99dc6f5f27c4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/gateway_work/q4/75302/semilocal_features_288.npy": "a6bb192e59330b300511a4d2d79c921d76a54c21a5f6957e9696fb8a02e21a75",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/gateway_work/q4/99590/semilocal_features_288.npy": "09bc5d7ef9b6011a8460ee77f6e0df47140dfbabdec7ebf2a2b16d33b523ba74",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/gateway_work/scalar/qchem.out": "561343ac3a3e2b8963fd79a2d7e4520cc915874e1469209eea142036a036c720",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/gateway_work/scalar/qchem.pt2.out": "52251c5280031a71ed1447e3147836b5aa847b108f7d155d6251be9e0ad27f1b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/reaction_ready/feature_vector_292.npy": "b6bff282cefc519ade5629dff24af3ce70e86968719d11035953c11a5682df3a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/reaction_ready/fixed_energy.json": "9f76b37bc6b3b1396de9d46ad41a9cfc53270a7772fc4f1d1480e75625a4486b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/reaction_ready/grid_difference_75302_minus_250974.npy": "436180187e465ddbfae6daa7f67a3d8f409222589ee3d934104ef04ddc81130e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/reaction_ready/grid_difference_99590_minus_250974.npy": "7dd3c436533b86683c9265a8ede23d67a5bfe0ce5b7cccdee30ecb2de3481cc2",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/reaction_ready/reaction_ready_manifest.json": "07021032c9346bdaee62f200a7e9c0b9f4789da2990a1e590fe69631806c9168"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "22a1add3eeec7ebec0b1839128be09174fc361cc1a919825831040cabef69590",
+      "source_tree": {
+        "bytes": 68128653,
+        "files": 67,
+        "manifest_sha256": "5742cb33d9bd07f07e3d446d5f4ade275f865fe67a6afe850387b2884e993804"
+      },
+      "species": "S22_08a"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/W4-17_h/input0",
+      "authoritative_input_sha256": "c3b0b7259d36b2ed65755bdbcc1e44d6f32f12a1bf30c4dd1fde5707e0016a24",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h",
+        "recovered": true,
+        "species": "W4-17_h",
+        "vector_sha256": "fa73500af87b333e06efdf788ef54e98c9aa1475fd3fb6e1f354ff19821708ea"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/W4-17_h",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h/gateway_work/q4/250974/semilocal_features_288.npy": "fbf53bf5c8c13d565c0a141640efd5c2d10facc8096aaf98d337d8f7bb9e211d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h/gateway_work/q4/75302/semilocal_features_288.npy": "39710d812331d482ce4e7b93a673e41ff8c50b6f3ef773f91d2e1920dca85fa4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h/gateway_work/q4/99590/semilocal_features_288.npy": "ce6a602890fd9169178f72f06c59b76abb4462266056c7eaca091e18ff703bcc",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h/gateway_work/scalar/qchem.out": "54f30ddb2ca8bd278a13fe4d4e72587ab72345d8640bbd3200e2e6e68b0d7f9b",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h/feature_vector_292.npy": "fa73500af87b333e06efdf788ef54e98c9aa1475fd3fb6e1f354ff19821708ea",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h/fixed/qchem.out": "7ae1c29b4dfc746b86ff170afb7a1bb487758868008e5d6381c90c7f5a2a0501",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h/fixed_energy.json": "4e44fd9ce190db13b8b54b5221a594947e425cc6794bf147b6f6a86fad752930",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h/grid_difference_75302_minus_250974.npy": "1715f488409bcbd1aeba9799baa0ce1356f2e2af4291716e02fd1b821267eb25",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h/grid_difference_99590_minus_250974.npy": "cece0c539991d15cf0e2d390ba006514adaf086683a2e7b36c87e4f4f05c8e8e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h/validation.json": "b45da306f4fa73b03c290fcb05b7ed1a29054c548ffd6f97a40ee5567986d281"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ceb769fd92fa78abc14b94e75763a59516157ab10323cfd5bd44c8f8a81cdd36",
+      "source_tree": {
+        "bytes": 54331026,
+        "files": 67,
+        "manifest_sha256": "3f090573fea86849b0db9df653909e13f8d8daa8aa20c594f98d980915522770"
+      },
+      "species": "W4-17_h"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/W4-17_h2/input0",
+      "authoritative_input_sha256": "4c2e3c534868f907a84f701b992fe613e4ac829919875f4a3686bd76b76e3ef1",
+      "legacy_entry": {
+        "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/reaction_ready",
+        "recovered": false,
+        "species": "W4-17_h2",
+        "vector_sha256": "a84baad624143e80d272717d424cb4db28c58d8d80a54802e6855975f21ae48e"
+      },
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/W4-17_h2",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "reuse_hashes": {
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/gateway_work/fixed_energy/qchem.out": "1508d1eaa60f251455e6c0fab04b1c830a1ecf5b7ca38ffe471c22f7d4484ece",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/gateway_work/q4/250974/semilocal_features_288.npy": "3f75eec4c14004434d56de410506aa2c93d6264dc4bb5fa2114d0e7f6803bc30",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/gateway_work/q4/75302/semilocal_features_288.npy": "b2f3e1cff81ed823c3b047b360bc12234106b37dbdff54bea42781b932e2446d",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/gateway_work/q4/99590/semilocal_features_288.npy": "427bf6a8ff7b2b51e6c3cb780f2f39efbdf4b41f4c71a4e378d05747ef103ec4",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/gateway_work/scalar/qchem.out": "93ceb62b021e11f1744c6bb9cffb26b63bed930e88f70a8057f19f5b26484e7e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/gateway_work/scalar/qchem.pt2.out": "9b417e6fe20d9db10194740bc7f8904c0c9cff40ebeb3c51124152f15856db4a",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/reaction_ready/feature_vector_292.npy": "a84baad624143e80d272717d424cb4db28c58d8d80a54802e6855975f21ae48e",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/reaction_ready/fixed_energy.json": "2aeea8cf81ec8274af20e14799fd29db4a92f8556b9fbace9a6937a5030e5cc9",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/reaction_ready/grid_difference_75302_minus_250974.npy": "ed49cfb50c267bcd5497acbae387b506e1a340275bb9be8dc41c6cda81cbbb92",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/reaction_ready/grid_difference_99590_minus_250974.npy": "73efd99f7c4ef337f4deb236ea75dde5ecb3c81e6212716043d5134f76b818fc",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/reaction_ready/reaction_ready_manifest.json": "d0e3d5e2459ae274cde2711f79747fd51eb37ff9734e06d91cf20c8dd8985e31"
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "26f4cb2acaa9c1b68b0a73ae580fd25bdedbf82a72202ec96c9f67b3f1713e56",
+      "source_tree": {
+        "bytes": 55516526,
+        "files": 67,
+        "manifest_sha256": "e2e76694999495be1ab3929e373228d6f652c0fa8b315b31deea893440a49424"
+      },
+      "species": "W4-17_h2"
+    }
+  ],
+  "code_hashes": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_inputs.py": "ab356c8d30ae62ac7d3269e5602bd597057bc8ec97be1912b76293a6d449c62c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_spec.py": "913f1d184be37477ba5fe5e58bec2acad6e9b5663d06ac11561d12d87409b078",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_feature_publisher.py": "a6d0f63b2a290b315eefcbacfecca655fd02b0f4fb21f04edefda69ffab3ed75",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_scalar_features.py": "fef539b1cd360eba3d2bde170175a76df5485340daa32a2261e7b431f3305daa",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/reaction_assembly.py": "4146c59eb479d5bd4688375109b9d3285d02234941c986c5af4948b0655d84be",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_step13_fresh_species.py": "81c10fd842f03bef3e8a02b482da5d8dff041ec1f75d26305ffde43dec51dc72",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/v7_refresh.py": "3b22b6f99a071facfd13a06fbdee52d6917555c0d0651696532814b1739a1293",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step14_recovery_v2.py": "d33a374d4a91a6ba138ab628287b7313547c08cfa8e70c840a406bc74e67f459",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/v7_refresh.py": "640d8281ab4551afd3c9494357b28ad79761f22245bfaee9be86da4a8c0cc9aa"
+  },
+  "new_scf_forbidden": true,
+  "output_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1",
+  "purpose": "bounded_38_species_20_reactions",
+  "reactions": [
+    {
+      "dataset": "DBH22",
+      "objective_weight": 30.0,
+      "orbital_ao_cost_proxy": 318,
+      "property_class": "BH",
+      "reaction": "DBH24_9",
+      "reference_hartree": 0.07671597,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "48_hcn_BH76"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "49_hcnts_BH76"
+        }
+      ],
+      "training_global_index": 69
+    },
+    {
+      "dataset": "DBH22",
+      "objective_weight": 30.0,
+      "orbital_ao_cost_proxy": 318,
+      "property_class": "BH",
+      "reaction": "DBH24_19",
+      "reference_hartree": 0.017051535,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "58_hn2_BH76"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "59_hn2ts_BH76"
+        }
+      ],
+      "training_global_index": 77
+    },
+    {
+      "dataset": "DBH22",
+      "objective_weight": 30.0,
+      "orbital_ao_cost_proxy": 318,
+      "property_class": "BH",
+      "reaction": "DBH24_21",
+      "reference_hartree": 0.052461357,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "60_hnc_BH76"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "49_hcnts_BH76"
+        }
+      ],
+      "training_global_index": 79
+    },
+    {
+      "dataset": "Dip146",
+      "objective_weight": 1600.0,
+      "orbital_ao_cost_proxy": 278,
+      "property_class": "EF",
+      "reaction": "Dip146_101",
+      "reference_hartree": 0.000142108,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "Dip146_HF2+"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "Dip146_HF2-"
+        }
+      ],
+      "training_global_index": 125
+    },
+    {
+      "dataset": "Dip146",
+      "objective_weight": 1600.0,
+      "orbital_ao_cost_proxy": 274,
+      "property_class": "EF",
+      "reaction": "Dip146_131",
+      "reference_hartree": -0.000555229,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "Dip146_LiN2+"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "Dip146_LiN2-"
+        }
+      ],
+      "training_global_index": 135
+    },
+    {
+      "dataset": "Dip146",
+      "objective_weight": 1600.0,
+      "orbital_ao_cost_proxy": 198,
+      "property_class": "EF",
+      "reaction": "Dip146_140",
+      "reference_hartree": 3.80629e-05,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "Dip146_NaLi2+"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "Dip146_NaLi2-"
+        }
+      ],
+      "training_global_index": 138
+    },
+    {
+      "dataset": "EIE22",
+      "objective_weight": 20.0,
+      "orbital_ao_cost_proxy": 1032,
+      "property_class": "ISO",
+      "reaction": "EIE22_1",
+      "reference_hartree": 0.010245668475,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "12_Product1_EIE22"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "11_Reactant1_EIE22"
+        }
+      ],
+      "training_global_index": 295
+    },
+    {
+      "dataset": "EIE22",
+      "objective_weight": 20.0,
+      "orbital_ao_cost_proxy": 1098,
+      "property_class": "ISO",
+      "reaction": "EIE22_6",
+      "reference_hartree": 0.00723671751,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "22_Product6_EIE22"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "21_Reactant6_EIE22"
+        }
+      ],
+      "training_global_index": 300
+    },
+    {
+      "dataset": "EIE22",
+      "objective_weight": 20.0,
+      "orbital_ao_cost_proxy": 900,
+      "property_class": "ISO",
+      "reaction": "EIE22_18",
+      "reference_hartree": -0.004380118493,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "46_Product18_EIE22"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "45_Reactant18_EIE22"
+        }
+      ],
+      "training_global_index": 312
+    },
+    {
+      "dataset": "BUT14DIOL",
+      "objective_weight": 200.0,
+      "orbital_ao_cost_proxy": 1428,
+      "property_class": "INC",
+      "reaction": "BUT14DIOL_3",
+      "reference_hartree": 0.002087619,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "BUT14DIOL_B1"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "BUT14DIOL_B4"
+        }
+      ],
+      "training_global_index": 388
+    },
+    {
+      "dataset": "BUT14DIOL",
+      "objective_weight": 200.0,
+      "orbital_ao_cost_proxy": 1428,
+      "property_class": "INC",
+      "reaction": "BUT14DIOL_4",
+      "reference_hartree": 0.002294788,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "BUT14DIOL_B1"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "BUT14DIOL_B5"
+        }
+      ],
+      "training_global_index": 389
+    },
+    {
+      "dataset": "S66Rel7",
+      "objective_weight": 60.0,
+      "orbital_ao_cost_proxy": 528,
+      "property_class": "NC",
+      "reaction": "S66Rel7_1",
+      "reference_hartree": 0.000446208,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "2699_01WaterWater090_dim_S66x8"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "2701_01WaterWater100_dim_S66x8"
+        }
+      ],
+      "training_global_index": 402
+    },
+    {
+      "dataset": "S66Rel7",
+      "objective_weight": 60.0,
+      "orbital_ao_cost_proxy": 648,
+      "property_class": "NC",
+      "reaction": "S66Rel7_407",
+      "reference_hartree": 0.000470112,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "3163_59EthyneWaterCHO090_dim_S66x8"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "3165_59EthyneWaterCHO100_dim_S66x8"
+        }
+      ],
+      "training_global_index": 469
+    },
+    {
+      "dataset": "S22",
+      "objective_weight": 120.0,
+      "orbital_ao_cost_proxy": 486,
+      "property_class": "NC",
+      "reaction": "S22_1",
+      "reference_hartree": 0.004992757,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "S22_01"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "S22_01a"
+        }
+      ],
+      "training_global_index": 807
+    },
+    {
+      "dataset": "S22",
+      "objective_weight": 120.0,
+      "orbital_ao_cost_proxy": 585,
+      "property_class": "NC",
+      "reaction": "S22_8",
+      "reference_hartree": 0.000839829,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "S22_08"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "S22_08a"
+        }
+      ],
+      "training_global_index": 814
+    },
+    {
+      "dataset": "DIPCS9",
+      "objective_weight": 0.6,
+      "orbital_ao_cost_proxy": 126,
+      "property_class": "TC",
+      "reaction": "DIPCS10_9",
+      "reference_hartree": 0.832019939,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "DIPCS10_mg"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "DIPCS10_mg_2+"
+        }
+      ],
+      "training_global_index": 1097
+    },
+    {
+      "dataset": "DIPCS9",
+      "objective_weight": 0.6,
+      "orbital_ao_cost_proxy": 72,
+      "property_class": "TC",
+      "reaction": "DIPCS10_10",
+      "reference_hartree": 1.011618957,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "DIPCS10_be"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "DIPCS10_be_2+"
+        }
+      ],
+      "training_global_index": 1098
+    },
+    {
+      "dataset": "TAE_W4-17nonMR",
+      "objective_weight": 0.8,
+      "orbital_ao_cost_proxy": 99,
+      "property_class": "TC",
+      "reaction": "TAE_W4-17_110",
+      "reference_hartree": 0.174499489,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "W4-17_h2"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "W4-17_h"
+        }
+      ],
+      "training_global_index": 1311
+    },
+    {
+      "dataset": "CUAGAU83",
+      "objective_weight": 1.5,
+      "orbital_ao_cost_proxy": 264,
+      "property_class": "TM",
+      "reaction": "CUAGAU_15",
+      "reference_hartree": 0.062273861,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "CUAGAU_Ag02N0"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "CUAGAU_Ag01N0"
+        }
+      ],
+      "training_global_index": 1441
+    },
+    {
+      "dataset": "CUAGAU83",
+      "objective_weight": 1.5,
+      "orbital_ao_cost_proxy": 264,
+      "property_class": "TM",
+      "reaction": "CUAGAU_29",
+      "reference_hartree": 0.083298431,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "CUAGAU_Au02N0"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "CUAGAU_Au01N0"
+        }
+      ],
+      "training_global_index": 1453
+    }
+  ],
+  "schema_version": 1,
+  "scientific_specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "source_hashes": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/reaction_features/step14_real_reaction_cohort_v1.json": "47ae84ce59cb174e679dd846024f5e536360e2ab60a2e0e12465d4002538f727",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/reaction_features/step14_recovery_complete_v2.json": "c0a921691e098732c7ba83d2b9e80541a4096b516d0abbeb625fba13ec6c3c58"
+  },
+  "sr_reuse_tolerance_hartree": 1e-08,
+  "status": "frozen_before_refresh"
+}
