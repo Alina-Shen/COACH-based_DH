@@ -1,0 +1,69 @@
+{
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "input_manifest_sha256": "5ab4b0d05a5b25fc848c4aa806d639bf10fd6f121a416e864e2990edef8ef1b7",
+  "resolved_settings": {
+    "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+    "ridge": 1e-10,
+    "grid_limit": 2.38801175431611e-05,
+    "grid_public_limit": 2.3904021564725822e-05,
+    "conversion": 627.50947406,
+    "seconds": 7200,
+    "threads": 16,
+    "seed": 0,
+    "solver_parameters": [
+      [
+        "FeasibilityTol",
+        1e-09
+      ],
+      [
+        "IntFeasTol",
+        1e-09
+      ],
+      [
+        "MIPGap",
+        0.0001
+      ],
+      [
+        "MIPGapAbs",
+        1e-10
+      ]
+    ],
+    "budgets": [
+      14,
+      24,
+      32,
+      40,
+      48,
+      64,
+      80
+    ],
+    "candidate_rows": 100,
+    "global_rows": 200,
+    "vv10_b": 5.5,
+    "vv10_c": 0.01
+  },
+  "budget": 14,
+  "seconds": 10,
+  "threads": 1,
+  "purpose": "bounded_validation_not_bulk_authorization",
+  "start": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_synthetic_25674271/pass1",
+  "grid_candidates": [
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_synthetic_25674271/pass1"
+  ],
+  "code_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_v7_fit.py": "47c2a25fc42e2ecc8b32e215da7aaa496c6037758580446902ddf5f30f5cc2be",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/mio.py": "544cf9005966062245f3ffbeb091b536ab429495a1c7fed1af44f2bc3c915908",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_spec.py": "913f1d184be37477ba5fe5e58bec2acad6e9b5663d06ac11561d12d87409b078",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_inputs.py": "ab356c8d30ae62ac7d3269e5602bd597057bc8ec97be1912b76293a6d449c62c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/grid_selection.py": "a11dd30e2ab8c9bf1b7065afa1a9f3512bd94aef62a3c64c7180565941d828ff",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/solver_reporting.py": "9e5fc4b742d9dc6212ee84bbcd935d80d8ced0da4da9f062002b1fcf70491c60"
+  },
+  "parent_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_synthetic_25674271/pass1": {
+      "contract.json": "20e8a3673313be3f919b4e27736e813798bf7ff1e2a9081a9397fb83fa6e8d01",
+      "result.json": "095469bb7fb5ebd233cfcd541ec50aaef2b4bb705a4c417b4aea107d8b954ffe",
+      "coefficients.npy": "15cc84e8e0c7c3565616316f5ac860b2e342620d8094a205bf8b53000d9b6580",
+      "selected.npy": "dd057b199f2fb1a3a6e4500f96be129feda089f6af2fe9553085d1e9a0226322"
+    }
+  }
+}

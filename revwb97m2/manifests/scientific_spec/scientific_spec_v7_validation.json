@@ -1,0 +1,51 @@
+{
+  "checks": {
+    "v7_supported_scientific_contract": true
+  },
+  "details": {
+    "pretest_commit_required": true,
+    "resolved_fit_settings": {
+      "budgets": [
+        14,
+        24,
+        32,
+        40,
+        48,
+        64,
+        80
+      ],
+      "candidate_rows": 100,
+      "conversion": 627.50947406,
+      "global_rows": 200,
+      "grid_limit": 2.38801175431611e-05,
+      "grid_public_limit": 2.3904021564725822e-05,
+      "ridge": 1e-10,
+      "seconds": 7200,
+      "seed": 0,
+      "solver_parameters": [
+        [
+          "FeasibilityTol",
+          1e-09
+        ],
+        [
+          "IntFeasTol",
+          1e-09
+        ],
+        [
+          "MIPGap",
+          0.0001
+        ],
+        [
+          "MIPGapAbs",
+          1e-10
+        ]
+      ],
+      "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+      "threads": 16,
+      "vv10_b": 5.5,
+      "vv10_c": 0.01
+    },
+    "scope": "configuration only; no chemical/solver validation implied"
+  },
+  "passed": true
+}

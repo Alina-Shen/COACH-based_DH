@@ -1,0 +1,30 @@
+{
+  "status": "prepared_not_executed",
+  "scientific_specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "source_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/12_NH2rad_HNBrBDE18/input0",
+  "source_sha256": "8267b6bcd48735917be1d5891cd78290678dacdb604937add4ec53918997008b",
+  "input_sha256": "805fdefa4a43c3e15f5c27c56d1b89ef0765bb58c41dd6451f94e2ebd0a71846",
+  "controls": {
+    "JOBTYPE": "SP",
+    "EXCHANGE": "HF",
+    "UNRESTRICTED": "TRUE",
+    "SCF_GUESS": "READ",
+    "MAX_SCF_CYCLES": "0",
+    "MP2_RESTART_NO_SCF": "TRUE",
+    "GEN_SCFMAN": "FALSE",
+    "SCF_FINAL_PRINT": "1",
+    "LRC_DFT": "TRUE",
+    "SRC_DFT": "TRUE",
+    "OMEGA": "300",
+    "OMEGA2": "300",
+    "HF_SR": "1000",
+    "HF_LR": "0",
+    "NL_CORRELATION": "VV10",
+    "NL_GRID": "1",
+    "NL_VV_B": "550",
+    "NL_VV_C": "100",
+    "NL_VV_SCALE": "100000"
+  },
+  "archive_copy_and_species_identity_preflight_required": true,
+  "submission_authorized": false
+}
