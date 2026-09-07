@@ -1,0 +1,1373 @@
+{
+  "authorities": {
+    "basis_bridge_records_sha256": "cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6",
+    "fixed_orbital_control_amendment_sha256": "283b2b0096edebb74b1a3f07b369b7b9d878c4a0237783eba5173dd18caea891",
+    "q4_validation_sha256": "10d4a84b7f2173963cec84143c71114fcd68f2ec4e728ccff2f909b8d560c501",
+    "qchem_step13_adapter_sha256": "c807bdb8295917d9652b2aae33f16c5928e102fb58216c103694c1588ab4b14b",
+    "runner_sha256": "81c10fd842f03bef3e8a02b482da5d8dff041ec1f75d26305ffde43dec51dc72",
+    "scientific_specification_sha256": "5c7a03994f75ea0076188f20a679647b9cfc2e0ec1c72874b0cc463326a3212e",
+    "slurm_script_sha256": "2e9df6b900a21fa4f8ff2ca334841c69d006389d5284c63ed86971cc40529cf8",
+    "step9_validation_sha256": "38e53e5eb52c982beee62bbaa19b9c05201972eb96bb4c20893e97c68e79f104"
+  },
+  "bulk_submission_authorized": false,
+  "cases": [
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/11_Reactant1_EIE22/input0",
+      "authoritative_input_sha256": "7410e76acb770c0c0df653e545d6880902cc583ff742868a5aed021b5c56c596",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/11_Reactant1_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "841856b53842fe0e5682bcf991f8b23f9ae09d472c68afd72f20d382ccd8dbdf",
+      "source_tree": {
+        "bytes": 148901120,
+        "files": 68,
+        "manifest_sha256": "28f8cbe4c3544d4d24f0d42d2d92a22e74e833c79fc4db1cf77a337f308f5441"
+      },
+      "species": "11_Reactant1_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/12_Product1_EIE22/input0",
+      "authoritative_input_sha256": "56d3a298ac438b5e5d0ea2e4dd92b96d46c58d4664fe10f9700f2a2b26fbc31f",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/12_Product1_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ccbd3bfa3be305aad16bc3080c981d632e3eb5de2643c6c99cee60e0ae5c5f59",
+      "source_tree": {
+        "bytes": 150229231,
+        "files": 68,
+        "manifest_sha256": "5ee07aa2490aa85554e010e67223d2ba5c97acf7fc308f0ec2dd4e3d2f2985cc"
+      },
+      "species": "12_Product1_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/21_Reactant6_EIE22/input0",
+      "authoritative_input_sha256": "3e3a0e3990a3bda968e0237930147b502dab8a4adcd18cb0724447124e9ada2f",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/21_Reactant6_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "04ad912b433a555023e2e80595d8dd231ed1d0c3b79a9f7e80db3fd64ca723e6",
+      "source_tree": {
+        "bytes": 160856374,
+        "files": 68,
+        "manifest_sha256": "5536454f3fbf37a677b4c43c95a51ef5077c3ecb9ea52900e9f2cf70b094f102"
+      },
+      "species": "21_Reactant6_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/22_Product6_EIE22/input0",
+      "authoritative_input_sha256": "772d95321e811381afe328d9f2bb994a3ac110a89e034870fadac3dc52687abb",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/22_Product6_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "a0f5f1fa9c0285a3ed3d16e6263bffdf1ab16fc236cdf06a92661dacf61d8de4",
+      "source_tree": {
+        "bytes": 161999817,
+        "files": 68,
+        "manifest_sha256": "0652bd8cd9d255afe54c432ab03d56ddff4226b3a050aa06c21210a0282d9499"
+      },
+      "species": "22_Product6_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/2699_01WaterWater090_dim_S66x8/input0",
+      "authoritative_input_sha256": "1ccb872bdbcb0b03c2402ee8b92b9fe488f89f8e16e223e18624607342293c81",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/2699_01WaterWater090_dim_S66x8",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "1dd66476673f25b322d849a5c581f9b24e84dfc3ddcf1b93baa11c9607e14f54",
+      "source_tree": {
+        "bytes": 79874302,
+        "files": 69,
+        "manifest_sha256": "1a5bc3d14c140b258f6ed41ef0fb624b5c52064bd67bf89df9f8852f7a437dc1"
+      },
+      "species": "2699_01WaterWater090_dim_S66x8"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/2701_01WaterWater100_dim_S66x8/input0",
+      "authoritative_input_sha256": "6036e17ff48a60f032d6c9afffa21195c9d20ae87736d7c7506fe5e2667c7762",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/2701_01WaterWater100_dim_S66x8",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "a0dd13e34b4ce179d7eebce088278c3be31aeffa5b33b0bf2c8a42349c59f72a",
+      "source_tree": {
+        "bytes": 79632018,
+        "files": 68,
+        "manifest_sha256": "38c6bea46eda41e100bb976f0f0842cc7ac76edbc25e875bfc3b523f3368c7ec"
+      },
+      "species": "2701_01WaterWater100_dim_S66x8"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3163_59EthyneWaterCHO090_dim_S66x8/input0",
+      "authoritative_input_sha256": "8657054d3d54074adaf6e2faec3f858b6d62ec6c7f855e6810531828861d89d2",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/3163_59EthyneWaterCHO090_dim_S66x8",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ded8d1a41606dbdaf3a03a3e9ae1ace9cdd536ef7e412363ac25f86c34765e38",
+      "source_tree": {
+        "bytes": 91154685,
+        "files": 68,
+        "manifest_sha256": "4b95ed0f1cb01a221245b72c76c3a6f1b421048543e7bcd7f3d58393dbcd4f76"
+      },
+      "species": "3163_59EthyneWaterCHO090_dim_S66x8"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3165_59EthyneWaterCHO100_dim_S66x8/input0",
+      "authoritative_input_sha256": "7eacd1087a3e3c8054fa0a3123074e22c25d201801f8b0184d87e4bedfcafad6",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/3165_59EthyneWaterCHO100_dim_S66x8",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "2f160bcb3c0fccbb8982136df91431af1c8c00673b0374ee92b64643f2c6a92d",
+      "source_tree": {
+        "bytes": 90798969,
+        "files": 68,
+        "manifest_sha256": "5ac3fa496dbaa7da7eda4432421a837e0c251bb8bdae7f3f7bebe9f0cc449d56"
+      },
+      "species": "3165_59EthyneWaterCHO100_dim_S66x8"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/45_Reactant18_EIE22/input0",
+      "authoritative_input_sha256": "1ad5748ebff35bc3a16064db27cc5bc68a632ed28828270eb4bd498a74ec4125",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/45_Reactant18_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "3f1b4800342500b6cbc5f04756d34a32b9ada41855c5ba5a06479bd7f3e56aae",
+      "source_tree": {
+        "bytes": 128060502,
+        "files": 68,
+        "manifest_sha256": "46a66da791d43656c933d97099e7a5bd53ffeb4bc6970468d23b91c5f080dc41"
+      },
+      "species": "45_Reactant18_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/46_Product18_EIE22/input0",
+      "authoritative_input_sha256": "12cdb67382e699e807cc5d6d301a4ad3d33af522c6b90fb5e293888b402f1938",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/46_Product18_EIE22",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "27c42571752991a4516b852ac2a1ab0950f6f59b7f27ca00feb623e79c2be639",
+      "source_tree": {
+        "bytes": 128430045,
+        "files": 68,
+        "manifest_sha256": "67730820bcc89f7cb88a0daa410ea13a3beea8a5c15f7b137bf91604565e32b3"
+      },
+      "species": "46_Product18_EIE22"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/48_hcn_BH76/input0",
+      "authoritative_input_sha256": "400695754e0ff0c56eaed9eeef776e239e21687c08c9f48a5f4e734c0019ec36",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/48_hcn_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "895dd70830d9c312ee88d01b6588a69dfcb032efd65fe4cd4a8311f0ff5b6f05",
+      "source_tree": {
+        "bytes": 63694764,
+        "files": 67,
+        "manifest_sha256": "a9951db0f1822bb62a2d968b7fa5bbb6e8c4ff3062254b6bb113a9b71386fd9b"
+      },
+      "species": "48_hcn_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/49_hcnts_BH76/input0",
+      "authoritative_input_sha256": "52d6201a86b7df20adc90a1cb8044edc02fe8c7e3906a3ee95ffd6338c302046",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/49_hcnts_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "947a4bb126ed345f4ebc7d64b002152445eb19f63e3675ee5009cb128b2349da",
+      "source_tree": {
+        "bytes": 63699202,
+        "files": 67,
+        "manifest_sha256": "c2512044df7e321828bbb92a020e394f013c61455202325d50dab941855452e3"
+      },
+      "species": "49_hcnts_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/58_hn2_BH76/input0",
+      "authoritative_input_sha256": "dab934f1f174994b7c91571a22b9bd1e4bc64d8abe2ad544b51c381b50be43ef",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/58_hn2_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "b33de99740c7e3d617187d9cab49150ef8f115f301208c3cab7d7966f8a23278",
+      "source_tree": {
+        "bytes": 63729864,
+        "files": 68,
+        "manifest_sha256": "04cebd7533b62e3fe57392faa803262ae0b52b86f43950cc788d79df3c781cf8"
+      },
+      "species": "58_hn2_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/59_hn2ts_BH76/input0",
+      "authoritative_input_sha256": "96bb34e7322ac214e61349aeea70706c0523e522c3050af3c6d9732a0d1c1d4f",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/59_hn2ts_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "3b1faebe5ae226bd77cbc14332fc55f95ce5ec4791b93d46fcb0002a54ac924d",
+      "source_tree": {
+        "bytes": 63707302,
+        "files": 67,
+        "manifest_sha256": "1e51703e83628d3c5aee53b82fdaf8000b6dad66fc0e3670060377f5a3998c60"
+      },
+      "species": "59_hn2ts_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/60_hnc_BH76/input0",
+      "authoritative_input_sha256": "aaaf835cf87af05a94925932f7436bc8fdafea1ac18f79b22bf50a8583004636",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/60_hnc_BH76",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ddb14f5358fd4d1fbd099cce9e1c390e1a87101f836263cf7fce57a74a9f8337",
+      "source_tree": {
+        "bytes": 63698226,
+        "files": 67,
+        "manifest_sha256": "11f09b46bdfe1086eaf3c12c07fcdac8b12a4b6f149198a5a032179524a7aa8a"
+      },
+      "species": "60_hnc_BH76"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/BUT14DIOL_B1/input0",
+      "authoritative_input_sha256": "d576fc39cc37171b922baaf58e5884c022d6057913ec801cf5313fbc9b3abf64",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/BUT14DIOL_B1",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 7500,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 21,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "adeb07201e6101b554c765d4e1f850436b25e39015cf514a5a3415be7734bcb8",
+      "source_tree": {
+        "bytes": 236136361,
+        "files": 68,
+        "manifest_sha256": "c5ff50d4d4d9cb22d2d0724ef663749e4fc7c5ff785aa34f2e2b3d70c27a33b9"
+      },
+      "species": "BUT14DIOL_B1"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/BUT14DIOL_B4/input0",
+      "authoritative_input_sha256": "e2b6f9063a07714c491d621e029137244434d4d0659613b3b0f492b0f2b53471",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/BUT14DIOL_B4",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 7500,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 21,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "a0349d3914bd57780f72c2632b1929c48e1466c463030b95700cebe8cab16743",
+      "source_tree": {
+        "bytes": 236771691,
+        "files": 68,
+        "manifest_sha256": "5796a918bb5515439fa6e3a50f2525114c13bd4c28360f9698845524fd82e36d"
+      },
+      "species": "BUT14DIOL_B4"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/BUT14DIOL_B5/input0",
+      "authoritative_input_sha256": "64d4b28308b98d0c53708db67a8fc6fde5c1a67367cf6f0e1f9f56368ce865ce",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/BUT14DIOL_B5",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 7500,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 21,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "3232f0f1c983795760113de1e5d74fabab46ca7448fa6cac3ea01d9be293a886",
+      "source_tree": {
+        "bytes": 236749047,
+        "files": 68,
+        "manifest_sha256": "6de638593555ad4cf035e100572cbd55646a8b5212c4e8d88de2880eedd5a2f4"
+      },
+      "species": "BUT14DIOL_B5"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/CUAGAU_Ag01N0/input0",
+      "authoritative_input_sha256": "73f2ec73f4ac44b4c5247fe4ab3892ee529af5a6a178486e7c7918e377d1b7d4",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/CUAGAU_Ag01N0",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "02a45aff77ac3aa532809e22069f50ede6be33d38db896d5cd6827744471ec19",
+      "source_tree": {
+        "bytes": 57355011,
+        "files": 70,
+        "manifest_sha256": "10ed6224d8d30bb7c4d75fb55617d734f1d0cc225d0af7385cb4848d17023687"
+      },
+      "species": "CUAGAU_Ag01N0"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/CUAGAU_Ag02N0/input0",
+      "authoritative_input_sha256": "0cf33fdcd8efd691198e2cdf5743266b9ee356240c2b86aefc65070cf1708a5b",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/CUAGAU_Ag02N0",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "054a1e487b961fef0ff47abc669132341860ad06825b0dc65fe0bd9ed1ace1a2",
+      "source_tree": {
+        "bytes": 66382516,
+        "files": 70,
+        "manifest_sha256": "d00654131aa0bd86670fa089f8cb08fc8d37d5712d152d5bf43ab7a93612b99b"
+      },
+      "species": "CUAGAU_Ag02N0"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/CUAGAU_Au01N0/input0",
+      "authoritative_input_sha256": "beaf3368bcd805f7331296ae22637aeed4131e5889a0b84ad69cb6c14bba3e50",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/CUAGAU_Au01N0",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "8197fc0568630a594a0f7546eb695e001e3c01857dd5cc0ad25910129435d04c",
+      "source_tree": {
+        "bytes": 57343203,
+        "files": 70,
+        "manifest_sha256": "381c12a81d7d58c53c1f6f4acf42da436611576e0996e277128421123582fcf4"
+      },
+      "species": "CUAGAU_Au01N0"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/CUAGAU_Au02N0/input0",
+      "authoritative_input_sha256": "e4363198e4077f9cbd668ac6c59d98549a4a09ff2b0d9e597d9fc45f9b952776",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/CUAGAU_Au02N0",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "94e59a062f9e260a50eb1206857fd74918017d1447d8c30275453d56abf11687",
+      "source_tree": {
+        "bytes": 66395988,
+        "files": 70,
+        "manifest_sha256": "5a737fc1f3901c15fa1b165c956140688a8a11bf427ff18b1b17abc45c6c6742"
+      },
+      "species": "CUAGAU_Au02N0"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/DIPCS10_be/input0",
+      "authoritative_input_sha256": "b77fbe583edbf9488eb610416aac5773d935632ea709ed3aa8e9de97387cf6ee",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/DIPCS10_be",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "2dfa3a71c0515df1216d90a84ab71bfa1bff2dbdf47aa4536f2c7922c9ba649b",
+      "source_tree": {
+        "bytes": 54641144,
+        "files": 67,
+        "manifest_sha256": "89c440f9c30d69dddd814704832a28cc736f5bdb4f36fc3946f6432c20b30b23"
+      },
+      "species": "DIPCS10_be"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/DIPCS10_be_2+/input0",
+      "authoritative_input_sha256": "156e3a8e313f503f8292f49d56f5a351ca23d9188a5875f143b254bec070ce9b",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/DIPCS10_be_2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "9b49980eeb4663b5ccdb05bb481ebafc0c155b413c9e2f15d969f483b91087f1",
+      "source_tree": {
+        "bytes": 54635867,
+        "files": 67,
+        "manifest_sha256": "f48da86a833b3b65437f445f82ec99295b1b981924c6695b157618adbd523286"
+      },
+      "species": "DIPCS10_be_2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/DIPCS10_mg/input0",
+      "authoritative_input_sha256": "69e3f353880aaf07f5f64a2edbcf582f9439102492f4f929c163da8ef4ab0a0e",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/DIPCS10_mg",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "bb07ab59f0ddb10ccafd799548cb5111e8fdaa05af7365f9ef4fe973484f9968",
+      "source_tree": {
+        "bytes": 55826293,
+        "files": 67,
+        "manifest_sha256": "df6fc4c5c711c73fe84b4f0a9e9fff04350d8898f82a32f63c7206d0a3bb7f6c"
+      },
+      "species": "DIPCS10_mg"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/DIPCS10_mg_2+/input0",
+      "authoritative_input_sha256": "08a725b51aad5d7ba7f42fc6100363887f38167860c62f3e4c930cee1a356189",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/DIPCS10_mg_2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "45c972359bd283d83964ab2a799bc256a94662a1dd58186291e788fa84814e6f",
+      "source_tree": {
+        "bytes": 55817975,
+        "files": 67,
+        "manifest_sha256": "70bb6724aba0fb9eb4813146e9d20081ff879a5d3027bedea0fda656d67ad065"
+      },
+      "species": "DIPCS10_mg_2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_HF2+/input0",
+      "authoritative_input_sha256": "cf80090b1d72f5a74c6bca14dd37655d154db557956b948dcb9fbd745bc0f132",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_HF2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "f7a3c7eb01ed5b180b4db76ddcc1f2cb4fe7b0d0e9a5d353f8706372b367815b",
+      "source_tree": {
+        "bytes": 65827367,
+        "files": 72,
+        "manifest_sha256": "3b82e6cd085b289ae781dc64f750f90cf963d30ca1adeb8d4dca6741a9f908b5"
+      },
+      "species": "Dip146_HF2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_HF2-/input0",
+      "authoritative_input_sha256": "0d1c4c096d4b2e4545024db49bc2d4143f2fb810f750ced1f2dea98d9f093921",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_HF2-",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "9bf41e182e111bcd36d9456f1d77962fa32584596cac73b984523e4187a5fd8b",
+      "source_tree": {
+        "bytes": 65827368,
+        "files": 72,
+        "manifest_sha256": "ca6b22b97668b479a9553ae1aca4c36b0e1fdff7a852a2afe3518029e19fdbb0"
+      },
+      "species": "Dip146_HF2-"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_LiN2+/input0",
+      "authoritative_input_sha256": "4eee42c6afe0040310f1873a5419f0b7d7bdcf00f075c8e595be42c6175131d1",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_LiN2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "af0537875e57785a4d8cf21f6917e6670a3e3e4e454a0764e522255cb0309662",
+      "source_tree": {
+        "bytes": 65307366,
+        "files": 72,
+        "manifest_sha256": "0da8d5b7073ca386820ede3f2b90d8dd1d598f45faa737fe307bea36c5196a38"
+      },
+      "species": "Dip146_LiN2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_LiN2-/input0",
+      "authoritative_input_sha256": "2dd4c682f33765074e8abb9da3eb1037589e829ef4de35e8125b73cd723da579",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_LiN2-",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ae543c6561d3538fbdc91400971107d5678c987ce82848e9a96809dab7999ec6",
+      "source_tree": {
+        "bytes": 65307367,
+        "files": 72,
+        "manifest_sha256": "53862c2b1b8d5e661d851d7d44228493a6be64d93855dd7927e7e39b626e6bcd"
+      },
+      "species": "Dip146_LiN2-"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_NaLi2+/input0",
+      "authoritative_input_sha256": "0a3a65d897b25b6376edaf3b0757d2b22f950f3c396865d2561444fc7eb3ae5b",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_NaLi2+",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "3868994d58d4e8409a87954199ac71e6086984f5eda2569970f5166e149cf0d6",
+      "source_tree": {
+        "bytes": 59702544,
+        "files": 72,
+        "manifest_sha256": "754dbacc1201f133d2bc2d475c36d50864e5cf86fa05ab317c0146efc11ae31c"
+      },
+      "species": "Dip146_NaLi2+"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/Dip146_NaLi2-/input0",
+      "authoritative_input_sha256": "121390880c7d7c6f391711bb481512487e5d37c7b2a482beb2f564a8d86f6205",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/Dip146_NaLi2-",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ec963520b1987c6c45824cfceb30863eaa7577afb53ff3de85ee59fd01b8b677",
+      "source_tree": {
+        "bytes": 59702545,
+        "files": 72,
+        "manifest_sha256": "c01166507afa2dc237c91731350ce149c8ac92359d8b66294c7b2a69f6ff9d68"
+      },
+      "species": "Dip146_NaLi2-"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/S22_01/input0",
+      "authoritative_input_sha256": "8c4a003b13cefbedb1f07fe7433f324540c93ce236a007239a7b4d94469a6565",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/S22_01",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "c14aa9ff0bfe1746e40cba2c2da002021229a190c2dfa46ae59edfe91c1f91c4",
+      "source_tree": {
+        "bytes": 91756890,
+        "files": 68,
+        "manifest_sha256": "c2345eb87dfcd972ea2b35998b6545eaec3e02adc86fd42f0a638512f9b693a2"
+      },
+      "species": "S22_01"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/S22_01a/input0",
+      "authoritative_input_sha256": "ca0b22b1c2308b55e2781b9b03935cb0b93d24ee2ad6e9fa1487e151285aa288",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/S22_01a",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "d01f6c6717d2fa2164849b9736c10d2e7696bd47b074652b36ae270f33a3b6a1",
+      "source_tree": {
+        "bytes": 63933635,
+        "files": 67,
+        "manifest_sha256": "0cd2332f1fdbe3f8b61c7a5fb1a63ae7017d5ed5f942cbc2d67af2ecb8119985"
+      },
+      "species": "S22_01a"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/S22_08/input0",
+      "authoritative_input_sha256": "61e3251f17dc2901c8814bd78f8de4a6139541a985160dd19bcd6d134a9f8915",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/S22_08",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "cb801df0db84383c7ce29d3b5c4e1c8e6f67962f740d0e879b7508b5450e8510",
+      "source_tree": {
+        "bytes": 107653023,
+        "files": 68,
+        "manifest_sha256": "56ba41302c3119c83e979023f886afd005f1c2ba273d3242e82813f26f1b80f7"
+      },
+      "species": "S22_08"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/S22_08a/input0",
+      "authoritative_input_sha256": "f02c72191fd0f871fe6498bad8d2e605f86b322b39520863f580c5fb5c8bd2a6",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/S22_08a",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "22a1add3eeec7ebec0b1839128be09174fc361cc1a919825831040cabef69590",
+      "source_tree": {
+        "bytes": 68128653,
+        "files": 67,
+        "manifest_sha256": "5742cb33d9bd07f07e3d446d5f4ade275f865fe67a6afe850387b2884e993804"
+      },
+      "species": "S22_08a"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/W4-17_h/input0",
+      "authoritative_input_sha256": "c3b0b7259d36b2ed65755bdbcc1e44d6f32f12a1bf30c4dd1fde5707e0016a24",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/W4-17_h",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "ceb769fd92fa78abc14b94e75763a59516157ab10323cfd5bd44c8f8a81cdd36",
+      "source_tree": {
+        "bytes": 54331026,
+        "files": 67,
+        "manifest_sha256": "3f090573fea86849b0db9df653909e13f8d8daa8aa20c594f98d980915522770"
+      },
+      "species": "W4-17_h"
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/W4-17_h2/input0",
+      "authoritative_input_sha256": "4c2e3c534868f907a84f701b992fe613e4ac829919875f4a3686bd76b76e3ef1",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/W4-17_h2",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "account": "mhg",
+        "cpus": 8,
+        "memory_class_mb": 3750,
+        "partition": "mhg",
+        "qos": "normal",
+        "requested_memory_gib": 14,
+        "wall_hours": 4
+      },
+      "role": "step14_real_reaction_cohort_species",
+      "scope": "gscdb137",
+      "source_record_sha256": "26f4cb2acaa9c1b68b0a73ae580fd25bdedbf82a72202ec96c9f67b3f1713e56",
+      "source_tree": {
+        "bytes": 55516526,
+        "files": 67,
+        "manifest_sha256": "e2e76694999495be1ab3929e373228d6f652c0fa8b315b31deea893440a49424"
+      },
+      "species": "W4-17_h2"
+    }
+  ],
+  "frozen_local_date": "2026-09-05",
+  "grids": [
+    {
+      "id": "250974",
+      "qchem_value": "000250000974",
+      "role": "fitting_reference"
+    },
+    {
+      "id": "99590",
+      "qchem_value": "000099000590",
+      "role": "grid_stability"
+    },
+    {
+      "id": "75302",
+      "qchem_value": "000075000302",
+      "role": "grid_stability"
+    }
+  ],
+  "purpose": "seven_property_class_real_reaction_292_feature_smoke",
+  "qchem_build": {
+    "libks_svn_revision": 1666,
+    "main_svn_revision": 48798,
+    "qchem_launcher_sha256": "eb8848914711cc8346ea98c96e41dde7a6cb60e79f1cbb1268a906dc8ac0ede7",
+    "qcprog_executable_sha256": "0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084",
+    "root": "/clusterfs/mhg-data/yaoshen/qchem/trunk"
+  },
+  "reaction_count": 20,
+  "reaction_output_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/reactions",
+  "reactions": [
+    {
+      "dataset": "DBH22",
+      "objective_weight": 30.0,
+      "orbital_ao_cost_proxy": 318,
+      "property_class": "BH",
+      "reaction": "DBH24_9",
+      "reference_hartree": 0.07671597,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "48_hcn_BH76"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "49_hcnts_BH76"
+        }
+      ],
+      "training_global_index": 69
+    },
+    {
+      "dataset": "DBH22",
+      "objective_weight": 30.0,
+      "orbital_ao_cost_proxy": 318,
+      "property_class": "BH",
+      "reaction": "DBH24_19",
+      "reference_hartree": 0.017051535,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "58_hn2_BH76"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "59_hn2ts_BH76"
+        }
+      ],
+      "training_global_index": 77
+    },
+    {
+      "dataset": "DBH22",
+      "objective_weight": 30.0,
+      "orbital_ao_cost_proxy": 318,
+      "property_class": "BH",
+      "reaction": "DBH24_21",
+      "reference_hartree": 0.052461357,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "60_hnc_BH76"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "49_hcnts_BH76"
+        }
+      ],
+      "training_global_index": 79
+    },
+    {
+      "dataset": "Dip146",
+      "objective_weight": 1600.0,
+      "orbital_ao_cost_proxy": 278,
+      "property_class": "EF",
+      "reaction": "Dip146_101",
+      "reference_hartree": 0.000142108,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "Dip146_HF2+"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "Dip146_HF2-"
+        }
+      ],
+      "training_global_index": 125
+    },
+    {
+      "dataset": "Dip146",
+      "objective_weight": 1600.0,
+      "orbital_ao_cost_proxy": 274,
+      "property_class": "EF",
+      "reaction": "Dip146_131",
+      "reference_hartree": -0.000555229,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "Dip146_LiN2+"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "Dip146_LiN2-"
+        }
+      ],
+      "training_global_index": 135
+    },
+    {
+      "dataset": "Dip146",
+      "objective_weight": 1600.0,
+      "orbital_ao_cost_proxy": 198,
+      "property_class": "EF",
+      "reaction": "Dip146_140",
+      "reference_hartree": 3.80629e-05,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "Dip146_NaLi2+"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "Dip146_NaLi2-"
+        }
+      ],
+      "training_global_index": 138
+    },
+    {
+      "dataset": "EIE22",
+      "objective_weight": 20.0,
+      "orbital_ao_cost_proxy": 1032,
+      "property_class": "ISO",
+      "reaction": "EIE22_1",
+      "reference_hartree": 0.010245668475,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "12_Product1_EIE22"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "11_Reactant1_EIE22"
+        }
+      ],
+      "training_global_index": 295
+    },
+    {
+      "dataset": "EIE22",
+      "objective_weight": 20.0,
+      "orbital_ao_cost_proxy": 1098,
+      "property_class": "ISO",
+      "reaction": "EIE22_6",
+      "reference_hartree": 0.00723671751,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "22_Product6_EIE22"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "21_Reactant6_EIE22"
+        }
+      ],
+      "training_global_index": 300
+    },
+    {
+      "dataset": "EIE22",
+      "objective_weight": 20.0,
+      "orbital_ao_cost_proxy": 900,
+      "property_class": "ISO",
+      "reaction": "EIE22_18",
+      "reference_hartree": -0.004380118493,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "46_Product18_EIE22"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "45_Reactant18_EIE22"
+        }
+      ],
+      "training_global_index": 312
+    },
+    {
+      "dataset": "BUT14DIOL",
+      "objective_weight": 200.0,
+      "orbital_ao_cost_proxy": 1428,
+      "property_class": "INC",
+      "reaction": "BUT14DIOL_3",
+      "reference_hartree": 0.002087619,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "BUT14DIOL_B1"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "BUT14DIOL_B4"
+        }
+      ],
+      "training_global_index": 388
+    },
+    {
+      "dataset": "BUT14DIOL",
+      "objective_weight": 200.0,
+      "orbital_ao_cost_proxy": 1428,
+      "property_class": "INC",
+      "reaction": "BUT14DIOL_4",
+      "reference_hartree": 0.002294788,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "BUT14DIOL_B1"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "BUT14DIOL_B5"
+        }
+      ],
+      "training_global_index": 389
+    },
+    {
+      "dataset": "S66Rel7",
+      "objective_weight": 60.0,
+      "orbital_ao_cost_proxy": 528,
+      "property_class": "NC",
+      "reaction": "S66Rel7_1",
+      "reference_hartree": 0.000446208,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "2699_01WaterWater090_dim_S66x8"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "2701_01WaterWater100_dim_S66x8"
+        }
+      ],
+      "training_global_index": 402
+    },
+    {
+      "dataset": "S66Rel7",
+      "objective_weight": 60.0,
+      "orbital_ao_cost_proxy": 648,
+      "property_class": "NC",
+      "reaction": "S66Rel7_407",
+      "reference_hartree": 0.000470112,
+      "stoichiometry": [
+        {
+          "coefficient": 1.0,
+          "species": "3163_59EthyneWaterCHO090_dim_S66x8"
+        },
+        {
+          "coefficient": -1.0,
+          "species": "3165_59EthyneWaterCHO100_dim_S66x8"
+        }
+      ],
+      "training_global_index": 469
+    },
+    {
+      "dataset": "S22",
+      "objective_weight": 120.0,
+      "orbital_ao_cost_proxy": 486,
+      "property_class": "NC",
+      "reaction": "S22_1",
+      "reference_hartree": 0.004992757,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "S22_01"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "S22_01a"
+        }
+      ],
+      "training_global_index": 807
+    },
+    {
+      "dataset": "S22",
+      "objective_weight": 120.0,
+      "orbital_ao_cost_proxy": 585,
+      "property_class": "NC",
+      "reaction": "S22_8",
+      "reference_hartree": 0.000839829,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "S22_08"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "S22_08a"
+        }
+      ],
+      "training_global_index": 814
+    },
+    {
+      "dataset": "DIPCS9",
+      "objective_weight": 0.6,
+      "orbital_ao_cost_proxy": 126,
+      "property_class": "TC",
+      "reaction": "DIPCS10_9",
+      "reference_hartree": 0.832019939,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "DIPCS10_mg"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "DIPCS10_mg_2+"
+        }
+      ],
+      "training_global_index": 1097
+    },
+    {
+      "dataset": "DIPCS9",
+      "objective_weight": 0.6,
+      "orbital_ao_cost_proxy": 72,
+      "property_class": "TC",
+      "reaction": "DIPCS10_10",
+      "reference_hartree": 1.011618957,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "DIPCS10_be"
+        },
+        {
+          "coefficient": 1.0,
+          "species": "DIPCS10_be_2+"
+        }
+      ],
+      "training_global_index": 1098
+    },
+    {
+      "dataset": "TAE_W4-17nonMR",
+      "objective_weight": 0.8,
+      "orbital_ao_cost_proxy": 99,
+      "property_class": "TC",
+      "reaction": "TAE_W4-17_110",
+      "reference_hartree": 0.174499489,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "W4-17_h2"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "W4-17_h"
+        }
+      ],
+      "training_global_index": 1311
+    },
+    {
+      "dataset": "CUAGAU83",
+      "objective_weight": 1.5,
+      "orbital_ao_cost_proxy": 264,
+      "property_class": "TM",
+      "reaction": "CUAGAU_15",
+      "reference_hartree": 0.062273861,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "CUAGAU_Ag02N0"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "CUAGAU_Ag01N0"
+        }
+      ],
+      "training_global_index": 1441
+    },
+    {
+      "dataset": "CUAGAU83",
+      "objective_weight": 1.5,
+      "orbital_ao_cost_proxy": 264,
+      "property_class": "TM",
+      "reaction": "CUAGAU_29",
+      "reference_hartree": 0.083298431,
+      "stoichiometry": [
+        {
+          "coefficient": -1.0,
+          "species": "CUAGAU_Au02N0"
+        },
+        {
+          "coefficient": 2.0,
+          "species": "CUAGAU_Au01N0"
+        }
+      ],
+      "training_global_index": 1453
+    }
+  ],
+  "run_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species",
+  "schema_version": 1,
+  "selection_policy": {
+    "allowed_tiers": [
+      "small_mhg"
+    ],
+    "maximum_memory_class_mb": 7500,
+    "performance_assessment": false,
+    "property_class_quotas": {
+      "BH": 3,
+      "EF": 3,
+      "INC": 2,
+      "ISO": 3,
+      "NC": 4,
+      "TC": 3,
+      "TM": 2
+    },
+    "ranking": [
+      "ascending_sum_orbital_aos",
+      "ascending_training_global_index"
+    ],
+    "required_stoichiometric_species_count": 2
+  },
+  "species_count": 38,
+  "status": "frozen_before_results",
+  "step": 14,
+  "step14_authorities": {
+    "cohort_runner_sha256": "b2d49957739b3542e8a9357766273ebb52ac05a64792d53e3cdbaf5ff7959e57",
+    "cohort_selector_sha256": "dd01f9af42a2425e23b17ba5079ee3dcf74bfc62be5811c76db7a5549c561b32",
+    "cohort_slurm_sha256": "2e6234a926f90c983cff3c36a36e774313df1b7d8d06ba0208c55afae493b5e7",
+    "dataset_eval_sha256": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe",
+    "fixed_energy_validation_sha256": "43e3032943844535797185098e4ebe1987426a22bd10bb21d0fb8736ba82509b",
+    "qchem_scalar_features_sha256": "43769930762bdd5ed48c5db9a29181cf0e0f869f2f640b13dccf5ba5fde89e32",
+    "step12_inventory_sha256": "6abe300fb10212ec30e4f5a3add9a6c7136c85f72597e09c32d7e28b8c0d29a3",
+    "training_entries_sha256": "2d8a1e2340d980c0e236bdd0c425abd9b0c4654a1610f94b4de2644e0b73abcf"
+  }
+}

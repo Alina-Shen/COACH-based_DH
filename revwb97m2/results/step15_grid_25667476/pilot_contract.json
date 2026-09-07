@@ -1,0 +1,52 @@
+{
+  "status": "frozen_before_pilot_results",
+  "source_validation_sha256": "c0a921691e098732c7ba83d2b9e80541a4096b516d0abbeb625fba13ec6c3c58",
+  "code_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/mio.py": "a25b363894970a2bcdfc9f0978e789080fede82bdd10733472f51d878bc67788",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/solver_reporting.py": "9e5fc4b742d9dc6212ee84bbcd935d80d8ced0da4da9f062002b1fcf70491c60",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/grid_selection.py": "a11dd30e2ab8c9bf1b7065afa1a9f3512bd94aef62a3c64c7180565941d828ff",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_step15_pilot.py": "94f209fc7f9ddd2a649fae77d885891d0b3dbd4041d80a979bccd9fd5f30d43d"
+  },
+  "profile": "C0_minimal_critical",
+  "full_R2_budget": 14,
+  "seconds_per_solve": 60,
+  "threads": 1,
+  "seed": 0,
+  "repeats": 2,
+  "purpose": "engineering_smoke_not_coefficient_selection",
+  "restricted_license_diagnostic_columns": [
+    0,
+    8,
+    96,
+    104,
+    192,
+    200,
+    288,
+    289,
+    290,
+    291
+  ],
+  "restricted_license_diagnostic_budget": 7,
+  "bulk_submission_authorized": false,
+  "feature_matrix_sha256": "37fd3ac909820e04a0ce21c1d3185a0b276f736443d91641cc9ed7805053ae32",
+  "full_only": true,
+  "grid_pass2": {
+    "parent": "revwb97m2/results/step15_wls_60s_25658936",
+    "threshold_kcal_mol": 0.015,
+    "selected_count": 20,
+    "candidate_top": 100,
+    "global_l1_top": 200,
+    "parent_hashes": {
+      "revwb97m2/results/step15_wls_60s_25658936/pilot_results.json": "4dc7651e2f3c236bcd2c3672bb34bfb8b4a0181b35405e2ba5cdd6cfd6473c9f",
+      "revwb97m2/results/step15_wls_60s_25658936/pilot_contract.json": "db8a9b57d59ab0eec7fb6425b116291b09b5d79c77078f744b5eaa3f12705d01",
+      "revwb97m2/results/step15_wls_60s_25658936/full_R2_0_coefficients.npy": "dd1ff056104f9b7c55151b2bb69238a4c41482d7f7a5dd36eaa0577e51191768",
+      "revwb97m2/results/step15_wls_60s_25658936/full_R2_1_coefficients.npy": "dd1ff056104f9b7c55151b2bb69238a4c41482d7f7a5dd36eaa0577e51191768",
+      "revwb97m2/results/step15_wls_60s_25658936/full_R2_0_selected.npy": "8dd4e39615083d6dab201d57b67396f93cb9638fbb2088b682cca308cedc4443",
+      "revwb97m2/results/step15_wls_60s_25658936/full_R2_1_selected.npy": "8dd4e39615083d6dab201d57b67396f93cb9638fbb2088b682cca308cedc4443"
+    },
+    "selection_hashes": {
+      "selected_grid_rows.npy": "23e2a6c05b68c26a66f958ad39be3045c2a84901611fb83fa44ce8cfa582f018",
+      "selected_grid_difference.npy": "7848ca4b933bd3453f428b9d1ae010a2785d5441e36bad11c1726c1b3c99e9c8"
+    }
+  }
+}

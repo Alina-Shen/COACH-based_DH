@@ -1,0 +1,41 @@
+No broken requirements found.
+{
+  "checks": {
+    "compute_allocation": true,
+    "dh_prefix": true,
+    "editable_project": true,
+    "libxc_version": true,
+    "package_versions": true,
+    "private_license": true,
+    "python_version": true,
+    "wls_fields_present": true,
+    "wls_quadratic_solve": true
+  },
+  "hostname": "n0030.mhg0",
+  "job_id": "25656129",
+  "packages": {
+    "PyYAML": "6.0.3",
+    "basis-set-exchange": "0.12",
+    "coach-workflow": "0.1.0",
+    "dftd4": "4.2.0",
+    "gurobipy": "13.0.3",
+    "h5py": "3.16.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pyscf": "2.14.0",
+    "pytest": "9.1.1",
+    "scipy": "1.17.1"
+  },
+  "passed": true,
+  "python_executable": "/global/home/users/yaoshen/.conda/envs/dh/bin/python",
+  "solver": {
+    "objective": 0.0,
+    "status": 2,
+    "variables": 300,
+    "version": [
+      13,
+      0,
+      3
+    ]
+  }
+}

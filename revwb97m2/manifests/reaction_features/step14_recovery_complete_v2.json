@@ -1,0 +1,408 @@
+{
+  "accounting": [
+    {
+      "Elapsed": "00:00:25",
+      "ExitCode": "0:0",
+      "JobID": "25634381_0",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:25",
+      "ExitCode": "0:0",
+      "JobID": "25634381_0.batch",
+      "MaxRSS": "827244K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:26",
+      "ExitCode": "0:0",
+      "JobID": "25634381_0.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:26",
+      "ExitCode": "0:0",
+      "JobID": "25634381_1",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:26",
+      "ExitCode": "0:0",
+      "JobID": "25634381_1.batch",
+      "MaxRSS": "825600K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:26",
+      "ExitCode": "0:0",
+      "JobID": "25634381_1.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:26",
+      "ExitCode": "0:0",
+      "JobID": "25634381_2",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:26",
+      "ExitCode": "0:0",
+      "JobID": "25634381_2.batch",
+      "MaxRSS": "897404K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:27",
+      "ExitCode": "0:0",
+      "JobID": "25634381_2.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:25",
+      "ExitCode": "0:0",
+      "JobID": "25634381_3",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:25",
+      "ExitCode": "0:0",
+      "JobID": "25634381_3.batch",
+      "MaxRSS": "893852K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:26",
+      "ExitCode": "0:0",
+      "JobID": "25634381_3.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:23",
+      "ExitCode": "0:0",
+      "JobID": "25634381_4",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:23",
+      "ExitCode": "0:0",
+      "JobID": "25634381_4.batch",
+      "MaxRSS": "943368K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:23",
+      "ExitCode": "0:0",
+      "JobID": "25634381_4.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:22",
+      "ExitCode": "0:0",
+      "JobID": "25634381_5",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:22",
+      "ExitCode": "0:0",
+      "JobID": "25634381_5.batch",
+      "MaxRSS": "930936K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:22",
+      "ExitCode": "0:0",
+      "JobID": "25634381_5.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:13",
+      "ExitCode": "0:0",
+      "JobID": "25634381_6",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:13",
+      "ExitCode": "0:0",
+      "JobID": "25634381_6.batch",
+      "MaxRSS": "405796K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:13",
+      "ExitCode": "0:0",
+      "JobID": "25634381_6.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    }
+  ],
+  "artifacts_sha256": {
+    "feature_matrix.npy": "37fd3ac909820e04a0ce21c1d3185a0b276f736443d91641cc9ed7805053ae32",
+    "fixed_energy.npy": "da47545b6e5d70c6010445558e967009852cb002eef1fba813ce109e684fab81",
+    "grid_difference_75302.npy": "3e1d8525861c68a7c729b67f67de821e14dbf58d6c8012b6141490da6004e9d2",
+    "grid_difference_99590.npy": "7848ca4b933bd3453f428b9d1ae010a2785d5441e36bad11c1726c1b3c99e9c8",
+    "objective_weight.npy": "314720507b87bcf622492d47f0e2128ae8de2d547d1325383a45eb6a758976e5",
+    "reaction_names.json": "00df5f03fc339e584c11d878232f1ff9d2800241a2028cb77a663e27173c22b7",
+    "reference_energy.npy": "8328cd1c5e3379666e6b8f2b4130ffa8b1b3597ffe5f2c4e03674d699b5a3da0",
+    "target.npy": "a61d5e6993deab2c1e9a6fb481d63f3f899cc9148336ebb7cfd46e5065c5057d"
+  },
+  "bulk_submission_authorized": false,
+  "checks": {
+    "all_114_grid_sources_verified": true,
+    "all_species_verified": true,
+    "independent_stoichiometric_reassembly": true,
+    "target_identity": true
+  },
+  "cohort_sha256": "47ae84ce59cb174e679dd846024f5e536360e2ab60a2e0e12465d4002538f727",
+  "output_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/reactions_recovery_v2",
+  "reaction_count": 20,
+  "recovered_species": 7,
+  "recovery_sha256": "c80e5b108b2243d053f45ce3d11b230ed802fec471e4561a5498dc5caf293a24",
+  "reused_species": 31,
+  "species": [
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/reaction_ready",
+      "recovered": false,
+      "species": "11_Reactant1_EIE22",
+      "vector_sha256": "d67d008e5f091a8086e2c2ff6da593bbaa04bc3a797678dcc5a2f3e14f901e23"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/reaction_ready",
+      "recovered": false,
+      "species": "12_Product1_EIE22",
+      "vector_sha256": "792fb521abe2b6836aa1c2eb5f5a4784399c21e583b261857ee70f2c5f91e8df"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/reaction_ready",
+      "recovered": false,
+      "species": "21_Reactant6_EIE22",
+      "vector_sha256": "40afc450bd583bfc1fdb1c3809020d2b3dc2fd82702fda90327172efeb099a2b"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/reaction_ready",
+      "recovered": false,
+      "species": "22_Product6_EIE22",
+      "vector_sha256": "307bc12e211e37523949bd9bb158b0046ad4584c049bbe9c81622297220f99f0"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/reaction_ready",
+      "recovered": false,
+      "species": "2699_01WaterWater090_dim_S66x8",
+      "vector_sha256": "4d2b13dbebe2e191478572c727ae352a621ee976c9106646ad7fdbea05ea123d"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/reaction_ready",
+      "recovered": false,
+      "species": "2701_01WaterWater100_dim_S66x8",
+      "vector_sha256": "1403dc77ede408637bc8f29f445b9ca5598fe8b284afd8978260b25b0cf0e78a"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/reaction_ready",
+      "recovered": false,
+      "species": "3163_59EthyneWaterCHO090_dim_S66x8",
+      "vector_sha256": "4bdf77672327c3e9c4b3f872f6f9306209a6cdbaface404cc2e132e687a8d74b"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/reaction_ready",
+      "recovered": false,
+      "species": "3165_59EthyneWaterCHO100_dim_S66x8",
+      "vector_sha256": "ab1d388506e57b2efaabbab47e5f65e02a1fefe5e2865ed8d72dd74064b9d8bd"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/reaction_ready",
+      "recovered": false,
+      "species": "45_Reactant18_EIE22",
+      "vector_sha256": "d399827a742f6546b860dc3d19088218f5fc6d28e005e3fa5b96849948f664bd"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/reaction_ready",
+      "recovered": false,
+      "species": "46_Product18_EIE22",
+      "vector_sha256": "465633c1c7fdc3b3b90ee8cd64f0fd91ca68011d01c1e9520b6fcf3b70f911cb"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/reaction_ready",
+      "recovered": false,
+      "species": "48_hcn_BH76",
+      "vector_sha256": "c08420f76b5cf504d30c52078727a162006210f5729468d9585f99b066bc0af5"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/reaction_ready",
+      "recovered": false,
+      "species": "49_hcnts_BH76",
+      "vector_sha256": "84d49170dc65ea3e1780c08f6e7ffa73e93e4a98557c3b5e1a592461f5473f68"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/reaction_ready",
+      "recovered": false,
+      "species": "58_hn2_BH76",
+      "vector_sha256": "bcca56eb5182c50fd136dca8f7bd22d303ea2ba8a4dae45787a38f78175cb471"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/reaction_ready",
+      "recovered": false,
+      "species": "59_hn2ts_BH76",
+      "vector_sha256": "ec959d447edfaf00d0675b9cc87378c5673447365abaee9fe605ca7599839aa2"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/reaction_ready",
+      "recovered": false,
+      "species": "60_hnc_BH76",
+      "vector_sha256": "c2cf14851d2bcda2e3d3ce3a6c87e4d2ec0b99e3450406ab6fb30d0d9d97ac4f"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/reaction_ready",
+      "recovered": false,
+      "species": "BUT14DIOL_B1",
+      "vector_sha256": "d6738ba1f63b6e4488f4868ded91ff7a2af901ba0d967a962704a5d8020e6101"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/reaction_ready",
+      "recovered": false,
+      "species": "BUT14DIOL_B4",
+      "vector_sha256": "297e261bdeb361c9f9e4e7808894d848411bd1861de0f34fe3f969232d76b3d5"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/reaction_ready",
+      "recovered": false,
+      "species": "BUT14DIOL_B5",
+      "vector_sha256": "8ab940af3354805c87e51221fa1bf0935260ba741b49849cb7bcc0c3822cb765"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/reaction_ready",
+      "recovered": false,
+      "species": "CUAGAU_Ag01N0",
+      "vector_sha256": "becdcb3956c1b77ae462259779444ac97b444bb80bf02a8fec09ee60f9c6e994"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/reaction_ready",
+      "recovered": false,
+      "species": "CUAGAU_Ag02N0",
+      "vector_sha256": "513518c3e62a8c9960f7bb13b2accfc0b85ce443867597254de3baa7f72582bd"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/reaction_ready",
+      "recovered": false,
+      "species": "CUAGAU_Au01N0",
+      "vector_sha256": "7d9ea1726912c1de1c83173baec989b3ddccb5e6142a1bc43447671f2f3d7be4"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/reaction_ready",
+      "recovered": false,
+      "species": "CUAGAU_Au02N0",
+      "vector_sha256": "5431d6c3a9ed9ab486a8dded0610597010e6022947806d9e85f06bb2e8af02eb"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/reaction_ready",
+      "recovered": false,
+      "species": "DIPCS10_be",
+      "vector_sha256": "8ded04a17c5632086919190d8d082a46222d20856afc54f9b7a71262cb378289"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/reaction_ready",
+      "recovered": false,
+      "species": "DIPCS10_be_2+",
+      "vector_sha256": "23b4ade3f2c88812a6835b0e3858972006fbbf0991f246ba4caab79879dc1ae7"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/reaction_ready",
+      "recovered": false,
+      "species": "DIPCS10_mg",
+      "vector_sha256": "c3896aca2a540933361c28efc7e229b7081f4fb9725c4d6468adaffe2c513ac2"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/reaction_ready",
+      "recovered": false,
+      "species": "DIPCS10_mg_2+",
+      "vector_sha256": "754496fe2d4e4c17d24070ec9d74fc9770ed9587a25c4685fc7d79f0c911601d"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+",
+      "recovered": true,
+      "species": "Dip146_HF2+",
+      "vector_sha256": "c62ec75ff14ab2dd5b10e3537c2281e9abd85d038e4ba7252c2275313d23616a"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-",
+      "recovered": true,
+      "species": "Dip146_HF2-",
+      "vector_sha256": "61b78f7d7d9d80c79c72e4684d19213b667c284b7616c59567ffa4efb597919a"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+",
+      "recovered": true,
+      "species": "Dip146_LiN2+",
+      "vector_sha256": "1a0f815bed38ce6adeb8b064ebd6f8efbfd99d889dcdd16a30abf71135b40418"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-",
+      "recovered": true,
+      "species": "Dip146_LiN2-",
+      "vector_sha256": "b3e33f3c331b7f671554209440491f1c84b11cea1c3ab2de252887accf58e01d"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+",
+      "recovered": true,
+      "species": "Dip146_NaLi2+",
+      "vector_sha256": "ceb84ace282bd0b53b8f80f947518560566905ca733d4fd5db84d59d9f46aaa5"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-",
+      "recovered": true,
+      "species": "Dip146_NaLi2-",
+      "vector_sha256": "3c90d88d63f2dd6b369378b645fce94d60989f9e8d8ea7acab8b99d0ee3332e0"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/reaction_ready",
+      "recovered": false,
+      "species": "S22_01",
+      "vector_sha256": "44f5d2e8f50708286411cebc8131b0be46c2af9099dee77df8eb227f40bf47d3"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/reaction_ready",
+      "recovered": false,
+      "species": "S22_01a",
+      "vector_sha256": "84abe11abeff1f66b3a85a1e11e62d6e0aa35514f78338486afb00aa3a4f8adf"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/reaction_ready",
+      "recovered": false,
+      "species": "S22_08",
+      "vector_sha256": "ffc0a70adc325fc368bf71a33943c6370e2d485cf41065811b328ae1fde764f6"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/reaction_ready",
+      "recovered": false,
+      "species": "S22_08a",
+      "vector_sha256": "b6bff282cefc519ade5629dff24af3ce70e86968719d11035953c11a5682df3a"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h",
+      "recovered": true,
+      "species": "W4-17_h",
+      "vector_sha256": "fa73500af87b333e06efdf788ef54e98c9aa1475fd3fb6e1f354ff19821708ea"
+    },
+    {
+      "artifact": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/reaction_ready",
+      "recovered": false,
+      "species": "W4-17_h2",
+      "vector_sha256": "a84baad624143e80d272717d424cb4db28c58d8d80a54802e6855975f21ae48e"
+    }
+  ],
+  "species_count": 38,
+  "status": "passed",
+  "step": 14,
+  "validator_sha256": "51111899776646fa790817010cad8a3f634106f53a245e5c63453633193ce1cf"
+}

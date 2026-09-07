@@ -93,6 +93,19 @@ class Checks:
 
 def validate(config: dict[str, Any], config_path: Path) -> Checks:
     checks = Checks()
+    if config.get('schema_version') == 7:
+        from revwb97m2.fit_spec import load_fit_settings
+        try:
+            settings = load_fit_settings(config_path)
+            checks.check('v7_supported_scientific_contract',
+                         config == yaml.safe_load(config_path.read_text()))
+            checks.details['resolved_fit_settings'] = settings.record()
+            checks.details['scope'] = 'configuration only; no chemical/solver validation implied'
+            checks.details['pretest_commit_required'] = True
+        except (ValueError, KeyError, TypeError, OSError) as exc:
+            checks.check('v7_supported_scientific_contract', False)
+            checks.details['error_type'] = type(exc).__name__
+        return checks
     workspace_root = config_path.resolve().parents[2]
     checks.check("schema_version_6", config.get("schema_version") == 6)
     checks.check("status_frozen", config.get("status") == "frozen")

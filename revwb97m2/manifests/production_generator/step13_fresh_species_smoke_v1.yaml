@@ -1,0 +1,58 @@
+schema_version: 1
+status: frozen_before_results
+step: 13
+purpose: fresh_production_style_qchem_species_execution_smoke
+frozen_local_date: 2026-09-05
+run_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1
+bulk_submission_authorized: false
+qchem_build:
+  root: /clusterfs/mhg-data/yaoshen/qchem/trunk
+  main_svn_revision: 48798
+  libks_svn_revision: 1666
+  qchem_launcher_sha256: eb8848914711cc8346ea98c96e41dde7a6cb60e79f1cbb1268a906dc8ac0ede7
+  qcprog_executable_sha256: 0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084
+authorities:
+  scientific_specification_sha256: 5c7a03994f75ea0076188f20a679647b9cfc2e0ec1c72874b0cc463326a3212e
+  basis_bridge_records_sha256: cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6
+  q4_validation_sha256: 10d4a84b7f2173963cec84143c71114fcd68f2ec4e728ccff2f909b8d560c501
+  step9_validation_sha256: 38e53e5eb52c982beee62bbaa19b9c05201972eb96bb4c20893e97c68e79f104
+  qchem_step13_adapter_sha256: c807bdb8295917d9652b2aae33f16c5928e102fb58216c103694c1588ab4b14b
+  runner_sha256: 81c10fd842f03bef3e8a02b482da5d8dff041ec1f75d26305ffde43dec51dc72
+  slurm_script_sha256: 2e9df6b900a21fa4f8ff2ca334841c69d006389d5284c63ed86971cc40529cf8
+  fixed_orbital_control_amendment_sha256: 283b2b0096edebb74b1a3f07b369b7b9d878c4a0237783eba5173dd18caea891
+grids:
+  - {id: '250974', qchem_value: '000250000974', role: fitting_reference}
+  - {id: '99590', qchem_value: '000099000590', role: grid_stability}
+  - {id: '75302', qchem_value: '000075000302', role: grid_stability}
+cases:
+  - species: 11_H2O_TA13
+    scope: gscdb137
+    role: fresh_production_closed_shell_singlet_uks
+    selection_rationale: smallest robust fitting-population water case with nonzero PT2 and no prior Q3/Q4/Step9 gateway outputs
+    source_record_sha256: a276e072fcfef5e15d7364ef135aab53d7120d593843d41897347f8beb3cbd61
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/11_H2O_TA13/input0
+    authoritative_input_sha256: 0d77b94859f54a633fef073a23e54c5da9439771796c7deaf2511eda9cef6c93
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/11_H2O_TA13
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+    source_tree:
+      files: 67
+      bytes: 60776002
+      manifest_sha256: 5b5ed8d4a70efc34f6cab20df599a96c7ee51857962731b0d34e5bb7d62d4c29
+    resources:
+      partition: mhg
+      account: mhg
+      qos: normal
+      cpus: 8
+      memory_gib: 14
+      wall_hours: 2
+    expected_model: R2_coachform_292
+    expected_feature_count: 292
+required_checks:
+  - authoritative_input_and_full_orbital_tree_unchanged
+  - no_iterative_scf_all_five_qchem_jobs
+  - archive_read_and_normal_termination_all_five_qchem_jobs
+  - three_q4_integrated_dv_boundaries_valid
+  - step9_sr_hf_vv10_pt2_d4_boundary_valid
+  - all_eight_step13_boundaries_valid
+  - exact_q4_288_prefix_and_step9_four_scalar_tail
+  - second_pass_reuses_all_eight_boundaries_without_overwrite

@@ -1,0 +1,30 @@
+schema_version: 1
+status: frozen_before_results
+step: 14
+purpose: bounded_real_reaction_292_feature_assembly
+frozen_local_date: '2026-09-05'
+cohort_contract: /clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/reaction_features/step14_real_reaction_cohort_v1.json
+output_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/reactions
+expected_reaction_count: 20
+expected_species_count: 38
+feature_model: R2_coachform_292
+feature_count: 292
+comparison_grid_ids:
+  - '99590'
+  - '75302'
+target_identity: reference_energy_hartree - fixed_energy_hartree
+stoichiometry_policy: exact_frozen_benchmark_coefficients
+charge_balance_requirement: false
+charge_balance_rationale: charge-changing benchmark energy differences are legitimate; preserve source stoichiometry exactly
+validation:
+  require_finite: true
+  require_positive_objective_weights: true
+  require_exact_target_identity: true
+  require_exact_reaction_order: true
+  require_artifact_hashes: true
+authorities:
+  assembler_sha256: 03a07423ec1257ce741803e52600e586925ffe9fd43637e3247c1ee5e56904a9
+  validator_sha256: 363451e9fbad08c9413cbf9fb66b5e9ade443c4f4dab431915af9663fe7badb8
+  reaction_assembly_module_sha256: 4146c59eb479d5bd4688375109b9d3285d02234941c986c5af4948b0655d84be
+  cohort_contract_sha256: 47ae84ce59cb174e679dd846024f5e536360e2ab60a2e0e12465d4002538f727
+bulk_submission_authorized: false

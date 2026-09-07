@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "checks": {
+    "independent_selection": true,
+    "all_20_rows_selected": true,
+    "zero_grid_scalar_tail": true,
+    "energy_difference_identity_99590_0": true,
+    "energy_difference_identity_75302_0": true,
+    "practical_grid_limit_0": true,
+    "energy_difference_identity_99590_1": true,
+    "energy_difference_identity_75302_1": true,
+    "practical_grid_limit_1": true
+  },
+  "runs": [
+    {
+      "repeat": 0,
+      "grids": {
+        "99590": {
+          "pass1_max_kcal_mol": 0.01588468050094134,
+          "pass2_max_kcal_mol": 0.00987085012703035
+        },
+        "75302": {
+          "pass1_max_kcal_mol": 0.05390945301139926,
+          "pass2_max_kcal_mol": 0.08640700818615044
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "grids": {
+        "99590": {
+          "pass1_max_kcal_mol": 0.01588468050094134,
+          "pass2_max_kcal_mol": 0.00987085012703035
+        },
+        "75302": {
+          "pass1_max_kcal_mol": 0.05390945301139926,
+          "pass2_max_kcal_mol": 0.08640700818615044
+        }
+      }
+    }
+  ],
+  "threshold_kcal_mol": 0.015,
+  "coarse_grid_constrained": false,
+  "contract_sha256": "5222105016e2d14f9a1d1795a2f91bc3d8009bc57f83d0decff6b9ca0828682f",
+  "note": "VV10 not evaluated on both grids; frozen policy uses zero difference for it. SR-HF/PT2/D4 differences are zero. No universal grid-stability or optimality claim."
+}

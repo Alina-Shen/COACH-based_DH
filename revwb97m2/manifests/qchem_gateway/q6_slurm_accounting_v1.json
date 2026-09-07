@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "complete_all_attempts_preserved",
+  "captured_at": "2026-09-05T22:02:18-07:00",
+  "source": "Slurm sacct",
+  "jobs": [
+    {
+      "species": "3d4dIPSS_Ag_GS",
+      "size_role": "small",
+      "job_id": 25562223,
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 83,
+      "total_cpu_seconds": 536.528,
+      "cpus": 8,
+      "requested_memory_gib": 14,
+      "max_rss_mib": 1899.37109375,
+      "partition": "lr8",
+      "node": "n0068.lr8",
+      "accepted_attempt": "original"
+    },
+    {
+      "species": "TMB28_C1",
+      "size_role": "medium",
+      "job_id": 25581129,
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 556,
+      "total_cpu_seconds": 4171,
+      "cpus": 8,
+      "requested_memory_gib": 62,
+      "max_rss_mib": 6022.2109375,
+      "partition": "lr8",
+      "node": "n0030.lr8",
+      "accepted_attempt": "retry2"
+    },
+    {
+      "species": "MOR32_pr24",
+      "size_role": "high",
+      "job_id": 25582472,
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 38583,
+      "total_cpu_seconds": 587520,
+      "cpus": 16,
+      "requested_memory_gib": 557,
+      "max_rss_mib": 46905.40234375,
+      "partition": "lr8",
+      "node": "n0003.lr8",
+      "accepted_attempt": "retry2"
+    }
+  ],
+  "attempts": [
+    {"job_id": 25562223, "species": "3d4dIPSS_Ag_GS", "attempt": "original", "state": "COMPLETED", "exit_code": "0:0", "elapsed_seconds": 83, "max_rss_mib": 1899.37109375},
+    {"job_id": 25562302, "species": "TMB28_C1", "attempt": "original", "state": "FAILED", "exit_code": "1:0", "elapsed_seconds": 2373, "max_rss_mib": 5389.73828125, "diagnosis": "post_integratedDV_invalid_pointer_not_oom"},
+    {"job_id": 25579847, "species": "TMB28_C1", "attempt": "retry1", "state": "FAILED", "exit_code": "1:0", "elapsed_seconds": 640, "max_rss_mib": 6026.140625, "diagnosis": "reproduced_post_integratedDV_invalid_pointer_not_oom"},
+    {"job_id": 25581129, "species": "TMB28_C1", "attempt": "retry2", "state": "COMPLETED", "exit_code": "0:0", "elapsed_seconds": 556, "max_rss_mib": 6022.2109375, "engineering_change": "MP2_RESTART_NO_SCF_TRUE"},
+    {"job_id": 25562303, "species": "MOR32_pr24", "attempt": "original", "state": "FAILED", "exit_code": "1:0", "elapsed_seconds": 19135, "max_rss_mib": 47651.7421875, "diagnosis": "post_integratedDV_MKL_dgemm_segfault_not_oom"},
+    {"job_id": 25579848, "species": "MOR32_pr24", "attempt": "retry1", "state": "CANCELLED", "exit_code": "0:0", "elapsed_seconds": 3564, "max_rss_mib": 41467.29296875, "diagnosis": "user_authorized_cancel_before_known_post_fock_risk"},
+    {"job_id": 25582472, "species": "MOR32_pr24", "attempt": "retry2", "state": "COMPLETED", "exit_code": "0:0", "elapsed_seconds": 38583, "max_rss_mib": 46905.40234375, "engineering_change": "MP2_RESTART_NO_SCF_TRUE"}
+  ],
+  "units": {
+    "elapsed_seconds": "seconds",
+    "total_cpu_seconds": "seconds",
+    "max_rss_mib": "Slurm batch MaxRSS KiB divided by 1024",
+    "requested_memory_gib": "SBATCH --mem GiB"
+  }
+}

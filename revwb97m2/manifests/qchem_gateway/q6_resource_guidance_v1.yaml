@@ -1,0 +1,64 @@
+schema_version: 1
+status: frozen_after_terminal_pilots_before_aggregate_validation
+frozen_at: "2026-09-05T22:02:18-07:00"
+production_submission_authorized: false
+
+authorities:
+  pilot_manifest: revwb97m2/manifests/qchem_gateway/q6_resource_pilots_v1.yaml
+  pilot_manifest_sha256: 9e18d5b4b152abc5c5174308e9a4a1f76a475e30b5a59ebdf5dc4cf835d604c9
+  accounting: revwb97m2/manifests/qchem_gateway/q6_slurm_accounting_v1.json
+  accounting_sha256: b26ff5b812175dcacdd2a685b490007c90bba3c41544ca3795f90b665392147f
+  retry2_amendment: revwb97m2/manifests/qchem_gateway/q6_retry2_control_amendment_v1.yaml
+  retry2_amendment_sha256: 283b2b0096edebb74b1a3f07b369b7b9d878c4a0237783eba5173dd18caea891
+  summary_sha256:
+    small: 7ae24bebd0f02aa49ae420d3424f4b00c8e51b655a232684bbba399679ddf8df
+    medium: 4361997a51e6733fad4002de74e3d7781ae0b293710941a42b43d53bcce1d5bc
+    high: 61752797cade3677ac4cd7f5f102d8b5dfc87e75c323ecfd9f70938014ae8531
+
+scope:
+  measured: qchem_archive_copy_integrated_dv_extraction_and_geometry_only_d4_atm
+  qchem_grid_stage_only: true
+  vv10_and_ri_mp2: pending_step9_measurement
+  production_population: initial_2799_fitting_species
+
+observations:
+  small:
+    species: 3d4dIPSS_Ag_GS
+    accepted_job: 25562223
+    elapsed_seconds: 83
+    peak_rss_mib: 1899.37109375
+    requested_memory_gib: 14
+    two_x_peak_plus_2_gib_reference: 6
+  medium:
+    species: TMB28_C1
+    accepted_job: 25581129
+    elapsed_seconds: 556
+    peak_rss_mib: 6022.2109375
+    requested_memory_gib: 62
+    two_x_peak_plus_2_gib_reference: 14
+    note: retry2_reused_two_previously_validated_grid_boundaries
+  high:
+    species: MOR32_pr24
+    accepted_job: 25582472
+    elapsed_seconds: 38583
+    peak_rss_mib: 46905.40234375
+    requested_memory_gib: 557
+    two_x_peak_plus_2_gib_reference: 94
+
+decision:
+  production_assignment: retain_step12_inventory_assignments
+  partition_account_qos: retain_inventory_values
+  cpu_memory_walltime: retain_inventory_values
+  maximum_array_concurrency: retain_inventory_values
+  rationale:
+    - all_pilots_fit_with_large_margin_and_no_failure_was_oom
+    - only_three_cases_cover_three_of_seven_memory_classes
+    - measured_reference_values_are_not_safe_class_wide_downsize_limits
+    - existing_assignments_are_conservative_and_fit_their_declared_partitions
+    - vv10_and_ri_mp2_are_not_measured_by_q6_and_remain_separately_gated
+  retry_policy: preserve_diagnose_engineer_then_one_user_authorized_resubmission
+  fixed_orbital_control: MP2_RESTART_NO_SCF_TRUE
+
+next_gate:
+  q7_bulk_submission_requires_separate_user_approval: true
+  step9_same_archive_vv10_ri_mp2_required: true

@@ -1,0 +1,395 @@
+{
+  "accounting": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q6_slurm_accounting_v1.json",
+  "accounting_sha256": "b26ff5b812175dcacdd2a685b490007c90bba3c41544ca3795f90b665392147f",
+  "case_reports": [
+    {
+      "checks": {
+        "all_q4_boundaries_revalidated": true,
+        "all_qchem_runs_and_extractions_measured": true,
+        "all_three_grids": true,
+        "completion_marker": true,
+        "d4_finite_and_frozen": true,
+        "diagnostic_export_disabled": true,
+        "manifest_pinned": true,
+        "size_and_resources_frozen": true,
+        "slurm_complete_exit_zero": true,
+        "slurm_resources_match_freeze": true,
+        "source_tree_reproduced": true,
+        "summary_status": true,
+        "total_measurements_positive": true
+      },
+      "feature_checks": {
+        "250974": true,
+        "75302": true,
+        "99590": true
+      },
+      "job": {
+        "accepted_attempt": "original",
+        "cpus": 8,
+        "elapsed_seconds": 83,
+        "exit_code": "0:0",
+        "job_id": 25562223,
+        "max_rss_mib": 1899.37109375,
+        "node": "n0068.lr8",
+        "partition": "lr8",
+        "requested_memory_gib": 14,
+        "size_role": "small",
+        "species": "3d4dIPSS_Ag_GS",
+        "state": "COMPLETED",
+        "total_cpu_seconds": 536.528
+      },
+      "measurements": {
+        "authoritative_tree_hash_seconds": 0.33049714902881533,
+        "child_max_rss_mb": 1886.8671875,
+        "d4_atm": {
+          "atom_count": 1,
+          "damping_parameters": {
+            "a1": 0.215,
+            "a2": 5.8,
+            "alp": 16.0,
+            "s6": 0.0,
+            "s8": 0.0,
+            "s9": 1.0
+          },
+          "definition": "pure_three_body_coach_d4_atm",
+          "energy_hartree": 0.0,
+          "source_record_sha256": "bd54d7053b144c3b09b98fdea16f3dcab684d9c3ce44c541b92a8560d3e73c59",
+          "wall_seconds": 0.08903466199990362
+        },
+        "grid_reports": [
+          {
+            "child_max_rss_mb_after_grid": 1881.4296875,
+            "complete_block_count": 1,
+            "extraction_publication_seconds": 0.06691547704394907,
+            "feature_artifact_bytes": 146502,
+            "feature_manifest_sha256": "9f96d960f32418cc126d18ef94fadc33634bb2b98b8f4b9afd91a2c9dbba966f",
+            "grid": "250974",
+            "isolated_copy_bytes": 23963031,
+            "isolated_copy_seconds": 0.5429231780581176,
+            "qchem_output_bytes": 503562,
+            "qchem_wall_seconds": 26.465578061994165,
+            "restart_revalidation_seconds": 0.018456573016010225
+          },
+          {
+            "child_max_rss_mb_after_grid": 1886.8671875,
+            "complete_block_count": 1,
+            "extraction_publication_seconds": 0.07039369910489768,
+            "feature_artifact_bytes": 146495,
+            "feature_manifest_sha256": "347e29ab5d832069d23719e9ce423f7b1f634627f5c6fa7a77d6634a36ff6f77",
+            "grid": "99590",
+            "isolated_copy_bytes": 23963031,
+            "isolated_copy_seconds": 0.5162014829693362,
+            "qchem_output_bytes": 503560,
+            "qchem_wall_seconds": 24.7695732510183,
+            "restart_revalidation_seconds": 0.01883897406514734
+          },
+          {
+            "child_max_rss_mb_after_grid": 1886.8671875,
+            "complete_block_count": 1,
+            "extraction_publication_seconds": 0.06262094096746296,
+            "feature_artifact_bytes": 146495,
+            "feature_manifest_sha256": "d2626173396e5f9e9d3f0b122ee8490de5dc2ed0da5fa8ea539af06253989b4c",
+            "grid": "75302",
+            "isolated_copy_bytes": 23963031,
+            "isolated_copy_seconds": 0.522725022980012,
+            "qchem_output_bytes": 503548,
+            "qchem_wall_seconds": 24.463068893994205,
+            "restart_revalidation_seconds": 0.018133361008949578
+          }
+        ],
+        "source_to_stage_copy_seconds": 0.5312135460553691,
+        "source_tree": {
+          "bytes": 23963031,
+          "files": 72,
+          "manifest_sha256": "7b66fd89fa74efc7c164f85addd234377b3e303eee778b8db77813af75c35572"
+        },
+        "total_retained_bytes": 98358260,
+        "total_wall_seconds": 78.84728380606975
+      },
+      "size_role": "small",
+      "species": "3d4dIPSS_Ag_GS",
+      "summary_sha256": "7ae24bebd0f02aa49ae420d3424f4b00c8e51b655a232684bbba399679ddf8df"
+    },
+    {
+      "checks": {
+        "all_q4_boundaries_revalidated": true,
+        "all_qchem_runs_and_extractions_measured": true,
+        "all_three_grids": true,
+        "completion_marker": true,
+        "d4_finite_and_frozen": true,
+        "diagnostic_export_disabled": true,
+        "manifest_pinned": true,
+        "size_and_resources_frozen": true,
+        "slurm_complete_exit_zero": true,
+        "slurm_resources_match_freeze": true,
+        "source_tree_reproduced": true,
+        "summary_status": true,
+        "total_measurements_positive": true
+      },
+      "feature_checks": {
+        "250974": true,
+        "75302": true,
+        "99590": true
+      },
+      "job": {
+        "accepted_attempt": "retry2",
+        "cpus": 8,
+        "elapsed_seconds": 556,
+        "exit_code": "0:0",
+        "job_id": 25581129,
+        "max_rss_mib": 6022.2109375,
+        "node": "n0030.lr8",
+        "partition": "lr8",
+        "requested_memory_gib": 62,
+        "size_role": "medium",
+        "species": "TMB28_C1",
+        "state": "COMPLETED",
+        "total_cpu_seconds": 4171
+      },
+      "measurements": {
+        "authoritative_tree_hash_seconds": 1.4096160889966995,
+        "child_max_rss_mb": 2741.48828125,
+        "d4_atm": {
+          "atom_count": 28,
+          "damping_parameters": {
+            "a1": 0.215,
+            "a2": 5.8,
+            "alp": 16.0,
+            "s6": 0.0,
+            "s8": 0.0,
+            "s9": 1.0
+          },
+          "definition": "pure_three_body_coach_d4_atm",
+          "energy_hartree": 0.0003307316711265262,
+          "source_record_sha256": "13aeaa56eb2341c9fd23726091c60e8c4904b6158ec031140cf003e073e5e76d",
+          "wall_seconds": 0.09823669099569088
+        },
+        "grid_reports": [
+          {
+            "case_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q6_resource_pilots_v1/TMB28_C1/cases/250974",
+            "child_max_rss_mb_after_grid": null,
+            "complete_block_count": 1,
+            "execution_origin": "original_successful_attempt",
+            "extraction_measurement": "repeated_to_attempt_scoped_boundary",
+            "extraction_publication_seconds": 0.0767279010033235,
+            "feature_artifact_bytes": 146456,
+            "feature_manifest_sha256": "c47f038146b9177bb6bb60946fd6ec1d8c1109f26c3d8714fb1ff8c05dc5140f",
+            "grid": "250974",
+            "isolated_copy_bytes": 646662413,
+            "isolated_copy_measurement": "repeated_during_recovery",
+            "isolated_copy_seconds": 1.3620786309984396,
+            "qchem_output_bytes": 455419,
+            "qchem_wall_measurement": "qchem_total_job_time",
+            "qchem_wall_seconds": 1140.81,
+            "restart_revalidation_seconds": 0.02451933900010772
+          },
+          {
+            "case_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q6_resource_pilots_v1/TMB28_C1/cases/99590",
+            "child_max_rss_mb_after_grid": null,
+            "complete_block_count": 1,
+            "execution_origin": "original_successful_attempt",
+            "extraction_measurement": "repeated_to_attempt_scoped_boundary",
+            "extraction_publication_seconds": 0.06701372699899366,
+            "feature_artifact_bytes": 146449,
+            "feature_manifest_sha256": "b6d0f32c78bf1363b949d6d4568b0729202b1001a0894176b3d4600ddda43985",
+            "grid": "99590",
+            "isolated_copy_bytes": 646662413,
+            "isolated_copy_measurement": "repeated_during_recovery",
+            "isolated_copy_seconds": 1.3269259629960288,
+            "qchem_output_bytes": 455416,
+            "qchem_wall_measurement": "qchem_total_job_time",
+            "qchem_wall_seconds": 654.09,
+            "restart_revalidation_seconds": 0.023243981995619833
+          },
+          {
+            "case_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q6_resource_pilots_v1/TMB28_C1/attempts/retry2/cases/75302",
+            "child_max_rss_mb_after_grid": 2741.48828125,
+            "complete_block_count": 1,
+            "execution_origin": "retry2",
+            "extraction_publication_seconds": 0.060986976997810416,
+            "feature_artifact_bytes": 146563,
+            "feature_manifest_sha256": "d9236fc54d6bd29457b014021131998b1e3cabf79b92e4c489c83c886e4c28a3",
+            "grid": "75302",
+            "isolated_copy_bytes": 646662413,
+            "isolated_copy_measurement": "retry_execution_copy",
+            "isolated_copy_seconds": 1.2864968110006885,
+            "qchem_output_bytes": 455457,
+            "qchem_process_wall_seconds": 538.0498247670039,
+            "qchem_wall_measurement": "qchem_total_job_time",
+            "qchem_wall_seconds": 534.44,
+            "restart_revalidation_seconds": 0.015216230996884406
+          }
+        ],
+        "source_to_stage_copy_seconds": 1.2973316559946397,
+        "source_tree": {
+          "bytes": 646662413,
+          "files": 70,
+          "manifest_sha256": "710609c6df53eb50acca06e1453784215be0e4b4a510680648a20b6abf626fda"
+        },
+        "total_retained_bytes": 7763306746,
+        "total_wall_seconds": 550.5182121949983
+      },
+      "size_role": "medium",
+      "species": "TMB28_C1",
+      "summary_sha256": "4361997a51e6733fad4002de74e3d7781ae0b293710941a42b43d53bcce1d5bc"
+    },
+    {
+      "checks": {
+        "all_q4_boundaries_revalidated": true,
+        "all_qchem_runs_and_extractions_measured": true,
+        "all_three_grids": true,
+        "completion_marker": true,
+        "d4_finite_and_frozen": true,
+        "diagnostic_export_disabled": true,
+        "manifest_pinned": true,
+        "size_and_resources_frozen": true,
+        "slurm_complete_exit_zero": true,
+        "slurm_resources_match_freeze": true,
+        "source_tree_reproduced": true,
+        "summary_status": true,
+        "total_measurements_positive": true
+      },
+      "feature_checks": {
+        "250974": true,
+        "75302": true,
+        "99590": true
+      },
+      "job": {
+        "accepted_attempt": "retry2",
+        "cpus": 16,
+        "elapsed_seconds": 38583,
+        "exit_code": "0:0",
+        "job_id": 25582472,
+        "max_rss_mib": 46905.40234375,
+        "node": "n0003.lr8",
+        "partition": "lr8",
+        "requested_memory_gib": 557,
+        "size_role": "high",
+        "species": "MOR32_pr24",
+        "state": "COMPLETED",
+        "total_cpu_seconds": 587520
+      },
+      "measurements": {
+        "authoritative_tree_hash_seconds": 5.318386983824894,
+        "child_max_rss_mb": 29441.61328125,
+        "d4_atm": {
+          "atom_count": 120,
+          "damping_parameters": {
+            "a1": 0.215,
+            "a2": 5.8,
+            "alp": 16.0,
+            "s6": 0.0,
+            "s8": 0.0,
+            "s9": 1.0
+          },
+          "definition": "pure_three_body_coach_d4_atm",
+          "energy_hartree": 0.004170053081464751,
+          "source_record_sha256": "c6864eb376d88281a8bf8523412d5605f274500b0ad673606d876edf7887050c",
+          "wall_seconds": 0.10289392690174282
+        },
+        "grid_reports": [
+          {
+            "case_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q6_resource_pilots_v1/MOR32_pr24/attempts/retry2/cases/250974",
+            "child_max_rss_mb_after_grid": 29441.61328125,
+            "complete_block_count": 1,
+            "execution_origin": "retry2",
+            "extraction_publication_seconds": 0.055386770982295275,
+            "feature_artifact_bytes": 146582,
+            "feature_manifest_sha256": "5d72c6a161e1b1b0b2ef239c2ba75dfd92e97e24a2b4ee283df01ce4da6f6ec7",
+            "grid": "250974",
+            "isolated_copy_bytes": 6533609433,
+            "isolated_copy_measurement": "retry_execution_copy",
+            "isolated_copy_seconds": 10.24949752097018,
+            "qchem_output_bytes": 557988,
+            "qchem_process_wall_seconds": 17063.406321635935,
+            "qchem_wall_measurement": "qchem_total_job_time",
+            "qchem_wall_seconds": 17061.79,
+            "restart_revalidation_seconds": 0.01465535699389875
+          },
+          {
+            "case_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q6_resource_pilots_v1/MOR32_pr24/attempts/retry2/cases/99590",
+            "child_max_rss_mb_after_grid": 29441.61328125,
+            "complete_block_count": 1,
+            "execution_origin": "retry2",
+            "extraction_publication_seconds": 0.05394907691515982,
+            "feature_artifact_bytes": 146575,
+            "feature_manifest_sha256": "694b833e6be061d7bbc6334917732dd5930c780521c266ac0295d160a1e834f0",
+            "grid": "99590",
+            "isolated_copy_bytes": 6533609433,
+            "isolated_copy_measurement": "retry_execution_copy",
+            "isolated_copy_seconds": 9.857710230862722,
+            "qchem_output_bytes": 557987,
+            "qchem_process_wall_seconds": 11291.436894424027,
+            "qchem_wall_measurement": "qchem_total_job_time",
+            "qchem_wall_seconds": 11290.0,
+            "restart_revalidation_seconds": 0.01451995293609798
+          },
+          {
+            "case_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q6_resource_pilots_v1/MOR32_pr24/attempts/retry2/cases/75302",
+            "child_max_rss_mb_after_grid": 29441.61328125,
+            "complete_block_count": 1,
+            "execution_origin": "retry2",
+            "extraction_publication_seconds": 0.052901407005265355,
+            "feature_artifact_bytes": 146575,
+            "feature_manifest_sha256": "830947e9ad56fb703b9e143069642a6dddd3c4ca2bc916e3f4cb1d4008eb8a24",
+            "grid": "75302",
+            "isolated_copy_bytes": 6533609433,
+            "isolated_copy_measurement": "retry_execution_copy",
+            "isolated_copy_seconds": 9.88137683691457,
+            "qchem_output_bytes": 557989,
+            "qchem_process_wall_seconds": 10128.81837703893,
+            "qchem_wall_measurement": "qchem_total_job_time",
+            "qchem_wall_seconds": 10127.68,
+            "restart_revalidation_seconds": 0.014480103040114045
+          }
+        ],
+        "source_to_stage_copy_seconds": 10.753930072998628,
+        "source_tree": {
+          "bytes": 6533609433,
+          "files": 71,
+          "manifest_sha256": "05fbc418e6aad5fbe958e8628217d1b460e63b903925ca7475fdc6980f0bd213"
+        },
+        "total_retained_bytes": 52271614133,
+        "total_wall_seconds": 38578.351930526784
+      },
+      "size_role": "high",
+      "species": "MOR32_pr24",
+      "summary_sha256": "61752797cade3677ac4cd7f5f102d8b5dfc87e75c323ecfd9f70938014ae8531"
+    }
+  ],
+  "checks": {
+    "all_pilot_checks_pass": true,
+    "manifest_frozen_before_results": true,
+    "q6_resource_guidance_frozen_and_scoped": true,
+    "slurm_accounting_complete": true,
+    "step13_dependency_restart_policy_present": true,
+    "step13_plan_connects_q4_three_grids": true,
+    "step13_plan_not_authorized": true,
+    "step13_plan_pins_q6_resource_guidance": true,
+    "step13_plan_preserves_step9_block": true,
+    "step13_plan_uses_qchem_archive_not_pyscf_parent": true,
+    "three_preselected_size_roles": true
+  },
+  "manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q6_resource_pilots_v1.yaml",
+  "manifest_sha256": "9e18d5b4b152abc5c5174308e9a4a1f76a475e30b5a59ebdf5dc4cf835d604c9",
+  "passed": true,
+  "resource_guidance": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q6_resource_guidance_v1.yaml",
+  "resource_guidance_sha256": "adb0b3d5976cfed9c95c89737288ba01d47004ad9bf3d63668483eaa66030dc5",
+  "resource_observations": {
+    "caution": "stage-specific Q-Chem observation only; VV10 and RI-MP2 remain separately gated",
+    "peak_rss_mib": {
+      "high": 46905.40234375,
+      "medium": 6022.2109375,
+      "small": 1899.37109375
+    },
+    "two_x_peak_plus_2_gib_suggested_qchem_stage_memory_gib": {
+      "high": 94,
+      "medium": 14,
+      "small": 6
+    }
+  },
+  "schema_version": 1,
+  "status": "passed",
+  "step13_plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/step13_qchem_initial_plan_v1.json",
+  "step13_plan_sha256": "fa4412f94bb88c8acda9f97c463fb33d0b612cafb9d222064be4caaed3f7eb28"
+}

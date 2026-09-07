@@ -18,6 +18,11 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 DEFAULT_INVENTORY = PROJECT_ROOT / "manifests/step12/step12_fitting_inventory_v1.csv"
 Q4_VALIDATION = PROJECT_ROOT / "manifests/qchem_gateway/q4_validation_v1.json"
 Q6_PILOT_MANIFEST = PROJECT_ROOT / "manifests/qchem_gateway/q6_resource_pilots_v1.yaml"
+Q6_ACCOUNTING = PROJECT_ROOT / "manifests/qchem_gateway/q6_slurm_accounting_v1.json"
+Q6_RESOURCE_GUIDANCE = PROJECT_ROOT / "manifests/qchem_gateway/q6_resource_guidance_v1.yaml"
+STEP9_VALIDATION = PROJECT_ROOT / "manifests/scalar_features/step9_qchem_validation_v3.json"
+QCHEM_STEP13_ADAPTER = PROJECT_ROOT / "qchem_step13_stages.py"
+FRESH_SPECIES_VALIDATION = PROJECT_ROOT / "manifests/production_generator/step13_fresh_species_validation_v1.json"
 QCHEM_BOUNDARIES = (
     {"name": "qchem_archive", "dependencies": []},
     *(
@@ -59,8 +64,6 @@ def qchem_boundary_actions(states: dict[str, str]) -> dict[str, str]:
             actions[name] = "review_temporary_without_overwrite"
         elif state != "missing":
             raise ValueError(f"unknown Q-Chem boundary state for {name}: {state}")
-        elif name in {"vv10", "ri_mp2"}:
-            actions[name] = "blocked_pending_step9_same_archive_implementation"
         elif all(states[dependency] == "complete_validated" for dependency in boundary["dependencies"]):
             actions[name] = "eligible_bounded_execution_not_submission_authorized"
         elif any(states[dependency] in PRESERVED_STOP_STATES or states[dependency] == "interrupted_temporary_present" for dependency in boundary["dependencies"]):
@@ -139,6 +142,11 @@ def build_initial_resource_plan(
         "inventory_sha256": sha256(DEFAULT_INVENTORY),
         "q4_validation_sha256": sha256(Q4_VALIDATION),
         "q6_pilot_manifest_sha256": sha256(Q6_PILOT_MANIFEST),
+        "q6_slurm_accounting_sha256": sha256(Q6_ACCOUNTING),
+        "q6_resource_guidance_sha256": sha256(Q6_RESOURCE_GUIDANCE),
+        "step9_qchem_validation_sha256": sha256(STEP9_VALIDATION),
+        "qchem_step13_adapter_sha256": sha256(QCHEM_STEP13_ADAPTER),
+        "step13_fresh_species_validation_sha256": sha256(FRESH_SPECIES_VALIDATION),
         "planner_module_sha256": sha256(Path(__file__)),
     }
     identity = {
@@ -166,6 +174,19 @@ def build_initial_resource_plan(
             ],
             "status": "implemented_and_validated",
         },
+        "qchem_step13_adapter": {
+            "path": "revwb97m2/qchem_step13_stages.py",
+            "sha256": authorities["qchem_step13_adapter_sha256"],
+            "active_feature_model": "R2_coachform_292",
+            "status": "implemented_and_fresh_production_species_validated",
+        },
+        "fresh_species_execution": {
+            "species": "11_H2O_TA13",
+            "job_id": 25614541,
+            "validation": "revwb97m2/manifests/production_generator/step13_fresh_species_validation_v1.json",
+            "validation_sha256": authorities["step13_fresh_species_validation_sha256"],
+            "status": "passed",
+        },
         "restart_policy": {
             "complete_validated": "reuse_without_rewrite",
             "missing": "run_only_after_dependencies_and_separate_authorization",
@@ -175,16 +196,23 @@ def build_initial_resource_plan(
         "empty_root_dependency_actions": qchem_boundary_actions(
             {name: "missing" for name in QCHEM_BOUNDARY_NAMES}
         ),
-        "resource_calibration_status": "conservative_step12_assignments_pending_q6_measurement_update",
+        "resource_calibration_status": "q6_complete_conservative_step12_assignments_retained",
+        "q6_resource_guidance": {
+            "path": str(Q6_RESOURCE_GUIDANCE.relative_to(PROJECT_ROOT.parent)),
+            "sha256": authorities["q6_resource_guidance_sha256"],
+            "decision": "retain_step12_inventory_assignments",
+            "scope": "qchem_archive_and_integrated_dv_stages_only",
+            "vv10_and_ri_mp2_resources": "step9_gateway_measured_production_retains_conservative_step12_assignment",
+        },
         "boundary_implementation_status": {
-            "qchem_archive": "q6_pilot_implemented_production_adapter_pending",
-            "integrated_dv_250974": "q4_implemented_and_validated",
-            "integrated_dv_99590": "q4_implemented_and_validated",
-            "integrated_dv_75302": "q4_implemented_and_validated",
-            "vv10": "pending_step9_same_qchem_archive_implementation",
-            "ri_mp2": "pending_step9_same_qchem_archive_implementation",
+            "qchem_archive": "fresh_production_species_implemented_and_validated",
+            "integrated_dv_250974": "fresh_production_species_implemented_and_validated",
+            "integrated_dv_99590": "fresh_production_species_implemented_and_validated",
+            "integrated_dv_75302": "fresh_production_species_implemented_and_validated",
+            "vv10": "step9_qchem_same_archive_implemented_and_validated",
+            "ri_mp2": "step9_qchem_same_archive_implemented_and_validated",
             "d4_atm": "geometry_only_implementation_validated",
-            "assembly": "implemented_but_blocked_on_qchem_scalar_boundaries",
+            "assembly": "qchem_r2_292_fresh_production_species_validated",
         },
         "retry_policy": "inherit_step12_failure_ledger_and_one_engineered_resubmission_maximum",
         "submission_authorized": False,

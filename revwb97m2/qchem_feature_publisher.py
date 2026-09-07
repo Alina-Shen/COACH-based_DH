@@ -182,6 +182,16 @@ def validate_case_source(case_root: Path) -> dict[str, Any]:
         "xc_fxc_libks": _required_rem_control(input_text, "XC_FXC", "3"),
         "grid_matches_record": _required_rem_control(input_text, "XC_GRID", GRID_VALUES[grid]),
     }
+    if prepared.get("mp2_restart_no_scf_required") is True:
+        controls["mp2_restart_no_scf"] = _required_rem_control(
+            input_text, "MP2_RESTART_NO_SCF", "TRUE"
+        )
+        amendment_path = Path(prepared.get("q6_control_amendment", ""))
+        if (
+            not amendment_path.is_file()
+            or sha256(amendment_path) != prepared.get("q6_control_amendment_sha256")
+        ):
+            raise ValueError("Q6 post-Fock-diagonalization control amendment is missing or changed")
     if not all(controls.values()):
         raise ValueError(f"derived Q-Chem input control check failed: {controls}")
     output_text = output_path.read_text(encoding="utf-8", errors="replace")

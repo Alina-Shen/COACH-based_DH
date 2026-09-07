@@ -1,0 +1,71 @@
+{
+  "step": 15,
+  "status": "preparation_complete_full_pilot_pending",
+  "R1_data_ready": false,
+  "outcomes": [
+    {
+      "label": "full_R2",
+      "repeat": 0,
+      "gurobi_error": 10010,
+      "message": "Model too large for size-limited license; visit https://gurobi.com/unrestricted for more information"
+    },
+    {
+      "label": "full_R2",
+      "repeat": 1,
+      "gurobi_error": 10010,
+      "message": "Model too large for size-limited license; visit https://gurobi.com/unrestricted for more information"
+    },
+    {
+      "label": "reduced_support_diagnostic",
+      "repeat": 0,
+      "status": 2,
+      "solution_count": 4,
+      "runtime_seconds": 0.006131887435913086,
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 0.00011442617701032907
+      },
+      "objective": 0.00011442617701032901,
+      "bound": 0.00011442617701032901,
+      "gap": 0.0,
+      "objective_agrees": true
+    },
+    {
+      "label": "reduced_support_diagnostic",
+      "repeat": 1,
+      "status": 2,
+      "solution_count": 4,
+      "runtime_seconds": 0.005124092102050781,
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 0.00011442617701032907
+      },
+      "objective": 0.00011442617701032901,
+      "bound": 0.00011442617701032901,
+      "gap": 0.0,
+      "objective_agrees": true
+    }
+  ],
+  "output": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/step15_pilot_v2",
+  "bulk_submission_authorized": false
+}

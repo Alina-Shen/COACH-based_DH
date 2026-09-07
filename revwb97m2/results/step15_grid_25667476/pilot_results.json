@@ -1,0 +1,123 @@
+{
+  "step": 15,
+  "status": "bounded_pilot_finished",
+  "R1_data_ready": false,
+  "outcomes": [
+    {
+      "label": "full_R2",
+      "repeat": 0,
+      "status": 9,
+      "solution_count": 7,
+      "runtime_seconds": 60.00275897979736,
+      "grid_max_kcal_mol": {
+        "99590": 0.009870850127030352,
+        "75302": 0.08640700818615044
+      },
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true,
+          "grid": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 1.477475006608733e-06
+      },
+      "objective": 1.477475006601417e-06,
+      "bound": 3.4342078147008276e-24,
+      "gap": 1.0,
+      "gap_state": "finite",
+      "gap_absolute": 1.477475006601417e-06,
+      "gap_recomputed": 1.0,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": true,
+      "solver_diagnostics": {
+        "ObjBoundC": 3.4342078147008276e-24,
+        "ObjCon": 0.0,
+        "IsMIP": 1,
+        "IsMultiObj": 0,
+        "NumObj": 1,
+        "requested_MIPGap": 0.0001,
+        "requested_MIPGapAbs": 1e-10,
+        "gurobi_version": [
+          13,
+          0,
+          3
+        ],
+        "getAttr_gap": {
+          "gap": 1.0,
+          "gap_state": "finite",
+          "gap_absolute": 1.477475006601417e-06,
+          "gap_recomputed": 1.0,
+          "gap_recomputed_state": "finite",
+          "gap_consistent": true
+        }
+      },
+      "objective_agrees": true
+    },
+    {
+      "label": "full_R2",
+      "repeat": 1,
+      "status": 9,
+      "solution_count": 7,
+      "runtime_seconds": 60.000510931015015,
+      "grid_max_kcal_mol": {
+        "99590": 0.009870850127030352,
+        "75302": 0.08640700818615044
+      },
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true,
+          "grid": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 1.477475006608733e-06
+      },
+      "objective": 1.477475006601417e-06,
+      "bound": 3.4342078147008276e-24,
+      "gap": 1.0,
+      "gap_state": "finite",
+      "gap_absolute": 1.477475006601417e-06,
+      "gap_recomputed": 1.0,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": true,
+      "solver_diagnostics": {
+        "ObjBoundC": 3.4342078147008276e-24,
+        "ObjCon": 0.0,
+        "IsMIP": 1,
+        "IsMultiObj": 0,
+        "NumObj": 1,
+        "requested_MIPGap": 0.0001,
+        "requested_MIPGapAbs": 1e-10,
+        "gurobi_version": [
+          13,
+          0,
+          3
+        ],
+        "getAttr_gap": {
+          "gap": 1.0,
+          "gap_state": "finite",
+          "gap_absolute": 1.477475006601417e-06,
+          "gap_recomputed": 1.0,
+          "gap_recomputed_state": "finite",
+          "gap_consistent": true
+        }
+      },
+      "objective_agrees": true
+    }
+  ],
+  "output": "revwb97m2/results/step15_grid_25667476",
+  "bulk_submission_authorized": false
+}

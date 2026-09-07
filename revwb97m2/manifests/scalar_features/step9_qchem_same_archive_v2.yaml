@@ -1,0 +1,59 @@
+schema_version: 2
+status: frozen_before_results
+frozen_at: "2026-09-05T16:30:00-07:00"
+name: revwb97m2_step9_qchem_same_archive_scalar_gateway_v2
+
+feature_contract:
+  short_range_hf: {index: 288, omega_bohr_inverse: 0.3, scaling: unscaled}
+  vv10: {index: 289, b: 10.0, C: 0.01, scale: 1.0, grid: SG-1}
+  pt2: {index: 290, method: canonical_frozen_core_RI_MP2, fitted_component: total}
+  d4_atm: {index: 291, role: geometry_only}
+
+orbital_contract:
+  qchem_orbitals_are_production_inputs: true
+  one_isolated_hash_verified_copy_per_case: true
+  scf_optimization: forbidden
+  all_orbital_dependent_terms_use_same_qarchive: true
+  unrestricted: true
+
+qchem_controls:
+  fixed_orbitals: {SCF_GUESS: READ, MAX_SCF_CYCLES: 0, MP2_RESTART_NO_SCF: true}
+  sr_hf: {EXCHANGE: HF, SRC_DFT: true, LRC_DFT: true, OMEGA: 300, OMEGA2: 300, HF_SR: 1000, HF_LR: 0}
+  vv10: {NL_CORRELATION: VV10, NL_GRID: 1, NL_VV_B: 1000, NL_VV_C: 100, NL_VV_SCALE: 100000}
+  pt2: {CORRELATION: RIMP2, N_FROZEN_CORE: FC, auxiliary_basis_source: authoritative_AUX_BASIS_CORR}
+
+validation:
+  frozen_before_results: true
+  normal_qchem_termination_required: true
+  archive_read_required: true
+  source_copy_tree_identity_required: true
+  component_sum_tolerance_hartree: 1.0e-10
+  cross_engine_reference_tolerances:
+    short_range_hf_hartree: 2.0e-6
+    vv10_hartree: 2.0e-6
+    pt2_total_hartree: 2.3904e-5
+  tolerance_sources:
+    short_range_hf_and_vv10: existing_parent_cross_engine_gate
+    pt2_total: existing_0.015_kcal_per_mol_RI_comparison_gate
+
+cases:
+  - species: h2o_SW49
+    role: closed_shell_singlet_uks
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/h2o_SW49/input0
+    authoritative_input_sha256: 24d74f289c237aad78dece0deb231c82d9d6540eec5912e12a6c87cd2a9c5d4a
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/h2o_SW49
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+    fallback_reference:
+      short_range_hf_hartree: -7.336839258204929
+      vv10_hartree: 0.020787561239
+      pt2_total_hartree: -0.33340129255
+  - species: 12_NH2rad_HNBrBDE18
+    role: open_shell_doublet_uks
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/12_NH2rad_HNBrBDE18/input0
+    authoritative_input_sha256: 8267b6bcd48735917be1d5891cd78290678dacdb604937add4ec53918997008b
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/12_NH2rad_HNBrBDE18
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+    fallback_reference:
+      short_range_hf_hartree: -5.860756549779014
+      vv10_hartree: 0.01865459908
+      pt2_total_hartree: -0.23521668710122212

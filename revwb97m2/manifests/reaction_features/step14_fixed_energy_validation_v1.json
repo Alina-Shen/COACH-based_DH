@@ -1,0 +1,83 @@
+{
+  "bulk_submission_authorized": false,
+  "cases": [
+    {
+      "checks": {
+        "authoritative_input_unchanged": true,
+        "completion_marker": true,
+        "no_failure_record": true,
+        "published_checks_pass": true,
+        "published_values_reproduced": true,
+        "source_tree_unchanged": true
+      },
+      "cross_code_absolute_errors_hartree": {
+        "coulomb_hartree": 2.9558170666632577e-07,
+        "fixed_energy_hartree": 2.554365607920772e-08,
+        "full_long_range_hf_exchange_hartree": 5.279714820893844e-08,
+        "nuclear_repulsion_hartree": 2.2958168699460657e-10,
+        "one_electron_hartree": 2.680986312952882e-07
+      },
+      "passed": true,
+      "species": "h2o_SW49",
+      "values": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 46.6449263735,
+        "fixed_energy_hartree": -68.72474421220001,
+        "full_hf_exchange_hartree": -8.921814244,
+        "full_long_range_hf_exchange_hartree": -1.5849749826000004,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 9.15688145,
+        "one_electron_hartree": -122.9415770531,
+        "pure_hf_reconstruction_error_hartree": 1.6399994251514727e-08,
+        "pure_hf_reported_energy_hartree": -76.06158349,
+        "short_range_hf_hartree": -7.3368392614
+      }
+    },
+    {
+      "checks": {
+        "authoritative_input_unchanged": true,
+        "completion_marker": true,
+        "no_failure_record": true,
+        "published_checks_pass": true,
+        "published_values_reproduced": true,
+        "source_tree_unchanged": true
+      },
+      "cross_code_absolute_errors_hartree": {},
+      "passed": true,
+      "species": "11_H2O_TA13",
+      "values": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 46.6651332679,
+        "fixed_energy_hartree": -68.72253606189999,
+        "full_hf_exchange_hartree": -8.9244105804,
+        "full_long_range_hf_exchange_hartree": -1.5851360471999998,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 9.17955232,
+        "one_electron_hartree": -122.9820856026,
+        "pure_hf_reconstruction_error_hartree": 4.9000163926393725e-09,
+        "pure_hf_reported_energy_hartree": -76.0618106,
+        "short_range_hf_hartree": -7.3392745332
+      }
+    }
+  ],
+  "contract": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/reaction_features/step14_fixed_energy_gateway_v1.yaml",
+  "contract_sha256": "085176ea5782aaf5e966fe862fe3ba4b589d02a64724866613f2e7539f430c11",
+  "jobs": {
+    "array_job_id": 25615292,
+    "elapsed_seconds": [
+      15,
+      13
+    ],
+    "max_rss_kib": [
+      725092,
+      894132
+    ],
+    "states": [
+      "COMPLETED",
+      "COMPLETED"
+    ]
+  },
+  "schema_version": 1,
+  "status": "passed",
+  "step": 14
+}

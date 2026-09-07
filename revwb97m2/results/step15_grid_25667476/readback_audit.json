@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "checks": {
+    "frozen_contract": true,
+    "requested_time_and_cases": true,
+    "code_hashes": true,
+    "source_hash": true,
+    "input_hashes": true,
+    "expected_runs": true,
+    "grid_parent_hashes": true,
+    "grid_selection_hashes": true,
+    "grid_selection_rebuilt": true,
+    "full_R2_0": true,
+    "full_R2_1": true
+  },
+  "runs": [
+    {
+      "label": "full_R2",
+      "repeat": 0,
+      "status": 9,
+      "support_count": 14,
+      "objective": 1.477475006601417e-06,
+      "gap": 1.0,
+      "gap_state": "finite",
+      "gap_absolute": 1.477475006601417e-06,
+      "gap_recomputed": 1.0,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": true,
+      "bound": 3.4342078147008276e-24,
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true,
+          "grid": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 1.477475006608733e-06
+      }
+    },
+    {
+      "label": "full_R2",
+      "repeat": 1,
+      "status": 9,
+      "support_count": 14,
+      "objective": 1.477475006601417e-06,
+      "gap": 1.0,
+      "gap_state": "finite",
+      "gap_absolute": 1.477475006601417e-06,
+      "gap_recomputed": 1.0,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": true,
+      "bound": 3.4342078147008276e-24,
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true,
+          "grid": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 1.477475006608733e-06
+      }
+    }
+  ],
+  "repeat_max_coefficient_difference": {
+    "full_R2": 0.0
+  },
+  "interpretation": "bounded engineering validation, not convergence or coefficient selection"
+}

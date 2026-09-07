@@ -51,7 +51,7 @@ def replace_one(rem: str, key: str, value: str, *, add_if_missing: bool = True) 
     return rem[: end.start()] + f"{key} {value}\n" + rem[end.start() :]
 
 
-def derive_input(source: str, grid: str) -> str:
+def derive_input(source: str, grid: str, *, skip_post_fock_diagonalization: bool = False) -> str:
     match = re.search(r"(?ims)^\s*\$rem\s*$.*?^\s*\$end\s*$", source)
     if match is None:
         raise ValueError("authoritative input has no complete $rem block")
@@ -65,6 +65,11 @@ def derive_input(source: str, grid: str) -> str:
         "XC_FXC": "3",
         "XC_GRID": grid,
     }
+    if skip_post_fock_diagonalization:
+        # Q-Chem's MAX_SCF_CYCLES=0 path still diagonalizes the freshly built
+        # Fock matrix once.  The documented MP2-restart path builds the same
+        # fixed-density Fock/XC energy but skips that unnecessary diagonalization.
+        required["MP2_RESTART_NO_SCF"] = "TRUE"
     for key, value in required.items():
         rem = replace_one(rem, key, value, add_if_missing=key not in {"SCF_GUESS", "UNRESTRICTED"})
     # The gateway evaluates the parent functional only; no perturbative step is requested.

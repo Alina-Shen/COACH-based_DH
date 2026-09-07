@@ -1,0 +1,16 @@
+{
+  "status": "frozen_before_submission",
+  "purpose": "bounded convergence diagnostic, not coefficient selection",
+  "baseline": "revwb97m2/results/step15_wls_25657127/pilot_contract.json",
+  "seconds_per_solve": 60,
+  "repeats": 2,
+  "models": ["full_R2"],
+  "threads": 1,
+  "seed": 0,
+  "support_budget": 14,
+  "initialization": "unchanged: beta0=0.8, SR-HF=0.2, VV10/PT2/D4=0.5; other beta=0",
+  "data_bounds_tolerances_grid_mode": "unchanged from baseline; optional grid constraints disabled",
+  "acceptance": "both incumbents pass frozen feasibility/objective and readback audits; report bounds/gaps even if time limited",
+  "repeat_agreement": "report, not required for wall-clock-limited solves",
+  "bulk_submission_authorized": false
+}

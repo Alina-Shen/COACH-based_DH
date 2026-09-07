@@ -23,6 +23,7 @@ from revwb97m2.step13_resource_plan import QCHEM_BOUNDARY_NAMES  # noqa: E402
 
 DEFAULT_MANIFEST = ROOT / "manifests/qchem_gateway/q6_resource_pilots_v1.yaml"
 DEFAULT_ACCOUNTING = ROOT / "manifests/qchem_gateway/q6_slurm_accounting_v1.json"
+DEFAULT_GUIDANCE = ROOT / "manifests/qchem_gateway/q6_resource_guidance_v1.yaml"
 DEFAULT_PLAN = ROOT / "manifests/production_generator/step13_qchem_initial_plan_v1.json"
 DEFAULT_RUN_ROOT = Path(
     "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q6_resource_pilots_v1"
@@ -35,6 +36,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--accounting", type=Path, default=DEFAULT_ACCOUNTING)
+    parser.add_argument("--guidance", type=Path, default=DEFAULT_GUIDANCE)
     parser.add_argument("--plan", type=Path, default=DEFAULT_PLAN)
     parser.add_argument("--run-root", type=Path, default=DEFAULT_RUN_ROOT)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
@@ -42,6 +44,7 @@ def main() -> int:
     args = parser.parse_args()
     manifest = yaml.safe_load(args.manifest.read_text(encoding="utf-8"))
     accounting = json.loads(args.accounting.read_text(encoding="utf-8"))
+    guidance = yaml.safe_load(args.guidance.read_text(encoding="utf-8"))
     plan = json.loads(args.plan.read_text(encoding="utf-8"))
     accounting_by_species = {row["species"]: row for row in accounting["jobs"]}
     reports = []
@@ -54,17 +57,26 @@ def main() -> int:
         measurement = summary["measurements"]
         grid_reports = measurement["grid_reports"]
         feature_checks = {}
+        grid_report_by_id = {row["grid"]: row for row in grid_reports}
         for grid in manifest["grids"]:
             grid_id = str(grid["id"])
+            expected_case_root = Path(
+                grid_report_by_id[grid_id].get(
+                    "case_root", species_root / "cases" / grid_id
+                )
+            )
             checks, _ = validate_published_artifact(
                 species_root / "features" / grid_id,
-                species_root / "cases" / grid_id,
+                expected_case_root,
             )
             feature_checks[grid_id] = bool(checks) and all(checks.values())
         job = accounting_by_species[species]
         checks = {
             "completion_marker": (species_root / "Q6_PILOT_COMPLETE").is_file(),
-            "summary_status": summary["status"] == "q6_resource_pilot_complete_and_validated",
+            "summary_status": summary["status"] in {
+                "q6_resource_pilot_complete_and_validated",
+                "q6_resource_pilot_complete_and_validated_after_retry",
+            },
             "manifest_pinned": summary["manifest_sha256"] == sha256(args.manifest),
             "size_and_resources_frozen": summary["size_role"] == case["size_role"]
             and summary["resources"] == case["resources"],
@@ -128,6 +140,17 @@ def main() -> int:
             plan["boundary_implementation_status"][name].startswith("pending_step9")
             for name in ("vv10", "ri_mp2")
         ),
+        "q6_resource_guidance_frozen_and_scoped": guidance["status"]
+        == "frozen_after_terminal_pilots_before_aggregate_validation"
+        and guidance["decision"]["production_assignment"]
+        == "retain_step12_inventory_assignments"
+        and guidance["scope"]["vv10_and_ri_mp2"] == "pending_step9_measurement",
+        "step13_plan_pins_q6_resource_guidance": plan["resource_calibration_status"]
+        == "q6_complete_conservative_step12_assignments_retained"
+        and plan["authorities"]["q6_slurm_accounting_sha256"] == sha256(args.accounting)
+        and plan["authorities"]["q6_resource_guidance_sha256"] == sha256(args.guidance)
+        and plan["q6_resource_guidance"]["decision"]
+        == "retain_step12_inventory_assignments",
         "step13_dependency_restart_policy_present": plan["restart_policy"]["complete_validated"] == "reuse_without_rewrite"
         and plan["restart_policy"]["failed_partial_corrupt_or_stale"] == "preserve_and_stop",
     }
@@ -140,6 +163,8 @@ def main() -> int:
         "manifest_sha256": sha256(args.manifest),
         "accounting": str(args.accounting.resolve()),
         "accounting_sha256": sha256(args.accounting),
+        "resource_guidance": str(args.guidance.resolve()),
+        "resource_guidance_sha256": sha256(args.guidance),
         "step13_plan": str(args.plan.resolve()),
         "step13_plan_sha256": sha256(args.plan),
         "case_reports": reports,

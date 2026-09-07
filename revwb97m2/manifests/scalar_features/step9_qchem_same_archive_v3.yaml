@@ -1,0 +1,68 @@
+schema_version: 3
+status: frozen_before_results
+frozen_at: "2026-09-05T17:10:00-07:00"
+name: revwb97m2_step9_qchem_same_archive_scalar_gateway_v3
+
+amendment:
+  supersedes: step9_qchem_same_archive_v2.yaml
+  diagnostic: step9_qchem_same_archive_v2_diagnostic.json
+  reason: >-
+    Generic HF/RIMP2 changes the Fock operator and orbital energies. Split the
+    evaluation into raw SR-HF/VV10 and native wB97M(2)/RIMP2 jobs that both read
+    the same isolated authoritative wB97M-V qarchive. Exclude non-Brillouin
+    singles from the canonical doubles feature and retain them as a diagnostic.
+
+feature_contract:
+  short_range_hf: {index: 288, omega_bohr_inverse: 0.3, scaling: unscaled}
+  vv10: {index: 289, b: 10.0, C: 0.01, scale: 1.0, grid: SG-1}
+  pt2: {index: 290, method: canonical_frozen_core_RI_MP2_doubles, fitted_component: same_spin_plus_opposite_spin}
+  d4_atm: {index: 291, role: geometry_and_charge_only}
+
+orbital_contract:
+  qchem_orbitals_are_production_inputs: true
+  same_isolated_hash_verified_qarchive_for_both_jobs: true
+  scf_optimization: forbidden
+  unrestricted: true
+
+qchem_controls:
+  shared_fixed_orbitals: {SCF_GUESS: READ, MAX_SCF_CYCLES: 0, MP2_RESTART_NO_SCF: true}
+  sr_hf: {EXCHANGE: HF, SRC_DFT: true, LRC_DFT: true, OMEGA: 300, OMEGA2: 300, HF_SR: 1000, HF_LR: 0}
+  vv10: {NL_CORRELATION: VV10, NL_GRID: 1, NL_VV_B: 1000, NL_VV_C: 100, NL_VV_SCALE: 100000}
+  pt2: {METHOD: "wB97M(2)", DH_PT2_ENGINE: RIMP2, N_FROZEN_CORE: FC, auxiliary_basis_source: authoritative_AUX_BASIS_CORR}
+
+validation:
+  frozen_before_results: true
+  normal_qchem_termination_required_for_both_jobs: true
+  aggregate_archive_read_count_minimum: 4
+  source_copy_tree_identity_required: true
+  component_sum_tolerance_hartree: 1.0e-10
+  scaled_total_identity_tolerance_hartree: 2.0e-10
+  cross_engine_reference_tolerances:
+    short_range_hf_hartree: 2.0e-6
+    vv10_hartree: 2.0e-6
+    pt2_total_hartree: 2.3904e-5
+  tolerance_sources:
+    short_range_hf_and_vv10: existing_parent_cross_engine_gate
+    pt2_total: existing_0.015_kcal_per_mol_RI_comparison_gate
+
+cases:
+  - species: h2o_SW49
+    role: closed_shell_singlet_uks
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/h2o_SW49/input0
+    authoritative_input_sha256: 24d74f289c237aad78dece0deb231c82d9d6540eec5912e12a6c87cd2a9c5d4a
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/h2o_SW49
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+    fallback_reference:
+      short_range_hf_hartree: -7.336839258204929
+      vv10_hartree: 0.020787561237750714
+      pt2_total_hartree: -0.3334012925516243
+  - species: 12_NH2rad_HNBrBDE18
+    role: open_shell_doublet_uks
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/12_NH2rad_HNBrBDE18/input0
+    authoritative_input_sha256: 8267b6bcd48735917be1d5891cd78290678dacdb604937add4ec53918997008b
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/12_NH2rad_HNBrBDE18
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+    fallback_reference:
+      short_range_hf_hartree: -5.860756549779014
+      vv10_hartree: 0.018654599079494568
+      pt2_total_hartree: -0.23521668710122212

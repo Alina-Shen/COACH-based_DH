@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "rejected_diagnostic_not_published",
+  "slurm_job": 25612738,
+  "finding": "Generic CORRELATION=RIMP2 rebuilt an HF Fock operator and did not retain the WB97M-V orbital-energy definition required by Step 9.",
+  "retained_results": ["short_range_hf", "vv10"],
+  "rejected_result": "generic_hf_fock_rimp2",
+  "corrective_action": "Use separate native wB97M(2)/RIMP2 fixed-orbital evaluation on the same isolated qarchive and fit only the same-spin plus opposite-spin canonical doubles total; exclude non-Brillouin singles."
+}

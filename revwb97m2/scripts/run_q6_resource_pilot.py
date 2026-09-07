@@ -35,6 +35,7 @@ DEFAULT_RUN_ROOT = Path(
     "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/q6_resource_pilots_v1"
 )
 QCHEM_ROOT = Path("/clusterfs/mhg-data/yaoshen/qchem/trunk")
+RETRY_CONTROL_AMENDMENT = ROOT / "manifests/qchem_gateway/q6_retry2_control_amendment_v1.yaml"
 QCAUX = "/global/home/groups-sw/mhg/qchem_public/qchem_620/qcaux"
 BOHR_ANGSTROM = 0.529177210903
 D4_PARAMETERS = {"s6": 0.0, "s8": 0.0, "s9": 1.0, "a1": 0.215, "a2": 5.8, "alp": 16.0}
@@ -137,7 +138,11 @@ def main() -> int:
             case_root.mkdir(parents=True)
             shutil.copy2(input_source, case_root / "input.authoritative.in")
             (case_root / "input.q3.in").write_text(
-                derive_input(input_source.read_text(encoding="utf-8"), str(grid["qchem_value"])),
+                derive_input(
+                    input_source.read_text(encoding="utf-8"),
+                    str(grid["qchem_value"]),
+                    skip_post_fock_diagonalization=True,
+                ),
                 encoding="utf-8",
             )
             grid_copy_started = time.perf_counter()
@@ -157,6 +162,9 @@ def main() -> int:
                 "source_copy_tree_identity": True,
                 "authoritative_input_sha256": sha256(input_source),
                 "derived_input_sha256": sha256(case_root / "input.q3.in"),
+                "mp2_restart_no_scf_required": True,
+                "q6_control_amendment": str(RETRY_CONTROL_AMENDMENT),
+                "q6_control_amendment_sha256": sha256(RETRY_CONTROL_AMENDMENT),
             }
             (case_root / "PREPARED.json").write_text(
                 json.dumps(prepared, indent=2, sort_keys=True) + "\n", encoding="utf-8"

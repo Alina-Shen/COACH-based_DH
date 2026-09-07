@@ -1,0 +1,37 @@
+schema_version: 1
+status: frozen_before_retry2
+frozen_at: "2026-09-05T08:04:53-07:00"
+purpose: avoid_unnecessary_post_fock_diagonalization_after_fixed_density_integratedDV
+production_submission_authorized: false
+
+triggering_evidence:
+  original_medium_job: 25562302
+  retry1_medium_job: 25579847
+  species: TMB28_C1
+  grid: "75302"
+  repeated_failure: "munmap_chunk(): invalid pointer after complete integratedDV and reported convergence"
+  original_high_job: 25562303
+  high_failure: "segmentation fault in MKL dgemm after complete integratedDV and reported convergence"
+  out_of_memory_ruled_out: true
+
+qchem_native_semantics:
+  source: /clusterfs/mhg-data/yaoshen/qchem/trunk/scfman/scfman.C
+  source_comment: >-
+    MAX_SCF_CYCLES=0 builds the Fock matrix and diagonalizes once;
+    MP2_RESTART_NO_SCF builds the Fock matrix but does not diagonalize.
+  unchanged_controls:
+    MAX_SCF_CYCLES: 0
+    GEN_SCFMAN: false
+    SCF_GUESS: READ
+    XC_FXC: 3
+    QCHEM_PRINT_INTEGRATED_DV: 1
+  added_control:
+    MP2_RESTART_NO_SCF: true
+
+scope:
+  applies_to: q6_retry2_and_future_fixed_orbital_feature_inputs
+  q3_q4_historical_inputs_unchanged: true
+  qchem_source_change_required: false
+  qchem_rebuild_required: false
+  scientific_density_or_grid_change: false
+  retry_submission_authorized_by_user: true

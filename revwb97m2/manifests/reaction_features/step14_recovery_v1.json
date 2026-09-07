@@ -1,0 +1,16 @@
+{
+  "status": "frozen_before_results",
+  "cohort": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/reaction_features/step14_real_reaction_cohort_v1.json",
+  "cohort_sha256": "47ae84ce59cb174e679dd846024f5e536360e2ab60a2e0e12465d4002538f727",
+  "case_indices": [26,27,28,29,30,31,36],
+  "run_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v1",
+  "unit_tolerance_hartree": 2e-8,
+  "unit_check": "wB97M-V exchange/correlation parent with CORRELATION RIMP2, SCS=3, unit SS/OS, unchanged orbitals and field; accept only independently matching spins",
+  "one_electron_policy": "user_approved_zero_doubles_no_pt2_job",
+  "code_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step14_recovery.py": "a5b1c66c157bf34d553a85a2488b534d15c3351191af421f34c23bc973f0292d",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_step14_recovery.py": "171da4c9ce90b211ec61bf1d37844142e92c2ab2598dd431aad5ed07a0b961c0",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_step14_recovery_v1.sh": "129819d6861b0820fdc8c79bf5fd815ea9dcfc6b26fa4aab6935b49a05ec01d5"
+  },
+  "bulk_submission_authorized": false
+}

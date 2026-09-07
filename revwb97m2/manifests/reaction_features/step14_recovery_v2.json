@@ -1,0 +1,25 @@
+{
+  "status": "frozen_before_results",
+  "cohort": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/reaction_features/step14_real_reaction_cohort_v1.json",
+  "cohort_sha256": "47ae84ce59cb174e679dd846024f5e536360e2ab60a2e0e12465d4002538f727",
+  "case_indices": [
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    36
+  ],
+  "run_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2",
+  "unit_tolerance_hartree": 2e-8,
+  "unit_check": "wB97M-V exchange/correlation parent with CORRELATION RIMP2, SCS=3, unit SS/OS, unchanged orbitals and field; accept only independently matching spins",
+  "one_electron_policy": "user_approved_zero_doubles_no_pt2_job",
+  "code_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step14_recovery_v2.py": "d33a374d4a91a6ba138ab628287b7313547c08cfa8e70c840a406bc74e67f459",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_step14_recovery_v2.py": "329510aeda948d3898a6c346898516eb569c0fd5e7eb8e6cc0d69b0b6b939590",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_step14_recovery_v2.sh": "432335a3d09c0950763081eec13b7bd3349b57f8d5677045226b91acd03529fb"
+  },
+  "bulk_submission_authorized": false,
+  "supersedes": "step14_recovery_v1.json: stopped after missing legacy VV10 fallback found"
+}

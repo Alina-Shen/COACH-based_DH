@@ -1,0 +1,60 @@
+{
+  "authorities": {
+    "basis_bridge_records_sha256": "cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6",
+    "q4_validation_sha256": "10d4a84b7f2173963cec84143c71114fcd68f2ec4e728ccff2f909b8d560c501",
+    "scientific_specification_sha256": "5c7a03994f75ea0076188f20a679647b9cfc2e0ec1c72874b0cc463326a3212e",
+    "step9_validation_sha256": "38e53e5eb52c982beee62bbaa19b9c05201972eb96bb4c20893e97c68e79f104"
+  },
+  "bulk_submission_authorized": false,
+  "cases": [
+    {
+      "boundary_checks": {
+        "assembly": true,
+        "d4_atm": true,
+        "integrated_dv_250974": true,
+        "integrated_dv_75302": true,
+        "integrated_dv_99590": true,
+        "qchem_archive": true,
+        "ri_mp2": true,
+        "vv10": true
+      },
+      "checks": {
+        "all_eight_boundaries_valid": true,
+        "feature_vector_shape_finite": true,
+        "q4_semilocal_prefix_exact": true,
+        "step9_scalar_tail_exact": true
+      },
+      "feature_vector_sha256": "5e6247ec8c195370e6d94bf2af136a24619dc813eb35aa6c785fa177317483f5",
+      "passed": true,
+      "role": "closed_shell_singlet_uks",
+      "species": "h2o_SW49"
+    },
+    {
+      "boundary_checks": {
+        "assembly": true,
+        "d4_atm": true,
+        "integrated_dv_250974": true,
+        "integrated_dv_75302": true,
+        "integrated_dv_99590": true,
+        "qchem_archive": true,
+        "ri_mp2": true,
+        "vv10": true
+      },
+      "checks": {
+        "all_eight_boundaries_valid": true,
+        "feature_vector_shape_finite": true,
+        "q4_semilocal_prefix_exact": true,
+        "step9_scalar_tail_exact": true
+      },
+      "feature_vector_sha256": "a06eb64fd2842b86cd2102ada8c98d80e1563cfa8093832f6db8062d7b4a2a32",
+      "passed": true,
+      "role": "open_shell_doublet_uks",
+      "species": "12_NH2rad_HNBrBDE18"
+    }
+  ],
+  "purpose": "qchem_closed_open_shell_eight_boundary_r2_292_identity_smoke",
+  "schema_version": 1,
+  "smoke_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/qchem_identity_smoke_v1",
+  "status": "passed",
+  "step": 13
+}

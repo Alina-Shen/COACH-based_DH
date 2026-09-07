@@ -1,0 +1,188 @@
+{
+  "step": 15,
+  "status": "bounded_pilot_finished",
+  "R1_data_ready": false,
+  "outcomes": [
+    {
+      "label": "full_R2",
+      "repeat": 0,
+      "status": 9,
+      "solution_count": 10,
+      "runtime_seconds": 60.000932931900024,
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 3.511210956300321e-07
+      },
+      "objective": 3.511210956300334e-07,
+      "bound": 1.5613942678319019e-16,
+      "gap": null,
+      "gap_state": "positive_infinity",
+      "gap_absolute": 3.51121095473894e-07,
+      "gap_recomputed": 0.9999999995553118,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": false,
+      "solver_diagnostics": {
+        "ObjBoundC": 1.5613942678319019e-16,
+        "ObjCon": 0.0,
+        "IsMIP": 1,
+        "IsMultiObj": 0,
+        "NumObj": 1,
+        "requested_MIPGap": 0.0001,
+        "requested_MIPGapAbs": 1e-10,
+        "gurobi_version": [
+          13,
+          0,
+          3
+        ],
+        "getAttr_gap": {
+          "gap": null,
+          "gap_state": "positive_infinity",
+          "gap_absolute": 3.51121095473894e-07,
+          "gap_recomputed": 0.9999999995553118,
+          "gap_recomputed_state": "finite",
+          "gap_consistent": false
+        }
+      },
+      "objective_agrees": true
+    },
+    {
+      "label": "full_R2",
+      "repeat": 1,
+      "status": 9,
+      "solution_count": 10,
+      "runtime_seconds": 60.001028060913086,
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 3.511210956300321e-07
+      },
+      "objective": 3.511210956300334e-07,
+      "bound": 1.5613942678319019e-16,
+      "gap": null,
+      "gap_state": "positive_infinity",
+      "gap_absolute": 3.51121095473894e-07,
+      "gap_recomputed": 0.9999999995553118,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": false,
+      "solver_diagnostics": {
+        "ObjBoundC": 1.5613942678319019e-16,
+        "ObjCon": 0.0,
+        "IsMIP": 1,
+        "IsMultiObj": 0,
+        "NumObj": 1,
+        "requested_MIPGap": 0.0001,
+        "requested_MIPGapAbs": 1e-10,
+        "gurobi_version": [
+          13,
+          0,
+          3
+        ],
+        "getAttr_gap": {
+          "gap": null,
+          "gap_state": "positive_infinity",
+          "gap_absolute": 3.51121095473894e-07,
+          "gap_recomputed": 0.9999999995553118,
+          "gap_recomputed_state": "finite",
+          "gap_consistent": false
+        }
+      },
+      "objective_agrees": true
+    }
+  ],
+  "output": "revwb97m2/results/step15_wls_60s_25658936",
+  "bulk_submission_authorized": false
+}
+{
+  "passed": true,
+  "checks": {
+    "frozen_contract": true,
+    "requested_time_and_cases": true,
+    "code_hashes": true,
+    "source_hash": true,
+    "input_hashes": true,
+    "expected_runs": true,
+    "full_R2_0": true,
+    "full_R2_1": true
+  },
+  "runs": [
+    {
+      "label": "full_R2",
+      "repeat": 0,
+      "status": 9,
+      "support_count": 14,
+      "objective": 3.511210956300334e-07,
+      "gap": null,
+      "gap_state": "positive_infinity",
+      "gap_absolute": 3.51121095473894e-07,
+      "gap_recomputed": 0.9999999995553118,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": false,
+      "bound": 1.5613942678319019e-16,
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 3.511210956300321e-07
+      }
+    },
+    {
+      "label": "full_R2",
+      "repeat": 1,
+      "status": 9,
+      "support_count": 14,
+      "objective": 3.511210956300334e-07,
+      "gap": null,
+      "gap_state": "positive_infinity",
+      "gap_absolute": 3.51121095473894e-07,
+      "gap_recomputed": 0.9999999995553118,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": false,
+      "bound": 1.5613942678319019e-16,
+      "audit": {
+        "checks": {
+          "finite": true,
+          "coefficient_bound": true,
+          "ueg": true,
+          "support_budget": true,
+          "unselected_zero": true,
+          "mandatory_selected": true,
+          "sr_bounds": true,
+          "independent_scalar_bounds": true
+        },
+        "passed": true,
+        "weighted_sse_hartree2": 3.511210956300321e-07
+      }
+    }
+  ],
+  "repeat_max_coefficient_difference": {
+    "full_R2": 0.0
+  },
+  "interpretation": "bounded engineering validation, not convergence or coefficient selection"
+}

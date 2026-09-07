@@ -1,33 +1,32 @@
 # Authoritative scientific specification for the COACH-form revision of omegaB97M(2).
-schema_version: 6
-status: frozen
+schema_version: 7
+status: implemented_pending_pretest_commit
 
 scientific_specification:
   name: revwb97m2_coach_form
-  version: 6
-  frozen_on: "2026-09-04"
+  version: 7
+  prepared_on: "2026-09-07"
   authority: revwb97m2/configs/scientific_spec.yaml
-  supersedes: revwb97m2/configs/archive/scientific_spec.v5.yaml
+  supersedes: revwb97m2/configs/archive/scientific_spec.v6.yaml
   validator: revwb97m2/scripts/validate_scientific_spec.py
-  validation_report: revwb97m2/manifests/scientific_spec/scientific_spec_v6_validation.json
+  validation_report: revwb97m2/manifests/scientific_spec/scientific_spec_v7_validation.json
   amendment:
-    decision: add_independently_fitted_coach_d4_atm_and_remove_vv10_pt2_sum
+    decision: adopt_coach_ridge_vv10_b5p5_grid_margin_and_user_selection
     reason: >-
-      Retain VV10 and total frozen-core RI-MP2 as independent linear features,
-      append the COACH pure three-body D4-ATM energy as a fourth scalar feature,
-      and fit all three nonlocal/correlation coefficients independently. Remove
-      the omegaB97M(2) constraint c_vv10 + c_pt2 = 1. The conceptual domain for
-      c_vv10, c_pt2, and c_d4_atm is the open interval (0,1); the numerical MIO
-      implementation uses an explicit 1e-8 interior margin because mathematical
-      programming solvers cannot encode strict inequalities directly.
-    previous_specification_sha256: 527d4d04a4c77cf6cbc591ad77113330664bf06466a384fab3368e0b450e2dc4
+      Retain fixed omegaB97M-V orbitals and target omega=0.3/gamma_ss=0.01.
+      Adopt VV10 b=5.5, COACH-equivalent ridge in full-SSE units, and the
+      0.999 grid margin. Preserve independent scalar bounds and C0. Select
+      using COACH's lowest overall mean error principle with user review;
+      undocumented tie details are deferred, not initial-fitting gates.
+      Implementation is untested pending the user's pre-test commit.
+    previous_specification_sha256: 5c7a03994f75ea0076188f20a679647b9cfc2e0ec1c72874b0cc463326a3212e
     changed_fields:
-      - double_hybrid_energy.dispersion_policy
+      - double_hybrid_energy.vv10.b
       - double_hybrid_energy.fitted_energy_terms
-      - feature_models
-      - constraint_profiles
       - grid_sensitivity
-      - validation.required_gates_before_pilot
+      - semilocal_model.implementation_gate
+      - optimization
+      - project.runtime_environment
   change_control: >-
     Scientific changes require a version increment, a written rationale, and
     rerunning every affected validation gate.
@@ -45,7 +44,7 @@ project:
   runtime_environment:
     policy: verified_existing_complete_conda_environment
     module: miniconda3/22.11.1-gcc-11.4.0
-    conda_environment_name: coach
+    conda_environment_name: dh
     readable_specification: revwb97m2/environment/environment.yml
     exact_linux_conda_lock: revwb97m2/environment/conda-linux-64.explicit.txt
     exact_python_lock: revwb97m2/environment/pip-linux-64.lock.txt
@@ -314,7 +313,7 @@ double_hybrid_energy:
   vv10:
     evaluate_non_self_consistently: true
     engine: qchem_on_same_imported_archive
-    b: 10.0
+    b: 5.5
     C: 0.01
     coefficient_is_linear_feature: true
     fitted_coefficient_name: c_vv10
@@ -354,7 +353,7 @@ double_hybrid_energy:
     - semilocal_same_spin_correlation
     - semilocal_opposite_spin_correlation
     - short_range_hf_exchange
-    - vv10_correlation_b10_c001
+    - vv10_correlation_b5p5_c001
     - total_pt2_correlation
     - coach_pure_three_body_d4_atm
   nofit_equation: "E_nuclear + E_one_electron + E_coulomb + E_full_lr_hf"
@@ -422,7 +421,7 @@ semilocal_model:
         domain: "[-1,1]"
         polynomial_family: legendre
   implementation_gate:
-    status: python_reference_passed_qchem_native_validation_pending_step_7
+    status: passed_v6_unchanged_semilocal_parameters
     test: selected_integrated_dv_features_match_frozen_semantics
     kernel: revwb97m2/integrated_dv.py
     validator: revwb97m2/scripts/validate_integrated_dv.py
@@ -438,7 +437,7 @@ semilocal_model:
       selected_rows: [64, 154, 166]
       deterministic_selected_feature_parity_max_abs: 3.4694469519536142e-18
       source_level_status: passed
-      native_qchem_status: pending_step_7
+      native_qchem_status: passed_Q3_v6_unchanged_semilocal_parameters
     rationale: >-
       The cleaned workflow defaults to same-spin row 153, while the final-form
       documentation specifies Legendre polynomials in v_sigma, which maps to
@@ -533,6 +532,8 @@ grid_sensitivity:
   comparison_grid: "99590"
   coarse_analysis_grid: "75302"
   threshold_kcal_per_mol: 0.015
+  internal_safety_factor: 0.999
+  public_audit_slack_hartree: 0.0
   selection:
     largest_model_error_rows_per_candidate: 100
     largest_global_row_l1_norms: 200
@@ -657,6 +658,30 @@ execution_protocol:
 optimization:
   solver: gurobi
   objective: weighted_least_squares
+  objective_representation: explicit_weighted_residuals
+  objective_normalization: full_sse
+  ridge:
+    enabled: true
+    coefficient: 1.0e-10
+    scope: all_fitted_coefficients
+    coach_equivalent: "0.5*SSE + 5e-11*sum(beta**2)"
+    future_todo: matched_no_ridge_comparison_not_a_first_fit_gate
+  solver_parameters:
+    FeasibilityTol: 1.0e-9
+    IntFeasTol: 1.0e-9
+    MIPGap: 1.0e-4
+    MIPGapAbs: 1.0e-10
+  final_selection:
+    primary: lowest_overall_mean_NER_among_eligible_candidates
+    eligibility: approved_constraints_and_numerical_stability
+    user_review_required: true
+    deferred_todos: [near_tie_tolerance, category_tradeoffs, historical_candidate_trace]
+    deferred_todos_block_initial_fitting: false
+  execution_approval:
+    bulk_authorized: false
+    pretest_commit_required: true
+    prebulk_commit_required: true
+    scan_and_resources_require_review: true
   random_seed: 0
   threads: 16
   time_limit_seconds: 7200

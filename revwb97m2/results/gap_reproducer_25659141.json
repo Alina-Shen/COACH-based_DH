@@ -1,0 +1,82 @@
+{
+  "python": "3.11.15",
+  "gurobi": [
+    13,
+    0,
+    3
+  ],
+  "model_sha256": null,
+  "data_sha256": "530e55962b7b2da76a4d1c8f26991ae9720147cfff500a5f2e6c3ef700aff903",
+  "results": [
+    {
+      "case": "synthetic_scale_1.0",
+      "status": 2,
+      "solution_count": 1,
+      "objective": 0.0625,
+      "bound": 0.0625,
+      "unrounded_bound": 0.0625,
+      "raw_gap": 0.0,
+      "getAttr_gap": "0.0",
+      "derived_gap": 0.0,
+      "discrepancy": false,
+      "variables": 1,
+      "constraints": 0
+    },
+    {
+      "case": "synthetic_scale_1e-06",
+      "status": 2,
+      "solution_count": 1,
+      "objective": 6.25e-08,
+      "bound": 6.25e-08,
+      "unrounded_bound": 6.25e-08,
+      "raw_gap": 0.0,
+      "getAttr_gap": "0.0",
+      "derived_gap": 0.0,
+      "discrepancy": false,
+      "variables": 1,
+      "constraints": 0
+    },
+    {
+      "case": "synthetic_scale_1e-09",
+      "status": 2,
+      "solution_count": 1,
+      "objective": 6.25e-11,
+      "bound": 6.25e-11,
+      "unrounded_bound": 6.25e-11,
+      "raw_gap": 0.0,
+      "getAttr_gap": "0.0",
+      "derived_gap": 0.0,
+      "discrepancy": false,
+      "variables": 1,
+      "constraints": 0
+    },
+    {
+      "case": "direct_replay_0",
+      "status": 9,
+      "solution_count": 10,
+      "objective": 3.511210956300334e-07,
+      "bound": 1.5613942678319019e-16,
+      "unrounded_bound": 1.5613942678319019e-16,
+      "raw_gap": "inf",
+      "getAttr_gap": "inf",
+      "derived_gap": 0.9999999995553118,
+      "discrepancy": true,
+      "variables": 604,
+      "constraints": 610
+    },
+    {
+      "case": "direct_replay_1",
+      "status": 9,
+      "solution_count": 10,
+      "objective": 3.511210956300334e-07,
+      "bound": 1.5613942678319019e-16,
+      "unrounded_bound": 1.5613942678319019e-16,
+      "raw_gap": "inf",
+      "getAttr_gap": "inf",
+      "derived_gap": 0.9999999995553118,
+      "discrepancy": true,
+      "variables": 604,
+      "constraints": 610
+    }
+  ]
+}

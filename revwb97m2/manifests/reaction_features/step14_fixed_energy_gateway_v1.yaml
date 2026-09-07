@@ -1,0 +1,47 @@
+schema_version: 1
+status: frozen_before_results
+step: 14
+purpose: validate_qchem_fixed_energy_partition_before_real_reaction_cohort
+frozen_local_date: 2026-09-05
+run_root: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/fixed_energy_gateway_v1
+definition:
+  equation: E_fixed = E_nuclear + E_one_electron + E_coulomb + E_full_HF - E_short_range_HF
+  identity: E_full_long_range_HF = E_full_HF - E_short_range_HF
+  full_hf_source: pure_full_range_HF_fixed_orbital_qchem_job
+  short_range_hf_source: validated_step9_erfc_fixed_orbital_qchem_job
+tolerances_hartree:
+  pure_hf_reconstruction: 2.0e-8
+  cross_code_component: 2.0e-6
+authorities:
+  qchem_scalar_features_sha256: 43769930762bdd5ed48c5db9a29181cf0e0f869f2f640b13dccf5ba5fde89e32
+  runner_sha256: 6216465dea3f370e4b14f92aa7fb9e4619cbe6b33d59c306840d5af0d5214ad8
+  slurm_script_sha256: 4bc5ce6335214f5db17c94d727051d5878f5dfdd10d9956bb1384ccd64167eeb
+  qcprog_executable_sha256: 0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084
+cases:
+  - species: h2o_SW49
+    role: cross_code_closed_shell_reference
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/h2o_SW49/input0
+    authoritative_input_sha256: 24d74f289c237aad78dece0deb231c82d9d6540eec5912e12a6c87cd2a9c5d4a
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/h2o_SW49
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+    scalar_artifact: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/qchem_gateway/step9_same_archive_v3/h2o_SW49/published
+    scalar_manifest_sha256: a962180330a4bb9ca7edef0a7537620fdabe89258625c0d07b8b4c3ae8ccf11f
+    cross_code_reference:
+      source: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/gateway/h2o_SW49/parent_manifest.json
+      values_hartree:
+        nuclear_repulsion_hartree: 9.156881450229582
+        one_electron_hartree: -122.94157678500137
+        coulomb_hartree: 46.64492607791829
+        full_long_range_hf_exchange_hartree: -1.5849749298028522
+        fixed_energy_hartree: -68.72474418665635
+    resources: {partition: mhg, account: mhg, qos: normal, cpus: 8, memory_gib: 14, wall_minutes: 30}
+  - species: 11_H2O_TA13
+    role: fresh_fitting_species
+    authoritative_input: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/11_H2O_TA13/input0
+    authoritative_input_sha256: 0d77b94859f54a633fef073a23e54c5da9439771796c7deaf2511eda9cef6c93
+    orbital_root: /clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/11_H2O_TA13
+    qarchive_sha256: 26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e
+    scalar_artifact: /clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/scalar/published
+    scalar_manifest_sha256: 386cc502fbdf1fa9aa4b59e64350fc5d51c655d060cb69f71dc3cf5f9839c471
+    resources: {partition: mhg, account: mhg, qos: normal, cpus: 8, memory_gib: 14, wall_minutes: 30}
+bulk_submission_authorized: false

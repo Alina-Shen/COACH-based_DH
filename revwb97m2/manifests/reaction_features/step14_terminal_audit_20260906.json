@@ -1,0 +1,1992 @@
+{
+  "accounting": [
+    {
+      "Elapsed": "00:34:54",
+      "ExitCode": "0:0",
+      "JobID": "25615636_0",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:34:54",
+      "ExitCode": "0:0",
+      "JobID": "25615636_0.batch",
+      "MaxRSS": "4133408K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:34:54",
+      "ExitCode": "0:0",
+      "JobID": "25615636_0.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:36:11",
+      "ExitCode": "0:0",
+      "JobID": "25615636_1",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:36:11",
+      "ExitCode": "0:0",
+      "JobID": "25615636_1.batch",
+      "MaxRSS": "4192636K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:36:11",
+      "ExitCode": "0:0",
+      "JobID": "25615636_1.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:42:06",
+      "ExitCode": "0:0",
+      "JobID": "25615636_2",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:42:06",
+      "ExitCode": "0:0",
+      "JobID": "25615636_2.batch",
+      "MaxRSS": "4976680K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:42:06",
+      "ExitCode": "0:0",
+      "JobID": "25615636_2.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:43:21",
+      "ExitCode": "0:0",
+      "JobID": "25615636_3",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:43:21",
+      "ExitCode": "0:0",
+      "JobID": "25615636_3.batch",
+      "MaxRSS": "5082492K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:43:21",
+      "ExitCode": "0:0",
+      "JobID": "25615636_3.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:05:13",
+      "ExitCode": "0:0",
+      "JobID": "25615636_4",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:05:13",
+      "ExitCode": "0:0",
+      "JobID": "25615636_4.batch",
+      "MaxRSS": "1317648K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:05:13",
+      "ExitCode": "0:0",
+      "JobID": "25615636_4.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:05:01",
+      "ExitCode": "0:0",
+      "JobID": "25615636_5",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:05:01",
+      "ExitCode": "0:0",
+      "JobID": "25615636_5.batch",
+      "MaxRSS": "1314332K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:05:02",
+      "ExitCode": "0:0",
+      "JobID": "25615636_5.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:08:00",
+      "ExitCode": "0:0",
+      "JobID": "25615636_6",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:08:00",
+      "ExitCode": "0:0",
+      "JobID": "25615636_6.batch",
+      "MaxRSS": "1943316K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:08:00",
+      "ExitCode": "0:0",
+      "JobID": "25615636_6.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:07:48",
+      "ExitCode": "0:0",
+      "JobID": "25615636_7",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:07:48",
+      "ExitCode": "0:0",
+      "JobID": "25615636_7.batch",
+      "MaxRSS": "1930724K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:07:48",
+      "ExitCode": "0:0",
+      "JobID": "25615636_7.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:24:07",
+      "ExitCode": "0:0",
+      "JobID": "25615636_8",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:24:07",
+      "ExitCode": "0:0",
+      "JobID": "25615636_8.batch",
+      "MaxRSS": "3246332K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:24:07",
+      "ExitCode": "0:0",
+      "JobID": "25615636_8.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:25:02",
+      "ExitCode": "0:0",
+      "JobID": "25615636_9",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:25:02",
+      "ExitCode": "0:0",
+      "JobID": "25615636_9.batch",
+      "MaxRSS": "3254184K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:25:03",
+      "ExitCode": "0:0",
+      "JobID": "25615636_9.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:57",
+      "ExitCode": "0:0",
+      "JobID": "25615636_10",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:57",
+      "ExitCode": "0:0",
+      "JobID": "25615636_10.batch",
+      "MaxRSS": "1128688K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:58",
+      "ExitCode": "0:0",
+      "JobID": "25615636_10.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_11",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_11.batch",
+      "MaxRSS": "1149140K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_11.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_12",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_12.batch",
+      "MaxRSS": "1130328K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_12.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_13",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_13.batch",
+      "MaxRSS": "1144988K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:00",
+      "ExitCode": "0:0",
+      "JobID": "25615636_13.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:58",
+      "ExitCode": "0:0",
+      "JobID": "25615636_14",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:58",
+      "ExitCode": "0:0",
+      "JobID": "25615636_14.batch",
+      "MaxRSS": "1138192K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:58",
+      "ExitCode": "0:0",
+      "JobID": "25615636_14.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:39:56",
+      "ExitCode": "0:0",
+      "JobID": "25615636_15",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:39:56",
+      "ExitCode": "0:0",
+      "JobID": "25615636_15.batch",
+      "MaxRSS": "8815464K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:39:56",
+      "ExitCode": "0:0",
+      "JobID": "25615636_15.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:42:15",
+      "ExitCode": "0:0",
+      "JobID": "25615636_16",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:42:15",
+      "ExitCode": "0:0",
+      "JobID": "25615636_16.batch",
+      "MaxRSS": "8875776K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:42:15",
+      "ExitCode": "0:0",
+      "JobID": "25615636_16.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:42:14",
+      "ExitCode": "0:0",
+      "JobID": "25615636_17",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:42:14",
+      "ExitCode": "0:0",
+      "JobID": "25615636_17.batch",
+      "MaxRSS": "8828100K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "01:42:15",
+      "ExitCode": "0:0",
+      "JobID": "25615636_17.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_18",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_18.batch",
+      "MaxRSS": "1093228K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:59",
+      "ExitCode": "0:0",
+      "JobID": "25615636_18.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:11",
+      "ExitCode": "0:0",
+      "JobID": "25615636_19",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:11",
+      "ExitCode": "0:0",
+      "JobID": "25615636_19.batch",
+      "MaxRSS": "1275592K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:11",
+      "ExitCode": "0:0",
+      "JobID": "25615636_19.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:58",
+      "ExitCode": "0:0",
+      "JobID": "25615636_20",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:58",
+      "ExitCode": "0:0",
+      "JobID": "25615636_20.batch",
+      "MaxRSS": "1046072K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:58",
+      "ExitCode": "0:0",
+      "JobID": "25615636_20.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:14",
+      "ExitCode": "0:0",
+      "JobID": "25615636_21",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:14",
+      "ExitCode": "0:0",
+      "JobID": "25615636_21.batch",
+      "MaxRSS": "1213652K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:15",
+      "ExitCode": "0:0",
+      "JobID": "25615636_21.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:46",
+      "ExitCode": "0:0",
+      "JobID": "25615636_22",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:46",
+      "ExitCode": "0:0",
+      "JobID": "25615636_22.batch",
+      "MaxRSS": "806596K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:47",
+      "ExitCode": "0:0",
+      "JobID": "25615636_22.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:50",
+      "ExitCode": "0:0",
+      "JobID": "25615636_23",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:50",
+      "ExitCode": "0:0",
+      "JobID": "25615636_23.batch",
+      "MaxRSS": "794836K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:51",
+      "ExitCode": "0:0",
+      "JobID": "25615636_23.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:51",
+      "ExitCode": "0:0",
+      "JobID": "25615636_24",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:51",
+      "ExitCode": "0:0",
+      "JobID": "25615636_24.batch",
+      "MaxRSS": "971940K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:51",
+      "ExitCode": "0:0",
+      "JobID": "25615636_24.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:53",
+      "ExitCode": "0:0",
+      "JobID": "25615636_25",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:53",
+      "ExitCode": "0:0",
+      "JobID": "25615636_25.batch",
+      "MaxRSS": "976824K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:54",
+      "ExitCode": "0:0",
+      "JobID": "25615636_25.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:21",
+      "ExitCode": "1:0",
+      "JobID": "25615636_26",
+      "MaxRSS": "",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:21",
+      "ExitCode": "1:0",
+      "JobID": "25615636_26.batch",
+      "MaxRSS": "1142832K",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:21",
+      "ExitCode": "0:0",
+      "JobID": "25615636_26.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:19",
+      "ExitCode": "1:0",
+      "JobID": "25615636_27",
+      "MaxRSS": "",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:19",
+      "ExitCode": "1:0",
+      "JobID": "25615636_27.batch",
+      "MaxRSS": "1145280K",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:19",
+      "ExitCode": "0:0",
+      "JobID": "25615636_27.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:22",
+      "ExitCode": "1:0",
+      "JobID": "25615636_28",
+      "MaxRSS": "",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:22",
+      "ExitCode": "1:0",
+      "JobID": "25615636_28.batch",
+      "MaxRSS": "1230952K",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:22",
+      "ExitCode": "0:0",
+      "JobID": "25615636_28.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:22",
+      "ExitCode": "1:0",
+      "JobID": "25615636_29",
+      "MaxRSS": "",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:22",
+      "ExitCode": "1:0",
+      "JobID": "25615636_29.batch",
+      "MaxRSS": "1230292K",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:23",
+      "ExitCode": "0:0",
+      "JobID": "25615636_29.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:04",
+      "ExitCode": "1:0",
+      "JobID": "25615636_30",
+      "MaxRSS": "",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:04",
+      "ExitCode": "1:0",
+      "JobID": "25615636_30.batch",
+      "MaxRSS": "1227056K",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:05",
+      "ExitCode": "0:0",
+      "JobID": "25615636_30.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:02",
+      "ExitCode": "1:0",
+      "JobID": "25615636_31",
+      "MaxRSS": "",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:02",
+      "ExitCode": "1:0",
+      "JobID": "25615636_31.batch",
+      "MaxRSS": "1223736K",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:01:02",
+      "ExitCode": "0:0",
+      "JobID": "25615636_31.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:08:22",
+      "ExitCode": "0:0",
+      "JobID": "25615636_32",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:08:22",
+      "ExitCode": "0:0",
+      "JobID": "25615636_32.batch",
+      "MaxRSS": "1715420K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:08:22",
+      "ExitCode": "0:0",
+      "JobID": "25615636_32.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:10",
+      "ExitCode": "0:0",
+      "JobID": "25615636_33",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:10",
+      "ExitCode": "0:0",
+      "JobID": "25615636_33.batch",
+      "MaxRSS": "1090304K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:02:10",
+      "ExitCode": "0:0",
+      "JobID": "25615636_33.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:13:44",
+      "ExitCode": "0:0",
+      "JobID": "25615636_34",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:13:44",
+      "ExitCode": "0:0",
+      "JobID": "25615636_34.batch",
+      "MaxRSS": "2226180K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:13:44",
+      "ExitCode": "0:0",
+      "JobID": "25615636_34.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:03:08",
+      "ExitCode": "0:0",
+      "JobID": "25615636_35",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:03:08",
+      "ExitCode": "0:0",
+      "JobID": "25615636_35.batch",
+      "MaxRSS": "1141216K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:03:09",
+      "ExitCode": "0:0",
+      "JobID": "25615636_35.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:00:38",
+      "ExitCode": "1:0",
+      "JobID": "25615636_36",
+      "MaxRSS": "",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:00:38",
+      "ExitCode": "1:0",
+      "JobID": "25615636_36.batch",
+      "MaxRSS": "711960K",
+      "State": "FAILED"
+    },
+    {
+      "Elapsed": "00:00:38",
+      "ExitCode": "0:0",
+      "JobID": "25615636_36.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:01",
+      "ExitCode": "0:0",
+      "JobID": "25615636_37",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:01",
+      "ExitCode": "0:0",
+      "JobID": "25615636_37.batch",
+      "MaxRSS": "795988K",
+      "State": "COMPLETED"
+    },
+    {
+      "Elapsed": "00:01:01",
+      "ExitCode": "0:0",
+      "JobID": "25615636_37.extern",
+      "MaxRSS": "",
+      "State": "COMPLETED"
+    }
+  ],
+  "assembly_run": false,
+  "blocked_reactions": [
+    "Dip146_101",
+    "Dip146_131",
+    "Dip146_140",
+    "TAE_W4-17_110"
+  ],
+  "contract_sha256": "47ae84ce59cb174e679dd846024f5e536360e2ab60a2e0e12465d4002538f727",
+  "job_id": 25615636,
+  "passed_species_count": 31,
+  "species": [
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "11_Reactant1_EIE22",
+      "task": 0
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "12_Product1_EIE22",
+      "task": 1
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "21_Reactant6_EIE22",
+      "task": 2
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "22_Product6_EIE22",
+      "task": 3
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "2699_01WaterWater090_dim_S66x8",
+      "task": 4
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "2701_01WaterWater100_dim_S66x8",
+      "task": 5
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "3163_59EthyneWaterCHO090_dim_S66x8",
+      "task": 6
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "3165_59EthyneWaterCHO100_dim_S66x8",
+      "task": 7
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "45_Reactant18_EIE22",
+      "task": 8
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "46_Product18_EIE22",
+      "task": 9
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "48_hcn_BH76",
+      "task": 10
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "49_hcnts_BH76",
+      "task": 11
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "58_hn2_BH76",
+      "task": 12
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "59_hn2ts_BH76",
+      "task": 13
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "60_hnc_BH76",
+      "task": 14
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "BUT14DIOL_B1",
+      "task": 15
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "BUT14DIOL_B4",
+      "task": 16
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "BUT14DIOL_B5",
+      "task": 17
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "CUAGAU_Ag01N0",
+      "task": 18
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "CUAGAU_Ag02N0",
+      "task": 19
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "CUAGAU_Au01N0",
+      "task": 20
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "CUAGAU_Au02N0",
+      "task": 21
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "DIPCS10_be",
+      "task": 22
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "DIPCS10_be_2+",
+      "task": 23
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "DIPCS10_mg",
+      "task": 24
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "DIPCS10_mg_2+",
+      "task": 25
+    },
+    {
+      "checks": {
+        "fresh_marker": false,
+        "no_failure_record": false,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": false,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": false
+      },
+      "diagnostic": {
+        "bad_alloc": false,
+        "legacy_spin_labels": true,
+        "multipole_field": true,
+        "normal_pt2_termination": true
+      },
+      "passed": false,
+      "species": "Dip146_HF2+",
+      "task": 26
+    },
+    {
+      "checks": {
+        "fresh_marker": false,
+        "no_failure_record": false,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": false,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": false
+      },
+      "diagnostic": {
+        "bad_alloc": false,
+        "legacy_spin_labels": true,
+        "multipole_field": true,
+        "normal_pt2_termination": true
+      },
+      "passed": false,
+      "species": "Dip146_HF2-",
+      "task": 27
+    },
+    {
+      "checks": {
+        "fresh_marker": false,
+        "no_failure_record": false,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": false,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": false
+      },
+      "diagnostic": {
+        "bad_alloc": false,
+        "legacy_spin_labels": true,
+        "multipole_field": true,
+        "normal_pt2_termination": true
+      },
+      "passed": false,
+      "species": "Dip146_LiN2+",
+      "task": 28
+    },
+    {
+      "checks": {
+        "fresh_marker": false,
+        "no_failure_record": false,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": false,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": false
+      },
+      "diagnostic": {
+        "bad_alloc": false,
+        "legacy_spin_labels": true,
+        "multipole_field": true,
+        "normal_pt2_termination": true
+      },
+      "passed": false,
+      "species": "Dip146_LiN2-",
+      "task": 29
+    },
+    {
+      "checks": {
+        "fresh_marker": false,
+        "no_failure_record": false,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": false,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": false
+      },
+      "diagnostic": {
+        "bad_alloc": false,
+        "legacy_spin_labels": true,
+        "multipole_field": true,
+        "normal_pt2_termination": true
+      },
+      "passed": false,
+      "species": "Dip146_NaLi2+",
+      "task": 30
+    },
+    {
+      "checks": {
+        "fresh_marker": false,
+        "no_failure_record": false,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": false,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": false
+      },
+      "diagnostic": {
+        "bad_alloc": false,
+        "legacy_spin_labels": true,
+        "multipole_field": true,
+        "normal_pt2_termination": true
+      },
+      "passed": false,
+      "species": "Dip146_NaLi2-",
+      "task": 31
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "S22_01",
+      "task": 32
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "S22_01a",
+      "task": 33
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "S22_08",
+      "task": 34
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "S22_08a",
+      "task": 35
+    },
+    {
+      "checks": {
+        "fresh_marker": false,
+        "no_failure_record": false,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": false,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": false
+      },
+      "diagnostic": {
+        "bad_alloc": true,
+        "legacy_spin_labels": false,
+        "multipole_field": false,
+        "normal_pt2_termination": false
+      },
+      "passed": false,
+      "species": "W4-17_h",
+      "task": 36
+    },
+    {
+      "checks": {
+        "boundary_assembly": true,
+        "boundary_d4_atm": true,
+        "boundary_integrated_dv_250974": true,
+        "boundary_integrated_dv_75302": true,
+        "boundary_integrated_dv_99590": true,
+        "boundary_qchem_archive": true,
+        "boundary_ri_mp2": true,
+        "boundary_vv10": true,
+        "fixed_reparsed": true,
+        "fresh_marker": true,
+        "grid_difference_75302": true,
+        "grid_difference_99590": true,
+        "no_failure_record": true,
+        "q4_250974": true,
+        "q4_75302": true,
+        "q4_99590": true,
+        "reaction_ready": true,
+        "ready_hashes": true,
+        "ready_identity": true,
+        "scalar_reparsed": true,
+        "source_input_unchanged": true,
+        "source_tree_unchanged": true,
+        "terminal_success": true,
+        "vector_exact": true,
+        "vector_finite_shape": true
+      },
+      "diagnostic": {},
+      "passed": true,
+      "species": "W4-17_h2",
+      "task": 37
+    }
+  ],
+  "status": "failed"
+}

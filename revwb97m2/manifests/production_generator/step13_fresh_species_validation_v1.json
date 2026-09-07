@@ -1,0 +1,109 @@
+{
+  "boundary_checks": {
+    "assembly": true,
+    "d4_atm": true,
+    "integrated_dv_250974": true,
+    "integrated_dv_75302": true,
+    "integrated_dv_99590": true,
+    "qchem_archive": true,
+    "ri_mp2": true,
+    "vv10": true
+  },
+  "bulk_submission_authorized": false,
+  "checks": {
+    "all_eight_boundaries_reused_without_overwrite": true,
+    "all_eight_step13_boundaries_valid": true,
+    "authoritative_input_unchanged": true,
+    "authoritative_orbital_tree_unchanged": true,
+    "bulk_submission_still_unauthorized": true,
+    "completion_marker_present": true,
+    "contract_and_code_authorities_match": true,
+    "contract_frozen_before_results": true,
+    "feature_vector_shape_finite": true,
+    "no_failure_record": true,
+    "q4_288_prefix_exact": true,
+    "qchem_build_unchanged": true,
+    "scalar_source_complete_and_validated": true,
+    "scalar_vector_exact": true,
+    "step9_four_scalar_tail_exact": true,
+    "three_q4_sources_independently_valid": true
+  },
+  "contract": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/step13_fresh_species_smoke_v1.yaml",
+  "contract_sha256": "85a7f59a2188e8ea0bf7cbdd6713c2b4cbbe3b2373ae898b94aa787dbaa37be0",
+  "feature_vector_sha256": "780c6fff72ebde299c7bfb4e71291a218007652d531c8bc66021168413234d82",
+  "job_id": 25614541,
+  "q4_grid_checks": {
+    "250974": true,
+    "75302": true,
+    "99590": true
+  },
+  "reuse_actions": {
+    "assembly": "reused",
+    "d4_atm": "reused",
+    "integrated_dv_250974": "reused",
+    "integrated_dv_75302": "reused",
+    "integrated_dv_99590": "reused",
+    "qchem_archive": "reused",
+    "ri_mp2": "reused",
+    "vv10": "reused"
+  },
+  "runner_measurements": {
+    "boundary_actions": {
+      "assembly": "published",
+      "d4_atm": "published",
+      "integrated_dv_250974": "published",
+      "integrated_dv_75302": "published",
+      "integrated_dv_99590": "published",
+      "qchem_archive": "published",
+      "ri_mp2": "published",
+      "vv10": "published"
+    },
+    "bulk_submission_authorized": false,
+    "child_max_rss_mb": 823.109375,
+    "feature_vector_sha256": "780c6fff72ebde299c7bfb4e71291a218007652d531c8bc66021168413234d82",
+    "manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/step13_fresh_species_smoke_v1.yaml",
+    "manifest_sha256": "85a7f59a2188e8ea0bf7cbdd6713c2b4cbbe3b2373ae898b94aa787dbaa37be0",
+    "schema_version": 1,
+    "scope": "gscdb137",
+    "species": "11_H2O_TA13",
+    "status": "fresh_step13_species_complete_and_validated",
+    "timings": {
+      "archive_copy_seconds": 0.8937448698561639,
+      "authoritative_tree_hash_seconds": 0.7285011739004403,
+      "grids": {
+        "250974": {
+          "qchem_seconds": 33.103915059007704
+        },
+        "75302": {
+          "qchem_seconds": 7.5798390079289675
+        },
+        "99590": {
+          "qchem_seconds": 11.794715241994709
+        }
+      },
+      "scalar_pt2_qchem_seconds": 12.361790667986497,
+      "scalar_sr_vv10_qchem_seconds": 6.004577226936817
+    },
+    "total_wall_seconds": 80.20098228007555
+  },
+  "schema_version": 1,
+  "scope": "gscdb137",
+  "slurm_accounting": {
+    "allocated_cpus": 8,
+    "batch_max_rss_kib": 1210836,
+    "elapsed": "00:01:28",
+    "exit_code": "0:0",
+    "requested_memory_gib": 14,
+    "state": "COMPLETED"
+  },
+  "species": "11_H2O_TA13",
+  "species_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13",
+  "status": "passed",
+  "step": 13,
+  "values_hartree": {
+    "d4_atm": 1.435375685608962e-11,
+    "pt2": -0.333099176149695,
+    "short_range_hf": -7.3392745332,
+    "vv10": 0.0207884461
+  }
+}

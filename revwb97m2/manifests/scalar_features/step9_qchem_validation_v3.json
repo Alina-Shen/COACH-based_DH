@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "step": 9,
+  "contract": "revwb97m2/manifests/scalar_features/step9_qchem_same_archive_v3.yaml",
+  "contract_sha256": "37e5724eb36026b3944b80b18ccaa884f616849f15ceb70a0ea5829f816f04dc",
+  "slurm": {
+    "rejected_diagnostic_job": 25612738,
+    "completed_gateway_job": 25613167,
+    "partition": "mhg",
+    "states": ["COMPLETED", "COMPLETED"],
+    "elapsed_seconds": [22, 22],
+    "max_rss_mib": [695.63671875, 696.890625]
+  },
+  "qchem_build": {
+    "main_svn_revision": 48798,
+    "libks_svn_revision": 1666,
+    "executable_sha256": "0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084"
+  },
+  "tolerances_hartree": {
+    "short_range_hf": 2.0e-6,
+    "vv10": 2.0e-6,
+    "pt2_total": 2.3904e-5
+  },
+  "global_checks": {
+    "contract_frozen_before_results": true,
+    "diagnostic_predecessor_rejected": true,
+    "qchem_executable_hash": true,
+    "closed_and_open_shell_gateways": true,
+    "all_cases_pass": true
+  },
+  "cases": [
+    {
+      "species": "h2o_SW49",
+      "role": "closed_shell_singlet_uks",
+      "passed": true,
+      "values_hartree": {
+        "short_range_hf": -7.3368392614,
+        "vv10": 0.0207875806,
+        "pt2_total": -0.33340125439934304,
+        "pt2_same_spin": -0.07968299448615673,
+        "pt2_opposite_spin": -0.2537182599131863,
+        "d4_atm": 1.478162343674674e-11
+      },
+      "absolute_errors_hartree": {
+        "short_range_hf": 3.1950708745398515e-9,
+        "vv10": 1.9362249286530853e-8,
+        "pt2_total": 3.815228127868053e-8
+      },
+      "scalar_manifest_sha256": "a962180330a4bb9ca7edef0a7537620fdabe89258625c0d07b8b4c3ae8ccf11f"
+    },
+    {
+      "species": "12_NH2rad_HNBrBDE18",
+      "role": "open_shell_doublet_uks",
+      "passed": true,
+      "values_hartree": {
+        "short_range_hf": -5.8607566074,
+        "vv10": 0.0186545805,
+        "pt2_total": -0.23521666588456128,
+        "pt2_same_spin": -0.05032574876818396,
+        "pt2_opposite_spin": -0.1848909171163773,
+        "d4_atm": 2.926339848978359e-11
+      },
+      "absolute_errors_hartree": {
+        "short_range_hf": 5.7620986204653946e-8,
+        "vv10": 1.8579494567849686e-8,
+        "pt2_total": 2.1216660844869395e-8
+      },
+      "scalar_manifest_sha256": "a3f99ebccfc71c07a35043c746df2b42c5443472fec98a8e91764274127fbdfc"
+    }
+  ]
+}
