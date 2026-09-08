@@ -20,11 +20,15 @@ PILOT = ROOT/'results/training_preflight_v2/pilot100_species.json'
 CANARY = ROOT/'manifests/production_generator/v7_canary_v1.json'
 SCRIPT = Path(__file__).resolve()
 LAUNCHER = ROOT/'slurm/run_training_features_v2.sh'
+ARRAY_LAUNCHER = ROOT/'slurm/run_training_features_array_v3.sh'
+APPROVED_ROUTES = {('mhg', 'mhg', 'normal'), ('cm1', 'lr_qchem', 'condo_qchem'),
+                   ('lr8', 'lr_mhg2', 'mhg2_lr8_normal'),
+                   ('lr7', 'lr_mhg2', 'condo_mhg_lr7')}
 
 
 def hashes():
     return dict(native.code_hashes(), **{str(p): native.digest(p) for p in
-        (SCRIPT, ROOT/'scripts/recover_v7_canary_d4.py', LAUNCHER,
+        (SCRIPT, ROOT/'scripts/recover_v7_canary_d4.py', LAUNCHER, ARRAY_LAUNCHER,
          ROOT/'scripts/corrected_canary_evidence.py', ROOT/'scripts/fixed_energy_checkpoint.py',
          ROOT/'scripts/run_large_corrected_canaries.py', corrected.REGISTRY)})
 
@@ -128,6 +132,19 @@ def load(path):
     return plan, settings
 
 
+def reviewed_routes(plan, release):
+    """Execution routing may change, never scientific inputs or memory/CPU requests."""
+    routes = release.get('scheduler_routes', {c['species']: c['route'] for c in plan['cases']})
+    native.require(isinstance(routes, dict) and set(routes) == {c['species'] for c in plan['cases']},
+                   'release routes must cover exactly the frozen species')
+    for route in routes.values():
+        native.require(isinstance(route, dict) and set(route) == {'partition', 'account', 'qos'},
+                       'only partition/account/qos may be overridden')
+        native.require(tuple(route[k] for k in ('partition', 'account', 'qos')) in APPROVED_ROUTES,
+                       'unapproved or low-priority scheduler route')
+    return routes
+
+
 def release_check(plan_path, release_path):
     """Require a separately reviewed release; freeze alone can never launch."""
     native.require(release_path is not None, 'release absent: wait for seven canaries, commit and resource review')
@@ -139,6 +156,7 @@ def release_check(plan_path, release_path):
     # Commit must contain precisely the frozen code and plan, not merely exist.
     import subprocess
     plan = native.read(plan_path)
+    reviewed_routes(plan, r)
     for p, h in dict(plan['code_hashes'], **{str(Path(plan_path).resolve()): native.digest(plan_path)}).items():
         try:
             relative = str(Path(p).relative_to(ROOT.parent))
@@ -146,6 +164,7 @@ def release_check(plan_path, release_path):
             continue  # External control/build authorities remain hash-checked by load.
         data = subprocess.check_output(['git', 'show', r['commit']+':'+relative], cwd=ROOT.parent)
         native.require(hashlib.sha256(data).hexdigest() == h, 'uncommitted frozen code/plan')
+    return r
 
 
 def validate(plan_path, name, require_marker=True):
@@ -171,11 +190,12 @@ def validate(plan_path, name, require_marker=True):
 
 def run(path, name, release, cpus, memory_gib):
     plan, settings = load(path)
-    release_check(path, release)  # Before any filesystem mutation or native calculation.
+    approved_release = release_check(path, release)  # Before any filesystem mutation or native calculation.
     case = next(c for c in plan['cases'] if c['species'] == name)
     native.require((cpus, memory_gib) == (case['resources']['cpus'], case['resources']['requested_memory_gib']), 'allocation mismatch')
+    route = reviewed_routes(plan, approved_release)[name]
     for env, key in [('SLURM_JOB_PARTITION', 'partition'), ('SLURM_JOB_ACCOUNT', 'account'), ('SLURM_JOB_QOS', 'qos')]:
-        native.require(os.environ.get(env) == case['route'][key], 'scheduler route mismatch '+env)
+        native.require(os.environ.get(env) == route[key], 'scheduler route mismatch '+env)
     native.require(native.canonical_tree_hash(native.tree_manifest(Path(case['orbital_root']))) == case['source_tree_sha256'], 'restart tree changed')
     native.require(min(native.available_bytes(plan['output_root']), native.available_bytes(plan['scratch_root'])) >
                    plan['minimum_copy_bytes']+memory_gib*1024**3, 'insufficient storage headroom')
@@ -220,13 +240,19 @@ def main():
     p.add_argument('action', choices=['freeze-first', 'check', 'run', 'validate', 'audit-reuse', 'check-evidence'])
     p.add_argument('--plan', type=Path, required=True)
     p.add_argument('--namespace', default='training_first16_v2')
-    p.add_argument('--species')
+    selection = p.add_mutually_exclusive_group()
+    selection.add_argument('--species')
+    selection.add_argument('--species-index', type=int)
     p.add_argument('--release', type=Path)
     p.add_argument('--reuse-kind', choices=['canary', 'refresh', 'corrected'])
     p.add_argument('--recovery')
     p.add_argument('--cpus', type=int)
     p.add_argument('--memory-gib', type=int)
     a = p.parse_args()
+    if a.species_index is not None:
+        cases = native.read(a.plan)['cases']
+        native.require(0 <= a.species_index < len(cases), 'species index out of range')
+        a.species = cases[a.species_index]['species']
     if a.action == 'freeze-first':
         result = freeze(a.plan, [r['species'] for r in choose_first(native.read(PILOT))], a.namespace)
         print(json.dumps({'species': [c['species'] for c in result['cases']], 'minimum_copy_bytes': result['minimum_copy_bytes'], 'submission_authorized': False}, indent=2))
