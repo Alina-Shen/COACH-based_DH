@@ -1,4 +1,4 @@
-"""New canary tests: added before the user's pre-test commit; not yet run."""
+"""Canary contracts, implicit ECP and separated scratch regression tests."""
 from pathlib import Path
 import pytest
 from revwb97m2 import v7_canary as c
@@ -65,14 +65,17 @@ def test_exclusive_manifest_write(tmp_path):
 
 
 def test_stage_readback_rejects_tampering(tmp_path):
-    scratch = tmp_path/'qcscratch/canary'
+    scratch_root = tmp_path/'disposable'
+    target = scratch_root/tmp_path.name/'qcscratch'
+    scratch = target/'canary'
     scratch.mkdir(parents=True)
+    (tmp_path/'qcscratch').symlink_to(target, target_is_directory=True)
     (scratch/'qarchive.h5').write_bytes(b'archive')
     (tmp_path/'input.q3.in').write_text('input')
     (tmp_path/'qchem.out').write_text(
         'Reading MOs from coefficient file\n'*2 +
         'There are 1 alpha and 0 beta electrons\nThank you very much for using Q-Chem')
-    case = dict(species='TMD01_H', electron_count=1, spin=1,
+    case = dict(species='TMD01_H', electron_count=1, spin=1, scratch_root=str(scratch_root),
                 qarchive_sha256=c.digest(scratch/'qarchive.h5'))
     c.write(tmp_path/'STAGE_COMPLETE.json', dict(plan_sha256='plan', species='TMD01_H',
             artifacts={n: c.digest(tmp_path/n) for n in ('input.q3.in', 'qchem.out')}))
@@ -87,3 +90,54 @@ def test_large_review_gate_precedes_execution(monkeypatch):
     monkeypatch.setattr(c, 'load_plan', lambda p: ({'cases': [case]}, None))
     with pytest.raises(ValueError, match='review'):
         c.run(Path('unused'), case['species'], 16, 557)
+
+
+def test_implicit_ecp_uses_bridge_not_inventory_flag():
+    text = source('Ru', 1).replace('METHOD wB97M-V', 'BASIS DEF2-QZVPP\nMETHOD wB97M-V')
+    bridge = dict(ecp_electrons='28', electron_count='16', spin='0',
+                  ecp_resolution='implicit_named_def2_ecp',
+                  orbital_qchem_label='DEF2-QZVPP', ecp_definition_sha256='a'*64)
+    assert c.electron_count(text, bridge) == (16, 0)
+    assert 'pt2' in c.stage_inputs(text, load_fit_settings(), bridge)
+    for key, value in [('ecp_electrons', '0'), ('electron_count', '44'),
+                       ('ecp_definition_sha256', ''), ('orbital_qchem_label', 'wrong')]:
+        with pytest.raises(ValueError):
+            c.electron_count(text, {**bridge, key: value})
+
+
+def test_actual_mor16_bridge_electron_count():
+    import csv
+    rows = {r['species']: r for r in csv.DictReader(c.INVENTORY.open())}
+    bridges = {r['species']: r for r in csv.DictReader(c.BRIDGE.open())}
+    row = rows['MOR16_ed33']; bridge = bridges['MOR16_ed33']
+    assert row['source_record_sha256'] == bridge['source_record_sha256']
+    assert c.electron_count(Path(row['qchem_input_path']).read_text(), bridge) == (200, 0)
+    assert int(bridge['ecp_electrons']) == 28
+
+
+def test_scratch_routing_is_external_and_non_overwriting(tmp_path):
+    root = tmp_path/'retained/scalar'
+    root.mkdir(parents=True)
+    case = {'scratch_root': str(tmp_path/'disposable/species')}
+    target = c.make_scratch_link(root, case)
+    assert (root/'qcscratch').is_symlink()
+    assert (root/'qcscratch').resolve() == target
+    assert root not in target.parents
+    with pytest.raises(ValueError, match='partial scratch'):
+        c.make_scratch_link(root, case)
+
+
+def test_native_workdir_and_temp_are_scratch(tmp_path, monkeypatch):
+    root = tmp_path/'retained/scalar'
+    root.mkdir(parents=True)
+    target = c.make_scratch_link(root, {'scratch_root': str(tmp_path/'scratch/species')})
+    temporary = target.parent/'temporary'; temporary.mkdir()
+    observed = {}
+    def fake_run(command, **kwargs):
+        observed.update(command=command, **kwargs)
+    monkeypatch.setattr(c.subprocess, 'run', fake_run)
+    c.run_native(root, 'scalar', 8, temporary)
+    assert observed['cwd'] == temporary
+    assert observed['env']['QCSCRATCH'] == str(target)
+    assert all(observed['env'][key] == str(temporary) for key in ('TMPDIR','TMP','TEMP'))
+    assert str(root/'qchem.out') in observed['command']

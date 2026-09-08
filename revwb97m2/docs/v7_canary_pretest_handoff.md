@@ -1,5 +1,33 @@
 # Approved canary implementation — pre-test commit checkpoint
 
+## Subsequent approved correction and execution
+
+The original pre-test stop below is historical. Commit b8736a7 passed110tests;
+freeze exposed implicit Ru ECP in MOR16_ed33 (the original no-ECP claim was
+incorrect). User approved basis-bridge-aware electron counting and separated
+storage. Corrected suite now passes114tests. New schema2 plan pins the bridge
+and code; MOR16 has200explicit+28ECP electrons without changing its input.
+Five smaller jobs25680429/25680433/25680434/25680435/25680436 submitted.
+The two larger cases remain unsubmitted pending smaller-case review.
+
+User storage policy supersedes the old unresolved-quota gate: retained inputs,
+outputs, feature arrays and logs under coach-based_dh_data/revwb97m2; working
+archives and Q-Chem cwd/temp under scf_read/revwb97m2. Stage qcscratch links
+point to that external scratch namespace; route identity is validated. Atomic
+Q4 publication staging remains beside retained arrays because it becomes the
+retained output, not disposable Q-Chem scratch. No old files moved or deleted.
+Current readback requires working qarchive evidence: do NOT delete scratch
+until an explicit evidence-preserving cleanup procedure is approved.
+Shared filesystem free capacity is the user-authorized limit; checks do not
+sum free space from two paths on the same filesystem. New scratch growth is
+not predicted by the24.314GiB copy-only lower bound.
+
+Corrections are uncommitted, explicitly hash-pinned in the frozen plan. A
+follow-up commit is needed before broader expansion; no silent code identity
+substitution or bulk authorization is implied.
+
+## Original implementation handoff (historical)
+
 User approved the seven-case plan and removed the maximum-two-jobs-overall cap.
 No global two-job cap is implemented. Memory/CPU/wall allocations and review
 before the two large cases remain. This turn implements the prerequisite new

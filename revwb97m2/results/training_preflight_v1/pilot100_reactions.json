@@ -1,0 +1,3391 @@
+[
+  {
+    "global_index": "10",
+    "si_row_index": "1",
+    "set_or_subset": "BH28",
+    "property_class": "BH",
+    "dataset_eval_dataset": "BH28",
+    "reaction": "BH28_CADBH_10",
+    "dataset_order": "10",
+    "selection_index": "10",
+    "weight_spec": "10",
+    "objective_weight": 10.0,
+    "reference_hartree": 0.043915451,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "BH28_CADBH_1_ts"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "BH28_CADBH_1_min"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "BH28_CADBH_c2h4"
+      }
+    ],
+    "species": [
+      "BH28_CADBH_1_min",
+      "BH28_CADBH_1_ts",
+      "BH28_CADBH_c2h4"
+    ],
+    "species_without_verified_v7_evidence": [
+      "BH28_CADBH_1_min",
+      "BH28_CADBH_1_ts",
+      "BH28_CADBH_c2h4"
+    ]
+  },
+  {
+    "global_index": "35",
+    "si_row_index": "2",
+    "set_or_subset": "BHDIV7",
+    "property_class": "BH",
+    "dataset_eval_dataset": "BHDIV7",
+    "reaction": "BHDIV10_10",
+    "dataset_order": "7",
+    "selection_index": "7",
+    "weight_spec": "16",
+    "objective_weight": 16.0,
+    "reference_hartree": 0.10347262,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "BHDIV10_ed10"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "BHDIV10_ts10"
+      }
+    ],
+    "species": [
+      "BHDIV10_ed10",
+      "BHDIV10_ts10"
+    ],
+    "species_without_verified_v7_evidence": [
+      "BHDIV10_ed10",
+      "BHDIV10_ts10"
+    ]
+  },
+  {
+    "global_index": "42",
+    "si_row_index": "3",
+    "set_or_subset": "BHPERI11",
+    "property_class": "BH",
+    "dataset_eval_dataset": "BHPERI11",
+    "reaction": "BHPERI_22",
+    "dataset_order": "7",
+    "selection_index": "7",
+    "weight_spec": "30",
+    "objective_weight": 30.0,
+    "reference_hartree": 0.0364935,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "BHPERI_04r"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "BHPERI_00r"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "BHPERI_04ts"
+      }
+    ],
+    "species": [
+      "BHPERI_00r",
+      "BHPERI_04r",
+      "BHPERI_04ts"
+    ],
+    "species_without_verified_v7_evidence": [
+      "BHPERI_00r",
+      "BHPERI_04r",
+      "BHPERI_04ts"
+    ]
+  },
+  {
+    "global_index": "48",
+    "si_row_index": "4",
+    "set_or_subset": "CRBH14",
+    "property_class": "BH",
+    "dataset_eval_dataset": "CRBH14",
+    "reaction": "CRBH20_4",
+    "dataset_order": "2",
+    "selection_index": "2",
+    "weight_spec": "10",
+    "objective_weight": 10.0,
+    "reference_hartree": 0.079534368,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "4ts_CRBH20"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "4react_CRBH20"
+      }
+    ],
+    "species": [
+      "4react_CRBH20",
+      "4ts_CRBH20"
+    ],
+    "species_without_verified_v7_evidence": [
+      "4react_CRBH20",
+      "4ts_CRBH20"
+    ]
+  },
+  {
+    "global_index": "69",
+    "si_row_index": "5",
+    "set_or_subset": "DBH22",
+    "property_class": "BH",
+    "dataset_eval_dataset": "DBH22",
+    "reaction": "DBH24_9",
+    "dataset_order": "9",
+    "selection_index": "9",
+    "weight_spec": "30",
+    "objective_weight": 30.0,
+    "reference_hartree": 0.07671597,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "48_hcn_BH76"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "49_hcnts_BH76"
+      }
+    ],
+    "species": [
+      "48_hcn_BH76",
+      "49_hcnts_BH76"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "77",
+    "si_row_index": "5",
+    "set_or_subset": "DBH22",
+    "property_class": "BH",
+    "dataset_eval_dataset": "DBH22",
+    "reaction": "DBH24_19",
+    "dataset_order": "17",
+    "selection_index": "17",
+    "weight_spec": "30",
+    "objective_weight": 30.0,
+    "reference_hartree": 0.017051535,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "58_hn2_BH76"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "59_hn2ts_BH76"
+      }
+    ],
+    "species": [
+      "58_hn2_BH76",
+      "59_hn2ts_BH76"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "79",
+    "si_row_index": "5",
+    "set_or_subset": "DBH22",
+    "property_class": "BH",
+    "dataset_eval_dataset": "DBH22",
+    "reaction": "DBH24_21",
+    "dataset_order": "19",
+    "selection_index": "19",
+    "weight_spec": "30",
+    "objective_weight": 30.0,
+    "reference_hartree": 0.052461357,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "60_hnc_BH76"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "49_hcnts_BH76"
+      }
+    ],
+    "species": [
+      "49_hcnts_BH76",
+      "60_hnc_BH76"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "89",
+    "si_row_index": "6",
+    "set_or_subset": "PX9",
+    "property_class": "BH",
+    "dataset_eval_dataset": "PX9",
+    "reaction": "PX13_9",
+    "dataset_order": "7",
+    "selection_index": "7",
+    "weight_spec": "20",
+    "objective_weight": 20.0,
+    "reference_hartree": 0.067409392,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "PX13_hf_2"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "PX13_hf_2_ts"
+      }
+    ],
+    "species": [
+      "PX13_hf_2",
+      "PX13_hf_2_ts"
+    ],
+    "species_without_verified_v7_evidence": [
+      "PX13_hf_2",
+      "PX13_hf_2_ts"
+    ]
+  },
+  {
+    "global_index": "125",
+    "si_row_index": "7",
+    "set_or_subset": "Dip146",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Dip146",
+    "reaction": "Dip146_101",
+    "dataset_order": "101",
+    "selection_index": "34",
+    "weight_spec": "1600",
+    "objective_weight": 1600.0,
+    "reference_hartree": 0.000142108,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "Dip146_HF2+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Dip146_HF2-"
+      }
+    ],
+    "species": [
+      "Dip146_HF2+",
+      "Dip146_HF2-"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "135",
+    "si_row_index": "7",
+    "set_or_subset": "Dip146",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Dip146",
+    "reaction": "Dip146_131",
+    "dataset_order": "131",
+    "selection_index": "44",
+    "weight_spec": "1600",
+    "objective_weight": 1600.0,
+    "reference_hartree": -0.000555229,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "Dip146_LiN2+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Dip146_LiN2-"
+      }
+    ],
+    "species": [
+      "Dip146_LiN2+",
+      "Dip146_LiN2-"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "138",
+    "si_row_index": "7",
+    "set_or_subset": "Dip146",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Dip146",
+    "reaction": "Dip146_140",
+    "dataset_order": "140",
+    "selection_index": "47",
+    "weight_spec": "1600",
+    "objective_weight": 1600.0,
+    "reference_hartree": 3.80629e-05,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "Dip146_NaLi2+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Dip146_NaLi2-"
+      }
+    ],
+    "species": [
+      "Dip146_NaLi2+",
+      "Dip146_NaLi2-"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "147",
+    "si_row_index": "7",
+    "set_or_subset": "Dip146",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Dip146",
+    "reaction": "Dip146_167",
+    "dataset_order": "167",
+    "selection_index": "56",
+    "weight_spec": "1600",
+    "objective_weight": 1600.0,
+    "reference_hartree": -0.000130234,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "Dip146_OH2+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Dip146_OH2-"
+      }
+    ],
+    "species": [
+      "Dip146_OH2+",
+      "Dip146_OH2-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Dip146_OH2+",
+      "Dip146_OH2-"
+    ]
+  },
+  {
+    "global_index": "156",
+    "si_row_index": "8",
+    "set_or_subset": "HR46",
+    "property_class": "EF",
+    "dataset_eval_dataset": "HR46",
+    "reaction": "HR46_4",
+    "dataset_order": "4",
+    "selection_index": "2",
+    "weight_spec": "10000",
+    "objective_weight": 10000.0,
+    "reference_hartree": 0.000394974,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "HR46_chlorine1+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "HR46_chlorine1-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "HR46_chlorine"
+      }
+    ],
+    "species": [
+      "HR46_chlorine",
+      "HR46_chlorine1+",
+      "HR46_chlorine1-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "HR46_chlorine",
+      "HR46_chlorine1+",
+      "HR46_chlorine1-"
+    ]
+  },
+  {
+    "global_index": "201",
+    "si_row_index": "9",
+    "set_or_subset": "Pol130",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Pol130",
+    "reaction": "Pol130_4",
+    "dataset_order": "4",
+    "selection_index": "2",
+    "weight_spec": "6400",
+    "objective_weight": 6400.0,
+    "reference_hartree": 0.003793914,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_Be0+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_Be0-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "Pol130_Be"
+      }
+    ],
+    "species": [
+      "Pol130_Be",
+      "Pol130_Be0+",
+      "Pol130_Be0-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Pol130_Be",
+      "Pol130_Be0+",
+      "Pol130_Be0-"
+    ]
+  },
+  {
+    "global_index": "232",
+    "si_row_index": "9",
+    "set_or_subset": "Pol130",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Pol130",
+    "reaction": "Pol130_105",
+    "dataset_order": "105",
+    "selection_index": "33",
+    "weight_spec": "6400",
+    "objective_weight": 6400.0,
+    "reference_hartree": 0.000457537,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_H20+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_H20-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "Pol130_H2"
+      }
+    ],
+    "species": [
+      "Pol130_H2",
+      "Pol130_H20+",
+      "Pol130_H20-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Pol130_H2",
+      "Pol130_H20+",
+      "Pol130_H20-"
+    ]
+  },
+  {
+    "global_index": "246",
+    "si_row_index": "9",
+    "set_or_subset": "Pol130",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Pol130",
+    "reaction": "Pol130_145",
+    "dataset_order": "145",
+    "selection_index": "47",
+    "weight_spec": "6400",
+    "objective_weight": 6400.0,
+    "reference_hartree": 0.000138341,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_He0+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_He0-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "Pol130_He"
+      }
+    ],
+    "species": [
+      "Pol130_He",
+      "Pol130_He0+",
+      "Pol130_He0-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Pol130_He",
+      "Pol130_He0+",
+      "Pol130_He0-"
+    ]
+  },
+  {
+    "global_index": "257",
+    "si_row_index": "9",
+    "set_or_subset": "Pol130",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Pol130",
+    "reaction": "Pol130_173",
+    "dataset_order": "173",
+    "selection_index": "58",
+    "weight_spec": "6400",
+    "objective_weight": 6400.0,
+    "reference_hartree": 0.002683138,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_LiCl2+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_LiCl2-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "Pol130_LiCl"
+      }
+    ],
+    "species": [
+      "Pol130_LiCl",
+      "Pol130_LiCl2+",
+      "Pol130_LiCl2-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Pol130_LiCl",
+      "Pol130_LiCl2+",
+      "Pol130_LiCl2-"
+    ]
+  },
+  {
+    "global_index": "259",
+    "si_row_index": "9",
+    "set_or_subset": "Pol130",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Pol130",
+    "reaction": "Pol130_180",
+    "dataset_order": "180",
+    "selection_index": "60",
+    "weight_spec": "6400",
+    "objective_weight": 6400.0,
+    "reference_hartree": 0.000124176102966856,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_Mg20+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_Mg20-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "Pol130_Mg2"
+      }
+    ],
+    "species": [
+      "Pol130_Mg2",
+      "Pol130_Mg20+",
+      "Pol130_Mg20-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Pol130_Mg2",
+      "Pol130_Mg20+",
+      "Pol130_Mg20-"
+    ]
+  },
+  {
+    "global_index": "260",
+    "si_row_index": "9",
+    "set_or_subset": "Pol130",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Pol130",
+    "reaction": "Pol130_182",
+    "dataset_order": "182",
+    "selection_index": "61",
+    "weight_spec": "6400",
+    "objective_weight": 6400.0,
+    "reference_hartree": 0.000726796,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_N0+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_N0-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "Pol130_N"
+      }
+    ],
+    "species": [
+      "Pol130_N",
+      "Pol130_N0+",
+      "Pol130_N0-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Pol130_N",
+      "Pol130_N0+",
+      "Pol130_N0-"
+    ]
+  },
+  {
+    "global_index": "263",
+    "si_row_index": "9",
+    "set_or_subset": "Pol130",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Pol130",
+    "reaction": "Pol130_192",
+    "dataset_order": "192",
+    "selection_index": "64",
+    "weight_spec": "6400",
+    "objective_weight": 6400.0,
+    "reference_hartree": 0.000205378811895728,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_Na20+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_Na20-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "Pol130_Na2"
+      }
+    ],
+    "species": [
+      "Pol130_Na2",
+      "Pol130_Na20+",
+      "Pol130_Na20-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Pol130_Na2",
+      "Pol130_Na20+",
+      "Pol130_Na20-"
+    ]
+  },
+  {
+    "global_index": "265",
+    "si_row_index": "9",
+    "set_or_subset": "Pol130",
+    "property_class": "EF",
+    "dataset_eval_dataset": "Pol130",
+    "reaction": "Pol130_200",
+    "dataset_order": "200",
+    "selection_index": "66",
+    "weight_spec": "6400",
+    "objective_weight": 6400.0,
+    "reference_hartree": 5.51271444560754e-05,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_NaH2+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "Pol130_NaH2-"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "Pol130_NaH"
+      }
+    ],
+    "species": [
+      "Pol130_NaH",
+      "Pol130_NaH2+",
+      "Pol130_NaH2-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "Pol130_NaH",
+      "Pol130_NaH2+",
+      "Pol130_NaH2-"
+    ]
+  },
+  {
+    "global_index": "295",
+    "si_row_index": "10",
+    "set_or_subset": "EIE22",
+    "property_class": "ISO",
+    "dataset_eval_dataset": "EIE22",
+    "reaction": "EIE22_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "20",
+    "objective_weight": 20.0,
+    "reference_hartree": 0.010245668475,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "12_Product1_EIE22"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_Reactant1_EIE22"
+      }
+    ],
+    "species": [
+      "11_Reactant1_EIE22",
+      "12_Product1_EIE22"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "300",
+    "si_row_index": "10",
+    "set_or_subset": "EIE22",
+    "property_class": "ISO",
+    "dataset_eval_dataset": "EIE22",
+    "reaction": "EIE22_6",
+    "dataset_order": "6",
+    "selection_index": "6",
+    "weight_spec": "20",
+    "objective_weight": 20.0,
+    "reference_hartree": 0.00723671751,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "22_Product6_EIE22"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "21_Reactant6_EIE22"
+      }
+    ],
+    "species": [
+      "21_Reactant6_EIE22",
+      "22_Product6_EIE22"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "312",
+    "si_row_index": "10",
+    "set_or_subset": "EIE22",
+    "property_class": "ISO",
+    "dataset_eval_dataset": "EIE22",
+    "reaction": "EIE22_18",
+    "dataset_order": "18",
+    "selection_index": "18",
+    "weight_spec": "20",
+    "objective_weight": 20.0,
+    "reference_hartree": -0.004380118493,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "46_Product18_EIE22"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "45_Reactant18_EIE22"
+      }
+    ],
+    "species": [
+      "45_Reactant18_EIE22",
+      "46_Product18_EIE22"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "317",
+    "si_row_index": "11",
+    "set_or_subset": "PCONF21",
+    "property_class": "INC",
+    "dataset_eval_dataset": "PCONF21",
+    "reaction": "PCONF21_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "50",
+    "objective_weight": 50.0,
+    "reference_hartree": 3.19e-05,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "PCONF21_99"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "PCONF21_444"
+      }
+    ],
+    "species": [
+      "PCONF21_444",
+      "PCONF21_99"
+    ],
+    "species_without_verified_v7_evidence": [
+      "PCONF21_444",
+      "PCONF21_99"
+    ]
+  },
+  {
+    "global_index": "335",
+    "si_row_index": "12",
+    "set_or_subset": "Styrene42",
+    "property_class": "ISO",
+    "dataset_eval_dataset": "Styrene42",
+    "reaction": "Styrene45_2",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "5",
+    "objective_weight": 5.0,
+    "reference_hartree": 0.018358288,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "12_Isomer2_Styrene45"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_Isomer1_Styrene45"
+      }
+    ],
+    "species": [
+      "11_Isomer1_Styrene45",
+      "12_Isomer2_Styrene45"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_Isomer1_Styrene45",
+      "12_Isomer2_Styrene45"
+    ]
+  },
+  {
+    "global_index": "377",
+    "si_row_index": "13",
+    "set_or_subset": "AlkIsomer11",
+    "property_class": "ISO",
+    "dataset_eval_dataset": "AlkIsomer11",
+    "reaction": "AlkIsomer11_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "50",
+    "objective_weight": 50.0,
+    "reference_hartree": -0.002296379577,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "19_isobutane_Alk44"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "14_butane_Alk44"
+      }
+    ],
+    "species": [
+      "14_butane_Alk44",
+      "19_isobutane_Alk44"
+    ],
+    "species_without_verified_v7_evidence": [
+      "14_butane_Alk44",
+      "19_isobutane_Alk44"
+    ]
+  },
+  {
+    "global_index": "388",
+    "si_row_index": "14",
+    "set_or_subset": "BUT14DIOL",
+    "property_class": "INC",
+    "dataset_eval_dataset": "BUT14DIOL",
+    "reaction": "BUT14DIOL_3",
+    "dataset_order": "3",
+    "selection_index": "1",
+    "weight_spec": "200",
+    "objective_weight": 200.0,
+    "reference_hartree": 0.002087619,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "BUT14DIOL_B1"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "BUT14DIOL_B4"
+      }
+    ],
+    "species": [
+      "BUT14DIOL_B1",
+      "BUT14DIOL_B4"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "389",
+    "si_row_index": "14",
+    "set_or_subset": "BUT14DIOL",
+    "property_class": "INC",
+    "dataset_eval_dataset": "BUT14DIOL",
+    "reaction": "BUT14DIOL_4",
+    "dataset_order": "4",
+    "selection_index": "2",
+    "weight_spec": "200",
+    "objective_weight": 200.0,
+    "reference_hartree": 0.002294788,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "BUT14DIOL_B1"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "BUT14DIOL_B5"
+      }
+    ],
+    "species": [
+      "BUT14DIOL_B1",
+      "BUT14DIOL_B5"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "402",
+    "si_row_index": "15",
+    "set_or_subset": "S66Rel7",
+    "property_class": "NC",
+    "dataset_eval_dataset": "S66Rel7",
+    "reaction": "S66Rel7_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "60",
+    "objective_weight": 60.0,
+    "reference_hartree": 0.000446208,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "2699_01WaterWater090_dim_S66x8"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "2701_01WaterWater100_dim_S66x8"
+      }
+    ],
+    "species": [
+      "2699_01WaterWater090_dim_S66x8",
+      "2701_01WaterWater100_dim_S66x8"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "469",
+    "si_row_index": "15",
+    "set_or_subset": "S66Rel7",
+    "property_class": "NC",
+    "dataset_eval_dataset": "S66Rel7",
+    "reaction": "S66Rel7_407",
+    "dataset_order": "407",
+    "selection_index": "68",
+    "weight_spec": "60",
+    "objective_weight": 60.0,
+    "reference_hartree": 0.000470112,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "3163_59EthyneWaterCHO090_dim_S66x8"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "3165_59EthyneWaterCHO100_dim_S66x8"
+      }
+    ],
+    "species": [
+      "3163_59EthyneWaterCHO090_dim_S66x8",
+      "3165_59EthyneWaterCHO100_dim_S66x8"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "476",
+    "si_row_index": "16",
+    "set_or_subset": "Bauza30",
+    "property_class": "NC",
+    "dataset_eval_dataset": "Bauza30",
+    "reaction": "Bauza30_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "20",
+    "objective_weight": 20.0,
+    "reference_hartree": -0.069975036235,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "11_Cl-_ClF_dim_Bauza30"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_Cl-_ClF_monA_Bauza30"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_Cl-_ClF_monB_Bauza30"
+      }
+    ],
+    "species": [
+      "11_Cl-_ClF_dim_Bauza30",
+      "11_Cl-_ClF_monA_Bauza30",
+      "11_Cl-_ClF_monB_Bauza30"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_Cl-_ClF_dim_Bauza30",
+      "11_Cl-_ClF_monA_Bauza30",
+      "11_Cl-_ClF_monB_Bauza30"
+    ]
+  },
+  {
+    "global_index": "477",
+    "si_row_index": "16",
+    "set_or_subset": "Bauza30",
+    "property_class": "NC",
+    "dataset_eval_dataset": "Bauza30",
+    "reaction": "Bauza30_2",
+    "dataset_order": "2",
+    "selection_index": "2",
+    "weight_spec": "20",
+    "objective_weight": 20.0,
+    "reference_hartree": -0.067903354451,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "12_Br-_ClF_dim_Bauza30"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_Br-_ClF_monA_Bauza30"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_Br-_ClF_monB_Bauza30"
+      }
+    ],
+    "species": [
+      "12_Br-_ClF_dim_Bauza30",
+      "12_Br-_ClF_monA_Bauza30",
+      "12_Br-_ClF_monB_Bauza30"
+    ],
+    "species_without_verified_v7_evidence": [
+      "12_Br-_ClF_dim_Bauza30",
+      "12_Br-_ClF_monA_Bauza30",
+      "12_Br-_ClF_monB_Bauza30"
+    ]
+  },
+  {
+    "global_index": "511",
+    "si_row_index": "17",
+    "set_or_subset": "CT20",
+    "property_class": "NC",
+    "dataset_eval_dataset": "CT20",
+    "reaction": "CT20_6",
+    "dataset_order": "6",
+    "selection_index": "6",
+    "weight_spec": "400",
+    "objective_weight": 400.0,
+    "reference_hartree": -0.00291629051,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "16_HF-A_dim_CT20"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "16_HF-A_monA_CT20"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "16_HF-A_monB_CT20"
+      }
+    ],
+    "species": [
+      "16_HF-A_dim_CT20",
+      "16_HF-A_monA_CT20",
+      "16_HF-A_monB_CT20"
+    ],
+    "species_without_verified_v7_evidence": [
+      "16_HF-A_dim_CT20",
+      "16_HF-A_monA_CT20",
+      "16_HF-A_monB_CT20"
+    ]
+  },
+  {
+    "global_index": "527",
+    "si_row_index": "18",
+    "set_or_subset": "HCP32",
+    "property_class": "NC",
+    "dataset_eval_dataset": "HCP32",
+    "reaction": "HCP32_2",
+    "dataset_order": "2",
+    "selection_index": "2",
+    "weight_spec": "60",
+    "objective_weight": 60.0,
+    "reference_hartree": -0.001625473,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "HCP32_2_FCl_2_dim"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "HCP32_2_FCl_2_monA"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "HCP32_2_FCl_2_monB"
+      }
+    ],
+    "species": [
+      "HCP32_2_FCl_2_dim",
+      "HCP32_2_FCl_2_monA",
+      "HCP32_2_FCl_2_monB"
+    ],
+    "species_without_verified_v7_evidence": [
+      "HCP32_2_FCl_2_dim",
+      "HCP32_2_FCl_2_monA",
+      "HCP32_2_FCl_2_monB"
+    ]
+  },
+  {
+    "global_index": "558",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.012096745,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "19_H2O-Al_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_H2O_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "32_al_TA13"
+      }
+    ],
+    "species": [
+      "11_H2O_TA13",
+      "19_H2O-Al_TA13",
+      "32_al_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_H2O_TA13",
+      "19_H2O-Al_TA13",
+      "32_al_TA13"
+    ]
+  },
+  {
+    "global_index": "559",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_2",
+    "dataset_order": "2",
+    "selection_index": "2",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.10231195,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "20_H2O-Be+_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_H2O_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "33_be+_TA13"
+      }
+    ],
+    "species": [
+      "11_H2O_TA13",
+      "20_H2O-Be+_TA13",
+      "33_be+_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_H2O_TA13",
+      "20_H2O-Be+_TA13",
+      "33_be+_TA13"
+    ]
+  },
+  {
+    "global_index": "560",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_3",
+    "dataset_order": "3",
+    "selection_index": "3",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.00561036,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "21_H2O-Br_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_H2O_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "34_br_TA13"
+      }
+    ],
+    "species": [
+      "11_H2O_TA13",
+      "21_H2O-Br_TA13",
+      "34_br_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_H2O_TA13",
+      "21_H2O-Br_TA13",
+      "34_br_TA13"
+    ]
+  },
+  {
+    "global_index": "562",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_5",
+    "dataset_order": "5",
+    "selection_index": "5",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.005880785,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "23_H2O-Cl_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_H2O_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "35_cl_TA13"
+      }
+    ],
+    "species": [
+      "11_H2O_TA13",
+      "23_H2O-Cl_TA13",
+      "35_cl_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_H2O_TA13",
+      "23_H2O-Cl_TA13",
+      "35_cl_TA13"
+    ]
+  },
+  {
+    "global_index": "563",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_6",
+    "dataset_order": "6",
+    "selection_index": "6",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.006101696,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "24_H2O-F_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_H2O_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "36_f_TA13"
+      }
+    ],
+    "species": [
+      "11_H2O_TA13",
+      "24_H2O-F_TA13",
+      "36_f_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_H2O_TA13",
+      "24_H2O-F_TA13",
+      "36_f_TA13"
+    ]
+  },
+  {
+    "global_index": "564",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_7",
+    "dataset_order": "7",
+    "selection_index": "7",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.019737195,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "25_H2O-Li_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "11_H2O_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "37_li_TA13"
+      }
+    ],
+    "species": [
+      "11_H2O_TA13",
+      "25_H2O-Li_TA13",
+      "37_li_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_H2O_TA13",
+      "25_H2O-Li_TA13",
+      "37_li_TA13"
+    ]
+  },
+  {
+    "global_index": "567",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_10",
+    "dataset_order": "10",
+    "selection_index": "10",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.006433061,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "28_FH-BH2_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_HF_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "13_BH2_TA13"
+      }
+    ],
+    "species": [
+      "12_HF_TA13",
+      "13_BH2_TA13",
+      "28_FH-BH2_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "12_HF_TA13",
+      "13_BH2_TA13",
+      "28_FH-BH2_TA13"
+    ]
+  },
+  {
+    "global_index": "568",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_11",
+    "dataset_order": "11",
+    "selection_index": "11",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.046482579,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "29_HF-CO+_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_HF_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "15_CO+_TA13"
+      }
+    ],
+    "species": [
+      "12_HF_TA13",
+      "15_CO+_TA13",
+      "29_HF-CO+_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "12_HF_TA13",
+      "15_CO+_TA13",
+      "29_HF-CO+_TA13"
+    ]
+  },
+  {
+    "global_index": "569",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_12",
+    "dataset_order": "12",
+    "selection_index": "12",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.015677015,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "30_FH-NH2_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_HF_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "16_NH2_TA13"
+      }
+    ],
+    "species": [
+      "12_HF_TA13",
+      "16_NH2_TA13",
+      "30_FH-NH2_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "12_HF_TA13",
+      "16_NH2_TA13",
+      "30_FH-NH2_TA13"
+    ]
+  },
+  {
+    "global_index": "570",
+    "si_row_index": "19",
+    "set_or_subset": "TA13",
+    "property_class": "NC",
+    "dataset_eval_dataset": "TA13",
+    "reaction": "TA13_13",
+    "dataset_order": "13",
+    "selection_index": "13",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": -0.009468674,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "31_FH-OH_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_HF_TA13"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "18_OH_TA13"
+      }
+    ],
+    "species": [
+      "12_HF_TA13",
+      "18_OH_TA13",
+      "31_FH-OH_TA13"
+    ],
+    "species_without_verified_v7_evidence": [
+      "12_HF_TA13",
+      "18_OH_TA13",
+      "31_FH-OH_TA13"
+    ]
+  },
+  {
+    "global_index": "577",
+    "si_row_index": "20",
+    "set_or_subset": "XB25",
+    "property_class": "NC",
+    "dataset_eval_dataset": "XB25",
+    "reaction": "XB25_7",
+    "dataset_order": "7",
+    "selection_index": "7",
+    "weight_spec": "200",
+    "objective_weight": 200.0,
+    "reference_hartree": -0.002244005,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "31_HBrNCH_XB18"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "30_HBr_XB18"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "33_HCN_XB18"
+      }
+    ],
+    "species": [
+      "30_HBr_XB18",
+      "31_HBrNCH_XB18",
+      "33_HCN_XB18"
+    ],
+    "species_without_verified_v7_evidence": [
+      "30_HBr_XB18",
+      "31_HBrNCH_XB18",
+      "33_HCN_XB18"
+    ]
+  },
+  {
+    "global_index": "579",
+    "si_row_index": "21",
+    "set_or_subset": "HW6Cl5",
+    "property_class": "NC",
+    "dataset_eval_dataset": "HW6Cl5",
+    "reaction": "HW6Cl_2",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "120",
+    "objective_weight": 120.0,
+    "reference_hartree": -0.049417579,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "12_H2O2Cl_HW6Cl"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_H2O2Cl_mon1_HW6Cl"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_H2O2Cl_mon2_HW6Cl"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "12_H2O2Cl_mon3_HW6Cl"
+      }
+    ],
+    "species": [
+      "12_H2O2Cl_HW6Cl",
+      "12_H2O2Cl_mon1_HW6Cl",
+      "12_H2O2Cl_mon2_HW6Cl",
+      "12_H2O2Cl_mon3_HW6Cl"
+    ],
+    "species_without_verified_v7_evidence": [
+      "12_H2O2Cl_HW6Cl",
+      "12_H2O2Cl_mon1_HW6Cl",
+      "12_H2O2Cl_mon2_HW6Cl",
+      "12_H2O2Cl_mon3_HW6Cl"
+    ]
+  },
+  {
+    "global_index": "584",
+    "si_row_index": "22",
+    "set_or_subset": "Shields38",
+    "property_class": "NC",
+    "dataset_eval_dataset": "Shields38",
+    "reaction": "Shields38_14",
+    "dataset_order": "14",
+    "selection_index": "1",
+    "weight_spec": "100",
+    "objective_weight": 100.0,
+    "reference_hartree": -0.0715529259685583,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "4192_water6BAG_Shields38"
+      },
+      {
+        "coefficient": -6.0,
+        "species": "4217_waterC2v_Shields38"
+      }
+    ],
+    "species": [
+      "4192_water6BAG_Shields38",
+      "4217_waterC2v_Shields38"
+    ],
+    "species_without_verified_v7_evidence": [
+      "4192_water6BAG_Shields38",
+      "4217_waterC2v_Shields38"
+    ]
+  },
+  {
+    "global_index": "595",
+    "si_row_index": "23",
+    "set_or_subset": "A24",
+    "property_class": "NC",
+    "dataset_eval_dataset": "A24",
+    "reaction": "A24_4",
+    "dataset_order": "4",
+    "selection_index": "4",
+    "weight_spec": "400",
+    "objective_weight": 400.0,
+    "reference_hartree": -0.007333754,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "3960_04HFdimer_dim_A24"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "3960_04HFdimer_monA_A24"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "3960_04HFdimer_monB_A24"
+      }
+    ],
+    "species": [
+      "3960_04HFdimer_dim_A24",
+      "3960_04HFdimer_monA_A24",
+      "3960_04HFdimer_monB_A24"
+    ],
+    "species_without_verified_v7_evidence": [
+      "3960_04HFdimer_dim_A24",
+      "3960_04HFdimer_monA_A24",
+      "3960_04HFdimer_monB_A24"
+    ]
+  },
+  {
+    "global_index": "625",
+    "si_row_index": "24",
+    "set_or_subset": "DS14",
+    "property_class": "NC",
+    "dataset_eval_dataset": "DS14",
+    "reaction": "DS14_10",
+    "dataset_order": "10",
+    "selection_index": "10",
+    "weight_spec": "60",
+    "objective_weight": 60.0,
+    "reference_hartree": -0.007904262804,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "20_h2o_dimer_cs_dim_DS14"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "20_h2o_dimer_cs_monA_DS14"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "20_h2o_dimer_cs_monB_DS14"
+      }
+    ],
+    "species": [
+      "20_h2o_dimer_cs_dim_DS14",
+      "20_h2o_dimer_cs_monA_DS14",
+      "20_h2o_dimer_cs_monB_DS14"
+    ],
+    "species_without_verified_v7_evidence": [
+      "20_h2o_dimer_cs_dim_DS14",
+      "20_h2o_dimer_cs_monA_DS14",
+      "20_h2o_dimer_cs_monB_DS14"
+    ]
+  },
+  {
+    "global_index": "644",
+    "si_row_index": "25",
+    "set_or_subset": "HSG",
+    "property_class": "NC",
+    "dataset_eval_dataset": "HSG",
+    "reaction": "HSG_15",
+    "dataset_order": "15",
+    "selection_index": "15",
+    "weight_spec": "150",
+    "objective_weight": 150.0,
+    "reference_hartree": -0.001364122774,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "25_ile184_dim_HSG"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "25_ile184_monA_HSG"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "25_ile184_monB_HSG"
+      }
+    ],
+    "species": [
+      "25_ile184_dim_HSG",
+      "25_ile184_monA_HSG",
+      "25_ile184_monB_HSG"
+    ],
+    "species_without_verified_v7_evidence": [
+      "25_ile184_dim_HSG",
+      "25_ile184_monA_HSG",
+      "25_ile184_monB_HSG"
+    ]
+  },
+  {
+    "global_index": "697",
+    "si_row_index": "26",
+    "set_or_subset": "IHB100",
+    "property_class": "NC",
+    "dataset_eval_dataset": "IHB100",
+    "reaction": "IHB100_47",
+    "dataset_order": "47",
+    "selection_index": "47",
+    "weight_spec": "80",
+    "objective_weight": 80.0,
+    "reference_hartree": -0.06522292,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "IHB100x10_05.012_OH-Oa__water--hydroxide_100"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "IHB100x10_05.012_OH-Oa__water--hydroxide_monA"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "IHB100x10_05.012_OH-Oa__water--hydroxide_monB"
+      }
+    ],
+    "species": [
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_100",
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_monA",
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_monB"
+    ],
+    "species_without_verified_v7_evidence": [
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_100",
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_monA",
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_monB"
+    ]
+  },
+  {
+    "global_index": "762",
+    "si_row_index": "27",
+    "set_or_subset": "IL16",
+    "property_class": "NC",
+    "dataset_eval_dataset": "IL16",
+    "reaction": "IL16_12",
+    "dataset_order": "12",
+    "selection_index": "12",
+    "weight_spec": "120",
+    "objective_weight": 120.0,
+    "reference_hartree": -0.188347896,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "IL16_227"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "IL16_227A"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "IL16_227B"
+      }
+    ],
+    "species": [
+      "IL16_227",
+      "IL16_227A",
+      "IL16_227B"
+    ],
+    "species_without_verified_v7_evidence": [
+      "IL16_227",
+      "IL16_227A",
+      "IL16_227B"
+    ]
+  },
+  {
+    "global_index": "767",
+    "si_row_index": "28",
+    "set_or_subset": "RG10N1",
+    "property_class": "NC",
+    "dataset_eval_dataset": "RG10N",
+    "reaction": "RG10N_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "25",
+    "objective_weight": 25.0,
+    "reference_hartree": 0.0119317,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "RG10N_HeHe_1p588"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "RG10N_He"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "RG10N_He"
+      }
+    ],
+    "species": [
+      "RG10N_He",
+      "RG10N_HeHe_1p588"
+    ],
+    "species_without_verified_v7_evidence": [
+      "RG10N_He",
+      "RG10N_HeHe_1p588"
+    ]
+  },
+  {
+    "global_index": "790",
+    "si_row_index": "29",
+    "set_or_subset": "RG10N2",
+    "property_class": "NC",
+    "dataset_eval_dataset": "RG10N",
+    "reaction": "RG10N_3",
+    "dataset_order": "3",
+    "selection_index": "1",
+    "weight_spec": "800",
+    "objective_weight": 800.0,
+    "reference_hartree": -1.49201e-06,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "RG10N_HeHe_2p646"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "RG10N_He"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "RG10N_He"
+      }
+    ],
+    "species": [
+      "RG10N_He",
+      "RG10N_HeHe_2p646"
+    ],
+    "species_without_verified_v7_evidence": [
+      "RG10N_He",
+      "RG10N_HeHe_2p646"
+    ]
+  },
+  {
+    "global_index": "807",
+    "si_row_index": "30",
+    "set_or_subset": "S22",
+    "property_class": "NC",
+    "dataset_eval_dataset": "S22",
+    "reaction": "S22_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "120",
+    "objective_weight": 120.0,
+    "reference_hartree": 0.004992757,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "S22_01"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "S22_01a"
+      }
+    ],
+    "species": [
+      "S22_01",
+      "S22_01a"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "814",
+    "si_row_index": "30",
+    "set_or_subset": "S22",
+    "property_class": "NC",
+    "dataset_eval_dataset": "S22",
+    "reaction": "S22_8",
+    "dataset_order": "8",
+    "selection_index": "8",
+    "weight_spec": "120",
+    "objective_weight": 120.0,
+    "reference_hartree": 0.000839829,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "S22_08"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "S22_08a"
+      }
+    ],
+    "species": [
+      "S22_08",
+      "S22_08a"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "837",
+    "si_row_index": "31",
+    "set_or_subset": "MB16-43",
+    "property_class": "TC",
+    "dataset_eval_dataset": "MB16-43",
+    "reaction": "MB16-43_9",
+    "dataset_order": "9",
+    "selection_index": "9",
+    "weight_spec": "0.05",
+    "objective_weight": 0.05,
+    "reference_hartree": 0.607848015,
+    "stoichiometry": [
+      {
+        "coefficient": -2.0,
+        "species": "MB16-43_09"
+      },
+      {
+        "coefficient": -6.0,
+        "species": "MB16-43_H2"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "MB16-43_LiH"
+      },
+      {
+        "coefficient": 4.0,
+        "species": "MB16-43_BH3"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "MB16-43_CH4"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "MB16-43_F2"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "MB16-43_SiH4"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "MB16-43_Cl2"
+      }
+    ],
+    "species": [
+      "MB16-43_09",
+      "MB16-43_BH3",
+      "MB16-43_CH4",
+      "MB16-43_Cl2",
+      "MB16-43_F2",
+      "MB16-43_H2",
+      "MB16-43_LiH",
+      "MB16-43_SiH4"
+    ],
+    "species_without_verified_v7_evidence": [
+      "MB16-43_09",
+      "MB16-43_BH3",
+      "MB16-43_CH4",
+      "MB16-43_Cl2",
+      "MB16-43_F2",
+      "MB16-43_H2",
+      "MB16-43_LiH",
+      "MB16-43_SiH4"
+    ]
+  },
+  {
+    "global_index": "872",
+    "si_row_index": "32",
+    "set_or_subset": "MX34",
+    "property_class": "TC",
+    "dataset_eval_dataset": "MX34",
+    "reaction": "MX35_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "0.02",
+    "objective_weight": 0.02,
+    "reference_hartree": 0.18333651,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "MX35_1109_NaF_01"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "MX35_Na"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "MX35_F"
+      }
+    ],
+    "species": [
+      "MX35_1109_NaF_01",
+      "MX35_F",
+      "MX35_Na"
+    ],
+    "species_without_verified_v7_evidence": [
+      "MX35_1109_NaF_01",
+      "MX35_F",
+      "MX35_Na"
+    ]
+  },
+  {
+    "global_index": "906",
+    "si_row_index": "33",
+    "set_or_subset": "AE18",
+    "property_class": "TC",
+    "dataset_eval_dataset": "AE18",
+    "reaction": "AE18_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "1/sqrt(j)",
+    "objective_weight": 1.0,
+    "reference_hartree": -0.5,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "11_H_AE18"
+      }
+    ],
+    "species": [
+      "11_H_AE18"
+    ],
+    "species_without_verified_v7_evidence": [
+      "11_H_AE18"
+    ]
+  },
+  {
+    "global_index": "907",
+    "si_row_index": "33",
+    "set_or_subset": "AE18",
+    "property_class": "TC",
+    "dataset_eval_dataset": "AE18",
+    "reaction": "AE18_2",
+    "dataset_order": "2",
+    "selection_index": "2",
+    "weight_spec": "1/sqrt(j)",
+    "objective_weight": 0.7071067811865475,
+    "reference_hartree": -2.90372,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "12_He_AE18"
+      }
+    ],
+    "species": [
+      "12_He_AE18"
+    ],
+    "species_without_verified_v7_evidence": [
+      "12_He_AE18"
+    ]
+  },
+  {
+    "global_index": "908",
+    "si_row_index": "33",
+    "set_or_subset": "AE18",
+    "property_class": "TC",
+    "dataset_eval_dataset": "AE18",
+    "reaction": "AE18_3",
+    "dataset_order": "3",
+    "selection_index": "3",
+    "weight_spec": "1/sqrt(j)",
+    "objective_weight": 0.5773502691896258,
+    "reference_hartree": -7.47806,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "13_Li_AE18"
+      }
+    ],
+    "species": [
+      "13_Li_AE18"
+    ],
+    "species_without_verified_v7_evidence": [
+      "13_Li_AE18"
+    ]
+  },
+  {
+    "global_index": "909",
+    "si_row_index": "33",
+    "set_or_subset": "AE18",
+    "property_class": "TC",
+    "dataset_eval_dataset": "AE18",
+    "reaction": "AE18_4",
+    "dataset_order": "4",
+    "selection_index": "4",
+    "weight_spec": "1/sqrt(j)",
+    "objective_weight": 0.5,
+    "reference_hartree": -14.66736,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "14_Be_AE18"
+      }
+    ],
+    "species": [
+      "14_Be_AE18"
+    ],
+    "species_without_verified_v7_evidence": [
+      "14_Be_AE18"
+    ]
+  },
+  {
+    "global_index": "931",
+    "si_row_index": "34",
+    "set_or_subset": "ALK8",
+    "property_class": "TC",
+    "dataset_eval_dataset": "ALK8",
+    "reaction": "ALK8_8",
+    "dataset_order": "8",
+    "selection_index": "8",
+    "weight_spec": "2",
+    "objective_weight": 2.0,
+    "reference_hartree": 0.040318147,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "ALK8_na+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "ALK8_li_na_h2"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "ALK8_li+"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "ALK8_na2_h2"
+      }
+    ],
+    "species": [
+      "ALK8_li+",
+      "ALK8_li_na_h2",
+      "ALK8_na+",
+      "ALK8_na2_h2"
+    ],
+    "species_without_verified_v7_evidence": [
+      "ALK8_li+",
+      "ALK8_li_na_h2",
+      "ALK8_na+",
+      "ALK8_na2_h2"
+    ]
+  },
+  {
+    "global_index": "935",
+    "si_row_index": "35",
+    "set_or_subset": "AlkAtom19",
+    "property_class": "TC",
+    "dataset_eval_dataset": "AlkAtom19",
+    "reaction": "AlkAtom19_4",
+    "dataset_order": "4",
+    "selection_index": "4",
+    "weight_spec": "1",
+    "objective_weight": 1.0,
+    "reference_hartree": -2.076239483227,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "14_butane_Alk44"
+      },
+      {
+        "coefficient": -4.0,
+        "species": "133_c_W4-11"
+      },
+      {
+        "coefficient": -10.0,
+        "species": "189_h_W4-11"
+      }
+    ],
+    "species": [
+      "133_c_W4-11",
+      "14_butane_Alk44",
+      "189_h_W4-11"
+    ],
+    "species_without_verified_v7_evidence": [
+      "133_c_W4-11",
+      "14_butane_Alk44",
+      "189_h_W4-11"
+    ]
+  },
+  {
+    "global_index": "940",
+    "si_row_index": "35",
+    "set_or_subset": "AlkAtom19",
+    "property_class": "TC",
+    "dataset_eval_dataset": "AlkAtom19",
+    "reaction": "AlkAtom19_9",
+    "dataset_order": "9",
+    "selection_index": "9",
+    "weight_spec": "1",
+    "objective_weight": 1.0,
+    "reference_hartree": -2.078534269202,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "19_isobutane_Alk44"
+      },
+      {
+        "coefficient": -4.0,
+        "species": "133_c_W4-11"
+      },
+      {
+        "coefficient": -10.0,
+        "species": "189_h_W4-11"
+      }
+    ],
+    "species": [
+      "133_c_W4-11",
+      "189_h_W4-11",
+      "19_isobutane_Alk44"
+    ],
+    "species_without_verified_v7_evidence": [
+      "133_c_W4-11",
+      "189_h_W4-11",
+      "19_isobutane_Alk44"
+    ]
+  },
+  {
+    "global_index": "1008",
+    "si_row_index": "36",
+    "set_or_subset": "BDE99nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "BDE99nonMR",
+    "reaction": "BDE99_72",
+    "dataset_order": "58",
+    "selection_index": "58",
+    "weight_spec": "1.2",
+    "objective_weight": 1.2,
+    "reference_hartree": -0.158563336,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_nh2"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_nh"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_h",
+      "W4-17_nh",
+      "W4-17_nh2"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_nh",
+      "W4-17_nh2"
+    ]
+  },
+  {
+    "global_index": "1049",
+    "si_row_index": "37",
+    "set_or_subset": "BSR36",
+    "property_class": "TC",
+    "dataset_eval_dataset": "BSR36",
+    "reaction": "BSR36_16",
+    "dataset_order": "16",
+    "selection_index": "16",
+    "weight_spec": "8",
+    "objective_weight": 8.0,
+    "reference_hartree": 0.00356967,
+    "stoichiometry": [
+      {
+        "coefficient": 5.0,
+        "species": "BSR36_c2h6"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "BSR36_r1"
+      },
+      {
+        "coefficient": -5.0,
+        "species": "BSR36_ch4"
+      }
+    ],
+    "species": [
+      "BSR36_c2h6",
+      "BSR36_ch4",
+      "BSR36_r1"
+    ],
+    "species_without_verified_v7_evidence": [
+      "BSR36_c2h6",
+      "BSR36_ch4",
+      "BSR36_r1"
+    ]
+  },
+  {
+    "global_index": "1070",
+    "si_row_index": "38",
+    "set_or_subset": "CR20",
+    "property_class": "TC",
+    "dataset_eval_dataset": "CR20",
+    "reaction": "CR20_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "15",
+    "objective_weight": 15.0,
+    "reference_hartree": -0.049974915,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "1prod1_CR20"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "1prod2_CR20"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "1react_CR20"
+      }
+    ],
+    "species": [
+      "1prod1_CR20",
+      "1prod2_CR20",
+      "1react_CR20"
+    ],
+    "species_without_verified_v7_evidence": [
+      "1prod1_CR20",
+      "1prod2_CR20",
+      "1react_CR20"
+    ]
+  },
+  {
+    "global_index": "1097",
+    "si_row_index": "39",
+    "set_or_subset": "DIPCS9",
+    "property_class": "TC",
+    "dataset_eval_dataset": "DIPCS9",
+    "reaction": "DIPCS10_9",
+    "dataset_order": "8",
+    "selection_index": "8",
+    "weight_spec": "0.6",
+    "objective_weight": 0.6,
+    "reference_hartree": 0.832019939,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "DIPCS10_mg"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "DIPCS10_mg_2+"
+      }
+    ],
+    "species": [
+      "DIPCS10_mg",
+      "DIPCS10_mg_2+"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "1098",
+    "si_row_index": "39",
+    "set_or_subset": "DIPCS9",
+    "property_class": "TC",
+    "dataset_eval_dataset": "DIPCS9",
+    "reaction": "DIPCS10_10",
+    "dataset_order": "9",
+    "selection_index": "9",
+    "weight_spec": "0.6",
+    "objective_weight": 0.6,
+    "reference_hartree": 1.011618957,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "DIPCS10_be"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "DIPCS10_be_2+"
+      }
+    ],
+    "species": [
+      "DIPCS10_be",
+      "DIPCS10_be_2+"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "1102",
+    "si_row_index": "40",
+    "set_or_subset": "G21EA",
+    "property_class": "TC",
+    "dataset_eval_dataset": "G21EA",
+    "reaction": "G21EA_4",
+    "dataset_order": "4",
+    "selection_index": "4",
+    "weight_spec": "9",
+    "objective_weight": 9.0,
+    "reference_hartree": 0.052103749,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "G21EA_EA_si"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "G21EA_EA_si-"
+      }
+    ],
+    "species": [
+      "G21EA_EA_si",
+      "G21EA_EA_si-"
+    ],
+    "species_without_verified_v7_evidence": [
+      "G21EA_EA_si",
+      "G21EA_EA_si-"
+    ]
+  },
+  {
+    "global_index": "1124",
+    "si_row_index": "41",
+    "set_or_subset": "G21IP",
+    "property_class": "TC",
+    "dataset_eval_dataset": "G21IP",
+    "reaction": "G21IP_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "1.4",
+    "objective_weight": 1.4,
+    "reference_hartree": 0.501825472,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "G21IP_h"
+      }
+    ],
+    "species": [
+      "G21IP_h"
+    ],
+    "species_without_verified_v7_evidence": [
+      "G21IP_h"
+    ]
+  },
+  {
+    "global_index": "1125",
+    "si_row_index": "41",
+    "set_or_subset": "G21IP",
+    "property_class": "TC",
+    "dataset_eval_dataset": "G21IP",
+    "reaction": "G21IP_2",
+    "dataset_order": "2",
+    "selection_index": "2",
+    "weight_spec": "1.4",
+    "objective_weight": 1.4,
+    "reference_hartree": 0.197947438,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "G21IP_li+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "G21IP_li"
+      }
+    ],
+    "species": [
+      "G21IP_li",
+      "G21IP_li+"
+    ],
+    "species_without_verified_v7_evidence": [
+      "G21IP_li",
+      "G21IP_li+"
+    ]
+  },
+  {
+    "global_index": "1126",
+    "si_row_index": "41",
+    "set_or_subset": "G21IP",
+    "property_class": "TC",
+    "dataset_eval_dataset": "G21IP",
+    "reaction": "G21IP_3",
+    "dataset_order": "3",
+    "selection_index": "3",
+    "weight_spec": "1.4",
+    "objective_weight": 1.4,
+    "reference_hartree": 0.342393476,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "G21IP_be+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "G21IP_be"
+      }
+    ],
+    "species": [
+      "G21IP_be",
+      "G21IP_be+"
+    ],
+    "species_without_verified_v7_evidence": [
+      "G21IP_be",
+      "G21IP_be+"
+    ]
+  },
+  {
+    "global_index": "1132",
+    "si_row_index": "41",
+    "set_or_subset": "G21IP",
+    "property_class": "TC",
+    "dataset_eval_dataset": "G21IP",
+    "reaction": "G21IP_9",
+    "dataset_order": "9",
+    "selection_index": "9",
+    "weight_spec": "1.4",
+    "objective_weight": 1.4,
+    "reference_hartree": 0.188253054,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "G21IP_na+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "G21IP_na"
+      }
+    ],
+    "species": [
+      "G21IP_na",
+      "G21IP_na+"
+    ],
+    "species_without_verified_v7_evidence": [
+      "G21IP_na",
+      "G21IP_na+"
+    ]
+  },
+  {
+    "global_index": "1133",
+    "si_row_index": "41",
+    "set_or_subset": "G21IP",
+    "property_class": "TC",
+    "dataset_eval_dataset": "G21IP",
+    "reaction": "G21IP_10",
+    "dataset_order": "10",
+    "selection_index": "10",
+    "weight_spec": "1.4",
+    "objective_weight": 1.4,
+    "reference_hartree": 0.280164158,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "G21IP_mg+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "G21IP_mg"
+      }
+    ],
+    "species": [
+      "G21IP_mg",
+      "G21IP_mg+"
+    ],
+    "species_without_verified_v7_evidence": [
+      "G21IP_mg",
+      "G21IP_mg+"
+    ]
+  },
+  {
+    "global_index": "1169",
+    "si_row_index": "42",
+    "set_or_subset": "HEAVYSB11",
+    "property_class": "TC",
+    "dataset_eval_dataset": "HEAVYSB11",
+    "reaction": "HEAVYSB11_10",
+    "dataset_order": "10",
+    "selection_index": "10",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.095058398,
+    "stoichiometry": [
+      {
+        "coefficient": 2.0,
+        "species": "HEAVYSB11_cl"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "HEAVYSB11_cl2"
+      }
+    ],
+    "species": [
+      "HEAVYSB11_cl",
+      "HEAVYSB11_cl2"
+    ],
+    "species_without_verified_v7_evidence": [
+      "HEAVYSB11_cl",
+      "HEAVYSB11_cl2"
+    ]
+  },
+  {
+    "global_index": "1188",
+    "si_row_index": "43",
+    "set_or_subset": "RSE43",
+    "property_class": "TC",
+    "dataset_eval_dataset": "RSE43",
+    "reaction": "RSE43_18",
+    "dataset_order": "18",
+    "selection_index": "18",
+    "weight_spec": "2",
+    "objective_weight": 2.0,
+    "reference_hartree": -0.00605569,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "RSE43_E20"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "RSE43_P1"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "RSE43_E1"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "RSE43_P20"
+      }
+    ],
+    "species": [
+      "RSE43_E1",
+      "RSE43_E20",
+      "RSE43_P1",
+      "RSE43_P20"
+    ],
+    "species_without_verified_v7_evidence": [
+      "RSE43_E1",
+      "RSE43_E20",
+      "RSE43_P1",
+      "RSE43_P20"
+    ]
+  },
+  {
+    "global_index": "1220",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_7",
+    "dataset_order": "7",
+    "selection_index": "7",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.117257282,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_alh"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_al"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_al",
+      "W4-17_alh",
+      "W4-17_h"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_al",
+      "W4-17_alh"
+    ]
+  },
+  {
+    "global_index": "1229",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_17",
+    "dataset_order": "16",
+    "selection_index": "16",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.135424352,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_bh"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_b"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_b",
+      "W4-17_bh",
+      "W4-17_h"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_b",
+      "W4-17_bh"
+    ]
+  },
+  {
+    "global_index": "1232",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_21",
+    "dataset_order": "19",
+    "selection_index": "19",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.168619096,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_bn3pi"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_b"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_n"
+      }
+    ],
+    "species": [
+      "W4-17_b",
+      "W4-17_bn3pi",
+      "W4-17_n"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_b",
+      "W4-17_bn3pi",
+      "W4-17_n"
+    ]
+  },
+  {
+    "global_index": "1262",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_52",
+    "dataset_order": "49",
+    "selection_index": "49",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.134213214,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_ch"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_c"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_c",
+      "W4-17_ch",
+      "W4-17_h"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_c",
+      "W4-17_ch"
+    ]
+  },
+  {
+    "global_index": "1285",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_81",
+    "dataset_order": "72",
+    "selection_index": "72",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.289015775,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_cn"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_c"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_n"
+      }
+    ],
+    "species": [
+      "W4-17_c",
+      "W4-17_cn",
+      "W4-17_n"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_c",
+      "W4-17_cn",
+      "W4-17_n"
+    ]
+  },
+  {
+    "global_index": "1311",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_110",
+    "dataset_order": "98",
+    "selection_index": "98",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.174499489,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_h2"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_h",
+      "W4-17_h2"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "1319",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_118",
+    "dataset_order": "106",
+    "selection_index": "106",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.171296348,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_hcl"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_cl"
+      }
+    ],
+    "species": [
+      "W4-17_cl",
+      "W4-17_h",
+      "W4-17_hcl"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_cl",
+      "W4-17_hcl"
+    ]
+  },
+  {
+    "global_index": "1326",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_125",
+    "dataset_order": "113",
+    "selection_index": "113",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.225717878,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_hf"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_f"
+      }
+    ],
+    "species": [
+      "W4-17_f",
+      "W4-17_h",
+      "W4-17_hf"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_f",
+      "W4-17_hf"
+    ]
+  },
+  {
+    "global_index": "1339",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_138",
+    "dataset_order": "126",
+    "selection_index": "126",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.13980676,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_hs"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_s"
+      }
+    ],
+    "species": [
+      "W4-17_h",
+      "W4-17_hs",
+      "W4-17_s"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_hs",
+      "W4-17_s"
+    ]
+  },
+  {
+    "global_index": "1344",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_143",
+    "dataset_order": "131",
+    "selection_index": "131",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.364106332,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_n2"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "W4-17_n"
+      }
+    ],
+    "species": [
+      "W4-17_n",
+      "W4-17_n2"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_n",
+      "W4-17_n2"
+    ]
+  },
+  {
+    "global_index": "1350",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_149",
+    "dataset_order": "137",
+    "selection_index": "137",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.132412443,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_nh"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_n"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_h",
+      "W4-17_n",
+      "W4-17_nh"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_n",
+      "W4-17_nh"
+    ]
+  },
+  {
+    "global_index": "1351",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_150",
+    "dataset_order": "138",
+    "selection_index": "138",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.29095997,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_nh2"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_n"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_h",
+      "W4-17_n",
+      "W4-17_nh2"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_n",
+      "W4-17_nh2"
+    ]
+  },
+  {
+    "global_index": "1360",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_162",
+    "dataset_order": "147",
+    "selection_index": "147",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.170834203,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_oh"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_o"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_h",
+      "W4-17_o",
+      "W4-17_oh"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_o",
+      "W4-17_oh"
+    ]
+  },
+  {
+    "global_index": "1380",
+    "si_row_index": "44",
+    "set_or_subset": "TAE_W4-17nonMR",
+    "property_class": "TC",
+    "dataset_eval_dataset": "TAE_W4-17nonMR",
+    "reaction": "TAE_W4-17_184",
+    "dataset_order": "167",
+    "selection_index": "167",
+    "weight_spec": "0.8",
+    "objective_weight": 0.8,
+    "reference_hartree": 0.117815043,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "W4-17_sih"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_si"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "W4-17_h"
+      }
+    ],
+    "species": [
+      "W4-17_h",
+      "W4-17_si",
+      "W4-17_sih"
+    ],
+    "species_without_verified_v7_evidence": [
+      "W4-17_si",
+      "W4-17_sih"
+    ]
+  },
+  {
+    "global_index": "1407",
+    "si_row_index": "45",
+    "set_or_subset": "3d4dIPSS",
+    "property_class": "TM",
+    "dataset_eval_dataset": "3d4dIPSS",
+    "reaction": "3d4dIPSS_11",
+    "dataset_order": "11",
+    "selection_index": "11",
+    "weight_spec": "1.5",
+    "objective_weight": 1.5,
+    "reference_hartree": 0.225383051,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "3d4dIPSS_Y_GS+"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "3d4dIPSS_Y_GS"
+      }
+    ],
+    "species": [
+      "3d4dIPSS_Y_GS",
+      "3d4dIPSS_Y_GS+"
+    ],
+    "species_without_verified_v7_evidence": [
+      "3d4dIPSS_Y_GS",
+      "3d4dIPSS_Y_GS+"
+    ]
+  },
+  {
+    "global_index": "1441",
+    "si_row_index": "46",
+    "set_or_subset": "CUAGAU83",
+    "property_class": "TM",
+    "dataset_eval_dataset": "CUAGAU83",
+    "reaction": "CUAGAU_15",
+    "dataset_order": "13",
+    "selection_index": "13",
+    "weight_spec": "1.5",
+    "objective_weight": 1.5,
+    "reference_hartree": 0.062273861,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "CUAGAU_Ag02N0"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "CUAGAU_Ag01N0"
+      }
+    ],
+    "species": [
+      "CUAGAU_Ag01N0",
+      "CUAGAU_Ag02N0"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "1442",
+    "si_row_index": "46",
+    "set_or_subset": "CUAGAU83",
+    "property_class": "TM",
+    "dataset_eval_dataset": "CUAGAU83",
+    "reaction": "CUAGAU_16",
+    "dataset_order": "14",
+    "selection_index": "14",
+    "weight_spec": "1.5",
+    "objective_weight": 1.5,
+    "reference_hartree": 0.088897365,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "CUAGAU_Ag01N0_H"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "CUAGAU_Ag01N0"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "CUAGAU_H"
+      }
+    ],
+    "species": [
+      "CUAGAU_Ag01N0",
+      "CUAGAU_Ag01N0_H",
+      "CUAGAU_H"
+    ],
+    "species_without_verified_v7_evidence": [
+      "CUAGAU_Ag01N0_H",
+      "CUAGAU_H"
+    ]
+  },
+  {
+    "global_index": "1453",
+    "si_row_index": "46",
+    "set_or_subset": "CUAGAU83",
+    "property_class": "TM",
+    "dataset_eval_dataset": "CUAGAU83",
+    "reaction": "CUAGAU_29",
+    "dataset_order": "25",
+    "selection_index": "25",
+    "weight_spec": "1.5",
+    "objective_weight": 1.5,
+    "reference_hartree": 0.083298431,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "CUAGAU_Au02N0"
+      },
+      {
+        "coefficient": 2.0,
+        "species": "CUAGAU_Au01N0"
+      }
+    ],
+    "species": [
+      "CUAGAU_Au01N0",
+      "CUAGAU_Au02N0"
+    ],
+    "species_without_verified_v7_evidence": []
+  },
+  {
+    "global_index": "1465",
+    "si_row_index": "47",
+    "set_or_subset": "MOR13",
+    "property_class": "TM",
+    "dataset_eval_dataset": "MOR13",
+    "reaction": "MOR13_1",
+    "dataset_order": "1",
+    "selection_index": "1",
+    "weight_spec": "10",
+    "objective_weight": 10.0,
+    "reference_hartree": -0.068684222,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "MOR07_ed01"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "MOR05_co"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "MOR25_pr01"
+      }
+    ],
+    "species": [
+      "MOR05_co",
+      "MOR07_ed01",
+      "MOR25_pr01"
+    ],
+    "species_without_verified_v7_evidence": [
+      "MOR05_co",
+      "MOR07_ed01",
+      "MOR25_pr01"
+    ]
+  },
+  {
+    "global_index": "1488",
+    "si_row_index": "48",
+    "set_or_subset": "TMB11",
+    "property_class": "TM",
+    "dataset_eval_dataset": "TMB11",
+    "reaction": "TMB11_11",
+    "dataset_order": "11",
+    "selection_index": "11",
+    "weight_spec": "10",
+    "objective_weight": 10.0,
+    "reference_hartree": 0.013657164,
+    "stoichiometry": [
+      {
+        "coefficient": 1.0,
+        "species": "TMB31_T1"
+      },
+      {
+        "coefficient": -1.0,
+        "species": "TMB31_C1"
+      }
+    ],
+    "species": [
+      "TMB31_C1",
+      "TMB31_T1"
+    ],
+    "species_without_verified_v7_evidence": [
+      "TMB31_C1",
+      "TMB31_T1"
+    ]
+  },
+  {
+    "global_index": "1495",
+    "si_row_index": "49",
+    "set_or_subset": "TMD10",
+    "property_class": "TM",
+    "dataset_eval_dataset": "TMD10",
+    "reaction": "TMD10_7",
+    "dataset_order": "7",
+    "selection_index": "7",
+    "weight_spec": "10",
+    "objective_weight": 10.0,
+    "reference_hartree": 0.081889175,
+    "stoichiometry": [
+      {
+        "coefficient": -1.0,
+        "species": "TMD21_CoH"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "TMD12_Co"
+      },
+      {
+        "coefficient": 1.0,
+        "species": "TMD01_H"
+      }
+    ],
+    "species": [
+      "TMD01_H",
+      "TMD12_Co",
+      "TMD21_CoH"
+    ],
+    "species_without_verified_v7_evidence": [
+      "TMD12_Co",
+      "TMD21_CoH"
+    ]
+  }
+]

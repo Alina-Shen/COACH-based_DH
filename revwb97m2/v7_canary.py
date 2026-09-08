@@ -7,6 +7,7 @@ import csv
 import json
 import re
 import shutil
+import subprocess
 import time
 from pathlib import Path
 
@@ -24,12 +25,14 @@ from revwb97m2.qchem_feature_publisher import (
 )
 from revwb97m2.scripts.prepare_q3_qchem_gateway import derive_input
 from revwb97m2.scripts.run_step13_fresh_species import (
-    canonical_tree_hash, run_qchem, QCHEM_ROOT, CONTROL_AMENDMENT,
+    canonical_tree_hash, qchem_environment, QCHEM_ROOT, CONTROL_AMENDMENT,
 )
 
 INVENTORY = ROOT/'manifests/step12/step12_fitting_inventory_v1.csv'
+BRIDGE = ROOT/'manifests/basis_bridge/resolved_basis_records.csv'
 ORBITALS = Path('/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2')
 DATA = Path('/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species')
+SCRATCH = Path('/clusterfs/mhg-data/yaoshen/scf_read/revwb97m2')
 NAMES = ('TMD01_H', 'S22_06b', 'HR46_N-methylacetamide', 'HR46_toluene',
          '3019_41UracilPentane090_dim_S66x8', 'BSR36_c4', 'MOR16_ed33')
 GRIDS = ('250974', '99590', '75302')
@@ -50,8 +53,8 @@ def write(path, value):
         handle.write('\n')
 
 
-def electron_count(source):
-    """Seven real-atom, all-electron Cartesian canaries only; fail closed."""
+def electron_count(source, bridge=None):
+    """Real Cartesian atoms with optional validated implicit named-def2 ECP."""
     from pyscf.data import elements
     require(not re.search(r'(?im)^\s*\$ecp\b', source), 'ECP canary not supported')
     match = re.search(r'(?ims)^\s*\$molecule\s*\n(.*?)^\s*\$end', source)
@@ -65,17 +68,31 @@ def electron_count(source):
         require(np.isfinite([float(x) for x in row[1:]]).all(), 'invalid coordinates')
         total += elements.charge(row[0])
     spin = multiplicity - 1
+    if bridge is not None:
+        removed = int(bridge['ecp_electrons'])
+        resolution = bridge['ecp_resolution']
+        require(resolution in ('not_applicable', 'implicit_named_def2_ecp'),
+                'unsupported ECP resolution')
+        require((removed == 0) == (resolution == 'not_applicable'), 'inconsistent ECP record')
+        require(re.fullmatch(r'[0-9a-f]{64}', bridge['ecp_definition_sha256']) is not None,
+                'missing ECP definition hash')
+        basis = re.search(r'(?im)^\s*BASIS\s+(?:=\s*)?(\S+)', source)
+        require(basis is not None and basis[1].lower() == bridge['orbital_qchem_label'].lower(),
+                'basis bridge label mismatch')
+        total -= removed
+        require(total == int(bridge['electron_count']) and spin == int(bridge['spin']),
+                'basis bridge electron/spin mismatch')
     require(total > 0 and 0 <= spin <= total and (total-spin) % 2 == 0,
             'invalid electron/spin count')
     return total, spin
 
 
-def stage_inputs(source, settings):
+def stage_inputs(source, settings, bridge=None):
     inputs = {g: derive_input(source, GRID_VALUES[g],
                              skip_post_fock_diagonalization=True) for g in GRIDS}
     inputs['scalar'] = derive_scalar_input(source, settings=settings)[0]
     inputs['fixed'] = derive_fixed_energy_input(source)[0]
-    if electron_count(source)[0] != 1:
+    if electron_count(source, bridge)[0] != 1:
         inputs['pt2'] = derive_pt2_input(source)[0]
     return inputs
 
@@ -95,17 +112,23 @@ def freeze(path, output_root):
     require(output_root.parent == DATA.resolve() and not output_root.exists(),
             'canary output must be a new direct child of species data root')
     rows = {r['species']: r for r in csv.DictReader(INVENTORY.open())}
+    bridges = {r['species']: r for r in csv.DictReader(BRIDGE.open())}
+    scratch_root = SCRATCH/output_root.name
+    require(not scratch_root.exists(), 'scratch namespace already exists')
     cases = []
     for name in NAMES:
         row = rows[name]
         source = Path(row['qchem_input_path'])
         require(digest(source) == row['qchem_input_sha256'], 'input authority changed')
-        require(row['has_ecp'] == 'false' and int(row['ghost_atom_count']) == 0,
-                'unsupported canary ECP/ghost centers')
-        count, spin = electron_count(source.read_text())
+        require(int(row['ghost_atom_count']) == 0, 'unsupported ghost centers')
+        bridge = bridges[name]
+        require(bridge['source_record_sha256'] == row['source_record_sha256'] and
+                bridge['runnable_status'] == 'runnable_basis_metadata_validated',
+                'basis bridge authority mismatch')
+        count, spin = electron_count(source.read_text(), bridge)
         require((count, spin) == (int(row['electron_count']), int(row['spin'])),
                 'inventory electron/spin mismatch')
-        stage_inputs(source.read_text(), settings)  # Derive only, no calculation.
+        stage_inputs(source.read_text(), settings, bridge)  # No calculation.
         orbital = ORBITALS/name
         tree = tree_manifest(orbital)
         require(tree and (orbital/'qarchive.h5').is_file(), 'missing orbital archive')
@@ -113,6 +136,7 @@ def freeze(path, output_root):
                           input_sha256=digest(source), orbital_root=str(orbital),
                           source_record_sha256=row['source_record_sha256'],
                           electron_count=count, spin=spin,
+                          basis_bridge=bridge, scratch_root=str(scratch_root/name),
                           source_tree_sha256=canonical_tree_hash(tree),
                           source_tree_bytes=sum(r['bytes'] for r in tree),
                           qarchive_sha256=digest(orbital/'qarchive.h5'),
@@ -122,8 +146,9 @@ def freeze(path, output_root):
     build = {str(QCHEM_ROOT/p): digest(QCHEM_ROOT/p) for p in
              ('bin/qchem', 'exe/qcprog.exe', 'lib/libks.so', 'lib/libks_ham.so',
               'lib/libks_ref.so', 'lib/libks_utils.so')}
-    write(path, dict(schema_version=1, purpose='seven_fresh_v7_canaries_only',
+    write(path, dict(schema_version=2, purpose='seven_fresh_v7_canaries_only',
                      output_root=str(output_root), cases=cases,
+                     scratch_root=str(scratch_root), basis_bridge_sha256=digest(BRIDGE),
                      specification_sha256=settings.specification_sha256,
                      inventory_sha256=digest(INVENTORY), code_hashes=code_hashes(),
                      build_hashes=build, submission_authorized=False,
@@ -136,15 +161,55 @@ def freeze(path, output_root):
 def load_plan(path):
     plan = read(path)
     settings = load_fit_settings()
-    require(plan['schema_version'] == 1 and
+    require(plan['schema_version'] == 2 and
             plan['purpose'] == 'seven_fresh_v7_canaries_only', 'unsupported plan')
     require(tuple(c['species'] for c in plan['cases']) == NAMES, 'canary scope changed')
     require(plan['specification_sha256'] == settings.specification_sha256 and
             plan['inventory_sha256'] == digest(INVENTORY), 'science/inventory changed')
+    require(plan['basis_bridge_sha256'] == digest(BRIDGE), 'basis bridge changed')
+    bridges = {r['species']: r for r in csv.DictReader(BRIDGE.open())}
+    require(all(c['basis_bridge'] == bridges[c['species']] for c in plan['cases']),
+            'case ECP/basis record changed')
     require(plan['code_hashes'] == code_hashes(), 'code identity changed')
     require(all(digest(p) == h for p, h in plan['build_hashes'].items()), 'build changed')
     require(Path(plan['output_root']).resolve().parent == DATA.resolve(), 'unsafe output root')
+    expected_scratch = (SCRATCH/Path(plan['output_root']).name).resolve()
+    require(expected_scratch.parent == SCRATCH.resolve() and
+            Path(plan['scratch_root']).resolve() == expected_scratch, 'unsafe scratch root')
+    require(all(Path(c['scratch_root']).resolve() == expected_scratch/c['species']
+                for c in plan['cases']), 'unsafe case scratch root')
     return plan, settings
+
+
+def available_bytes(path):
+    """Capacity on nearest existing parent; user authorized filesystem headroom."""
+    path = Path(path).resolve()
+    while not path.exists():
+        path = path.parent
+    return shutil.disk_usage(path).free
+
+
+def make_scratch_link(root, case):
+    """Physical disposable data outside retained stage directory; never overwrite."""
+    target = Path(case['scratch_root'])/root.name/'qcscratch'
+    require(not target.exists(), 'partial scratch namespace exists')
+    target.mkdir(parents=True)
+    (root/'qcscratch').symlink_to(target, target_is_directory=True)
+    return target
+
+
+def run_native(root, name, cpus, temporary):
+    """Retain input/output, place Q-Chem save files, cwd and temp files in scratch."""
+    environment = qchem_environment((root/'qcscratch').resolve(), name in GRIDS)
+    environment.update(TMPDIR=str(temporary), TMP=str(temporary), TEMP=str(temporary))
+    started = time.monotonic()
+    with (root/'qchem.out.launch.stdout').open('wb') as stdout, \
+            (root/'qchem.out.launch.stderr').open('wb') as stderr:
+        subprocess.run([str(QCHEM_ROOT/'bin/qchem'), '-save', '-nt', str(cpus),
+                        str((root/'input.q3.in').resolve()), str((root/'qchem.out').resolve()),
+                        'canary'], cwd=temporary, env=environment,
+                       stdout=stdout, stderr=stderr, check=True)
+    return time.monotonic()-started
 
 
 def output_checks(text, count, spin):
@@ -163,6 +228,8 @@ def validate_stage(root, derived, case, plan_hash):
     require(all(digest(root/p) == h for p, h in record['artifacts'].items()),
             'stage artifacts changed')
     require((root/'input.q3.in').read_text() == derived, 'stage input changed')
+    require((root/'qcscratch').is_symlink() and (root/'qcscratch').resolve() ==
+            (Path(case['scratch_root'])/root.name/'qcscratch').resolve(), 'scratch route changed')
     require(digest(root/'qcscratch/canary/qarchive.h5') == case['qarchive_sha256'],
             'working qarchive changed')
     output_checks((root/'qchem.out').read_text(), case['electron_count'], case['spin'])
@@ -175,6 +242,11 @@ def run_stage(root, name, derived, case, plan_hash, cpus):
     root.mkdir(parents=True)
     tree = tree_manifest(Path(case['orbital_root']))
     require(canonical_tree_hash(tree) == case['source_tree_sha256'], 'source tree changed')
+    require(available_bytes(case['scratch_root']) > 2*case['source_tree_bytes'],
+            'insufficient free scratch space for copy plus headroom')
+    target = make_scratch_link(root, case)
+    temporary = target.parent/'temporary'
+    temporary.mkdir()
     scratch = root/'qcscratch/canary'
     shutil.copytree(case['orbital_root'], scratch, copy_function=shutil.copy2)
     require(tree_manifest(scratch) == tree, 'isolated copy mismatch')
@@ -190,7 +262,7 @@ def run_stage(root, name, derived, case, plan_hash, cpus):
                     q6_control_amendment=str(CONTROL_AMENDMENT),
                     q6_control_amendment_sha256=digest(CONTROL_AMENDMENT))
     write(root/'PREPARED.json', prepared)
-    seconds = run_qchem(root, 'input.q3.in', 'qchem.out', 'canary', cpus, name in GRIDS)
+    seconds = run_native(root, name, cpus, temporary)
     output_checks((root/'qchem.out').read_text(), case['electron_count'], case['spin'])
     require(digest(scratch/'qarchive.h5') == case['qarchive_sha256'], 'working archive changed')
     require(tree_manifest(Path(case['orbital_root'])) == tree, 'source tree changed during run')
@@ -202,7 +274,7 @@ def run_stage(root, name, derived, case, plan_hash, cpus):
 def components(root, case, settings):
     """Reparse raw Q-Chem/Q4 outputs, independent of final serialized vectors."""
     source = Path(case['authoritative_input']).read_text()
-    inputs = stage_inputs(source, settings)
+    inputs = stage_inputs(source, settings, case['basis_bridge'])
     for name, derived in inputs.items():
         validate_stage(root/'stages'/name, derived, case, read(root/'identity.json')['plan_sha256'])
     semilocal = {}
@@ -257,6 +329,11 @@ def run(path, species, cpus, memory_gib, *, large_reviewed=False):
             'large canaries require explicit post-small-case review')
     require((cpus, memory_gib) == (case['resources']['cpus'], case['resources']['requested_memory_gib']),
             'allocation differs from frozen case')
+    # Conservative startup headroom, not a prediction or a reservation. Both
+    # destinations may share a filesystem; never add their free-space totals.
+    reserve = plan['minimum_copy_bytes'] + memory_gib*1024**3
+    require(min(available_bytes(plan['output_root']), available_bytes(plan['scratch_root'])) > reserve,
+            'insufficient filesystem headroom before canary execution')
     require(digest(case['authoritative_input']) == case['input_sha256'], 'source input changed')
     require(canonical_tree_hash(tree_manifest(Path(case['orbital_root']))) == case['source_tree_sha256'],
             'source tree changed before execution')
@@ -271,7 +348,8 @@ def run(path, species, cpus, memory_gib, *, large_reviewed=False):
         root.mkdir(parents=True)
         write(root/'identity.json', identity)
     started = time.monotonic()
-    for name, derived in stage_inputs(Path(case['authoritative_input']).read_text(), settings).items():
+    for name, derived in stage_inputs(Path(case['authoritative_input']).read_text(), settings,
+                                      case['basis_bridge']).items():
         run_stage(root/'stages'/name, name, derived, case, digest(path), cpus)
         if name in GRIDS:
             publish_or_resume(root/'stages'/name, root/'q4'/name)

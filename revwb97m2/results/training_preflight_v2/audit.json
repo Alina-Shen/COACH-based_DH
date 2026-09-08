@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-08T02:54:00.791981+00:00",
+  "status": "proposal_not_executable",
+  "submission_authorized": false,
+  "metadata_passed": true,
+  "errors": [],
+  "sources": {
+    "entries": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv",
+      "sha256": "2d8a1e2340d980c0e236bdd0c425abd9b0c4654a1610f94b4de2644e0b73abcf"
+    },
+    "dataset": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/gscdb137/source/DatasetEval.csv",
+      "sha256": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe"
+    },
+    "roles": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/reaction_roles.csv",
+      "sha256": "7e0c87da5c8492c489b41f0c0416c49237c89021cb8a70260a0ea38ad24a3d59"
+    },
+    "inventory": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/step12/step12_fitting_inventory_v1.csv",
+      "sha256": "6abe300fb10212ec30e4f5a3add9a6c7136c85f72597e09c32d7e28b8c0d29a3"
+    },
+    "bridge": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/basis_bridge/resolved_basis_records.csv",
+      "sha256": "cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6"
+    },
+    "refresh": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/reaction_features/v7_refresh_plan_v1.json",
+      "sha256": "bb0da88f3ddea0ef724a6fcbf03e5b7c5224c648e71d927c9acfcdd4e0d6dffd"
+    },
+    "canary": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/v7_canary_v1.json",
+      "sha256": "9b8e9982da58d61ab0e0ba9c237d4e5e7b33cf764ffd1f7172f4e4b51bacf7be"
+    },
+    "spec": {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/configs/scientific_spec.yaml",
+      "sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc"
+    }
+  },
+  "generator_sha256": "1d9cb73264526fbed55d14eb5228a3b2124b047dec62c8fb598053cdc96ec262",
+  "full_summary": {
+    "entries": 1498,
+    "species": 2799,
+    "entries_with_verified_species_evidence": 20,
+    "species_with_verified_v7_evidence": 41,
+    "species_requiring_generation_or_validation": 2758,
+    "si_groups": 49,
+    "property_classes": {
+      "BH": 91,
+      "EF": 203,
+      "ISO": 75,
+      "INC": 32,
+      "NC": 427,
+      "TC": 568,
+      "TM": 102
+    },
+    "species_memory_gib": {
+      "14": 2145,
+      "62": 107,
+      "21": 298,
+      "227": 26,
+      "117": 29,
+      "35": 186,
+      "557": 8
+    },
+    "missing_evidence_memory_gib": {
+      "14": 2109,
+      "62": 107,
+      "21": 294,
+      "227": 26,
+      "117": 29,
+      "35": 185,
+      "557": 8
+    }
+  },
+  "pilot_summary": {
+    "entries": 100,
+    "species": 224,
+    "entries_with_verified_species_evidence": 20,
+    "species_with_verified_v7_evidence": 39,
+    "species_requiring_generation_or_validation": 185,
+    "si_groups": 49,
+    "property_classes": {
+      "BH": 8,
+      "EF": 13,
+      "ISO": 5,
+      "INC": 3,
+      "NC": 28,
+      "TC": 36,
+      "TM": 7
+    },
+    "species_memory_gib": {
+      "14": 208,
+      "21": 11,
+      "35": 3,
+      "227": 2
+    },
+    "missing_evidence_memory_gib": {
+      "14": 172,
+      "21": 8,
+      "35": 3,
+      "227": 2
+    }
+  },
+  "limitations": [
+    "Coverage is recorded publication/hash evidence, not fresh numerical/native revalidation.",
+    "Candidate scan limited to project data root; orbital path is the existing workflow candidate, not an exhaustive archive discovery.",
+    "Orbital existence/size only; full archive integrity and basis compatibility remain launch gates.",
+    "Historical resource requests are planning classes, not live scheduler validation or runtime predictions.",
+    "Stage markers are presence-only; partial stage reuse requires contract-specific validation."
+  ],
+  "pilot_policy": {
+    "status": "proposed_for_review",
+    "seed_reactions": [
+      "DBH24_9",
+      "DBH24_19",
+      "DBH24_21",
+      "Dip146_101",
+      "Dip146_131",
+      "Dip146_140",
+      "EIE22_1",
+      "EIE22_6",
+      "EIE22_18",
+      "BUT14DIOL_3",
+      "BUT14DIOL_4",
+      "S66Rel7_1",
+      "S66Rel7_407",
+      "S22_1",
+      "S22_8",
+      "DIPCS10_9",
+      "DIPCS10_10",
+      "TAE_W4-17_110",
+      "CUAGAU_15",
+      "CUAGAU_29"
+    ],
+    "selection": "Retain20; one per SI row; fill by lowest selected/full property-class fraction, then incremental max memory, sum AO^3, new species count, training index.",
+    "bias": "Cost-aware workflow pilot, not unbiased performance sample; not guaranteed to cover every memory class.",
+    "weights": "Original Cycle2 objective weights, no renormalization.",
+    "reference_or_residual_used_for_selection": false
+  },
+  "orbital_missing_count": 0,
+  "metadata_checks": {
+    "input_hashes_passed": 2799,
+    "basis_bridge_identity_status_passed": 2799,
+    "unique_training_ids": true,
+    "sequential_training_order": true,
+    "finite_reference_hartree": true,
+    "positive_original_weights": true,
+    "training_roles_and_no_final_assessment": true,
+    "note": "Boolean checks describe the successful path; consult metadata_passed/errors for any failures."
+  }
+}

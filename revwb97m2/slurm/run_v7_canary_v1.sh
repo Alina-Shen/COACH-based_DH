@@ -6,8 +6,8 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=14G
 #SBATCH --time=72:00:00
-#SBATCH --output=/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_canary_%j.out
-#SBATCH --error=/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/v7_canary_%j.err
+#SBATCH --output=/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/logs/v7_canary_%j.out
+#SBATCH --error=/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/logs/v7_canary_%j.err
 set -euo pipefail
 # One explicit frozen species per job. No global concurrency cap or auto-submit.
 # Override allocation to the frozen case at submission; the driver verifies it.
