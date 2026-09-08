@@ -1,0 +1,20 @@
+{
+  "checkpoint_commit": "cfc4722",
+  "checkpoint_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/fixed_energy_checkpoint_25702574",
+  "checkpoint_sha256": "4f728e2a24eb1812959d729d9c054acdc15f67702332c9aabeca56cb8124a853",
+  "hashes": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/fixed_energy_checkpoint.py": "73e2fa6f6fdfa831778808e1c0f8c1c9d5d15b96dad0f799b81b71f03293aeb2",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/recover_v7_canary_d4.py": "2611ef7617b1650c03f5a681df05015cc206650bd2fccd41c3114911fbee98fd",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_large_corrected_canaries.py": "9f91a41ab8bb357ad5e0a06bb27c2124903244b76ed9f2f988407927af67f821",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_large_corrected_canaries_v1.sh": "3df015086d1b1c80969f69a242fe14bd53816f29d350900f1e88e3ba6219a9c7",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/tests/test_large_corrected_canaries.py": "1d871204c09863bc8058d6ca8e59c16b4ca59dd57918158edeac6ede75f6d203"
+  },
+  "no_new_scf": true,
+  "output_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/large_corrected_canaries_v1",
+  "purpose": "two_large_canaries_with_committed_parser_checkpoint",
+  "schema_version": 1,
+  "species": [
+    "BSR36_c4",
+    "MOR16_ed33"
+  ]
+}
