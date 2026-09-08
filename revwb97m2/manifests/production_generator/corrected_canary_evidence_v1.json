@@ -1,0 +1,43 @@
+{
+  "checkpoint_contract": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/fixed_energy_checkpoint_v1.json",
+  "checkpoint_contract_sha256": "fd6efb1cf847d5b03774f4487a80c782bfbedc0fff2a40594f06d3f2e9e8c0a5",
+  "checkpoint_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/fixed_energy_checkpoint_25702574",
+  "checkpoint_sha256": "4f728e2a24eb1812959d729d9c054acdc15f67702332c9aabeca56cb8124a853",
+  "large_contract_sha256": "3b998d3a6b6b6270742934c8dafeec7580523aa99550c65c928d4e0ad8b34fbc",
+  "native_plan_sha256": "9b8e9982da58d61ab0e0ba9c237d4e5e7b33cf764ffd1f7172f4e4b51bacf7be",
+  "schema_version": 1,
+  "species": {
+    "3019_41UracilPentane090_dim_S66x8": {
+      "kind": "corrected_checkpoint",
+      "root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/fixed_energy_checkpoint_25702574/3019_41UracilPentane090_dim_S66x8"
+    },
+    "BSR36_c4": {
+      "kind": "corrected_large",
+      "publication_sha256": "a1737e7387a6b0b74de40958a0966d6efeddbff5b0245b6519c14d7644837786",
+      "root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/large_corrected_canaries_v1/BSR36_c4"
+    },
+    "HR46_N-methylacetamide": {
+      "kind": "corrected_checkpoint",
+      "root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/fixed_energy_checkpoint_25702574/HR46_N-methylacetamide"
+    },
+    "HR46_toluene": {
+      "kind": "corrected_checkpoint",
+      "root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/fixed_energy_checkpoint_25702574/HR46_toluene"
+    },
+    "MOR16_ed33": {
+      "kind": "corrected_large",
+      "publication_sha256": "53e942280e717e4a7ab355fba46bcc68676d1d64b20ec116f07620d643a46f3d",
+      "root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/large_corrected_canaries_v1/MOR16_ed33"
+    },
+    "S22_06b": {
+      "kind": "corrected_checkpoint",
+      "root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/fixed_energy_checkpoint_25702574/S22_06b"
+    },
+    "TMD01_H": {
+      "kind": "corrected_checkpoint",
+      "root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/fixed_energy_checkpoint_25702574/TMD01_H"
+    }
+  },
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "submission_authorized": false
+}

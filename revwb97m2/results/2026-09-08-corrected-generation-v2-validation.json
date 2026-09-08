@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "HF_error_hartree": -2.7000000013543968e-09,
+      "passed": true,
+      "species": "TMD01_H"
+    },
+    {
+      "HF_error_hartree": 6.000959729135502e-10,
+      "passed": true,
+      "species": "S22_06b"
+    },
+    {
+      "HF_error_hartree": 1.5999717106751632e-09,
+      "passed": true,
+      "species": "HR46_N-methylacetamide"
+    },
+    {
+      "HF_error_hartree": -2.2000676835887134e-09,
+      "passed": true,
+      "species": "HR46_toluene"
+    },
+    {
+      "HF_error_hartree": 2.8002204999211244e-09,
+      "passed": true,
+      "species": "3019_41UracilPentane090_dim_S66x8"
+    },
+    {
+      "HF_error_hartree": 4.499838723859284e-09,
+      "passed": true,
+      "species": "BSR36_c4"
+    },
+    {
+      "HF_error_hartree": -9.006271284306422e-10,
+      "passed": true,
+      "species": "MOR16_ed33"
+    }
+  ],
+  "new_native_calculations": false,
+  "passed": true,
+  "plan_sha256": "1ccb606f4a3fe8a6744f470d6749cf7856c71c636489f854c2cbdbf95b9aeafe",
+  "registry_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "submission_authorized": false,
+  "tests_passed": 157
+}

@@ -1,0 +1,9 @@
+{
+  "commit": "USER_COMMIT_AND_LIVE_RESOURCE_REVIEW_REQUIRED",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "max_concurrent_jobs_proposal": 8,
+  "plan_sha256": "1ccb606f4a3fe8a6744f470d6749cf7856c71c636489f854c2cbdbf95b9aeafe",
+  "resource_review_passed": false,
+  "schema_version": 1,
+  "user_approved_submission": false
+}
