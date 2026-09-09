@@ -1,0 +1,32 @@
+{
+  "count": 2,
+  "cpus": 16,
+  "launcher": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh",
+  "memory_gib": 227,
+  "minimum_copy_bytes": 13391200728,
+  "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m227.json",
+  "plan_sha256": "6f90692cf129f152e3929d2593a60f74516db17eb7d6b1854cbb29ec449d9fc7",
+  "release_draft": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m227_release_draft.json",
+  "required_sbatch_overrides": [
+    "--array=0-1",
+    "--cpus-per-task=16",
+    "--mem=227G",
+    "--time=336:00:00",
+    "--partition=lr8",
+    "--account=lr_mhg2",
+    "--qos=mhg2_lr8_normal"
+  ],
+  "route_proposal": {
+    "account": "lr_mhg2",
+    "partition": "lr8",
+    "qos": "mhg2_lr8_normal"
+  },
+  "species": [
+    "PCONF21_444",
+    "PCONF21_99"
+  ],
+  "stages": 12,
+  "storage_free_bytes_at_freeze": 2754743103389696,
+  "submission_authorized": false,
+  "wall_hours": 336
+}

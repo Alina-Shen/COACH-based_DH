@@ -1,0 +1,23 @@
+{
+  "commit": "USER_COMMIT_REQUIRED",
+  "concurrency_enforcement": "--array=0-1; no percent throttle",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "max_concurrent_jobs": null,
+  "note": "Precommit draft only. Refresh live routing/resources and create an actual release before submission.",
+  "plan_sha256": "6f90692cf129f152e3929d2593a60f74516db17eb7d6b1854cbb29ec449d9fc7",
+  "resource_review_passed": false,
+  "scheduler_routes": {
+    "PCONF21_444": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_99": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    }
+  },
+  "schema_version": 1,
+  "user_approved_submission": false
+}

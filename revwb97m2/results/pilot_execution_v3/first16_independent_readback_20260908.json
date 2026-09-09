@@ -1,0 +1,607 @@
+{
+  "cases": [
+    {
+      "array_task": "25713683_0",
+      "completed_stages": 5,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": -2.7000000013543968e-09,
+      "one_electron": true,
+      "passed": true,
+      "pt2_total_hartree": 0.0,
+      "publication_sha256": "d5b16e64bfdb08fa1a69f041d1fd7590b3cd4e966528a12581050f60eb851ce1",
+      "species": "189_h_W4-11",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_1",
+      "completed_stages": 5,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": -2.7000000013543968e-09,
+      "one_electron": true,
+      "passed": true,
+      "pt2_total_hartree": 0.0,
+      "publication_sha256": "20f9ecb378739e8b16fc75d8a8aa51239946398dcd893327fded8aa5dafe19b3",
+      "species": "CUAGAU_H",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_2",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": -2.6000011033033843e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": 0.0,
+      "publication_sha256": "b6c3ee2597f09ddaa26d646d495c7350b49350181f7a124893bfd34e76b73bb6",
+      "species": "37_li_TA13",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_3",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 2.599999326946545e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": 0.0,
+      "publication_sha256": "a6d23b22b24b9894a172732b908da4466c7ea08f8634b4ede21ebd2c1afa0232",
+      "species": "ALK8_li+",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_4",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 5.000000413701855e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": 0.0,
+      "publication_sha256": "de1e439cf32ea64b5b83530d5c173ea921ae24e5165cba5ca51ebfc8e198c1fc",
+      "species": "33_be+_TA13",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_5",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 1.7999983725758284e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.03335026454716096,
+      "publication_sha256": "99b7484322d31cae7da9d66ad64ac45e27a474d59adfecf13e7bc376800bbfa8",
+      "species": "Pol130_Be",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_6",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 5.000000413701855e-10,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.03315824407555139,
+      "publication_sha256": "3f51ded261c1e7d73a1008151fd4c74952f49333620b71bb451a4f31faa77933",
+      "species": "Pol130_Be0+",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_7",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 5.000000413701855e-10,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.03315824407555139,
+      "publication_sha256": "2c7f3876702f44beae83f8eadee7e573d8b8dd8bfc4dff7b3e9b59871f4756a4",
+      "species": "Pol130_Be0-",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_8",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": -4.199999903420348e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.04032052938761145,
+      "publication_sha256": "a20df3e79ddf9b3c84db41062718104b3f6172142171f1dc47258ff119b76515",
+      "species": "Pol130_He",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_9",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 1.100000091014408e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.04032391512200845,
+      "publication_sha256": "53dfb28aa4b55a29fb268724136ce057e0a06cbf19fcf0ea0b13554fe7517b3f",
+      "species": "Pol130_He0+",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_10",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 1.100000091014408e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.04032391512200845,
+      "publication_sha256": "c5a700c35acd1f59af8c9e8e03bba565690b5a8f75ff55dd579f6f8ba4df5bec",
+      "species": "Pol130_He0-",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_11",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": -1.4999841368990019e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": 0.0,
+      "publication_sha256": "766d326e5825260240e8a9d89421132a30395c9d14dee45125f940d423a90731",
+      "species": "ALK8_na+",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_12",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 3.100012690993026e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": 0.0,
+      "publication_sha256": "765186879600dc193fc41f95570badfd4009b1de9e80b71ca9ef644528eae4a1",
+      "species": "MX35_Na",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_13",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 1.3999965631228406e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.0857913599835758,
+      "publication_sha256": "185f61ecd4a1f96d8c18867a9e3f9938546f71503a4954d6fa420449ebb10221",
+      "species": "133_c_W4-11",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_14",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": -4.400003916771311e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.0571298973486626,
+      "publication_sha256": "218a3cc67d1de9502bc654637fee3dfaa0653b71c0b883a84467e02df8afa4b4",
+      "species": "W4-17_b",
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "array_task": "25713683_15",
+      "completed_stages": 6,
+      "finite": true,
+      "grid_difference_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_reconstruction_error_hartree": 1.3999965631228406e-09,
+      "one_electron": false,
+      "passed": true,
+      "pt2_total_hartree": -0.0857913599835758,
+      "publication_sha256": "be1d50f5bf4f1cc47e9fb620a06ccebf71fab2be7bcf03d29da0137583f5bd94",
+      "species": "W4-17_c",
+      "vector_shape": [
+        292
+      ]
+    }
+  ],
+  "coverage_categories": {
+    "corrected_canary_validated": [
+      "TMD01_H"
+    ],
+    "first16_independent_readback_passed": [
+      "133_c_W4-11",
+      "189_h_W4-11",
+      "33_be+_TA13",
+      "37_li_TA13",
+      "ALK8_li+",
+      "ALK8_na+",
+      "CUAGAU_H",
+      "MX35_Na",
+      "Pol130_Be",
+      "Pol130_Be0+",
+      "Pol130_Be0-",
+      "Pol130_He",
+      "Pol130_He0+",
+      "Pol130_He0-",
+      "W4-17_b",
+      "W4-17_c"
+    ],
+    "legacy_candidate_requires_stage_migration": [
+      "11_H2O_TA13",
+      "11_Reactant1_EIE22",
+      "12_Product1_EIE22",
+      "21_Reactant6_EIE22",
+      "22_Product6_EIE22",
+      "2699_01WaterWater090_dim_S66x8",
+      "2701_01WaterWater100_dim_S66x8",
+      "3163_59EthyneWaterCHO090_dim_S66x8",
+      "3165_59EthyneWaterCHO100_dim_S66x8",
+      "45_Reactant18_EIE22",
+      "46_Product18_EIE22",
+      "48_hcn_BH76",
+      "49_hcnts_BH76",
+      "58_hn2_BH76",
+      "59_hn2ts_BH76",
+      "60_hnc_BH76",
+      "BUT14DIOL_B1",
+      "BUT14DIOL_B4",
+      "BUT14DIOL_B5",
+      "CUAGAU_Ag01N0",
+      "CUAGAU_Ag02N0",
+      "CUAGAU_Au01N0",
+      "CUAGAU_Au02N0",
+      "DIPCS10_be",
+      "DIPCS10_be_2+",
+      "DIPCS10_mg",
+      "DIPCS10_mg_2+",
+      "Dip146_HF2+",
+      "Dip146_HF2-",
+      "Dip146_LiN2+",
+      "Dip146_LiN2-",
+      "Dip146_NaLi2+",
+      "Dip146_NaLi2-",
+      "S22_01",
+      "S22_01a",
+      "S22_08",
+      "S22_08a",
+      "W4-17_h",
+      "W4-17_h2"
+    ],
+    "new_generation_requires_frozen_execution_manifest": [
+      "11_Cl-_ClF_dim_Bauza30",
+      "11_Cl-_ClF_monA_Bauza30",
+      "11_Cl-_ClF_monB_Bauza30",
+      "11_H_AE18",
+      "11_Isomer1_Styrene45",
+      "12_Br-_ClF_dim_Bauza30",
+      "12_Br-_ClF_monA_Bauza30",
+      "12_Br-_ClF_monB_Bauza30",
+      "12_H2O2Cl_HW6Cl",
+      "12_H2O2Cl_mon1_HW6Cl",
+      "12_H2O2Cl_mon2_HW6Cl",
+      "12_H2O2Cl_mon3_HW6Cl",
+      "12_HF_TA13",
+      "12_He_AE18",
+      "12_Isomer2_Styrene45",
+      "13_BH2_TA13",
+      "13_Li_AE18",
+      "14_Be_AE18",
+      "14_butane_Alk44",
+      "15_CO+_TA13",
+      "16_HF-A_dim_CT20",
+      "16_HF-A_monA_CT20",
+      "16_HF-A_monB_CT20",
+      "16_NH2_TA13",
+      "18_OH_TA13",
+      "19_H2O-Al_TA13",
+      "19_isobutane_Alk44",
+      "1prod1_CR20",
+      "1prod2_CR20",
+      "1react_CR20",
+      "20_H2O-Be+_TA13",
+      "20_h2o_dimer_cs_dim_DS14",
+      "20_h2o_dimer_cs_monA_DS14",
+      "20_h2o_dimer_cs_monB_DS14",
+      "21_H2O-Br_TA13",
+      "23_H2O-Cl_TA13",
+      "24_H2O-F_TA13",
+      "25_H2O-Li_TA13",
+      "25_ile184_dim_HSG",
+      "25_ile184_monA_HSG",
+      "25_ile184_monB_HSG",
+      "28_FH-BH2_TA13",
+      "29_HF-CO+_TA13",
+      "30_FH-NH2_TA13",
+      "30_HBr_XB18",
+      "31_FH-OH_TA13",
+      "31_HBrNCH_XB18",
+      "32_al_TA13",
+      "33_HCN_XB18",
+      "34_br_TA13",
+      "35_cl_TA13",
+      "36_f_TA13",
+      "3960_04HFdimer_dim_A24",
+      "3960_04HFdimer_monA_A24",
+      "3960_04HFdimer_monB_A24",
+      "4192_water6BAG_Shields38",
+      "4217_waterC2v_Shields38",
+      "4react_CRBH20",
+      "4ts_CRBH20",
+      "ALK8_li_na_h2",
+      "ALK8_na2_h2",
+      "BH28_CADBH_1_min",
+      "BH28_CADBH_1_ts",
+      "BH28_CADBH_c2h4",
+      "BHDIV10_ed10",
+      "BHDIV10_ts10",
+      "BHPERI_00r",
+      "BHPERI_04r",
+      "BHPERI_04ts",
+      "BSR36_c2h6",
+      "BSR36_ch4",
+      "BSR36_r1",
+      "CUAGAU_Ag01N0_H",
+      "Dip146_OH2+",
+      "Dip146_OH2-",
+      "G21EA_EA_si",
+      "G21EA_EA_si-",
+      "G21IP_be",
+      "G21IP_be+",
+      "G21IP_h",
+      "G21IP_li",
+      "G21IP_li+",
+      "G21IP_mg",
+      "G21IP_mg+",
+      "G21IP_na",
+      "G21IP_na+",
+      "HCP32_2_FCl_2_dim",
+      "HCP32_2_FCl_2_monA",
+      "HCP32_2_FCl_2_monB",
+      "HEAVYSB11_cl",
+      "HEAVYSB11_cl2",
+      "HR46_chlorine",
+      "HR46_chlorine1+",
+      "HR46_chlorine1-",
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_100",
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_monA",
+      "IHB100x10_05.012_OH-Oa__water--hydroxide_monB",
+      "IL16_227",
+      "IL16_227A",
+      "IL16_227B",
+      "MB16-43_09",
+      "MB16-43_BH3",
+      "MB16-43_CH4",
+      "MB16-43_Cl2",
+      "MB16-43_F2",
+      "MB16-43_H2",
+      "MB16-43_LiH",
+      "MB16-43_SiH4",
+      "MOR05_co",
+      "MOR07_ed01",
+      "MOR25_pr01",
+      "MX35_1109_NaF_01",
+      "MX35_F",
+      "PCONF21_444",
+      "PCONF21_99",
+      "PX13_hf_2",
+      "PX13_hf_2_ts",
+      "Pol130_H2",
+      "Pol130_H20+",
+      "Pol130_H20-",
+      "Pol130_LiCl",
+      "Pol130_LiCl2+",
+      "Pol130_LiCl2-",
+      "Pol130_Mg2",
+      "Pol130_Mg20+",
+      "Pol130_Mg20-",
+      "Pol130_N",
+      "Pol130_N0+",
+      "Pol130_N0-",
+      "Pol130_Na2",
+      "Pol130_Na20+",
+      "Pol130_Na20-",
+      "Pol130_NaH",
+      "Pol130_NaH2+",
+      "Pol130_NaH2-",
+      "RG10N_He",
+      "RG10N_HeHe_1p588",
+      "RG10N_HeHe_2p646",
+      "RSE43_E1",
+      "RSE43_E20",
+      "RSE43_P1",
+      "RSE43_P20",
+      "TMB31_C1",
+      "TMB31_T1",
+      "TMD12_Co",
+      "TMD21_CoH",
+      "W4-17_al",
+      "W4-17_alh",
+      "W4-17_bh",
+      "W4-17_bn3pi",
+      "W4-17_ch",
+      "W4-17_cl",
+      "W4-17_cn",
+      "W4-17_f",
+      "W4-17_hcl",
+      "W4-17_hf",
+      "W4-17_hs",
+      "W4-17_n",
+      "W4-17_n2",
+      "W4-17_nh",
+      "W4-17_nh2",
+      "W4-17_o",
+      "W4-17_oh",
+      "W4-17_s",
+      "W4-17_si",
+      "W4-17_sih"
+    ],
+    "unsupported_input_gate": [
+      "3d4dIPSS_Y_GS",
+      "3d4dIPSS_Y_GS+"
+    ]
+  },
+  "coverage_counts": {
+    "corrected_canary_validated": 1,
+    "first16_independent_readback_passed": 16,
+    "legacy_candidate_requires_stage_migration": 39,
+    "new_generation_requires_frozen_execution_manifest": 166,
+    "unsupported_input_gate": 2
+  },
+  "job_id": "25713683",
+  "max_abs_hf_reconstruction_error_hartree": 5.000000413701855e-09,
+  "note": "Independent post-job existing validator and raw-data reconstruction, not an independent numerical implementation. Legacy candidates remain unvalidated.",
+  "passed": true,
+  "plan_sha256": "bca10eae5a0640d5b1a05e326a47777f474fad3efa8aa304a2db726d12b31d73",
+  "release_sha256": "f36c4762af3e3d28fff02cbf57068f5355124efe03c64e0f3ba85345faa7a93b",
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "total_native_stages": 94
+}

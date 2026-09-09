@@ -1,0 +1,33 @@
+{
+  "count": 3,
+  "cpus": 8,
+  "launcher": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh",
+  "memory_gib": 35,
+  "minimum_copy_bytes": 6727811382,
+  "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m35.json",
+  "plan_sha256": "87c2df1c40e0a1baf9b735566a190b3d9765c89306c505bf2f75782997422203",
+  "release_draft": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m35_release_draft.json",
+  "required_sbatch_overrides": [
+    "--array=0-2",
+    "--cpus-per-task=8",
+    "--mem=35G",
+    "--time=72:00:00",
+    "--partition=cm1",
+    "--account=lr_qchem",
+    "--qos=condo_qchem"
+  ],
+  "route_proposal": {
+    "account": "lr_qchem",
+    "partition": "cm1",
+    "qos": "condo_qchem"
+  },
+  "species": [
+    "25_ile184_dim_HSG",
+    "TMB31_C1",
+    "TMB31_T1"
+  ],
+  "stages": 18,
+  "storage_free_bytes_at_freeze": 2754743371825152,
+  "submission_authorized": false,
+  "wall_hours": 72
+}

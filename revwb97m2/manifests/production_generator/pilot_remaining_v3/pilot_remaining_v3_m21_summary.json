@@ -1,0 +1,38 @@
+{
+  "count": 8,
+  "cpus": 8,
+  "launcher": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh",
+  "memory_gib": 21,
+  "minimum_copy_bytes": 11586320388,
+  "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m21.json",
+  "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+  "release_draft": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m21_release_draft.json",
+  "required_sbatch_overrides": [
+    "--array=0-7",
+    "--cpus-per-task=8",
+    "--mem=21G",
+    "--time=72:00:00",
+    "--partition=cm1",
+    "--account=lr_qchem",
+    "--qos=condo_qchem"
+  ],
+  "route_proposal": {
+    "account": "lr_qchem",
+    "partition": "cm1",
+    "qos": "condo_qchem"
+  },
+  "species": [
+    "11_Isomer1_Styrene45",
+    "12_Isomer2_Styrene45",
+    "4192_water6BAG_Shields38",
+    "BHPERI_04ts",
+    "BSR36_r1",
+    "MB16-43_09",
+    "MOR07_ed01",
+    "MOR25_pr01"
+  ],
+  "stages": 48,
+  "storage_free_bytes_at_freeze": 2754743905550336,
+  "submission_authorized": false,
+  "wall_hours": 72
+}

@@ -1,0 +1,935 @@
+{
+  "all_seven_canaries_required": true,
+  "basis_bridge_sha256": "cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6",
+  "build_hashes": {
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/bin/qchem": "eb8848914711cc8346ea98c96e41dde7a6cb60e79f1cbb1268a906dc8ac0ede7",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/exe/qcprog.exe": "0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks.so": "95441cef4e010a334ffa9e73f5342c10ad639471c17d33ab0c6f7295fad39081",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_ham.so": "5ab4e78e304560433bdde891c0fa474290ea59eb48e07655ced00800579b1ae2",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_ref.so": "ca620f924f1a289928b4ba231c3145f4bc8408e0f36eeb4616bbd4c419687f2d",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_utils.so": "4c82b7c0bdede7e5b739e5bef86ebdc24afd8b0addd0074d93b282281183bdb1"
+  },
+  "cases": [
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/PCONF21_444/input0",
+      "basis_bridge": {
+        "auxiliary_definition_sha256": "b7bbf547f50431d6cf37e8526f676d59716daf3840a6539ae1d383af6e942846",
+        "auxiliary_pyscf_name": "rimp2-def2-QZVPPD",
+        "auxiliary_qchem_label": "rimp2-def2-QZVPPD",
+        "auxiliary_resolution": "hash_pinned_qchem_named_library",
+        "auxiliary_shells": "1063",
+        "auxiliary_spherical_aos": "4245",
+        "ecp_definition_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "ecp_electrons": "0",
+        "ecp_resolution": "not_applicable",
+        "electron_count": "148",
+        "elements": "C;H;N;O",
+        "orbital_definition_sha256": "6f1af9f4e7c5b6293183ad0d7e4d6206ffc53fe19a2171a5b86114543d4e59be",
+        "orbital_pyscf_name": "def2-qzvppd",
+        "orbital_qchem_label": "DEF2-QZVPPD",
+        "orbital_resolution": "named_alias",
+        "orbital_shells": "571",
+        "orbital_spherical_aos": "1833",
+        "qchem_source_input_sha256": "be64737f077281347da325aa3580f41da3544956098d71440f3c1aca8c6f939e",
+        "required_for_energy_roles": "true",
+        "runnable_status": "runnable_basis_metadata_validated",
+        "scope": "gscdb137",
+        "source_record_sha256": "7e5c1d39a1f4e10b4d701a3c63dd6acda3abc8b9dd1e1ea424c9e1e0d08003c5",
+        "species": "PCONF21_444",
+        "spin": "0"
+      },
+      "cross_campaign_partial_reuse": "not_authorized_without_explicit_raw_stage_validation",
+      "electron_count": 148,
+      "input_sha256": "be64737f077281347da325aa3580f41da3544956098d71440f3c1aca8c6f939e",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/PCONF21_444",
+      "pt2_policy": "native_total_pt2",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "cpus": 16,
+        "requested_memory_gib": 227,
+        "wall_hours": 336
+      },
+      "route": {
+        "account": "lr_mhg2",
+        "partition": "lr8",
+        "qos": "mhg2_lr8_normal"
+      },
+      "scratch_root": "/clusterfs/mhg-data/yaoshen/scf_read/revwb97m2/pilot_remaining_v3_m227/PCONF21_444",
+      "source_record_sha256": "7e5c1d39a1f4e10b4d701a3c63dd6acda3abc8b9dd1e1ea424c9e1e0d08003c5",
+      "source_tree": [
+        {
+          "bytes": 62,
+          "path": ".staged.ok",
+          "sha256": "b32d0f957b7bfd0b39a3f3092e83d16af6c62f4ee124c575d6d689c0e5126d5a"
+        },
+        {
+          "bytes": 80138304,
+          "path": "1100.0",
+          "sha256": "3be79768d0dfc1932b57a5be143001316a1f6faec49ac4f4facbb7213f0a5869"
+        },
+        {
+          "bytes": 24,
+          "path": "1110.0",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+        },
+        {
+          "bytes": 1040,
+          "path": "1111.0",
+          "sha256": "da7f6324d01642611fc8e226dfe423364a47e4821a0abda79769eb16d4c11f04"
+        },
+        {
+          "bytes": 20,
+          "path": "121.0",
+          "sha256": "2146eaa76cec4a6212fce01e40b4f0d2be9614fabeafecd7ab06438783bbabe7"
+        },
+        {
+          "bytes": 53758224,
+          "path": "130.0",
+          "sha256": "58a77288772d19ff81211230d44f5df29a0ffaa48443b684d4757487de0e56c2"
+        },
+        {
+          "bytes": 52533504,
+          "path": "148.0",
+          "sha256": "c9489416816dcf50283e1138892344e2a5c96990c1dba0ded45dad02fb4ec70d"
+        },
+        {
+          "bytes": 10288960,
+          "path": "150.0",
+          "sha256": "73cf28c1de14785f545cc4eadddcba26ebdd7de55b807fb4c3a9f2bf742cf567"
+        },
+        {
+          "bytes": 53142336,
+          "path": "151.0",
+          "sha256": "cd2df93176039b9c1945517267f99f272800b6f0e427fefa7dfd7b8e0c2ba844"
+        },
+        {
+          "bytes": 4,
+          "path": "1612.0",
+          "sha256": "79ff7fbc96a0a6111e3c2706d61deb84c7c8e5a137b776f34a7dc3775f3652de"
+        },
+        {
+          "bytes": 40,
+          "path": "1700.0",
+          "sha256": "a21b524afe1df5e1216cb34e1da476d40d68d57de9b9c10943c5145654c89989"
+        },
+        {
+          "bytes": 27532,
+          "path": "1701.0",
+          "sha256": "f9ecf8be03a0d77fb6ea6b3ab2b6a72f8d49aac3746ca3305106d355d02f896d"
+        },
+        {
+          "bytes": 42556,
+          "path": "1702.0",
+          "sha256": "f012d36a18acad7a35a18650fb91240b89168f1f9fcb0eaa009f8c8f17844f44"
+        },
+        {
+          "bytes": 24,
+          "path": "1710.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 37230348,
+          "path": "1711.0",
+          "sha256": "e7944c2abab1d3d2a218f9e1fc827398731ec8ae664bcbaa2039532130d5f986"
+        },
+        {
+          "bytes": 24,
+          "path": "1720.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 525740,
+          "path": "1721.0",
+          "sha256": "da01f660865c088efe4e50e9280248216b7b9b452cf5d84ed788ca1953b2fdb9"
+        },
+        {
+          "bytes": 24,
+          "path": "1730.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 21382900,
+          "path": "1731.0",
+          "sha256": "5b8b8850cd6ece7d808b4755931dd106f503c3902640a9e6f2417e000f0e2984"
+        },
+        {
+          "bytes": 24,
+          "path": "174.0",
+          "sha256": "8cd57776cfb3b7117dce2079a09d1a1fb3146e1e9d1f2684c0735c38ff33a99c"
+        },
+        {
+          "bytes": 24,
+          "path": "1740.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 178384360,
+          "path": "1741.0",
+          "sha256": "6fb746ba63aea5b0d57da784c15909857ccc5438c6bc7ce310c2fd5f87cf8077"
+        },
+        {
+          "bytes": 296,
+          "path": "175.0",
+          "sha256": "6e1acdb382a06a011840a97c8a648c0fc58412b75d2361b963fc55fd37ca4133"
+        },
+        {
+          "bytes": 4,
+          "path": "177.0",
+          "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+        },
+        {
+          "bytes": 24,
+          "path": "179.0",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+        },
+        {
+          "bytes": 26879112,
+          "path": "320.0",
+          "sha256": "825b7e539e4877cd98cda4287d7ea77b6152e45a436bbf1f819d254ec1fed73f"
+        },
+        {
+          "bytes": 8,
+          "path": "334.0",
+          "sha256": "90a7b973550304db14e95f8fc96c031e64450b9042d8db95de3cf9e20440b34a"
+        },
+        {
+          "bytes": 6960076,
+          "path": "370.0",
+          "sha256": "6593fb06e01082a84d14f00ad5005ce5e02056a265038452ad51d75002770484"
+        },
+        {
+          "bytes": 284,
+          "path": "4.0",
+          "sha256": "49ddf528671f2685f3d6d2c13da091e74c7c4206e1086c9aef1fe37d9b8999ec"
+        },
+        {
+          "bytes": 26879112,
+          "path": "412.0",
+          "sha256": "f189eb5bf87d52756b738d63c0a0ff6694ef3f3ba5a4ad4dc33ed0cca61936f1"
+        },
+        {
+          "bytes": 220,
+          "path": "46.0",
+          "sha256": "b03a768e54fa99d43799bd7fd3decc326a8ba7551560637243c29c97f689d07e"
+        },
+        {
+          "bytes": 53840768,
+          "path": "49.0",
+          "sha256": "cb8398ea0b65a64368309d8585e7294ec0791a485930662fce5f54144590b375"
+        },
+        {
+          "bytes": 65012416,
+          "path": "51.0",
+          "sha256": "1647ae3e5999bf177db24c31e6e756f638d6a2c51a85f4e26de27c5a6779d4f4"
+        },
+        {
+          "bytes": 53171328,
+          "path": "53.0",
+          "sha256": "b1c27cb4f2daa375379b9062692a18ce10265a9a4e03f9fbaf9258a6e39797d3"
+        },
+        {
+          "bytes": 53758224,
+          "path": "54.0",
+          "sha256": "8f9f4a807ffb41994058fea57b1a272cfddd1368c645d91eb6ba8912c051c4df"
+        },
+        {
+          "bytes": 53758224,
+          "path": "58.0",
+          "sha256": "58a77288772d19ff81211230d44f5df29a0ffaa48443b684d4757487de0e56c2"
+        },
+        {
+          "bytes": 6173376,
+          "path": "59.0",
+          "sha256": "5fceb28080a42bd53ab037fd0d3ad6795f0085b06f3a752b7199e9496cc11862"
+        },
+        {
+          "bytes": 1184,
+          "path": "593.0",
+          "sha256": "6698e60b3c14ed17a66784ce73156154a9b7566d971e0c0a54670c3ca54b7d28"
+        },
+        {
+          "bytes": 72,
+          "path": "6.0",
+          "sha256": "1332df685c45a61a0ac008a6a653295b8c5655361c1d34b6304b22ec40235fb8"
+        },
+        {
+          "bytes": 4115584,
+          "path": "61.0",
+          "sha256": "7521812bf360fd66ab4047518daefd4f829a2c4b40b38f2583cd32254b7e02e3"
+        },
+        {
+          "bytes": 148,
+          "path": "621.0",
+          "sha256": "033db2162394754ce030ad7b7b3d192daea18957e6d28007069dd59143398f4e"
+        },
+        {
+          "bytes": 192206240,
+          "path": "63.0",
+          "sha256": "a3b31dfee252209f4b732514eea606edcec0c1adb6137d26a463a0a225675503"
+        },
+        {
+          "bytes": 64,
+          "path": "686.0",
+          "sha256": "a54bfdbdb7f6b549ec1e491c125302112f92f4344119c8a599a74f41fa01f5b7"
+        },
+        {
+          "bytes": 8,
+          "path": "758.0",
+          "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+        },
+        {
+          "bytes": 24,
+          "path": "771.0",
+          "sha256": "b77db672b2a7b28a90e7ffd004d17885ffb00f3a11d0599633060d1d04fa6f71"
+        },
+        {
+          "bytes": 31034816,
+          "path": "80.0",
+          "sha256": "c7cfd9d00f0ac5bd91bfefa9a7c6ca8a5a485bd527e03d94ca79d2944d837311"
+        },
+        {
+          "bytes": 4805156,
+          "path": "803.0",
+          "sha256": "460dda40f013890bb22544914f8f52c5cc940286fede37fdd0f52c6ff7367a31"
+        },
+        {
+          "bytes": 33960,
+          "path": "818.0",
+          "sha256": "52914934e0b5437e581dc5faef47e10128676950466acf9c91614ff0a5d428f6"
+        },
+        {
+          "bytes": 16,
+          "path": "819.0",
+          "sha256": "6c1d5da44c7f4ef4304e4e8a0a7564ad3973fc04b8f8c765f0a7180e18914f44"
+        },
+        {
+          "bytes": 19220624,
+          "path": "90.0",
+          "sha256": "075c5e7e3616b587707bcac8020d24616e0a46ff64248066bbf33265de01dcd2"
+        },
+        {
+          "bytes": 24,
+          "path": "9121.0",
+          "sha256": "82d16d1a0a9b623c73b0e964988430158398319d67d81c9bb5d094443efafe6a"
+        },
+        {
+          "bytes": 19220624,
+          "path": "97.0",
+          "sha256": "2229dea0a354dca37c20f653b907281b835c615d485f8425a83b8a091d0abb68"
+        },
+        {
+          "bytes": 32,
+          "path": "976.0",
+          "sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925"
+        },
+        {
+          "bytes": 272,
+          "path": "99.0",
+          "sha256": "c6f7d6bd7c5d1aebc61763cebdac04c2376ae11c25dd38023fb9e40aebd69820"
+        },
+        {
+          "bytes": 800,
+          "path": "archive.h5",
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e"
+        },
+        {
+          "bytes": 2445,
+          "path": "input0",
+          "sha256": "be64737f077281347da325aa3580f41da3544956098d71440f3c1aca8c6f939e"
+        },
+        {
+          "bytes": 2498,
+          "path": "molecule",
+          "sha256": "a2f0719fbfb1174c8d1f4dcc4d000cb932731721e6851a7fc19c0ab2081800eb"
+        },
+        {
+          "bytes": 288,
+          "path": "pseudodata",
+          "sha256": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+        },
+        {
+          "bytes": 800,
+          "path": "qarchive.h5",
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e"
+        },
+        {
+          "bytes": 163,
+          "path": "rem",
+          "sha256": "892f5eb4dbdffaeab9a61de803a7bd430242affeac169ca42f1e2682dd3e3283"
+        },
+        {
+          "bytes": 317,
+          "path": "remfrgm",
+          "sha256": "407e291f02cf79f86e74ca44d64e3044c13997d91e326ec6314e96ce485de5be"
+        },
+        {
+          "bytes": 18,
+          "path": "tmp.genauxbas",
+          "sha256": "c21b4d2ffc973bfb32a877804fca2b7cdf9b576d9eebd65bb2a549774ae4cf1a"
+        },
+        {
+          "bytes": 86,
+          "path": "tmp.genbas",
+          "sha256": "d47e3d72b7c657b8d4ed7c7110754ad306998ec4a543a1ca9f7dfb5e1395fb9f"
+        },
+        {
+          "bytes": 1389,
+          "path": "tmp1.z2c",
+          "sha256": "166cd993a03f539822ab346095330b4325644a55bc79305d53056a6a864fcb8a"
+        },
+        {
+          "bytes": 1352,
+          "path": "tmp2.z2c",
+          "sha256": "3d969fca355af39322c3c3f4a5021ef66d23c7542cebd1db5fcb99dd24ac8f92"
+        },
+        {
+          "bytes": 1468,
+          "path": "zmat",
+          "sha256": "3ad3b5300ed9141ff0d78b6224d083e507304ed7f8bf2aedfb1907e4d3343a40"
+        },
+        {
+          "bytes": 2001,
+          "path": "zmat2",
+          "sha256": "cc1f446128c2f0aa64cf6c2e71eaba6be12e2d715d927d540a497881859065c1"
+        },
+        {
+          "bytes": 1999,
+          "path": "zmat3",
+          "sha256": "5a440fa6ae684f4e517871adbfbfd0ddb4a63239da618d1bd2f9115fae8214c2"
+        }
+      ],
+      "source_tree_bytes": 1104544018,
+      "source_tree_sha256": "007d37b7b3bbbbb5910427f3e59cf039ded42e365019dd4ef7e9ea4f35c40f79",
+      "species": "PCONF21_444",
+      "spin": 0,
+      "stages": {
+        "250974": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          2.59032452     -2.72635156      1.13962171\n   C          2.90032454     -1.79735149      0.42962165\n   O          2.82632454     -1.86435149     -0.90337845\n   H          3.10532456     -0.99535143     -1.28237848\n   C          3.40132458     -0.46835139      0.98362170\n   H          4.41232466     -0.29035137      0.61162167\n   H          3.42332458     -0.54435139      2.06562178\n   N          2.56232452      0.65664870      0.61362167\n   H          1.89132447      1.05664873      1.26862172\n   C          2.57632452      1.16864874     -0.62637843\n   O          3.24632457      0.69264870     -1.55237850\n   C          1.70032445      2.39764883     -0.81737844\n   H          1.90232447      2.78764886     -1.80937852\n   H          1.95932447      3.14664889     -0.06737838\n   N          0.28732435      2.09464881     -0.71237843\n   H         -0.33367570      2.14564881     -1.50837849\n   C         -0.32567570      1.93664880      0.47162166\n   O          0.27032434      1.91064879      1.55462174\n   C         -1.84567582      1.82064879      0.39662165\n   N         -2.29867585      1.80464879     -0.99337845\n   H         -3.20367592      2.24764882     -1.07437846\n   H         -2.41467586      0.84164871     -1.29837848\n   H         -2.21067584      2.73664886      0.86562169\n   C         -2.31967585      0.62464870      1.24562172\n   H         -1.82367581      0.68164870      2.21362179\n   H         -3.39467593      0.72764870      1.40562173\n   C         -2.03267583     -0.68235140      0.56362166\n   C         -3.00867590     -1.28335145     -0.24037840\n   H         -3.99267598     -0.83435141     -0.30237840\n   C         -2.73967588     -2.46235154     -0.93337845\n   H         -3.50867594     -2.91535157     -1.54437850\n   C         -1.48567579     -3.05735158     -0.82837844\n   H         -1.27367577     -3.97535165     -1.35937848\n   C         -0.50567571     -2.47835154     -0.02237838\n   H          0.46232436     -2.94835158      0.08262163\n   C         -0.77867573     -1.29635145      0.66262167\n   H         -0.02067568     -0.85935142      1.30162172\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000250000974\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "0debf8302b001ca0ccb34f6ffca6fe225ef937b70ffa204d259982e48ea440d1"
+        },
+        "75302": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          2.59032452     -2.72635156      1.13962171\n   C          2.90032454     -1.79735149      0.42962165\n   O          2.82632454     -1.86435149     -0.90337845\n   H          3.10532456     -0.99535143     -1.28237848\n   C          3.40132458     -0.46835139      0.98362170\n   H          4.41232466     -0.29035137      0.61162167\n   H          3.42332458     -0.54435139      2.06562178\n   N          2.56232452      0.65664870      0.61362167\n   H          1.89132447      1.05664873      1.26862172\n   C          2.57632452      1.16864874     -0.62637843\n   O          3.24632457      0.69264870     -1.55237850\n   C          1.70032445      2.39764883     -0.81737844\n   H          1.90232447      2.78764886     -1.80937852\n   H          1.95932447      3.14664889     -0.06737838\n   N          0.28732435      2.09464881     -0.71237843\n   H         -0.33367570      2.14564881     -1.50837849\n   C         -0.32567570      1.93664880      0.47162166\n   O          0.27032434      1.91064879      1.55462174\n   C         -1.84567582      1.82064879      0.39662165\n   N         -2.29867585      1.80464879     -0.99337845\n   H         -3.20367592      2.24764882     -1.07437846\n   H         -2.41467586      0.84164871     -1.29837848\n   H         -2.21067584      2.73664886      0.86562169\n   C         -2.31967585      0.62464870      1.24562172\n   H         -1.82367581      0.68164870      2.21362179\n   H         -3.39467593      0.72764870      1.40562173\n   C         -2.03267583     -0.68235140      0.56362166\n   C         -3.00867590     -1.28335145     -0.24037840\n   H         -3.99267598     -0.83435141     -0.30237840\n   C         -2.73967588     -2.46235154     -0.93337845\n   H         -3.50867594     -2.91535157     -1.54437850\n   C         -1.48567579     -3.05735158     -0.82837844\n   H         -1.27367577     -3.97535165     -1.35937848\n   C         -0.50567571     -2.47835154     -0.02237838\n   H          0.46232436     -2.94835158      0.08262163\n   C         -0.77867573     -1.29635145      0.66262167\n   H         -0.02067568     -0.85935142      1.30162172\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000075000302\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "99cc7ddefcb5de32a48fac9e93247b3e2a13ad8327f212558911d77f352be493"
+        },
+        "99590": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          2.59032452     -2.72635156      1.13962171\n   C          2.90032454     -1.79735149      0.42962165\n   O          2.82632454     -1.86435149     -0.90337845\n   H          3.10532456     -0.99535143     -1.28237848\n   C          3.40132458     -0.46835139      0.98362170\n   H          4.41232466     -0.29035137      0.61162167\n   H          3.42332458     -0.54435139      2.06562178\n   N          2.56232452      0.65664870      0.61362167\n   H          1.89132447      1.05664873      1.26862172\n   C          2.57632452      1.16864874     -0.62637843\n   O          3.24632457      0.69264870     -1.55237850\n   C          1.70032445      2.39764883     -0.81737844\n   H          1.90232447      2.78764886     -1.80937852\n   H          1.95932447      3.14664889     -0.06737838\n   N          0.28732435      2.09464881     -0.71237843\n   H         -0.33367570      2.14564881     -1.50837849\n   C         -0.32567570      1.93664880      0.47162166\n   O          0.27032434      1.91064879      1.55462174\n   C         -1.84567582      1.82064879      0.39662165\n   N         -2.29867585      1.80464879     -0.99337845\n   H         -3.20367592      2.24764882     -1.07437846\n   H         -2.41467586      0.84164871     -1.29837848\n   H         -2.21067584      2.73664886      0.86562169\n   C         -2.31967585      0.62464870      1.24562172\n   H         -1.82367581      0.68164870      2.21362179\n   H         -3.39467593      0.72764870      1.40562173\n   C         -2.03267583     -0.68235140      0.56362166\n   C         -3.00867590     -1.28335145     -0.24037840\n   H         -3.99267598     -0.83435141     -0.30237840\n   C         -2.73967588     -2.46235154     -0.93337845\n   H         -3.50867594     -2.91535157     -1.54437850\n   C         -1.48567579     -3.05735158     -0.82837844\n   H         -1.27367577     -3.97535165     -1.35937848\n   C         -0.50567571     -2.47835154     -0.02237838\n   H          0.46232436     -2.94835158      0.08262163\n   C         -0.77867573     -1.29635145      0.66262167\n   H         -0.02067568     -0.85935142      1.30162172\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "b38832173bcd4880727c154d5c23ec370d39c2009f9f9e01d55c600e0004bc8c"
+        },
+        "fixed": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          2.59032452     -2.72635156      1.13962171\n   C          2.90032454     -1.79735149      0.42962165\n   O          2.82632454     -1.86435149     -0.90337845\n   H          3.10532456     -0.99535143     -1.28237848\n   C          3.40132458     -0.46835139      0.98362170\n   H          4.41232466     -0.29035137      0.61162167\n   H          3.42332458     -0.54435139      2.06562178\n   N          2.56232452      0.65664870      0.61362167\n   H          1.89132447      1.05664873      1.26862172\n   C          2.57632452      1.16864874     -0.62637843\n   O          3.24632457      0.69264870     -1.55237850\n   C          1.70032445      2.39764883     -0.81737844\n   H          1.90232447      2.78764886     -1.80937852\n   H          1.95932447      3.14664889     -0.06737838\n   N          0.28732435      2.09464881     -0.71237843\n   H         -0.33367570      2.14564881     -1.50837849\n   C         -0.32567570      1.93664880      0.47162166\n   O          0.27032434      1.91064879      1.55462174\n   C         -1.84567582      1.82064879      0.39662165\n   N         -2.29867585      1.80464879     -0.99337845\n   H         -3.20367592      2.24764882     -1.07437846\n   H         -2.41467586      0.84164871     -1.29837848\n   H         -2.21067584      2.73664886      0.86562169\n   C         -2.31967585      0.62464870      1.24562172\n   H         -1.82367581      0.68164870      2.21362179\n   H         -3.39467593      0.72764870      1.40562173\n   C         -2.03267583     -0.68235140      0.56362166\n   C         -3.00867590     -1.28335145     -0.24037840\n   H         -3.99267598     -0.83435141     -0.30237840\n   C         -2.73967588     -2.46235154     -0.93337845\n   H         -3.50867594     -2.91535157     -1.54437850\n   C         -1.48567579     -3.05735158     -0.82837844\n   H         -1.27367577     -3.97535165     -1.35937848\n   C         -0.50567571     -2.47835154     -0.02237838\n   H          0.46232436     -2.94835158      0.08262163\n   C         -0.77867573     -1.29635145      0.66262167\n   H         -0.02067568     -0.85935142      1.30162172\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nSCF_GUESS READ\nJOBTYPE SP\nEXCHANGE HF\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "13d9e51cbe0e77fedcaaeb13dfcfd9bdd94f9679f426f9dfe58f8166d2ec5365"
+        },
+        "pt2": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          2.59032452     -2.72635156      1.13962171\n   C          2.90032454     -1.79735149      0.42962165\n   O          2.82632454     -1.86435149     -0.90337845\n   H          3.10532456     -0.99535143     -1.28237848\n   C          3.40132458     -0.46835139      0.98362170\n   H          4.41232466     -0.29035137      0.61162167\n   H          3.42332458     -0.54435139      2.06562178\n   N          2.56232452      0.65664870      0.61362167\n   H          1.89132447      1.05664873      1.26862172\n   C          2.57632452      1.16864874     -0.62637843\n   O          3.24632457      0.69264870     -1.55237850\n   C          1.70032445      2.39764883     -0.81737844\n   H          1.90232447      2.78764886     -1.80937852\n   H          1.95932447      3.14664889     -0.06737838\n   N          0.28732435      2.09464881     -0.71237843\n   H         -0.33367570      2.14564881     -1.50837849\n   C         -0.32567570      1.93664880      0.47162166\n   O          0.27032434      1.91064879      1.55462174\n   C         -1.84567582      1.82064879      0.39662165\n   N         -2.29867585      1.80464879     -0.99337845\n   H         -3.20367592      2.24764882     -1.07437846\n   H         -2.41467586      0.84164871     -1.29837848\n   H         -2.21067584      2.73664886      0.86562169\n   C         -2.31967585      0.62464870      1.24562172\n   H         -1.82367581      0.68164870      2.21362179\n   H         -3.39467593      0.72764870      1.40562173\n   C         -2.03267583     -0.68235140      0.56362166\n   C         -3.00867590     -1.28335145     -0.24037840\n   H         -3.99267598     -0.83435141     -0.30237840\n   C         -2.73967588     -2.46235154     -0.93337845\n   H         -3.50867594     -2.91535157     -1.54437850\n   C         -1.48567579     -3.05735158     -0.82837844\n   H         -1.27367577     -3.97535165     -1.35937848\n   C         -0.50567571     -2.47835154     -0.02237838\n   H          0.46232436     -2.94835158      0.08262163\n   C         -0.77867573     -1.29635145      0.66262167\n   H         -0.02067568     -0.85935142      1.30162172\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nMETHOD wB97M(2)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS READ\nJOBTYPE SP\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "97cbee3830d9e5fdaec538396ad9b05120163d37ed626c8c06d3a772299e3bd9"
+        },
+        "scalar": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          2.59032452     -2.72635156      1.13962171\n   C          2.90032454     -1.79735149      0.42962165\n   O          2.82632454     -1.86435149     -0.90337845\n   H          3.10532456     -0.99535143     -1.28237848\n   C          3.40132458     -0.46835139      0.98362170\n   H          4.41232466     -0.29035137      0.61162167\n   H          3.42332458     -0.54435139      2.06562178\n   N          2.56232452      0.65664870      0.61362167\n   H          1.89132447      1.05664873      1.26862172\n   C          2.57632452      1.16864874     -0.62637843\n   O          3.24632457      0.69264870     -1.55237850\n   C          1.70032445      2.39764883     -0.81737844\n   H          1.90232447      2.78764886     -1.80937852\n   H          1.95932447      3.14664889     -0.06737838\n   N          0.28732435      2.09464881     -0.71237843\n   H         -0.33367570      2.14564881     -1.50837849\n   C         -0.32567570      1.93664880      0.47162166\n   O          0.27032434      1.91064879      1.55462174\n   C         -1.84567582      1.82064879      0.39662165\n   N         -2.29867585      1.80464879     -0.99337845\n   H         -3.20367592      2.24764882     -1.07437846\n   H         -2.41467586      0.84164871     -1.29837848\n   H         -2.21067584      2.73664886      0.86562169\n   C         -2.31967585      0.62464870      1.24562172\n   H         -1.82367581      0.68164870      2.21362179\n   H         -3.39467593      0.72764870      1.40562173\n   C         -2.03267583     -0.68235140      0.56362166\n   C         -3.00867590     -1.28335145     -0.24037840\n   H         -3.99267598     -0.83435141     -0.30237840\n   C         -2.73967588     -2.46235154     -0.93337845\n   H         -3.50867594     -2.91535157     -1.54437850\n   C         -1.48567579     -3.05735158     -0.82837844\n   H         -1.27367577     -3.97535165     -1.35937848\n   C         -0.50567571     -2.47835154     -0.02237838\n   H          0.46232436     -2.94835158      0.08262163\n   C         -0.77867573     -1.29635145      0.66262167\n   H         -0.02067568     -0.85935142      1.30162172\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nSCF_GUESS READ\nJOBTYPE SP\nEXCHANGE HF\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\nLRC_DFT TRUE\nSRC_DFT TRUE\nOMEGA 300\nOMEGA2 300\nHF_SR 1000\nHF_LR 0\nNL_CORRELATION VV10\nNL_GRID 1\nNL_VV_B 550\nNL_VV_C 100\nNL_VV_SCALE 100000\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "83a03f8c1f98f2c9dae688bea95797ffca48e8c602eabb752d48ec497fdf7c91"
+        }
+      }
+    },
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/PCONF21_99/input0",
+      "basis_bridge": {
+        "auxiliary_definition_sha256": "b7bbf547f50431d6cf37e8526f676d59716daf3840a6539ae1d383af6e942846",
+        "auxiliary_pyscf_name": "rimp2-def2-QZVPPD",
+        "auxiliary_qchem_label": "rimp2-def2-QZVPPD",
+        "auxiliary_resolution": "hash_pinned_qchem_named_library",
+        "auxiliary_shells": "1063",
+        "auxiliary_spherical_aos": "4245",
+        "ecp_definition_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "ecp_electrons": "0",
+        "ecp_resolution": "not_applicable",
+        "electron_count": "148",
+        "elements": "C;H;N;O",
+        "orbital_definition_sha256": "6f1af9f4e7c5b6293183ad0d7e4d6206ffc53fe19a2171a5b86114543d4e59be",
+        "orbital_pyscf_name": "def2-qzvppd",
+        "orbital_qchem_label": "DEF2-QZVPPD",
+        "orbital_resolution": "named_alias",
+        "orbital_shells": "571",
+        "orbital_spherical_aos": "1833",
+        "qchem_source_input_sha256": "1f5714ebc17a528c1b8605ae8193a9c40c1dd379c1709277c773fb3e2353cec2",
+        "required_for_energy_roles": "true",
+        "runnable_status": "runnable_basis_metadata_validated",
+        "scope": "gscdb137",
+        "source_record_sha256": "74a012ee6dd1f4a0ca25a42af91ebac7d758e92dfe95eb9628d91f7be67f7e52",
+        "species": "PCONF21_99",
+        "spin": "0"
+      },
+      "cross_campaign_partial_reuse": "not_authorized_without_explicit_raw_stage_validation",
+      "electron_count": 148,
+      "input_sha256": "1f5714ebc17a528c1b8605ae8193a9c40c1dd379c1709277c773fb3e2353cec2",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/PCONF21_99",
+      "pt2_policy": "native_total_pt2",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "cpus": 16,
+        "requested_memory_gib": 227,
+        "wall_hours": 336
+      },
+      "route": {
+        "account": "lr_mhg2",
+        "partition": "lr8",
+        "qos": "mhg2_lr8_normal"
+      },
+      "scratch_root": "/clusterfs/mhg-data/yaoshen/scf_read/revwb97m2/pilot_remaining_v3_m227/PCONF21_99",
+      "source_record_sha256": "74a012ee6dd1f4a0ca25a42af91ebac7d758e92dfe95eb9628d91f7be67f7e52",
+      "source_tree": [
+        {
+          "bytes": 61,
+          "path": ".staged.ok",
+          "sha256": "bc8009d76a51088087ab9892428fe263d664934d1d05b5f710dad21b9e68ca92"
+        },
+        {
+          "bytes": 80138304,
+          "path": "1100.0",
+          "sha256": "b161444293cb241767d6e261f877154ed17da39233a3a5d7a592a965b826500b"
+        },
+        {
+          "bytes": 24,
+          "path": "1110.0",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+        },
+        {
+          "bytes": 1040,
+          "path": "1111.0",
+          "sha256": "da7f6324d01642611fc8e226dfe423364a47e4821a0abda79769eb16d4c11f04"
+        },
+        {
+          "bytes": 20,
+          "path": "121.0",
+          "sha256": "2146eaa76cec4a6212fce01e40b4f0d2be9614fabeafecd7ab06438783bbabe7"
+        },
+        {
+          "bytes": 53758224,
+          "path": "130.0",
+          "sha256": "7fb691e4cd17d163dda59e7b296f838f9cbe335ccb1c1cfae9265ce619611ba6"
+        },
+        {
+          "bytes": 52475536,
+          "path": "148.0",
+          "sha256": "1ef241e9b32a2e8c14ff58ad2874ed89f84ba3495c803ec8a09f50a016fa26d0"
+        },
+        {
+          "bytes": 10283040,
+          "path": "150.0",
+          "sha256": "7ec995feba4845773b64447cf041a924a6a9a67ca6afeff23522191abfb552df"
+        },
+        {
+          "bytes": 53113008,
+          "path": "151.0",
+          "sha256": "14cec130ddebb2aed96efe2021b4045944ad475c4fe391a1dc62ce1417f5399f"
+        },
+        {
+          "bytes": 4,
+          "path": "1612.0",
+          "sha256": "79ff7fbc96a0a6111e3c2706d61deb84c7c8e5a137b776f34a7dc3775f3652de"
+        },
+        {
+          "bytes": 4,
+          "path": "1622.0",
+          "sha256": "79ff7fbc96a0a6111e3c2706d61deb84c7c8e5a137b776f34a7dc3775f3652de"
+        },
+        {
+          "bytes": 40,
+          "path": "1700.0",
+          "sha256": "a21b524afe1df5e1216cb34e1da476d40d68d57de9b9c10943c5145654c89989"
+        },
+        {
+          "bytes": 27532,
+          "path": "1701.0",
+          "sha256": "f9ecf8be03a0d77fb6ea6b3ab2b6a72f8d49aac3746ca3305106d355d02f896d"
+        },
+        {
+          "bytes": 42556,
+          "path": "1702.0",
+          "sha256": "f012d36a18acad7a35a18650fb91240b89168f1f9fcb0eaa009f8c8f17844f44"
+        },
+        {
+          "bytes": 24,
+          "path": "1710.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 38402896,
+          "path": "1711.0",
+          "sha256": "89353937559bbaca168439f5cf6a11524c6495fd11717ee55a7d50477dff9109"
+        },
+        {
+          "bytes": 24,
+          "path": "1720.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 543552,
+          "path": "1721.0",
+          "sha256": "3c9bb0e989d4c82a78eff4749bc7abcfb3bf48137fd351b86c77b377f0b1b9d5"
+        },
+        {
+          "bytes": 24,
+          "path": "1730.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 22447444,
+          "path": "1731.0",
+          "sha256": "bee2b00abb89e9c99c2dcaf957477aa9d90d2b0fae00347f410a18cdecfc9e31"
+        },
+        {
+          "bytes": 24,
+          "path": "174.0",
+          "sha256": "b45f36e7733dfdc02af24b667bf89c3d7edf1f0468a1a48e2d566f0e3199927d"
+        },
+        {
+          "bytes": 24,
+          "path": "1740.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 184369976,
+          "path": "1741.0",
+          "sha256": "f34dcc911e228e1524cba4d55e0c854a9fae1e6b9c9d479c8dc8b037fe5b95c9"
+        },
+        {
+          "bytes": 296,
+          "path": "175.0",
+          "sha256": "64acf2e467fc5fa9a186d0ff0462476758ef87fc53c19a03d2b67f6124303be4"
+        },
+        {
+          "bytes": 4,
+          "path": "177.0",
+          "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+        },
+        {
+          "bytes": 24,
+          "path": "179.0",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+        },
+        {
+          "bytes": 26879112,
+          "path": "320.0",
+          "sha256": "f044e1ba21b790493f8f819fb0dd1fcc8029a0480185a73369598348c39c8baa"
+        },
+        {
+          "bytes": 8,
+          "path": "334.0",
+          "sha256": "3f88ed6548234ca1ef6c678f50a393496d22c714fec818e91ece2beb910fe0cf"
+        },
+        {
+          "bytes": 7332280,
+          "path": "370.0",
+          "sha256": "a22af97e0284aea01181ddd990d750069255ba55f142160df3b7cf92043dc261"
+        },
+        {
+          "bytes": 284,
+          "path": "4.0",
+          "sha256": "49ddf528671f2685f3d6d2c13da091e74c7c4206e1086c9aef1fe37d9b8999ec"
+        },
+        {
+          "bytes": 26879112,
+          "path": "412.0",
+          "sha256": "4820353f3ecdec6330b3d876b39d050f79cb931aa6701bdb4422c9e118f0d11f"
+        },
+        {
+          "bytes": 220,
+          "path": "46.0",
+          "sha256": "b03a768e54fa99d43799bd7fd3decc326a8ba7551560637243c29c97f689d07e"
+        },
+        {
+          "bytes": 53840768,
+          "path": "49.0",
+          "sha256": "cb8398ea0b65a64368309d8585e7294ec0791a485930662fce5f54144590b375"
+        },
+        {
+          "bytes": 66843992,
+          "path": "51.0",
+          "sha256": "425d2da3253e7179eaffb12d6075251c835b1b85fa93ca74a0ed5487114b06bd"
+        },
+        {
+          "bytes": 53141984,
+          "path": "53.0",
+          "sha256": "c414ba2e1fa5e037b7f8542b55fba789984bad317a441030d0d2cd53d9c5dbb8"
+        },
+        {
+          "bytes": 53758224,
+          "path": "54.0",
+          "sha256": "fe727d4cdd65983ad3b95d02a2d6aec79e2ef3fb082adccdf02d300625e5cbb1"
+        },
+        {
+          "bytes": 53758224,
+          "path": "58.0",
+          "sha256": "7fb691e4cd17d163dda59e7b296f838f9cbe335ccb1c1cfae9265ce619611ba6"
+        },
+        {
+          "bytes": 6169824,
+          "path": "59.0",
+          "sha256": "f06463b532c8695663c7ca11d2b445645c236671a2f245587421856693b4d2a9"
+        },
+        {
+          "bytes": 1184,
+          "path": "593.0",
+          "sha256": "41c0c789d3070536992e4866b78b0347f4818ad9b584df477dfc2482eefd7de3"
+        },
+        {
+          "bytes": 72,
+          "path": "6.0",
+          "sha256": "1332df685c45a61a0ac008a6a653295b8c5655361c1d34b6304b22ec40235fb8"
+        },
+        {
+          "bytes": 4113216,
+          "path": "61.0",
+          "sha256": "af883bc12f43b26f63fc631338e9e121fe46b914650e7d53252d460e86413387"
+        },
+        {
+          "bytes": 148,
+          "path": "621.0",
+          "sha256": "033db2162394754ce030ad7b7b3d192daea18957e6d28007069dd59143398f4e"
+        },
+        {
+          "bytes": 201437440,
+          "path": "63.0",
+          "sha256": "dff164e43ba7072f6108f9fb256303bab6df0b43feead58c5ca75cf2c95daa01"
+        },
+        {
+          "bytes": 64,
+          "path": "686.0",
+          "sha256": "ba122868d81daa9d73594ce8eaa51f11e5ca75906ee9a9861523f27132576084"
+        },
+        {
+          "bytes": 8,
+          "path": "758.0",
+          "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+        },
+        {
+          "bytes": 24,
+          "path": "771.0",
+          "sha256": "90abd4173653eba1f70db7ef89679a28dee4c96df7682c071c097524c31e4199"
+        },
+        {
+          "bytes": 32189528,
+          "path": "80.0",
+          "sha256": "f12091f303fc834a5f8cd6c5b064b2d5f9b641d6aaeba1739ba7dc0c2ee3108c"
+        },
+        {
+          "bytes": 5035936,
+          "path": "803.0",
+          "sha256": "be1bae61844368ad2aefa6c66bcead041032334debebd8cee102ce909f2f8117"
+        },
+        {
+          "bytes": 33960,
+          "path": "818.0",
+          "sha256": "52914934e0b5437e581dc5faef47e10128676950466acf9c91614ff0a5d428f6"
+        },
+        {
+          "bytes": 16,
+          "path": "819.0",
+          "sha256": "869519fcd26c1b24651ad62de90a74ae0df22f57a812394d78aa2a91e5adaf07"
+        },
+        {
+          "bytes": 20143744,
+          "path": "90.0",
+          "sha256": "e49ec11336065ef4e962da26ad11e7485faf8bba32639cbaa1d5087ea377cd56"
+        },
+        {
+          "bytes": 24,
+          "path": "9121.0",
+          "sha256": "82d16d1a0a9b623c73b0e964988430158398319d67d81c9bb5d094443efafe6a"
+        },
+        {
+          "bytes": 20143744,
+          "path": "97.0",
+          "sha256": "33692eb9a8985d1c88ccff6d632db47ad2a3232345e558ee6343df795b6f1ab3"
+        },
+        {
+          "bytes": 32,
+          "path": "976.0",
+          "sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925"
+        },
+        {
+          "bytes": 272,
+          "path": "99.0",
+          "sha256": "bf6c553f9c9c2fb2ed3e0501236dfeeb432ae0e2e38a8ece3371512d11741a47"
+        },
+        {
+          "bytes": 800,
+          "path": "archive.h5",
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e"
+        },
+        {
+          "bytes": 2445,
+          "path": "input0",
+          "sha256": "1f5714ebc17a528c1b8605ae8193a9c40c1dd379c1709277c773fb3e2353cec2"
+        },
+        {
+          "bytes": 2498,
+          "path": "molecule",
+          "sha256": "527e56188edec4e2d0ec833b50d2ddfd1dec1be8579494813716aaccebb7630b"
+        },
+        {
+          "bytes": 288,
+          "path": "pseudodata",
+          "sha256": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+        },
+        {
+          "bytes": 800,
+          "path": "qarchive.h5",
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e"
+        },
+        {
+          "bytes": 163,
+          "path": "rem",
+          "sha256": "892f5eb4dbdffaeab9a61de803a7bd430242affeac169ca42f1e2682dd3e3283"
+        },
+        {
+          "bytes": 317,
+          "path": "remfrgm",
+          "sha256": "407e291f02cf79f86e74ca44d64e3044c13997d91e326ec6314e96ce485de5be"
+        },
+        {
+          "bytes": 18,
+          "path": "tmp.genauxbas",
+          "sha256": "c21b4d2ffc973bfb32a877804fca2b7cdf9b576d9eebd65bb2a549774ae4cf1a"
+        },
+        {
+          "bytes": 86,
+          "path": "tmp.genbas",
+          "sha256": "d47e3d72b7c657b8d4ed7c7110754ad306998ec4a543a1ca9f7dfb5e1395fb9f"
+        },
+        {
+          "bytes": 1388,
+          "path": "tmp1.z2c",
+          "sha256": "1d92ac0986cdf85b7a8991ee12c8074eb85629ed179241671af4b8fd6d378c48"
+        },
+        {
+          "bytes": 1351,
+          "path": "tmp2.z2c",
+          "sha256": "405db472a9b9f59d980e5ef175bc44278b64b9f4e3a42a3532ea661222d66793"
+        },
+        {
+          "bytes": 1467,
+          "path": "zmat",
+          "sha256": "fab0af7842e2fd8101e0a4b86d5aa44dd419ee03570916f0bf58569d877842a7"
+        },
+        {
+          "bytes": 2001,
+          "path": "zmat2",
+          "sha256": "e44a9e9ebe308f57a1a5e53d3e332db4f822627f69e373ec5ebb1d06a0d4cf07"
+        },
+        {
+          "bytes": 1999,
+          "path": "zmat3",
+          "sha256": "9ab6fee7914e4f5913d6ea1960ce7fe08115c7bb8318818b8ba35a102aca5bc4"
+        }
+      ],
+      "source_tree_bytes": 1127322770,
+      "source_tree_sha256": "6cf6fb651cdba3e61440a69e23d5e11db55c1e1a5696a0556c20ed264cdcd0c8",
+      "species": "PCONF21_99",
+      "spin": 0,
+      "stages": {
+        "250974": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          1.17175685      0.20002704     -1.16421630\n   C          2.18375692      0.24402705     -0.50321625\n   O          3.30475701     -0.43597301     -0.81121628\n   H          3.08875699     -0.95397305     -1.60121634\n   C          2.37675694      1.05602711      0.76178384\n   H          3.26175700      1.67602715      0.62878383\n   H          2.56375695      0.37002706      1.58478390\n   N          1.23575685      1.87902717      1.04378386\n   H          0.42775679      1.45102714      1.47878390\n   C          0.97975683      2.91102725      0.18478380\n   O          1.81575689      3.37202728     -0.57821626\n   C         -0.46624328      3.38402728      0.21078380\n   H         -0.53724328      4.30702735     -0.35521624\n   H         -0.81224330      3.53902730      1.23078388\n   N         -1.30224334      2.36802721     -0.40021625\n   H         -1.29724334      2.23702720     -1.40321632\n   C         -1.73124337      1.30402713      0.30678381\n   O         -1.60524337      1.20702712      1.53078390\n   C         -2.42724343      0.23502704     -0.53321626\n   N         -1.87824339      0.26102705     -1.88521636\n   H         -0.93024331     -0.10497298     -1.87621636\n   H         -2.43024343     -0.32197300     -2.50121641\n   H         -3.47324351      0.54902707     -0.60321626\n   C         -2.40824343     -1.12297306      0.18978380\n   H         -2.82424346     -0.98097305      1.18678387\n   H         -3.07224348     -1.79397311     -0.35821624\n   C         -1.04424332     -1.74597311      0.28478381\n   C         -0.55124329     -2.53997317     -0.75521627\n   H         -1.17324333     -2.72497318     -1.62221634\n   C          0.71375681     -3.12097321     -0.68021627\n   H          1.07075684     -3.74097326     -1.49221633\n   C          1.50675687     -2.92097319      0.44778382\n   H          2.48475695     -3.37697323      0.51578382\n   C          1.02175683     -2.14097314      1.49778390\n   H          1.61975688     -2.00597313      2.38978397\n   C         -0.24124326     -1.55797309      1.41578389\n   H         -0.62224329     -0.95997305      2.23378395\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000250000974\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "b642dca37964938a867b0e0362c67edb71818829ce34e450aa86f223fe595cac"
+        },
+        "75302": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          1.17175685      0.20002704     -1.16421630\n   C          2.18375692      0.24402705     -0.50321625\n   O          3.30475701     -0.43597301     -0.81121628\n   H          3.08875699     -0.95397305     -1.60121634\n   C          2.37675694      1.05602711      0.76178384\n   H          3.26175700      1.67602715      0.62878383\n   H          2.56375695      0.37002706      1.58478390\n   N          1.23575685      1.87902717      1.04378386\n   H          0.42775679      1.45102714      1.47878390\n   C          0.97975683      2.91102725      0.18478380\n   O          1.81575689      3.37202728     -0.57821626\n   C         -0.46624328      3.38402728      0.21078380\n   H         -0.53724328      4.30702735     -0.35521624\n   H         -0.81224330      3.53902730      1.23078388\n   N         -1.30224334      2.36802721     -0.40021625\n   H         -1.29724334      2.23702720     -1.40321632\n   C         -1.73124337      1.30402713      0.30678381\n   O         -1.60524337      1.20702712      1.53078390\n   C         -2.42724343      0.23502704     -0.53321626\n   N         -1.87824339      0.26102705     -1.88521636\n   H         -0.93024331     -0.10497298     -1.87621636\n   H         -2.43024343     -0.32197300     -2.50121641\n   H         -3.47324351      0.54902707     -0.60321626\n   C         -2.40824343     -1.12297306      0.18978380\n   H         -2.82424346     -0.98097305      1.18678387\n   H         -3.07224348     -1.79397311     -0.35821624\n   C         -1.04424332     -1.74597311      0.28478381\n   C         -0.55124329     -2.53997317     -0.75521627\n   H         -1.17324333     -2.72497318     -1.62221634\n   C          0.71375681     -3.12097321     -0.68021627\n   H          1.07075684     -3.74097326     -1.49221633\n   C          1.50675687     -2.92097319      0.44778382\n   H          2.48475695     -3.37697323      0.51578382\n   C          1.02175683     -2.14097314      1.49778390\n   H          1.61975688     -2.00597313      2.38978397\n   C         -0.24124326     -1.55797309      1.41578389\n   H         -0.62224329     -0.95997305      2.23378395\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000075000302\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "1cbb9ec6a6e7929fdb67c91a9c2d902f4bc0599f09b86c76a643c35b67d75e06"
+        },
+        "99590": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          1.17175685      0.20002704     -1.16421630\n   C          2.18375692      0.24402705     -0.50321625\n   O          3.30475701     -0.43597301     -0.81121628\n   H          3.08875699     -0.95397305     -1.60121634\n   C          2.37675694      1.05602711      0.76178384\n   H          3.26175700      1.67602715      0.62878383\n   H          2.56375695      0.37002706      1.58478390\n   N          1.23575685      1.87902717      1.04378386\n   H          0.42775679      1.45102714      1.47878390\n   C          0.97975683      2.91102725      0.18478380\n   O          1.81575689      3.37202728     -0.57821626\n   C         -0.46624328      3.38402728      0.21078380\n   H         -0.53724328      4.30702735     -0.35521624\n   H         -0.81224330      3.53902730      1.23078388\n   N         -1.30224334      2.36802721     -0.40021625\n   H         -1.29724334      2.23702720     -1.40321632\n   C         -1.73124337      1.30402713      0.30678381\n   O         -1.60524337      1.20702712      1.53078390\n   C         -2.42724343      0.23502704     -0.53321626\n   N         -1.87824339      0.26102705     -1.88521636\n   H         -0.93024331     -0.10497298     -1.87621636\n   H         -2.43024343     -0.32197300     -2.50121641\n   H         -3.47324351      0.54902707     -0.60321626\n   C         -2.40824343     -1.12297306      0.18978380\n   H         -2.82424346     -0.98097305      1.18678387\n   H         -3.07224348     -1.79397311     -0.35821624\n   C         -1.04424332     -1.74597311      0.28478381\n   C         -0.55124329     -2.53997317     -0.75521627\n   H         -1.17324333     -2.72497318     -1.62221634\n   C          0.71375681     -3.12097321     -0.68021627\n   H          1.07075684     -3.74097326     -1.49221633\n   C          1.50675687     -2.92097319      0.44778382\n   H          2.48475695     -3.37697323      0.51578382\n   C          1.02175683     -2.14097314      1.49778390\n   H          1.61975688     -2.00597313      2.38978397\n   C         -0.24124326     -1.55797309      1.41578389\n   H         -0.62224329     -0.95997305      2.23378395\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "a6adb1fdedffa8e93d4fd3b20ae09aa75836a40aca0516fac60329c42a8b55cb"
+        },
+        "fixed": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          1.17175685      0.20002704     -1.16421630\n   C          2.18375692      0.24402705     -0.50321625\n   O          3.30475701     -0.43597301     -0.81121628\n   H          3.08875699     -0.95397305     -1.60121634\n   C          2.37675694      1.05602711      0.76178384\n   H          3.26175700      1.67602715      0.62878383\n   H          2.56375695      0.37002706      1.58478390\n   N          1.23575685      1.87902717      1.04378386\n   H          0.42775679      1.45102714      1.47878390\n   C          0.97975683      2.91102725      0.18478380\n   O          1.81575689      3.37202728     -0.57821626\n   C         -0.46624328      3.38402728      0.21078380\n   H         -0.53724328      4.30702735     -0.35521624\n   H         -0.81224330      3.53902730      1.23078388\n   N         -1.30224334      2.36802721     -0.40021625\n   H         -1.29724334      2.23702720     -1.40321632\n   C         -1.73124337      1.30402713      0.30678381\n   O         -1.60524337      1.20702712      1.53078390\n   C         -2.42724343      0.23502704     -0.53321626\n   N         -1.87824339      0.26102705     -1.88521636\n   H         -0.93024331     -0.10497298     -1.87621636\n   H         -2.43024343     -0.32197300     -2.50121641\n   H         -3.47324351      0.54902707     -0.60321626\n   C         -2.40824343     -1.12297306      0.18978380\n   H         -2.82424346     -0.98097305      1.18678387\n   H         -3.07224348     -1.79397311     -0.35821624\n   C         -1.04424332     -1.74597311      0.28478381\n   C         -0.55124329     -2.53997317     -0.75521627\n   H         -1.17324333     -2.72497318     -1.62221634\n   C          0.71375681     -3.12097321     -0.68021627\n   H          1.07075684     -3.74097326     -1.49221633\n   C          1.50675687     -2.92097319      0.44778382\n   H          2.48475695     -3.37697323      0.51578382\n   C          1.02175683     -2.14097314      1.49778390\n   H          1.61975688     -2.00597313      2.38978397\n   C         -0.24124326     -1.55797309      1.41578389\n   H         -0.62224329     -0.95997305      2.23378395\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nSCF_GUESS READ\nJOBTYPE SP\nEXCHANGE HF\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "8b98e40e50bcff69eaedb2306dbcc48b4d03dcb2dca5214bf77cfc508bf835ec"
+        },
+        "pt2": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          1.17175685      0.20002704     -1.16421630\n   C          2.18375692      0.24402705     -0.50321625\n   O          3.30475701     -0.43597301     -0.81121628\n   H          3.08875699     -0.95397305     -1.60121634\n   C          2.37675694      1.05602711      0.76178384\n   H          3.26175700      1.67602715      0.62878383\n   H          2.56375695      0.37002706      1.58478390\n   N          1.23575685      1.87902717      1.04378386\n   H          0.42775679      1.45102714      1.47878390\n   C          0.97975683      2.91102725      0.18478380\n   O          1.81575689      3.37202728     -0.57821626\n   C         -0.46624328      3.38402728      0.21078380\n   H         -0.53724328      4.30702735     -0.35521624\n   H         -0.81224330      3.53902730      1.23078388\n   N         -1.30224334      2.36802721     -0.40021625\n   H         -1.29724334      2.23702720     -1.40321632\n   C         -1.73124337      1.30402713      0.30678381\n   O         -1.60524337      1.20702712      1.53078390\n   C         -2.42724343      0.23502704     -0.53321626\n   N         -1.87824339      0.26102705     -1.88521636\n   H         -0.93024331     -0.10497298     -1.87621636\n   H         -2.43024343     -0.32197300     -2.50121641\n   H         -3.47324351      0.54902707     -0.60321626\n   C         -2.40824343     -1.12297306      0.18978380\n   H         -2.82424346     -0.98097305      1.18678387\n   H         -3.07224348     -1.79397311     -0.35821624\n   C         -1.04424332     -1.74597311      0.28478381\n   C         -0.55124329     -2.53997317     -0.75521627\n   H         -1.17324333     -2.72497318     -1.62221634\n   C          0.71375681     -3.12097321     -0.68021627\n   H          1.07075684     -3.74097326     -1.49221633\n   C          1.50675687     -2.92097319      0.44778382\n   H          2.48475695     -3.37697323      0.51578382\n   C          1.02175683     -2.14097314      1.49778390\n   H          1.61975688     -2.00597313      2.38978397\n   C         -0.24124326     -1.55797309      1.41578389\n   H         -0.62224329     -0.95997305      2.23378395\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nMETHOD wB97M(2)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS READ\nJOBTYPE SP\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "5892d01576e2755babe0060fc7c26ff189c9542299fc89d994aaf1862eef46ac"
+        },
+        "scalar": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\n   O          1.17175685      0.20002704     -1.16421630\n   C          2.18375692      0.24402705     -0.50321625\n   O          3.30475701     -0.43597301     -0.81121628\n   H          3.08875699     -0.95397305     -1.60121634\n   C          2.37675694      1.05602711      0.76178384\n   H          3.26175700      1.67602715      0.62878383\n   H          2.56375695      0.37002706      1.58478390\n   N          1.23575685      1.87902717      1.04378386\n   H          0.42775679      1.45102714      1.47878390\n   C          0.97975683      2.91102725      0.18478380\n   O          1.81575689      3.37202728     -0.57821626\n   C         -0.46624328      3.38402728      0.21078380\n   H         -0.53724328      4.30702735     -0.35521624\n   H         -0.81224330      3.53902730      1.23078388\n   N         -1.30224334      2.36802721     -0.40021625\n   H         -1.29724334      2.23702720     -1.40321632\n   C         -1.73124337      1.30402713      0.30678381\n   O         -1.60524337      1.20702712      1.53078390\n   C         -2.42724343      0.23502704     -0.53321626\n   N         -1.87824339      0.26102705     -1.88521636\n   H         -0.93024331     -0.10497298     -1.87621636\n   H         -2.43024343     -0.32197300     -2.50121641\n   H         -3.47324351      0.54902707     -0.60321626\n   C         -2.40824343     -1.12297306      0.18978380\n   H         -2.82424346     -0.98097305      1.18678387\n   H         -3.07224348     -1.79397311     -0.35821624\n   C         -1.04424332     -1.74597311      0.28478381\n   C         -0.55124329     -2.53997317     -0.75521627\n   H         -1.17324333     -2.72497318     -1.62221634\n   C          0.71375681     -3.12097321     -0.68021627\n   H          1.07075684     -3.74097326     -1.49221633\n   C          1.50675687     -2.92097319      0.44778382\n   H          2.48475695     -3.37697323      0.51578382\n   C          1.02175683     -2.14097314      1.49778390\n   H          1.61975688     -2.00597313      2.38978397\n   C         -0.24124326     -1.55797309      1.41578389\n   H         -0.62224329     -0.95997305      2.23378395\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 8000\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nSCF_GUESS READ\nJOBTYPE SP\nEXCHANGE HF\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\nLRC_DFT TRUE\nSRC_DFT TRUE\nOMEGA 300\nOMEGA2 300\nHF_SR 1000\nHF_LR 0\nNL_CORRELATION VV10\nNL_GRID 1\nNL_VV_B 550\nNL_VV_C 100\nNL_VV_SCALE 100000\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "f043988e1d4b716558212debbb4e01dfd068702d7841ea73ea8e39566ab7281c"
+        }
+      }
+    }
+  ],
+  "code_hashes": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/build_reaction_smoke.py": "aabb0f1c6f5ee97a87a7a8f07b5519e2a18e940b49283d9b0f2a0f1183c476ae",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_inputs.py": "ab356c8d30ae62ac7d3269e5602bd597057bc8ec97be1912b76293a6d449c62c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_spec.py": "913f1d184be37477ba5fe5e58bec2acad6e9b5663d06ac11561d12d87409b078",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/grid_selection.py": "a11dd30e2ab8c9bf1b7065afa1a9f3512bd94aef62a3c64c7180565941d828ff",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/integrated_dv.py": "d3b56a6a0b45967dd7caccc379517777379466c85963203f4fd5782d30d3ff2e",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/corrected_canary_evidence_v1.json": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q6_retry2_control_amendment_v1.yaml": "283b2b0096edebb74b1a3f07b369b7b9d878c4a0237783eba5173dd18caea891",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/mio.py": "544cf9005966062245f3ffbeb091b536ab429495a1c7fed1af44f2bc3c915908",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/parent_scf.py": "ea6acf12837d91937469bc4338c613ecef7f962ae053c94478567b2144f8a568",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/production_generator.py": "bb203604102fff9a0437b18c8df6379e97dc09922867b871dc68f148211f0bbc",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/published_wb97m2.py": "0ec8d0c735d16bbd25cca98aad439af4066705b164d87e7b93c04897bc7829c9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_feature_publisher.py": "a6d0f63b2a290b315eefcbacfecca655fd02b0f4fb21f04edefda69ffab3ed75",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_integrated_dv_reference.py": "b1eda8e7e0f6bb652a466c374c5e31a5488027b0933fc9eddd4657eef21f4493",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_scalar_features.py": "fef539b1cd360eba3d2bde170175a76df5485340daa32a2261e7b431f3305daa",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_step13_stages.py": "c807bdb8295917d9652b2aae33f16c5928e102fb58216c103694c1588ab4b14b",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/reaction_assembly.py": "4146c59eb479d5bd4688375109b9d3285d02234941c986c5af4948b0655d84be",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/run_r2_smoke.py": "df06e42d956c0b41caaa17fd9ccd510e9f644e19a92163f68c6d4895089b8865",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scalar_features.py": "4dddae662fd56cd7fb3c12844a234ee29fa356e055c38d92fc189fd759d54030",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/corrected_canary_evidence.py": "735474655933c34ffc1a7fabf840403c17aa636d6b46015cf816c1ec55d12d5c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/fixed_energy_checkpoint.py": "73e2fa6f6fdfa831778808e1c0f8c1c9d5d15b96dad0f799b81b71f03293aeb2",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/generate_training_features_v2.py": "d095dc3cc46c6530beb01e6bfd5b3813ae056cc86b893b71759d4ee7ea859f79",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/prepare_q3_qchem_gateway.py": "d26e5984dc5058643c583d7368e7018b945bd93b052383d74b11d4f9877d9a30",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/recover_v7_canary_d4.py": "2611ef7617b1650c03f5a681df05015cc206650bd2fccd41c3114911fbee98fd",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_large_corrected_canaries.py": "9f91a41ab8bb357ad5e0a06bb27c2124903244b76ed9f2f988407927af67f821",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_step13_fresh_species.py": "81c10fd842f03bef3e8a02b482da5d8dff041ec1f75d26305ffde43dec51dc72",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/v7_canary.py": "57c0065e27567bb793a79dfdeb46a8255a28bdaa788af3358172aa252d6b357b",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/semilocal_features.py": "bb3d7c043d89d75c5e24c16e1a1bf45cf3f13a15b3423b101a13355aaf84184c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh": "3e4fef0aed9ea907f0f66593e9ac63b96f8078e54be03a57e8ff80639c1625f9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_v2.sh": "e2f4329999cdee412c177da83eef95012d106563a065ffdde0e0e0166f8f89c9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/solver_reporting.py": "9e5fc4b742d9dc6212ee84bbcd935d80d8ced0da4da9f062002b1fcf70491c60",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step13_resource_plan.py": "6f1b010f70c7ccad86f99092296f41fe428b048bea011f338451c9ccf2c1c8b0",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step13_stages.py": "7bf62a4fc323d2b5e940925979dd4c444109219b79270cfa32fbe372127ba15f",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step14_recovery.py": "a5b1c66c157bf34d553a85a2488b534d15c3351191af421f34c23bc973f0292d",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step14_recovery_v2.py": "d33a374d4a91a6ba138ab628287b7313547c08cfa8e70c840a406bc74e67f459",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/v7_canary.py": "3b21a17c0d4c56db4110054486e8a3dc002b5839d50df6180c88a5751c0c71f1",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/v7_refresh.py": "640d8281ab4551afd3c9494357b28ad79761f22245bfaee9be86da4a8c0cc9aa",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/validate_r2_smoke.py": "c8d5ef825f1cd9d7aa9671d5bf88615e2cf36a19b49b8eb09fdc01e13e776675",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/validate_reaction_smoke.py": "da44a703e49ee2ceb126019b4b0bb536d1ab4287a21a03c02cf4832909daa0d5"
+  },
+  "concurrency_policy": "User removed eight-task cap; no percent array throttle. Scheduler limits apply.",
+  "concurrency_proposal": null,
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "full_reuse_policy": "Explicit refresh/canary readback via audit-reuse; never infer readiness from files.",
+  "inventory_sha256": "6abe300fb10212ec30e4f5a3add9a6c7136c85f72597e09c32d7e28b8c0d29a3",
+  "minimum_copy_bytes": 13391200728,
+  "output_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/pilot_remaining_v3_m227",
+  "preparation_authorities": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/pilot_execution_v3/first16_independent_readback_20260908.json": "bd6747dbd86fe872b1f983c24dcecfbcc24c9613cd395e1942e9c604f44523af",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/pilot_execution_v3/remaining_pilot_preparation.json": "e20d5bc8ce58096525108ac1d9f3ef1812a8c5e8b82b959f50932fb5699841f0",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/freeze_remaining_pilot_v3.py": "86735585b03c40fc4fd90fbad65ad1e22b2928e70d8a0ac3080c96a817315001"
+  },
+  "purpose": "generic_training_feature_batch_corrected",
+  "resource_review_pending": true,
+  "schema_version": 2,
+  "scratch_root": "/clusterfs/mhg-data/yaoshen/scf_read/revwb97m2/pilot_remaining_v3_m227",
+  "selection_source": {
+    "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/training_preflight_v2/pilot100_species.json",
+    "sha256": "c795cb86c8df5ca37d675407f3c5f99403141ab67a3afd240d6ed27b28aa6a03"
+  },
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "stage_reuse_policy": "Only completed stages under identical plan/input/source hashes; partial stages stop.",
+  "storage_free_bytes_at_freeze": 2754743103389696,
+  "storage_note": "Copies lower bound only; new native scratch/logs need extra headroom. No reservation.",
+  "submission_authorized": false,
+  "user_commit_required": true
+}
