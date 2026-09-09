@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "commit": "ccd5b19ed8fce79f5d21e4b2ef95d1ac78e5e884",
+  "plan_sha256": "360342bbcec82426b2bcb0e84bf27cafb9cceb3649b1777648413da2c20ad286",
+  "tests": "197 passed in10.50s; pytest revwb97m2/tests -q",
+  "shell_syntax_passed": true,
+  "frozen_check_passed": true,
+  "real_adapter_readback_passed": true,
+  "adapter_manifest": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/fitting/pilot100_adapter_check_20260909/inputs.json",
+  "adapter_manifest_sha256": "ded5495640495704c957b05f0d099a9d645b5ad6745078255fb6c097d778062a",
+  "unchanged_matrix": true,
+  "numerical_validation_sha256": "4e22fc55ed9c78609865463c5e08fdef0283abc07d07112dfb508b3fe4791f18"
+}

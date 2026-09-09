@@ -1,0 +1,16 @@
+{
+  "commit": "ccd5b19ed8fce79f5d21e4b2ef95d1ac78e5e884",
+  "note": "Scope approved; live resource review and passing committed test evidence required before release.",
+  "plan_sha256": "360342bbcec82426b2bcb0e84bf27cafb9cceb3649b1777648413da2c20ad286",
+  "resource_review_passed": true,
+  "route": {
+    "account": "lr_qchem",
+    "partition": "cm1",
+    "qos": "condo_qchem"
+  },
+  "test_report": "revwb97m2/results/2026-09-09-pilot100-mio-tests.json",
+  "test_report_sha256": "597c62fe2f48eb9d0ad4f4e1da358c83e8a4eca6f619a7abdef824b45ac2da42",
+  "tests_passed": true,
+  "user_approved_submission": true,
+  "resource_review": "cm1 five idle241732MiB nodes;16CPU16GiB45min unchanged;lr_qchem/condo_qchem verified;no user jobs;2.5PiB shared free;no lr_lowprio."
+}
