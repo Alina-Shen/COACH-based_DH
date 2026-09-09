@@ -1,0 +1,22 @@
+{
+  "commit": "c588b5a574166244256fdff780e1c52ce8439919",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "max_concurrent_jobs": null,
+  "plan_sha256": "b35910abcc2362f6cb9191a11a749ba11112871d48fea366b184f09fd4b45f02",
+  "resource_review": "Live cm1 idle nodes241732MiB;8CPU14GiB72h unchanged;association verified;no user jobs;2.5PiB filesystem free;no lowprio/no artificial cap.",
+  "resource_review_passed": true,
+  "scheduler_routes": {
+    "3d4dIPSS_Y_GS": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "3d4dIPSS_Y_GS+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    }
+  },
+  "schema_version": 1,
+  "user_approved_submission": true
+}

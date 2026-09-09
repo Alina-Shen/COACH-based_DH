@@ -1,0 +1,35 @@
+{
+  "cases": [
+    {
+      "hf_error_hartree": 4.000014541816199e-09,
+      "job": "25726543",
+      "new_vv10_hartree": 0.048009125,
+      "old_vv10_hartree": 0.0207884461,
+      "passed": true,
+      "publication_sha256": "b91e9a40997e68b4adf43ff0fcdc3873c8b33c58ff2eb41bf68c46e40644b11d",
+      "species": "11_H2O_TA13",
+      "sr_reuse_error_hartree": 0.0,
+      "stages": 1
+    },
+    {
+      "finite": true,
+      "hf_error_hartree": 2.500001983207767e-09,
+      "job": "25726544_0",
+      "passed": true,
+      "publication_sha256": "4b650c2198273746f558bd21de3dea3228bbe32acfa7492ed185f7b30d20c610",
+      "species": "3d4dIPSS_Y_GS",
+      "stages": 6
+    },
+    {
+      "finite": true,
+      "hf_error_hartree": 2.999982484652719e-10,
+      "job": "25726544_1",
+      "passed": true,
+      "publication_sha256": "597509df67b945df55ea1c3d566a593c66e1dad524d0bc2569eac4f8f4dc0a58",
+      "species": "3d4dIPSS_Y_GS+",
+      "stages": 6
+    }
+  ],
+  "passed": true,
+  "total_stages": 13
+}

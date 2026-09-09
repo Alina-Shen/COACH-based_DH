@@ -1,0 +1,11 @@
+{
+  "commit": "c588b5a574166244256fdff780e1c52ce8439919",
+  "water_job": "25726543",
+  "y_array": "25726544",
+  "tasks": {"25726543": "11_H2O_TA13", "25726544_0": "3d4dIPSS_Y_GS", "25726544_1": "3d4dIPSS_Y_GS+"},
+  "partition": "cm1", "account": "lr_qchem", "qos": "condo_qchem",
+  "cpus_per_task": 8, "memory_gib_per_task": 14, "wall_hours": 72,
+  "artificial_concurrency_cap": null,
+  "release_files": ["revwb97m2/manifests/production_generator/water_scalar_refresh_v1_release_20260908.json", "revwb97m2/manifests/production_generator/embedded_y_features_v1_release_20260908.json"],
+  "note": "User-authorized real submissions after committed contract/evidence/source checks and fresh live route, storage and duplicate-job review. Test-only IDs25726456/25726457 are not these real jobs."
+}
