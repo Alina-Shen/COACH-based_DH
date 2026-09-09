@@ -1,0 +1,26 @@
+{
+  "allowed_additions": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/pilot100_inputs.py": "8b276226d4215769ad3570b74063c7796186a31686e5e87dfe56a36d04789f30"
+  },
+  "authorities": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/corrected_canary_evidence_v1.json": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/large_corrected_canaries_v1.json": "3b998d3a6b6b6270742934c8dafeec7580523aa99550c65c928d4e0ad8b34fbc",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/v7_canary_v1.json": "9b8e9982da58d61ab0e0ba9c237d4e5e7b33cf764ffd1f7172f4e4b51bacf7be",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/2026-09-09-ecp21-production-reference-review.json": "a4dff226ea346d3f23ba97a88ff48cae9487a8d501660a731f084ac47b8be962"
+  },
+  "implementation_hashes": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/corrected_canary_evidence_v2.py": "c10d6ce2b1eaa7843d3aa0fe898f09a45a79c48df4c3a99d611875e741a00669",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/ecp21_inputs_v1.py": "bf237b93277a2b6a46f80823cf9287025fd0aa9bbb03a4309b45cc898b1143a7",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/freeze_generation_compat_v1.py": "0eea638df9d8fd5df07c91acc9c8e063d6878ead453d4bcedd73fd197161334a",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/generate_training_features_v3.py": "d69d5db60943e3caf57857e582efdf8b411015bdf0871380c5ec170538d28ba8",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/generation_compat_v1.py": "85716cab37bfabee8ee38c60e5a2f050378ad9cb342be27992e1eac164c0d074",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_full_training_features_v3.sh": "e2966161c62d6da3ab9ffb87ef9f768325d1531161b4aaf3094ebc799198f5a0",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/tests/test_ecp21_inputs_v1.py": "59ff33ade017d05d7cdde970c216c3be8d2171ce428f0b1347a7c494fbad4410",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/tests/test_generation_compat_v1.py": "0e45e24e577ac8a96505049c94a4777706dd29a8dc79081172f453ca5a332f9c"
+  },
+  "native_plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/v7_canary_v1.json",
+  "policy": "exact historical dependency bytes plus exactly the reviewed addition; no monkeypatch/historical rewrite",
+  "schema_version": 1,
+  "status": "untested_precommit",
+  "submission_authorized": false
+}

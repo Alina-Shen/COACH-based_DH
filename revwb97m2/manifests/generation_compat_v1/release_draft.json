@@ -1,0 +1,8 @@
+{
+  "commit": "USER_PRETEST_COMMIT_REQUIRED",
+  "ecp_native_gateway_authorized": false,
+  "native_execution_plan": null,
+  "resource_review_passed": false,
+  "tests_passed": false,
+  "user_approved_submission": false
+}

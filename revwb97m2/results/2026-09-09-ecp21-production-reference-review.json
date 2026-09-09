@@ -1,0 +1,1770 @@
+{
+  "cases": [
+    {
+      "species": "3d4dIPSS_Ag_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Ag_GS/input0",
+      "input_sha256": "765c67a32af4cdef7ef1cd8063d51129a0e873c521c09db9618305565476ebe5",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ag_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ag_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "f5bc1fa507e87f07863f788b7bc93a48dd508fb04b1f63daf92f102b12466a9f",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "2",
+        "Ag",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "9"
+      ],
+      "bridge": {
+        "elements": "Ag",
+        "ecp_electrons": "28",
+        "electron_count": "19",
+        "spin": "1",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Ag_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Ag_GS+/input0",
+      "input_sha256": "ce32bad5ce0e651595dacf2066fef6455bf701a8c42add15fb175cddd31ee232",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ag_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ag_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "477b4d38820aa1dc6247e97478023e03e51bb184a762b5bbb8bd3284ef66e311",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "1",
+        "Ag",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "9",
+        "9"
+      ],
+      "bridge": {
+        "elements": "Ag",
+        "ecp_electrons": "28",
+        "electron_count": "18",
+        "spin": "0",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Cd_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Cd_GS/input0",
+      "input_sha256": "d17a2fc235dc198f32198774feebe21d0fa0b3b120a7fb6f8031bb871bdeb6cd",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Cd_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Cd_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "69fd5ad3fb94d74b51dc492f8a64da4840615be916739e99e9bbff27bdbc75c0",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "1",
+        "Cd",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "10"
+      ],
+      "bridge": {
+        "elements": "Cd",
+        "ecp_electrons": "28",
+        "electron_count": "20",
+        "spin": "0",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Cd_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Cd_GS+/input0",
+      "input_sha256": "b0a4eec2779cf2391f2249e135c34479fbfdda303232021099e0a61c3599fb55",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Cd_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Cd_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "07331e64640c450f05444d11a67cac411570faf4bd69107426a84b67a9fe144f",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "2",
+        "Cd",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "9"
+      ],
+      "bridge": {
+        "elements": "Cd",
+        "ecp_electrons": "28",
+        "electron_count": "19",
+        "spin": "1",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Mo_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Mo_GS/input0",
+      "input_sha256": "98a54ba8ac7d9baa702754b345a8e28c23e82372debefb2819670ceaae76ab46",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Mo_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Mo_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "75887f936e6a110e1ccb2b72ba9aa811473b29746986a98302108f4506bf89e8",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "7",
+        "Mo",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "4"
+      ],
+      "bridge": {
+        "elements": "Mo",
+        "ecp_electrons": "28",
+        "electron_count": "14",
+        "spin": "6",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Mo_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Mo_GS+/input0",
+      "input_sha256": "8e7f958aed90a1156337019a9ae83bf629330db9c55ccc69719ff6b2d568cecb",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Mo_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Mo_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "b4cf04be5d9d42d09c85f2edd27272802a3e81375e9e22074304d1fa25c08054",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "6",
+        "Mo",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "9",
+        "4"
+      ],
+      "bridge": {
+        "elements": "Mo",
+        "ecp_electrons": "28",
+        "electron_count": "13",
+        "spin": "5",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Nb_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Nb_GS/input0",
+      "input_sha256": "35a8ffd3106040ce145f7cf23b23d225e4af741c2f9329980938d3cc0a604fd0",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Nb_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Nb_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "8c227dc872843e11b64cedd35606cddb49413c9e321b402772be271e7ec29f7e",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "6",
+        "Nb",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "9",
+        "4"
+      ],
+      "bridge": {
+        "elements": "Nb",
+        "ecp_electrons": "28",
+        "electron_count": "13",
+        "spin": "5",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Nb_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Nb_GS+/input0",
+      "input_sha256": "4024e3cfbc854b9e9f59c069e9807fb6f36935dc40de86f43d92d42d9a1e244e",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Nb_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Nb_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "5331320974959636f26ba2998084f8095559e01acdf615f4c24c8f9212826b15",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "5",
+        "Nb",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "8",
+        "4"
+      ],
+      "bridge": {
+        "elements": "Nb",
+        "ecp_electrons": "28",
+        "electron_count": "12",
+        "spin": "4",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Pd_ES",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Pd_ES/input0",
+      "input_sha256": "6ba72a26ab01ca71a7d9ffb4b3bff838142efe0418995deaac74b194697a5dd2",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Pd_ES.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Pd_ES.out",
+      "production_input_identical": true,
+      "production_output_sha256": "7d1008a61812a1715443cb046d50dbfa016addd88bd8acb61218fa2bbc17c4ec",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "3",
+        "Pd",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "8"
+      ],
+      "bridge": {
+        "elements": "Pd",
+        "ecp_electrons": "28",
+        "electron_count": "18",
+        "spin": "2",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Pd_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Pd_GS/input0",
+      "input_sha256": "f40fc332e6cb64e1fbca61fa82a81543cdf099dacafc55ba54fc6fd9bbb3e83c",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Pd_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Pd_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "5e1faa9be1515c8b6ce6fc3bc1fa89678ab5c998a9d947cf849980f7bfae61c6",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "1",
+        "Pd",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "9",
+        "9"
+      ],
+      "bridge": {
+        "elements": "Pd",
+        "ecp_electrons": "28",
+        "electron_count": "18",
+        "spin": "0",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Pd_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Pd_GS+/input0",
+      "input_sha256": "4cdfc95e56e58304f5c5e0937e3374d4a36bfaffb48729d1330870340460d38e",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Pd_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Pd_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "f7ba824880b67ee281630bbe65d7b74d174f81337dbef3bdf7e312958d45d00f",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "2",
+        "Pd",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "9",
+        "8"
+      ],
+      "bridge": {
+        "elements": "Pd",
+        "ecp_electrons": "28",
+        "electron_count": "17",
+        "spin": "1",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Rh_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Rh_GS/input0",
+      "input_sha256": "7182f16e038170f59c06a4d2d6a2132bb6066c6a2b33e94a031dca4632977fbd",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Rh_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Rh_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "b456d0f2de96875a84c6d87a9e21bd63fc957fd267ee46f0b21d0a402271d8de",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "4",
+        "Rh",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "7"
+      ],
+      "bridge": {
+        "elements": "Rh",
+        "ecp_electrons": "28",
+        "electron_count": "17",
+        "spin": "3",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Rh_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Rh_GS+/input0",
+      "input_sha256": "cd0156ccf26dc654546bd4b9468b28d6f54c82449f9ebd59509fc6699f7ca068",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Rh_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Rh_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "3542d774fb883f2d63f0f65e9d0a09e4518b7d107b2e1092afb20ab6f0ebd77f",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "3",
+        "Rh",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "9",
+        "7"
+      ],
+      "bridge": {
+        "elements": "Rh",
+        "ecp_electrons": "28",
+        "electron_count": "16",
+        "spin": "2",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Ru_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Ru_GS/input0",
+      "input_sha256": "ec6d34fd364f9d9c3b6164ba0d5beb1be473be77c04f4fc2f52b8a316d3a3208",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ru_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ru_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "51c414c3f1adc7281f2d5cdfc03bc5fd96429db42e25965e7248645fd2180d0c",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "5",
+        "Ru",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "6"
+      ],
+      "bridge": {
+        "elements": "Ru",
+        "ecp_electrons": "28",
+        "electron_count": "16",
+        "spin": "4",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Ru_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Ru_GS+/input0",
+      "input_sha256": "85d5b335649b9f10ab6cf839d4c2d77b1e4794e7423024bc8cbf35e8ceb9cdc1",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ru_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Ru_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "925d88c48b0ae1e0b6ff3b814b2f5b3493b8e2112f00aa5906a69694f67db621",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "4",
+        "Ru",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "9",
+        "6"
+      ],
+      "bridge": {
+        "elements": "Ru",
+        "ecp_electrons": "28",
+        "electron_count": "15",
+        "spin": "3",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Tc_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Tc_GS/input0",
+      "input_sha256": "bdf3cc3438a5f32035e803e73d8a9fb8e1d03e5cf015072c91474b7b933e5ecd",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Tc_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Tc_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "f75eebdd4ba982892edd303ccfe2932487092ec43c2bd2293db8f682a49e68e3",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "6",
+        "Tc",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "5"
+      ],
+      "bridge": {
+        "elements": "Tc",
+        "ecp_electrons": "28",
+        "electron_count": "15",
+        "spin": "5",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 10\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Tc_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Tc_GS+/input0",
+      "input_sha256": "88e527d69245ff9bec4733144eb7fcdb79e9486e1b084c1f71eb97a951d32d29",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Tc_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Tc_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "1f369ae535f62573c27e963fa1ed16af0be7a2363fd3b00af7f7881adaefc239",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "7",
+        "Tc",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "10",
+        "4"
+      ],
+      "bridge": {
+        "elements": "Tc",
+        "ecp_electrons": "28",
+        "electron_count": "14",
+        "spin": "6",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Y_ES",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Y_ES/input0",
+      "input_sha256": "baa02217660f1faae4ce549e786998ee90d490cc027bc164745fb25496444bc6",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Y_ES.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Y_ES.out",
+      "production_input_identical": true,
+      "production_output_sha256": "90b5b5b09f9ed66d4970406bf1e77b09a054e8431ba789da706afe710ba4af2a",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "4",
+        "Y",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "7",
+        "4"
+      ],
+      "bridge": {
+        "elements": "Y",
+        "ecp_electrons": "28",
+        "electron_count": "11",
+        "spin": "3",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 6\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Zr_ES",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Zr_ES/input0",
+      "input_sha256": "2c6b292b4085694098125bdcf093975a12f26f5940266b920c4c18d84b1cf26d",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Zr_ES.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Zr_ES.out",
+      "production_input_identical": true,
+      "production_output_sha256": "649abfb4bee760eb805974c1d47fc5cac5955a35a944fa61ed1c0d5089a28bba",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "5",
+        "Zr",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "8",
+        "4"
+      ],
+      "bridge": {
+        "elements": "Zr",
+        "ecp_electrons": "28",
+        "electron_count": "12",
+        "spin": "4",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Zr_GS",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Zr_GS/input0",
+      "input_sha256": "ec0ed1756c5dd0e84dcc84c48fdb8743651a5f40dd31f147c061c81ce25b7091",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Zr_GS.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Zr_GS.out",
+      "production_input_identical": true,
+      "production_output_sha256": "7166fcabb70c83ff949f91d2265607ce7142d65f307529a25578a8f105c0001b",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "0",
+        "3",
+        "Zr",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "7",
+        "5"
+      ],
+      "bridge": {
+        "elements": "Zr",
+        "ecp_electrons": "28",
+        "electron_count": "12",
+        "spin": "2",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    },
+    {
+      "species": "3d4dIPSS_Zr_GS+",
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/3d4dIPSS_Zr_GS+/input0",
+      "input_sha256": "ccf2e443005b9c962f8872dbf5d47632438844242dd8020da9b5743d83e5a2d9",
+      "production_input": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Zr_GS+.in",
+      "production_output": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/3d4dIPSS_Zr_GS+.out",
+      "production_input_identical": true,
+      "production_output_sha256": "fce5f722a5521efdd23fabdffa937dd3d076272127afa32ea6490d080be638bc",
+      "normal_termination": true,
+      "fatal_marker": false,
+      "molecule_tokens": [
+        "1",
+        "4",
+        "Zr",
+        "0.0000000000",
+        "0.0000000000",
+        "0.0000000000"
+      ],
+      "ecp_headers": [
+        [
+          "Y-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "ZR-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "NB-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "MO-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "TC-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RU-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "RH-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "PD-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "AG-ECP",
+          "4",
+          "28"
+        ],
+        [
+          "CD-ECP",
+          "4",
+          "28"
+        ]
+      ],
+      "reported_alpha_beta": [
+        "7",
+        "4"
+      ],
+      "bridge": {
+        "elements": "Zr",
+        "ecp_electrons": "28",
+        "electron_count": "11",
+        "spin": "3",
+        "ecp_resolution": "embedded_qchem_block",
+        "orbital_resolution": "embedded_qchem_block"
+      },
+      "source_rem": "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000250000974\nBASIS GEN\nPURECART 11111\nECP GEN\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n"
+    }
+  ],
+  "case_count": 21,
+  "note": "Read-only successful production reference audit, not native gateway validation or new scientific support approval."
+}
