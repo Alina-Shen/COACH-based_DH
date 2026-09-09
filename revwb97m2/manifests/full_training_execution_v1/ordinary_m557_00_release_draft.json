@@ -1,0 +1,46 @@
+{
+  "commit": "USER_EXECUTION_COMMIT_REQUIRED",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "ecp_native_gateway_authorized": false,
+  "max_concurrent_jobs": null,
+  "plan_sha256": "d9fb1634b4c335b23922f4ae7a61dd6f21eeb3aa8a2518f484dd663deb43c690",
+  "resource_review_passed": false,
+  "scheduler_routes": {
+    "MOR09_ed07": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR10_ed09": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR13_ed24": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR27_pr07": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR28_pr09": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR32_pr24": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR34_pr35": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    }
+  },
+  "user_approved_submission": false
+}

@@ -1,0 +1,126 @@
+{
+  "commit": "USER_EXECUTION_COMMIT_REQUIRED",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "ecp_native_gateway_authorized": false,
+  "max_concurrent_jobs": null,
+  "plan_sha256": "c3a10430caadda745684e8a35ec9f6b2af4e55a557b4724c28082fee4e3d742d",
+  "resource_review_passed": false,
+  "scheduler_routes": {
+    "MOR14_ed26": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR22_pcy3": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR33_pr28": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "MOR37_pr38": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_114": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_215": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_224": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_300": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_357": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_366": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_412": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_470": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_691": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_GLY_aL": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_GLY_aR": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_GLY_ab": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_GLY_b": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_GLY_pII": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_SER_aL": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_SER_aR": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_SER_ab": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_SER_b": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    },
+    "PCONF21_SER_pII": {
+      "account": "lr_mhg2",
+      "partition": "lr8",
+      "qos": "mhg2_lr8_normal"
+    }
+  },
+  "user_approved_submission": false
+}

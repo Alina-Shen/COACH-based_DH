@@ -1,0 +1,116 @@
+{
+  "commit": "USER_EXECUTION_COMMIT_REQUIRED",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "ecp_native_gateway_authorized": false,
+  "max_concurrent_jobs": null,
+  "plan_sha256": "535a08b83de6e20442f2010054b9717cfba9d6d80858699ce2de6b7fd22e379d",
+  "resource_review_passed": false,
+  "scheduler_routes": {
+    "3d4dIPSS_Ag_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Ag_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Cd_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Cd_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Mo_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Mo_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Nb_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Nb_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Pd_ES": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Pd_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Pd_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Rh_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Rh_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Ru_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Ru_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Tc_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Tc_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Y_ES": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Zr_ES": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Zr_GS": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    },
+    "3d4dIPSS_Zr_GS+": {
+      "account": "mhg",
+      "partition": "mhg",
+      "qos": "normal"
+    }
+  },
+  "user_approved_submission": false
+}

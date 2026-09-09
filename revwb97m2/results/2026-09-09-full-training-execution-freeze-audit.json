@@ -1,0 +1,15 @@
+{
+  "all_execution_namespaces_absent": true,
+  "all_releases_disabled": true,
+  "free_bytes_at_audit": 2755506161582080,
+  "full_species": 2799,
+  "generation_species": 2569,
+  "minimum_copy_bytes": 2757002202056,
+  "minimum_copy_tib": 2.507478895546228,
+  "note": "Independent cross-manifest coverage, embedded input/tree hashes and headroom checks. Source bytes hashed during freeze; execution rechecks source identity. No jobs/copies.",
+  "passed": true,
+  "plans": 11,
+  "reuse_species": 230,
+  "stages": 15412,
+  "summary_sha256": "6efff05a8c88f52ab7616d2d53cfb32c66dc8cdb8cc324aa7334e3d1cac7cd11"
+}

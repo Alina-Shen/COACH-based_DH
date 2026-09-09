@@ -1,0 +1,133 @@
+{
+  "accepted_reuse_species": 230,
+  "generation_species": 2569,
+  "note": "Max500 entries per manifest for manageable arrays/review; no running-task cap or required serial batching. All launches disabled pending commit/live resource review. ECP21 is explicit native gateway.",
+  "passed": true,
+  "records": [
+    {
+      "cpus": 8,
+      "memory_gib": 14,
+      "minimum_copy_bytes": 2859416022,
+      "name": "ecp21_gateway",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ecp21_gateway.json",
+      "plan_sha256": "535a08b83de6e20442f2010054b9717cfba9d6d80858699ce2de6b7fd22e379d",
+      "species": 21,
+      "stages": 126,
+      "wall_hours": 72
+    },
+    {
+      "cpus": 8,
+      "memory_gib": 117,
+      "minimum_copy_bytes": 125605830048,
+      "name": "ordinary_m117_00",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m117_00.json",
+      "plan_sha256": "390986d91d7fbf6d7917fea4178bb73ddfe72d57be7057749f0ba10eb6135927",
+      "species": 28,
+      "stages": 168,
+      "wall_hours": 72
+    },
+    {
+      "cpus": 8,
+      "memory_gib": 14,
+      "minimum_copy_bytes": 274732976618,
+      "name": "ordinary_m14_00",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m14_00.json",
+      "plan_sha256": "5349ddac6aeaa1fb7557df5bff37f6f04e98882c6c001624e964845f9ce709ef",
+      "species": 500,
+      "stages": 2998,
+      "wall_hours": 72
+    },
+    {
+      "cpus": 8,
+      "memory_gib": 14,
+      "minimum_copy_bytes": 292139345988,
+      "name": "ordinary_m14_01",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m14_01.json",
+      "plan_sha256": "208febf98ba9418ee355312316c5dadcb51ad529398eb01abfff7c467022602f",
+      "species": 500,
+      "stages": 3000,
+      "wall_hours": 72
+    },
+    {
+      "cpus": 8,
+      "memory_gib": 14,
+      "minimum_copy_bytes": 312405752316,
+      "name": "ordinary_m14_02",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m14_02.json",
+      "plan_sha256": "dd0cd192de1ad0cc1ccf0053336468d4427128bd80b7494cbb02f377a86a21d3",
+      "species": 500,
+      "stages": 3000,
+      "wall_hours": 72
+    },
+    {
+      "cpus": 8,
+      "memory_gib": 14,
+      "minimum_copy_bytes": 225500619402,
+      "name": "ordinary_m14_03",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m14_03.json",
+      "plan_sha256": "c6fbc3cf1153c988f61fe4e64ca72ea59115231032d3a88cb5a6ac3538c4f018",
+      "species": 416,
+      "stages": 2496,
+      "wall_hours": 72
+    },
+    {
+      "cpus": 8,
+      "memory_gib": 21,
+      "minimum_copy_bytes": 457865942676,
+      "name": "ordinary_m21_00",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m21_00.json",
+      "plan_sha256": "fd342b299ec9765cdf914f4891bbfe22ee3cfeb7bf5af5c32580ddbea513ed32",
+      "species": 286,
+      "stages": 1716,
+      "wall_hours": 72
+    },
+    {
+      "cpus": 16,
+      "memory_gib": 227,
+      "minimum_copy_bytes": 163671920400,
+      "name": "ordinary_m227_00",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m227_00.json",
+      "plan_sha256": "c3a10430caadda745684e8a35ec9f6b2af4e55a557b4724c28082fee4e3d742d",
+      "species": 23,
+      "stages": 138,
+      "wall_hours": 336
+    },
+    {
+      "cpus": 8,
+      "memory_gib": 35,
+      "minimum_copy_bytes": 426923798970,
+      "name": "ordinary_m35_00",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m35_00.json",
+      "plan_sha256": "9381df6a9601cb60b0fa8588e2fc5c582dafd4ad7d9c625e96b3eb12c28eddff",
+      "species": 182,
+      "stages": 1092,
+      "wall_hours": 72
+    },
+    {
+      "cpus": 16,
+      "memory_gib": 557,
+      "minimum_copy_bytes": 132419848674,
+      "name": "ordinary_m557_00",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m557_00.json",
+      "plan_sha256": "d9fb1634b4c335b23922f4ae7a61dd6f21eeb3aa8a2518f484dd663deb43c690",
+      "species": 7,
+      "stages": 42,
+      "wall_hours": 336
+    },
+    {
+      "cpus": 8,
+      "memory_gib": 62,
+      "minimum_copy_bytes": 342876750942,
+      "name": "ordinary_m62_00",
+      "plan": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/full_training_execution_v1/ordinary_m62_00.json",
+      "plan_sha256": "df45be9d5e3832c61878f113ff2ba34880efc78f3e528a1f8af904fab4b42dfe",
+      "species": 106,
+      "stages": 636,
+      "wall_hours": 72
+    }
+  ],
+  "submission_authorized": false,
+  "total_minimum_copy_bytes": 2757002202056,
+  "total_species": 2799,
+  "total_stages": 15412
+}

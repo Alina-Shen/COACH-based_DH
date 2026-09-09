@@ -1,0 +1,26 @@
+{
+  "commit": "0a22faff23b6251a4e384b7e5abcd44eff433b88",
+  "compatibility_contract_sha256": "3898e6d7decefe4e5b2cd1ea302fc8f83efbd336baa94a82216fef1cb7b59651",
+  "matrix_passed": true,
+  "note": "Read existing raw/native/Q4/publication evidence through versioned reader. No native reruns; unchanged science/tolerances.",
+  "passed": true,
+  "reused_extra_species": [
+    "3019_41UracilPentane090_dim_S66x8",
+    "BSR36_c4",
+    "HR46_N-methylacetamide",
+    "HR46_toluene",
+    "MOR16_ed33",
+    "S22_06b"
+  ],
+  "seven_canary_readback_passed": true,
+  "species": [
+    "3019_41UracilPentane090_dim_S66x8",
+    "BSR36_c4",
+    "HR46_N-methylacetamide",
+    "HR46_toluene",
+    "MOR16_ed33",
+    "S22_06b",
+    "TMD01_H"
+  ],
+  "tests": "228 passed in20.17s"
+}
