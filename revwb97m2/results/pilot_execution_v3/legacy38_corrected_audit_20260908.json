@@ -1,0 +1,1111 @@
+{
+  "accepted": 38,
+  "cases": [
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 263.5048852023,
+        "fixed_energy_hartree": -204.7547746795,
+        "full_hf_exchange_hartree": -31.0665706906,
+        "full_long_range_hf_exchange_hartree": -5.9408083309999995,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 153.5344182331,
+        "one_electron_hartree": -615.8532697839,
+        "pure_hf_reconstruction_error_hartree": 9.000018508231733e-10,
+        "pure_hf_reported_energy_hartree": -229.88053704,
+        "short_range_hf_hartree": -25.1257623596
+      },
+      "fixed_delta_hartree": 3.100012690993026e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/11_Reactant1_EIE22/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "a5d59405feeb8699eb3275b9e8e93f0ed4e9424e0f4260c533ca9103fe945526",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/11_Reactant1_EIE22/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/11_Reactant1_EIE22/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -204.75477468260002,
+      "passed": true,
+      "publication_sha256": "b36cc3e57a4d16bc0ff224bc2700f5422bbb83c0597d5a9dfa24a5a557f82c81",
+      "species": "11_Reactant1_EIE22",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/11_Reactant1_EIE22/ready/feature_vector_292.npy",
+      "vector_sha256": "b2c1653c38dce93c377d930c6d5fadd19ab5a368953b4f6a9e9b7a4cc4b23661"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 267.4341105747,
+        "fixed_energy_hartree": -204.75133662129994,
+        "full_hf_exchange_hartree": -31.0612568346,
+        "full_long_range_hf_exchange_hartree": -5.942383629200002,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 157.3838468637,
+        "one_electron_hartree": -623.6269104305,
+        "pure_hf_reconstruction_error_hartree": 3.3000731036736397e-09,
+        "pure_hf_reported_energy_hartree": -229.87020983,
+        "short_range_hf_hartree": -25.1188732054
+      },
+      "fixed_delta_hartree": 3.6999949770688545e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/12_Product1_EIE22/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "a46b3a27571c9bb58f99d9fcff4696869ab6335efad8854b13f4dc80559e957a",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/12_Product1_EIE22/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/12_Product1_EIE22/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -204.75133662499994,
+      "passed": true,
+      "publication_sha256": "442c8a493356b25317bf7693f987a047b0207c5bb835961321c0743ed82d1612",
+      "species": "12_Product1_EIE22",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/12_Product1_EIE22/ready/feature_vector_292.npy",
+      "vector_sha256": "27678b28762bc956dfd5d1cbd02a8019d8eaaa71a56bfda1f19f817fa8d38fbc"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 377.5078015872,
+        "fixed_energy_hartree": -295.27102973179996,
+        "full_hf_exchange_hartree": -40.7831366262,
+        "full_long_range_hf_exchange_hartree": -7.254464921599997,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 218.5600207183,
+        "one_electron_hartree": -884.0843871157,
+        "pure_hf_reconstruction_error_hartree": 3.600007403292693e-09,
+        "pure_hf_reported_energy_hartree": -328.79970144,
+        "short_range_hf_hartree": -33.5286717046
+      },
+      "fixed_delta_hartree": 8.300048648379743e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/21_Reactant6_EIE22/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "a85d4e1fe3e61edcd5835a6b9bbea5c21dc51561574b9d477b87106c28ea3b27",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/21_Reactant6_EIE22/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/21_Reactant6_EIE22/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -295.2710297401,
+      "passed": true,
+      "publication_sha256": "1eb9a010e3b3f4696c4344ea726dc6dc279a4fc3905a83feb5b8ca4104170eb0",
+      "species": "21_Reactant6_EIE22",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/21_Reactant6_EIE22/ready/feature_vector_292.npy",
+      "vector_sha256": "4e87a6356385d6e3d5163171fe25dadd65ec02b6705ff73f71205e985890a534"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 378.7153963161,
+        "fixed_energy_hartree": -295.27065651329997,
+        "full_hf_exchange_hartree": -40.7773595906,
+        "full_long_range_hf_exchange_hartree": -7.2556101196,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 219.8392488338,
+        "one_electron_hartree": -886.5696915436,
+        "pure_hf_reconstruction_error_hartree": -4.299920419725822e-09,
+        "pure_hf_reported_energy_hartree": -328.79240598,
+        "short_range_hf_hartree": -33.521749471
+      },
+      "fixed_delta_hartree": 3.800096237682737e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/22_Product6_EIE22/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "85b487fd2d3cb063bbed26aa494b46c3b6a4c813d6bd40a059667ea88f32bb11",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/22_Product6_EIE22/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/22_Product6_EIE22/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -295.27065651710006,
+      "passed": true,
+      "publication_sha256": "e05665b99350c4d71bdbc6a90e6eefdcfc0f9bf15673aea28b7313ae467b389f",
+      "species": "22_Product6_EIE22",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/22_Product6_EIE22/ready/feature_vector_292.npy",
+      "vector_sha256": "700e05eb2da124800e6be23e5a13168034e3df3f286ae900a55b5fbdd82c21aa"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 112.5458701205,
+        "fixed_energy_hartree": -137.43593204750002,
+        "full_hf_exchange_hartree": -17.8624268156,
+        "full_long_range_hf_exchange_hartree": -3.1711078927999985,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 37.5432590728,
+        "one_electron_hartree": -284.353953348,
+        "pure_hf_reconstruction_error_hartree": -3.000195647473447e-10,
+        "pure_hf_reported_energy_hartree": -152.12725097,
+        "short_range_hf_hartree": -14.6913189228
+      },
+      "fixed_delta_hartree": 2.799993126245681e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2699_01WaterWater090_dim_S66x8/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "876879aa4dafbc8b9af9a03167508e08554dff5e3563ba44a482d3df3f3dd8f3",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/2699_01WaterWater090_dim_S66x8/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/2699_01WaterWater090_dim_S66x8/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -137.4359320503,
+      "passed": true,
+      "publication_sha256": "a99950647f91d63b9d6908c66bad6a69dedfde0faf8140964617fcf42869355b",
+      "species": "2699_01WaterWater090_dim_S66x8",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/2699_01WaterWater090_dim_S66x8/ready/feature_vector_292.npy",
+      "vector_sha256": "f65c546647543911f40a34c8916a252211d1aaf2618b53de325146c42e5b9c98"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 111.2072766718,
+        "fixed_energy_hartree": -137.4447972597,
+        "full_hf_exchange_hartree": -17.8546881702,
+        "full_long_range_hf_exchange_hartree": -3.1707299613999993,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 36.2137620523,
+        "one_electron_hartree": -281.6951060224,
+        "pure_hf_reconstruction_error_hartree": 1.4999841368990019e-09,
+        "pure_hf_reported_energy_hartree": -152.12875547,
+        "short_range_hf_hartree": -14.6839582088
+      },
+      "fixed_delta_hartree": 2.299998413946014e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/2701_01WaterWater100_dim_S66x8/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "ab03ba1400cff4b7fb67bba59a9102f06e0f83b9111c8f43680bb72464cd8fe3",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/2701_01WaterWater100_dim_S66x8/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/2701_01WaterWater100_dim_S66x8/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -137.444797262,
+      "passed": true,
+      "publication_sha256": "a354f43c337816c65d83f5da63422bc411048d024ca8ca32327b637ebf031c9f",
+      "species": "2701_01WaterWater100_dim_S66x8",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/2701_01WaterWater100_dim_S66x8/ready/feature_vector_292.npy",
+      "vector_sha256": "a037fe1be2e2f18199cf9ebe4cc530a5894727dfc206907d23b49299b4d0591c"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 128.4973757288,
+        "fixed_energy_hartree": -136.75330567910004,
+        "full_hf_exchange_hartree": -19.909985732,
+        "full_long_range_hf_exchange_hartree": -3.753802111999999,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 54.4433215104,
+        "one_electron_hartree": -315.9402008063,
+        "pure_hf_reconstruction_error_hartree": 8.999450074043125e-10,
+        "pure_hf_reported_energy_hartree": -152.9094893,
+        "short_range_hf_hartree": -16.15618362
+      },
+      "fixed_delta_hartree": 4.00007138523506e-10,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3163_59EthyneWaterCHO090_dim_S66x8/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "6b99bcb08afce93f9b6c7c3884b088ae844322fc9f7ff3a9dafdf54bf50b3dd2",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/3163_59EthyneWaterCHO090_dim_S66x8/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/3163_59EthyneWaterCHO090_dim_S66x8/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -136.75330567950004,
+      "passed": true,
+      "publication_sha256": "ed18cf3454b15fecaab6d40e49e05ef389cc2739d67ce0ca096a97c1e6696f67",
+      "species": "3163_59EthyneWaterCHO090_dim_S66x8",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/3163_59EthyneWaterCHO090_dim_S66x8/ready/feature_vector_292.npy",
+      "vector_sha256": "cada091cc4bcf6f0f872e17cbe4be02ad710fa9b2057d0bef3ec3de2f2b496ea"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 127.20820032,
+        "fixed_energy_hartree": -136.75960828459998,
+        "full_hf_exchange_hartree": -19.9047553428,
+        "full_long_range_hf_exchange_hartree": -3.753638608400003,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 53.1648265406,
+        "one_electron_hartree": -313.3789965368,
+        "pure_hf_reconstruction_error_hartree": 1.000017846308765e-09,
+        "pure_hf_reported_energy_hartree": -152.91072502,
+        "short_range_hf_hartree": -16.1511167344
+      },
+      "fixed_delta_hartree": 6.000391294946894e-10,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/3165_59EthyneWaterCHO100_dim_S66x8/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "61d8ba6a04f5dd22cc10f8480e2caea0752120bf57f68859c323ed955562506c",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/3165_59EthyneWaterCHO100_dim_S66x8/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/3165_59EthyneWaterCHO100_dim_S66x8/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -136.75960828520002,
+      "passed": true,
+      "publication_sha256": "175a31ea23855636f9c09b1c0fae26bb7591c9f7127408f82956562badba2184",
+      "species": "3165_59EthyneWaterCHO100_dim_S66x8",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/3165_59EthyneWaterCHO100_dim_S66x8/ready/feature_vector_292.npy",
+      "vector_sha256": "72fdd8ca1a9e855839f3b71f22417166cdbb0f4210925770d4f2b8c7071ddce6"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 254.7827047843,
+        "fixed_energy_hartree": -203.9286346169,
+        "full_hf_exchange_hartree": -30.334055032,
+        "full_long_range_hf_exchange_hartree": -5.6372290635999995,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 145.7401611737,
+        "one_electron_hartree": -598.8142715113,
+        "pure_hf_reconstruction_error_hartree": 4.699955979958759e-09,
+        "pure_hf_reported_energy_hartree": -228.62546059,
+        "short_range_hf_hartree": -24.6968259684
+      },
+      "fixed_delta_hartree": 3.7000518204877153e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/45_Reactant18_EIE22/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "d6ab6a0f10c2922899fbc427c83d962a8918b8484e1afba30d5e2f9e34331669",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/45_Reactant18_EIE22/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/45_Reactant18_EIE22/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -203.92863462060006,
+      "passed": true,
+      "publication_sha256": "160555be4b1316442a290c33fd6b2e09e8e1841bb7945874723033ae8c06bb19",
+      "species": "45_Reactant18_EIE22",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/45_Reactant18_EIE22/ready/feature_vector_292.npy",
+      "vector_sha256": "57bf295d7bf8500d305a45b6ea39bd5a9bad15864bc23994721d9b84c80c19c7"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 255.8784513282,
+        "fixed_energy_hartree": -203.93484204429998,
+        "full_hf_exchange_hartree": -30.334445853,
+        "full_long_range_hf_exchange_hartree": -5.638482370199998,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 146.7326215946,
+        "one_electron_hartree": -600.9074325969,
+        "pure_hf_reconstruction_error_hartree": 2.900009121731273e-09,
+        "pure_hf_reported_energy_hartree": -228.63080553,
+        "short_range_hf_hartree": -24.6959634828
+      },
+      "fixed_delta_hartree": 4.599996827892028e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/46_Product18_EIE22/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "3c101ea5be257c6211cb7086fc82b1472d1ec8bb2dfdfcaa3e608422b3f3582d",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/46_Product18_EIE22/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/46_Product18_EIE22/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -203.93484204889998,
+      "passed": true,
+      "publication_sha256": "23def8fa0b93d58475711f37d86775f4fc365dcaa6428d5b4331b78e2a988e6c",
+      "species": "46_Product18_EIE22",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/46_Product18_EIE22/ready/feature_vector_292.npy",
+      "vector_sha256": "edb647b7b9fa99711e8976459ca3e0529e4236b800870bfb59734d9e160c8aca"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 68.0497360024,
+        "fixed_energy_hartree": -83.0519115278,
+        "full_hf_exchange_hartree": -12.0478428566,
+        "full_long_range_hf_exchange_hartree": -2.1931785590000015,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 23.9241820151,
+        "one_electron_hartree": -172.8326509863,
+        "pure_hf_reconstruction_error_hartree": 4.599996827892028e-09,
+        "pure_hf_reported_energy_hartree": -92.90657583,
+        "short_range_hf_hartree": -9.8546642976
+      },
+      "fixed_delta_hartree": -4.899987970929942e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/48_hcn_BH76/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "b8b20bc2c4b7018ebf22c75dc6c4b205ea324861d98c1208bf6b5dd8b071a4f9",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/48_hcn_BH76/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/48_hcn_BH76/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -83.05191152290001,
+      "passed": true,
+      "publication_sha256": "606113f74f13d4a001e90d4bf4ce1afc974c669df4f64a939ad7f6503873e682",
+      "species": "48_hcn_BH76",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/48_hcn_BH76/ready/feature_vector_292.npy",
+      "vector_sha256": "ddcc476c64f26ce8f4bd994f2ec22e30cfa663631fe9860096066c96f834d89d"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 67.8265330196,
+        "fixed_energy_hartree": -83.02816533569998,
+        "full_hf_exchange_hartree": -11.9885197004,
+        "full_long_range_hf_exchange_hartree": -2.187189148,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 24.0463711328,
+        "one_electron_hartree": -172.7138803401,
+        "pure_hf_reconstruction_error_hartree": 1.9000196971319383e-09,
+        "pure_hf_reported_energy_hartree": -92.82949589,
+        "short_range_hf_hartree": -9.8013305524
+      },
+      "fixed_delta_hartree": 2.799993126245681e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/49_hcnts_BH76/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "fa65e620da49aacd1962d7b6739c9f92092f9d810b733a5766c11270f65cf15f",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/49_hcnts_BH76/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/49_hcnts_BH76/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -83.02816533849997,
+      "passed": true,
+      "publication_sha256": "3c131e8868c87fcb8342a554b8a033c50df6d59fbc3fdc34ef15c6126a0b36d8",
+      "species": "49_hcnts_BH76",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/49_hcnts_BH76/ready/feature_vector_292.npy",
+      "vector_sha256": "552f13b7058c973f252ae6a22e792e6372e8c8252774c4582a78412e4b867a01"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 79.4116174517,
+        "fixed_energy_hartree": -98.3688364528,
+        "full_hf_exchange_hartree": -13.4561920019,
+        "full_long_range_hf_exchange_hartree": -2.3635976652999986,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 27.5043762575,
+        "one_electron_hartree": -202.9212324967,
+        "pure_hf_reconstruction_error_hartree": 5.999964969305438e-10,
+        "pure_hf_reported_energy_hartree": -109.46143079,
+        "short_range_hf_hartree": -11.092594336600001
+      },
+      "fixed_delta_hartree": -2.5000304049171973e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/58_hn2_BH76/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "6f146fd8c961a564911c9b0fb2a70900051dee4c23cc8cc918e80749ca7be4f3",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/58_hn2_BH76/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/58_hn2_BH76/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -98.36883645029997,
+      "passed": true,
+      "publication_sha256": "d31d3f392d2c93caee08fb86b356dd80bf86346a8378e8ecedc2d9bfab2b043d",
+      "species": "58_hn2_BH76",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/58_hn2_BH76/ready/feature_vector_292.npy",
+      "vector_sha256": "3f8c6148454cd7fc0cba0365bf68373f4f04f76321dc00ae33a0a72e03000a03"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 79.051434698,
+        "fixed_energy_hartree": -98.3997188698,
+        "full_hf_exchange_hartree": -13.3930722453,
+        "full_long_range_hf_exchange_hartree": -2.3549912846000005,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 27.3748687087,
+        "one_electron_hartree": -202.4710309919,
+        "pure_hf_reconstruction_error_hartree": -4.999947122996673e-10,
+        "pure_hf_reported_energy_hartree": -109.43779983,
+        "short_range_hf_hartree": -11.0380809607
+      },
+      "fixed_delta_hartree": -1.3000089893466793e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/59_hn2ts_BH76/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "597736529ad657ff392a3f710013247f714438c019fb028734b4c4d09bcfd110",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/59_hn2ts_BH76/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/59_hn2ts_BH76/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -98.39971886849999,
+      "passed": true,
+      "publication_sha256": "494a34cc5c3e66e82b5f25322ea1d955320602cef5aa4ab49abb0eb2d63f88f7",
+      "species": "59_hn2ts_BH76",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/59_hn2ts_BH76/ready/feature_vector_292.npy",
+      "vector_sha256": "9b202cef32382bfe91289ff46f98fd22b9dc29e510b7661d41c209b243c2200f"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 68.1449697418,
+        "fixed_energy_hartree": -83.03177552020001,
+        "full_hf_exchange_hartree": -12.0517440402,
+        "full_long_range_hf_exchange_hartree": -2.192360237799999,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 24.1972838291,
+        "one_electron_hartree": -173.1816688533,
+        "pure_hf_reconstruction_error_hartree": -2.6000037678386434e-09,
+        "pure_hf_reported_energy_hartree": -92.89115932,
+        "short_range_hf_hartree": -9.8593838024
+      },
+      "fixed_delta_hartree": -9.000018508231733e-10,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/60_hnc_BH76/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "8517f2c6ca8937af919afd37d32f06793d6956445fa4b9fc17896a7c84998900",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/60_hnc_BH76/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/60_hnc_BH76/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -83.03177551930001,
+      "passed": true,
+      "publication_sha256": "b7da0beb459e7b9c182573d030f2946247f581a0dae726389f5eb75a4616aebb",
+      "species": "60_hnc_BH76",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/60_hnc_BH76/ready/feature_vector_292.npy",
+      "vector_sha256": "c154095ed3a032d86fbe20b4df2bb28029b1c1b3a6de54a6de04c6ca11dc508f"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 412.2813514983,
+        "fixed_energy_hartree": -274.157070253,
+        "full_hf_exchange_hartree": -40.8006613202,
+        "full_long_range_hf_exchange_hartree": -7.844298170999998,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 263.5764021995,
+        "one_electron_hartree": -942.1705257798,
+        "pure_hf_reconstruction_error_hartree": -2.1999539967509918e-09,
+        "pure_hf_reported_energy_hartree": -307.1134334,
+        "short_range_hf_hartree": -32.9563631492
+      },
+      "fixed_delta_hartree": 9.499899533693679e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B1/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "97fb14dafdab15816482425b7a081753bbdce0891aec6e0348d4ecbde89cfa5f",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B1/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B1/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -274.1570702624999,
+      "passed": true,
+      "publication_sha256": "949d185ff06a9224bae51ad375683db3f2c6d3cabdcfc356d63251a4a976bfb9",
+      "species": "BUT14DIOL_B1",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B1/ready/feature_vector_292.npy",
+      "vector_sha256": "707223c34f13255a3816ffc94960b398a549ab64073c2bce05011af3fb747999"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 413.079165343,
+        "fixed_energy_hartree": -274.15727160510005,
+        "full_hf_exchange_hartree": -40.7979212094,
+        "full_long_range_hf_exchange_hartree": -7.844478062200004,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 264.4190216903,
+        "one_electron_hartree": -943.8109805762,
+        "pure_hf_reconstruction_error_hartree": -2.3000552573648747e-09,
+        "pure_hf_reported_energy_hartree": -307.11071475,
+        "short_range_hf_hartree": -32.9534431472
+      },
+      "fixed_delta_hartree": 2.999058779096231e-10,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B4/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "c6714c89011127adf3dcf1565d808af2957a21bac394bbc767e2cb7036f7a290",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B4/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B4/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -274.15727160539996,
+      "passed": true,
+      "publication_sha256": "989797c093689b54ca6b626ffb2f74efd11307e8adccb17509d52e37295e3520",
+      "species": "BUT14DIOL_B4",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B4/ready/feature_vector_292.npy",
+      "vector_sha256": "62456adecce3d4f6f75ae0d7994784def121a480664d9f4216c0b1a13b613bd9"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 414.1219871841,
+        "fixed_energy_hartree": -274.15356123249995,
+        "full_hf_exchange_hartree": -40.8016759934,
+        "full_long_range_hf_exchange_hartree": -7.844911794800005,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 265.4534019118,
+        "one_electron_hartree": -945.8840385336,
+        "pure_hf_reconstruction_error_hartree": -1.0999769983754959e-09,
+        "pure_hf_reported_energy_hartree": -307.11032543,
+        "short_range_hf_hartree": -32.9567641986
+      },
+      "fixed_delta_hartree": 1.8000037016463466e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/BUT14DIOL_B5/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "11cfdbe8c32fef0fdf11893ace2e152146605a16cda15df7240e880b8490bdbc",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B5/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B5/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -274.15356123429996,
+      "passed": true,
+      "publication_sha256": "a4f041cb1b32f633a5a44faa4cebba7fe2bd4ec468d975ef1f54aa184648d277",
+      "species": "BUT14DIOL_B5",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/BUT14DIOL_B5/ready/feature_vector_292.npy",
+      "vector_sha256": "7c49e51ade8d6a137c6ad1670c08db133c6164a843d1d7af4a65c213d09f1c06"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 128.3944402347,
+        "fixed_energy_hartree": -135.81667621479997,
+        "full_hf_exchange_hartree": -13.2784468784,
+        "full_long_range_hf_exchange_hartree": -2.9888101044000006,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 0.0,
+        "one_electron_hartree": -261.2223063451,
+        "pure_hf_reconstruction_error_hartree": 1.200021415570518e-09,
+        "pure_hf_reported_energy_hartree": -146.10631299,
+        "short_range_hf_hartree": -10.289636774
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag01N0/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "9e423897d407f4961478827ee302436b9e81fdddc824758b052835ce664f8e0e",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Ag01N0/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Ag01N0/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -135.81667621479997,
+      "passed": true,
+      "publication_sha256": "ab4f29bedf09743b27fe6230835c0001f5af5f5cddaf4fbaec78c3c5dbe70cf3",
+      "species": "CUAGAU_Ag01N0",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Ag01N0/ready/feature_vector_292.npy",
+      "vector_sha256": "7ac5e5db0460be85b75ce88a64e778c2eeeaa50e516863b8cfdfcc33de808773"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 332.7792613068,
+        "fixed_energy_hartree": -271.65395043269996,
+        "full_hf_exchange_hartree": -26.546515531,
+        "full_long_range_hf_exchange_hartree": -5.970812946400002,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 75.6973346931,
+        "one_electron_hartree": -674.1597334862,
+        "pure_hf_reconstruction_error_hartree": 2.70000555246952e-09,
+        "pure_hf_reported_energy_hartree": -292.22965302,
+        "short_range_hf_hartree": -20.5757025846
+      },
+      "fixed_delta_hartree": -6.89988155500032e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Ag02N0/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "36b82ad4e38d544fa50ffd45b30e39dd0ad11eba20679cbf19e17d26e29af3c2",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Ag02N0/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Ag02N0/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -271.6539504258001,
+      "passed": true,
+      "publication_sha256": "507ddbc9e176861c4dab11e622be43c37dc81b1b32062001cba41d6ad65627e0",
+      "species": "CUAGAU_Ag02N0",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Ag02N0/ready/feature_vector_292.npy",
+      "vector_sha256": "8c7f802c0797c044009f0d1477f9cbdaee1282e73ebb13f5a5a28930f32cd20b"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 115.9568948523,
+        "fixed_energy_hartree": -125.8153662697,
+        "full_hf_exchange_hartree": -11.917481476999999,
+        "full_long_range_hf_exchange_hartree": -2.9531181551000003,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 0.0,
+        "one_electron_hartree": -238.8191429669,
+        "pure_hf_reconstruction_error_hartree": -1.6000001323845936e-09,
+        "pure_hf_reported_energy_hartree": -134.77972959,
+        "short_range_hf_hartree": -8.964363321899999
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au01N0/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "670da76021ba832e29bfaf900532f01bd5b412e07c8a4f6e692dbcc015006ced",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Au01N0/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Au01N0/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -125.8153662697,
+      "passed": true,
+      "publication_sha256": "8ad57d42868ca39e31d08ff8f43ec7fda797c2ab88340662b26f9d885ae1587b",
+      "species": "CUAGAU_Au01N0",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Au01N0/ready/feature_vector_292.npy",
+      "vector_sha256": "975b29997ccb58d8d1f0ee8885c8c4e7aca4786dff4f41e934d89272ee5c88dc"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 308.8860345575,
+        "fixed_energy_hartree": -251.67074844939998,
+        "full_hf_exchange_hartree": -23.8141258452,
+        "full_long_range_hf_exchange_hartree": -5.896402370200001,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 77.057948515,
+        "one_electron_hartree": -631.7183291517,
+        "pure_hf_reconstruction_error_hartree": -4.399964836920844e-09,
+        "pure_hf_reported_energy_hartree": -269.58847192,
+        "short_range_hf_hartree": -17.917723475
+      },
+      "fixed_delta_hartree": -4.999947122996673e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/CUAGAU_Au02N0/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "4e316b8bb70796748f31938c45661447be854ce7a325a95bdee6e24136c558d7",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Au02N0/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Au02N0/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -251.67074844440003,
+      "passed": true,
+      "publication_sha256": "993b21e3caf959359ea3cbed3221b122ccf7ccc39db034025fe0abfcc04bc418",
+      "species": "CUAGAU_Au02N0",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/CUAGAU_Au02N0/ready/feature_vector_292.npy",
+      "vector_sha256": "4c7b76908229d0f095e1a63fda89d188688392ce3d82eebf7308d44fd77dad7d"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 7.1957663878,
+        "fixed_energy_hartree": -12.476799516500002,
+        "full_hf_exchange_hartree": -2.6701079996,
+        "full_long_range_hf_exchange_hartree": -0.5755339533999999,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 0.0,
+        "one_electron_hartree": -19.0970319509,
+        "pure_hf_reconstruction_error_hartree": -2.7000002233990017e-09,
+        "pure_hf_reported_energy_hartree": -14.57137356,
+        "short_range_hf_hartree": -2.0945740462
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "e54a0c7be73b0662a4fbb7c348ac56b19339469ae485463abaed22554f10422d",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_be/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_be/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -12.476799516500002,
+      "passed": true,
+      "publication_sha256": "2ccc040ac6e8836c7de9b56ab4664b5826ebfc5939f062f37c10e999804c082e",
+      "species": "DIPCS10_be",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_be/ready/feature_vector_292.npy",
+      "vector_sha256": "38e05c764ad7d29778f03295037fb78ad2965dcbd3dc2c49dbdd4a32f24f36b3"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 4.5526327855,
+        "fixed_energy_hartree": -11.6684320474,
+        "full_hf_exchange_hartree": -2.2763163928,
+        "full_long_range_hf_exchange_hartree": -0.333891253,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 0.0,
+        "one_electron_hartree": -15.8871735799,
+        "pure_hf_reconstruction_error_hartree": 2.800000231673039e-09,
+        "pure_hf_reported_energy_hartree": -13.61085719,
+        "short_range_hf_hartree": -1.9424251398
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_be_2+/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "d17c920d0a107c033a0451449eff47d5853cb32a634202bad2b86708f4a861a2",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_be_2+/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_be_2+/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -11.6684320474,
+      "passed": true,
+      "publication_sha256": "e09470d1f399af26cf63682ead5ce964262ea81e9b4e5de768a2d13b097a5834",
+      "species": "DIPCS10_be_2+",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_be_2+/ready/feature_vector_292.npy",
+      "vector_sha256": "6dcfb7f95414437676255890423cd35ef55dca9b8455e14cd073327da559528a"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 95.7854423433,
+        "fixed_energy_hartree": -185.5238086083,
+        "full_hf_exchange_hartree": -15.9720514834,
+        "full_long_range_hf_exchange_hartree": -1.8842975594000002,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 0.0,
+        "one_electron_hartree": -279.4249533922,
+        "pure_hf_reconstruction_error_hartree": -2.299998413946014e-09,
+        "pure_hf_reported_energy_hartree": -199.61156253,
+        "short_range_hf_hartree": -14.087753924
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "d09ad228339c272df01b2e7e818aa882b3d2b893b0413e3c6c55a9f581a7c766",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_mg/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_mg/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -185.5238086083,
+      "passed": true,
+      "publication_sha256": "e894b57a1ef7740f0af2dbc7ac3b97f0c3269e0f2af122d07d166b4a051ef304",
+      "species": "DIPCS10_mg",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_mg/ready/feature_vector_292.npy",
+      "vector_sha256": "473ee75361543990e2f8abe3661300428b2184455033749eca2a2016e057d99e"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 87.7677734741,
+        "fixed_energy_hartree": -184.8416702423,
+        "full_hf_exchange_hartree": -15.652033908,
+        "full_long_range_hf_exchange_hartree": -1.6643927012000006,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 0.0,
+        "one_electron_hartree": -270.9450510152,
+        "pure_hf_reconstruction_error_hartree": 9.000018508231733e-10,
+        "pure_hf_reported_energy_hartree": -198.82931145,
+        "short_range_hf_hartree": -13.9876412068
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/DIPCS10_mg_2+/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "56157b1ffee721a6a23c3060c4829e343b3eca22d115874aa3eccc5d6651280e",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_mg_2+/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_mg_2+/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -184.8416702423,
+      "passed": true,
+      "publication_sha256": "ef87d274278aaa4ef2aa8819b7c8088adc324eda8ff488dbe2bbe619588bc2a1",
+      "species": "DIPCS10_mg_2+",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/DIPCS10_mg_2+/ready/feature_vector_292.npy",
+      "vector_sha256": "657edf718789a7ff4dad4c7f731c6773dcd431a8dcd7d4e4953d5f1f113374ba"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 55.5824500585,
+        "fixed_energy_hartree": -91.28297674320001,
+        "full_hf_exchange_hartree": -10.3928642206,
+        "full_long_range_hf_exchange_hartree": -1.6109862570000004,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 5.1949757131,
+        "one_electron_hartree": -150.4494162578,
+        "pure_hf_reconstruction_error_hartree": 3.200000264769187e-09,
+        "pure_hf_reported_energy_hartree": -100.06485471,
+        "short_range_hf_hartree": -8.7818779636
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2+/fixed/qchem.out",
+      "fixed_output_sha256": "3aa22178e9d77469872764276ed37dcc54639c7fc8fbde3b49503b6a5fe7e61c",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_HF2+/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_HF2+/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -91.28297674320001,
+      "passed": true,
+      "publication_sha256": "6cb90e4939875329500c1e5af98d8df12d06c05d9627c494f331d655097903f5",
+      "species": "Dip146_HF2+",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_HF2+/ready/feature_vector_292.npy",
+      "vector_sha256": "693258fa80c266d4a160d4ad109fc63b8ac45f27ca6e1d55da95bb41e545414b"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 55.5829820865,
+        "fixed_energy_hartree": -91.28308540239996,
+        "full_hf_exchange_hartree": -10.3929125864,
+        "full_long_range_hf_exchange_hartree": -1.6109908573999991,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 5.194629213,
+        "one_electron_hartree": -150.4497058445,
+        "pure_hf_reconstruction_error_hartree": -1.3999681414134102e-09,
+        "pure_hf_reported_energy_hartree": -100.06500713,
+        "short_range_hf_hartree": -8.781921729
+      },
+      "fixed_delta_hartree": 1.4210854715202004e-14,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_HF2-/fixed/qchem.out",
+      "fixed_output_sha256": "4666d77b31319fdf4d441d2a03690d22c2301075257a2e7a32aeb0a4d191d763",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_HF2-/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_HF2-/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -91.28308540239998,
+      "passed": true,
+      "publication_sha256": "e5e8d48d8417245a893bff48ff77711a64fb79717f534c71727afb7e75b78297",
+      "species": "Dip146_HF2-",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_HF2-/ready/feature_vector_292.npy",
+      "vector_sha256": "35670d0fabaa055a1af99f8872258037a9a7b91c5279c5db0aed34f3ce0e1f1c"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 37.1818284034,
+        "fixed_energy_hartree": -54.996777903799995,
+        "full_hf_exchange_hartree": -8.404239861099999,
+        "full_long_range_hf_exchange_hartree": -1.5691846447999982,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 5.9482836871,
+        "one_electron_hartree": -96.5577053495,
+        "pure_hf_reconstruction_error_hartree": -1.000017846308765e-10,
+        "pure_hf_reported_energy_hartree": -61.83183312,
+        "short_range_hf_hartree": -6.835055216300001
+      },
+      "fixed_delta_hartree": 7.105427357601002e-15,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2+/fixed/qchem.out",
+      "fixed_output_sha256": "67e81d5a7c5fa85f0328f6c1748b360822a1df2d405157c9495264ce54d2e6a3",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_LiN2+/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_LiN2+/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -54.9967779038,
+      "passed": true,
+      "publication_sha256": "b276f47518dc2f0f4b4b0b4745fee03dff6b0526354845fb38165e9d57f89922",
+      "species": "Dip146_LiN2+",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_LiN2+/ready/feature_vector_292.npy",
+      "vector_sha256": "b2d47d1fcf6b4c69c38ac6d54d730a9f24efb5f74022d525590e75500a3d2839"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 37.1807713547,
+        "fixed_energy_hartree": -54.9963182039,
+        "full_hf_exchange_hartree": -8.4040518257,
+        "full_long_range_hf_exchange_hartree": -1.5691254028000001,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 5.9433390298,
+        "one_electron_hartree": -96.5513031856,
+        "pure_hf_reconstruction_error_hartree": 3.1999931593418296e-09,
+        "pure_hf_reported_energy_hartree": -61.83124463,
+        "short_range_hf_hartree": -6.8349264229
+      },
+      "fixed_delta_hartree": 7.105427357601002e-15,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_LiN2-/fixed/qchem.out",
+      "fixed_output_sha256": "416354965c5f6740bc1cf41ed64c2c462ff891619b7f3909147d757c25fc28de",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_LiN2-/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_LiN2-/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -54.99631820390001,
+      "passed": true,
+      "publication_sha256": "1b313fdf022107ff9fe0ecca04cbec3e46acd86113ab0d7ef11bb58af399fc5d",
+      "species": "Dip146_LiN2-",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_LiN2-/ready/feature_vector_292.npy",
+      "vector_sha256": "71693d05ef32ff18505ffdc546274be17df15a511bfca1c8227e2810e31d9e30"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 90.3850833937,
+        "fixed_energy_hartree": -155.6927828247,
+        "full_hf_exchange_hartree": -15.7550977236,
+        "full_long_range_hf_exchange_hartree": -2.1673108128000003,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 6.0506048621,
+        "one_electron_hartree": -249.9611602677,
+        "pure_hf_reconstruction_error_hartree": 4.5000092541158665e-09,
+        "pure_hf_reported_energy_hartree": -169.28056974,
+        "short_range_hf_hartree": -13.5877869108
+      },
+      "fixed_delta_hartree": -2.842170943040401e-14,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2+/fixed/qchem.out",
+      "fixed_output_sha256": "becdc3434db87a37007b05b14c75a5bad7220abe9d34e4affffe0845a3f3a722",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_NaLi2+/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_NaLi2+/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -155.69278282469998,
+      "passed": true,
+      "publication_sha256": "c1f665ee04ad6858aa92b1c544b3a6189f5845d7b3e697ed7f423d0a19d5972f",
+      "species": "Dip146_NaLi2+",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_NaLi2+/ready/feature_vector_292.npy",
+      "vector_sha256": "ae3e856a1573e2ede014f7ac97c6273ee61f730c75644e5582cdf9196f174b80"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 90.3777037201,
+        "fixed_energy_hartree": -155.69276899529996,
+        "full_hf_exchange_hartree": -15.7551819752,
+        "full_long_range_hf_exchange_hartree": -2.167331173399999,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 6.0385941408,
+        "one_electron_hartree": -249.9417356828,
+        "pure_hf_reconstruction_error_hartree": 2.9000375434407033e-09,
+        "pure_hf_reported_energy_hartree": -169.2806198,
+        "short_range_hf_hartree": -13.5878508018
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/Dip146_NaLi2-/fixed/qchem.out",
+      "fixed_output_sha256": "53283ebad75a1c39d2eeab7b07d305a867f20ab577717f78de29f811d814b1cc",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_NaLi2-/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_NaLi2-/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -155.69276899529996,
+      "passed": true,
+      "publication_sha256": "34520ef54907ab9a65802c466698856305f16bf39c3dd0252f688e746b62bb64",
+      "species": "Dip146_NaLi2-",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/Dip146_NaLi2-/ready/feature_vector_292.npy",
+      "vector_sha256": "03d382af12212ffd5830607d9947f92ce86aafd53d2ac4e544b3d81a27e3756f"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 94.7677798285,
+        "fixed_energy_hartree": -100.242718423,
+        "full_hf_exchange_hartree": -15.319412253,
+        "full_long_range_hf_exchange_hartree": -3.1211754592,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 40.3142260521,
+        "one_electron_hartree": -232.2035488444,
+        "pure_hf_reconstruction_error_hartree": 3.2000144756239024e-09,
+        "pure_hf_reported_energy_hartree": -112.44095522,
+        "short_range_hf_hartree": -12.1982367938
+      },
+      "fixed_delta_hartree": 2.099994844684261e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "1944556baa550aff013443ab00c0194217602dfd82e9a5c2b07fbc3966334c5e",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_01/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_01/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -100.2427184251,
+      "passed": true,
+      "publication_sha256": "a60945816d7a1db182639e21a2af4b8375f23bb8c67258adad3a2326e9e622a0",
+      "species": "S22_01",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_01/ready/feature_vector_292.npy",
+      "vector_sha256": "2968fa032f331f1d4f9a11b75816547002c4aac13fd9692d892036f3779e07b7"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 39.1383911946,
+        "fixed_energy_hartree": -50.1215347171,
+        "full_hf_exchange_hartree": -7.658659386,
+        "full_long_range_hf_exchange_hartree": -1.5605735388,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 11.9589422926,
+        "one_electron_hartree": -99.6582946655,
+        "pure_hf_reconstruction_error_hartree": -4.299998579426756e-09,
+        "pure_hf_reported_energy_hartree": -56.21962056,
+        "short_range_hf_hartree": -6.0980858472
+      },
+      "fixed_delta_hartree": 2.6000037678386434e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_01a/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "64b9767cc5e4abe77021cd391981a30bffe33474496bd48d5d88d359cfc9c3da",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_01a/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_01a/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -50.1215347197,
+      "passed": true,
+      "publication_sha256": "afdbc9b4ca590c66af7a7068b9ce3ce083e7796a438bce0a3124498bdf74f2bb",
+      "species": "S22_01a",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_01a/ready/feature_vector_292.npy",
+      "vector_sha256": "c3cc2841d4defbfa45473423fe9281bb7925e4886e9277ba4c0a588176ca5085"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 79.6380385959,
+        "fixed_energy_hartree": -70.34057483809998,
+        "full_hf_exchange_hartree": -13.1625943396,
+        "full_long_range_hf_exchange_hartree": -3.0821284166,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 41.0005262831,
+        "one_electron_hartree": -187.8970113005,
+        "pure_hf_reconstruction_error_hartree": -1.099991209230211e-09,
+        "pure_hf_reported_energy_hartree": -80.42104076,
+        "short_range_hf_hartree": -10.080465923
+      },
+      "fixed_delta_hartree": -6.899995241838042e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "3a6544944bc54d51144d8fe6a52c56913eeb93663df11ce33bca37f0299904af",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_08/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_08/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -70.34057483119999,
+      "passed": true,
+      "publication_sha256": "43aaf265d9c34debb7bb833b01825608bc8c6c9f2acc789d754d1c1c8204761d",
+      "species": "S22_08",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_08/ready/feature_vector_292.npy",
+      "vector_sha256": "35fd16d4f2badd0c455a4e98aa9a4a49858e415db2a842a5e99bc6d65d334f3c"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 32.7655990042,
+        "fixed_energy_hartree": -35.1702597611,
+        "full_hf_exchange_hartree": -6.5817493104,
+        "full_long_range_hf_exchange_hartree": -1.5410976874000006,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 13.4516339758,
+        "one_electron_hartree": -79.8463950537,
+        "pure_hf_reconstruction_error_hartree": -4.1000021155923605e-09,
+        "pure_hf_reported_energy_hartree": -40.21091138,
+        "short_range_hf_hartree": -5.040651623
+      },
+      "fixed_delta_hartree": -4.200003900223237e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/S22_08a/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "96f6248be31dacd44ee784e6c9124b5f16dc56306afc64af6cc6111eaf48b7ed",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_08a/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_08a/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -35.170259756899995,
+      "passed": true,
+      "publication_sha256": "b5a5d91af8d28f0d300fa457046d417c9d0ea008ece827fd852ebcc2bc289fac",
+      "species": "S22_08a",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/S22_08a/ready/feature_vector_292.npy",
+      "vector_sha256": "2fb32969ffb9f7aefb8ebc409cf419d6f8a003c14e59a7635fab34baf2a4f1d5"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 0.3033422866,
+        "fixed_energy_hartree": -0.338942532,
+        "full_hf_exchange_hartree": -0.3033422866,
+        "full_long_range_hf_exchange_hartree": -0.14425040590000002,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 0.0,
+        "one_electron_hartree": -0.4980344127,
+        "pure_hf_reconstruction_error_hartree": -2.7000000013543968e-09,
+        "pure_hf_reported_energy_hartree": -0.49803441,
+        "short_range_hf_hartree": -0.1590918807
+      },
+      "fixed_delta_hartree": 0.0,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/recovery_v2/W4-17_h/fixed/qchem.out",
+      "fixed_output_sha256": "7ae1c29b4dfc746b86ff170afb7a1bb487758868008e5d6381c90c7f5a2a0501",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/W4-17_h/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/W4-17_h/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -0.338942532,
+      "passed": true,
+      "publication_sha256": "2f385d9630b87bf3118a5cf1609a107684d022032b969210d09794e5a04486d2",
+      "species": "W4-17_h",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/W4-17_h/ready/feature_vector_292.npy",
+      "vector_sha256": "38be4751192071d58f6373b3cf89edbfcf129c7ab4a87c9b77c91807df6dbf49"
+    },
+    {
+      "corrected_fixed": {
+        "archive_read_count": 2,
+        "coulomb_hartree": 1.3102050998,
+        "fixed_energy_hartree": -0.7735379033,
+        "full_hf_exchange_hartree": -0.65510255,
+        "full_long_range_hf_exchange_hartree": -0.29625710219999996,
+        "normal_qchem_termination": true,
+        "nuclear_repulsion_hartree": 0.7132810769,
+        "one_electron_hartree": -2.5007669778,
+        "pure_hf_reconstruction_error_hartree": -1.100000091014408e-09,
+        "pure_hf_reported_energy_hartree": -1.13238335,
+        "short_range_hf_hartree": -0.3588454478
+      },
+      "fixed_delta_hartree": -3.100000034450545e-09,
+      "fixed_output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/real_reaction_cohort_v1/species/gscdb137/W4-17_h2/gateway_work/fixed_energy/qchem.out",
+      "fixed_output_sha256": "1508d1eaa60f251455e6c0fab04b1c830a1ecf5b7ca38ffe471c22f7d4484ece",
+      "grid_paths": {
+        "75302": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/W4-17_h2/ready/grid_difference_75302.npy",
+        "99590": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/W4-17_h2/ready/grid_difference_99590.npy"
+      },
+      "old_fixed_energy_hartree": -0.7735379002,
+      "passed": true,
+      "publication_sha256": "bd366bed50f7f1edea354400d9e25f944d9a56d6538d0b32b6270038f9e90418",
+      "species": "W4-17_h2",
+      "unchanged_vector": true,
+      "vector_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/v7_vv10_refresh_v1/species/W4-17_h2/ready/feature_vector_292.npy",
+      "vector_sha256": "3f275c1f24be9147c794cec5760c1e52a732710b591b09f8a456a564842eea5b"
+    }
+  ],
+  "max_abs_fixed_delta_hartree": 9.499899533693679e-09,
+  "note": "Read-only corrected migration audit. Historical vectors/fixed records unchanged; generic v2 reuse route not changed. Water outside refresh cohort remains pending.",
+  "passed": true,
+  "plan_sha256": "bb0da88f3ddea0ef724a6fcbf03e5b7c5224c648e71d927c9acfcdd4e0d6dffd"
+}

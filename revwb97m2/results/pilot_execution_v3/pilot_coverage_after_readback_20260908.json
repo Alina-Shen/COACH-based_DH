@@ -1,0 +1,82 @@
+{
+  "array_shapes": {
+    "feature_matrix": [
+      93,
+      292
+    ],
+    "fixed_energy": [
+      93
+    ],
+    "objective_weight": [
+      93
+    ],
+    "reference_energy": [
+      93
+    ],
+    "target": [
+      93
+    ]
+  },
+  "authorities": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/pilot_execution_v3/first16_independent_readback_20260908.json": "bd6747dbd86fe872b1f983c24dcecfbcc24c9613cd395e1942e9c604f44523af",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/pilot_execution_v3/legacy38_corrected_audit_20260908.json": "f5684871c50a001b106af43a56053085bc4a40d7b9f07d27b91da725c1db8525",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/pilot_execution_v3/remaining166_independent_readback_20260908.json": "99b8170a2cc34765a380c61984734a0252f8a8afd01a253c50d77d8b21e2d97f"
+  },
+  "blocked_entries": [
+    {
+      "missing_species": [
+        "11_H2O_TA13"
+      ],
+      "reaction": "TA13_1"
+    },
+    {
+      "missing_species": [
+        "11_H2O_TA13"
+      ],
+      "reaction": "TA13_2"
+    },
+    {
+      "missing_species": [
+        "11_H2O_TA13"
+      ],
+      "reaction": "TA13_3"
+    },
+    {
+      "missing_species": [
+        "11_H2O_TA13"
+      ],
+      "reaction": "TA13_5"
+    },
+    {
+      "missing_species": [
+        "11_H2O_TA13"
+      ],
+      "reaction": "TA13_6"
+    },
+    {
+      "missing_species": [
+        "11_H2O_TA13"
+      ],
+      "reaction": "TA13_7"
+    },
+    {
+      "missing_species": [
+        "3d4dIPSS_Y_GS",
+        "3d4dIPSS_Y_GS+"
+      ],
+      "reaction": "3d4dIPSS_11"
+    }
+  ],
+  "covered_species": 221,
+  "diagnostic_assembled_entries": 93,
+  "feature_matrix_sha256": "7af605bbb7cd4e7856a5908a7561db11407974dca6ac21977182f76aeb396360",
+  "finite": true,
+  "missing_species": [
+    "11_H2O_TA13",
+    "3d4dIPSS_Y_GS",
+    "3d4dIPSS_Y_GS+"
+  ],
+  "note": "Diagnostic assembly only, NOT a replacement training pilot or fitting release. Original100 entries/weights retained; no missing-feature zero fill. Legacy corrected fixed values explicitly consumed from audit.",
+  "pilot_entries": 100,
+  "pilot_species": 224
+}

@@ -1,0 +1,494 @@
+{
+  "all_seven_canaries_required": true,
+  "basis_bridge_sha256": "cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6",
+  "build_hashes": {
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/bin/qchem": "eb8848914711cc8346ea98c96e41dde7a6cb60e79f1cbb1268a906dc8ac0ede7",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/exe/qcprog.exe": "0cfc9b426f71e9a7e8fd57990cd09d3241ec458742e319839bd7f05fae571084",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks.so": "95441cef4e010a334ffa9e73f5342c10ad639471c17d33ab0c6f7295fad39081",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_ham.so": "5ab4e78e304560433bdde891c0fa474290ea59eb48e07655ced00800579b1ae2",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_ref.so": "ca620f924f1a289928b4ba231c3145f4bc8408e0f36eeb4616bbd4c419687f2d",
+    "/clusterfs/mhg-data/yaoshen/qchem/trunk/lib/libks_utils.so": "4c82b7c0bdede7e5b739e5bef86ebdc24afd8b0addd0074d93b282281183bdb1"
+  },
+  "cases": [
+    {
+      "authoritative_input": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/11_H2O_TA13/input0",
+      "basis_bridge": {
+        "auxiliary_definition_sha256": "25028e5807a7b1834406e0ddfb047a8c96ccb7770e819aa83a22c2551da2f7be",
+        "auxiliary_pyscf_name": "rimp2-def2-QZVPPD",
+        "auxiliary_qchem_label": "rimp2-def2-QZVPPD",
+        "auxiliary_resolution": "hash_pinned_qchem_named_library",
+        "auxiliary_shells": "75",
+        "auxiliary_spherical_aos": "287",
+        "ecp_definition_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "ecp_electrons": "0",
+        "ecp_resolution": "not_applicable",
+        "electron_count": "10",
+        "elements": "H;O",
+        "orbital_definition_sha256": "ef8f71dbe2a6b322929e0475ea6968fc00dfca478f006e34c81f0ba0831c6b40",
+        "orbital_pyscf_name": "def2-qzvppd",
+        "orbital_qchem_label": "DEF2-QZVPPD",
+        "orbital_resolution": "named_alias",
+        "orbital_shells": "42",
+        "orbital_spherical_aos": "132",
+        "qchem_source_input_sha256": "0d77b94859f54a633fef073a23e54c5da9439771796c7deaf2511eda9cef6c93",
+        "required_for_energy_roles": "true",
+        "runnable_status": "runnable_basis_metadata_validated",
+        "scope": "gscdb137",
+        "source_record_sha256": "a276e072fcfef5e15d7364ef135aab53d7120d593843d41897347f8beb3cbd61",
+        "species": "11_H2O_TA13",
+        "spin": "0"
+      },
+      "cross_campaign_partial_reuse": "not_authorized_without_explicit_raw_stage_validation",
+      "electron_count": 10,
+      "input_sha256": "0d77b94859f54a633fef073a23e54c5da9439771796c7deaf2511eda9cef6c93",
+      "orbital_root": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/11_H2O_TA13",
+      "pt2_policy": "native_total_pt2",
+      "qarchive_sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+      "resources": {
+        "cpus": 8,
+        "requested_memory_gib": 14,
+        "wall_hours": 72
+      },
+      "route": {
+        "account": "mhg",
+        "partition": "mhg",
+        "qos": "normal"
+      },
+      "scratch_root": "/clusterfs/mhg-data/yaoshen/scf_read/revwb97m2/water_scalar_refresh_v1/11_H2O_TA13",
+      "source_record_sha256": "a276e072fcfef5e15d7364ef135aab53d7120d593843d41897347f8beb3cbd61",
+      "source_tree": [
+        {
+          "bytes": 62,
+          "path": ".staged.ok",
+          "sha256": "86b65232e984e463767561a6c5f85fb921de813017b7022259acf1841df83460"
+        },
+        {
+          "bytes": 399424,
+          "path": "1100.0",
+          "sha256": "a80def3ee4b82c27c74c44756050257ec8cd89b409cff7a7ee28b43415d970de"
+        },
+        {
+          "bytes": 24,
+          "path": "1110.0",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+        },
+        {
+          "bytes": 88,
+          "path": "1111.0",
+          "sha256": "09ca2b9e33278ab19f9f2eaa4ad2e2c64cd008c00a36a836a6329087a530a385"
+        },
+        {
+          "bytes": 20,
+          "path": "121.0",
+          "sha256": "2146eaa76cec4a6212fce01e40b4f0d2be9614fabeafecd7ab06438783bbabe7"
+        },
+        {
+          "bytes": 278784,
+          "path": "130.0",
+          "sha256": "dbce35ecfff8898fae907cbccd028b0e69384378ac7f69bb54aa7226062a3ca0"
+        },
+        {
+          "bytes": 278784,
+          "path": "148.0",
+          "sha256": "65727cef3f323fa54d151d6c49a1c7d0c4b7816186f6e82cade9e5f22e1a5f68"
+        },
+        {
+          "bytes": 50800,
+          "path": "150.0",
+          "sha256": "aa79c6cbeacf69dda4d3fe1f7ce131131a56c192787afaf101675d6ad0279953"
+        },
+        {
+          "bytes": 278784,
+          "path": "151.0",
+          "sha256": "964687f1f0695d2a35686c6de54cf1fe85ad07b1b8da10101d5d98885f95743e"
+        },
+        {
+          "bytes": 4,
+          "path": "1612.0",
+          "sha256": "79ff7fbc96a0a6111e3c2706d61deb84c7c8e5a137b776f34a7dc3775f3652de"
+        },
+        {
+          "bytes": 40,
+          "path": "1700.0",
+          "sha256": "a21b524afe1df5e1216cb34e1da476d40d68d57de9b9c10943c5145654c89989"
+        },
+        {
+          "bytes": 2004,
+          "path": "1701.0",
+          "sha256": "ad3dcdd9ddc0039a58afee8da6bb825b23bbfdad6b1451c6368b8c0e22d03d69"
+        },
+        {
+          "bytes": 3036,
+          "path": "1702.0",
+          "sha256": "59ab95196a5fc06d5847acfbfc10aa0d0dba6501cd2fe17b946f806e07195376"
+        },
+        {
+          "bytes": 24,
+          "path": "1710.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 805452,
+          "path": "1711.0",
+          "sha256": "595329b9379fcd1a106fe076037f01be23e2b0951ff6bf4fef4f280f4772cd10"
+        },
+        {
+          "bytes": 24,
+          "path": "1720.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 38056,
+          "path": "1721.0",
+          "sha256": "dfe3dd2b3e27de28a3dc58f1f47a609ce25097226887e2c467452ca670cd6e2b"
+        },
+        {
+          "bytes": 24,
+          "path": "1730.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 160776,
+          "path": "1731.0",
+          "sha256": "1f352b2bec4a3927d963ac324492d493076a5a487a85fa54bcba595f8be531a1"
+        },
+        {
+          "bytes": 24,
+          "path": "174.0",
+          "sha256": "fde5ac9999ab01cf500c0a3275ae652bac7d7709d0185734bfe12be7c9ad321b"
+        },
+        {
+          "bytes": 24,
+          "path": "1740.0",
+          "sha256": "9e0d6817d6bbb9b70baf4d603b51d8cb3ae68680d1be08884a6c32f30fdcf480"
+        },
+        {
+          "bytes": 1216576,
+          "path": "1741.0",
+          "sha256": "62099ecc893f47fd291e62617cc614f9a1ce31837b89a3000976e02a30a93a89"
+        },
+        {
+          "bytes": 24,
+          "path": "175.0",
+          "sha256": "58f5afa62c179f04e15fc4d4c520900fb4b44715c2dacc05ac0d2e9b39fefa5b"
+        },
+        {
+          "bytes": 4,
+          "path": "177.0",
+          "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+        },
+        {
+          "bytes": 24,
+          "path": "179.0",
+          "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+        },
+        {
+          "bytes": 139392,
+          "path": "320.0",
+          "sha256": "73960d30b58da807fb8772dbef1b66614eaa4e60ec7ac6db39ac9aee3ccc9909"
+        },
+        {
+          "bytes": 8,
+          "path": "334.0",
+          "sha256": "c69dc8de0745807937b3690fe5e5b9a889905ac6dc5a77bbe0a0dabb6f8c2a28"
+        },
+        {
+          "bytes": 52020,
+          "path": "370.0",
+          "sha256": "11c3a2ac84a2aa01d3d80dbbe7236099167b55c8d469f6a93520cd5eeb3180fe"
+        },
+        {
+          "bytes": 284,
+          "path": "4.0",
+          "sha256": "49ddf528671f2685f3d6d2c13da091e74c7c4206e1086c9aef1fe37d9b8999ec"
+        },
+        {
+          "bytes": 139392,
+          "path": "412.0",
+          "sha256": "29bcce00aa14d6c5bd03827ec9a8c9626e1a8de5c67162249e7b5c6e259617fe"
+        },
+        {
+          "bytes": 84,
+          "path": "46.0",
+          "sha256": "11b0a123aaba9fe0705f3b2857967a170486ffc9480634c49d3c84c9e718ec90"
+        },
+        {
+          "bytes": 53840768,
+          "path": "49.0",
+          "sha256": "cb8398ea0b65a64368309d8585e7294ec0791a485930662fce5f54144590b375"
+        },
+        {
+          "bytes": 427936,
+          "path": "51.0",
+          "sha256": "a4ae50fc10725cab6aec3dcd728e2ee0ff79dd129633789b4d32b2b40aa3d14d"
+        },
+        {
+          "bytes": 280896,
+          "path": "53.0",
+          "sha256": "071160ce89b309937502e133637be1329ed7d56223fb336bdc3002dd1e4b5d4e"
+        },
+        {
+          "bytes": 278784,
+          "path": "54.0",
+          "sha256": "752dbfe3d1a7bbf6c05b9666a16318ffbbf43269c2a352a61d3be6085dfd9ac2"
+        },
+        {
+          "bytes": 278784,
+          "path": "58.0",
+          "sha256": "dbce35ecfff8898fae907cbccd028b0e69384378ac7f69bb54aa7226062a3ca0"
+        },
+        {
+          "bytes": 30480,
+          "path": "59.0",
+          "sha256": "cccbefb9bbbdaed2227405920dd45323703523c2cf701a3f2681b542e332a616"
+        },
+        {
+          "bytes": 96,
+          "path": "593.0",
+          "sha256": "a5aa6a0dd3362bd100c9e54405a95bba8d914debffba4106bf95973fa9cc2dc5"
+        },
+        {
+          "bytes": 72,
+          "path": "6.0",
+          "sha256": "1332df685c45a61a0ac008a6a653295b8c5655361c1d34b6304b22ec40235fb8"
+        },
+        {
+          "bytes": 20320,
+          "path": "61.0",
+          "sha256": "2bfd2cb50c7211ab9139839f68ee4e3882619f31713c2e4da7791f703611d22f"
+        },
+        {
+          "bytes": 12,
+          "path": "621.0",
+          "sha256": "aec2b0f19fba29cefac27eda8d9aaa10db54cc91e38186b43613840583d1e7a3"
+        },
+        {
+          "bytes": 1442720,
+          "path": "63.0",
+          "sha256": "33512e6180e68c7b2087327b14dbc560cf05fe7b6e285df891cb3b71ae64eb04"
+        },
+        {
+          "bytes": 64,
+          "path": "686.0",
+          "sha256": "12e8f0ec40554ecd8e93948adfcfa46785dd9959438deb0a1bd25a7ad922ede4"
+        },
+        {
+          "bytes": 8,
+          "path": "758.0",
+          "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+        },
+        {
+          "bytes": 24,
+          "path": "771.0",
+          "sha256": "8316fdaecc35214f2ec3ed9582b31134b6661fdd5c23d29822b350a05d9f7724"
+        },
+        {
+          "bytes": 36068,
+          "path": "803.0",
+          "sha256": "803ada0abf2798c286ac447401ea451ac1c8ee8e0e956bac8b6f44ee623fc3f7"
+        },
+        {
+          "bytes": 2296,
+          "path": "818.0",
+          "sha256": "da390ebb160c4a80c6c0019854c9edd1213f2e191fc2093a53c59e23279b4e19"
+        },
+        {
+          "bytes": 16,
+          "path": "819.0",
+          "sha256": "0a39970095fa436dfc6915a80552ece60773e79124aef19e914ff008ec02a5c8"
+        },
+        {
+          "bytes": 144272,
+          "path": "90.0",
+          "sha256": "910d74a10732287740c5b923d9ea12d59ec916b44e55bdfbb9ef2f6fa7594a11"
+        },
+        {
+          "bytes": 24,
+          "path": "9121.0",
+          "sha256": "82d16d1a0a9b623c73b0e964988430158398319d67d81c9bb5d094443efafe6a"
+        },
+        {
+          "bytes": 144272,
+          "path": "97.0",
+          "sha256": "d00cd8388ba99a52e53b34302a9c772cf4ef8612490dbd40a24a8bf2daa0f25c"
+        },
+        {
+          "bytes": 32,
+          "path": "976.0",
+          "sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925"
+        },
+        {
+          "bytes": 272,
+          "path": "99.0",
+          "sha256": "705a0b708afd8bec06b53e8c5186fedaaf33ec27c8f6524ce1aaa6e3acb1bb32"
+        },
+        {
+          "bytes": 800,
+          "path": "archive.h5",
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e"
+        },
+        {
+          "bytes": 458,
+          "path": "input0",
+          "sha256": "0d77b94859f54a633fef073a23e54c5da9439771796c7deaf2511eda9cef6c93"
+        },
+        {
+          "bytes": 220,
+          "path": "molecule",
+          "sha256": "e77290194ba2ad59c8c47def750b740636941ab951079c9107d5e8e85b8b8702"
+        },
+        {
+          "bytes": 288,
+          "path": "pseudodata",
+          "sha256": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+        },
+        {
+          "bytes": 800,
+          "path": "qarchive.h5",
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e"
+        },
+        {
+          "bytes": 161,
+          "path": "rem",
+          "sha256": "5f56994dba9007a0543390260b7b884ced3dcc631a79cc54d5598f3fc442880d"
+        },
+        {
+          "bytes": 317,
+          "path": "remfrgm",
+          "sha256": "407e291f02cf79f86e74ca44d64e3044c13997d91e326ec6314e96ce485de5be"
+        },
+        {
+          "bytes": 18,
+          "path": "tmp.genauxbas",
+          "sha256": "c21b4d2ffc973bfb32a877804fca2b7cdf9b576d9eebd65bb2a549774ae4cf1a"
+        },
+        {
+          "bytes": 18,
+          "path": "tmp.genbas",
+          "sha256": "b4600600983e46e7b2a533dd140778ae38dcf49d6c3f0b6c253840b9cd5dfd63"
+        },
+        {
+          "bytes": 127,
+          "path": "tmp1.z2c",
+          "sha256": "fa9484d8b9ae1f07717ce80efab6ceac0a58b8e8f94406cafe3bc1588113d217"
+        },
+        {
+          "bytes": 124,
+          "path": "tmp2.z2c",
+          "sha256": "727e20de5221cf7af1c39ea913489dad1efd0e071d51a9ec18c139559755ee31"
+        },
+        {
+          "bytes": 137,
+          "path": "zmat",
+          "sha256": "4ba88091bbe6cce4743eac09d8edd1ff7260898252bb2445524628dd0be692ef"
+        },
+        {
+          "bytes": 127,
+          "path": "zmat2",
+          "sha256": "a329bafd40b58ebdbebd9ab23298cf4e90456faf93745994dfeeebc78581b313"
+        },
+        {
+          "bytes": 125,
+          "path": "zmat3",
+          "sha256": "790591bd1e3e2a408ff83814436d67f526653c4e869b696a48ac39c93e458453"
+        }
+      ],
+      "source_tree_bytes": 60776002,
+      "source_tree_sha256": "5b5ed8d4a70efc34f6cab20df599a96c7ee51857962731b0d34e5bb7d62d4c29",
+      "species": "11_H2O_TA13",
+      "spin": 0,
+      "stages": {
+        "250974": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\nO 0.0000000000 0.0000000000 0.0000000000\nH 0.0000000000 0.0000000000 0.9588509391\nH 0.9289656766 0.0000000000 -0.2375245148\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000250000974\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "171b7de37a7e8dbe62d4041f3fddbb610d77aa922e347756996be845913566cb"
+        },
+        "75302": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\nO 0.0000000000 0.0000000000 0.0000000000\nH 0.0000000000 0.0000000000 0.9588509391\nH 0.9289656766 0.0000000000 -0.2375245148\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000075000302\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "d9da0bc4a5b11c68d1c4773fe4bf2da3835c7d52aa80392a582fdf0e32efdec4"
+        },
+        "99590": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\nO 0.0000000000 0.0000000000 0.0000000000\nH 0.0000000000 0.0000000000 0.9588509391\nH 0.9289656766 0.0000000000 -0.2375245148\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nMETHOD wB97M-V\nSCF_GUESS READ\nGEN_SCFMAN FALSE\nXC_FXC 3\nMP2_RESTART_NO_SCF TRUE\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "dae5486130764a5f27a11b129a475e39854ad96ef0cc104ec53896276d12e0a4"
+        },
+        "fixed": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\nO 0.0000000000 0.0000000000 0.0000000000\nH 0.0000000000 0.0000000000 0.9588509391\nH 0.9289656766 0.0000000000 -0.2375245148\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nSCF_GUESS READ\nJOBTYPE SP\nEXCHANGE HF\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "9d2120c0af22019710cf0a73225ea9d6d1d72dbc9394871a0efc337c83dbdfe8"
+        },
+        "pt2": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\nO 0.0000000000 0.0000000000 0.0000000000\nH 0.0000000000 0.0000000000 0.9588509391\nH 0.9289656766 0.0000000000 -0.2375245148\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nMETHOD wB97M(2)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS READ\nJOBTYPE SP\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "a882d643b9bea11cd3ec7530524bddd994936f879951ba8763806e820a22b12b"
+        },
+        "scalar": {
+          "action": "generate_or_resume_same_contract",
+          "input": "$molecule\n0 1\nO 0.0000000000 0.0000000000 0.0000000000\nH 0.0000000000 0.0000000000 0.9588509391\nH 0.9289656766 0.0000000000 -0.2375245148\n$end\n\n\n$rem\nN_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED TRUE\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nSCF_GUESS READ\nJOBTYPE SP\nEXCHANGE HF\nMP2_RESTART_NO_SCF TRUE\nGEN_SCFMAN FALSE\nSCF_FINAL_PRINT 1\nLRC_DFT TRUE\nSRC_DFT TRUE\nOMEGA 300\nOMEGA2 300\nHF_SR 1000\nHF_LR 0\nNL_CORRELATION VV10\nNL_GRID 1\nNL_VV_B 550\nNL_VV_C 100\nNL_VV_SCALE 100000\n$end\n\n\n\n\n\n\n\n\n\n\n",
+          "input_sha256": "f33d9c9ff11cd84ecbfbb1758dcdaa74fb49b93a9f5dfdca2052d4acca0545e1"
+        }
+      }
+    }
+  ],
+  "code_hashes": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/build_reaction_smoke.py": "aabb0f1c6f5ee97a87a7a8f07b5519e2a18e940b49283d9b0f2a0f1183c476ae",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_inputs.py": "ab356c8d30ae62ac7d3269e5602bd597057bc8ec97be1912b76293a6d449c62c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_spec.py": "913f1d184be37477ba5fe5e58bec2acad6e9b5663d06ac11561d12d87409b078",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/grid_selection.py": "a11dd30e2ab8c9bf1b7065afa1a9f3512bd94aef62a3c64c7180565941d828ff",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/integrated_dv.py": "d3b56a6a0b45967dd7caccc379517777379466c85963203f4fd5782d30d3ff2e",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/corrected_canary_evidence_v1.json": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q6_retry2_control_amendment_v1.yaml": "283b2b0096edebb74b1a3f07b369b7b9d878c4a0237783eba5173dd18caea891",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/mio.py": "544cf9005966062245f3ffbeb091b536ab429495a1c7fed1af44f2bc3c915908",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/parent_scf.py": "ea6acf12837d91937469bc4338c613ecef7f962ae053c94478567b2144f8a568",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/production_generator.py": "bb203604102fff9a0437b18c8df6379e97dc09922867b871dc68f148211f0bbc",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/published_wb97m2.py": "0ec8d0c735d16bbd25cca98aad439af4066705b164d87e7b93c04897bc7829c9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_feature_publisher.py": "a6d0f63b2a290b315eefcbacfecca655fd02b0f4fb21f04edefda69ffab3ed75",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_integrated_dv_reference.py": "b1eda8e7e0f6bb652a466c374c5e31a5488027b0933fc9eddd4657eef21f4493",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_scalar_features.py": "fef539b1cd360eba3d2bde170175a76df5485340daa32a2261e7b431f3305daa",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_step13_stages.py": "c807bdb8295917d9652b2aae33f16c5928e102fb58216c103694c1588ab4b14b",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/reaction_assembly.py": "4146c59eb479d5bd4688375109b9d3285d02234941c986c5af4948b0655d84be",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/run_r2_smoke.py": "df06e42d956c0b41caaa17fd9ccd510e9f644e19a92163f68c6d4895089b8865",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scalar_features.py": "4dddae662fd56cd7fb3c12844a234ee29fa356e055c38d92fc189fd759d54030",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/corrected_canary_evidence.py": "735474655933c34ffc1a7fabf840403c17aa636d6b46015cf816c1ec55d12d5c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/fixed_energy_checkpoint.py": "73e2fa6f6fdfa831778808e1c0f8c1c9d5d15b96dad0f799b81b71f03293aeb2",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/generate_training_features_v2.py": "d095dc3cc46c6530beb01e6bfd5b3813ae056cc86b893b71759d4ee7ea859f79",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/prepare_q3_qchem_gateway.py": "d26e5984dc5058643c583d7368e7018b945bd93b052383d74b11d4f9877d9a30",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/recover_v7_canary_d4.py": "2611ef7617b1650c03f5a681df05015cc206650bd2fccd41c3114911fbee98fd",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_large_corrected_canaries.py": "9f91a41ab8bb357ad5e0a06bb27c2124903244b76ed9f2f988407927af67f821",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/run_step13_fresh_species.py": "81c10fd842f03bef3e8a02b482da5d8dff041ec1f75d26305ffde43dec51dc72",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/v7_canary.py": "57c0065e27567bb793a79dfdeb46a8255a28bdaa788af3358172aa252d6b357b",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/semilocal_features.py": "bb3d7c043d89d75c5e24c16e1a1bf45cf3f13a15b3423b101a13355aaf84184c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh": "3e4fef0aed9ea907f0f66593e9ac63b96f8078e54be03a57e8ff80639c1625f9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_v2.sh": "e2f4329999cdee412c177da83eef95012d106563a065ffdde0e0e0166f8f89c9",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/solver_reporting.py": "9e5fc4b742d9dc6212ee84bbcd935d80d8ced0da4da9f062002b1fcf70491c60",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step13_resource_plan.py": "6f1b010f70c7ccad86f99092296f41fe428b048bea011f338451c9ccf2c1c8b0",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step13_stages.py": "7bf62a4fc323d2b5e940925979dd4c444109219b79270cfa32fbe372127ba15f",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step14_recovery.py": "a5b1c66c157bf34d553a85a2488b534d15c3351191af421f34c23bc973f0292d",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/step14_recovery_v2.py": "d33a374d4a91a6ba138ab628287b7313547c08cfa8e70c840a406bc74e67f459",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/v7_canary.py": "3b21a17c0d4c56db4110054486e8a3dc002b5839d50df6180c88a5751c0c71f1",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/v7_refresh.py": "640d8281ab4551afd3c9494357b28ad79761f22245bfaee9be86da4a8c0cc9aa",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/validate_r2_smoke.py": "c8d5ef825f1cd9d7aa9671d5bf88615e2cf36a19b49b8eb09fdc01e13e776675",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/validate_reaction_smoke.py": "da44a703e49ee2ceb126019b4b0bb536d1ab4287a21a03c02cf4832909daa0d5"
+  },
+  "concurrency_proposal": 8,
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "full_reuse_policy": "Explicit refresh/canary readback via audit-reuse; never infer readiness from files.",
+  "inventory_sha256": "6abe300fb10212ec30e4f5a3add9a6c7136c85f72597e09c32d7e28b8c0d29a3",
+  "minimum_copy_bytes": 364656012,
+  "output_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/species/water_scalar_refresh_v1",
+  "purpose": "generic_training_feature_batch_corrected",
+  "resource_review_pending": true,
+  "schema_version": 2,
+  "scratch_root": "/clusterfs/mhg-data/yaoshen/scf_read/revwb97m2/water_scalar_refresh_v1",
+  "selection_source": {
+    "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/training_preflight_v2/pilot100_species.json",
+    "sha256": "c795cb86c8df5ca37d675407f3c5f99403141ab67a3afd240d6ed27b28aa6a03"
+  },
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "stage_reuse_policy": "Only completed stages under identical plan/input/source hashes; partial stages stop.",
+  "storage_free_bytes_at_freeze": 2755530890149888,
+  "storage_note": "Copies lower bound only; new native scratch/logs need extra headroom. No reservation.",
+  "submission_authorized": false,
+  "user_commit_required": true
+}

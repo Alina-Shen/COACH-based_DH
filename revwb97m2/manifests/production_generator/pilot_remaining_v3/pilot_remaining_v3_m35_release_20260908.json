@@ -1,0 +1,28 @@
+{
+  "commit": "4f1f87a19a6eb12ff082c6a0dd3e4ba3eb61643b",
+  "concurrency_enforcement": "--array=0-2; no percent throttle",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "max_concurrent_jobs": null,
+  "note": "User confirmed commit and requested submission. Live September8 partition/account/storage/duplicate review passed. No eight-task cap; no lr_lowprio.",
+  "plan_sha256": "87c2df1c40e0a1baf9b735566a190b3d9765c89306c505bf2f75782997422203",
+  "resource_review_passed": true,
+  "scheduler_routes": {
+    "25_ile184_dim_HSG": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "TMB31_C1": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "TMB31_T1": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    }
+  },
+  "schema_version": 1,
+  "user_approved_submission": true
+}

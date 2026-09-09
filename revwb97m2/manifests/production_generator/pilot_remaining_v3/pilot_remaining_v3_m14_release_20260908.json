@@ -1,0 +1,778 @@
+{
+  "commit": "4f1f87a19a6eb12ff082c6a0dd3e4ba3eb61643b",
+  "concurrency_enforcement": "--array=0-152; no percent throttle",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "max_concurrent_jobs": null,
+  "note": "User confirmed commit and requested submission. Live September8 partition/account/storage/duplicate review passed. No eight-task cap; no lr_lowprio.",
+  "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+  "resource_review_passed": true,
+  "scheduler_routes": {
+    "11_Cl-_ClF_dim_Bauza30": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "11_Cl-_ClF_monA_Bauza30": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "11_Cl-_ClF_monB_Bauza30": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "11_H_AE18": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_Br-_ClF_dim_Bauza30": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_Br-_ClF_monA_Bauza30": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_Br-_ClF_monB_Bauza30": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_H2O2Cl_HW6Cl": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_H2O2Cl_mon1_HW6Cl": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_H2O2Cl_mon2_HW6Cl": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_H2O2Cl_mon3_HW6Cl": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_HF_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_He_AE18": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "13_BH2_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "13_Li_AE18": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "14_Be_AE18": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "14_butane_Alk44": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "15_CO+_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "16_HF-A_dim_CT20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "16_HF-A_monA_CT20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "16_HF-A_monB_CT20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "16_NH2_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "18_OH_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "19_H2O-Al_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "19_isobutane_Alk44": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "1prod1_CR20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "1prod2_CR20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "1react_CR20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "20_H2O-Be+_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "20_h2o_dimer_cs_dim_DS14": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "20_h2o_dimer_cs_monA_DS14": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "20_h2o_dimer_cs_monB_DS14": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "21_H2O-Br_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "23_H2O-Cl_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "24_H2O-F_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "25_H2O-Li_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "25_ile184_monA_HSG": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "25_ile184_monB_HSG": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "28_FH-BH2_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "29_HF-CO+_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "30_FH-NH2_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "30_HBr_XB18": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "31_FH-OH_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "31_HBrNCH_XB18": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "32_al_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "33_HCN_XB18": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "34_br_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "35_cl_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "36_f_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "3960_04HFdimer_dim_A24": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "3960_04HFdimer_monA_A24": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "3960_04HFdimer_monB_A24": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "4217_waterC2v_Shields38": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "4react_CRBH20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "4ts_CRBH20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "ALK8_li_na_h2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "ALK8_na2_h2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BH28_CADBH_1_min": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BH28_CADBH_1_ts": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BH28_CADBH_c2h4": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BHDIV10_ed10": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BHDIV10_ts10": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BHPERI_00r": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BHPERI_04r": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BSR36_c2h6": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BSR36_ch4": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "CUAGAU_Ag01N0_H": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Dip146_OH2+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Dip146_OH2-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21EA_EA_si": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21EA_EA_si-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_be": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_be+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_h": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_li": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_li+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_mg": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_mg+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_na": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "G21IP_na+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "HCP32_2_FCl_2_dim": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "HCP32_2_FCl_2_monA": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "HCP32_2_FCl_2_monB": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "HEAVYSB11_cl": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "HEAVYSB11_cl2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "HR46_chlorine": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "HR46_chlorine1+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "HR46_chlorine1-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "IHB100x10_05.012_OH-Oa__water--hydroxide_100": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "IHB100x10_05.012_OH-Oa__water--hydroxide_monA": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "IHB100x10_05.012_OH-Oa__water--hydroxide_monB": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "IL16_227": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "IL16_227A": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "IL16_227B": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MB16-43_BH3": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MB16-43_CH4": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MB16-43_Cl2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MB16-43_F2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MB16-43_H2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MB16-43_LiH": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MB16-43_SiH4": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MOR05_co": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MX35_1109_NaF_01": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MX35_F": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "PX13_hf_2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "PX13_hf_2_ts": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_H2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_H20+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_H20-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_LiCl": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_LiCl2+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_LiCl2-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_Mg2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_Mg20+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_Mg20-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_N": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_N0+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_N0-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_Na2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_Na20+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_Na20-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_NaH": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_NaH2+": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "Pol130_NaH2-": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "RG10N_He": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "RG10N_HeHe_1p588": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "RG10N_HeHe_2p646": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "RSE43_E1": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "RSE43_E20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "RSE43_P1": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "RSE43_P20": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "TMD12_Co": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "TMD21_CoH": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_al": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_alh": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_bh": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_bn3pi": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_ch": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_cl": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_cn": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_f": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_hcl": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_hf": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_hs": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_n": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_n2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_nh": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_nh2": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_o": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_oh": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_s": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_si": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "W4-17_sih": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    }
+  },
+  "schema_version": 1,
+  "user_approved_submission": true
+}

@@ -1,0 +1,3662 @@
+{
+  "accepted": 166,
+  "cases": [
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.499838723859284e-09,
+      "job": "25714429_0",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "fff7c53c986efbbe2c45dc4d5352d5720a6f2dfb438b420a2b40be03d6e328b3",
+      "species": "11_Cl-_ClF_dim_Bauza30",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -5.999822860758286e-10,
+      "job": "25714429_1",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "d6453f5ae1175b5a9e03a82663b173e31b1627b76b8e168cca32a2b5456977cb",
+      "species": "11_Cl-_ClF_monA_Bauza30",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.600007403292693e-09,
+      "job": "25714429_2",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.000000082740371e-10,
+      "publication_sha256": "9369c57101a308d2c907bf05a3f1de3ed4f207315f1cbf15a1e04bfd83057e9c",
+      "species": "11_Cl-_ClF_monB_Bauza30",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.700000000301685e-09,
+      "job": "25714429_3",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "f6083d43d858417c54af557f46682468e168c1e9fa6b8c56abaa6724c9d10941",
+      "species": "11_H_AE18",
+      "stage_count": 5,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.499927293480141e-09,
+      "job": "25714430_0",
+      "passed": true,
+      "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+      "pt2_identity_error_hartree": -9.999995276288587e-11,
+      "publication_sha256": "e1f7eae33202e5d14a30a9d20c59744b4ce0de7be7914b0d54038a846e64018f",
+      "species": "11_Isomer1_Styrene45",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.6998455976136029e-09,
+      "job": "25714429_4",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 5.551115123125783e-17,
+      "publication_sha256": "57f992646ae1258d244a9380e61ff0270bb2ac404e0f71a56710b19c77b2e141",
+      "species": "12_Br-_ClF_dim_Bauza30",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.59978002961725e-09,
+      "job": "25714429_5",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -2.7755575615628914e-17,
+      "publication_sha256": "54a3ac6e535f798554a9abac16ed695074d67a5688498215b9af8d1efebeb9f1",
+      "species": "12_Br-_ClF_monA_Bauza30",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.499952410697006e-09,
+      "job": "25714429_6",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -2.7755575615628914e-17,
+      "publication_sha256": "6b54f4f1f82aea108342747806386016271dd923cf3787a5a14d6b64e05f3347",
+      "species": "12_Br-_ClF_monB_Bauza30",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.799993126245681e-09,
+      "job": "25714429_7",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999998051846148e-11,
+      "publication_sha256": "b4c8df6f8b2dee45611a330b4436effead1e55676b0125f60a3266e6dfd66afd",
+      "species": "12_H2O2Cl_HW6Cl",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 9.000018508231733e-10,
+      "job": "25714429_8",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999439624929e-11,
+      "publication_sha256": "05a60186e280093457f471eb9377deade7639642e4a67de9a2e75cc6816a5dd6",
+      "species": "12_H2O2Cl_mon1_HW6Cl",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 5.999964969305438e-10,
+      "job": "25714429_9",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "d144dc7dfe2479b40ed898fe18778a507a3a0d03c8489d3a36217ce697d590ea",
+      "species": "12_H2O2Cl_mon2_HW6Cl",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -5.999822860758286e-10,
+      "job": "25714429_10",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "3215623b5dc96af669660f9e32170416b3731d755e3266d2658ababbd2e406fa",
+      "species": "12_H2O2Cl_mon3_HW6Cl",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.399993258630275e-09,
+      "job": "25714429_11",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999439624929e-11,
+      "publication_sha256": "8528bd04201b585f854d9db88f7b72a96f37bbc0790bfefdc84125b4df62c627",
+      "species": "12_HF_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.999999886872274e-09,
+      "job": "25714429_12",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "5fa54616765e6c796359f7075390fb1d0256e582914b9523604a2ca3089c77e1",
+      "species": "12_He_AE18",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.2999521459278185e-09,
+      "job": "25714430_1",
+      "passed": true,
+      "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+      "pt2_identity_error_hartree": -5.551115123125783e-17,
+      "publication_sha256": "29c1c5aca06232de92a4e219d2bc790e6226dc968d13e0d4d5d27af66a26699d",
+      "species": "12_Isomer2_Styrene45",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.799996844440102e-09,
+      "job": "25714429_13",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -6.938893903907228e-18,
+      "publication_sha256": "4980215fdd1c776d1df1defe47ef074f588aa77cf6f3a0897ca29e158f51ac21",
+      "species": "13_BH2_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.899999269028285e-09,
+      "job": "25714429_14",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "4d71c066acb0d39aa2b21b5f9403fb7bd7a317d1348ee2c00a332de04091a31c",
+      "species": "13_Li_AE18",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.600002074222175e-09,
+      "job": "25714429_15",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "f296c4a34b623e5cf48773026611b55e3baeb765526c0a5f82890673a9d6a92f",
+      "species": "14_Be_AE18",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.40000383403094e-09,
+      "job": "25714429_16",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -2.7755575615628914e-17,
+      "publication_sha256": "1e83697bf38ff0d13237d6a1c3a3449eb1f1007ea49110f1ffc4d1b2acf37488",
+      "species": "14_butane_Alk44",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.0999806338295457e-09,
+      "job": "25714429_17",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999998051846148e-11,
+      "publication_sha256": "9ef37014ab8371b29772499dcbb9c9b3eea76f537b7fba3d10f050c1842816ad",
+      "species": "15_CO+_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.699927558249328e-09,
+      "job": "25714429_18",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999995276288587e-11,
+      "publication_sha256": "ef1454799272c653758582cbd88e39630a23f09925765ae30d573106716728f9",
+      "species": "16_HF-A_dim_CT20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.4000322557403706e-09,
+      "job": "25714429_19",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "98b41f5cc590bf609387353189c2d07ab90a7391a5e873664098565460e03e2a",
+      "species": "16_HF-A_monA_CT20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.40000746948499e-09,
+      "job": "25714429_20",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.3877787807814457e-17,
+      "publication_sha256": "d2dfaf014b34029468a17e623a28e5a663763336a7727ed9c4b1f3417188872e",
+      "species": "16_HF-A_monB_CT20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.7000091879235697e-09,
+      "job": "25714429_21",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "af42966ba403da13672e9a4ffa341c7530fa97939efc805a99515472f2a451e3",
+      "species": "16_NH2_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.0000109063621494e-09,
+      "job": "25714429_22",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.3877787807814457e-17,
+      "publication_sha256": "a3b828f48b1e641f2d709cbebb1002e3b13d1fd1ad331e39cfc07fbc384fbe9f",
+      "species": "18_OH_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.999978849198669e-09,
+      "job": "25714429_23",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.3877787807814457e-17,
+      "publication_sha256": "6bedfceb7b3ddefda728d2220cc38054ca53ee6b5cb2c83b258fcc84598b42e2",
+      "species": "19_H2O-Al_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -6.00010707785259e-10,
+      "job": "25714429_24",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -2.7755575615628914e-17,
+      "publication_sha256": "408b8d9b780a4e460773c7a179d0ea19017b28fccce3a2bfaed0495d1381365f",
+      "species": "19_isobutane_Alk44",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.999947122996673e-10,
+      "job": "25714429_25",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "1b1298937812ada98b090f823028484ec633896b9edf5d6f25e54ffe0dd7e359",
+      "species": "1prod1_CR20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.0000109063621494e-09,
+      "job": "25714429_26",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "3ed966f35159dfcd2b5506cb0a901ba3fd3203a8179606f155e1501c88a1a7e4",
+      "species": "1prod2_CR20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.2999521459278185e-09,
+      "job": "25714429_27",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 5.551115123125783e-17,
+      "publication_sha256": "bbb8140838fa76e07ad124b84cad5206e013e6dd87c0975ca92fcfed5c404b77",
+      "species": "1react_CR20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.2000108401698526e-09,
+      "job": "25714429_28",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "4fe83305244bfab3a672edb2b65df1222427de006052537eb1d0fb65db6e982c",
+      "species": "20_H2O-Be+_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.500001983207767e-09,
+      "job": "25714429_29",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "3ebdf5ac30e3c82babaeaccbace78de0d58bd3b697bdf2e559129a2cad09fdda",
+      "species": "20_h2o_dimer_cs_dim_DS14",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.4210854715202004e-14,
+      "job": "25714429_30",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "49b5506be11e837afde42641ddd565e8a2dbbcdf90a61bd262e91c1e214b74b3",
+      "species": "20_h2o_dimer_cs_monA_DS14",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.40000746948499e-09,
+      "job": "25714429_31",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "280188b3b4db9c8d3009406685a068de79417dd35062ab0759f9d816a79c7800",
+      "species": "20_h2o_dimer_cs_monB_DS14",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.2000676835887134e-09,
+      "job": "25714429_32",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -2.7755575615628914e-17,
+      "publication_sha256": "a8489bde966f3d15234b19b1f18796d22772abc26a6c8bc4b43b0a331a826205",
+      "species": "21_H2O-Br_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.1000232663936913e-09,
+      "job": "25714429_33",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "004388553497e01d70f039807eb9a854f668949b2438c08c087f4c29370d774b",
+      "species": "23_H2O-Cl_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 5.000799774279585e-10,
+      "job": "25714429_34",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -2.7755575615628914e-17,
+      "publication_sha256": "0ba3e6fcfa50c73315a318a3d061192e3270ca8f7939c5e79df64322177ce3c9",
+      "species": "24_H2O-F_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.1999929938610876e-09,
+      "job": "25714429_35",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "b7ddf5f032cd771a0ffd3e6396fe8fb38651337983e75603636fc4ada535a972",
+      "species": "25_H2O-Li_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.400021680339705e-09,
+      "job": "25714431_0",
+      "passed": true,
+      "plan_sha256": "87c2df1c40e0a1baf9b735566a190b3d9765c89306c505bf2f75782997422203",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "2951545cef33dff3d99184cfd567ca09a0b1568122af4649ac787e50a3a5f566",
+      "species": "25_ile184_dim_HSG",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.3999823522681254e-09,
+      "job": "25714429_36",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "95ca52c03143accc6004447a783131cf66b1518e85928cecccdee12270927c02",
+      "species": "25_ile184_monA_HSG",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 8.00014277047012e-10,
+      "job": "25714429_37",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -5.551115123125783e-17,
+      "publication_sha256": "ed44bc22ad162497b1e058b0ff03402abf946a2875d7245e9609cd838de6ab18",
+      "species": "25_ile184_monB_HSG",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.3000020494000637e-09,
+      "job": "25714429_38",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999439624929e-11,
+      "publication_sha256": "8149ae2103fb4da99c2c6c28d24e503270e7eec5d7ecec870376e36766f6e2de",
+      "species": "28_FH-BH2_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.2999699922365835e-09,
+      "job": "25714429_39",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "15935304fc64ca74c37c1e9c4ac73e908a6b377b6b0bd222f2af4be7d4844a66",
+      "species": "29_HF-CO+_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.3000056848541135e-09,
+      "job": "25714429_40",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 2.7755575615628914e-17,
+      "publication_sha256": "1bcbc1e02a89f5d1e679fc6c6b8803c0ce8bd055e5574638801c2e845f0f4890",
+      "species": "30_FH-NH2_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.000888343900442e-10,
+      "job": "25714429_41",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -2.7755575615628914e-17,
+      "publication_sha256": "bb86c371d683ebb693e19eace8f4364c060eb526d5c8cf84b32e4eb523468fcb",
+      "species": "30_HBr_XB18",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.2000498372799484e-09,
+      "job": "25714429_42",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "3f19b86ae1848e9405c08a3e2cf72afb1860bf0cf38363b11eaf82797b1918f2",
+      "species": "31_FH-OH_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.6002347769681364e-09,
+      "job": "25714429_43",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000082740371e-10,
+      "publication_sha256": "f1bc52e9732c65011d173b96bbf02b57405f921a56d250fbe510be0e84fbea83",
+      "species": "31_HBrNCH_XB18",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.8999985463306075e-09,
+      "job": "25714429_44",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "108436aced95e76486007a2f799c2439aa65cb4c7843bdcf07050db1eb2a1a48",
+      "species": "32_al_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.7999894907916314e-09,
+      "job": "25714429_45",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "b8153ae20d022fe09f94b646d4a857932047d2673e3fd54ca8507981adb71186",
+      "species": "33_HCN_XB18",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.999947122996673e-09,
+      "job": "25714429_46",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "59386aa07570fd3b43eb573ec3906d3f0262bc5c4e9a521be31210d9edf60682",
+      "species": "34_br_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.100012690993026e-09,
+      "job": "25714429_47",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 6.938893903907228e-18,
+      "publication_sha256": "37eee6a2359ddb7b2c8af7e0489dcf7ebca6ee4a698f44b175e191db10c5c340",
+      "species": "35_cl_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.40000383403094e-09,
+      "job": "25714429_48",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.3877787807814457e-17,
+      "publication_sha256": "28317c9f366af62a7e9e38b4e16229d9afc79d249d7fd80bbcfed736eaab71cc",
+      "species": "36_f_TA13",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.899970124621177e-09,
+      "job": "25714429_49",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000082740371e-10,
+      "publication_sha256": "d929fdd159e9099665e11cace6c2b538a55a1bfb59684129aec280e1da858ef2",
+      "species": "3960_04HFdimer_dim_A24",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.999986120106769e-09,
+      "job": "25714429_50",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "4a4a16ae608aeb8a9b09f3878b3570cdfd804ab474db5c7c5f764bdd7c132a85",
+      "species": "3960_04HFdimer_monA_A24",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.2000072047158028e-09,
+      "job": "25714429_51",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "227fd1ab5db2bbd396f6fb868aefa8a7c85d1e459bc28a8e36493f041fd607c8",
+      "species": "3960_04HFdimer_monB_A24",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.200000264769187e-09,
+      "job": "25714430_2",
+      "passed": true,
+      "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "a3ef53cf05717f498688ac75697b5b734c6ecee7f33ee49b746014e92433b13c",
+      "species": "4192_water6BAG_Shields38",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.099994844684261e-09,
+      "job": "25714429_52",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "81d45bd8f55149c062e02acb35f93d9e7142fe6f896e42c59207271d9596296c",
+      "species": "4217_waterC2v_Shields38",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 9.000586942420341e-10,
+      "job": "25714429_53",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999995276288587e-11,
+      "publication_sha256": "e6565f4c567257a234d75601def168c6409bcb18d03141dee6c8486e4e535dc4",
+      "species": "4react_CRBH20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.5000409803178627e-09,
+      "job": "25714429_54",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "557dbad36064dbd4523de03a9f6722da22826c6d1acc1ee4f75afa9b6723ff80",
+      "species": "4ts_CRBH20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.099994844684261e-09,
+      "job": "25714429_55",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "2682c6b0f28a1f61f1ddb1953911e0ec25895af2a5eab895e9672f677040d05b",
+      "species": "ALK8_li_na_h2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.6999592844513245e-09,
+      "job": "25714429_56",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999786569624e-11,
+      "publication_sha256": "4070812f8bdd1a584f7ecd63e6e396706188a8c55db63d09954358020262df7a",
+      "species": "ALK8_na2_h2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.600028554094024e-09,
+      "job": "25714429_57",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.0000003602961272e-10,
+      "publication_sha256": "650a30cfdc6f5a2861d8a6412b296a21cbb0d582202b75af349644a531cc0d6d",
+      "species": "BH28_CADBH_1_min",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.1000232663936913e-09,
+      "job": "25714429_58",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "68242820ff8c82a6fc12a81fc373e5253303ee9b8822bc356987f342c19e7ca6",
+      "species": "BH28_CADBH_1_ts",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 0.0,
+      "job": "25714429_59",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "32c6cb523b855398c06b8ab00a12970dcf8eb50b97e4328019fdf8b52408cb73",
+      "species": "BH28_CADBH_c2h4",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.999996695507434e-09,
+      "job": "25714429_60",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 9.999998051846148e-11,
+      "publication_sha256": "9f0a68f0b261f06e33cef311b726d508f5bfbd36b08c5fae1e959e2632cf0a00",
+      "species": "BHDIV10_ed10",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.999751475523226e-10,
+      "job": "25714429_61",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "32ba46ec72df902f2d060365d1baac6e698e77d611f1fd700196b9bd260358d9",
+      "species": "BHDIV10_ts10",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.699984401668189e-09,
+      "job": "25714429_62",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.3877787807814457e-17,
+      "publication_sha256": "e8546875038ac7d051a0800feeb9e2da1ee78764c449386ab5bff58eb17e4814",
+      "species": "BHPERI_00r",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.0007283890445251e-10,
+      "job": "25714429_63",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "a64ec054d5fc1d64b691e36cbafaa201e8b9ee00c49913dfd2ca11350702dfed",
+      "species": "BHPERI_04r",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.7000623958883807e-09,
+      "job": "25714430_3",
+      "passed": true,
+      "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "f1618ad56481d67693d91e96acf94eaa0c2f5eefc4cd4d0fa17cb98d66c5ea72",
+      "species": "BHPERI_04ts",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.900002181784657e-09,
+      "job": "25714429_64",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "d710ce37636fda22bca2847ef961d3c0477572838811fa4e434fee7b89c03213",
+      "species": "BSR36_c2h6",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.3000091548274213e-09,
+      "job": "25714429_65",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.3877787807814457e-17,
+      "publication_sha256": "4f12922e801161eb478cf53ded0c278fd8c7fdf45be9c95d00688bb24d1499a9",
+      "species": "BSR36_ch4",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.7999468582274858e-09,
+      "job": "25714430_4",
+      "passed": true,
+      "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "6078154402b4ce751358ea4b4dfe63ea365c9282a1fd5dda58c8305c7e4cae54",
+      "species": "BSR36_r1",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.4999557151895715e-09,
+      "job": "25714429_66",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.3877787807814457e-17,
+      "publication_sha256": "9c0417e84095d50141e8e2572e9c9f8594f8ad3227ffd707f57a20ebd24d05ec",
+      "species": "CUAGAU_Ag01N0_H",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.6000037678386434e-09,
+      "job": "25714429_67",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "e3f13b8fad3f25501e7bb69ffea872d06bb7af3b78cc0b0e4224c62d940dddbc",
+      "species": "Dip146_OH2+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.6000001323845936e-09,
+      "job": "25714429_68",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "23249019788a2a9578109b6ef53cf283a8ff0173d15736c17a8cf6e2d38acbda",
+      "species": "Dip146_OH2-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.00007138523506e-10,
+      "job": "25714429_69",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000013351432e-10,
+      "publication_sha256": "1eb427ee10ef89ce7b3d7ae1f986931648c23124ef6244ca9b353de86e4239f8",
+      "species": "G21EA_EA_si",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.2000676835887134e-09,
+      "job": "25714429_70",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999786569624e-11,
+      "publication_sha256": "78d1cde2319c6e141ae7829c89c818683b2a724a66f86105781d6987c38fbe45",
+      "species": "G21EA_EA_si-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.0999983973979397e-09,
+      "job": "25714429_71",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "a777672b91ee0307b446dd09756eba7673f0207648e969929778a95caf41ef1a",
+      "species": "G21IP_be",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.9000019335635443e-09,
+      "job": "25714429_72",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "4d038103a60e8db10f3c50d9c7429cb646fa83928aacf73e4115fb3b56f33349",
+      "species": "G21IP_be+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.6999999730724653e-09,
+      "job": "25714429_73",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "1fc449cc207829af37197a6ba26cb58d161371bf147dda76e876df1cb7cbd5de",
+      "species": "G21IP_h",
+      "stage_count": 5,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 5.000000413701855e-10,
+      "job": "25714429_74",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "59aba65b284c2d0a227838d3f16ee2f89dedad259eee55e008e77dc152214211",
+      "species": "G21IP_li",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -5.000000413701855e-10,
+      "job": "25714429_75",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "2448602ea9844950a634e15570953f33ac14ccccc81827bfbb9b3fce00d0be0b",
+      "species": "G21IP_li+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.0999769983754959e-09,
+      "job": "25714429_76",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "05d76552be8a02603fa39e74a65459e94aeffd7e1faee218ef7dd66f89a2a773",
+      "species": "G21IP_mg",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.1999718430597568e-09,
+      "job": "25714429_77",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "f939be7bdfd594244801e0faeacc1f0f5eb756a6121233e124a2b11aa9181d80",
+      "species": "G21IP_mg+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 7.999858553375816e-10,
+      "job": "25714429_78",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "3de86433b2a4389840bd9cff5fe5a1620795ea1c91b20f37f6bf1d8920c05b45",
+      "species": "G21IP_na",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.5000092541158665e-09,
+      "job": "25714429_79",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "758a72371d5584d837d624e4924e43d7c7e8d1def9daaf9ca28cb3b2cea5d595",
+      "species": "G21IP_na+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.4999735614983365e-09,
+      "job": "25714429_80",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000082740371e-10,
+      "publication_sha256": "3f06a47b347f4e5279d8db5bdb90d5d355bf40a1172b66821c4916a4af674111",
+      "species": "HCP32_2_FCl_2_dim",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.9000481188413687e-09,
+      "job": "25714429_81",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.0000003602961272e-10,
+      "publication_sha256": "62e873a41035724977a22eb433176170e834359471734f1b773f8d0f91234e34",
+      "species": "HCP32_2_FCl_2_monA",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.9000481188413687e-09,
+      "job": "25714429_82",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.0000003602961272e-10,
+      "publication_sha256": "7b36962dd1f02df7b1b55020a806a3769689683204d96c3604f3ffe10c54be8d",
+      "species": "HCP32_2_FCl_2_monB",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.100012690993026e-09,
+      "job": "25714429_83",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 6.938893903907228e-18,
+      "publication_sha256": "1c33f58df2b70404a46df3296f122fd981f94ec350ea40d99ca7ec4c7636b9bf",
+      "species": "HEAVYSB11_cl",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.9999682737980038e-09,
+      "job": "25714429_84",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.000000082740371e-10,
+      "publication_sha256": "18abe7563f591b43ce35bf8ffcb9dfed49608602c1a5008aab751e5948acb801",
+      "species": "HEAVYSB11_cl2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.099888428754639e-09,
+      "job": "25714429_85",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "6ba36983c1b55fab2aa625d7f5b1caeea2340588c43e9582a7774ec6f6fe6b5a",
+      "species": "HR46_chlorine",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.1999645721516572e-09,
+      "job": "25714429_86",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "f9e9fe89483693340d7b85254661900ce0591bf0ea738d12d86b3da948b037c0",
+      "species": "HR46_chlorine1+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.099920154956635e-09,
+      "job": "25714429_87",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "8d660aa9bf7eb3be28769332ef0e53e2a3dcdae539948c0c33f8c68c4b5a05cb",
+      "species": "HR46_chlorine1-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.200046532787383e-09,
+      "job": "25714429_88",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "367689e9fd1925fa46c7f2fd564aba8d9d02f591ba238733aec3a44199cee0ac",
+      "species": "IHB100x10_05.012_OH-Oa__water--hydroxide_100",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -6.999982815614203e-10,
+      "job": "25714429_89",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "a43f3e489856f8f65d161a459f90ca5476cabf7edce9f2cae662c6af112814e4",
+      "species": "IHB100x10_05.012_OH-Oa__water--hydroxide_monA",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.999893584070378e-10,
+      "job": "25714429_90",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.000000082740371e-10,
+      "publication_sha256": "b976f714389b7ce0760f7e59ee8592968e0d8ad1b830684c1629aa379b90523b",
+      "species": "IHB100x10_05.012_OH-Oa__water--hydroxide_monB",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.699948709050659e-09,
+      "job": "25714429_91",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "0da382d4e37018d624392fa48e19039a46790409def64eca7b1dda8624894647",
+      "species": "IL16_227",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.1000338417943567e-09,
+      "job": "25714429_92",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "33ae10d9c28d6b39604855d638d5257463a4dee1d713310cdf8638504b82b867",
+      "species": "IL16_227A",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -7.000267032708507e-10,
+      "job": "25714429_93",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "128bcbd809d067daef5c3793d3c7bbb672dc5bc7c9b5c90730f24a819b7f5e54",
+      "species": "IL16_227B",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.299977263144683e-09,
+      "job": "25714430_5",
+      "passed": true,
+      "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+      "pt2_identity_error_hartree": 1.0000006378518833e-10,
+      "publication_sha256": "67219e16379d73fe1f08a377f57649f5eb4f60fbed2d5d405ac678df92e9822b",
+      "species": "MB16-43_09",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.000000165480742e-09,
+      "job": "25714429_94",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "d6f92d58a012b14870315d4019e9ee188f148a844f4b1fb224eb7df4cf79e3c8",
+      "species": "MB16-43_BH3",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.200007370196545e-09,
+      "job": "25714429_95",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.3877787807814457e-17,
+      "publication_sha256": "6557aca0cd64b1527893118b5e6e16166ab84d152a94b0bc9ad9ba518e78d532",
+      "species": "MB16-43_CH4",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.3999291443033144e-09,
+      "job": "25714429_96",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.000000082740371e-10,
+      "publication_sha256": "c117c89511cce17c251c0dc864887cabac8f373cd700ba7cc1990df3a09a25e6",
+      "species": "MB16-43_Cl2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.599996827892028e-09,
+      "job": "25714429_97",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "841c83faefaee825ed9ae699a45d50ca5375454bdffde97aeea74b2e589b4e68",
+      "species": "MB16-43_F2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.100000034450545e-09,
+      "job": "25714429_98",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "cbee31420176742cd65d8479e5d2c7183c7fe37070d89f64d548a0a019545213",
+      "species": "MB16-43_H2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.1000009791928278e-09,
+      "job": "25714429_99",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "4603ef6d5410642ba53cecc0b56f0da8f7016a48c1362411d430a146808f13ca",
+      "species": "MB16-43_LiH",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -8.00014277047012e-10,
+      "job": "25714429_100",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "d1fcf7a492bd43caf900bcef8ab1e96a234111b4413ecf40b101290ab85a7429",
+      "species": "MB16-43_SiH4",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.7000128233776195e-09,
+      "job": "25714429_101",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "bb0d6844bec061c541fb2f3e8b1f2fae02c76d789e235f08aeb7171102b375c8",
+      "species": "MOR05_co",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.200046532787383e-09,
+      "job": "25714430_6",
+      "passed": true,
+      "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+      "pt2_identity_error_hartree": 1.000000082740371e-10,
+      "publication_sha256": "c0a14452d36801c2b672ee4af52fed96c43698ba0278d6ef54d44d95d12d06ef",
+      "species": "MOR07_ed01",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.200501280138269e-09,
+      "job": "25714430_7",
+      "passed": true,
+      "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "a124ba75e17fc6a42aa9bf2453fe90c3dd8af31aa6525502108b702142e73897",
+      "species": "MOR25_pr01",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.5000304049171973e-09,
+      "job": "25714429_102",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.3877787807814457e-17,
+      "publication_sha256": "ee3285df5b86634fafe339f5cff43bf09880d349566c1b7d7172f700c337faaf",
+      "species": "MX35_1109_NaF_01",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.40000383403094e-09,
+      "job": "25714429_103",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.3877787807814457e-17,
+      "publication_sha256": "5ffdb3c9b78bff79cd4d26e8898d5013e3ee8e1591d388e3731e31d52705721e",
+      "species": "MX35_F",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.000764081662055e-09,
+      "job": "25714463_0",
+      "passed": true,
+      "plan_sha256": "6f90692cf129f152e3929d2593a60f74516db17eb7d6b1854cbb29ec449d9fc7",
+      "pt2_identity_error_hartree": 2.220446049250313e-16,
+      "publication_sha256": "d4a5b7fa4674cdb4d6d567615deb4ecb3b4e8f80a7685215f8ebf0d29d29349f",
+      "species": "PCONF21_444",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.3995880837901495e-09,
+      "job": "25714463_1",
+      "passed": true,
+      "plan_sha256": "6f90692cf129f152e3929d2593a60f74516db17eb7d6b1854cbb29ec449d9fc7",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "4e0c58a5e5dee5d69d1071e84f52c14b3b58f51be80627a513e09ad32c0dc5cc",
+      "species": "PCONF21_99",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.7000339741789503e-09,
+      "job": "25714429_104",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 2.7755575615628914e-17,
+      "publication_sha256": "c96f049b2ab2c69c4d5722e2c81a13fe27833dd9c370c410bce60fc49c77de65",
+      "species": "PX13_hf_2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.39997541232151e-09,
+      "job": "25714429_105",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "731bca4a65890ea2016102dacfca11dd18663d3585128b88ddfc46e1e4febbd2",
+      "species": "PX13_hf_2_ts",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.7000001406586307e-09,
+      "job": "25714429_106",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "e4730bcebb9e26fe58179aff8c2e658f747e3dd74c78144ef7cb86bf8d8e711b",
+      "species": "Pol130_H2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.30000013373899e-09,
+      "job": "25714429_107",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "ce07305c15614bf8d4cf840a0beae721d4cac47edac7a2f318d063dac42a56c7",
+      "species": "Pol130_H20+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.30000013373899e-09,
+      "job": "25714429_108",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "a4cc1fb16ad153fa69bfd4fe9deb712893babbd6f5ab51268a5489c750d1b6c9",
+      "species": "Pol130_H20-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.3000658327655401e-09,
+      "job": "25714429_109",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000082740371e-10,
+      "publication_sha256": "95dfe83ed2d7ae3f580868b5f2e844e32f36b16ca1a77b6de83db582d67d3758",
+      "species": "Pol130_LiCl",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.1000338417943567e-09,
+      "job": "25714429_110",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "dc20a65a3562a3771c2d066528f8642e595a34c3d8af9ce75a0b55cc2d352938",
+      "species": "Pol130_LiCl2+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.1000232663936913e-09,
+      "job": "25714429_111",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "07cc8766187b7cf0faa92798a5bc81f6228b87ae52ad509f860ee712baca2c6d",
+      "species": "Pol130_LiCl2-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.0000462680181954e-09,
+      "job": "25714429_112",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "77d20acc14d5b99ef303dcb907efbe605d099ba3868b77268126d6976fe5f8fe",
+      "species": "Pol130_Mg2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.7999151320254896e-09,
+      "job": "25714429_113",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "7a9a2d9af3f84211830432f98d50b52a98d3ba9ea8504d62e1434aa702ad6516",
+      "species": "Pol130_Mg20+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.7999151320254896e-09,
+      "job": "25714429_114",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "e6cb1c4ebad78fbec3ff424c1b4e0f478f2bad901b481e666a99a248a5610bee",
+      "species": "Pol130_Mg20-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.000000330961484e-10,
+      "job": "25714429_115",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999439624929e-11,
+      "publication_sha256": "10a6b75cde67f92812daeec58f12fb840bebcd5f3a32140c22f26289f1e9c9bf",
+      "species": "Pol130_N",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.6000072378119512e-09,
+      "job": "25714429_116",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "b7bf238e833bb9507171ab0566174300e0bc8c39dd97c55ad2e744a87b9871bc",
+      "species": "Pol130_N0+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.6000072378119512e-09,
+      "job": "25714429_117",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "dd1a8ad69367e7627c418b368fa2b2396f8c528031653e606aab645d0f6130fc",
+      "species": "Pol130_N0-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.7000518204877153e-09,
+      "job": "25714429_118",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "25ec4d9cd4c5aabfce5e33f4c55f36c38d89df987961dc49eac4e53af339a827",
+      "species": "Pol130_Na2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.1000338417943567e-09,
+      "job": "25714429_119",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "d8a42364fe812ecc17d4a89f04213a62195318dde708e2454129421ce95303a3",
+      "species": "Pol130_Na20+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.1000338417943567e-09,
+      "job": "25714429_120",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "fddf2c04c5122d48e0b44c0e86906ed09643b3dcb2a3c226d8ab1435315cef0e",
+      "species": "Pol130_Na20-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.70000555246952e-09,
+      "job": "25714429_121",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "981ba4339996ae90b4a0c222611629d987a7fd9e6ff16185d34cd6335d790f9a",
+      "species": "Pol130_NaH",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.699984401668189e-09,
+      "job": "25714429_122",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "8a16d5372d7762c6d5a9b550a65b2fac026d881cfd5359947da3279886bf1f12",
+      "species": "Pol130_NaH2+",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.3000089893466793e-09,
+      "job": "25714429_123",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0,
+      "publication_sha256": "8e85648f9552e1ec10bddc0a28e58fdd289dfe32877400aeb3fabe058867e057",
+      "species": "Pol130_NaH2-",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.7000003061393727e-09,
+      "job": "25714429_124",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "3c2efe239333949290416ca2fb9c34dee053e46e3e84887dd3810f41d05c8fe8",
+      "species": "RG10N_He",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 5.000001301880275e-09,
+      "job": "25714429_125",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "73531a48d720594d25b36edf15e602d7033763987a17c27a4d4e9a0c72f7fcf1",
+      "species": "RG10N_HeHe_1p588",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.3000002730432243e-09,
+      "job": "25714429_126",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "c4a01ad3f414491e8917b9a49163a9ddd1637d7b327cf176161e05e065afe5e4",
+      "species": "RG10N_HeHe_2p646",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.000007436388842e-09,
+      "job": "25714429_127",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999439624929e-11,
+      "publication_sha256": "a0d841a75b766d7ba3bece4088b3342a83f24669f91304d9083061996bad2861",
+      "species": "RSE43_E1",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -9.000018508231733e-10,
+      "job": "25714429_128",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "f3d0a8daaee494f4c3a4455e9578dbec0422239628a3bc05c422d2189b3465f8",
+      "species": "RSE43_E20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.699991507095547e-09,
+      "job": "25714429_129",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000013351432e-10,
+      "publication_sha256": "85cf6ba19af8bb9a8bfa5e81d1a88bc8fd02a6afb98e2e48e6a4e2bc9d0847df",
+      "species": "RSE43_P1",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.3000089893466793e-09,
+      "job": "25714429_130",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.000000082740371e-10,
+      "publication_sha256": "3130c2f9575bec40ac246fac0dc393253cb92477a4216d2657ad36310d5f524c",
+      "species": "RSE43_P20",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -4.7001549319247715e-09,
+      "job": "25714431_1",
+      "passed": true,
+      "plan_sha256": "87c2df1c40e0a1baf9b735566a190b3d9765c89306c505bf2f75782997422203",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "4c3ca6900c149f97d06402662e73572f2d7837e0ac3cbcda11a142bff1707eb6",
+      "species": "TMB31_C1",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.800106813083403e-09,
+      "job": "25714431_2",
+      "passed": true,
+      "plan_sha256": "87c2df1c40e0a1baf9b735566a190b3d9765c89306c505bf2f75782997422203",
+      "pt2_identity_error_hartree": 1.000000082740371e-10,
+      "publication_sha256": "9ccfbb281bdd98c40d5e71e99b61becc1df5d2d1f771277269dace80adf726f8",
+      "species": "TMB31_T1",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.4999841368990019e-09,
+      "job": "25714429_131",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999439624929e-11,
+      "publication_sha256": "3d4d5651f57abc024d23b099770e68394e8eff94ed34f796338442008bef371a",
+      "species": "TMD12_Co",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.399918568902649e-09,
+      "job": "25714429_132",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999998051846148e-11,
+      "publication_sha256": "37488188e4c2e337bd91be5d21c8bd60fd044708575b6c104581ecc2eaa6c44e",
+      "species": "TMD21_CoH",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 3.8999985463306075e-09,
+      "job": "25714429_133",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "3c9c1936898e683652d1eda354e70e1b090611fd47c0e857f243fb5caea1e0ca",
+      "species": "W4-17_al",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.1999645721516572e-09,
+      "job": "25714429_134",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.000000013351432e-10,
+      "publication_sha256": "b7c85f0eeac8cc80e5260d74b234c65d804409e2ffc573bc7c6279167bf120e5",
+      "species": "W4-17_alh",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.70000555246952e-09,
+      "job": "25714429_135",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 3.469446951953614e-18,
+      "publication_sha256": "e399b3ae67cf6aa17256f1be497f6a8e2182624e6ca2d893c2b11fd93e02dd64",
+      "species": "W4-17_bh",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.100016326447076e-09,
+      "job": "25714429_136",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.000000082740371e-10,
+      "publication_sha256": "bf524a732f0eb825b6f9241ef282f5a3634a81cf57b2de30071ad3fcc8c8448d",
+      "species": "W4-17_bn3pi",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.500002148688509e-09,
+      "job": "25714429_137",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "554996b52663cb9e3734bc247aa684bf9ec23f632be8338a9629f5a81362b8a9",
+      "species": "W4-17_ch",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.100012690993026e-09,
+      "job": "25714429_138",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 6.938893903907228e-18,
+      "publication_sha256": "78adf05de9142f100befc86f8fe79213772f3f6aba3619503faa4d92094e5ee2",
+      "species": "W4-17_cl",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -2.999911430379143e-10,
+      "job": "25714429_139",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.3877787807814457e-17,
+      "publication_sha256": "4f5875da1f4a066f9c4c0b01f0f9612fb5cb6908204047c808e8e0210a607e56",
+      "species": "W4-17_cn",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.40000383403094e-09,
+      "job": "25714429_140",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.3877787807814457e-17,
+      "publication_sha256": "ff74609b8c7cc20ee447bb405f84a0f5c3eb15df0184a414b769504ff69842a3",
+      "species": "W4-17_f",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 2.00003569261753e-09,
+      "job": "25714429_141",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.3877787807814457e-17,
+      "publication_sha256": "cf067afdbcce155e3ea95acc1425b75c1cd6d039e3030c04d22974c17d901929",
+      "species": "W4-17_hcl",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.099991209230211e-09,
+      "job": "25714429_142",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "9bb84e4809050b3383ebaa4dfad30325a9f35516ea99e93559779fe974fd0111",
+      "species": "W4-17_hf",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -7.000267032708507e-10,
+      "job": "25714429_143",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "1217bb4bf975339545503d954de73bcfa67f71f0f3da9be6db53473bd92bfc74",
+      "species": "W4-17_hs",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.3999965631228406e-09,
+      "job": "25714429_144",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "ebd4ff2ca7e822bda88d44cfd6f421d6137dd72edaa9a3538f7affc953281839",
+      "species": "W4-17_n",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 1.0000036354540498e-09,
+      "job": "25714429_145",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000082740371e-10,
+      "publication_sha256": "31c0ce31591fac72a352350d722014c3b316feedc46a51fbef37867e03dc5678",
+      "species": "W4-17_n2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 8.000071716196544e-10,
+      "job": "25714429_146",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -6.938893903907228e-18,
+      "publication_sha256": "0ebdf59915fee7a5f489fae22681eb67a516701d86c2c1cfc06d035ff35fe8b3",
+      "species": "W4-17_nh",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.3000018839193217e-09,
+      "job": "25714429_147",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 0.0,
+      "publication_sha256": "7dfd7ac4df84ec3a3963c31cd27fbd90bf770744ce304ce4de767e9a445b57e1",
+      "species": "W4-17_nh2",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.600011038746743e-09,
+      "job": "25714429_148",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000013351432e-10,
+      "publication_sha256": "655b99dbbc60f78faea558c2ac25fce1bd08b37d7db0cd7e9b5c7abafbe3596e",
+      "species": "W4-17_o",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.200003900223237e-09,
+      "job": "25714429_149",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.3877787807814457e-17,
+      "publication_sha256": "648f71a94e45adc9bd54b5a2755524b70c4f4c0527ece979d341aeaf83e007dd",
+      "species": "W4-17_oh",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": 4.699984401668189e-09,
+      "job": "25714429_150",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": 1.000000013351432e-10,
+      "publication_sha256": "86f589ae52732b69394c112780f126f0cf83f69006b7708f461d3ace0013c848",
+      "species": "W4-17_s",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -1.3000089893466793e-09,
+      "job": "25714429_151",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -9.999999786569624e-11,
+      "publication_sha256": "e8d6ba461568faf814b57f01a86731ac9105aa561e29df8b99908e3bcb0321e7",
+      "species": "W4-17_si",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    },
+    {
+      "finite": true,
+      "grid_shapes": {
+        "75302": [
+          292
+        ],
+        "99590": [
+          292
+        ]
+      },
+      "hf_error_hartree": -3.800039394263877e-09,
+      "job": "25714429_152",
+      "passed": true,
+      "plan_sha256": "8e3a4f9ce7f8852a47f4ddcffcfd7a66c37e43145e2ba9521bc6486441b59263",
+      "pt2_identity_error_hartree": -1.000000013351432e-10,
+      "publication_sha256": "b2b69031eefc3e6bacb11d2b2626981a16557e0873310278359f6b9bb004e34e",
+      "species": "W4-17_sih",
+      "stage_count": 6,
+      "vector_shape": [
+        292
+      ]
+    }
+  ],
+  "max_abs_hf_error_hartree": 5.000001301880275e-09,
+  "note": "New post-job process using existing validator; no runtime changes or native reruns.",
+  "passed": true,
+  "total": 166,
+  "total_stages": 994
+}

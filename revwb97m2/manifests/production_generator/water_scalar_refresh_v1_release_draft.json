@@ -1,0 +1,17 @@
+{
+  "commit": "USER_COMMIT_REQUIRED",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "max_concurrent_jobs": null,
+  "plan_sha256": "68db9c2bc09cc3f26c88874970e687b37e3c35b0ca774e4aaaae56d83cfe893a",
+  "resource_review_passed": false,
+  "scheduler_routes": {
+    "11_H2O_TA13": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    }
+  },
+  "schema_version": 1,
+  "user_approved_submission": false,
+  "water_contract_sha256": "0fd5890dd71525fdae3201fe4b78667e58213b0a2b9355cff88f6a8549f30512"
+}

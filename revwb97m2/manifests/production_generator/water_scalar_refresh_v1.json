@@ -1,0 +1,48 @@
+{
+  "base_plan_sha256": "68db9c2bc09cc3f26c88874970e687b37e3c35b0ca774e4aaaae56d83cfe893a",
+  "code_hashes": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/refresh_water_scalar_v1.py": "82fc8c1120b7ae4c1c5ef60e4e664e2fd03c14de7ae64383d008bfc916826522",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_water_scalar_refresh_v1.sh": "0d2610d1bd8b674f46c717211364a8b8607ee10acb7ccced346228f23c572a1e"
+  },
+  "native_stages": [
+    "scalar"
+  ],
+  "note": "Base plan pins all derived inputs; this contract executes scalar only. Column289 refreshed, other291 unchanged.",
+  "reuse_hashes": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/assembly/feature_vector_292.npy": "780c6fff72ebde299c7bfb4e71291a218007652d531c8bc66021168413234d82",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/250974/QCHEM_INTEGRATED_DV_COMPLETE": "2a533c02b3de057803b4597f533a62d01a964ba14e02c35a06f2a74e266ee3df",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/250974/integrated_dv_180x96.npy": "90077a2deaad4945ad34ed1ebddd10285b96a30bd5fd9dcf250e9311a8fda52f",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/250974/qchem_integrated_dv_manifest.json": "c886efc89d8e7e494d441c4e55b1135b771aeb4eb33d8ccf17ecf4db37a4079c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/250974/selected_features_3x96.npy": "caa0741f7562efcd01f6de2e1d3d13f527b4257b0c9688785af905c28cd3ed2a",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/250974/semilocal_features_288.npy": "0a2f64c9db704ae3a60c30b09c1398aba463c6d5822bc3713adf46d29e55ee42",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/250974/validation.json": "6a7a78267b991d83ba9b78dcefc659a4c59392fc3474507ce83e24909f7b1c51",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/75302/QCHEM_INTEGRATED_DV_COMPLETE": "1916b9d2890610bbd99aef254e3a54bfadae56927790a8abafdb98d672482015",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/75302/integrated_dv_180x96.npy": "e81a4e63421a6bf63a88b0ff1a9f2e901eaf8ab51c494c5513e5f1d63399d19a",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/75302/qchem_integrated_dv_manifest.json": "4b6b46490f319e0870c5bcf683b813574c44c100f758a5a5c0a47091ef179baf",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/75302/selected_features_3x96.npy": "551b88f510ca1a47325ab428aefdb17e1d6ab6e6c4b8604e0f78828227ebe693",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/75302/semilocal_features_288.npy": "2129d1895bd3dccc286e41e34c3e28e535e57471c9b8a3d6a06bad8bd74d10f3",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/75302/validation.json": "0a26e40fb58868499ba340f3899cc719142c4c729e05cfb74ce2f1310f4a2aa8",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/99590/QCHEM_INTEGRATED_DV_COMPLETE": "38bb002490c6357e69dd3160890ee277d12cec3a2d82c3589b015f120b818748",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/99590/integrated_dv_180x96.npy": "fed04fc996fea89384c469502fba3c66b7f075844cf450ab4dd53ae1b5d6eaa6",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/99590/qchem_integrated_dv_manifest.json": "acc98b745ba17024f9e7098321e7f40b0a51986c9919230969d8a3d1dd0f0b49",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/99590/selected_features_3x96.npy": "7b5dfe1182079c53ce0bacacf315581220d344dab6f47cc1f9186343216f9a06",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/99590/semilocal_features_288.npy": "4040026dc8fcd528a02fa53c38b1fd8a87edc904263150380442e254c45be189",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/q4/99590/validation.json": "9818f8ca4d6a0b4fddf49e1440383f431014a11ad0131383825d30272ad2af1a",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/scalar/PREPARED.json": "8a438b08f5e2e7ec03eaf83e9ef48f27b08b649377dec7dbf7e124c75a01abb8",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/scalar/input.step9.in": "56e1194ffe698898f828198f657f3fe9aa45ab079de3c6c7a7cdbb26097d90ed",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/scalar/published/scalar_manifest.json": "386cc502fbdf1fa9aa4b59e64350fc5d51c655d060cb69f71dc3cf5f9839c471",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/scalar/qchem.out": "81c8d1e38acc5ce9127455985c7a5ac10bd9b21bf2e4c1c341ac1d0534d3138c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step13/fresh_species_v1/gscdb137/11_H2O_TA13/gateway_work/scalar/qchem.pt2.out": "d91126fb1bc94716885a981539eb445f83280517c5f4e0853fd9dfcaee5dbbb8",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/fixed_energy_gateway_v1/11_H2O_TA13/PREPARED.json": "8acd614184d9512213d0eb666100dc891bbe9f666adcf59531d83b0965d7bf57",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/fixed_energy_gateway_v1/11_H2O_TA13/fixed_energy.json": "b652030fbb5657c5f0b4da13568b8955176b10e40025d30948e1ab20327bd084",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/fixed_energy_gateway_v1/11_H2O_TA13/input.fixed.in": "9d2120c0af22019710cf0a73225ea9d6d1d72dbc9394871a0efc337c83dbdfe8",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/step14/fixed_energy_gateway_v1/11_H2O_TA13/qchem.out": "d8045261b3cf7d9b3f0c72b277482eeb23e16c300f95b6b3dfcb6e8fb847a7df"
+  },
+  "reused_stages": [
+    "250974",
+    "99590",
+    "75302",
+    "pt2",
+    "fixed"
+  ]
+}

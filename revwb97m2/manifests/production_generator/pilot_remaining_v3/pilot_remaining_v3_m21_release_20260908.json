@@ -1,0 +1,53 @@
+{
+  "commit": "4f1f87a19a6eb12ff082c6a0dd3e4ba3eb61643b",
+  "concurrency_enforcement": "--array=0-7; no percent throttle",
+  "corrected_evidence_sha256": "56979840d120d03bfc69853b32ad8857628c9deb6d2bd878aab1f2c6d556b7e9",
+  "max_concurrent_jobs": null,
+  "note": "User confirmed commit and requested submission. Live September8 partition/account/storage/duplicate review passed. No eight-task cap; no lr_lowprio.",
+  "plan_sha256": "b88650aa00c87023c2617413da368fafac32cb99c0ad18332d2c2d677eb7da3a",
+  "resource_review_passed": true,
+  "scheduler_routes": {
+    "11_Isomer1_Styrene45": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "12_Isomer2_Styrene45": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "4192_water6BAG_Shields38": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BHPERI_04ts": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "BSR36_r1": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MB16-43_09": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MOR07_ed01": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    },
+    "MOR25_pr01": {
+      "account": "lr_qchem",
+      "partition": "cm1",
+      "qos": "condo_qchem"
+    }
+  },
+  "schema_version": 1,
+  "user_approved_submission": true
+}

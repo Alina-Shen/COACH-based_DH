@@ -1,0 +1,94 @@
+{
+  "commit": "4f1f87a19a6eb12ff082c6a0dd3e4ba3eb61643b",
+  "time_utc": "2026-09-09T00:14:52.089284+00:00",
+  "jobs": [
+    {
+      "memory_gib": 14,
+      "species_count": 153,
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=r2_pilot_m14",
+        "--array=0-152",
+        "--cpus-per-task=8",
+        "--mem=14G",
+        "--time=72:00:00",
+        "--partition=cm1",
+        "--account=lr_qchem",
+        "--qos=condo_qchem",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m14_release_20260908.json",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m14.json"
+      ],
+      "returncode": 0,
+      "stdout": "25714429",
+      "stderr": ""
+    },
+    {
+      "memory_gib": 21,
+      "species_count": 8,
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=r2_pilot_m21",
+        "--array=0-7",
+        "--cpus-per-task=8",
+        "--mem=21G",
+        "--time=72:00:00",
+        "--partition=cm1",
+        "--account=lr_qchem",
+        "--qos=condo_qchem",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m21_release_20260908.json",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m21.json"
+      ],
+      "returncode": 0,
+      "stdout": "25714430",
+      "stderr": ""
+    },
+    {
+      "memory_gib": 35,
+      "species_count": 3,
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=r2_pilot_m35",
+        "--array=0-2",
+        "--cpus-per-task=8",
+        "--mem=35G",
+        "--time=72:00:00",
+        "--partition=cm1",
+        "--account=lr_qchem",
+        "--qos=condo_qchem",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m35_release_20260908.json",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m35.json"
+      ],
+      "returncode": 0,
+      "stdout": "25714431",
+      "stderr": ""
+    },
+    {
+      "memory_gib": 227,
+      "species_count": 2,
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=r2_pilot_m227",
+        "--array=0-1",
+        "--cpus-per-task=16",
+        "--mem=227G",
+        "--time=336:00:00",
+        "--partition=lr8",
+        "--account=lr_mhg2",
+        "--qos=mhg2_lr8_normal",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/slurm/run_training_features_array_v3.sh",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m227_release_20260908.json",
+        "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/production_generator/pilot_remaining_v3/pilot_remaining_v3_m227.json"
+      ],
+      "returncode": 0,
+      "stdout": "25714463",
+      "stderr": ""
+    }
+  ]
+}
