@@ -1,0 +1,15 @@
+{
+  "commit": "USER_PRETEST_COMMIT_REQUIRED",
+  "note": "Scope approved; live resource review and passing committed test evidence required before release.",
+  "plan_sha256": "360342bbcec82426b2bcb0e84bf27cafb9cceb3649b1777648413da2c20ad286",
+  "resource_review_passed": false,
+  "route": {
+    "account": "lr_qchem",
+    "partition": "cm1",
+    "qos": "condo_qchem"
+  },
+  "test_report": null,
+  "test_report_sha256": null,
+  "tests_passed": false,
+  "user_approved_submission": false
+}

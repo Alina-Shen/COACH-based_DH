@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "commit": "6c50dd65d9628f4c44a6c78d675e615c95fcf900",
+  "validation_sha256": "4e22fc55ed9c78609865463c5e08fdef0283abc07d07112dfb508b3fe4791f18",
+  "matrix_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/matrices/pilot100_v1",
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "entries": 100,
+  "features": 292,
+  "species": 224,
+  "groups": 49,
+  "grid_selected_rows": 100,
+  "array_bytes": 704000,
+  "weight_min": 0.02,
+  "weight_max": 10000.0,
+  "fitter_manifest_exists": false,
+  "note": "Read-only numerical/provenance preflight and existing row-selector check. No Gurobi environment, solve, WLS contact or submission. Adapter publication and bounded orchestration remain."
+}
