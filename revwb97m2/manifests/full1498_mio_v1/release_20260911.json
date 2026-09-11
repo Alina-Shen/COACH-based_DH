@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "0e1e3d74949d1852daa18479ec7a425493ee5c792964bced51fd4738fd035b1b",
+  "commit": "ccfcad8a2d4f0c748d492cf8a98bdbe3451f0ae2",
+  "user_approved_submission": true,
+  "resource_review_passed": true,
+  "tests_passed": true,
+  "test_report": "revwb97m2/results/2026-09-11-full1498-mio-tests.json",
+  "test_report_sha256": "cfde07e13aeb4a69eae1a9c5ef273cb51dc1501326140f972783d3327ea76401",
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  },
+  "resource_review": "cm1 idle48CPU nodes with241732MiB;32GiB request fits. Valid association and unlimited partition walltime; sbatch test-only immediate start prediction. Empty user queue. No lr_lowprio.",
+  "approval": "User approved bounded scope and requested post-commit tests/readback/resource review/release; not bulk fitting."
+}

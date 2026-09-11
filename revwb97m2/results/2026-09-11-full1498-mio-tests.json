@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "commit": "ccfcad8a2d4f0c748d492cf8a98bdbe3451f0ae2",
+  "plan_sha256": "0e1e3d74949d1852daa18479ec7a425493ee5c792964bced51fd4738fd035b1b",
+  "pytest": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 dh/python -m pytest -q revwb97m2/tests",
+    "passed": 267,
+    "seconds": 13.07
+  },
+  "preflight_sha256": "c403319b2d910e0d7caa8d36d65705fcb7ba5fb2c2b44b9d110acdab7d18a888",
+  "preflight_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/results/2026-09-11-full1498-mio-preflight.json",
+  "frozen_check_passed": true,
+  "synthetic_compute_control": "runs inside bounded job before real solves"
+}

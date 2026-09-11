@@ -1,0 +1,71 @@
+{
+  "job": "25778194",
+  "evidence_checks_passed": true,
+  "bounded_workflow_passed": false,
+  "failure": "First unconstrained-grid K14 solve TIME_LIMIT with zero incumbents; fail-stop prevented remaining five solves.",
+  "result": {
+    "passed": false,
+    "status": 9,
+    "solution_count": 0,
+    "runtime_seconds": 600.0455839633942,
+    "artifacts": {}
+  },
+  "telemetry": {
+    "gurobi_version": [
+      13,
+      0,
+      3
+    ],
+    "parameters": {
+      "Threads": 16,
+      "TimeLimit": 600.0,
+      "Seed": 0,
+      "FeasibilityTol": 1e-09,
+      "IntFeasTol": 1e-09,
+      "MIPGap": 0.0001,
+      "MIPGapAbs": 1e-10
+    },
+    "node_count": 26.0,
+    "status": 9,
+    "solution_count": 0,
+    "runtime_seconds": 600.0455839633942
+  },
+  "synthetic_passed": true,
+  "accounting": {
+    "state": "FAILED",
+    "exit_code": "1:0",
+    "elapsed": "00:10:55",
+    "max_rss_kib": 1168396,
+    "end_pdt": "2026-09-11T00:22:08"
+  },
+  "analytic_feasibility_check": {
+    "coefficients": "All semilocal0; SR-HF1; VV10/PT2/D4 each1e-8; select exactly four scalar features.",
+    "audit": {
+      "checks": {
+        "finite": true,
+        "coefficient_bound": true,
+        "ueg": true,
+        "support_budget": true,
+        "unselected_zero": true,
+        "mandatory_selected": true,
+        "sr_bounds": true,
+        "independent_scalar_bounds": true
+      },
+      "passed": true,
+      "weighted_sse_hartree2": 32.19152576314622,
+      "ridge_penalty_hartree2": 1e-10,
+      "regularized_objective_hartree2": 32.19152576324622
+    },
+    "note": "Read-only independent algebraic feasibility check; not an optimizer result or executed warm start. Does not establish why Gurobi did not find an incumbent."
+  },
+  "limitations": "No bound/gap/progress history saved for zero-incumbent branch; internal solver cause unresolved. No full-data constrained/restart result exists.",
+  "authorities": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/fitting/full1498_mio_v1/25778194/identity.json": "ef82141060962a58c8a145c1b2adeac31d1fd3884ffdb245d5df35ad107cb7b1",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/fitting/full1498_mio_v1/25778194/failure.json": "e3b24912f871a98a5a4be2b4e5b8e0125df8c910e234f0da9218f96fde7c2b2a",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/fitting/full1498_mio_v1/25778194/discovery14/contract.json": "70b142008d47ee71f5e8322d1c5a4f51f315e6e1cc656b2c4883aaba58c64cf4",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/fitting/full1498_mio_v1/25778194/discovery14/result.json": "af031c51361f35b13967f819a8b42b543f60d630b108e43077049da1862a5088",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/fitting/full1498_mio_v1/25778194/discovery14/telemetry.json": "ef4069e1972623845529dfc061819b289c40c9fb3debd4b14f74461f1c3f98cb",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/matrices/full1498_v1/inputs.json": "8d9f0ddd0282598f05aa25f22b54c8b361f949453c438d396c3519e00817242e"
+  },
+  "scope": "Read-only artifact and full matrix checks; no solver/license initialization, implementation edits or resubmission."
+}

@@ -1,0 +1,10 @@
+{
+  "commit": null,
+  "plan_sha256": "a6c586f63a16008ad62f3ae2ae6eedd350caa95ee5c677898810b0eb64256ae7",
+  "resource_review_passed": false,
+  "route": null,
+  "test_report": null,
+  "test_report_sha256": null,
+  "tests_passed": false,
+  "user_approved_submission": false
+}
