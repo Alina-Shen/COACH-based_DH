@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "89ad5e0798368b451a2525e0f03ff40a4354a92a2c14d2b373d6d452a8bcb438",
+  "commit": "a74b2863da4257d384f77a7187123601543bab80",
+  "user_approved_submission": true,
+  "tests_passed": true,
+  "resource_review_passed": true,
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  },
+  "test_report": "revwb97m2/results/2026-09-11-continuous-k14-tests.json",
+  "test_report_sha256": "256f97183f4bf1df927c6ff1ea745670dfabd156462590a87128a1a7858a725b",
+  "resource_review": "cm1 up, five idle241732MiB nodes, valid lr_qchem/condo_qchem. User queue empty.32GiB fits; dry-run immediate16CPU placement. No lr_lowprio.",
+  "scope": "Two approved continuous subproblems,600s each,16CPU/32GiB/90min. No MIO or bulk authorization."
+}

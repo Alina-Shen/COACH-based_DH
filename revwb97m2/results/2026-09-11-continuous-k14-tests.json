@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "commit": "a74b2863da4257d384f77a7187123601543bab80",
+  "plan_sha256": "89ad5e0798368b451a2525e0f03ff40a4354a92a2c14d2b373d6d452a8bcb438",
+  "tests": 288,
+  "seconds": 15.31,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 dh/python -m pytest -q revwb97m2/tests",
+  "preflight_sha256": "90dc3efb19f13d582569d692c49dc006351a23adac0ae9b42dd557933bc989dc"
+}

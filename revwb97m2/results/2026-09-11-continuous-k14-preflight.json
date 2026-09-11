@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "commit": "a74b2863da4257d384f77a7187123601543bab80",
+  "plan_sha256": "89ad5e0798368b451a2525e0f03ff40a4354a92a2c14d2b373d6d452a8bcb438",
+  "matrix_sha256": "493a6a465ea71539e291501645d6a186ffd86f1bd597174035d6fe7c1675eef8",
+  "input_sha256": "8d9f0ddd0282598f05aa25f22b54c8b361f949453c438d396c3519e00817242e",
+  "audits": {
+    "fixed_scalars": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "selection_bounds": true,
+        "support_budget": true,
+        "mandatory": true,
+        "linkage": true,
+        "coefficient_bounds": true,
+        "ueg": true,
+        "sr_bounds": true,
+        "scalar_bounds": true,
+        "residual_identity": true,
+        "fixed_support": true
+      },
+      "weighted_sse": 32.19152576314622,
+      "ridge": 1e-10,
+      "objective": 32.19152576324622,
+      "fractional_selection_count": 0,
+      "usable_as_mio_incumbent": false,
+      "note": "No automatic promotion: relaxed solution may be fractional; fixed support needs separate MIO-start audit/import."
+    },
+    "relaxed_k14": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "selection_bounds": true,
+        "support_budget": true,
+        "mandatory": true,
+        "linkage": true,
+        "coefficient_bounds": true,
+        "ueg": true,
+        "sr_bounds": true,
+        "scalar_bounds": true,
+        "residual_identity": true
+      },
+      "weighted_sse": 32.19152576314622,
+      "ridge": 1e-10,
+      "objective": 32.19152576324622,
+      "fractional_selection_count": 0,
+      "usable_as_mio_incumbent": false,
+      "note": "No automatic promotion: relaxed solution may be fractional; fixed support needs separate MIO-start audit/import."
+    }
+  },
+  "scope": "Read-only matrix and analytic feasibility checks for both subproblems; no solver/license."
+}
