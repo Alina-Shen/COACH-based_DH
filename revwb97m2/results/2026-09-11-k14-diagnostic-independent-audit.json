@@ -1,0 +1,109 @@
+{
+  "job": "25778785",
+  "readback_passed": true,
+  "diagnostic_passed": true,
+  "useful_fit_demonstrated": false,
+  "accounting": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:10:21",
+    "max_rss_kib": 2754236,
+    "end_pdt": "2026-09-11T00:50:18"
+  },
+  "result": {
+    "passed": true,
+    "status": 9,
+    "solution_count": 1,
+    "runtime_seconds": 600.0869379043579,
+    "nodes": 96.0,
+    "bound": {
+      "value": 3e-26,
+      "state": "finite",
+      "raw_sentinel": null
+    },
+    "callback_errors": [],
+    "start_supplied": true,
+    "start_is_not_automatically_an_incumbent": true,
+    "objective": 32.19152576324623,
+    "audit": {
+      "checks": {
+        "finite": true,
+        "coefficient_bound": true,
+        "ueg": true,
+        "support_budget": true,
+        "unselected_zero": true,
+        "mandatory_selected": true,
+        "sr_bounds": true,
+        "independent_scalar_bounds": true
+      },
+      "passed": true,
+      "weighted_sse_hartree2": 32.19152576314622,
+      "ridge_penalty_hartree2": 1e-10,
+      "regularized_objective_hartree2": 32.19152576324622
+    },
+    "gaps": {
+      "gap": 1.0,
+      "gap_state": "finite",
+      "gap_absolute": 32.19152576324623,
+      "gap_recomputed": 1.0,
+      "gap_recomputed_state": "finite",
+      "gap_consistent": true
+    },
+    "grid_max_kcal_mol": {
+      "99590": 0.0,
+      "75302": 0.0
+    }
+  },
+  "coefficients_equal_start": true,
+  "selected_equal_start": true,
+  "max_coefficient_change": 0.0,
+  "selected_count": 4,
+  "event_counts": {
+    "solution_event": 1,
+    "start_message": 1,
+    "presolve": 1,
+    "mip": 14
+  },
+  "sampled_incumbents": [
+    32.19152576324623
+  ],
+  "sampled_bounds": [
+    3e-26
+  ],
+  "last_mip": {
+    "event": "mip",
+    "seconds": 600.0618009567261,
+    "values": {
+      "MIP_OBJBST": {
+        "value": 32.19152576324623,
+        "state": "finite",
+        "raw_sentinel": null
+      },
+      "MIP_OBJBND": {
+        "value": 3e-26,
+        "state": "finite",
+        "raw_sentinel": null
+      },
+      "MIP_NODCNT": {
+        "value": 52.0,
+        "state": "finite",
+        "raw_sentinel": null
+      },
+      "MIP_SOLCNT": {
+        "value": 1.0,
+        "state": "finite",
+        "raw_sentinel": null
+      },
+      "MIP_ITRCNT": {
+        "value": 1008702.0,
+        "state": "finite",
+        "raw_sentinel": null
+      }
+    }
+  },
+  "start_messages": [
+    "Loaded user MIP start with objective 32.1915"
+  ],
+  "publication_sha256": "f4a86aa1430dd707346e7c6ae7f3552ba5d14ad2c3f615ea507c548e3a0710e4",
+  "scope": "Read-only independent diagnostic CLI validation passed separately; this summary compares saved start/final arrays and progress, no solve."
+}

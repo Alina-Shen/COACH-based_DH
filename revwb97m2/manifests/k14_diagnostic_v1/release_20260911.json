@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "a6c586f63a16008ad62f3ae2ae6eedd350caa95ee5c677898810b0eb64256ae7",
+  "commit": "04ef24cbc10456250d6c3ff2fe43a4f7bbf9abab",
+  "user_approved_submission": true,
+  "tests_passed": true,
+  "resource_review_passed": true,
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  },
+  "test_report": "revwb97m2/results/2026-09-11-k14-diagnostic-tests.json",
+  "test_report_sha256": "13e9b37d47b8db5d8c841eeb92eb16810cf273e3d6e09919d0f6d80c514c918b",
+  "resource_review": "cm1 five idle48CPU/241732MiB nodes; valid association and unlimited partition time;32GiB fits. User queue empty. Dry-run immediate placement. No lr_lowprio.",
+  "scope": "Approved single K14 diagnostic600s/16CPU/32GiB/90min; no bulk or automatic retries."
+}

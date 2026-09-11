@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "commit": "04ef24cbc10456250d6c3ff2fe43a4f7bbf9abab",
+  "plan_sha256": "a6c586f63a16008ad62f3ae2ae6eedd350caa95ee5c677898810b0eb64256ae7",
+  "matrix_sha256": "493a6a465ea71539e291501645d6a186ffd86f1bd597174035d6fe7c1675eef8",
+  "input_sha256": "8d9f0ddd0282598f05aa25f22b54c8b361f949453c438d396c3519e00817242e",
+  "seed_audit": {
+    "checks": {
+      "finite": true,
+      "coefficient_bound": true,
+      "ueg": true,
+      "support_budget": true,
+      "unselected_zero": true,
+      "mandatory_selected": true,
+      "sr_bounds": true,
+      "independent_scalar_bounds": true
+    },
+    "passed": true,
+    "weighted_sse_hartree2": 32.19152576314622,
+    "ridge_penalty_hartree2": 1e-10,
+    "regularized_objective_hartree2": 32.19152576324622
+  },
+  "residual_shape": [
+    1498
+  ],
+  "selected": 4,
+  "scope": "Read-only full matrix and analytic start checks; no optimizer/license initialization."
+}
