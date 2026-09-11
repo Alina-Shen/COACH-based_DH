@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "commit": "855928a17e0bf6178781fd98e5f8ad2c91398604",
+  "plan_sha256": "c8fb963f9e4519ba22ff2ca9c1e436cc2cd83022008effc43b4e7a091e6bc9ac",
+  "tests": 338,
+  "seconds": 15.24,
+  "command": "BLAS/OMP/MKL1 dh/python -m pytest -q revwb97m2/tests",
+  "preflight_sha256": "796c7e4d53fc3fab3d34e928eaad09f5597820fe3002ccd1dd0e87b0a60eae04",
+  "compute_model_build_sha256": "018069d32eb424a3fc3338228b0d07f8c970501d90f141da10cbb719e670be9b",
+  "compute_model_build_job": "25787291"
+}

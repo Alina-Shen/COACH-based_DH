@@ -1,0 +1,15 @@
+schema_version: 1
+stage: full1498_expanded_validation
+base_scientific_specification: revwb97m2/configs/scientific_spec.yaml
+base_scientific_specification_sha256: 32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc
+overrides:
+  objective_representation: expanded_quadratic
+  objective_normalization: full_sse
+  selection: big_M
+  seconds_per_solve: 600
+  threads: 16
+budgets: [14, 80]
+grid: '99590'
+full_training_grid_advancement_gate: true
+SOS1: deferred
+bulk_authorized: false

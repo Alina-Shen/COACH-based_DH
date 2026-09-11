@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "job": "25787291",
+  "variables": 584,
+  "constraints": 590,
+  "binaries": 292,
+  "sos": 0,
+  "unchanged_nonresidual_rows": 590,
+  "expanded_code_sha256": "c0c2acf3d4dfc7e93b7aaac214df27099a3941abf158aba5f81247c9430f8d9f",
+  "scope": "Actual full1498 model construction only, no optimize call."
+}

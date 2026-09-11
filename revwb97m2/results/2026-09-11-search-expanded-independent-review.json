@@ -1,0 +1,260 @@
+{
+  "provenance_and_readback_passed": true,
+  "summaries": [
+    {
+      "job": "25787336",
+      "case": "qp_dual",
+      "status": 12,
+      "saved_passed": false
+    },
+    {
+      "job": "25787336",
+      "case": "qp_barrier",
+      "status": 2,
+      "saved_passed": true,
+      "audit_passed": true,
+      "objective": 1.1272947699260105,
+      "solver_objective": 1.12729476992599,
+      "selected": 8,
+      "semilocal_nonzero": 54,
+      "scalars": [
+        8.192e-27,
+        0.38921996166159306,
+        1e-08,
+        0.99999999
+      ],
+      "ueg_error": 3.9968028886505635e-15,
+      "residual_error": 1.6649897606468844e-13,
+      "residual_source": "solver",
+      "grid_max_kcal_mol": {
+        "99590": 2.499851188954732,
+        "75302": 13.062358080789911
+      }
+    },
+    {
+      "job": "25787336",
+      "case": "root_auto",
+      "status": 8,
+      "saved_passed": true,
+      "audit_passed": true,
+      "objective": 4.429743141174103,
+      "solver_objective": 4.4297431411741,
+      "selected": 4,
+      "semilocal_nonzero": 0,
+      "scalars": [
+        1.0,
+        2.0882753976524575e-08,
+        0.7815442682950514,
+        0.9999999787409273
+      ],
+      "ueg_error": 0.0,
+      "residual_error": 0.0,
+      "residual_source": "solver",
+      "grid_max_kcal_mol": {
+        "99590": 0.0,
+        "75302": 0.0
+      },
+      "gap": 1.0,
+      "bound": 3e-26
+    },
+    {
+      "job": "25787336",
+      "case": "root_barrier",
+      "status": 8,
+      "saved_passed": true,
+      "audit_passed": true,
+      "objective": 4.191581512222437,
+      "solver_objective": 4.191581512223261,
+      "selected": 7,
+      "semilocal_nonzero": 3,
+      "scalars": [
+        1.0,
+        1.0000001171830064e-08,
+        0.7331613926376657,
+        0.9999999899999971
+      ],
+      "ueg_error": 0.0,
+      "residual_error": 9.240553114353567e-11,
+      "residual_source": "solver",
+      "grid_max_kcal_mol": {
+        "99590": 0.034895070903432204,
+        "75302": 0.19010557960863075
+      },
+      "gap": 0.7195177742473938,
+      "bound": 1.1756641119718552
+    },
+    {
+      "job": "25787336",
+      "case": "fixed_coach8",
+      "status": 2,
+      "saved_passed": false,
+      "audit_passed": false,
+      "objective": 2.741162239624808,
+      "solver_objective": 2.7411622395842365,
+      "selected": 8,
+      "semilocal_nonzero": 4,
+      "scalars": [
+        8.816442298169197e-23,
+        0.99999999,
+        0.12228557092023133,
+        0.99999999
+      ],
+      "ueg_error": 1.205950894700436e-09,
+      "residual_error": 1.3358413316483242e-09,
+      "residual_source": "solver",
+      "grid_max_kcal_mol": {
+        "99590": 0.04738104141383701,
+        "75302": 0.444294590956672
+      }
+    },
+    {
+      "job": "25787336",
+      "case": "semilocal_auto",
+      "status": null,
+      "saved_passed": false,
+      "skipped": "no audited semilocal start"
+    },
+    {
+      "job": "25787336",
+      "case": "semilocal_barrier",
+      "status": null,
+      "saved_passed": false,
+      "skipped": "no audited semilocal start"
+    },
+    {
+      "job": "25787337",
+      "case": "residual_mio",
+      "status": 9,
+      "saved_passed": true,
+      "audit_passed": true,
+      "objective": 4.429743141174103,
+      "solver_objective": 4.4297431411741,
+      "selected": 4,
+      "semilocal_nonzero": 0,
+      "scalars": [
+        1.0,
+        2.0882753976524575e-08,
+        0.7815442682950514,
+        0.9999999787409273
+      ],
+      "ueg_error": 0.0,
+      "residual_error": 0.0,
+      "residual_source": "solver",
+      "grid_max_kcal_mol": {
+        "99590": 0.0,
+        "75302": 0.0
+      },
+      "gap": 1.0,
+      "bound": 3e-26
+    },
+    {
+      "job": "25787337",
+      "case": "expanded_qp",
+      "status": 2,
+      "saved_passed": true,
+      "audit_passed": true,
+      "objective": 1.1272947699259919,
+      "solver_objective": 1.1272948221044317,
+      "selected": 8,
+      "semilocal_nonzero": 54,
+      "scalars": [
+        3.4057746775108014e-20,
+        0.3892199618281373,
+        1.0000000000021768e-08,
+        0.99999999
+      ],
+      "ueg_error": 1.0547118733938987e-13,
+      "residual_error": 0.0,
+      "residual_source": "recomputed_not_solver",
+      "grid_max_kcal_mol": {
+        "99590": 2.4998511851777585,
+        "75302": 13.06235807218391
+      }
+    },
+    {
+      "job": "25787337",
+      "case": "expanded_mio",
+      "status": 9,
+      "saved_passed": true,
+      "audit_passed": true,
+      "objective": 1.907885330199466,
+      "solver_objective": 1.9078853301994059,
+      "selected": 14,
+      "semilocal_nonzero": 10,
+      "scalars": [
+        0.0,
+        0.99999999,
+        0.03135816068171483,
+        0.16628422576612717
+      ],
+      "ueg_error": 0.0,
+      "residual_error": 0.0,
+      "residual_source": "recomputed_not_solver",
+      "grid_max_kcal_mol": {
+        "99590": 0.14496495208568305,
+        "75302": 2.014390251160708
+      },
+      "gap": 0.1667533399364388,
+      "bound": 1.5897390791729196,
+      "features": [
+        {
+          "index": 0,
+          "coefficient": 1.0
+        },
+        {
+          "index": 2,
+          "coefficient": 8.936881247679569
+        },
+        {
+          "index": 4,
+          "coefficient": -16.084732656020655
+        },
+        {
+          "index": 98,
+          "coefficient": 23.20336021576728
+        },
+        {
+          "index": 105,
+          "coefficient": 13.086733534109532
+        },
+        {
+          "index": 152,
+          "coefficient": -1.8505716397399037
+        },
+        {
+          "index": 194,
+          "coefficient": 11.671422665744249
+        },
+        {
+          "index": 196,
+          "coefficient": 19.677725622629374
+        },
+        {
+          "index": 201,
+          "coefficient": -25.0
+        },
+        {
+          "index": 273,
+          "coefficient": -22.624028087383742
+        },
+        {
+          "index": 288,
+          "coefficient": 0.0
+        },
+        {
+          "index": 289,
+          "coefficient": 0.99999999
+        },
+        {
+          "index": 290,
+          "coefficient": 0.03135816068171483
+        },
+        {
+          "index": 291,
+          "coefficient": 0.16628422576612717
+        }
+      ]
+    }
+  ],
+  "note": "Readback PASS does not imply all individual solves accepted; failed/skipped cases preserved."
+}

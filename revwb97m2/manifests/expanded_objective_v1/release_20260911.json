@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "c8fb963f9e4519ba22ff2ca9c1e436cc2cd83022008effc43b4e7a091e6bc9ac",
+  "commit": "855928a17e0bf6178781fd98e5f8ad2c91398604",
+  "submission_authorized": true,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "test_report": "revwb97m2/results/2026-09-11-expanded_objective_v1-tests.json",
+  "test_report_sha256": "cf25ef6729693b0fa8317db1e2141499db9a0603351558b12cd85b934c69f9fb",
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  },
+  "resource_review": "cm1 five idle241732MiB nodes,association valid,empty initial user queue.32GiB fits,2.5PiB filesystem free. No lr_lowprio.",
+  "scope": "expanded_objective_v1 approved diagnostic only. Big-M retained,SOS1 deferred,no bulk or automatic retries."
+}

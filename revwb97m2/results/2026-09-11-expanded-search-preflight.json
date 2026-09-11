@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "commit": "855928a17e0bf6178781fd98e5f8ad2c91398604",
+  "plan_sha256": {
+    "expanded_objective_v1": "c8fb963f9e4519ba22ff2ca9c1e436cc2cd83022008effc43b4e7a091e6bc9ac",
+    "search_diagnostic_v2": "e2a9523e5a8e67565e5e7a4ef97f93f1a9bc6eea37fdf3f472a80c86165aed1e"
+  },
+  "direct_objective": 4.429743141174104,
+  "expanded_objective": 4.429743141173731,
+  "absolute_disagreement": 3.730349362740526e-13,
+  "scope": "Frozen commit hashes, full1498 matrix, scalar-start expanded/direct identity, unlimited parameter JSON. No solver."
+}
