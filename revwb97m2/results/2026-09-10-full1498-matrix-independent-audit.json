@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "entries": 1498,
+  "species": 2799,
+  "features": 292,
+  "validation_sha256": "493a6a465ea71539e291501645d6a186ffd86f1bd597174035d6fe7c1675eef8",
+  "matrix": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/matrices/full1498_v1",
+  "audit_code_sha256": "ac8197d2ab0a1db7fe0625f86dc9e3eb083a4cac1f8874690ceb2fe94ec13552",
+  "fsum_max_abs_error": {
+    "feature_matrix": 4.263256414560601e-14,
+    "fixed_energy": 5.559996907322784e-13,
+    "grid_difference_99590": 5.421010862427522e-20,
+    "grid_difference_75302": 7.589415207398531e-19
+  },
+  "pilot_rows_exact": true,
+  "note": "Fresh-process bound-source hash checks, independent math.fsum reconstruction and real fit-input loader readback; no fit."
+}
