@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "commit": "177dbce58cfc34bf2075a4e2ea39fa5d575878b9",
+  "plan_sha256": "668987f3cb79661950aaeab5f807461d71dd837d549763b8ea3ca861960d3d32",
+  "tests_passed": 370,
+  "pytest_seconds": 16.25,
+  "command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /global/home/users/yaoshen/.conda/envs/dh/bin/python -m pytest -q revwb97m2/tests",
+  "preflight": "revwb97m2/results/2026-09-11-selective-recovery-preflight.json",
+  "preflight_sha256": "72a1e272d288f6d27bac6eb31edf16dd35c0a2cfffa851f56d1803ff9c009c0b"
+}

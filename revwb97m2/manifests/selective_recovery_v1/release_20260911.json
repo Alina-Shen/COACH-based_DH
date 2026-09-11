@@ -1,0 +1,14 @@
+{
+  "plan_sha256": "668987f3cb79661950aaeab5f807461d71dd837d549763b8ea3ca861960d3d32",
+  "commit": "177dbce58cfc34bf2075a4e2ea39fa5d575878b9",
+  "submission_authorized": true,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "test_report": "revwb97m2/results/2026-09-11-selective-recovery-tests.json",
+  "test_report_sha256": "2f30c627c2a02c2509bbb6cfcf658a565aea0ab69ff5dbfddc4f69a2ae43706d",
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  }
+}
