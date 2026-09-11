@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "commit": "35b867a9f4ae611505cb6fb44319e7e27bbb0232",
+  "plan_sha256": "c12b8caf622a5978570a6f800dec602297347a1053c41951895d684986ad6427",
+  "audit": {
+    "passed": true,
+    "continuous_audit": {
+      "passed": true,
+      "checks": {
+        "finite": true,
+        "selection_bounds": true,
+        "support_budget": true,
+        "mandatory": true,
+        "linkage": true,
+        "coefficient_bounds": true,
+        "ueg": true,
+        "sr_bounds": true,
+        "scalar_bounds": true,
+        "residual_identity": true
+      },
+      "weighted_sse": 3.708741106089471,
+      "ridge": 3.745e-10,
+      "objective": 3.708741106463971,
+      "fractional_selection_count": 0,
+      "usable_as_mio_incumbent": false,
+      "note": "No automatic promotion: relaxed solution may be fractional; fixed support needs separate MIO-start audit/import."
+    },
+    "integral": true,
+    "mio_audit": {
+      "checks": {
+        "finite": true,
+        "coefficient_bound": true,
+        "ueg": true,
+        "support_budget": true,
+        "unselected_zero": true,
+        "mandatory_selected": true,
+        "sr_bounds": true,
+        "independent_scalar_bounds": true
+      },
+      "passed": true,
+      "weighted_sse_hartree2": 3.7087411060894704,
+      "ridge_penalty_hartree2": 3.745e-10,
+      "regularized_objective_hartree2": 3.7087411064639704
+    }
+  },
+  "scope": "Frozen commit hashes and real-data feasible semilocal witness. No solver."
+}

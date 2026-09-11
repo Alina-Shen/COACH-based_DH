@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "commit": "35b867a9f4ae611505cb6fb44319e7e27bbb0232",
+  "plan_sha256": "c12b8caf622a5978570a6f800dec602297347a1053c41951895d684986ad6427",
+  "tests": 324,
+  "seconds": 16.58,
+  "preflight_sha256": "3c4143cd90d616d41d2296ecc3f80b69ac7c223294ab7fddce8c121fae456957",
+  "command": "BLAS/OMP/MKL1 dh/python -m pytest -q revwb97m2/tests"
+}

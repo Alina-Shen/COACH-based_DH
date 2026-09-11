@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "c12b8caf622a5978570a6f800dec602297347a1053c41951895d684986ad6427",
+  "commit": "35b867a9f4ae611505cb6fb44319e7e27bbb0232",
+  "submission_authorized": true,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "test_report": "revwb97m2/results/2026-09-11-search-tests.json",
+  "test_report_sha256": "ad4b67e84597aaf83f603d25a829cc02cecacf88f2c045a3d2b6a7235035a23d",
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  },
+  "resource_review": "cm1 five idle241732MiB nodes, association valid; user queue empty,filesystem2.5PiB free. No lr_lowprio.",
+  "scope": "Committed seven-case big-M search/semilocal diagnostic only; expanded comparison and SOS1 not included."
+}
