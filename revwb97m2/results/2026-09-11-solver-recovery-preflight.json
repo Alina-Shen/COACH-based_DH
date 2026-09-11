@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "commit": "0feb182513b92b2e101cf97f1039c50ce8ffd453",
+  "plan_sha256": "b2fd2d59a24d8f33f8f20bf5e4b6a05524d394bf5a50fabe149fb357c1e19a1d",
+  "hashed_files": 63,
+  "matrix_sha256": "493a6a465ea71539e291501645d6a186ffd86f1bd597174035d6fe7c1675eef8",
+  "input_sha256": "8d9f0ddd0282598f05aa25f22b54c8b361f949453c438d396c3519e00817242e",
+  "source_acceptance": {
+    "fixed_scalars": true,
+    "relaxed_k14": false
+  },
+  "imported_primal_values": 2082,
+  "fixed_start_objective": 4.429743141174104,
+  "scope": "Frozen hashes, full real-data readback and mock Start assignment. No Gurobi environment or solve; solver start acceptance remains untested."
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "job": "25784019",
+  "artifact_hashes_checked": 9,
+  "objective": 4.429743141174104,
+  "max_start_coefficient_change": 0.0,
+  "selection_unchanged": true,
+  "selected_count": 4,
+  "semilocal_nonzero_count": 0,
+  "scalars": [
+    1.0,
+    2.0882753976524575e-08,
+    0.7815442682950514,
+    0.9999999787409273
+  ],
+  "max_residual_identity_error": 0.0,
+  "gap": {
+    "gap": 1.0,
+    "gap_state": "finite",
+    "gap_absolute": 4.4297431411741,
+    "gap_recomputed": 1.0,
+    "gap_recomputed_state": "finite",
+    "gap_consistent": true
+  },
+  "grid_max_kcal_mol": {
+    "99590": 0.0,
+    "75302": 0.0
+  },
+  "interpretation": "Valid unchanged four-scalar incumbent; no search improvement or optimality proof. No bulk authorization."
+}

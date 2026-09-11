@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "commit": "0feb182513b92b2e101cf97f1039c50ce8ffd453",
+  "plan_sha256": "b2fd2d59a24d8f33f8f20bf5e4b6a05524d394bf5a50fabe149fb357c1e19a1d",
+  "tests": 310,
+  "seconds": 14.84,
+  "command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /global/home/users/yaoshen/.conda/envs/dh/bin/python -m pytest -q revwb97m2/tests",
+  "launcher_bash_syntax_passed": true,
+  "preflight_report": "revwb97m2/results/2026-09-11-solver-recovery-preflight.json",
+  "preflight_passed": true,
+  "scope": "Offline tests, frozen commit/hash validation, real-data readback and mock full-primal Start assignment. No license environment, optimizer solve or submission."
+}

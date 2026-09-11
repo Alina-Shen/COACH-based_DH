@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "b2fd2d59a24d8f33f8f20bf5e4b6a05524d394bf5a50fabe149fb357c1e19a1d",
+  "commit": "0feb182513b92b2e101cf97f1039c50ce8ffd453",
+  "submission_authorized": true,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "test_report": "revwb97m2/results/2026-09-11-solver-recovery-tests.json",
+  "test_report_sha256": "cf300c1c35bfca2b3f9538125376204b0b60ab7d431ddb424c2e2171e59d05ee",
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  },
+  "resource_review": "Live cm1 up, five idle241732MiB nodes; association valid; empty user queue.32GiB fits; filesystem2.5PiB available. No lr_lowprio.",
+  "scope": "Approved precision variants plus independent7200s K14 improved-start confirmation. No bulk scan or automatic retry."
+}
