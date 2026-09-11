@@ -1,0 +1,11 @@
+{
+  "commit": "USER_PRETEST_COMMIT_REQUIRED",
+  "note": "Scope approved; committed passing tests and live partition/resource review required; no bulk approval.",
+  "plan_sha256": "0e1e3d74949d1852daa18479ec7a425493ee5c792964bced51fd4738fd035b1b",
+  "resource_review_passed": false,
+  "route": null,
+  "test_report": null,
+  "test_report_sha256": null,
+  "tests_passed": false,
+  "user_approved_submission": false
+}

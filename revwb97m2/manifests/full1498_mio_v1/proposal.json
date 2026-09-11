@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "proposal_not_executable",
+  "user_approved_submission": false,
+  "bulk_authorized": false,
+  "implementation_complete": false,
+  "matrix_validation_sha256": "493a6a465ea71539e291501645d6a186ffd86f1bd597174035d6fe7c1675eef8",
+  "input_manifest_sha256": "8d9f0ddd0282598f05aa25f22b54c8b361f949453c438d396c3519e00817242e",
+  "specification_sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+  "budgets": [14, 80],
+  "seconds_per_solve": 600,
+  "threads": 16,
+  "memory_gib": 32,
+  "wall_minutes": 90,
+  "seed": 0,
+  "schedule": [
+    {"name": "discovery14", "budget": 14, "start": null, "candidates": []},
+    {"name": "discovery80", "budget": 80, "start": null, "candidates": []},
+    {"name": "constrained14", "budget": 14, "start": "discovery14", "candidates": ["discovery14", "discovery80"]},
+    {"name": "restart14", "budget": 14, "start": "constrained14", "candidates": ["discovery14", "discovery80"]},
+    {"name": "constrained80", "budget": 80, "start": "discovery80", "candidates": ["discovery14", "discovery80"]},
+    {"name": "restart80", "budget": 80, "start": "constrained80", "candidates": ["discovery14", "discovery80"]}
+  ],
+  "proposed_advancement_gate": "Constrained/restart candidates pass public99590 limit on all1498 training rows; no silent row augmentation if unselected rows violate.",
+  "route": null,
+  "requires": ["user_plan_approval", "versioned_orchestrator_and_tests", "pretest_user_commit", "tests_and_readback", "live_partition_review", "bounded_release"],
+  "report": "revwb97m2/results/2026-09-10-full1498-optimizer-validation-plan.md"
+}
