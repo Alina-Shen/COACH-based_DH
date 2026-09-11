@@ -1,0 +1,4663 @@
+{
+  "job": "25790995",
+  "identity": {
+    "plan_sha256": "e2b48592fa5c8d4b3241c30739c4d43e04736003ce6e3248acce25fc1a8bfc91",
+    "release": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/expanded_validation_v1/release_20260911.json",
+    "release_sha256": "e24dece177e7ec679e67d927a5dfc54f43d732869078271004e732f239c33511",
+    "commit": "5d096e1ae888d791a14ce50ef729adebaa391a92"
+  },
+  "partial_readback_passed": true,
+  "completed_workflow": false,
+  "failure": {
+    "error_type": "ValueError",
+    "error_code": null
+  },
+  "results": [
+    {
+      "name": "discovery14",
+      "objective": 1.9078853301994663,
+      "solver_objective": 1.9078853301994059,
+      "gap": 0.1610137929488646,
+      "nodes": 1615017.0,
+      "solutions": 1,
+      "status": 9,
+      "runtime": 600.0106880664825,
+      "semilocal": 10,
+      "selected_rows": 0,
+      "selected_max": 0.0,
+      "full_max": 0.14496495208568305,
+      "monitor75302": 2.014390251160708,
+      "advancement": true,
+      "grid_start_feasible": true,
+      "violations": [
+        {
+          "index": 430,
+          "entry": "S66Rel7_167",
+          "difference": 0.01758533433274099,
+          "selected": false
+        },
+        {
+          "index": 438,
+          "entry": "S66Rel7_209",
+          "difference": 0.031019961937729424,
+          "selected": false
+        },
+        {
+          "index": 524,
+          "entry": "CT20_20",
+          "difference": 0.015016109735654157,
+          "selected": false
+        },
+        {
+          "index": 678,
+          "entry": "IHB100_29",
+          "difference": 0.015649247350467903,
+          "selected": false
+        },
+        {
+          "index": 787,
+          "entry": "RG10N_242",
+          "difference": 0.018298939276356653,
+          "selected": false
+        },
+        {
+          "index": 828,
+          "entry": "MB16-43_1",
+          "difference": 0.09557353410986795,
+          "selected": false
+        },
+        {
+          "index": 829,
+          "entry": "MB16-43_2",
+          "difference": 0.038150532715136076,
+          "selected": false
+        },
+        {
+          "index": 830,
+          "entry": "MB16-43_3",
+          "difference": 0.01706128422997733,
+          "selected": false
+        },
+        {
+          "index": 831,
+          "entry": "MB16-43_4",
+          "difference": 0.0294728444319924,
+          "selected": false
+        },
+        {
+          "index": 833,
+          "entry": "MB16-43_6",
+          "difference": 0.04473888175434733,
+          "selected": false
+        },
+        {
+          "index": 834,
+          "entry": "MB16-43_7",
+          "difference": 0.023632322626833773,
+          "selected": false
+        },
+        {
+          "index": 835,
+          "entry": "MB16-43_8",
+          "difference": 0.021897171958820013,
+          "selected": false
+        },
+        {
+          "index": 836,
+          "entry": "MB16-43_9",
+          "difference": 0.018799350266897105,
+          "selected": false
+        },
+        {
+          "index": 838,
+          "entry": "MB16-43_11",
+          "difference": 0.020933383575020368,
+          "selected": false
+        },
+        {
+          "index": 839,
+          "entry": "MB16-43_12",
+          "difference": 0.04754519201963969,
+          "selected": false
+        },
+        {
+          "index": 842,
+          "entry": "MB16-43_15",
+          "difference": 0.02038983803254685,
+          "selected": false
+        },
+        {
+          "index": 843,
+          "entry": "MB16-43_16",
+          "difference": 0.026411535724711575,
+          "selected": false
+        },
+        {
+          "index": 845,
+          "entry": "MB16-43_18",
+          "difference": 0.04502460132254681,
+          "selected": false
+        },
+        {
+          "index": 846,
+          "entry": "MB16-43_19",
+          "difference": 0.019171005394119808,
+          "selected": false
+        },
+        {
+          "index": 847,
+          "entry": "MB16-43_20",
+          "difference": 0.019408793023614413,
+          "selected": false
+        },
+        {
+          "index": 848,
+          "entry": "MB16-43_21",
+          "difference": 0.1073893478518756,
+          "selected": false
+        },
+        {
+          "index": 850,
+          "entry": "MB16-43_23",
+          "difference": 0.04215144902601994,
+          "selected": false
+        },
+        {
+          "index": 851,
+          "entry": "MB16-43_24",
+          "difference": 0.04254892677684752,
+          "selected": false
+        },
+        {
+          "index": 854,
+          "entry": "MB16-43_27",
+          "difference": 0.01780940042852671,
+          "selected": false
+        },
+        {
+          "index": 855,
+          "entry": "MB16-43_28",
+          "difference": 0.02622917874520246,
+          "selected": false
+        },
+        {
+          "index": 856,
+          "entry": "MB16-43_29",
+          "difference": 0.03448716715622192,
+          "selected": false
+        },
+        {
+          "index": 857,
+          "entry": "MB16-43_30",
+          "difference": 0.04152598340446635,
+          "selected": false
+        },
+        {
+          "index": 858,
+          "entry": "MB16-43_31",
+          "difference": 0.04714604328350603,
+          "selected": false
+        },
+        {
+          "index": 860,
+          "entry": "MB16-43_33",
+          "difference": 0.02833023578952942,
+          "selected": false
+        },
+        {
+          "index": 862,
+          "entry": "MB16-43_35",
+          "difference": 0.017306758201153537,
+          "selected": false
+        },
+        {
+          "index": 864,
+          "entry": "MB16-43_37",
+          "difference": 0.016737927201770864,
+          "selected": false
+        },
+        {
+          "index": 865,
+          "entry": "MB16-43_38",
+          "difference": 0.08095338413687105,
+          "selected": false
+        },
+        {
+          "index": 866,
+          "entry": "MB16-43_39",
+          "difference": 0.027992301194047872,
+          "selected": false
+        },
+        {
+          "index": 867,
+          "entry": "MB16-43_40",
+          "difference": 0.04720210434114522,
+          "selected": false
+        },
+        {
+          "index": 868,
+          "entry": "MB16-43_41",
+          "difference": 0.04251354135283548,
+          "selected": false
+        },
+        {
+          "index": 869,
+          "entry": "MB16-43_42",
+          "difference": 0.06872914265295337,
+          "selected": false
+        },
+        {
+          "index": 870,
+          "entry": "MB16-43_43",
+          "difference": 0.057697167009528504,
+          "selected": false
+        },
+        {
+          "index": 872,
+          "entry": "MX35_2",
+          "difference": 0.03529975469719711,
+          "selected": false
+        },
+        {
+          "index": 873,
+          "entry": "MX35_3",
+          "difference": 0.01954029879749433,
+          "selected": false
+        },
+        {
+          "index": 874,
+          "entry": "MX35_4",
+          "difference": 0.08705812390737501,
+          "selected": false
+        },
+        {
+          "index": 875,
+          "entry": "MX35_5",
+          "difference": 0.10994375253316141,
+          "selected": false
+        },
+        {
+          "index": 877,
+          "entry": "MX35_7",
+          "difference": 0.037472633183074575,
+          "selected": false
+        },
+        {
+          "index": 878,
+          "entry": "MX35_8",
+          "difference": 0.14496495208568305,
+          "selected": false
+        },
+        {
+          "index": 879,
+          "entry": "MX35_9",
+          "difference": 0.06410035205603065,
+          "selected": false
+        },
+        {
+          "index": 880,
+          "entry": "MX35_10",
+          "difference": 0.08348852440948623,
+          "selected": false
+        },
+        {
+          "index": 881,
+          "entry": "MX35_12",
+          "difference": 0.03215512653264361,
+          "selected": false
+        },
+        {
+          "index": 882,
+          "entry": "MX35_13",
+          "difference": 0.04239506504519179,
+          "selected": false
+        },
+        {
+          "index": 883,
+          "entry": "MX35_14",
+          "difference": 0.021272309292673926,
+          "selected": false
+        },
+        {
+          "index": 884,
+          "entry": "MX35_15",
+          "difference": 0.016319970797573732,
+          "selected": false
+        },
+        {
+          "index": 887,
+          "entry": "MX35_18",
+          "difference": 0.06142643482834935,
+          "selected": false
+        },
+        {
+          "index": 888,
+          "entry": "MX35_19",
+          "difference": 0.05423669679609091,
+          "selected": false
+        },
+        {
+          "index": 889,
+          "entry": "MX35_20",
+          "difference": 0.09796405165207821,
+          "selected": false
+        },
+        {
+          "index": 890,
+          "entry": "MX35_21",
+          "difference": 0.016504737070753034,
+          "selected": false
+        },
+        {
+          "index": 891,
+          "entry": "MX35_22",
+          "difference": 0.0869216227729361,
+          "selected": false
+        },
+        {
+          "index": 892,
+          "entry": "MX35_23",
+          "difference": 0.07961165555605275,
+          "selected": false
+        },
+        {
+          "index": 893,
+          "entry": "MX35_24",
+          "difference": 0.11367318179346003,
+          "selected": false
+        },
+        {
+          "index": 894,
+          "entry": "MX35_25",
+          "difference": 0.1058663373751142,
+          "selected": false
+        },
+        {
+          "index": 896,
+          "entry": "MX35_27",
+          "difference": 0.11162368211163762,
+          "selected": false
+        },
+        {
+          "index": 897,
+          "entry": "MX35_28",
+          "difference": 0.0600376757190494,
+          "selected": false
+        },
+        {
+          "index": 899,
+          "entry": "MX35_30",
+          "difference": 0.08188326264989558,
+          "selected": false
+        },
+        {
+          "index": 900,
+          "entry": "MX35_31",
+          "difference": 0.016468377016690405,
+          "selected": false
+        },
+        {
+          "index": 901,
+          "entry": "MX35_32",
+          "difference": 0.07464683684813153,
+          "selected": false
+        },
+        {
+          "index": 902,
+          "entry": "MX35_33",
+          "difference": 0.09004736102765588,
+          "selected": false
+        },
+        {
+          "index": 903,
+          "entry": "MX35_34",
+          "difference": 0.057560252762409815,
+          "selected": false
+        },
+        {
+          "index": 904,
+          "entry": "MX35_35",
+          "difference": 0.11100415699663278,
+          "selected": false
+        },
+        {
+          "index": 924,
+          "entry": "ALK8_2",
+          "difference": 0.036749162194213966,
+          "selected": false
+        },
+        {
+          "index": 997,
+          "entry": "BDE99_62",
+          "difference": 0.015005984262427332,
+          "selected": false
+        },
+        {
+          "index": 1058,
+          "entry": "BSR36_26",
+          "difference": 0.0221672306262363,
+          "selected": false
+        },
+        {
+          "index": 1059,
+          "entry": "BSR36_27",
+          "difference": 0.018315002314724448,
+          "selected": false
+        },
+        {
+          "index": 1061,
+          "entry": "BSR36_29",
+          "difference": 0.015992690961712103,
+          "selected": false
+        },
+        {
+          "index": 1062,
+          "entry": "BSR36_30",
+          "difference": 0.026470030161388634,
+          "selected": false
+        },
+        {
+          "index": 1064,
+          "entry": "BSR36_32",
+          "difference": 0.03658325014442944,
+          "selected": false
+        },
+        {
+          "index": 1067,
+          "entry": "BSR36_35",
+          "difference": 0.03436139355728708,
+          "selected": false
+        },
+        {
+          "index": 1068,
+          "entry": "BSR36_36",
+          "difference": 0.01777291501512894,
+          "selected": false
+        },
+        {
+          "index": 1143,
+          "entry": "G21IP_21",
+          "difference": 0.018198246702899396,
+          "selected": false
+        },
+        {
+          "index": 1144,
+          "entry": "G21IP_22",
+          "difference": 0.01576275175387181,
+          "selected": false
+        },
+        {
+          "index": 1163,
+          "entry": "HEAVYSB11_5",
+          "difference": 0.029443083454739467,
+          "selected": false
+        },
+        {
+          "index": 1164,
+          "entry": "HEAVYSB11_6",
+          "difference": 0.018524568296153496,
+          "selected": false
+        },
+        {
+          "index": 1167,
+          "entry": "HEAVYSB11_9",
+          "difference": 0.042011498748038924,
+          "selected": false
+        },
+        {
+          "index": 1238,
+          "entry": "TAE_W4-17_29",
+          "difference": 0.036230298757774164,
+          "selected": false
+        },
+        {
+          "index": 1239,
+          "entry": "TAE_W4-17_30",
+          "difference": 0.015460622741675076,
+          "selected": false
+        },
+        {
+          "index": 1251,
+          "entry": "TAE_W4-17_42",
+          "difference": 0.01543276563599456,
+          "selected": false
+        },
+        {
+          "index": 1367,
+          "entry": "TAE_W4-17_170",
+          "difference": 0.025074446999322146,
+          "selected": false
+        },
+        {
+          "index": 1375,
+          "entry": "TAE_W4-17_180",
+          "difference": 0.09300390339004926,
+          "selected": false
+        },
+        {
+          "index": 1425,
+          "entry": "3d4dIPSS_31",
+          "difference": 0.019775095556883556,
+          "selected": false
+        },
+        {
+          "index": 1444,
+          "entry": "CUAGAU_19",
+          "difference": 0.02287392983736187,
+          "selected": false
+        },
+        {
+          "index": 1445,
+          "entry": "CUAGAU_22",
+          "difference": 0.018474461247132395,
+          "selected": false
+        },
+        {
+          "index": 1448,
+          "entry": "CUAGAU_25",
+          "difference": 0.01720511643954797,
+          "selected": false
+        },
+        {
+          "index": 1451,
+          "entry": "CUAGAU_28",
+          "difference": 0.019655952990525954,
+          "selected": false
+        },
+        {
+          "index": 1452,
+          "entry": "CUAGAU_29",
+          "difference": 0.01543172922783414,
+          "selected": false
+        },
+        {
+          "index": 1453,
+          "entry": "CUAGAU_30",
+          "difference": 0.02397454136487261,
+          "selected": false
+        },
+        {
+          "index": 1457,
+          "entry": "CUAGAU_36",
+          "difference": 0.04224603038317138,
+          "selected": false
+        },
+        {
+          "index": 1458,
+          "entry": "CUAGAU_37",
+          "difference": 0.0730547715083438,
+          "selected": false
+        },
+        {
+          "index": 1459,
+          "entry": "CUAGAU_38",
+          "difference": 0.04242458546303934,
+          "selected": false
+        },
+        {
+          "index": 1460,
+          "entry": "CUAGAU_39",
+          "difference": 0.048951542109049395,
+          "selected": false
+        },
+        {
+          "index": 1461,
+          "entry": "CUAGAU_40",
+          "difference": 0.04438523440120251,
+          "selected": false
+        },
+        {
+          "index": 1462,
+          "entry": "CUAGAU_41",
+          "difference": 0.025440447636431506,
+          "selected": false
+        },
+        {
+          "index": 1463,
+          "entry": "CUAGAU_42",
+          "difference": 0.020883523277907743,
+          "selected": false
+        },
+        {
+          "index": 1470,
+          "entry": "MOR13_7",
+          "difference": 0.039219475798876274,
+          "selected": false
+        },
+        {
+          "index": 1478,
+          "entry": "TMB11_2",
+          "difference": 0.019607456699075553,
+          "selected": false
+        },
+        {
+          "index": 1481,
+          "entry": "TMB11_5",
+          "difference": 0.022589932820632926,
+          "selected": false
+        },
+        {
+          "index": 1482,
+          "entry": "TMB11_6",
+          "difference": 0.071906755840673,
+          "selected": false
+        },
+        {
+          "index": 1483,
+          "entry": "TMB11_7",
+          "difference": 0.02193843967132352,
+          "selected": false
+        },
+        {
+          "index": 1484,
+          "entry": "TMB11_8",
+          "difference": 0.0446018004319767,
+          "selected": false
+        },
+        {
+          "index": 1485,
+          "entry": "TMB11_9",
+          "difference": 0.01982812687109382,
+          "selected": false
+        },
+        {
+          "index": 1492,
+          "entry": "TMD10_5",
+          "difference": 0.016750295331882634,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "discovery80",
+      "objective": 0.4164166139783043,
+      "solver_objective": 0.4164166139887584,
+      "gap": 0.11305253533903022,
+      "nodes": 1454713.0,
+      "solutions": 10,
+      "status": 9,
+      "runtime": 600.0245170593262,
+      "semilocal": 76,
+      "selected_rows": 0,
+      "selected_max": 0.0,
+      "full_max": 2.251402341400339,
+      "monitor75302": 11.788758068225809,
+      "advancement": true,
+      "grid_start_feasible": true,
+      "violations": [
+        {
+          "index": 1,
+          "entry": "BH28_BHDIV_2",
+          "difference": 0.08653671772885964,
+          "selected": false
+        },
+        {
+          "index": 2,
+          "entry": "BH28_BHDIV_3",
+          "difference": 0.021046076992114134,
+          "selected": false
+        },
+        {
+          "index": 4,
+          "entry": "BH28_BHPERI_5",
+          "difference": 0.04408559407120252,
+          "selected": false
+        },
+        {
+          "index": 5,
+          "entry": "BH28_BHPERI_6",
+          "difference": 0.02846565159508811,
+          "selected": false
+        },
+        {
+          "index": 6,
+          "entry": "BH28_BHPERI_7",
+          "difference": 0.02508764064293393,
+          "selected": false
+        },
+        {
+          "index": 7,
+          "entry": "BH28_BHPERI_8",
+          "difference": 0.018163217228906185,
+          "selected": false
+        },
+        {
+          "index": 8,
+          "entry": "BH28_BHPERI_9",
+          "difference": 0.028987305292702204,
+          "selected": false
+        },
+        {
+          "index": 10,
+          "entry": "BH28_CADBH_11",
+          "difference": 0.025746770010955895,
+          "selected": false
+        },
+        {
+          "index": 11,
+          "entry": "BH28_CADBH_12",
+          "difference": 0.032872070369554175,
+          "selected": false
+        },
+        {
+          "index": 12,
+          "entry": "BH28_CADBH_13",
+          "difference": 0.016026181746247852,
+          "selected": false
+        },
+        {
+          "index": 16,
+          "entry": "BH28_CADBH_17",
+          "difference": 0.026289540207329005,
+          "selected": false
+        },
+        {
+          "index": 19,
+          "entry": "BH28_CRBH_20",
+          "difference": 0.026214962512559933,
+          "selected": false
+        },
+        {
+          "index": 21,
+          "entry": "BH28_CRBH_22",
+          "difference": 0.018774675136263207,
+          "selected": false
+        },
+        {
+          "index": 22,
+          "entry": "BH28_CRBH_23",
+          "difference": 0.017912655637484634,
+          "selected": false
+        },
+        {
+          "index": 23,
+          "entry": "BH28_CRBH_24",
+          "difference": 0.019442990769281555,
+          "selected": false
+        },
+        {
+          "index": 24,
+          "entry": "BH28_PXBH_25",
+          "difference": 0.035830309774033016,
+          "selected": false
+        },
+        {
+          "index": 32,
+          "entry": "BHDIV10_6",
+          "difference": 0.04307008930066156,
+          "selected": false
+        },
+        {
+          "index": 33,
+          "entry": "BHDIV10_7",
+          "difference": 0.08700246885604639,
+          "selected": false
+        },
+        {
+          "index": 34,
+          "entry": "BHDIV10_10",
+          "difference": 0.019572244021076865,
+          "selected": false
+        },
+        {
+          "index": 36,
+          "entry": "BHPERI_8",
+          "difference": 0.04339329523335226,
+          "selected": false
+        },
+        {
+          "index": 38,
+          "entry": "BHPERI_10",
+          "difference": 0.023315794997264862,
+          "selected": false
+        },
+        {
+          "index": 39,
+          "entry": "BHPERI_20",
+          "difference": 0.04821932871916109,
+          "selected": false
+        },
+        {
+          "index": 40,
+          "entry": "BHPERI_21",
+          "difference": 0.027648587354390842,
+          "selected": false
+        },
+        {
+          "index": 45,
+          "entry": "BHPERI_26",
+          "difference": 0.04602515481876007,
+          "selected": false
+        },
+        {
+          "index": 46,
+          "entry": "CRBH20_3",
+          "difference": 0.015454123157106455,
+          "selected": false
+        },
+        {
+          "index": 50,
+          "entry": "CRBH20_7",
+          "difference": 0.04105828803698004,
+          "selected": false
+        },
+        {
+          "index": 53,
+          "entry": "CRBH20_13",
+          "difference": 0.01554146608433433,
+          "selected": false
+        },
+        {
+          "index": 56,
+          "entry": "CRBH20_16",
+          "difference": 0.03614926112917887,
+          "selected": false
+        },
+        {
+          "index": 57,
+          "entry": "CRBH20_17",
+          "difference": 0.055545649122831664,
+          "selected": false
+        },
+        {
+          "index": 58,
+          "entry": "CRBH20_18",
+          "difference": 0.044561291138433566,
+          "selected": false
+        },
+        {
+          "index": 61,
+          "entry": "DBH24_2",
+          "difference": 0.07073060409165323,
+          "selected": false
+        },
+        {
+          "index": 62,
+          "entry": "DBH24_3",
+          "difference": 0.025545353559915884,
+          "selected": false
+        },
+        {
+          "index": 63,
+          "entry": "DBH24_4",
+          "difference": 0.027847433096185675,
+          "selected": false
+        },
+        {
+          "index": 66,
+          "entry": "DBH24_7",
+          "difference": 0.01821337219405413,
+          "selected": false
+        },
+        {
+          "index": 68,
+          "entry": "DBH24_9",
+          "difference": 0.01981313692773628,
+          "selected": false
+        },
+        {
+          "index": 72,
+          "entry": "DBH24_13",
+          "difference": 0.017380739833720942,
+          "selected": false
+        },
+        {
+          "index": 74,
+          "entry": "DBH24_17",
+          "difference": 0.024686558549269506,
+          "selected": false
+        },
+        {
+          "index": 79,
+          "entry": "DBH24_22",
+          "difference": 0.024405941801577173,
+          "selected": false
+        },
+        {
+          "index": 81,
+          "entry": "DBH24_24",
+          "difference": 0.02850205252930243,
+          "selected": false
+        },
+        {
+          "index": 294,
+          "entry": "EIE22_1",
+          "difference": 0.017535297074295228,
+          "selected": false
+        },
+        {
+          "index": 295,
+          "entry": "EIE22_2",
+          "difference": 0.018186662872193924,
+          "selected": false
+        },
+        {
+          "index": 296,
+          "entry": "EIE22_3",
+          "difference": 0.03251554839691524,
+          "selected": false
+        },
+        {
+          "index": 300,
+          "entry": "EIE22_7",
+          "difference": 0.023157217810466525,
+          "selected": false
+        },
+        {
+          "index": 301,
+          "entry": "EIE22_8",
+          "difference": 0.019573777994642473,
+          "selected": false
+        },
+        {
+          "index": 302,
+          "entry": "EIE22_9",
+          "difference": 0.017455297967648938,
+          "selected": false
+        },
+        {
+          "index": 303,
+          "entry": "EIE22_10",
+          "difference": 0.017431765198585324,
+          "selected": false
+        },
+        {
+          "index": 306,
+          "entry": "EIE22_13",
+          "difference": 0.02429406240656345,
+          "selected": false
+        },
+        {
+          "index": 308,
+          "entry": "EIE22_15",
+          "difference": 0.021960124526196338,
+          "selected": false
+        },
+        {
+          "index": 309,
+          "entry": "EIE22_16",
+          "difference": 0.01553510050480996,
+          "selected": false
+        },
+        {
+          "index": 312,
+          "entry": "EIE22_19",
+          "difference": 0.015645148494037083,
+          "selected": false
+        },
+        {
+          "index": 314,
+          "entry": "EIE22_21",
+          "difference": 0.019224577250403007,
+          "selected": false
+        },
+        {
+          "index": 315,
+          "entry": "EIE22_22",
+          "difference": 0.020963960440292348,
+          "selected": false
+        },
+        {
+          "index": 317,
+          "entry": "PCONF21_2",
+          "difference": 0.04297231155175892,
+          "selected": false
+        },
+        {
+          "index": 320,
+          "entry": "PCONF21_5",
+          "difference": 0.11625151496509861,
+          "selected": false
+        },
+        {
+          "index": 321,
+          "entry": "PCONF21_6",
+          "difference": 0.031989164383494265,
+          "selected": false
+        },
+        {
+          "index": 322,
+          "entry": "PCONF21_7",
+          "difference": 0.0938966663215246,
+          "selected": false
+        },
+        {
+          "index": 323,
+          "entry": "PCONF21_8",
+          "difference": 0.05351376746342677,
+          "selected": false
+        },
+        {
+          "index": 328,
+          "entry": "PCONF21_13",
+          "difference": 0.03705711041638309,
+          "selected": false
+        },
+        {
+          "index": 330,
+          "entry": "PCONF21_15",
+          "difference": 0.05766592968641567,
+          "selected": false
+        },
+        {
+          "index": 331,
+          "entry": "PCONF21_16",
+          "difference": 0.0737502541517162,
+          "selected": false
+        },
+        {
+          "index": 332,
+          "entry": "PCONF21_17",
+          "difference": 0.026770870651183134,
+          "selected": false
+        },
+        {
+          "index": 333,
+          "entry": "PCONF21_18",
+          "difference": 0.016844439996191007,
+          "selected": false
+        },
+        {
+          "index": 334,
+          "entry": "Styrene45_2",
+          "difference": 0.05230415560300227,
+          "selected": false
+        },
+        {
+          "index": 335,
+          "entry": "Styrene45_3",
+          "difference": 0.043870199984921046,
+          "selected": false
+        },
+        {
+          "index": 338,
+          "entry": "Styrene45_6",
+          "difference": 0.030164846324976697,
+          "selected": false
+        },
+        {
+          "index": 343,
+          "entry": "Styrene45_11",
+          "difference": 0.030791359300615117,
+          "selected": false
+        },
+        {
+          "index": 348,
+          "entry": "Styrene45_16",
+          "difference": 0.032094281877750236,
+          "selected": false
+        },
+        {
+          "index": 349,
+          "entry": "Styrene45_17",
+          "difference": 0.024242445892839186,
+          "selected": false
+        },
+        {
+          "index": 351,
+          "entry": "Styrene45_19",
+          "difference": 0.017086893554815817,
+          "selected": false
+        },
+        {
+          "index": 352,
+          "entry": "Styrene45_20",
+          "difference": 0.03321481143211465,
+          "selected": false
+        },
+        {
+          "index": 355,
+          "entry": "Styrene45_23",
+          "difference": 0.019154955444621362,
+          "selected": false
+        },
+        {
+          "index": 356,
+          "entry": "Styrene45_24",
+          "difference": 0.02736651034912429,
+          "selected": false
+        },
+        {
+          "index": 357,
+          "entry": "Styrene45_25",
+          "difference": 0.027343859046042026,
+          "selected": false
+        },
+        {
+          "index": 358,
+          "entry": "Styrene45_26",
+          "difference": 0.02193912716926618,
+          "selected": false
+        },
+        {
+          "index": 359,
+          "entry": "Styrene45_27",
+          "difference": 0.016128182235714585,
+          "selected": false
+        },
+        {
+          "index": 363,
+          "entry": "Styrene45_31",
+          "difference": 0.024308069986910135,
+          "selected": false
+        },
+        {
+          "index": 366,
+          "entry": "Styrene45_34",
+          "difference": 0.02025136365739341,
+          "selected": false
+        },
+        {
+          "index": 371,
+          "entry": "Styrene45_40",
+          "difference": 0.016397829225229095,
+          "selected": false
+        },
+        {
+          "index": 373,
+          "entry": "Styrene45_43",
+          "difference": 0.01966784849713284,
+          "selected": false
+        },
+        {
+          "index": 378,
+          "entry": "AlkIsomer11_3",
+          "difference": 0.049961869510552544,
+          "selected": false
+        },
+        {
+          "index": 382,
+          "entry": "AlkIsomer11_7",
+          "difference": 0.021150190170267393,
+          "selected": false
+        },
+        {
+          "index": 385,
+          "entry": "AlkIsomer11_10",
+          "difference": 0.04931507400454764,
+          "selected": false
+        },
+        {
+          "index": 386,
+          "entry": "AlkIsomer11_11",
+          "difference": 0.05797955466581563,
+          "selected": false
+        },
+        {
+          "index": 387,
+          "entry": "BUT14DIOL_3",
+          "difference": 0.0399707167129276,
+          "selected": false
+        },
+        {
+          "index": 388,
+          "entry": "BUT14DIOL_4",
+          "difference": 0.021797010296490168,
+          "selected": false
+        },
+        {
+          "index": 389,
+          "entry": "BUT14DIOL_9",
+          "difference": 0.05174113384916139,
+          "selected": false
+        },
+        {
+          "index": 390,
+          "entry": "BUT14DIOL_14",
+          "difference": 0.04582197070016448,
+          "selected": false
+        },
+        {
+          "index": 391,
+          "entry": "BUT14DIOL_17",
+          "difference": 0.04923119330596989,
+          "selected": false
+        },
+        {
+          "index": 392,
+          "entry": "BUT14DIOL_25",
+          "difference": 0.051195918657375265,
+          "selected": false
+        },
+        {
+          "index": 393,
+          "entry": "BUT14DIOL_37",
+          "difference": 0.047907503878911226,
+          "selected": false
+        },
+        {
+          "index": 394,
+          "entry": "BUT14DIOL_38",
+          "difference": 0.05520064512832323,
+          "selected": false
+        },
+        {
+          "index": 395,
+          "entry": "BUT14DIOL_40",
+          "difference": 0.07246844562672675,
+          "selected": false
+        },
+        {
+          "index": 396,
+          "entry": "BUT14DIOL_43",
+          "difference": 0.06989669049781148,
+          "selected": false
+        },
+        {
+          "index": 397,
+          "entry": "BUT14DIOL_46",
+          "difference": 0.04885980908242707,
+          "selected": false
+        },
+        {
+          "index": 398,
+          "entry": "BUT14DIOL_47",
+          "difference": 0.02269207352907563,
+          "selected": false
+        },
+        {
+          "index": 399,
+          "entry": "BUT14DIOL_58",
+          "difference": 0.030744409344303298,
+          "selected": false
+        },
+        {
+          "index": 400,
+          "entry": "BUT14DIOL_60",
+          "difference": 0.06035235099907503,
+          "selected": false
+        },
+        {
+          "index": 404,
+          "entry": "S66Rel7_22",
+          "difference": 0.035842285372491976,
+          "selected": false
+        },
+        {
+          "index": 405,
+          "entry": "S66Rel7_29",
+          "difference": 0.01582611609822824,
+          "selected": false
+        },
+        {
+          "index": 407,
+          "entry": "S66Rel7_43",
+          "difference": 0.04833322411262959,
+          "selected": false
+        },
+        {
+          "index": 409,
+          "entry": "S66Rel7_57",
+          "difference": 0.022528413293249675,
+          "selected": false
+        },
+        {
+          "index": 411,
+          "entry": "S66Rel7_71",
+          "difference": 0.034746762536607884,
+          "selected": false
+        },
+        {
+          "index": 413,
+          "entry": "S66Rel7_85",
+          "difference": 0.038941027215181674,
+          "selected": false
+        },
+        {
+          "index": 414,
+          "entry": "S66Rel7_92",
+          "difference": 0.030364057496732762,
+          "selected": false
+        },
+        {
+          "index": 415,
+          "entry": "S66Rel7_97",
+          "difference": 0.016872741469917324,
+          "selected": false
+        },
+        {
+          "index": 417,
+          "entry": "S66Rel7_113",
+          "difference": 0.05120575707624576,
+          "selected": false
+        },
+        {
+          "index": 418,
+          "entry": "S66Rel7_118",
+          "difference": 0.04548289504826704,
+          "selected": false
+        },
+        {
+          "index": 424,
+          "entry": "S66Rel7_146",
+          "difference": 0.015492160928953953,
+          "selected": false
+        },
+        {
+          "index": 428,
+          "entry": "S66Rel7_160",
+          "difference": 0.01782377071892466,
+          "selected": false
+        },
+        {
+          "index": 429,
+          "entry": "S66Rel7_162",
+          "difference": 0.07364541642943838,
+          "selected": false
+        },
+        {
+          "index": 430,
+          "entry": "S66Rel7_167",
+          "difference": 0.05342456065421589,
+          "selected": false
+        },
+        {
+          "index": 431,
+          "entry": "S66Rel7_169",
+          "difference": 0.0232506317611558,
+          "selected": false
+        },
+        {
+          "index": 432,
+          "entry": "S66Rel7_176",
+          "difference": 0.02760215950269647,
+          "selected": false
+        },
+        {
+          "index": 433,
+          "entry": "S66Rel7_183",
+          "difference": 0.026730692038499256,
+          "selected": false
+        },
+        {
+          "index": 434,
+          "entry": "S66Rel7_188",
+          "difference": 0.05878738645515663,
+          "selected": false
+        },
+        {
+          "index": 435,
+          "entry": "S66Rel7_190",
+          "difference": 0.07862723871961874,
+          "selected": false
+        },
+        {
+          "index": 436,
+          "entry": "S66Rel7_197",
+          "difference": 0.07799925091037617,
+          "selected": false
+        },
+        {
+          "index": 441,
+          "entry": "S66Rel7_223",
+          "difference": 0.02508682457627188,
+          "selected": false
+        },
+        {
+          "index": 442,
+          "entry": "S66Rel7_225",
+          "difference": 0.021398041394161287,
+          "selected": false
+        },
+        {
+          "index": 443,
+          "entry": "S66Rel7_230",
+          "difference": 0.05246064538860423,
+          "selected": false
+        },
+        {
+          "index": 444,
+          "entry": "S66Rel7_232",
+          "difference": 0.03465227344725735,
+          "selected": false
+        },
+        {
+          "index": 445,
+          "entry": "S66Rel7_239",
+          "difference": 0.039006032656911056,
+          "selected": false
+        },
+        {
+          "index": 446,
+          "entry": "S66Rel7_246",
+          "difference": 0.0828349546302215,
+          "selected": false
+        },
+        {
+          "index": 447,
+          "entry": "S66Rel7_253",
+          "difference": 0.041418072732968256,
+          "selected": false
+        },
+        {
+          "index": 451,
+          "entry": "S66Rel7_281",
+          "difference": 0.05918402743876317,
+          "selected": false
+        },
+        {
+          "index": 453,
+          "entry": "S66Rel7_295",
+          "difference": 0.016417522380564365,
+          "selected": false
+        },
+        {
+          "index": 455,
+          "entry": "S66Rel7_316",
+          "difference": 0.018616084740805013,
+          "selected": false
+        },
+        {
+          "index": 457,
+          "entry": "S66Rel7_330",
+          "difference": 0.023144903133953506,
+          "selected": false
+        },
+        {
+          "index": 458,
+          "entry": "S66Rel7_337",
+          "difference": 0.015196407712896522,
+          "selected": false
+        },
+        {
+          "index": 462,
+          "entry": "S66Rel7_365",
+          "difference": 0.0677724902988085,
+          "selected": false
+        },
+        {
+          "index": 466,
+          "entry": "S66Rel7_393",
+          "difference": 0.015259669170751014,
+          "selected": false
+        },
+        {
+          "index": 472,
+          "entry": "S66Rel7_435",
+          "difference": 0.020353841178969986,
+          "selected": false
+        },
+        {
+          "index": 473,
+          "entry": "S66Rel7_442",
+          "difference": 0.01962510585666644,
+          "selected": false
+        },
+        {
+          "index": 478,
+          "entry": "Bauza30_4",
+          "difference": 0.019671818935310597,
+          "selected": false
+        },
+        {
+          "index": 481,
+          "entry": "Bauza30_7",
+          "difference": 0.015249680110187267,
+          "selected": false
+        },
+        {
+          "index": 491,
+          "entry": "Bauza30_17",
+          "difference": 0.01591372071253217,
+          "selected": false
+        },
+        {
+          "index": 497,
+          "entry": "Bauza30_23",
+          "difference": 0.018560905330438204,
+          "selected": false
+        },
+        {
+          "index": 499,
+          "entry": "Bauza30_25",
+          "difference": 0.028304113896651634,
+          "selected": false
+        },
+        {
+          "index": 504,
+          "entry": "Bauza30_30",
+          "difference": 0.024963845134976174,
+          "selected": false
+        },
+        {
+          "index": 505,
+          "entry": "CT20_1",
+          "difference": 0.02765502013606502,
+          "selected": false
+        },
+        {
+          "index": 506,
+          "entry": "CT20_2",
+          "difference": 0.10238386056747668,
+          "selected": false
+        },
+        {
+          "index": 507,
+          "entry": "CT20_3",
+          "difference": 0.04561767928721915,
+          "selected": false
+        },
+        {
+          "index": 509,
+          "entry": "CT20_5",
+          "difference": 0.08079766898297772,
+          "selected": false
+        },
+        {
+          "index": 513,
+          "entry": "CT20_9",
+          "difference": 0.053550819775117095,
+          "selected": false
+        },
+        {
+          "index": 514,
+          "entry": "CT20_10",
+          "difference": 0.0360410513707763,
+          "selected": false
+        },
+        {
+          "index": 518,
+          "entry": "CT20_14",
+          "difference": 0.019791686104091127,
+          "selected": false
+        },
+        {
+          "index": 519,
+          "entry": "CT20_15",
+          "difference": 0.07565654661386588,
+          "selected": false
+        },
+        {
+          "index": 523,
+          "entry": "CT20_19",
+          "difference": 0.02938899650174697,
+          "selected": false
+        },
+        {
+          "index": 524,
+          "entry": "CT20_20",
+          "difference": 0.13802164043214565,
+          "selected": false
+        },
+        {
+          "index": 525,
+          "entry": "HCP32_1",
+          "difference": 0.04015584971296654,
+          "selected": false
+        },
+        {
+          "index": 528,
+          "entry": "HCP32_4",
+          "difference": 0.0326115391158257,
+          "selected": false
+        },
+        {
+          "index": 529,
+          "entry": "HCP32_5",
+          "difference": 0.01653509372496474,
+          "selected": false
+        },
+        {
+          "index": 530,
+          "entry": "HCP32_6",
+          "difference": 0.017848594628670444,
+          "selected": false
+        },
+        {
+          "index": 558,
+          "entry": "TA13_2",
+          "difference": 0.016351854245136063,
+          "selected": false
+        },
+        {
+          "index": 563,
+          "entry": "TA13_7",
+          "difference": 0.032450092864165114,
+          "selected": false
+        },
+        {
+          "index": 568,
+          "entry": "TA13_12",
+          "difference": 0.017844842404855125,
+          "selected": false
+        },
+        {
+          "index": 571,
+          "entry": "XB25_2",
+          "difference": 0.04689191692653683,
+          "selected": false
+        },
+        {
+          "index": 576,
+          "entry": "XB25_7",
+          "difference": 0.03417842974015621,
+          "selected": false
+        },
+        {
+          "index": 577,
+          "entry": "XB25_8",
+          "difference": 0.032329469316128075,
+          "selected": false
+        },
+        {
+          "index": 581,
+          "entry": "HW6Cl_5",
+          "difference": 0.03566290553013314,
+          "selected": false
+        },
+        {
+          "index": 582,
+          "entry": "HW6Cl_6",
+          "difference": 0.04563991645365158,
+          "selected": false
+        },
+        {
+          "index": 583,
+          "entry": "Shields38_14",
+          "difference": 0.023493650172725665,
+          "selected": false
+        },
+        {
+          "index": 584,
+          "entry": "Shields38_15",
+          "difference": 0.023635954239305788,
+          "selected": false
+        },
+        {
+          "index": 587,
+          "entry": "Shields38_18",
+          "difference": 0.030812234482960218,
+          "selected": false
+        },
+        {
+          "index": 588,
+          "entry": "Shields38_19",
+          "difference": 0.015752599858421933,
+          "selected": false
+        },
+        {
+          "index": 589,
+          "entry": "Shields38_20",
+          "difference": 0.02924118014428401,
+          "selected": false
+        },
+        {
+          "index": 590,
+          "entry": "Shields38_21",
+          "difference": 0.01814755477133942,
+          "selected": false
+        },
+        {
+          "index": 609,
+          "entry": "A24_19",
+          "difference": 0.11401057322523163,
+          "selected": false
+        },
+        {
+          "index": 610,
+          "entry": "A24_20",
+          "difference": 0.047891441592427704,
+          "selected": false
+        },
+        {
+          "index": 611,
+          "entry": "A24_21",
+          "difference": 0.03136728153988679,
+          "selected": false
+        },
+        {
+          "index": 612,
+          "entry": "A24_22",
+          "difference": 0.03275885155761633,
+          "selected": false
+        },
+        {
+          "index": 614,
+          "entry": "A24_24",
+          "difference": 0.022191950193715917,
+          "selected": false
+        },
+        {
+          "index": 616,
+          "entry": "DS14_2",
+          "difference": 0.15770527936951798,
+          "selected": false
+        },
+        {
+          "index": 617,
+          "entry": "DS14_3",
+          "difference": 0.0210380289884911,
+          "selected": false
+        },
+        {
+          "index": 619,
+          "entry": "DS14_5",
+          "difference": 0.018430078834949924,
+          "selected": false
+        },
+        {
+          "index": 622,
+          "entry": "DS14_8",
+          "difference": 0.021929288159302698,
+          "selected": false
+        },
+        {
+          "index": 623,
+          "entry": "DS14_9",
+          "difference": 0.016223611540123414,
+          "selected": false
+        },
+        {
+          "index": 626,
+          "entry": "DS14_12",
+          "difference": 0.02840633001644337,
+          "selected": false
+        },
+        {
+          "index": 630,
+          "entry": "HSG_2",
+          "difference": 0.023330351564496043,
+          "selected": false
+        },
+        {
+          "index": 632,
+          "entry": "HSG_4",
+          "difference": 0.01671132856588788,
+          "selected": false
+        },
+        {
+          "index": 633,
+          "entry": "HSG_5",
+          "difference": 0.01504044602812089,
+          "selected": false
+        },
+        {
+          "index": 634,
+          "entry": "HSG_6",
+          "difference": 0.01565238882296012,
+          "selected": false
+        },
+        {
+          "index": 635,
+          "entry": "HSG_7",
+          "difference": 0.07273130521981645,
+          "selected": false
+        },
+        {
+          "index": 639,
+          "entry": "HSG_11",
+          "difference": 0.030292856063597322,
+          "selected": false
+        },
+        {
+          "index": 641,
+          "entry": "HSG_13",
+          "difference": 0.02069490175549251,
+          "selected": false
+        },
+        {
+          "index": 642,
+          "entry": "HSG_14",
+          "difference": 0.028396724981944947,
+          "selected": false
+        },
+        {
+          "index": 647,
+          "entry": "HSG_19",
+          "difference": 0.018112489872871756,
+          "selected": false
+        },
+        {
+          "index": 648,
+          "entry": "HSG_20",
+          "difference": 0.052358125624938655,
+          "selected": false
+        },
+        {
+          "index": 652,
+          "entry": "IHB100_3",
+          "difference": 0.03817834744584038,
+          "selected": false
+        },
+        {
+          "index": 658,
+          "entry": "IHB100_9",
+          "difference": 0.019006637183858123,
+          "selected": false
+        },
+        {
+          "index": 661,
+          "entry": "IHB100_12",
+          "difference": 0.0169986515813814,
+          "selected": false
+        },
+        {
+          "index": 662,
+          "entry": "IHB100_13",
+          "difference": 0.04734539107051239,
+          "selected": false
+        },
+        {
+          "index": 674,
+          "entry": "IHB100_25",
+          "difference": 0.04458892161035343,
+          "selected": false
+        },
+        {
+          "index": 675,
+          "entry": "IHB100_26",
+          "difference": 0.07725432373746526,
+          "selected": false
+        },
+        {
+          "index": 678,
+          "entry": "IHB100_29",
+          "difference": 0.13044146462863393,
+          "selected": false
+        },
+        {
+          "index": 692,
+          "entry": "IHB100_43",
+          "difference": 0.026251707645152052,
+          "selected": false
+        },
+        {
+          "index": 705,
+          "entry": "IHB100_56",
+          "difference": 0.015626409250014715,
+          "selected": false
+        },
+        {
+          "index": 710,
+          "entry": "IHB100_61",
+          "difference": 0.015187943402923301,
+          "selected": false
+        },
+        {
+          "index": 713,
+          "entry": "IHB100_64",
+          "difference": 0.02047231583557378,
+          "selected": false
+        },
+        {
+          "index": 714,
+          "entry": "IHB100_65",
+          "difference": 0.026347320958304925,
+          "selected": false
+        },
+        {
+          "index": 716,
+          "entry": "IHB100_67",
+          "difference": 0.03408295880372144,
+          "selected": false
+        },
+        {
+          "index": 725,
+          "entry": "IHB100_76",
+          "difference": 0.025114192343988834,
+          "selected": false
+        },
+        {
+          "index": 729,
+          "entry": "IHB100_80",
+          "difference": 0.015266734318342093,
+          "selected": false
+        },
+        {
+          "index": 746,
+          "entry": "IHB100_97",
+          "difference": 0.016688871486681637,
+          "selected": false
+        },
+        {
+          "index": 752,
+          "entry": "IL16_3",
+          "difference": 0.04213267909584044,
+          "selected": false
+        },
+        {
+          "index": 754,
+          "entry": "IL16_5",
+          "difference": 0.02110416526197309,
+          "selected": false
+        },
+        {
+          "index": 755,
+          "entry": "IL16_6",
+          "difference": 0.030126613768279565,
+          "selected": false
+        },
+        {
+          "index": 757,
+          "entry": "IL16_8",
+          "difference": 0.024112134810696247,
+          "selected": false
+        },
+        {
+          "index": 763,
+          "entry": "IL16_14",
+          "difference": 0.019827992621280523,
+          "selected": false
+        },
+        {
+          "index": 765,
+          "entry": "IL16_16",
+          "difference": 0.019241893542884053,
+          "selected": false
+        },
+        {
+          "index": 766,
+          "entry": "RG10N_1",
+          "difference": 0.01791711489625648,
+          "selected": false
+        },
+        {
+          "index": 767,
+          "entry": "RG10N_8",
+          "difference": 0.03037297660911969,
+          "selected": false
+        },
+        {
+          "index": 768,
+          "entry": "RG10N_31",
+          "difference": 0.018832145363359882,
+          "selected": false
+        },
+        {
+          "index": 771,
+          "entry": "RG10N_59",
+          "difference": 0.06225871739331844,
+          "selected": false
+        },
+        {
+          "index": 773,
+          "entry": "RG10N_63",
+          "difference": 0.025629541694206306,
+          "selected": false
+        },
+        {
+          "index": 777,
+          "entry": "RG10N_125",
+          "difference": 0.025305750641199692,
+          "selected": false
+        },
+        {
+          "index": 782,
+          "entry": "RG10N_179",
+          "difference": 0.017971240756010413,
+          "selected": false
+        },
+        {
+          "index": 785,
+          "entry": "RG10N_212",
+          "difference": 0.015677469577521707,
+          "selected": false
+        },
+        {
+          "index": 789,
+          "entry": "RG10N_3",
+          "difference": 0.01504131776879617,
+          "selected": false
+        },
+        {
+          "index": 790,
+          "entry": "RG10N_9",
+          "difference": 0.03153476512574325,
+          "selected": false
+        },
+        {
+          "index": 791,
+          "entry": "RG10N_11",
+          "difference": 0.04828077367795355,
+          "selected": false
+        },
+        {
+          "index": 793,
+          "entry": "RG10N_71",
+          "difference": 0.022383174131537842,
+          "selected": false
+        },
+        {
+          "index": 794,
+          "entry": "RG10N_102",
+          "difference": 0.049656109881929145,
+          "selected": false
+        },
+        {
+          "index": 796,
+          "entry": "RG10N_128",
+          "difference": 0.03335080909220407,
+          "selected": false
+        },
+        {
+          "index": 797,
+          "entry": "RG10N_131",
+          "difference": 0.01571207841086103,
+          "selected": false
+        },
+        {
+          "index": 799,
+          "entry": "RG10N_153",
+          "difference": 0.07225466238946195,
+          "selected": false
+        },
+        {
+          "index": 800,
+          "entry": "RG10N_184",
+          "difference": 0.04431331559595593,
+          "selected": false
+        },
+        {
+          "index": 801,
+          "entry": "RG10N_189",
+          "difference": 0.03256135036062942,
+          "selected": false
+        },
+        {
+          "index": 803,
+          "entry": "RG10N_218",
+          "difference": 0.07453477626609475,
+          "selected": false
+        },
+        {
+          "index": 805,
+          "entry": "RG10N_253",
+          "difference": 0.01750269554078595,
+          "selected": false
+        },
+        {
+          "index": 807,
+          "entry": "S22_2",
+          "difference": 0.017010076265826277,
+          "selected": false
+        },
+        {
+          "index": 808,
+          "entry": "S22_3",
+          "difference": 0.015112542420470252,
+          "selected": false
+        },
+        {
+          "index": 812,
+          "entry": "S22_7",
+          "difference": 0.02056699365978073,
+          "selected": false
+        },
+        {
+          "index": 813,
+          "entry": "S22_8",
+          "difference": 0.016539854189086906,
+          "selected": false
+        },
+        {
+          "index": 815,
+          "entry": "S22_10",
+          "difference": 0.09510114620889236,
+          "selected": false
+        },
+        {
+          "index": 816,
+          "entry": "S22_11",
+          "difference": 0.1482716725000881,
+          "selected": false
+        },
+        {
+          "index": 817,
+          "entry": "S22_12",
+          "difference": 0.06491192318768783,
+          "selected": false
+        },
+        {
+          "index": 818,
+          "entry": "S22_13",
+          "difference": 0.07971965904601545,
+          "selected": false
+        },
+        {
+          "index": 819,
+          "entry": "S22_14",
+          "difference": 0.0361253909542653,
+          "selected": false
+        },
+        {
+          "index": 820,
+          "entry": "S22_15",
+          "difference": 0.09639467679157024,
+          "selected": false
+        },
+        {
+          "index": 822,
+          "entry": "S22_17",
+          "difference": 0.044659603140681896,
+          "selected": false
+        },
+        {
+          "index": 823,
+          "entry": "S22_18",
+          "difference": 0.030914604967693726,
+          "selected": false
+        },
+        {
+          "index": 825,
+          "entry": "S22_20",
+          "difference": 0.02146682869319963,
+          "selected": false
+        },
+        {
+          "index": 826,
+          "entry": "S22_21",
+          "difference": 0.016979486770953588,
+          "selected": false
+        },
+        {
+          "index": 827,
+          "entry": "S22_22",
+          "difference": 0.04369111229463777,
+          "selected": false
+        },
+        {
+          "index": 828,
+          "entry": "MB16-43_1",
+          "difference": 0.08622985706416528,
+          "selected": false
+        },
+        {
+          "index": 829,
+          "entry": "MB16-43_2",
+          "difference": 0.18557550003026496,
+          "selected": false
+        },
+        {
+          "index": 830,
+          "entry": "MB16-43_3",
+          "difference": 0.10594435218937798,
+          "selected": false
+        },
+        {
+          "index": 831,
+          "entry": "MB16-43_4",
+          "difference": 0.25202238696871465,
+          "selected": false
+        },
+        {
+          "index": 832,
+          "entry": "MB16-43_5",
+          "difference": 0.07762522703665496,
+          "selected": false
+        },
+        {
+          "index": 833,
+          "entry": "MB16-43_6",
+          "difference": 0.1251716935485764,
+          "selected": false
+        },
+        {
+          "index": 834,
+          "entry": "MB16-43_7",
+          "difference": 0.09602701590648981,
+          "selected": false
+        },
+        {
+          "index": 835,
+          "entry": "MB16-43_8",
+          "difference": 0.05126258256841352,
+          "selected": false
+        },
+        {
+          "index": 836,
+          "entry": "MB16-43_9",
+          "difference": 0.13448134382529817,
+          "selected": false
+        },
+        {
+          "index": 837,
+          "entry": "MB16-43_10",
+          "difference": 0.22180845863789544,
+          "selected": false
+        },
+        {
+          "index": 838,
+          "entry": "MB16-43_11",
+          "difference": 0.052698755272609595,
+          "selected": false
+        },
+        {
+          "index": 839,
+          "entry": "MB16-43_12",
+          "difference": 0.07147788871943155,
+          "selected": false
+        },
+        {
+          "index": 841,
+          "entry": "MB16-43_14",
+          "difference": 0.09920718966074199,
+          "selected": false
+        },
+        {
+          "index": 842,
+          "entry": "MB16-43_15",
+          "difference": 0.34394162457326505,
+          "selected": false
+        },
+        {
+          "index": 843,
+          "entry": "MB16-43_16",
+          "difference": 0.5384116237057797,
+          "selected": false
+        },
+        {
+          "index": 844,
+          "entry": "MB16-43_17",
+          "difference": 0.2162119213928586,
+          "selected": false
+        },
+        {
+          "index": 845,
+          "entry": "MB16-43_18",
+          "difference": 0.06830153629558615,
+          "selected": false
+        },
+        {
+          "index": 846,
+          "entry": "MB16-43_19",
+          "difference": 0.11765071149607205,
+          "selected": false
+        },
+        {
+          "index": 847,
+          "entry": "MB16-43_20",
+          "difference": 0.01716504258647533,
+          "selected": false
+        },
+        {
+          "index": 848,
+          "entry": "MB16-43_21",
+          "difference": 0.28039522345833034,
+          "selected": false
+        },
+        {
+          "index": 849,
+          "entry": "MB16-43_22",
+          "difference": 0.24886493955053593,
+          "selected": false
+        },
+        {
+          "index": 850,
+          "entry": "MB16-43_23",
+          "difference": 0.27098647799388,
+          "selected": false
+        },
+        {
+          "index": 851,
+          "entry": "MB16-43_24",
+          "difference": 0.2893366692738901,
+          "selected": false
+        },
+        {
+          "index": 852,
+          "entry": "MB16-43_25",
+          "difference": 0.24732305070333951,
+          "selected": false
+        },
+        {
+          "index": 853,
+          "entry": "MB16-43_26",
+          "difference": 0.47316668564131303,
+          "selected": false
+        },
+        {
+          "index": 854,
+          "entry": "MB16-43_27",
+          "difference": 0.0607580876653782,
+          "selected": false
+        },
+        {
+          "index": 855,
+          "entry": "MB16-43_28",
+          "difference": 0.0369370907472057,
+          "selected": false
+        },
+        {
+          "index": 856,
+          "entry": "MB16-43_29",
+          "difference": 0.1369204739301356,
+          "selected": false
+        },
+        {
+          "index": 857,
+          "entry": "MB16-43_30",
+          "difference": 0.32984861439861995,
+          "selected": false
+        },
+        {
+          "index": 858,
+          "entry": "MB16-43_31",
+          "difference": 0.043267536395068584,
+          "selected": false
+        },
+        {
+          "index": 859,
+          "entry": "MB16-43_32",
+          "difference": 0.1174813433770838,
+          "selected": false
+        },
+        {
+          "index": 861,
+          "entry": "MB16-43_34",
+          "difference": 0.44196707261912765,
+          "selected": false
+        },
+        {
+          "index": 862,
+          "entry": "MB16-43_35",
+          "difference": 0.2670946304708933,
+          "selected": false
+        },
+        {
+          "index": 863,
+          "entry": "MB16-43_36",
+          "difference": 0.11505112786317213,
+          "selected": false
+        },
+        {
+          "index": 864,
+          "entry": "MB16-43_37",
+          "difference": 0.14296311344481516,
+          "selected": false
+        },
+        {
+          "index": 865,
+          "entry": "MB16-43_38",
+          "difference": 0.33796090901916276,
+          "selected": false
+        },
+        {
+          "index": 866,
+          "entry": "MB16-43_39",
+          "difference": 0.1491033136347355,
+          "selected": false
+        },
+        {
+          "index": 867,
+          "entry": "MB16-43_40",
+          "difference": 0.3567467019920484,
+          "selected": false
+        },
+        {
+          "index": 868,
+          "entry": "MB16-43_41",
+          "difference": 0.1191106725578269,
+          "selected": false
+        },
+        {
+          "index": 869,
+          "entry": "MB16-43_42",
+          "difference": 0.04277607473264672,
+          "selected": false
+        },
+        {
+          "index": 870,
+          "entry": "MB16-43_43",
+          "difference": 0.27539457371587295,
+          "selected": false
+        },
+        {
+          "index": 872,
+          "entry": "MX35_2",
+          "difference": 0.10241521340644964,
+          "selected": false
+        },
+        {
+          "index": 873,
+          "entry": "MX35_3",
+          "difference": 0.43933196166268046,
+          "selected": false
+        },
+        {
+          "index": 874,
+          "entry": "MX35_4",
+          "difference": 0.2543249888723316,
+          "selected": false
+        },
+        {
+          "index": 875,
+          "entry": "MX35_5",
+          "difference": 0.1815900531782052,
+          "selected": false
+        },
+        {
+          "index": 878,
+          "entry": "MX35_8",
+          "difference": 0.5458789015455271,
+          "selected": false
+        },
+        {
+          "index": 879,
+          "entry": "MX35_9",
+          "difference": 0.3475070858642511,
+          "selected": false
+        },
+        {
+          "index": 880,
+          "entry": "MX35_10",
+          "difference": 0.3201770261204047,
+          "selected": false
+        },
+        {
+          "index": 882,
+          "entry": "MX35_13",
+          "difference": 0.38825360557963234,
+          "selected": false
+        },
+        {
+          "index": 883,
+          "entry": "MX35_14",
+          "difference": 0.9442802042245672,
+          "selected": false
+        },
+        {
+          "index": 884,
+          "entry": "MX35_15",
+          "difference": 1.0799714887383558,
+          "selected": false
+        },
+        {
+          "index": 885,
+          "entry": "MX35_16",
+          "difference": 0.028142030476967277,
+          "selected": false
+        },
+        {
+          "index": 887,
+          "entry": "MX35_18",
+          "difference": 0.2291125907312147,
+          "selected": false
+        },
+        {
+          "index": 888,
+          "entry": "MX35_19",
+          "difference": 0.4641963790367423,
+          "selected": false
+        },
+        {
+          "index": 889,
+          "entry": "MX35_20",
+          "difference": 0.5655113293334426,
+          "selected": false
+        },
+        {
+          "index": 890,
+          "entry": "MX35_21",
+          "difference": 0.018618057052567704,
+          "selected": false
+        },
+        {
+          "index": 891,
+          "entry": "MX35_22",
+          "difference": 0.017048462682190433,
+          "selected": false
+        },
+        {
+          "index": 892,
+          "entry": "MX35_23",
+          "difference": 0.05867658558950672,
+          "selected": false
+        },
+        {
+          "index": 893,
+          "entry": "MX35_24",
+          "difference": 1.6478183292806179,
+          "selected": false
+        },
+        {
+          "index": 894,
+          "entry": "MX35_25",
+          "difference": 2.251402341400339,
+          "selected": false
+        },
+        {
+          "index": 895,
+          "entry": "MX35_26",
+          "difference": 0.034450894223470446,
+          "selected": false
+        },
+        {
+          "index": 896,
+          "entry": "MX35_27",
+          "difference": 0.07408454070074887,
+          "selected": false
+        },
+        {
+          "index": 897,
+          "entry": "MX35_28",
+          "difference": 0.05362737552185732,
+          "selected": false
+        },
+        {
+          "index": 898,
+          "entry": "MX35_29",
+          "difference": 0.4374786779735049,
+          "selected": false
+        },
+        {
+          "index": 899,
+          "entry": "MX35_30",
+          "difference": 0.49804978707827435,
+          "selected": false
+        },
+        {
+          "index": 900,
+          "entry": "MX35_31",
+          "difference": 0.05314585940644318,
+          "selected": false
+        },
+        {
+          "index": 901,
+          "entry": "MX35_32",
+          "difference": 0.050235366058180166,
+          "selected": false
+        },
+        {
+          "index": 902,
+          "entry": "MX35_33",
+          "difference": 0.2279031317496476,
+          "selected": false
+        },
+        {
+          "index": 903,
+          "entry": "MX35_34",
+          "difference": 0.28836030131464635,
+          "selected": false
+        },
+        {
+          "index": 904,
+          "entry": "MX35_35",
+          "difference": 0.3215407960590472,
+          "selected": false
+        },
+        {
+          "index": 908,
+          "entry": "AE18_4",
+          "difference": 0.01994159102556848,
+          "selected": false
+        },
+        {
+          "index": 910,
+          "entry": "AE18_6",
+          "difference": 0.01509625804115303,
+          "selected": false
+        },
+        {
+          "index": 920,
+          "entry": "AE18_16",
+          "difference": 0.015123289798357153,
+          "selected": false
+        },
+        {
+          "index": 922,
+          "entry": "AE18_18",
+          "difference": 0.038837259601404404,
+          "selected": false
+        },
+        {
+          "index": 923,
+          "entry": "ALK8_1",
+          "difference": 0.04135223429340451,
+          "selected": false
+        },
+        {
+          "index": 924,
+          "entry": "ALK8_2",
+          "difference": 0.11679680263866174,
+          "selected": false
+        },
+        {
+          "index": 925,
+          "entry": "ALK8_3",
+          "difference": 0.0366680364366976,
+          "selected": false
+        },
+        {
+          "index": 926,
+          "entry": "ALK8_4",
+          "difference": 0.023334658648794256,
+          "selected": false
+        },
+        {
+          "index": 927,
+          "entry": "ALK8_5",
+          "difference": 0.01875262249514704,
+          "selected": false
+        },
+        {
+          "index": 928,
+          "entry": "ALK8_6",
+          "difference": 0.050716733473433584,
+          "selected": false
+        },
+        {
+          "index": 930,
+          "entry": "ALK8_8",
+          "difference": 0.015961916295048777,
+          "selected": false
+        },
+        {
+          "index": 931,
+          "entry": "AlkAtom19_1",
+          "difference": 0.02074507835348173,
+          "selected": false
+        },
+        {
+          "index": 932,
+          "entry": "AlkAtom19_2",
+          "difference": 0.039871987169446205,
+          "selected": false
+        },
+        {
+          "index": 933,
+          "entry": "AlkAtom19_3",
+          "difference": 0.055037797192880177,
+          "selected": false
+        },
+        {
+          "index": 934,
+          "entry": "AlkAtom19_4",
+          "difference": 0.06879886211628236,
+          "selected": false
+        },
+        {
+          "index": 935,
+          "entry": "AlkAtom19_5",
+          "difference": 0.09058940657826567,
+          "selected": false
+        },
+        {
+          "index": 936,
+          "entry": "AlkAtom19_6",
+          "difference": 0.09713170134172101,
+          "selected": false
+        },
+        {
+          "index": 937,
+          "entry": "AlkAtom19_7",
+          "difference": 0.1270566765253798,
+          "selected": false
+        },
+        {
+          "index": 938,
+          "entry": "AlkAtom19_8",
+          "difference": 0.09673136625368105,
+          "selected": false
+        },
+        {
+          "index": 939,
+          "entry": "AlkAtom19_9",
+          "difference": 0.06760680295253384,
+          "selected": false
+        },
+        {
+          "index": 940,
+          "entry": "AlkAtom19_10",
+          "difference": 0.09838349570668875,
+          "selected": false
+        },
+        {
+          "index": 941,
+          "entry": "AlkAtom19_11",
+          "difference": 0.10040186572007402,
+          "selected": false
+        },
+        {
+          "index": 942,
+          "entry": "AlkAtom19_12",
+          "difference": 0.1245583988912383,
+          "selected": false
+        },
+        {
+          "index": 943,
+          "entry": "AlkAtom19_13",
+          "difference": 0.1547109209194967,
+          "selected": false
+        },
+        {
+          "index": 944,
+          "entry": "AlkAtom19_14",
+          "difference": 0.04062753706771311,
+          "selected": false
+        },
+        {
+          "index": 945,
+          "entry": "AlkAtom19_15",
+          "difference": 0.1056043565415833,
+          "selected": false
+        },
+        {
+          "index": 946,
+          "entry": "AlkAtom19_16",
+          "difference": 0.13110354269671207,
+          "selected": false
+        },
+        {
+          "index": 947,
+          "entry": "AlkAtom19_17",
+          "difference": 0.11828189151198838,
+          "selected": false
+        },
+        {
+          "index": 948,
+          "entry": "AlkAtom19_18",
+          "difference": 0.08673490412469509,
+          "selected": false
+        },
+        {
+          "index": 949,
+          "entry": "AlkAtom19_19",
+          "difference": 0.14604644025822872,
+          "selected": false
+        },
+        {
+          "index": 955,
+          "entry": "BDE99_16",
+          "difference": 0.015117572298521079,
+          "selected": false
+        },
+        {
+          "index": 959,
+          "entry": "BDE99_20",
+          "difference": 0.01592768118534918,
+          "selected": false
+        },
+        {
+          "index": 969,
+          "entry": "BDE99_30",
+          "difference": 0.01652026787608926,
+          "selected": false
+        },
+        {
+          "index": 972,
+          "entry": "BDE99_33",
+          "difference": 0.022029260753684308,
+          "selected": false
+        },
+        {
+          "index": 973,
+          "entry": "BDE99_34",
+          "difference": 0.021374754939107683,
+          "selected": false
+        },
+        {
+          "index": 975,
+          "entry": "BDE99_36",
+          "difference": 0.015669600041793345,
+          "selected": false
+        },
+        {
+          "index": 976,
+          "entry": "BDE99_37",
+          "difference": 0.0334697798738336,
+          "selected": false
+        },
+        {
+          "index": 979,
+          "entry": "BDE99_40",
+          "difference": 0.024827361068667675,
+          "selected": false
+        },
+        {
+          "index": 981,
+          "entry": "BDE99_42",
+          "difference": 0.02155307981353013,
+          "selected": false
+        },
+        {
+          "index": 997,
+          "entry": "BDE99_62",
+          "difference": 0.039583699818503584,
+          "selected": false
+        },
+        {
+          "index": 1008,
+          "entry": "BDE99_73",
+          "difference": 0.016821963852491625,
+          "selected": false
+        },
+        {
+          "index": 1012,
+          "entry": "BDE99_77",
+          "difference": 0.023435962029469685,
+          "selected": false
+        },
+        {
+          "index": 1013,
+          "entry": "BDE99_78",
+          "difference": 0.027861693015849686,
+          "selected": false
+        },
+        {
+          "index": 1024,
+          "entry": "BDE99_89",
+          "difference": 0.024674934643633125,
+          "selected": false
+        },
+        {
+          "index": 1025,
+          "entry": "BDE99_90",
+          "difference": 0.02877632855949129,
+          "selected": false
+        },
+        {
+          "index": 1028,
+          "entry": "BDE99_93",
+          "difference": 0.01503378107133045,
+          "selected": false
+        },
+        {
+          "index": 1029,
+          "entry": "BDE99_94",
+          "difference": 0.04702187206681465,
+          "selected": false
+        },
+        {
+          "index": 1030,
+          "entry": "BDE99_95",
+          "difference": 0.024022626692305035,
+          "selected": false
+        },
+        {
+          "index": 1032,
+          "entry": "BDE99_99",
+          "difference": 0.06058070162864193,
+          "selected": false
+        },
+        {
+          "index": 1033,
+          "entry": "BSR36_1",
+          "difference": 0.03635003130511094,
+          "selected": false
+        },
+        {
+          "index": 1034,
+          "entry": "BSR36_2",
+          "difference": 0.03373315466367599,
+          "selected": false
+        },
+        {
+          "index": 1036,
+          "entry": "BSR36_4",
+          "difference": 0.04602143956143168,
+          "selected": false
+        },
+        {
+          "index": 1037,
+          "entry": "BSR36_5",
+          "difference": 0.05066321753893828,
+          "selected": false
+        },
+        {
+          "index": 1038,
+          "entry": "BSR36_6",
+          "difference": 0.049701629765464855,
+          "selected": false
+        },
+        {
+          "index": 1039,
+          "entry": "BSR36_7",
+          "difference": 0.06818587141743593,
+          "selected": false
+        },
+        {
+          "index": 1040,
+          "entry": "BSR36_8",
+          "difference": 0.04523301052661898,
+          "selected": false
+        },
+        {
+          "index": 1041,
+          "entry": "BSR36_9",
+          "difference": 0.042965376537386836,
+          "selected": false
+        },
+        {
+          "index": 1042,
+          "entry": "BSR36_10",
+          "difference": 0.048820811001893,
+          "selected": false
+        },
+        {
+          "index": 1043,
+          "entry": "BSR36_11",
+          "difference": 0.03773212072408457,
+          "selected": false
+        },
+        {
+          "index": 1045,
+          "entry": "BSR36_13",
+          "difference": 0.053020635978156656,
+          "selected": false
+        },
+        {
+          "index": 1046,
+          "entry": "BSR36_14",
+          "difference": 0.04648075138172374,
+          "selected": false
+        },
+        {
+          "index": 1047,
+          "entry": "BSR36_15",
+          "difference": 0.056807876655846336,
+          "selected": false
+        },
+        {
+          "index": 1048,
+          "entry": "BSR36_16",
+          "difference": 0.0345938142959732,
+          "selected": false
+        },
+        {
+          "index": 1049,
+          "entry": "BSR36_17",
+          "difference": 0.10190636086549908,
+          "selected": false
+        },
+        {
+          "index": 1050,
+          "entry": "BSR36_18",
+          "difference": 0.05225505879461423,
+          "selected": false
+        },
+        {
+          "index": 1051,
+          "entry": "BSR36_19",
+          "difference": 0.0877910196319752,
+          "selected": false
+        },
+        {
+          "index": 1052,
+          "entry": "BSR36_20",
+          "difference": 0.06621029607819466,
+          "selected": false
+        },
+        {
+          "index": 1053,
+          "entry": "BSR36_21",
+          "difference": 0.06893508583541257,
+          "selected": false
+        },
+        {
+          "index": 1054,
+          "entry": "BSR36_22",
+          "difference": 0.06647526953681646,
+          "selected": false
+        },
+        {
+          "index": 1055,
+          "entry": "BSR36_23",
+          "difference": 0.05766245412900999,
+          "selected": false
+        },
+        {
+          "index": 1056,
+          "entry": "BSR36_24",
+          "difference": 0.06050073119621839,
+          "selected": false
+        },
+        {
+          "index": 1057,
+          "entry": "BSR36_25",
+          "difference": 0.10180535468119908,
+          "selected": false
+        },
+        {
+          "index": 1058,
+          "entry": "BSR36_26",
+          "difference": 0.10911490688405484,
+          "selected": false
+        },
+        {
+          "index": 1059,
+          "entry": "BSR36_27",
+          "difference": 0.11201993238665572,
+          "selected": false
+        },
+        {
+          "index": 1060,
+          "entry": "BSR36_28",
+          "difference": 0.17329043688167628,
+          "selected": false
+        },
+        {
+          "index": 1061,
+          "entry": "BSR36_29",
+          "difference": 0.10032146675449473,
+          "selected": false
+        },
+        {
+          "index": 1062,
+          "entry": "BSR36_30",
+          "difference": 0.1543859290096621,
+          "selected": false
+        },
+        {
+          "index": 1063,
+          "entry": "BSR36_31",
+          "difference": 0.1350107907155584,
+          "selected": false
+        },
+        {
+          "index": 1064,
+          "entry": "BSR36_32",
+          "difference": 0.30641371761162767,
+          "selected": false
+        },
+        {
+          "index": 1065,
+          "entry": "BSR36_33",
+          "difference": 0.14604902069416534,
+          "selected": false
+        },
+        {
+          "index": 1066,
+          "entry": "BSR36_34",
+          "difference": 0.1189825262509576,
+          "selected": false
+        },
+        {
+          "index": 1067,
+          "entry": "BSR36_35",
+          "difference": 0.403550257498008,
+          "selected": false
+        },
+        {
+          "index": 1068,
+          "entry": "BSR36_36",
+          "difference": 0.19696869228822164,
+          "selected": false
+        },
+        {
+          "index": 1071,
+          "entry": "CR20_3",
+          "difference": 0.0707360814046362,
+          "selected": false
+        },
+        {
+          "index": 1077,
+          "entry": "CR20_9",
+          "difference": 0.039095583213876295,
+          "selected": false
+        },
+        {
+          "index": 1079,
+          "entry": "CR20_11",
+          "difference": 0.044900586871031434,
+          "selected": false
+        },
+        {
+          "index": 1081,
+          "entry": "CR20_13",
+          "difference": 0.039314570376290096,
+          "selected": false
+        },
+        {
+          "index": 1083,
+          "entry": "CR20_15",
+          "difference": 0.021123700419779706,
+          "selected": false
+        },
+        {
+          "index": 1084,
+          "entry": "CR20_16",
+          "difference": 0.03384802063903177,
+          "selected": false
+        },
+        {
+          "index": 1085,
+          "entry": "CR20_17",
+          "difference": 0.06404383040647844,
+          "selected": false
+        },
+        {
+          "index": 1086,
+          "entry": "CR20_18",
+          "difference": 0.03554741875152921,
+          "selected": false
+        },
+        {
+          "index": 1087,
+          "entry": "CR20_19",
+          "difference": 0.03076915770408043,
+          "selected": false
+        },
+        {
+          "index": 1088,
+          "entry": "CR20_20",
+          "difference": 0.024087705216247406,
+          "selected": false
+        },
+        {
+          "index": 1095,
+          "entry": "DIPCS10_8",
+          "difference": 0.06072445066052382,
+          "selected": false
+        },
+        {
+          "index": 1097,
+          "entry": "DIPCS10_10",
+          "difference": 0.01734895365686448,
+          "selected": false
+        },
+        {
+          "index": 1098,
+          "entry": "G21EA_1",
+          "difference": 0.01654365219951276,
+          "selected": false
+        },
+        {
+          "index": 1103,
+          "entry": "G21EA_6",
+          "difference": 0.0202967062874489,
+          "selected": false
+        },
+        {
+          "index": 1111,
+          "entry": "G21EA_14",
+          "difference": 0.01660823752292524,
+          "selected": false
+        },
+        {
+          "index": 1113,
+          "entry": "G21EA_16",
+          "difference": 0.07871792830154362,
+          "selected": false
+        },
+        {
+          "index": 1115,
+          "entry": "G21EA_18",
+          "difference": 0.05379845958462157,
+          "selected": false
+        },
+        {
+          "index": 1122,
+          "entry": "G21EA_25",
+          "difference": 0.038847908464529526,
+          "selected": false
+        },
+        {
+          "index": 1124,
+          "entry": "G21IP_2",
+          "difference": 0.023007188497980918,
+          "selected": false
+        },
+        {
+          "index": 1126,
+          "entry": "G21IP_4",
+          "difference": 0.017865941781587527,
+          "selected": false
+        },
+        {
+          "index": 1127,
+          "entry": "G21IP_5",
+          "difference": 0.02417197523687612,
+          "selected": false
+        },
+        {
+          "index": 1137,
+          "entry": "G21IP_15",
+          "difference": 0.023142918245135247,
+          "selected": false
+        },
+        {
+          "index": 1143,
+          "entry": "G21IP_21",
+          "difference": 0.06308266083241723,
+          "selected": false
+        },
+        {
+          "index": 1146,
+          "entry": "G21IP_24",
+          "difference": 0.015345386068781594,
+          "selected": false
+        },
+        {
+          "index": 1148,
+          "entry": "G21IP_26",
+          "difference": 0.03210233353414701,
+          "selected": false
+        },
+        {
+          "index": 1149,
+          "entry": "G21IP_27",
+          "difference": 0.020247289902054957,
+          "selected": false
+        },
+        {
+          "index": 1152,
+          "entry": "G21IP_30",
+          "difference": 0.015861727690299962,
+          "selected": false
+        },
+        {
+          "index": 1155,
+          "entry": "G21IP_33",
+          "difference": 0.06799587813415554,
+          "selected": false
+        },
+        {
+          "index": 1156,
+          "entry": "G21IP_34",
+          "difference": 0.018725511409057344,
+          "selected": false
+        },
+        {
+          "index": 1157,
+          "entry": "G21IP_35",
+          "difference": 0.017124776579787254,
+          "selected": false
+        },
+        {
+          "index": 1159,
+          "entry": "HEAVYSB11_1",
+          "difference": 0.020612291726473417,
+          "selected": false
+        },
+        {
+          "index": 1160,
+          "entry": "HEAVYSB11_2",
+          "difference": 0.024681498067549067,
+          "selected": false
+        },
+        {
+          "index": 1162,
+          "entry": "HEAVYSB11_4",
+          "difference": 0.050717594159453434,
+          "selected": false
+        },
+        {
+          "index": 1165,
+          "entry": "HEAVYSB11_7",
+          "difference": 0.02370140847394551,
+          "selected": false
+        },
+        {
+          "index": 1166,
+          "entry": "HEAVYSB11_8",
+          "difference": 0.016138949444026066,
+          "selected": false
+        },
+        {
+          "index": 1167,
+          "entry": "HEAVYSB11_9",
+          "difference": 0.06598990389806662,
+          "selected": false
+        },
+        {
+          "index": 1168,
+          "entry": "HEAVYSB11_10",
+          "difference": 0.03294053133100867,
+          "selected": false
+        },
+        {
+          "index": 1170,
+          "entry": "RSE43_1",
+          "difference": 0.0344144477166513,
+          "selected": false
+        },
+        {
+          "index": 1173,
+          "entry": "RSE43_4",
+          "difference": 0.020116230593960355,
+          "selected": false
+        },
+        {
+          "index": 1174,
+          "entry": "RSE43_5",
+          "difference": 0.041392647217385864,
+          "selected": false
+        },
+        {
+          "index": 1175,
+          "entry": "RSE43_6",
+          "difference": 0.0537846539092101,
+          "selected": false
+        },
+        {
+          "index": 1179,
+          "entry": "RSE43_10",
+          "difference": 0.015878517409627264,
+          "selected": false
+        },
+        {
+          "index": 1193,
+          "entry": "RSE43_24",
+          "difference": 0.02198760809898832,
+          "selected": false
+        },
+        {
+          "index": 1195,
+          "entry": "RSE43_26",
+          "difference": 0.026078646949785636,
+          "selected": false
+        },
+        {
+          "index": 1200,
+          "entry": "RSE43_31",
+          "difference": 0.024378140156388617,
+          "selected": false
+        },
+        {
+          "index": 1202,
+          "entry": "RSE43_33",
+          "difference": 0.037144225749332,
+          "selected": false
+        },
+        {
+          "index": 1203,
+          "entry": "RSE43_34",
+          "difference": 0.024762479015113324,
+          "selected": false
+        },
+        {
+          "index": 1204,
+          "entry": "RSE43_35",
+          "difference": 0.015601223614160189,
+          "selected": false
+        },
+        {
+          "index": 1207,
+          "entry": "RSE43_38",
+          "difference": 0.017415513270941502,
+          "selected": false
+        },
+        {
+          "index": 1212,
+          "entry": "RSE43_43",
+          "difference": 0.028086779165773457,
+          "selected": false
+        },
+        {
+          "index": 1213,
+          "entry": "TAE_W4-17_1",
+          "difference": 0.030352677735883276,
+          "selected": false
+        },
+        {
+          "index": 1214,
+          "entry": "TAE_W4-17_2",
+          "difference": 0.05525619570613575,
+          "selected": false
+        },
+        {
+          "index": 1215,
+          "entry": "TAE_W4-17_3",
+          "difference": 0.019052196161730654,
+          "selected": false
+        },
+        {
+          "index": 1216,
+          "entry": "TAE_W4-17_4",
+          "difference": 0.01836269567350193,
+          "selected": false
+        },
+        {
+          "index": 1217,
+          "entry": "TAE_W4-17_5",
+          "difference": 0.042826780379704235,
+          "selected": false
+        },
+        {
+          "index": 1220,
+          "entry": "TAE_W4-17_8",
+          "difference": 0.023244781488536724,
+          "selected": false
+        },
+        {
+          "index": 1221,
+          "entry": "TAE_W4-17_9",
+          "difference": 0.05150423508520242,
+          "selected": false
+        },
+        {
+          "index": 1222,
+          "entry": "TAE_W4-17_10",
+          "difference": 0.06153041523178705,
+          "selected": false
+        },
+        {
+          "index": 1224,
+          "entry": "TAE_W4-17_13",
+          "difference": 0.04022975903497938,
+          "selected": false
+        },
+        {
+          "index": 1225,
+          "entry": "TAE_W4-17_14",
+          "difference": 0.059647928624003255,
+          "selected": false
+        },
+        {
+          "index": 1227,
+          "entry": "TAE_W4-17_16",
+          "difference": 0.044561126332719844,
+          "selected": false
+        },
+        {
+          "index": 1230,
+          "entry": "TAE_W4-17_19",
+          "difference": 0.02194734257431302,
+          "selected": false
+        },
+        {
+          "index": 1232,
+          "entry": "TAE_W4-17_22",
+          "difference": 0.06225008495842741,
+          "selected": false
+        },
+        {
+          "index": 1234,
+          "entry": "TAE_W4-17_24",
+          "difference": 0.021033734787742814,
+          "selected": false
+        },
+        {
+          "index": 1236,
+          "entry": "TAE_W4-17_26",
+          "difference": 0.01736454306955219,
+          "selected": false
+        },
+        {
+          "index": 1238,
+          "entry": "TAE_W4-17_29",
+          "difference": 0.08218617477127851,
+          "selected": false
+        },
+        {
+          "index": 1239,
+          "entry": "TAE_W4-17_30",
+          "difference": 0.10026875162352353,
+          "selected": false
+        },
+        {
+          "index": 1240,
+          "entry": "TAE_W4-17_31",
+          "difference": 0.020459423293152604,
+          "selected": false
+        },
+        {
+          "index": 1241,
+          "entry": "TAE_W4-17_32",
+          "difference": 0.026256500787528583,
+          "selected": false
+        },
+        {
+          "index": 1242,
+          "entry": "TAE_W4-17_33",
+          "difference": 0.05030249395280882,
+          "selected": false
+        },
+        {
+          "index": 1243,
+          "entry": "TAE_W4-17_34",
+          "difference": 0.040665256626884055,
+          "selected": false
+        },
+        {
+          "index": 1244,
+          "entry": "TAE_W4-17_35",
+          "difference": 0.05506263600718745,
+          "selected": false
+        },
+        {
+          "index": 1245,
+          "entry": "TAE_W4-17_36",
+          "difference": 0.02977809373944671,
+          "selected": false
+        },
+        {
+          "index": 1246,
+          "entry": "TAE_W4-17_37",
+          "difference": 0.05120337516442063,
+          "selected": false
+        },
+        {
+          "index": 1247,
+          "entry": "TAE_W4-17_38",
+          "difference": 0.04862137792488517,
+          "selected": false
+        },
+        {
+          "index": 1248,
+          "entry": "TAE_W4-17_39",
+          "difference": 0.030140069299864142,
+          "selected": false
+        },
+        {
+          "index": 1249,
+          "entry": "TAE_W4-17_40",
+          "difference": 0.040445203673011146,
+          "selected": false
+        },
+        {
+          "index": 1250,
+          "entry": "TAE_W4-17_41",
+          "difference": 0.025387555269959006,
+          "selected": false
+        },
+        {
+          "index": 1251,
+          "entry": "TAE_W4-17_42",
+          "difference": 0.029592202074858527,
+          "selected": false
+        },
+        {
+          "index": 1252,
+          "entry": "TAE_W4-17_43",
+          "difference": 0.08428162151562638,
+          "selected": false
+        },
+        {
+          "index": 1253,
+          "entry": "TAE_W4-17_44",
+          "difference": 0.0503186841334003,
+          "selected": false
+        },
+        {
+          "index": 1254,
+          "entry": "TAE_W4-17_45",
+          "difference": 0.04036462947208662,
+          "selected": false
+        },
+        {
+          "index": 1255,
+          "entry": "TAE_W4-17_46",
+          "difference": 0.12575537550942562,
+          "selected": false
+        },
+        {
+          "index": 1256,
+          "entry": "TAE_W4-17_47",
+          "difference": 0.05466830427089544,
+          "selected": false
+        },
+        {
+          "index": 1258,
+          "entry": "TAE_W4-17_49",
+          "difference": 0.019988935741148555,
+          "selected": false
+        },
+        {
+          "index": 1259,
+          "entry": "TAE_W4-17_50",
+          "difference": 0.1049708002633881,
+          "selected": false
+        },
+        {
+          "index": 1263,
+          "entry": "TAE_W4-17_54",
+          "difference": 0.038241535470367426,
+          "selected": false
+        },
+        {
+          "index": 1264,
+          "entry": "TAE_W4-17_55",
+          "difference": 0.03008466346732664,
+          "selected": false
+        },
+        {
+          "index": 1265,
+          "entry": "TAE_W4-17_56",
+          "difference": 0.04102775014231471,
+          "selected": false
+        },
+        {
+          "index": 1266,
+          "entry": "TAE_W4-17_57",
+          "difference": 0.033289891423881494,
+          "selected": false
+        },
+        {
+          "index": 1267,
+          "entry": "TAE_W4-17_58",
+          "difference": 0.02372685871924713,
+          "selected": false
+        },
+        {
+          "index": 1268,
+          "entry": "TAE_W4-17_59",
+          "difference": 0.020790786173198857,
+          "selected": false
+        },
+        {
+          "index": 1269,
+          "entry": "TAE_W4-17_60",
+          "difference": 0.01814667071610877,
+          "selected": false
+        },
+        {
+          "index": 1270,
+          "entry": "TAE_W4-17_61",
+          "difference": 0.03194058285124041,
+          "selected": false
+        },
+        {
+          "index": 1271,
+          "entry": "TAE_W4-17_62",
+          "difference": 0.019882576163479566,
+          "selected": false
+        },
+        {
+          "index": 1272,
+          "entry": "TAE_W4-17_63",
+          "difference": 0.025051184487257537,
+          "selected": false
+        },
+        {
+          "index": 1273,
+          "entry": "TAE_W4-17_64",
+          "difference": 0.01922988934198358,
+          "selected": false
+        },
+        {
+          "index": 1274,
+          "entry": "TAE_W4-17_65",
+          "difference": 0.02144060120849825,
+          "selected": false
+        },
+        {
+          "index": 1275,
+          "entry": "TAE_W4-17_66",
+          "difference": 0.027335778949392736,
+          "selected": false
+        },
+        {
+          "index": 1276,
+          "entry": "TAE_W4-17_67",
+          "difference": 0.016587028292077484,
+          "selected": false
+        },
+        {
+          "index": 1277,
+          "entry": "TAE_W4-17_68",
+          "difference": 0.06673539626067596,
+          "selected": false
+        },
+        {
+          "index": 1278,
+          "entry": "TAE_W4-17_69",
+          "difference": 0.039999152002116956,
+          "selected": false
+        },
+        {
+          "index": 1281,
+          "entry": "TAE_W4-17_73",
+          "difference": 0.01850278411096122,
+          "selected": false
+        },
+        {
+          "index": 1282,
+          "entry": "TAE_W4-17_76",
+          "difference": 0.028409260332900206,
+          "selected": false
+        },
+        {
+          "index": 1283,
+          "entry": "TAE_W4-17_77",
+          "difference": 0.02226568103025927,
+          "selected": false
+        },
+        {
+          "index": 1284,
+          "entry": "TAE_W4-17_81",
+          "difference": 0.01958817244273078,
+          "selected": false
+        },
+        {
+          "index": 1286,
+          "entry": "TAE_W4-17_83",
+          "difference": 0.02667762513869089,
+          "selected": false
+        },
+        {
+          "index": 1287,
+          "entry": "TAE_W4-17_84",
+          "difference": 0.03278370251504413,
+          "selected": false
+        },
+        {
+          "index": 1288,
+          "entry": "TAE_W4-17_85",
+          "difference": 0.05761106358371179,
+          "selected": false
+        },
+        {
+          "index": 1289,
+          "entry": "TAE_W4-17_86",
+          "difference": 0.09216143967599803,
+          "selected": false
+        },
+        {
+          "index": 1290,
+          "entry": "TAE_W4-17_87",
+          "difference": 0.0886639573286224,
+          "selected": false
+        },
+        {
+          "index": 1291,
+          "entry": "TAE_W4-17_88",
+          "difference": 0.08865455903942349,
+          "selected": false
+        },
+        {
+          "index": 1292,
+          "entry": "TAE_W4-17_89",
+          "difference": 0.11441431228386147,
+          "selected": false
+        },
+        {
+          "index": 1293,
+          "entry": "TAE_W4-17_90",
+          "difference": 0.04839737843109404,
+          "selected": false
+        },
+        {
+          "index": 1294,
+          "entry": "TAE_W4-17_91",
+          "difference": 0.06301848792885392,
+          "selected": false
+        },
+        {
+          "index": 1295,
+          "entry": "TAE_W4-17_92",
+          "difference": 0.05943302674389725,
+          "selected": false
+        },
+        {
+          "index": 1296,
+          "entry": "TAE_W4-17_93",
+          "difference": 0.059781842033539895,
+          "selected": false
+        },
+        {
+          "index": 1297,
+          "entry": "TAE_W4-17_94",
+          "difference": 0.036227694917154885,
+          "selected": false
+        },
+        {
+          "index": 1298,
+          "entry": "TAE_W4-17_95",
+          "difference": 0.0197014271693438,
+          "selected": false
+        },
+        {
+          "index": 1299,
+          "entry": "TAE_W4-17_96",
+          "difference": 0.13306604616623902,
+          "selected": false
+        },
+        {
+          "index": 1300,
+          "entry": "TAE_W4-17_97",
+          "difference": 0.05130932222639738,
+          "selected": false
+        },
+        {
+          "index": 1303,
+          "entry": "TAE_W4-17_101",
+          "difference": 0.03992002333683611,
+          "selected": false
+        },
+        {
+          "index": 1307,
+          "entry": "TAE_W4-17_107",
+          "difference": 0.040163733764838706,
+          "selected": false
+        },
+        {
+          "index": 1308,
+          "entry": "TAE_W4-17_108",
+          "difference": 0.09887135591153526,
+          "selected": false
+        },
+        {
+          "index": 1309,
+          "entry": "TAE_W4-17_109",
+          "difference": 0.02778811523662485,
+          "selected": false
+        },
+        {
+          "index": 1311,
+          "entry": "TAE_W4-17_111",
+          "difference": 0.04106837238468075,
+          "selected": false
+        },
+        {
+          "index": 1317,
+          "entry": "TAE_W4-17_117",
+          "difference": 0.029814535908604212,
+          "selected": false
+        },
+        {
+          "index": 1318,
+          "entry": "TAE_W4-17_118",
+          "difference": 0.025646376108750764,
+          "selected": false
+        },
+        {
+          "index": 1319,
+          "entry": "TAE_W4-17_119",
+          "difference": 0.04918231324931442,
+          "selected": false
+        },
+        {
+          "index": 1320,
+          "entry": "TAE_W4-17_120",
+          "difference": 0.028012211359546076,
+          "selected": false
+        },
+        {
+          "index": 1321,
+          "entry": "TAE_W4-17_121",
+          "difference": 0.025341752669100197,
+          "selected": false
+        },
+        {
+          "index": 1322,
+          "entry": "TAE_W4-17_122",
+          "difference": 0.025336608832647097,
+          "selected": false
+        },
+        {
+          "index": 1323,
+          "entry": "TAE_W4-17_123",
+          "difference": 0.02044135563832716,
+          "selected": false
+        },
+        {
+          "index": 1324,
+          "entry": "TAE_W4-17_124",
+          "difference": 0.02535753611159926,
+          "selected": false
+        },
+        {
+          "index": 1326,
+          "entry": "TAE_W4-17_126",
+          "difference": 0.018552902909627345,
+          "selected": false
+        },
+        {
+          "index": 1327,
+          "entry": "TAE_W4-17_127",
+          "difference": 0.017474113645452788,
+          "selected": false
+        },
+        {
+          "index": 1332,
+          "entry": "TAE_W4-17_132",
+          "difference": 0.027774640472921344,
+          "selected": false
+        },
+        {
+          "index": 1333,
+          "entry": "TAE_W4-17_133",
+          "difference": 0.020559601030913394,
+          "selected": false
+        },
+        {
+          "index": 1335,
+          "entry": "TAE_W4-17_135",
+          "difference": 0.01964017583397316,
+          "selected": false
+        },
+        {
+          "index": 1339,
+          "entry": "TAE_W4-17_139",
+          "difference": 0.04660493134341589,
+          "selected": false
+        },
+        {
+          "index": 1340,
+          "entry": "TAE_W4-17_140",
+          "difference": 0.015113442212766469,
+          "selected": false
+        },
+        {
+          "index": 1341,
+          "entry": "TAE_W4-17_141",
+          "difference": 0.06729053019724866,
+          "selected": false
+        },
+        {
+          "index": 1342,
+          "entry": "TAE_W4-17_142",
+          "difference": 0.09026448227148792,
+          "selected": false
+        },
+        {
+          "index": 1347,
+          "entry": "TAE_W4-17_147",
+          "difference": 0.04590182740172037,
+          "selected": false
+        },
+        {
+          "index": 1348,
+          "entry": "TAE_W4-17_148",
+          "difference": 0.04560267293311761,
+          "selected": false
+        },
+        {
+          "index": 1358,
+          "entry": "TAE_W4-17_160",
+          "difference": 0.038068894876078056,
+          "selected": false
+        },
+        {
+          "index": 1360,
+          "entry": "TAE_W4-17_163",
+          "difference": 0.06341921969157596,
+          "selected": false
+        },
+        {
+          "index": 1361,
+          "entry": "TAE_W4-17_164",
+          "difference": 0.06075755933534702,
+          "selected": false
+        },
+        {
+          "index": 1362,
+          "entry": "TAE_W4-17_165",
+          "difference": 0.04093955338644348,
+          "selected": false
+        },
+        {
+          "index": 1363,
+          "entry": "TAE_W4-17_166",
+          "difference": 0.05179061193676397,
+          "selected": false
+        },
+        {
+          "index": 1364,
+          "entry": "TAE_W4-17_167",
+          "difference": 0.05029987042364247,
+          "selected": false
+        },
+        {
+          "index": 1365,
+          "entry": "TAE_W4-17_168",
+          "difference": 0.04001903921864301,
+          "selected": false
+        },
+        {
+          "index": 1367,
+          "entry": "TAE_W4-17_170",
+          "difference": 0.10822722442309422,
+          "selected": false
+        },
+        {
+          "index": 1368,
+          "entry": "TAE_W4-17_171",
+          "difference": 0.027576827079521495,
+          "selected": false
+        },
+        {
+          "index": 1369,
+          "entry": "TAE_W4-17_172",
+          "difference": 0.05349084988480128,
+          "selected": false
+        },
+        {
+          "index": 1370,
+          "entry": "TAE_W4-17_173",
+          "difference": 0.06567205620427673,
+          "selected": false
+        },
+        {
+          "index": 1371,
+          "entry": "TAE_W4-17_174",
+          "difference": 0.05163068938653651,
+          "selected": false
+        },
+        {
+          "index": 1372,
+          "entry": "TAE_W4-17_175",
+          "difference": 0.054071459228783945,
+          "selected": false
+        },
+        {
+          "index": 1373,
+          "entry": "TAE_W4-17_176",
+          "difference": 0.06403387064764172,
+          "selected": false
+        },
+        {
+          "index": 1374,
+          "entry": "TAE_W4-17_177",
+          "difference": 0.04900008957631128,
+          "selected": false
+        },
+        {
+          "index": 1375,
+          "entry": "TAE_W4-17_180",
+          "difference": 0.33761453491378823,
+          "selected": false
+        },
+        {
+          "index": 1376,
+          "entry": "TAE_W4-17_181",
+          "difference": 0.0166929431382312,
+          "selected": false
+        },
+        {
+          "index": 1379,
+          "entry": "TAE_W4-17_184",
+          "difference": 0.017248683555126796,
+          "selected": false
+        },
+        {
+          "index": 1380,
+          "entry": "TAE_W4-17_185",
+          "difference": 0.023496060897637228,
+          "selected": false
+        },
+        {
+          "index": 1381,
+          "entry": "TAE_W4-17_186",
+          "difference": 0.016470184800122686,
+          "selected": false
+        },
+        {
+          "index": 1382,
+          "entry": "TAE_W4-17_187",
+          "difference": 0.10703423994784357,
+          "selected": false
+        },
+        {
+          "index": 1383,
+          "entry": "TAE_W4-17_188",
+          "difference": 0.015005343310448699,
+          "selected": false
+        },
+        {
+          "index": 1386,
+          "entry": "TAE_W4-17_191",
+          "difference": 0.029089805977814933,
+          "selected": false
+        },
+        {
+          "index": 1387,
+          "entry": "TAE_W4-17_192",
+          "difference": 0.024450170829138165,
+          "selected": false
+        },
+        {
+          "index": 1388,
+          "entry": "TAE_W4-17_193",
+          "difference": 0.08565577885744574,
+          "selected": false
+        },
+        {
+          "index": 1393,
+          "entry": "TAE_W4-17_198",
+          "difference": 0.04711602037699008,
+          "selected": false
+        },
+        {
+          "index": 1394,
+          "entry": "TAE_W4-17_199",
+          "difference": 0.16786965905449475,
+          "selected": false
+        },
+        {
+          "index": 1395,
+          "entry": "TAE_W4-17_200",
+          "difference": 0.06365767767154172,
+          "selected": false
+        },
+        {
+          "index": 1396,
+          "entry": "3d4dIPSS_1",
+          "difference": 0.1620327009455525,
+          "selected": false
+        },
+        {
+          "index": 1398,
+          "entry": "3d4dIPSS_3",
+          "difference": 0.2110906071644069,
+          "selected": false
+        },
+        {
+          "index": 1399,
+          "entry": "3d4dIPSS_4",
+          "difference": 0.027551387002794015,
+          "selected": false
+        },
+        {
+          "index": 1400,
+          "entry": "3d4dIPSS_5",
+          "difference": 0.1095089035854346,
+          "selected": false
+        },
+        {
+          "index": 1401,
+          "entry": "3d4dIPSS_6",
+          "difference": 0.08038689569248442,
+          "selected": false
+        },
+        {
+          "index": 1402,
+          "entry": "3d4dIPSS_7",
+          "difference": 0.01946738691381417,
+          "selected": false
+        },
+        {
+          "index": 1407,
+          "entry": "3d4dIPSS_12",
+          "difference": 0.021719372234944585,
+          "selected": false
+        },
+        {
+          "index": 1409,
+          "entry": "3d4dIPSS_14",
+          "difference": 0.024738960823760356,
+          "selected": false
+        },
+        {
+          "index": 1410,
+          "entry": "3d4dIPSS_15",
+          "difference": 0.029315066941393388,
+          "selected": false
+        },
+        {
+          "index": 1411,
+          "entry": "3d4dIPSS_16",
+          "difference": 0.03975177020186298,
+          "selected": false
+        },
+        {
+          "index": 1412,
+          "entry": "3d4dIPSS_17",
+          "difference": 0.041399886954630497,
+          "selected": false
+        },
+        {
+          "index": 1416,
+          "entry": "3d4dIPSS_21",
+          "difference": 0.21734393888835926,
+          "selected": false
+        },
+        {
+          "index": 1417,
+          "entry": "3d4dIPSS_22",
+          "difference": 0.07574975036058236,
+          "selected": false
+        },
+        {
+          "index": 1418,
+          "entry": "3d4dIPSS_23",
+          "difference": 0.16398166385339888,
+          "selected": false
+        },
+        {
+          "index": 1419,
+          "entry": "3d4dIPSS_24",
+          "difference": 0.10259464991961575,
+          "selected": false
+        },
+        {
+          "index": 1420,
+          "entry": "3d4dIPSS_26",
+          "difference": 0.1408021027922872,
+          "selected": false
+        },
+        {
+          "index": 1422,
+          "entry": "3d4dIPSS_28",
+          "difference": 0.03951186807125675,
+          "selected": false
+        },
+        {
+          "index": 1423,
+          "entry": "3d4dIPSS_29",
+          "difference": 0.034851632302770434,
+          "selected": false
+        },
+        {
+          "index": 1426,
+          "entry": "3d4dIPSS_32",
+          "difference": 0.03315714998989552,
+          "selected": false
+        },
+        {
+          "index": 1427,
+          "entry": "3d4dIPSS_35",
+          "difference": 0.016225598881023002,
+          "selected": false
+        },
+        {
+          "index": 1446,
+          "entry": "CUAGAU_23",
+          "difference": 0.021968424298308642,
+          "selected": false
+        },
+        {
+          "index": 1451,
+          "entry": "CUAGAU_28",
+          "difference": 0.04531407055077872,
+          "selected": false
+        },
+        {
+          "index": 1452,
+          "entry": "CUAGAU_29",
+          "difference": 0.03198985975109938,
+          "selected": false
+        },
+        {
+          "index": 1453,
+          "entry": "CUAGAU_30",
+          "difference": 0.051556163453074205,
+          "selected": false
+        },
+        {
+          "index": 1454,
+          "entry": "CUAGAU_31",
+          "difference": 0.01854068035217796,
+          "selected": false
+        },
+        {
+          "index": 1455,
+          "entry": "CUAGAU_32",
+          "difference": 0.05980224565907622,
+          "selected": false
+        },
+        {
+          "index": 1457,
+          "entry": "CUAGAU_36",
+          "difference": 0.08220554697685498,
+          "selected": false
+        },
+        {
+          "index": 1458,
+          "entry": "CUAGAU_37",
+          "difference": 0.14790454189025834,
+          "selected": false
+        },
+        {
+          "index": 1459,
+          "entry": "CUAGAU_38",
+          "difference": 0.07074619425344084,
+          "selected": false
+        },
+        {
+          "index": 1460,
+          "entry": "CUAGAU_39",
+          "difference": 0.05700587592175675,
+          "selected": false
+        },
+        {
+          "index": 1461,
+          "entry": "CUAGAU_40",
+          "difference": 0.0488512726771587,
+          "selected": false
+        },
+        {
+          "index": 1462,
+          "entry": "CUAGAU_41",
+          "difference": 0.061040104451412024,
+          "selected": false
+        },
+        {
+          "index": 1463,
+          "entry": "CUAGAU_42",
+          "difference": 0.07287090138741424,
+          "selected": false
+        },
+        {
+          "index": 1464,
+          "entry": "MOR13_1",
+          "difference": 0.04068202067461208,
+          "selected": false
+        },
+        {
+          "index": 1468,
+          "entry": "MOR13_5",
+          "difference": 0.028673076040868998,
+          "selected": false
+        },
+        {
+          "index": 1469,
+          "entry": "MOR13_6",
+          "difference": 0.022758428812468375,
+          "selected": false
+        },
+        {
+          "index": 1470,
+          "entry": "MOR13_7",
+          "difference": 0.06121115721037618,
+          "selected": false
+        },
+        {
+          "index": 1471,
+          "entry": "MOR13_8",
+          "difference": 0.2605020580995716,
+          "selected": false
+        },
+        {
+          "index": 1472,
+          "entry": "MOR13_9",
+          "difference": 0.03650168742764668,
+          "selected": false
+        },
+        {
+          "index": 1473,
+          "entry": "MOR13_10",
+          "difference": 0.047877694058950156,
+          "selected": false
+        },
+        {
+          "index": 1474,
+          "entry": "MOR13_11",
+          "difference": 0.02402956264310619,
+          "selected": false
+        },
+        {
+          "index": 1475,
+          "entry": "MOR13_12",
+          "difference": 0.0720709813034019,
+          "selected": false
+        },
+        {
+          "index": 1478,
+          "entry": "TMB11_2",
+          "difference": 0.15753802476056972,
+          "selected": false
+        },
+        {
+          "index": 1479,
+          "entry": "TMB11_3",
+          "difference": 0.026235720065593292,
+          "selected": false
+        },
+        {
+          "index": 1481,
+          "entry": "TMB11_5",
+          "difference": 0.07188911569593927,
+          "selected": false
+        },
+        {
+          "index": 1482,
+          "entry": "TMB11_6",
+          "difference": 0.0672637817158923,
+          "selected": false
+        },
+        {
+          "index": 1483,
+          "entry": "TMB11_7",
+          "difference": 0.05090845250531552,
+          "selected": false
+        },
+        {
+          "index": 1484,
+          "entry": "TMB11_8",
+          "difference": 0.08933955926133748,
+          "selected": false
+        },
+        {
+          "index": 1485,
+          "entry": "TMB11_9",
+          "difference": 0.04533338310708264,
+          "selected": false
+        },
+        {
+          "index": 1486,
+          "entry": "TMB11_10",
+          "difference": 0.019425052633843948,
+          "selected": false
+        },
+        {
+          "index": 1488,
+          "entry": "TMD10_1",
+          "difference": 0.03005680416677311,
+          "selected": false
+        },
+        {
+          "index": 1489,
+          "entry": "TMD10_2",
+          "difference": 0.23219009926678277,
+          "selected": false
+        },
+        {
+          "index": 1490,
+          "entry": "TMD10_3",
+          "difference": 0.2102565249850197,
+          "selected": false
+        },
+        {
+          "index": 1491,
+          "entry": "TMD10_4",
+          "difference": 0.056317924567426736,
+          "selected": false
+        },
+        {
+          "index": 1493,
+          "entry": "TMD10_6",
+          "difference": 0.06802598551565123,
+          "selected": false
+        },
+        {
+          "index": 1494,
+          "entry": "TMD10_7",
+          "difference": 0.04105160851940555,
+          "selected": false
+        },
+        {
+          "index": 1497,
+          "entry": "TMD10_10",
+          "difference": 0.022873990551691578,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "constrained14",
+      "objective": 2.2619917535012584,
+      "solver_objective": 2.2619917535018885,
+      "gap": 0.25327200412373335,
+      "nodes": 171039.0,
+      "solutions": 10,
+      "status": 9,
+      "runtime": 600.0383808612823,
+      "semilocal": 10,
+      "selected_rows": 242,
+      "selected_max": 0.014985000000000206,
+      "full_max": 0.014985000000000206,
+      "monitor75302": 0.28100841083417133,
+      "advancement": true,
+      "grid_start_feasible": false,
+      "violations": []
+    },
+    {
+      "name": "restart14",
+      "objective": 2.2619917535012584,
+      "solver_objective": 2.2619917535018885,
+      "gap": 0.2648080419160631,
+      "nodes": 139124.0,
+      "solutions": 1,
+      "status": 9,
+      "runtime": 600.0312321186066,
+      "semilocal": 10,
+      "selected_rows": 242,
+      "selected_max": 0.014985000000000206,
+      "full_max": 0.014985000000000206,
+      "monitor75302": 0.28100841083417133,
+      "advancement": true,
+      "grid_start_feasible": true,
+      "violations": []
+    },
+    {
+      "name": "constrained80",
+      "objective": 0.6154784363537843,
+      "solver_objective": 0.615478436354806,
+      "gap": 0.3035220397720755,
+      "nodes": 209158.0,
+      "solutions": 10,
+      "status": 9,
+      "runtime": 600.0252039432526,
+      "semilocal": 76,
+      "selected_rows": 242,
+      "selected_max": 0.014985000000055126,
+      "full_max": 0.034888727847307135,
+      "monitor75302": 0.7296782427613931,
+      "advancement": false,
+      "grid_start_feasible": false,
+      "violations": [
+        {
+          "index": 330,
+          "entry": "PCONF21_15",
+          "difference": 0.01804994498733429,
+          "selected": false
+        },
+        {
+          "index": 514,
+          "entry": "CT20_10",
+          "difference": 0.018984477275906093,
+          "selected": false
+        },
+        {
+          "index": 519,
+          "entry": "CT20_15",
+          "difference": 0.01530963203964624,
+          "selected": false
+        },
+        {
+          "index": 795,
+          "entry": "RG10N_105",
+          "difference": 0.01665240192938726,
+          "selected": false
+        },
+        {
+          "index": 801,
+          "entry": "RG10N_189",
+          "difference": 0.02270079893534232,
+          "selected": false
+        },
+        {
+          "index": 804,
+          "entry": "RG10N_249",
+          "difference": 0.016500175391085333,
+          "selected": false
+        },
+        {
+          "index": 923,
+          "entry": "ALK8_1",
+          "difference": 0.016093736275881874,
+          "selected": false
+        },
+        {
+          "index": 1013,
+          "entry": "BDE99_78",
+          "difference": 0.018537987649122966,
+          "selected": false
+        },
+        {
+          "index": 1124,
+          "entry": "G21IP_2",
+          "difference": 0.015442684770857331,
+          "selected": false
+        },
+        {
+          "index": 1401,
+          "entry": "3d4dIPSS_6",
+          "difference": 0.021280342795932775,
+          "selected": false
+        },
+        {
+          "index": 1402,
+          "entry": "3d4dIPSS_7",
+          "difference": 0.02458658856907672,
+          "selected": false
+        },
+        {
+          "index": 1412,
+          "entry": "3d4dIPSS_17",
+          "difference": 0.034888727847307135,
+          "selected": false
+        },
+        {
+          "index": 1494,
+          "entry": "TMD10_7",
+          "difference": 0.02958204997746392,
+          "selected": false
+        },
+        {
+          "index": 1495,
+          "entry": "TMD10_8",
+          "difference": 0.030815911725861175,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "restart80",
+      "not_run": true
+    }
+  ],
+  "artifact_hashes": {
+    "constrained14_audit.json": "d0c71416340ee8fb46220be656972d67b4a7e6d47b8f903d95471d42e969c324",
+    "constrained80_audit.json": "8ee0bd7111d5abb7bf604661924a86c89081cd7ee9de7b141049a8df155a81fe",
+    "discovery14_audit.json": "cf8ff114581e419ed5b16dfec09d3911bc1ac5f0d95a18c35cb53c5ae616f893",
+    "discovery80_audit.json": "896c43d4f8b8d984191cbe278a70781d3e77976d09f97278fc4316decdc51f36",
+    "failure.json": "e3b24912f871a98a5a4be2b4e5b8e0125df8c910e234f0da9218f96fde7c2b2a",
+    "identity.json": "b02f9c63087fceea3ff15ee3159e23ebd86da2111473b387a65ef57808da95a3",
+    "restart14_audit.json": "27a2ad597b8a29089af833223f1bcdc07605ce714258d61f6e4b2ced2b0f3dc8",
+    "constrained14/coefficients.npy": "ca41f4b24798be84adc3d33d6c355da5af3e666f2eb3587df1952da655ae66c2",
+    "constrained14/grid_rows.npy": "dcd897c4e68b9d1dc31d77904e8e7eacc163a31e54d83fb5bd39a0d40359a9ac",
+    "constrained14/model.json": "3e3fa760aa05ad4f142a8b62fc6ad3de65e5098fb3337bbb2761233e4f95b154",
+    "constrained14/model.mps.gz": "9b8f44596db5db7cc0e55b25cba453d5fbfc41032ce1a0d252e3d6bd2bdb3166",
+    "constrained14/progress.jsonl": "c996c7f2d02f4ba69317a50f2c2369acf1a28b5d933a58d421676375615a5581",
+    "constrained14/result.json": "67fc5988c87dac83ac4da53fe1a082569b52eccb82c673536de071177eb14d65",
+    "constrained14/selection.npy": "1f861d7c9af42fcdcce75f6db6d41f030f29765fc8630afb72ba7a2c5f449448",
+    "constrained14/start_audit.json": "22b5c332f05afb914bdedd466a8bdd22baef6963ebfcbb4229c7507d27ced570",
+    "constrained14/start_coefficients.npy": "75abb01b51a0405f3f08475871c8062089243d25af241b949d45fe8831e2c897",
+    "constrained14/start_selection.npy": "5e188e135281c6afe1f7c2fd3da0d5ad13990c7268a78435fed8fb533f17e4ad",
+    "constrained80/coefficients.npy": "9296df3ae086749b509cd233653334ebd0851d2b4854d3e20071a9a8f6d02e71",
+    "constrained80/grid_rows.npy": "dcd897c4e68b9d1dc31d77904e8e7eacc163a31e54d83fb5bd39a0d40359a9ac",
+    "constrained80/model.json": "3e3fa760aa05ad4f142a8b62fc6ad3de65e5098fb3337bbb2761233e4f95b154",
+    "constrained80/model.mps.gz": "ff4133396ac8db52d000ea79fd3de0f47aea6e5a43fc5461b0862c71c7f1c0e6",
+    "constrained80/progress.jsonl": "ebd7268dcd9c6cdb16b7e0d75ed07f017873bea9f656f25543a88d9842be0b40",
+    "constrained80/result.json": "35d35baeb5cba6ee3fd3ea910b2170658f76affb037ecd11c56677205247abca",
+    "constrained80/selection.npy": "1e3a760fabedcd1cecdfd2e046370e3a2d84733d801ab5b2ea0bbede1ba0103d",
+    "constrained80/start_audit.json": "75dfbde4ae0dec24a7dafc3d3d1fa097a16a457ebd52b378a12012fea75c9801",
+    "constrained80/start_coefficients.npy": "b03e44a13b165aaf01c9b7707dacda64bc1ca5e3b847e85b5d9c87c255296ae4",
+    "constrained80/start_selection.npy": "8764402f7049e98ecc913bdd4d5dc79a1f23be887caa3884d4013558dbe9383e",
+    "discovery14/coefficients.npy": "75abb01b51a0405f3f08475871c8062089243d25af241b949d45fe8831e2c897",
+    "discovery14/grid_rows.npy": "e734dac55ea9fbbe782af2d8c02c3c5992131906228afb2aaaf137d6f3ed74db",
+    "discovery14/model.json": "4685ea4965593a1a65a3d80d224e8301e4ae2b3f0a50466795fd19d78e789e37",
+    "discovery14/model.mps.gz": "acd5c4a4d00a075cd6a0df0b525a2885da7737ca81ddcc914748e8ab898c3287",
+    "discovery14/progress.jsonl": "06340d2df152e14344232812be3312b63dba20a8da2f15c0e0a5cda27aeccb92",
+    "discovery14/result.json": "d11198785e9794b9d074c8a2181848f7571386ef433974767472c877530bba27",
+    "discovery14/selection.npy": "5e188e135281c6afe1f7c2fd3da0d5ad13990c7268a78435fed8fb533f17e4ad",
+    "discovery14/start_audit.json": "c093f7b54cc878f5412be25d0b6f464f900c543112d673dfffd0aea7855de005",
+    "discovery14/start_coefficients.npy": "75abb01b51a0405f3f08475871c8062089243d25af241b949d45fe8831e2c897",
+    "discovery14/start_selection.npy": "ffce58f4eca17650936bc13a4ba9ece57095084295381dc1388f4e83ffb643b5",
+    "discovery80/coefficients.npy": "b03e44a13b165aaf01c9b7707dacda64bc1ca5e3b847e85b5d9c87c255296ae4",
+    "discovery80/grid_rows.npy": "e734dac55ea9fbbe782af2d8c02c3c5992131906228afb2aaaf137d6f3ed74db",
+    "discovery80/model.json": "4685ea4965593a1a65a3d80d224e8301e4ae2b3f0a50466795fd19d78e789e37",
+    "discovery80/model.mps.gz": "14a585fc289f5f0048943998cd8fc94b3c17199c16d7cb467dff302a7cd442da",
+    "discovery80/progress.jsonl": "5a046a54535a7fec47550bab94caa0717684ae2a86c5f369789baf4d8342a449",
+    "discovery80/result.json": "0de63e5344cc94050fb4bc8c8d50a7c1f12a89a4e3cf9e23565ca02aae36d6de",
+    "discovery80/selection.npy": "8764402f7049e98ecc913bdd4d5dc79a1f23be887caa3884d4013558dbe9383e",
+    "discovery80/start_audit.json": "c093f7b54cc878f5412be25d0b6f464f900c543112d673dfffd0aea7855de005",
+    "discovery80/start_coefficients.npy": "75abb01b51a0405f3f08475871c8062089243d25af241b949d45fe8831e2c897",
+    "discovery80/start_selection.npy": "ffce58f4eca17650936bc13a4ba9ece57095084295381dc1388f4e83ffb643b5",
+    "restart14/coefficients.npy": "ca41f4b24798be84adc3d33d6c355da5af3e666f2eb3587df1952da655ae66c2",
+    "restart14/grid_rows.npy": "dcd897c4e68b9d1dc31d77904e8e7eacc163a31e54d83fb5bd39a0d40359a9ac",
+    "restart14/model.json": "3e3fa760aa05ad4f142a8b62fc6ad3de65e5098fb3337bbb2761233e4f95b154",
+    "restart14/model.mps.gz": "f32b02edbbb7e3a7bbae1a13785963bcc41a6ebaf429da3a864f8e1fedf58a2a",
+    "restart14/progress.jsonl": "944d86b12792fe3007309c8b84ac14e69f7ec0a28cd02f705f9f1377e9733166",
+    "restart14/result.json": "5ff6d18acd0994aaa3883621e13f7235b83f4d3845be9e2670d51e56e6652769",
+    "restart14/selection.npy": "00705622f6a7a4c7cf240e88dddeab7e6434d4c6f4dfb49086c4c62fe22073f1",
+    "restart14/start_audit.json": "40d924afb513686851fc642c523cb670588df01adf696daf6c8e1f67d18a7d0a",
+    "restart14/start_coefficients.npy": "ca41f4b24798be84adc3d33d6c355da5af3e666f2eb3587df1952da655ae66c2",
+    "restart14/start_selection.npy": "1f861d7c9af42fcdcce75f6db6d41f030f29765fc8630afb72ba7a2c5f449448",
+    "source/coefficients.npy": "75abb01b51a0405f3f08475871c8062089243d25af241b949d45fe8831e2c897",
+    "source/selection.npy": "ffce58f4eca17650936bc13a4ba9ece57095084295381dc1388f4e83ffb643b5"
+  }
+}

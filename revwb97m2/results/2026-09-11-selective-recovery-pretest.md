@@ -1,0 +1,16 @@
+# COACH selective recovery — implementation ready for pre-test commit
+
+## Changes and purpose
+
+- `revwb97m2/selective_grid_v1.py`: versioned selector matches original COACH NumPy ranking: candidate top100 union then200additional high-L1 rows from remaining. Audit keeps selected/scientific constraints mandatory and records full99590/75302 maxima, violating row identities/magnitudes/selected flags. Unselected99590 violations require user review but do not stop advancement; final model review always required.
+- `revwb97m2/configs/selective_recovery_v1.yaml`: explicit approved override of historical all-grid hard gate, candidate counts,600s/16threads,K80 and non-bulk scope. Base scientific_spec and old overlay remain unchanged for historical hash verification.
+- `revwb97m2/scripts/selective_recovery_v1.py`: targeted constrained80 then restart80. Reuses frozen discovery14/80 from25790995, checks partial-source snapshot/release plus fresh original five-stage audits. Does not rewrite historical failure or claim old restart80 ran. Corrected row set is shared by both new solves. First start is discovery80 (may need solver repair); restart imports new constrained80. Direct objective,model dimensions,parameters,start arrays,grid diagnostics and gap checked again in read-only completed-artifact validation. Failed/absent incumbent or selected-constraint failure still stops.
+- `revwb97m2/scripts/freeze_selective_recovery_v1.py` and new manifest directory: freeze source/config/test/original-selector hashes and partial source audit; release_draft disabled. Freeze executed without tests or fitting. Operational source release and prior audit/test reports must be included in user's commit.
+- `revwb97m2/tests/test_selective_recovery_v1.py`:20 cases prepared: remaining-row coverage,deduplication,original-code parity including ties,small/invalid inputs,unselected reporting vs selected rejection,scientific rejection,75302monitoring,row identities,restart dependencies,disabled release and changed-policy rejection.
+- `revwb97m2/slurm/run_selective_recovery_v1.sh`: draft cm1/lr_qchem/condo_qchem,16CPU/32GiB/45min. Two600s solves plus initialization/readback. Must refresh live resources before release; no Slurm submission this turn.
+
+## Verification and next gate
+
+Python AST syntax for4new modules passes; bash -n launcher passes; git diff --check passes. These are preparation checks,NOT completed test suite or real-adapter validation. Pytest,WLS,solver runs and compute preflight intentionally await user's pre-test commit. Previous source/configuration files untouched; only new versioned files and operational reports added. Full-suite/real-source/349-row reconstruction and compute-model preflight are required after commit before release. Partial source arrays stay immutable; full-grid acceptance is not relabelled as passing when violations exist.
+
+Next after commit: run full tests,real source/row/audit readback and compute construction checks;review live resources/queue,enable new release only if gates pass,submit targeted K80/restart. Report unselected violations for user review after completion. No new orbitals,features,all1498enforcement,threshold changes,SOS1orproduction scan authorized by this checkpoint.

@@ -1,0 +1,14 @@
+{
+  "plan_sha256": "e2b48592fa5c8d4b3241c30739c4d43e04736003ce6e3248acce25fc1a8bfc91",
+  "commit": "5d096e1ae888d791a14ce50ef729adebaa391a92",
+  "submission_authorized": true,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "test_report": "revwb97m2/results/2026-09-11-expanded-validation-tests.json",
+  "test_report_sha256": "38dfb38f8584ab726b8f0312d1db2e7fbae87ffd6147365de55c2f4cfba08331",
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  }
+}
