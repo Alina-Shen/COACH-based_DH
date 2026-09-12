@@ -1,0 +1,15 @@
+{
+  "plan_sha256": "6503dfe32d2cd597a608d54558bc048ccb4c42951b63c60b3db52d337d679b27",
+  "commit": null,
+  "test_report": null,
+  "test_report_sha256": null,
+  "submission_authorized": false,
+  "tests_passed": false,
+  "resources_reviewed": false,
+  "wls_sessions_reserved_for_campaign": false,
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  }
+}
