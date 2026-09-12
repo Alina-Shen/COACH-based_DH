@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "commit": "d57e25e243b6bbf5e4667c1f3368979b8ff31777",
+  "plan_sha256": "6503dfe32d2cd597a608d54558bc048ccb4c42951b63c60b3db52d337d679b27",
+  "tests_passed": 417,
+  "seconds": 17.27,
+  "scope": "Committed regression suite, graph and input identity verification. Maximum-row compute build remains deferred until discovery releases WLS capacity.",
+  "compute_build_passed": false
+}

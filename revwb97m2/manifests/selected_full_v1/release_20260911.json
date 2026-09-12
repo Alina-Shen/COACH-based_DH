@@ -1,0 +1,13 @@
+{
+  "plan_sha256": "6503dfe32d2cd597a608d54558bc048ccb4c42951b63c60b3db52d337d679b27",
+  "commit": "d57e25e243b6bbf5e4667c1f3368979b8ff31777",
+  "test_report": "revwb97m2/results/2026-09-11-selected-full-tests.json",
+  "test_report_sha256": "227d5f4b0e3804e216f9c9d7f44919d681609fdad05c5dab5fbfdd5f26eb2d7a",
+  "submission_authorized": true,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "wls_sessions_reserved_for_campaign": true,
+  "route": {"partition": "cm1", "account": "lr_qchem", "qos": "condo_qchem"},
+  "build_preflight_sha256": "a7c3becc1846ffb5418cf7154abace0cc08b349fc87e785718641183e752e3a7",
+  "note": "User committed selected workflow and requested proceeding. Queue only behind both discoveries AND deferred maximum-row build preflight; no extra concurrent WLS session. Compute preflight is not yet passed. Grid job must depend on its successful completion; selected fits depend on grid job. Scientific settings unchanged."
+}
