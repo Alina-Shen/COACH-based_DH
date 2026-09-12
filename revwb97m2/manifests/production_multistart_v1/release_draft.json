@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "plan_sha256": "034ce9f435b3691ae3b66578b9548c16d6df3912eb03d7a5a770d8b628c7f7e3",
+  "commit": null,
+  "test_report": null,
+  "test_report_sha256": null,
+  "submission_authorized": false,
+  "tests_passed": false,
+  "resources_reviewed": false,
+  "prebulk_approved": false,
+  "run_name": "review_pending",
+  "route": {
+    "partition": "cm1",
+    "account": "lr_qchem",
+    "qos": "condo_qchem"
+  },
+  "note": "Route is a preview placeholder, not live resource review. Do not submit this draft."
+}
