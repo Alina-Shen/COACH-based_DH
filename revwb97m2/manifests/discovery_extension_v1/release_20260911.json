@@ -1,0 +1,12 @@
+{
+  "plan_sha256": "5655b58810624f499b5902a509da103f480f80a36a7ba563ad375704ca3cc8ea",
+  "commit": "4784dc6d367bc81260a248f2d11c1c1437342564",
+  "test_report": "revwb97m2/results/2026-09-11-discovery-extension-tests.json",
+  "test_report_sha256": "f2223744b8e4a4cc3abcfeb78f814960dc02a0ab352044b789947df48029dccd",
+  "submission_authorized": true,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "wls_sessions_reserved_for_campaign": true,
+  "route": {"partition": "cm1", "account": "lr_qchem", "qos": "condo_qchem"},
+  "note": "User committed extension and authorized next step retaining existing discoveries. Launch124 additional discovery solves only, afterok25796986, array0-123%2. Existing final results still need audits; no grid/selected pass authorized by this record."
+}

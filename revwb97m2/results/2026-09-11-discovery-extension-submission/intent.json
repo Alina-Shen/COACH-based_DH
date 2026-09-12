@@ -1,0 +1,10 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "revwb97m2/slurm/run_discovery_extension_v1.sh",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/discovery_extension_v1/release_20260911.json"
+  ],
+  "existing_active_tasks": 12,
+  "additional_tasks": 124
+}

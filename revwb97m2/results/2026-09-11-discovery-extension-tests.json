@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "commit": "4784dc6d367bc81260a248f2d11c1c1437342564",
+  "plan_sha256": "5655b58810624f499b5902a509da103f480f80a36a7ba563ad375704ca3cc8ea",
+  "tests_passed": 411,
+  "seconds": 16.29,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /global/home/users/yaoshen/.conda/envs/dh/bin/python -m pytest -q revwb97m2/tests",
+  "existing_k14_start_and_provenance_checks_passed": true,
+  "existing_k14_final_results_validated": false,
+  "reason": "Both original K14 fits still running; final completion audits remain required"
+}
