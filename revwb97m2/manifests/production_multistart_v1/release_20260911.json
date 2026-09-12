@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "plan_sha256": "9987b0eea89a95b0d25012f937e9fe854676fbf254eee3afa2ddcfa7f2902cb3",
+  "commit": "a67a7ed2d6c1458fae78258bad308208a00384d7",
+  "evidence_commit": "3cfdfeabc71112c078be4c3d3d368ab370cca165",
+  "test_report": "revwb97m2/results/2026-09-11-production-throttle-committed-tests.json",
+  "test_report_sha256": "40a51410a89f772556353e57c349ad144b6d2fa16c706dbb93d5007e4c18bc27",
+  "submission_authorized": true,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "prebulk_approved": true,
+  "wls_sessions_reserved_for_campaign": true,
+  "run_name": "coach_noisy56_20260911",
+  "route": {"partition": "cm1", "account": "lr_qchem", "qos": "condo_qchem"},
+  "note": "User explicitly approved real-fitting launch and reserved both WLS sessions. Live cm1 has five idle 48CPU/241732MiB nodes; user queue empty at launch review. No low-priority route; both fitting arrays throttled to two."
+}
