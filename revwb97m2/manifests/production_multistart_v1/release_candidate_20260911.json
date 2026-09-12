@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "plan_sha256": "9987b0eea89a95b0d25012f937e9fe854676fbf254eee3afa2ddcfa7f2902cb3",
+  "commit": "a67a7ed2d6c1458fae78258bad308208a00384d7",
+  "test_report": "revwb97m2/results/2026-09-11-production-throttle-committed-tests.json",
+  "test_report_sha256": "40a51410a89f772556353e57c349ad144b6d2fa16c706dbb93d5007e4c18bc27",
+  "submission_authorized": false,
+  "tests_passed": true,
+  "resources_reviewed": true,
+  "prebulk_approved": false,
+  "wls_sessions_reserved_for_campaign": false,
+  "run_name": "coach_noisy56_20260911",
+  "route": {"partition": "cm1", "account": "lr_qchem", "qos": "condo_qchem"},
+  "resource_review_time": "2026-09-11T19:38:27-07:00",
+  "note": "Disabled candidate. Refresh live capacity at launch; obtain explicit launch approval and confirmation that both WLS sessions are reserved. Create a separate authorized release, preserving this candidate."
+}

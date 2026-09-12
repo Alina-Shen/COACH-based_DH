@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "commit": "a67a7ed2d6c1458fae78258bad308208a00384d7",
+  "plan_sha256": "9987b0eea89a95b0d25012f937e9fe854676fbf254eee3afa2ddcfa7f2902cb3",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /global/home/users/yaoshen/.conda/envs/dh/bin/python -m pytest -q revwb97m2/tests",
+  "tests_passed": 407,
+  "seconds": 19.11,
+  "committed_identity_checks": 101,
+  "matrix_shape": [1498, 292],
+  "prior_build_preflight": 25795805,
+  "prior_preflight_publication_verified": true,
+  "production_builder_unchanged_from_preflight": true,
+  "production_authorized": false
+}
