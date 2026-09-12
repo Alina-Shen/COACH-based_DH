@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "commit": "488dba7ac0129b375797ed8057a00ba210ab6063",
+  "plan_sha256": "034ce9f435b3691ae3b66578b9548c16d6df3912eb03d7a5a770d8b628c7f7e3",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /global/home/users/yaoshen/.conda/envs/dh/bin/python -m pytest -q revwb97m2/tests",
+  "tests_passed": 405,
+  "seconds": 17.74,
+  "scope": "Committed unit/regression suite only; compute preflight recorded separately",
+  "production_authorized": false
+}
