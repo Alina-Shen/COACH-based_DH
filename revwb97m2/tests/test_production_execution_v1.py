@@ -59,7 +59,7 @@ def test_array_dependencies_and_no_requeue(tmp_path):
     one = s.command(route, tmp_path / 'release', '1')
     grid = s.command(route, tmp_path / 'release', 'grid', '123')
     two = s.command(route, tmp_path / 'release', '2', '124')
-    assert '--array=0-13' in one and '--array=0-41' in two
+    assert '--array=0-13%2' in one and '--array=0-41%2' in two
     assert not any(x.startswith('--array') for x in grid)
     assert '--dependency=afterok:123' in grid and '--dependency=afterok:124' in two
     assert all('--no-requeue' in cmd for cmd in [one, grid, two])
@@ -115,3 +115,14 @@ def test_one_failed_discovery_blocks_grid_publication(monkeypatch, tmp_path):
     with pytest.raises(ValueError, match='discovery invalid'):
         r.select_grid(tmp_path, r.planner.task_graph(), {}, [], None, write=True)
     assert not (tmp_path / 'grid_selection').exists()
+
+
+def test_wls_session_reservation_required():
+    with pytest.raises(ValueError, match='reserved'):
+        s.check_wls_capacity({'wls_concurrent_sessions': 2}, {})
+    s.check_wls_capacity({'wls_concurrent_sessions': 2}, {'wls_sessions_reserved_for_campaign': True})
+
+
+def test_wrong_wls_capacity_rejected():
+    with pytest.raises(ValueError, match='policy'):
+        s.check_wls_capacity({'wls_concurrent_sessions': 3}, {'wls_sessions_reserved_for_campaign': True})

@@ -20,11 +20,13 @@ def freeze():
     r.c.write(r.PLAN, dict(schema_version=1, graph_sha256=r.c.digest(r.GRAPH), hashes=hashes,
         output_parent='/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/fitting/production_multistart_v1',
         solves=len(g['tasks']), seconds_per_solve=7200, threads=16, memory_gib=32,
+        wls_concurrent_sessions=2,
         solve_wall_minutes=150, grid_wall_minutes=30, production_executor_implemented=True,
         selected_constraints_only=True, final_model_user_review=True, submission_authorized=False))
     r.c.write(r.PLAN.parent / 'release_draft.json', dict(schema_version=1,
         plan_sha256=r.c.digest(r.PLAN), commit=None, test_report=None, test_report_sha256=None,
         submission_authorized=False, tests_passed=False, resources_reviewed=False, prebulk_approved=False,
+        wls_sessions_reserved_for_campaign=False,
         run_name='review_pending', route=dict(partition='cm1', account='lr_qchem', qos='condo_qchem'),
         note='Route is a preview placeholder, not live resource review. Do not submit this draft.'))
     print('PASS frozen; production release disabled')

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "plan_sha256": "034ce9f435b3691ae3b66578b9548c16d6df3912eb03d7a5a770d8b628c7f7e3",
+  "plan_sha256": "9987b0eea89a95b0d25012f937e9fe854676fbf254eee3afa2ddcfa7f2902cb3",
   "commit": null,
   "test_report": null,
   "test_report_sha256": null,
@@ -8,6 +8,7 @@
   "tests_passed": false,
   "resources_reviewed": false,
   "prebulk_approved": false,
+  "wls_sessions_reserved_for_campaign": false,
   "run_name": "review_pending",
   "route": {
     "partition": "cm1",

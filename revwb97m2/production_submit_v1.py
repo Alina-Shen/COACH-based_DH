@@ -17,7 +17,7 @@ def command(route, release, phase, dependency=None):
     cmd = ['sbatch', '--parsable', '--no-requeue']
     cmd += [f'--{k}={route[k]}' for k in ('partition', 'account', 'qos')]
     if phase != 'grid':
-        cmd += ['--array=0-13' if phase == '1' else '--array=0-41']
+        cmd += ['--array=0-13%2' if phase == '1' else '--array=0-41%2']
     else:
         cmd += ['--time=00:30:00']
     if dependency is not None:
@@ -29,8 +29,16 @@ def check_capacity(active, additional):
     run.c.require(active >= 0 and active + additional <= 998, '998 active-task cap')
 
 
+def check_wls_capacity(plan, release):
+    run.c.require(plan.get('wls_concurrent_sessions') == 2, 'WLS capacity policy')
+    # Array throttles do not govern other campaigns or interactive environments.
+    run.c.require(release.get('wls_sessions_reserved_for_campaign') is True,
+                  'confirm both WLS sessions reserved for this campaign')
+
+
 def submit(release):
     p, r, g, root = run.check(release)
+    check_wls_capacity(p, r)
     run.c.require(getpass.getuser() == 'yaoshen', 'submission user')
     # Exclusive creation makes partial or ambiguous submissions stop for review.
     root.mkdir(parents=True, exist_ok=False)
