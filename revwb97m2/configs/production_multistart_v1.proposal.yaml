@@ -1,0 +1,56 @@
+# Review-only proposal: not consumed by any current runner; no release authority.
+schema_version: 1
+status: seed_approved_execution_not_released
+bulk_authorized: false
+model: R2_coachform_292
+budgets: [14, 24, 32, 40, 48, 64, 80]
+seconds_per_solve: 7200
+threads: 16
+repeats_per_start: 2
+repeat_policy:
+  first: original_start
+  second: original_start_plus_gaussian_noise
+  sigma: 0.05
+  scope: all_292_coefficients_including_zeros
+  restart_from_preceding_result: false
+  proposal_rng: numpy_default_rng_seed_0
+  proposal_noise_order: pass_then_listed_K_then_start_pool_order
+  proposal_rng_reset: once_per_pass_as_in_separate_COACH_sweeps
+  scheduling_requirement: precompute_and_hash_noise_vectors_independent_of_job_order
+  clip_or_project_noisy_start: false
+  start_feasibility: report_not_require_for_noisy_suggestions
+  solution_feasibility: unchanged_mandatory_audits
+pass1:
+  grid_constraints: false
+  starts_per_K: [dh_simple]
+  solves: 14
+pass2:
+  grid_constraints: coach_selected_rows
+  starts_per_K: [dh_simple, matching_K_pass1_repeat0, matching_K_pass1_repeat1]
+  solves: 42
+  retain_duplicate_candidates: true
+grid_selection:
+  candidate_pool: all_14_saved_pass1_results
+  top_per_candidate: 100
+  additional_high_l1_from_remaining: 200
+  freeze_before_pass2: true
+  acceptance: selected_constraints_only
+  full_grid_diagnostics: report_for_user_review
+simple_seed:
+  coach_nonzero_values: {0: 0.85, 1: 1.0, 96: 1.0, 192: 1.0, 288: 0.15}
+  c_vv10: 0.99999999
+  c_pt2: 0.027300022669629182
+  c_d4_atm: 0.99999999
+  proposed_scalar_source: fitting/selective_recovery_v1/25792248/constrained80/coefficients.npy
+  scalar_source_approved: true
+resource_review:
+  proposed_memory_gib: 32
+  partition_account_qos: pending_live_review
+  max_active_user_tasks: 998
+  forbidden_qos: [lr_lowprio]
+  total_solves: 56
+  max_solver_hours_excluding_overhead: 112
+  allocated_cpu_hours_at_full_time_limits: 1792
+deferred_todos:
+  - lean_28_solve_schedule
+  - restart_from_preceding_fitted_solution
