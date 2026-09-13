@@ -1,0 +1,12 @@
+{
+  "scope": "All 996 previously tracked revwb97m2 files; new alternative files excluded",
+  "file_count": 996,
+  "before_sha256": "f4396a8474da0223b919a57054f46a6b2443bf3add234a272815a17c4b253812",
+  "after_implementation_sha256": "f4396a8474da0223b919a57054f46a6b2443bf3add234a272815a17c4b253812",
+  "algorithm": "git ls-files revwb97m2 order; pairs of path and file-content SHA256 for regular files; SHA256(json.dumps(pairs).encode())",
+  "unchanged": true,
+  "unrelated_preexisting_changes_preserved": [
+    "coach_mp2/results/step10_high_25837199.log",
+    "coach/paper/COACH_raw_data.xlsx"
+  ]
+}
