@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "scope": "installation, mixed-integer quadratic epigraph known-optimum smoke and existing-feature readback only",
+  "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]",
+  "platform": "Linux-4.18.0-553.150.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "packages": {
+    "pyscipopt": "6.2.1",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "scip_version": [
+    10,
+    0,
+    2
+  ],
+  "requested_parameters": {
+    "limits/time": 7200.0,
+    "limits/memory": 32768.0,
+    "limits/gap": 0.0001,
+    "limits/absgap": 1e-10,
+    "numerics/feastol": 1e-09,
+    "parallel/maxnthreads": 16
+  },
+  "effective_pilot_parameters": {
+    "limits/time": 7200.0,
+    "limits/memory": 32768.0,
+    "limits/gap": 0.0001,
+    "limits/absgap": 1e-10,
+    "numerics/feastol": 1e-09,
+    "parallel/maxnthreads": 16
+  },
+  "smoke_only_overrides": {
+    "limits/gap": 0.0,
+    "limits/absgap": 0.0
+  },
+  "normal_solve_threads_note": "parallel/maxnthreads is a ceiling for parallel mode, not a guarantee that optimize uses 16 threads",
+  "status": "optimal",
+  "solution": {
+    "x": 2.0000000000006177,
+    "z": 1.0,
+    "t": 0.0999999990981523
+  },
+  "residual_objective": 0.1,
+  "reported_objective": 0.0999999990981523,
+  "gap": 0.0,
+  "dual_bound": 0.0999999990981523,
+  "native_feature_arrays_read": 10,
+  "production_fit_run": false,
+  "gurobi_used": false
+}

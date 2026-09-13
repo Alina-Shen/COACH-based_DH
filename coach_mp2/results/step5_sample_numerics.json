@@ -1,0 +1,122 @@
+[
+  {
+    "species": "16_C_AE18",
+    "nao": 181,
+    "nmo": 181,
+    "authority_nao": 181,
+    "finite": true,
+    "density": [
+      {
+        "max_error": 3.3881317890172014e-21,
+        "normwise_bound": 7.75770910528828e-15,
+        "passed": true
+      },
+      {
+        "max_error": 6.162975822039155e-33,
+        "normwise_bound": 5.372469631215248e-15,
+        "passed": true
+      }
+    ],
+    "source_hashes": {
+      "/global/scratch/users/jsliang/COACH3/16_C_AE18/819.0": "2cd7cfd061897c3e512ea27a88a6540b2f9e25eded6ad51344d2e5f082da602d",
+      "/global/scratch/users/jsliang/COACH3/16_C_AE18/53.0": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+      "/global/scratch/users/jsliang/COACH3/16_C_AE18/54.0": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588"
+    }
+  },
+  {
+    "species": "SIE4x4_h2o",
+    "nao": 132,
+    "nmo": 132,
+    "authority_nao": 132,
+    "finite": true,
+    "density": [
+      {
+        "max_error": 2.710505431213761e-20,
+        "normwise_bound": 6.948832273184245e-15,
+        "passed": true
+      },
+      {
+        "max_error": 2.710505431213761e-20,
+        "normwise_bound": 6.948832273185067e-15,
+        "passed": true
+      }
+    ],
+    "source_hashes": {
+      "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/819.0": "0a39970095fa436dfc6915a80552ece60773e79124aef19e914ff008ec02a5c8",
+      "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/53.0": "46e87ec532e0f696263a14ab3acaa5c6db7c1177d55f0819faf917b098e2ae38",
+      "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/54.0": "fad980492c9e13651db7f91526e93dc599f7095bce4b795c01abe4e497fe7ca6"
+    }
+  },
+  {
+    "species": "AE11_Yb",
+    "nao": 184,
+    "nmo": 184,
+    "authority_nao": 184,
+    "finite": true,
+    "density": [
+      {
+        "max_error": 6.310887241768095e-30,
+        "normwise_bound": 7.661026972584589e-14,
+        "passed": true
+      },
+      {
+        "max_error": 3.1554436208840472e-30,
+        "normwise_bound": 7.661026972584663e-14,
+        "passed": true
+      }
+    ],
+    "source_hashes": {
+      "/global/scratch/users/jsliang/COACH3/AE11_Yb/819.0": "302fd7e4142fe4792eb1b74be46f95bdbe9199c799b0c83c9ada106ea834a1c4",
+      "/global/scratch/users/jsliang/COACH3/AE11_Yb/53.0": "0346ec0e91b908ffc5abca85d92e5dbe2420e933f85a62ef896aeb936d047e26",
+      "/global/scratch/users/jsliang/COACH3/AE11_Yb/54.0": "43a43590bc593cb8e66119323cc5bb87b4c4551b878da09791603feae707990b"
+    }
+  },
+  {
+    "species": "O24x5_he2_1.0",
+    "nao": 210,
+    "nmo": 210,
+    "authority_nao": 210,
+    "finite": true,
+    "density": [
+      {
+        "max_error": 1.0842021724855044e-19,
+        "normwise_bound": 1.6498763655528075e-14,
+        "passed": true
+      },
+      {
+        "max_error": 0.0,
+        "normwise_bound": 8e-323,
+        "passed": true
+      }
+    ],
+    "source_hashes": {
+      "/global/scratch/users/jsliang/COACH3/O24x5_he2_1.0/819.0": "1377b85e7e6068269c694c19d2deb1a317b06769ae12d71b8d349a051e5d7dd6",
+      "/global/scratch/users/jsliang/COACH3/O24x5_he2_1.0/53.0": "91b15334d0520e4a1b9da28436fa65522f19305d614c63bfee0c851a684716d0",
+      "/global/scratch/users/jsliang/COACH3/O24x5_he2_1.0/54.0": "7d45811cc6a5c87f388224d300aaf998c65cd78a2a3df85f5cd2dd61973c6a65"
+    }
+  },
+  {
+    "species": "L14_2a",
+    "nao": 2724,
+    "nmo": 2662,
+    "authority_nao": 2724,
+    "finite": true,
+    "density": [
+      {
+        "max_error": 7.589415207398531e-19,
+        "normwise_bound": 5.060711481129899e-13,
+        "passed": true
+      },
+      {
+        "max_error": 1.0842021724855044e-18,
+        "normwise_bound": 5.060736189075722e-13,
+        "passed": true
+      }
+    ],
+    "source_hashes": {
+      "/global/scratch/users/jsliang/BigNC/COACH/L14_2a/819.0": "aaefe0a3df6279c1bbc8b9ab6c2e20653537abdb61b17f067cd5ad6ae2cc3286",
+      "/global/scratch/users/jsliang/BigNC/COACH/L14_2a/53.0": "c50107ef6eef93a8a63494fb5bb45a6e34b85b144ac3c4f2b1f0862d5ce50c26",
+      "/global/scratch/users/jsliang/BigNC/COACH/L14_2a/54.0": "e70d508770f8b0d30279d83823ba94e34a66dfbba00b67afd5a1bbf02004f638"
+    }
+  }
+]

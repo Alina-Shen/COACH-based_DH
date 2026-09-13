@@ -1,0 +1,179 @@
+{
+  "step": 10,
+  "status": "prepared_not_measured",
+  "solver_required": false,
+  "omega": 0.27,
+  "scope": "three fitting-species size tiers; seven native stages each plus geometry-only D4; no bulk production",
+  "selection": "same small/medium/high species as reference Q6; measured reference costs are guidance only",
+  "resource_rationale": "retain reference 14/62/557 GiB and 8/8/16 CPUs; high wall increased to48h for additional scalar/RI stages; small/medium use available mhg, high requires lr8 memory; live test-only comparison subsequently selected cm1 for small/medium without changing memory/CPUs; lr8 high start forecast distant and provisional",
+  "retry_policy": "no automatic retry; preserve failed evidence",
+  "measurement": [
+    "source/copy hash time and bytes",
+    "per-stage wall and GNU-time peak RSS",
+    "post-stage retained scratch bytes (not peak scratch)",
+    "native validity, MO/density invariance, energy identities",
+    "terminal Slurm accounting required before capacity signoff"
+  ],
+  "production_authorized": false,
+  "cases": [
+    {
+      "tier": "small",
+      "species": "3d4dIPSS_Ag_GS",
+      "cpus": 8,
+      "memory_gib": 14,
+      "qchem_memory_mb": 7000,
+      "walltime": "02:00:00",
+      "partition": "cm1",
+      "account": "lr_qchem",
+      "qos": "condo_qchem",
+      "ao": 180,
+      "aux_ao": 252,
+      "stages": [
+        {
+          "mode": "250974",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/3d4dIPSS_Ag_GS_250974.in",
+          "sha256": "935607ac9507eab7780a6f7f2d199af3d4bbee633e677e5f1e49ffe8eb8f27a1"
+        },
+        {
+          "mode": "99590",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/3d4dIPSS_Ag_GS_99590.in",
+          "sha256": "2c258634dfac57d44a5c6b3f796a57e5022f63e87295958c1c2a02a74de6e9fb"
+        },
+        {
+          "mode": "75302",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/3d4dIPSS_Ag_GS_75302.in",
+          "sha256": "5c0e54f7fba7474ef56cab071813033d386a26b6de4acbba8de31216c8617e0d"
+        },
+        {
+          "mode": "sr_vv",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/3d4dIPSS_Ag_GS_sr_vv.in",
+          "sha256": "c6932ec58843c1553a8425b5402d1981e8457707045448928069779057663f10"
+        },
+        {
+          "mode": "full_hf",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/3d4dIPSS_Ag_GS_full_hf.in",
+          "sha256": "81017cc54dc3f5128cfefc865da9e5a93351545a221afafbc148c02d32d3271e"
+        },
+        {
+          "mode": "lr_hf",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/3d4dIPSS_Ag_GS_lr_hf.in",
+          "sha256": "1c8d434f72c55fd0acba2cafb0cf04f9c54e511da7d08453059dd8a461003175"
+        },
+        {
+          "mode": "RIMP2",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/3d4dIPSS_Ag_GS_RIMP2.in",
+          "sha256": "e7f782fd05f46876cf5198dc6a023c75d4bb5d1fe4532de7265f91012f80dc00"
+        }
+      ]
+    },
+    {
+      "tier": "medium",
+      "species": "TMB28_C1",
+      "cpus": 8,
+      "memory_gib": 62,
+      "qchem_memory_mb": 30000,
+      "walltime": "08:00:00",
+      "partition": "cm1",
+      "account": "lr_qchem",
+      "qos": "condo_qchem",
+      "ao": 1342,
+      "aux_ao": 3465,
+      "stages": [
+        {
+          "mode": "250974",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/TMB28_C1_250974.in",
+          "sha256": "03630c1d45be8c82f8b07628f4e172777f129b79a12e34ee5ef3c845014812b6"
+        },
+        {
+          "mode": "99590",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/TMB28_C1_99590.in",
+          "sha256": "7f8d98017efb7e4e41707a661d2bbdb33b569ef5dbbdd80a8752dbfa862382a1"
+        },
+        {
+          "mode": "75302",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/TMB28_C1_75302.in",
+          "sha256": "73a60452051c204366ead4df5fa18bfbc8ec79f5afc0e4c87fa211dcd84918c1"
+        },
+        {
+          "mode": "sr_vv",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/TMB28_C1_sr_vv.in",
+          "sha256": "7162d0b25895ebe92985e03e3eba7a9527d83e0c0cce95d76605027536e9486e"
+        },
+        {
+          "mode": "full_hf",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/TMB28_C1_full_hf.in",
+          "sha256": "229ef67786fef4245241cb3a1257b7c82f52e94d2924947894688ca82b389aa7"
+        },
+        {
+          "mode": "lr_hf",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/TMB28_C1_lr_hf.in",
+          "sha256": "3f734eae9883870a61c28ea7e280b9113102ad50b2b57bcb3755c4e330f8484d"
+        },
+        {
+          "mode": "RIMP2",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/TMB28_C1_RIMP2.in",
+          "sha256": "32282294567f26ebbfbd06dc703014c625c21859b1dc01231d89fc42b942a600"
+        }
+      ]
+    },
+    {
+      "tier": "high",
+      "species": "MOR32_pr24",
+      "cpus": 16,
+      "memory_gib": 557,
+      "qchem_memory_mb": 300000,
+      "walltime": "48:00:00",
+      "partition": "lr8",
+      "account": "lr_mhg2",
+      "qos": "mhg2_lr8_normal",
+      "ao": 4979,
+      "aux_ao": 11015,
+      "stages": [
+        {
+          "mode": "250974",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/MOR32_pr24_250974.in",
+          "sha256": "df3a80e79199972b78296c4e46cf125734a7f5b55a86385240fe49ca5b5616f9"
+        },
+        {
+          "mode": "99590",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/MOR32_pr24_99590.in",
+          "sha256": "a1cdde73dcc1390a535ead93f53699dd107c0a06ce036b77ecd83bf2744966a3"
+        },
+        {
+          "mode": "75302",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/MOR32_pr24_75302.in",
+          "sha256": "1854da0e92f77d31d6c162731e4ec742c99a06339d2f1859b8bd82f1c1b70478"
+        },
+        {
+          "mode": "sr_vv",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/MOR32_pr24_sr_vv.in",
+          "sha256": "2dff9069d3afcdd657f501ad908731f37441b581bab8628fc5fba74058940498"
+        },
+        {
+          "mode": "full_hf",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/MOR32_pr24_full_hf.in",
+          "sha256": "a3677f670822c33f08147de3006ae6eaecaa7f8609fa8835ba2a282c630fc4e2"
+        },
+        {
+          "mode": "lr_hf",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/MOR32_pr24_lr_hf.in",
+          "sha256": "67d6097d1211e4f2b66eb133e28f5e6380adf1558880d9786716ae4d30550e70"
+        },
+        {
+          "mode": "RIMP2",
+          "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step10_v1/MOR32_pr24_RIMP2.in",
+          "sha256": "a90e1fd97bb7dc60bc9dd8606773a524f510720ceb7be784366b6fbc155b51a5"
+        }
+      ]
+    }
+  ],
+  "reference_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q6_resource_guidance_v1.yaml": "adb0b3d5976cfed9c95c89737288ba01d47004ad9bf3d63668483eaa66030dc5",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_gateway/q6_resource_pilots_v1.yaml": "9e18d5b4b152abc5c5174308e9a4a1f76a475e30b5a59ebdf5dc4cf835d604c9"
+  },
+  "authority_sha256": {
+    "manifests/step8_freeze_v1.json": "ce64e7195d221f3ca5187eb17e0646472325de8b053bfc4598fef96fe1068ef8",
+    "manifests/step9_freeze_v1.json": "d909da32f2a56d37b6c3aaad17db695da1a855cee3c542dbf4cf099ccda151ab",
+    "configs/step6_runtime_authority_v1.json": "287e2b329233ab38c8abddc57f5d0bc88e23f6f69724ecd1c844ee193481f3fb"
+  }
+}

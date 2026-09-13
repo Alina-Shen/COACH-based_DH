@@ -1,0 +1,279 @@
+{
+  "passed": true,
+  "job_id": "25821657",
+  "manifest_sha256": "3ee88f7791e99f221d60aabcc4616a29a9a636b2604a1d9c44218e466dbc5077",
+  "checks": [
+    {
+      "name": "runtime /clusterfs/mhg/yaoshen/qchem/trunk/bin/qchem",
+      "passed": true
+    },
+    {
+      "name": "runtime /clusterfs/mhg/yaoshen/qchem/trunk/build/qcprog.exe",
+      "passed": true
+    },
+    {
+      "name": "runtime /clusterfs/mhg/yaoshen/qchem/trunk/libdft/xcfunctionals.C",
+      "passed": true
+    },
+    {
+      "name": "runtime /clusterfs/mhg/yaoshen/qchem/trunk/scfman/scfman.C",
+      "passed": true
+    },
+    {
+      "name": "runtime /clusterfs/mhg/yaoshen/qchem/trunk/gesman/GuessMan.C",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o source /global/scratch/users/jsliang/COACH3/SIE4x4_h2o/53.0",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o unchanged 53.0",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o source /global/scratch/users/jsliang/COACH3/SIE4x4_h2o/54.0",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o source /global/scratch/users/jsliang/COACH3/SIE4x4_h2o/58.0",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o source /global/scratch/users/jsliang/COACH3/SIE4x4_h2o/819.0",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o source /global/scratch/users/jsliang/COACH3/SIE4x4_h2o/99.0",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o source /global/scratch/users/jsliang/COACH3/SIE4x4_h2o/molecule",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o source /global/scratch/users/jsliang/COACH3/SIE4x4_h2o/pseudodata",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o independently reconstructed density",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o input",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o source_input",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o NO_ORTHO TRUE",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o MP2_RESTART_NO_SCF TRUE",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o MAX_SCF_CYCLES 0",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o GEN_SCFMAN FALSE",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o SCF_GUESS READ",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o METHOD COACH",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o energy reference",
+      "passed": true
+    },
+    {
+      "name": "SIE4x4_h2o component closure",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 source /global/scratch/users/jsliang/COACH3/16_C_AE18/53.0",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 unchanged 53.0",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 source /global/scratch/users/jsliang/COACH3/16_C_AE18/54.0",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 source /global/scratch/users/jsliang/COACH3/16_C_AE18/58.0",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 source /global/scratch/users/jsliang/COACH3/16_C_AE18/819.0",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 source /global/scratch/users/jsliang/COACH3/16_C_AE18/99.0",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 source /global/scratch/users/jsliang/COACH3/16_C_AE18/molecule",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 independently reconstructed density",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 input",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 source_input",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 NO_ORTHO TRUE",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 MP2_RESTART_NO_SCF TRUE",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 MAX_SCF_CYCLES 0",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 GEN_SCFMAN FALSE",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 SCF_GUESS READ",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 METHOD COACH",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 energy reference",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 component closure",
+      "passed": true
+    },
+    {
+      "name": "16_C_AE18 paper reference",
+      "passed": true
+    },
+    {
+      "name": "paper workbook hash unchanged",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "energy_hartree": -76.433517942,
+      "components": {
+        "One-Electron Energy": -122.9651790307,
+        "Total Coulomb Energy": 46.6421676455,
+        "Alpha Exchange Energy": -1.5764824768,
+        "Beta Exchange Energy": -1.5764824768,
+        "DFT Exchange Energy": -5.8761068322,
+        "DFT Correlation Energy": -0.2627204683,
+        "Nuclear Repu. Energy": 9.1812856973
+      },
+      "component_sum_hartree": -76.433517942,
+      "closure_error_hartree": 0.0,
+      "dispersion_hartree": 0.0,
+      "iteration_semantics": "one Fock evaluation, no orbital optimization",
+      "correlation_convention": "DFT Correlation includes VV10; do not add it twice",
+      "species": "SIE4x4_h2o",
+      "output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step2_fixed_v3/SIE4x4_h2o_fixed.out",
+      "output_sha256": "d453841a866dac76bc0ef3a360946f601abca7521f8cc5dd1020993c54cd1bc9",
+      "reference_hartree": -76.4335179439,
+      "reference_difference_hartree": 1.900005486277223e-09,
+      "invariance": {
+        "53.0": {
+          "expected": "46e87ec532e0f696263a14ab3acaa5c6db7c1177d55f0819faf917b098e2ae38",
+          "observed": "46e87ec532e0f696263a14ab3acaa5c6db7c1177d55f0819faf917b098e2ae38",
+          "passed": true
+        },
+        "54.0": {
+          "expected": "fad980492c9e13651db7f91526e93dc599f7095bce4b795c01abe4e497fe7ca6",
+          "observed": "fb13d8438c909c47d3a532942529b38e6c5af8af28e07ca9c5d08ae83ac557f0",
+          "passed": false
+        }
+      },
+      "density_reconstruction": {
+        "passed": true,
+        "max_source_to_output_abs": 2.7755575615628914e-17,
+        "max_fraction_of_roundoff_bound": 0.003994279114023017,
+        "rule": "Both densities must equal math.fsum occupied-MO outer products within the normwise roundoff bound 16*epsilon*||C_occ||_F^2 per spin; MO file must be bitwise unchanged",
+        "occupations": [
+          5,
+          5
+        ],
+        "nbasis": 132
+      }
+    },
+    {
+      "energy_hartree": -37.8454590857,
+      "components": {
+        "One-Electron Energy": -50.4222640905,
+        "Total Coulomb Energy": 17.7916889215,
+        "Alpha Exchange Energy": -1.1154537533,
+        "Beta Exchange Energy": -0.6978806111,
+        "DFT Exchange Energy": -3.2917425812,
+        "DFT Correlation Energy": -0.109806971,
+        "Nuclear Repu. Energy": 0.0
+      },
+      "component_sum_hartree": -37.84545908559999,
+      "closure_error_hartree": 1.000088900582341e-10,
+      "dispersion_hartree": 0.0,
+      "iteration_semantics": "one Fock evaluation, no orbital optimization",
+      "correlation_convention": "DFT Correlation includes VV10; do not add it twice",
+      "species": "16_C_AE18",
+      "output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step2_fixed_v3/16_C_AE18_fixed.out",
+      "output_sha256": "644286db9db6fbe290309dca00029e3cda14b8bf7c191324dfa47db07b9e3284",
+      "reference_hartree": -37.8454603141,
+      "reference_difference_hartree": 1.2284000021622887e-06,
+      "invariance": {
+        "53.0": {
+          "expected": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+          "observed": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+          "passed": true
+        },
+        "54.0": {
+          "expected": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588",
+          "observed": "e18db42129e0c48e4bbf8a7b3932e88259b2c695ca209220766682d82191fd37",
+          "passed": false
+        }
+      },
+      "density_reconstruction": {
+        "passed": true,
+        "max_source_to_output_abs": 2.7755575615628914e-17,
+        "max_fraction_of_roundoff_bound": 0.005166260122600382,
+        "rule": "Both densities must equal math.fsum occupied-MO outer products within the normwise roundoff bound 16*epsilon*||C_occ||_F^2 per spin; MO file must be bitwise unchanged",
+        "occupations": [
+          4,
+          2
+        ],
+        "nbasis": 181
+      },
+      "paper_reference_difference_hartree": 1.2283999950568614e-06
+    }
+  ],
+  "reference_tolerance_hartree": 2e-06,
+  "closure_tolerance_hartree": 2e-08,
+  "scope": "two-system Step 2 baseline only; not full-domain feature/MP2 validation"
+}

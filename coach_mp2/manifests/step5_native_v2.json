@@ -1,0 +1,97 @@
+{
+  "cases": [
+    {
+      "species": "SIE4x4_h2o",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step5_native_v2/SIE4x4_h2o.in",
+      "input_sha256": "ec0089830c75e234d2feaf49d69021e07c1a48aa3b4ace8d687b533711284c06",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/SIE4x4_h2o",
+      "source": "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o",
+      "source_hashes": {
+        "53.0": "46e87ec532e0f696263a14ab3acaa5c6db7c1177d55f0819faf917b098e2ae38",
+        "54.0": "fad980492c9e13651db7f91526e93dc599f7095bce4b795c01abe4e497fe7ca6",
+        "58.0": "eacf0fc6687416d06abbe3f82089bac4ce6c7c22476f655b4d9abfd5dee3e5ed",
+        "819.0": "0a39970095fa436dfc6915a80552ece60773e79124aef19e914ff008ec02a5c8",
+        "99.0": "8dbab1b7b8936f6f54dbc3c9bec89594e413a000e32f7bd19b345d34245b5a79",
+        "molecule": "2fb6e17dfda5d88ce2c607bea024b3107e3bc89bcd9bbf41f854dff5c007ecb6",
+        "pseudodata": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+      }
+    },
+    {
+      "species": "16_C_AE18",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step5_native_v2/16_C_AE18.in",
+      "input_sha256": "4b8a4874f40e05c54642b8d348a0b9af5479f9c49573e8e041d3cd40b9f2627f",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/16_C_AE18",
+      "source": "/global/scratch/users/jsliang/COACH3/16_C_AE18",
+      "source_hashes": {
+        "53.0": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+        "54.0": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588",
+        "58.0": "a764569111f230816820bfdb869d1ce8e40edac7eeb868b8b928a03aad6c8a6e",
+        "819.0": "2cd7cfd061897c3e512ea27a88a6540b2f9e25eded6ad51344d2e5f082da602d",
+        "99.0": "85d5c5fabc1926616ee306fd7f40802d073d472dada59b1b88ab1769bff7e5af",
+        "molecule": "22dff7e35eb3bb422c3caf86c98ac4bd1392409416b32ea7f1af90b53f88f17d"
+      }
+    },
+    {
+      "species": "He3_47",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step5_native_v2/He3_47.in",
+      "input_sha256": "b1dcd318b5c863dc123b4bb4fb875c475ebefd27883553ea698b261a9fe16ddf",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_47",
+      "source": "/global/scratch/users/jsliang/COACH3/He3_47",
+      "source_hashes": {
+        "53.0": "f61186c087b541b13b98b50aa3e85ccf40c4280303f8c185a0940421c652de07",
+        "54.0": "ca881118a70c13e834b52b868e0d8f25c52ed78a996d1da0014acb85dafbcdf2",
+        "58.0": "67d495178d73a1822cf5e9866f9c3d42fa57f3dd9b8543dbfd763aa392f2f258",
+        "819.0": "238186ed698d571b005ca5fac7cfad7686092b240e61fdd796c1b30c39bd458c",
+        "99.0": "50fa1f9344a003e2fe3396fe59401c768880527145937d8001961887b37a9365",
+        "molecule": "b2cbd12556d8931563983f2c4b814170a4fff275e895ee05773eed9b3afc4c2d"
+      }
+    },
+    {
+      "species": "He3_48",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step5_native_v2/He3_48.in",
+      "input_sha256": "c8339b84b0dc2c8530f39d00faf0f00157ae6fe3f5f5c4e1e4fdb8ad3b36fcae",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_48",
+      "source": "/global/scratch/users/jsliang/COACH3/He3_48",
+      "source_hashes": {
+        "53.0": "96c13680c6786d044715b8e2dd29a8b168c190da74d8373113a2b1b2e9b69868",
+        "54.0": "dcfdb84b05acd22037789d9fadadf652e4ebbae560c7a880d297804876bc6492",
+        "58.0": "09dc9db069f5ef346ba240603de3fd4fd60be5d0a808be6b4e1601bb39f29f51",
+        "819.0": "238186ed698d571b005ca5fac7cfad7686092b240e61fdd796c1b30c39bd458c",
+        "99.0": "8017d1d0e5f38046e42449c2271b8608b456829ec421af690dc921686d03b9e4",
+        "molecule": "3cd76dad5d945f90346d7f1578d7b0d4c557ab78fff0c48628b5ee983af9bb18"
+      }
+    },
+    {
+      "species": "He3_49",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step5_native_v2/He3_49.in",
+      "input_sha256": "48f283aee675ad59f724358c4e89570ee4c875986cd136b1688f4349e5023d3b",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_49",
+      "source": "/global/scratch/users/jsliang/COACH3/He3_49",
+      "source_hashes": {
+        "53.0": "ce5185aa1adf42cf06b49877650e008c600961904fa549c0878d6a40bbd49fb2",
+        "54.0": "72e8993ff3ee656c58126b6debe77d5ec2ed6a09dcd8d1d8bd5b877f287b20f4",
+        "58.0": "f5777b1066c872277cdc97f22f181827a1be36e299867895f1a6261dcde15c1f",
+        "819.0": "238186ed698d571b005ca5fac7cfad7686092b240e61fdd796c1b30c39bd458c",
+        "99.0": "494a60882a3a63e3dc0effeab81505749e2522e531ba101a9ac12f05ed77dd69",
+        "molecule": "6c50eab3ecc7e45b704842630b85c239f448c6f7b5bd062f91bab594b221554b"
+      }
+    },
+    {
+      "species": "ISOL24_i8e",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step5_native_v2/ISOL24_i8e.in",
+      "input_sha256": "f45ddee324c0fa4a1fa427cdae48979d3c2098797d9bbcf0681cbde2c443b9c8",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/ISOL24_i8e",
+      "source": "/global/scratch/users/jsliang/COACH3/ISOL24_i8e",
+      "source_hashes": {
+        "53.0": "3f1425a5c93cef65429fb5931a87d910f67b086e02c9f206060cd480658f73c5",
+        "54.0": "a274b0386b198ae977165a85049f45452caf12ef0094a724e9fae1971f39fce1",
+        "58.0": "d41b1842f91ae8e008bc8eb790b7e3019aff42ee123ccfcee6e15c5fbc679aad",
+        "819.0": "2fd8157c95a2f919d3b88925e276637a5f032ee887cdb2e9251e070893e894f6",
+        "99.0": "675a02235e4dcf48b2d9d0c0a8b633ea15c5a157a080ccf37898598b8db5359d",
+        "molecule": "162665a2ae00f1ddddb0fd8d355308fd7f31a291f572f88e2931c7becf3fafdf",
+        "pseudodata": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+      }
+    }
+  ],
+  "scope": "fixed parent read; patched post-SCF orientation; ISOL24 approved basis; no new SCF"
+}

@@ -1,0 +1,22 @@
+test_PT2_model_and_frozen_core (test_scientific_spec.ScientificContractTests) ... ok
+test_ambiguous_and_nonfinite_JSON (test_scientific_spec.ScientificContractTests) ... ok
+test_complete_contract_passes (test_scientific_spec.ScientificContractTests) ... ok
+test_content_hash_tampering_and_empty_lock (test_scientific_spec.ScientificContractTests) ... ok
+test_each_omega_location_must_be_027 (test_scientific_spec.ScientificContractTests) ... ok
+test_fixed_partition_and_dispersion (test_scientific_spec.ScientificContractTests) ... ok
+test_future_scan_and_runtime_not_enabled (test_scientific_spec.ScientificContractTests) ... ok
+test_grid_selection_and_acceptance (test_scientific_spec.ScientificContractTests) ... ok
+test_holdout_leakage (test_scientific_spec.ScientificContractTests) ... ok
+test_mandatory_slot_is_not_nonzero_HF_requirement (test_scientific_spec.ScientificContractTests) ... ok
+test_missing_required_sections_fail_closed (test_scientific_spec.ScientificContractTests) ... ok
+test_old_optimizer_and_campaign_rejected (test_scientific_spec.ScientificContractTests) ... ok
+test_parent_contamination (test_scientific_spec.ScientificContractTests) ... ok
+test_pre_freeze_sources_and_index (test_scientific_spec.ScientificContractTests) ... ok
+test_reference_layout_cannot_silently_replace_COACH (test_scientific_spec.ScientificContractTests) ... ok
+test_symlink_escape (test_scientific_spec.ScientificContractTests) ... ok
+test_wrong_roots_and_escapes (test_scientific_spec.ScientificContractTests) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.114s
+
+OK

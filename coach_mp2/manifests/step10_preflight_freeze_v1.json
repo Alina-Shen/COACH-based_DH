@@ -1,0 +1,33 @@
+{
+  "sha256": {
+    "manifests/step10_protocol_v1.json": "60b0e2cf7dd00344d67f59d36c1a9a57e15788718b86cbeff5768c689b4643fe",
+    "scripts/prepare_step10.py": "1adf82b39a8ed43b7d230de9b765ddb6fbdd3029f6cfef9a38a77b6dd29d376c",
+    "scripts/run_step10.py": "54f847d91f0b3e0a4ad6f23ca033abb942b3e0f48ed8b558555e62839ee133bb",
+    "inputs/step10_v1/3d4dIPSS_Ag_GS_250974.in": "935607ac9507eab7780a6f7f2d199af3d4bbee633e677e5f1e49ffe8eb8f27a1",
+    "inputs/step10_v1/3d4dIPSS_Ag_GS_75302.in": "5c0e54f7fba7474ef56cab071813033d386a26b6de4acbba8de31216c8617e0d",
+    "inputs/step10_v1/3d4dIPSS_Ag_GS_99590.in": "2c258634dfac57d44a5c6b3f796a57e5022f63e87295958c1c2a02a74de6e9fb",
+    "inputs/step10_v1/3d4dIPSS_Ag_GS_RIMP2.in": "e7f782fd05f46876cf5198dc6a023c75d4bb5d1fe4532de7265f91012f80dc00",
+    "inputs/step10_v1/3d4dIPSS_Ag_GS_full_hf.in": "81017cc54dc3f5128cfefc865da9e5a93351545a221afafbc148c02d32d3271e",
+    "inputs/step10_v1/3d4dIPSS_Ag_GS_lr_hf.in": "1c8d434f72c55fd0acba2cafb0cf04f9c54e511da7d08453059dd8a461003175",
+    "inputs/step10_v1/3d4dIPSS_Ag_GS_sr_vv.in": "c6932ec58843c1553a8425b5402d1981e8457707045448928069779057663f10",
+    "inputs/step10_v1/MOR32_pr24_250974.in": "df3a80e79199972b78296c4e46cf125734a7f5b55a86385240fe49ca5b5616f9",
+    "inputs/step10_v1/MOR32_pr24_75302.in": "1854da0e92f77d31d6c162731e4ec742c99a06339d2f1859b8bd82f1c1b70478",
+    "inputs/step10_v1/MOR32_pr24_99590.in": "a1cdde73dcc1390a535ead93f53699dd107c0a06ce036b77ecd83bf2744966a3",
+    "inputs/step10_v1/MOR32_pr24_RIMP2.in": "a90e1fd97bb7dc60bc9dd8606773a524f510720ceb7be784366b6fbc155b51a5",
+    "inputs/step10_v1/MOR32_pr24_full_hf.in": "a3677f670822c33f08147de3006ae6eaecaa7f8609fa8835ba2a282c630fc4e2",
+    "inputs/step10_v1/MOR32_pr24_lr_hf.in": "67d6097d1211e4f2b66eb133e28f5e6380adf1558880d9786716ae4d30550e70",
+    "inputs/step10_v1/MOR32_pr24_sr_vv.in": "2dff9069d3afcdd657f501ad908731f37441b581bab8628fc5fba74058940498",
+    "inputs/step10_v1/TMB28_C1_250974.in": "03630c1d45be8c82f8b07628f4e172777f129b79a12e34ee5ef3c845014812b6",
+    "inputs/step10_v1/TMB28_C1_75302.in": "73a60452051c204366ead4df5fa18bfbc8ec79f5afc0e4c87fa211dcd84918c1",
+    "inputs/step10_v1/TMB28_C1_99590.in": "7f8d98017efb7e4e41707a661d2bbdb33b569ef5dbbdd80a8752dbfa862382a1",
+    "inputs/step10_v1/TMB28_C1_RIMP2.in": "32282294567f26ebbfbd06dc703014c625c21859b1dc01231d89fc42b942a600",
+    "inputs/step10_v1/TMB28_C1_full_hf.in": "229ef67786fef4245241cb3a1257b7c82f52e94d2924947894688ca82b389aa7",
+    "inputs/step10_v1/TMB28_C1_lr_hf.in": "3f734eae9883870a61c28ea7e280b9113102ad50b2b57bcb3755c4e330f8484d",
+    "inputs/step10_v1/TMB28_C1_sr_vv.in": "7162d0b25895ebe92985e03e3eba7a9527d83e0c0cce95d76605027536e9486e",
+    "slurm/run_step10_high.sh": "fc9355b65f2acc38fbeca3e9825df19b8089efa13f90f9f5f4dbf7f95327d3e9",
+    "slurm/run_step10_medium.sh": "fda32fd14f442a7aff185ceda8c13d8168d1326c1fd0e82fc2ec2adc00a721c8",
+    "slurm/run_step10_small.sh": "09282c10e13b464b10501f62fbefea933dae67533d515770e4875defd54c8161"
+  },
+  "input_control_checks_passed": 21,
+  "native_passed": false
+}

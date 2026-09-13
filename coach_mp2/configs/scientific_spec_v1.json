@@ -1,0 +1,787 @@
+{
+  "schema_version": 1,
+  "specification_id": "coach_mp2_M2_total_v1",
+  "status": "frozen_scientific_contract",
+  "frozen_on": "2026-09-12",
+  "step_index": "configs/step_index_v1.json",
+  "scope": {
+    "model": "M2-total",
+    "energy_only": true,
+    "full_coach_energy_domain": true,
+    "excluded_initial_models": [
+      "M1-total",
+      "M1-SCS",
+      "M2-SCS"
+    ],
+    "self_consistent_double_hybrid": false
+  },
+  "storage": {
+    "code_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2",
+    "heavy_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2",
+    "qchem_scratch_root": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2",
+    "project_notes_root": "/clusterfs/mhg-data/yaoshen/codex_notes/projects/coach-based_dh",
+    "policy": "write_only_three_project_roots_except_explicit_project_notes",
+    "reference_roots_read_only": [
+      "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2",
+      "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach",
+      "/clusterfs/mhg-data/yaoshen/GSCDB"
+    ],
+    "scratch_is_not_only_copy_of_reproducibility_artifacts": true,
+    "atomic_nonoverwriting_publication": true,
+    "resolve_symlinks_before_writes": true,
+    "prohibit_cross_project_cache_reuse_without_identity_audit": true
+  },
+  "units": {
+    "stored_energy": "hartree",
+    "reported_error": "kcal_per_mol",
+    "hartree_to_kcal_per_mol": 627.50947406,
+    "omega": "bohr^-1"
+  },
+  "parent": {
+    "method": "COACH",
+    "engine": "Q-Chem",
+    "source_path": null,
+    "source_path_status": "awaiting_user_path_later_step5",
+    "reference": "UKS_all_species",
+    "archive": "qarchive.h5",
+    "documented_omega_bohr_inverse": 0.27,
+    "documented_short_range_hf_fraction": 0.22878980716640696,
+    "actual_method_version_requires_source_audit": true,
+    "source_orbitals_self_consistent": true,
+    "new_scf_cycles": 0,
+    "orbital_updates": false,
+    "same_archive_all_orbital_dependent_terms": true,
+    "source_read_only": true,
+    "copy_sha256_must_match": true,
+    "missing_or_invalid_policy": "stop_and_report_no_automatic_scf_fallback",
+    "reference_archive_counts_are_not_COACH_coverage": true,
+    "diagnostics": [
+      "spin_contamination",
+      "gap",
+      "available_stability_evidence"
+    ],
+    "never_replace_orbital_solution_automatically": true,
+    "pt2_orbital_energies_and_denominators_require_native_identity_gate": true
+  },
+  "molecular_inputs": {
+    "database_root": "/clusterfs/mhg-data/yaoshen/GSCDB",
+    "geometry_charge_multiplicity_basis_ecp_authority": "matching_verified_GSCDB_input_records",
+    "orbital_basis": "per_species_no_uniform_override",
+    "auxiliary_basis": "matching_named_or_embedded_AUX_BASIS_CORR",
+    "automatic_auxiliary_generation": false,
+    "counterpoise_correction": false,
+    "metadata_role_validation_step": 3,
+    "input_archive_compatibility_step": 4,
+    "on_difference_from_pinned_reference": "stop_reconcile_and_version_before_use"
+  },
+  "energy": {
+    "evaluation": "non_self_consistent_on_fixed_COACH_orbitals",
+    "omega": {
+      "value_bohr_inverse": 0.27,
+      "mode": "fixed_for_initial_fit",
+      "is_initial_guess": false,
+      "long_range_hf_fraction": 1.0
+    },
+    "fixed_terms": [
+      "nuclear_repulsion",
+      "one_electron",
+      "coulomb",
+      "full_long_range_hf_exchange"
+    ],
+    "equation": "E_fixed + F_SL @ beta_SL + c_sr_hf*E_SRHF + c_vv10*E_VV10 + c_pt2*(E_OS+E_SS) + c_d4_atm*E_ATM",
+    "vv10": {
+      "b": 5.5,
+      "C": 0.01,
+      "coefficient": "c_vv10",
+      "grid": "SG-1",
+      "engine": "Q-Chem_same_imported_archive",
+      "nonlinear_refit_initially": false
+    },
+    "d4_atm": {
+      "coefficient": "c_d4_atm",
+      "backend": "dftd4",
+      "reference_version": "4.2.0",
+      "parameters": {
+        "s6": 0.0,
+        "s8": 0.0,
+        "s9": 1.0,
+        "a1": 0.215,
+        "a2": 5.8,
+        "alp": 16.0
+      },
+      "geometry_charge_only": true,
+      "reuse_requires_exact_input_parameter_backend_identity": true
+    },
+    "pt2": {
+      "method": "canonical_RI_UMP2",
+      "engine": "Q-Chem_same_imported_archive",
+      "frozen_core": true,
+      "frozen_core_definition": "matching_QChem_input_and_verified_engine_convention",
+      "denominator_regularization": null,
+      "attenuation": null,
+      "store_components": [
+        "opposite_spin",
+        "same_spin"
+      ],
+      "fitted_feature": "OS_plus_SS",
+      "independent_spin_coefficients": false,
+      "conventional_MP2": "small_system_gateway_reference"
+    },
+    "parent_and_target_energy_reconstructions_separate": true
+  },
+  "semilocal": {
+    "source_of_final_form": "coach/FunctionalCOACH/COACH.md",
+    "expansion_terms": {
+      "u": 8,
+      "companion": 12,
+      "tensor_product_terms_per_channel": 96
+    },
+    "exchange": {
+      "integrated_dv_row": 64,
+      "channel_family": "range_separated_mgga_with_nonuniform_scaling",
+      "base_energy_density": "spin_resolved_ueg_exchange",
+      "correction_factors": [
+        "short_range_exchange_attenuation_at_omega_0p27",
+        "nonuniform_scaling"
+      ],
+      "nonuniform_scaling_equation": "1 - exp(-13.815 / (s_sigma_squared ** 0.25))",
+      "variables": {
+        "u": {
+          "name": "u_x_sigma",
+          "equation": "gamma_x * s_sigma_squared / (1 + gamma_x * s_sigma_squared)",
+          "gamma": 0.004,
+          "domain": "[0,1]",
+          "polynomial_family": "monomial"
+        },
+        "companion": {
+          "name": "v_sigma",
+          "equation": "2 * beta_sigma - 1",
+          "domain": "[-1,1]",
+          "polynomial_family": "legendre"
+        }
+      },
+      "omega_bohr_inverse": 0.27
+    },
+    "same_spin_correlation": {
+      "integrated_dv_row": 154,
+      "channel_family": "scan_alpha1_same_spin_with_self_correlation_correction",
+      "base_energy_density": "scan_alpha1_same_spin",
+      "correction_factors": [
+        "self_correlation_correction_2_beta_sigma"
+      ],
+      "variables": {
+        "u": {
+          "name": "u_c_ss_sigma",
+          "equation": "gamma_c_ss * s_sigma_squared / (1 + gamma_c_ss * s_sigma_squared)",
+          "gamma": 0.01,
+          "domain": "[0,1]",
+          "polynomial_family": "monomial"
+        },
+        "companion": {
+          "name": "v_sigma",
+          "equation": "2 * beta_sigma - 1",
+          "domain": "[-1,1]",
+          "polynomial_family": "legendre"
+        }
+      }
+    },
+    "opposite_spin_correlation": {
+      "integrated_dv_row": 166,
+      "channel_family": "scan_alpha1_opposite_spin",
+      "base_energy_density": "scan_alpha1_total_minus_scan_alpha1_alpha_only_minus_scan_alpha1_beta_only",
+      "correction_factors": [],
+      "variables": {
+        "u": {
+          "name": "u_c_os",
+          "equation": "gamma_c_os * s_alpha_beta_squared / (1 + gamma_c_os * s_alpha_beta_squared)",
+          "gamma": 0.006,
+          "domain": "[0,1]",
+          "polynomial_family": "legendre"
+        },
+        "companion": {
+          "name": "w_c_os",
+          "equation": "(t_alpha_beta - 1) / (t_alpha_beta + 1)",
+          "domain": "[-1,1]",
+          "polynomial_family": "legendre"
+        }
+      }
+    },
+    "flattening": {
+      "order": "C",
+      "local_index": "8 * companion_degree + u_degree",
+      "u_degree_range": [
+        0,
+        7
+      ],
+      "companion_degree_range": [
+        0,
+        11
+      ]
+    }
+  },
+  "feature_layout": {
+    "total": 292,
+    "exchange": [
+      0,
+      96
+    ],
+    "same_spin": [
+      96,
+      192
+    ],
+    "opposite_spin": [
+      192,
+      288
+    ],
+    "short_range_hf": 288,
+    "vv10": 289,
+    "pt2": 290,
+    "d4_atm": 291,
+    "interval_convention": "zero_based_half_open",
+    "selected_integrated_dv_rows": [
+      64,
+      154,
+      166
+    ]
+  },
+  "qchem_feature_contract": {
+    "MAX_SCF_CYCLES": 0,
+    "GEN_SCFMAN": false,
+    "SCF_GUESS": "READ",
+    "XC_FXC": 3,
+    "OMEGA": 270,
+    "OMEGA2": 270,
+    "QCHEM_PRINT_INTEGRATED_DV": "1",
+    "printed_shape": [
+      96,
+      180
+    ],
+    "stored_shape": [
+      180,
+      96
+    ],
+    "block_policy": "strict_final_complete_finite_block_record_count",
+    "feature_engine_omega_must_match_target": true,
+    "build_status": "native_COACH_gateway_pending",
+    "source_patch_policy": "prepare_only_under_code_root_do_not_modify_external_QChem_tree",
+    "MP2_RESTART_NO_SCF": true
+  },
+  "grids": {
+    "reference": "250974",
+    "practical": "99590",
+    "diagnostic": "75302",
+    "pruning": "none",
+    "radii_adjustment": "none",
+    "threshold_kcal_per_mol": 0.015,
+    "internal_safety_factor": 0.999,
+    "public_audit_slack_hartree": 0.0,
+    "pass1_constraints": false,
+    "pass2_constraints": "selected_rows_only",
+    "selection": {
+      "candidate_pool": "all_138_validated_COACH_discoveries",
+      "top_per_candidate": 100,
+      "additional_remaining_l1": 200,
+      "deduplicate_rows": true,
+      "retain_duplicate_candidates": true,
+      "tie_order": "reference_numpy_argsort_then_reverse_on_identical_row_order",
+      "freeze_before_pass2": true
+    },
+    "full_grid_violations": "report_for_user_review_not_automatic_all_row_rejection",
+    "zero_difference_features": [
+      "short_range_hf",
+      "pt2",
+      "d4_atm"
+    ],
+    "vv10_difference": "zero_on_fixed_SG1_record_reason_nonzero_only_if_evaluated_on_both_grids"
+  },
+  "constraints": {
+    "profile": "C0_minimal_critical",
+    "big_M": 25.0,
+    "semilocal_bounds": [
+      -25.0,
+      25.0
+    ],
+    "short_range_hf_bounds": [
+      0.0,
+      1.0
+    ],
+    "scalar_bounds": {
+      "vv10": [
+        1e-08,
+        0.99999999
+      ],
+      "pt2": [
+        1e-08,
+        0.99999999
+      ],
+      "d4_atm": [
+        1e-08,
+        0.99999999
+      ]
+    },
+    "mandatory_selected_slots": [
+      288,
+      289,
+      290,
+      291
+    ],
+    "mandatory_slots_count_toward_K": true,
+    "mandatory_SRHF_can_be_zero": true,
+    "support_constraint": "sum(z)<=K",
+    "linkage": "-25*z_j <= beta_j <= 25*z_j",
+    "ueg_exchange": "gx(0,0)+c_sr_hf=1",
+    "cross_scalar_equalities": [],
+    "one_electron_bound_enabled": false,
+    "sampled_enhancement_bounds_enabled": false,
+    "dense_factor_audit_required": true
+  },
+  "data_roles": {
+    "coefficient_fitting": {
+      "reactions": 1498,
+      "unique_species": 2799,
+      "determines_coefficients": true
+    },
+    "model_selection": {
+      "scope": "all_137_gscdb137_datasets",
+      "reactions": 8377,
+      "unique_species": 13907,
+      "metric": "dataset_specific_error_then_ner_then_category_and_overall_mean",
+      "independent_holdout_from_fitting": false
+    },
+    "overfitting_diagnostic": {
+      "datasets": [
+        "AE11",
+        "MB08-165",
+        "MB16-43"
+      ],
+      "reactions": 219,
+      "unique_species": 249,
+      "metric": "mean_of_the_three_dataset_NERs",
+      "independent_holdout_from_fitting": false,
+      "caveat": "MB16-43_is_also_in_the_coefficient_fitting_set"
+    },
+    "final_assessment": {
+      "appended_datasets": [
+        "SC74",
+        "OEEFD"
+      ],
+      "appended_reactions": 71,
+      "BigNC_datasets": [
+        "L14",
+        "vL11"
+      ],
+      "BigNC_reactions": 25,
+      "GDB9_W1_F12_datasets": [
+        "GDB_W1-F12"
+      ],
+      "GDB9_W1_F12_reactions": 3366,
+      "total_energy_reactions": 3462,
+      "total_unique_species": 3573,
+      "evaluate_once_after_model_and_sparsity_are_frozen": true,
+      "may_change_model": false
+    }
+  },
+  "data_policy": {
+    "weights": "pinned_COACH_SI_final_cycle_Table2",
+    "row_order_and_stoichiometry": "identical_to_pinned_reference",
+    "random_point_split": false,
+    "missing_species_or_reaction": "stop_and_report_no_silent_exclusion",
+    "final_refit_on_all_GSCDB": false,
+    "OPT": "excluded_from_initial_fixed_geometry_energy_scope",
+    "metadata_records": 17658,
+    "energy_role_species_union": 17452,
+    "OPT_records": 206,
+    "original_COACH_ATM_L14_vL11_exposure_caveat": true,
+    "metadata_pointers": {
+      "entries": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv",
+      "weights": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/weights/coach_si_table2_final_cycle_training_weights.csv",
+      "roles": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/revwb97m2_data_roles_v2.yaml"
+    },
+    "pointers_are_read_only_provenance_not_COACH_validation": true
+  },
+  "optimization": {
+    "solver": "Gurobi",
+    "objective": "weighted_full_SSE_plus_ridge",
+    "equation": "sum_k w_k*(A_k@beta-y_k)^2 + 1e-10*sum_j beta_j^2",
+    "objective_representation": "expanded_quadratic",
+    "independent_audit": "original_weighted_residual_space",
+    "ridge": 1e-10,
+    "ridge_scope": "all_292_coefficients",
+    "selection_linkage": "big_M",
+    "solver_parameters": {
+      "FeasibilityTol": 1e-09,
+      "IntFeasTol": 1e-09,
+      "MIPGap": 0.0001,
+      "MIPGapAbs": 1e-10
+    },
+    "other_solver_parameters": "inherit_current_reference_defaults_record_actual_environment",
+    "threads": 16,
+    "seconds_per_solve": 7200,
+    "seed": 0,
+    "budgets": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82
+    ],
+    "discovery_solves": 138,
+    "selected_solves": 414,
+    "total_solves": 552,
+    "phases": [
+      "discovery",
+      "shared_grid_freeze",
+      "selected"
+    ],
+    "starts": {
+      "pass1": [
+        "simple"
+      ],
+      "pass2": [
+        "simple",
+        "matching_K_pass1_repeat0",
+        "matching_K_pass1_repeat1"
+      ],
+      "repeats": [
+        "original",
+        "original_plus_gaussian_noise"
+      ],
+      "sigma": 0.05,
+      "noise_scope": "all_292_including_zeros",
+      "noise_clip_or_project": false,
+      "pass1_K_order": [
+        14,
+        24,
+        32,
+        40,
+        48,
+        64,
+        80,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        81,
+        82
+      ],
+      "pass2_K_order": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "rng": "numpy_default_rng_seed0_reset_once_per_pass",
+      "precompute_and_hash_vectors": true,
+      "simple_nonzero_coefficients": {
+        "0": 0.85,
+        "1": 1.0,
+        "96": 1.0,
+        "192": 1.0,
+        "288": 0.15,
+        "289": 0.99999999,
+        "290": 0.027300022669629182,
+        "291": 0.99999999
+      },
+      "simple_seed_role": "paired_algorithmic_initialization_not_COACH_result",
+      "require_new_matrix_start_audit": true,
+      "noisy_feasibility": "report_suggestion_not_require",
+      "preceding_repeat_restart": false
+    },
+    "candidate_readback": {
+      "precision": "full_float64",
+      "hashes_exact": true,
+      "report_comparison_rtol": 1e-12,
+      "report_comparison_atol": 1e-15,
+      "report_tolerance_does_not_relax_feasibility": true,
+      "time_limit_incumbent": "accept_only_if_independently_valid_report_gap_not_optimality",
+      "missing_candidate": "block_downstream_no_silent_omission"
+    },
+    "resources": {
+      "memory_gib_proposal": 32,
+      "wall_minutes_proposal": 150,
+      "global_WLS_sessions": 2,
+      "global_active_Slurm_task_limit": 998,
+      "forbidden_route": "lr_lowprio",
+      "automatic_failed_retries": false,
+      "partition_account_qos": "live_review_before_submission",
+      "initial_budget_excludes_future_omega_scan": true
+    }
+  },
+  "selection": {
+    "primary": "lowest_overall_mean_NER_among_eligible_candidates",
+    "metrics": "dataset_specific_errors_then_NER_then_category_and_overall_mean",
+    "diagnostics": [
+      "overfitting_NER",
+      "solver_gaps",
+      "repeat_stability",
+      "grid_outliers",
+      "dense_factors",
+      "coefficient_bounds",
+      "parameter_count"
+    ],
+    "final_user_review": true,
+    "protected_from_selection": [
+      "SC74",
+      "OEEFD",
+      "L14",
+      "vL11",
+      "GDB_W1-F12",
+      "OPT"
+    ],
+    "deferred_nonblocking_details": [
+      "near_tie_tolerance",
+      "category_tradeoffs",
+      "historical_candidate_trace"
+    ],
+    "freeze_model_and_K_before_external_assessment": true
+  },
+  "future_options": {
+    "omega_scan": {
+      "enabled": false,
+      "method": "discrete_outer_scan_with_inner_refits",
+      "timing": "after_functional_design_choices_fixed",
+      "grid": null,
+      "budget": null,
+      "required_recompute": [
+        "semilocal_exchange",
+        "SRHF",
+        "LRHF_Nofit",
+        "reaction_matrices",
+        "grid_differences"
+      ],
+      "parent_orbital_updates_implied": false
+    },
+    "LMP2": {
+      "enabled": false,
+      "requires_separate_backend_validation": true
+    },
+    "SCS_PT2": {
+      "enabled": false
+    },
+    "VV10_damping_scan": {
+      "enabled": false
+    }
+  },
+  "validation": {
+    "scope_of_step1_pass": "scientific_contract_and_tracking_index_only",
+    "tolerances": {
+      "parent_energy_reconstruction_tolerance_hartree": 1e-08,
+      "reaction_matrix_identity_tolerance_hartree": 1e-12,
+      "equality_constraint_tolerance": 1e-10,
+      "cross_engine_parent_tolerance_hartree": 2e-06,
+      "cross_engine_scaled_os_rimp2_tolerance_hartree": 5e-06,
+      "ri_mp2_vs_conventional_threshold_kcal_per_mol": 0.015
+    },
+    "native_COACH_gates_passed": false,
+    "orbital_inventory_complete": false,
+    "runtime_ready": false,
+    "submission_authorized": false,
+    "later_required_gates": [
+      "source_method_input_basis_identity",
+      "copy_hash_identity",
+      "zero_SCF_density_and_MO_identity",
+      "PT2_orbital_energy_denominator_identity",
+      "native_three_grid_omega_0p27",
+      "native_scalar_fixed_energy_partition",
+      "OS_SS_closure_and_conventional_RI_agreement",
+      "role_weight_and_matrix_identity",
+      "C0_UEG_and_grid_constraints",
+      "atomic_restart_and_cross_project_rejection",
+      "optimizer_pilot_and_independent_readback",
+      "resource_and_execution_release_review"
+    ],
+    "unknown_source_path_does_not_block_scientific_freeze": true
+  },
+  "change_control": {
+    "scientific_changes": "new_version_rationale_and_affected_validation",
+    "step_ids": "never_renumber_or_reuse",
+    "runtime_manifests": "separate_versioned_artifacts_may_bind_source_path_without_rewriting_spec",
+    "runtime_discovery_conflicts": "stop_and_amend_spec_before_execution",
+    "reference_completion_claims_transfer": false
+  }
+}

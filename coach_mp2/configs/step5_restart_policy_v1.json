@@ -1,0 +1,16 @@
+{
+  "step": 5,
+  "omega": 0.27,
+  "solver_required": false,
+  "method_provenance": "user-supplied COACH sources plus Step 2 baseline; historical build unknown",
+  "available_source_roots": ["/global/scratch/users/jsliang/COACH3", "/global/scratch/users/jsliang/BigNC/COACH"],
+  "missing_source_role": "GDB9_W1_F12_external",
+  "reference_settings": ["revwb97m2", "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/01a_water_dimBC_3B-69.in"],
+  "reference_settings_interpretation": "Inherit authoritative per-input basis, auxiliary, ECP, symmetry and frozen-core policy. Do not transfer XYG-OS5 METHOD, 200-cycle SCF allowance or its single 99x590 grid as COACH production settings.",
+  "required_no_update_controls": {"METHOD":"COACH", "UNRESTRICTED":"TRUE", "SCF_GUESS":"READ", "GEN_SCFMAN":"FALSE", "MAX_SCF_CYCLES":0, "MP2_RESTART_NO_SCF":"TRUE", "NO_ORTHO":"TRUE"},
+  "input_authority": "manifests/step4_snapshot_v1.json",
+  "copy_policy": "Immutable project heavy-data imports, top-level parent restart and archive files only, source-stream SHA256 and destination readback, atomic per-species rename. Nested fragment scratch excluded and listed. Runtime scratch copies will be separate.",
+  "quarantine_policy": "Missing, wrong geometry/spin, inconsistent legacy dimensions or malformed files never published as usable imports. Matching AO counts does not prove full basis identity.",
+  "new_scf_authorized": false,
+  "production_ready": false
+}

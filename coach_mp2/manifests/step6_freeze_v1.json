@@ -1,0 +1,18 @@
+{
+  "step": 6,
+  "status": "complete_with_user_deferred_accuracy_issue",
+  "prior_evidence_transitively_pinned": true,
+  "sha256": {
+    "scripts/complete_step6.py": "038435bbb99b7cea80151ed2aeb157ff2873b9bbc44983a3e1288e4bc8063ded",
+    "scripts/publish_step6_closed_notes.py": "c2b43d964a9552d8382e796a3cc7d86303a02d1b291be21e533f960f79b812f5",
+    "tests/test_step6_completion.py": "7d6859bddf95c341cd6e771ddf1e70b41852927ac84faf6dc74ef6a137b918fe",
+    "results/step6_completion_tests.log": "2d014bb427120fb1a5014d7499096989061fd0fdf40acb471c2e2667de60e71e",
+    "configs/step6_carbon_accuracy_deferral_v1.json": "9dbb4c0e28bf0bb2df9055b27f5282925ec0307b98e4c608b7be7f320a2148e6",
+    "configs/step6_runtime_authority_v1.json": "287e2b329233ab38c8abddc57f5d0bc88e23f6f69724ecd1c844ee193481f3fb",
+    "results/step6_pilot_features.csv": "8bc978e47469341be2c6b853976cccd41e85824fe81ca194140e3654d9ae88ef",
+    "results/step6_complete.md": "bafbdc014885c7ff2da630dd8e5aeeb0041705850f8a6b917fc709aa47051f1f",
+    "results/step6_completion_v1.json": "2177a1a5ae9ef84eaadc06116987711a5b37506d0fd6d8df97e5fb554950c14e",
+    "manifests/step6_evidence_snapshot_v1.json": "a6bcaadb73b7f7506adaff6ff92cedb933bb1ca167071f33316a7f5c54e58df1",
+    "runtime/step6_previous_answer_verbatim.md": "a2b5c1a72430bb1aeab58b93c62a0db878ca33f82c540af5394fcfb2d0df7743"
+  }
+}

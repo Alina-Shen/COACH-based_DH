@@ -1,0 +1,163 @@
+{
+  "step": 6,
+  "passed": false,
+  "cases": [
+    {
+      "tag": "SIE4x4_h2o_RIMP2_FC",
+      "species": "SIE4x4_h2o",
+      "core": "FC",
+      "parent_energy": -76.433517942,
+      "pt2": {
+        "engine": "RIMP2",
+        "aa": -0.0395479387,
+        "bb": -0.0395479387,
+        "opposite_spin": -0.2518552635,
+        "same_spin": -0.0790958774,
+        "doubles": -0.3309511409,
+        "printed_singles": -6e-10,
+        "printed_total": -0.3309511414,
+        "closure_error": -1.000000082740371e-10,
+        "singles_scale": 0.3211,
+        "singles_excluded_from_feature": true
+      },
+      "output_sha256": "c9668df3446cdbd1e159ad5946aa7fc953f52449a0bc41a90c031b1e8777cadc"
+    },
+    {
+      "tag": "SIE4x4_h2o_RIMP2_0",
+      "species": "SIE4x4_h2o",
+      "core": "0",
+      "parent_energy": -76.433517942,
+      "pt2": {
+        "engine": "RIMP2",
+        "aa": -0.0418436055,
+        "bb": -0.0418436055,
+        "opposite_spin": -0.2749195342,
+        "same_spin": -0.083687211,
+        "doubles": -0.35860674519999997,
+        "printed_singles": -6e-10,
+        "printed_total": -0.3586067456,
+        "closure_error": -1.9999996103692297e-10,
+        "singles_scale": 0.3211,
+        "singles_excluded_from_feature": true
+      },
+      "output_sha256": "9b883021fffa782725b6e6c4e753860aa369aa51dc4d62743974c81e52841fe5"
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_FC",
+      "species": "16_C_AE18",
+      "core": "FC",
+      "parent_energy": -37.8454590857,
+      "pt2": {
+        "engine": "RIMP2",
+        "aa": -0.0162621019,
+        "bb": -0.0,
+        "opposite_spin": -0.0729146723,
+        "same_spin": -0.0162621019,
+        "doubles": -0.0891767742,
+        "printed_singles": -9.56e-08,
+        "printed_total": -0.0891768698,
+        "closure_error": 0.0,
+        "singles_scale": 0.3211,
+        "singles_excluded_from_feature": true
+      },
+      "output_sha256": "19d0a724f3ed7388bce663336931e6f4314aaf2a88ac5877cc977bbfeb9ae87e"
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_0",
+      "species": "16_C_AE18",
+      "core": "0",
+      "parent_energy": -37.8454590857,
+      "pt2": {
+        "engine": "RIMP2",
+        "aa": -0.0196304811,
+        "bb": -0.0010036183,
+        "opposite_spin": -0.119992424,
+        "same_spin": -0.0206340994,
+        "doubles": -0.1406265234,
+        "printed_singles": -1.228e-07,
+        "printed_total": -0.1406266462,
+        "closure_error": 0.0,
+        "singles_scale": 0.3211,
+        "singles_excluded_from_feature": true
+      },
+      "output_sha256": "ccdcb6450adcfeae565ebbecde210956295b0cffc81a11cb10ce93e755aeae04"
+    },
+    {
+      "tag": "SIE4x4_h2o_MP2_4center_FC",
+      "species": "SIE4x4_h2o",
+      "core": "FC",
+      "parent_energy": -76.433517942,
+      "pt2": {
+        "engine": "MP2",
+        "aa": -0.0395422999,
+        "bb": -0.0395422999,
+        "opposite_spin": -0.2518781213,
+        "same_spin": -0.0790845998,
+        "doubles": -0.33096272109999997,
+        "printed_singles": -1.7e-09,
+        "printed_total": -0.33096272,
+        "closure_error": -2.7999999541172826e-09,
+        "singles_scale": 1.0,
+        "singles_excluded_from_feature": true
+      },
+      "output_sha256": "48357d271daa26aa088521d715963790cb46e3d5d7e16764e6a96d95925c721d"
+    },
+    {
+      "tag": "16_C_AE18_MP2_4center_FC",
+      "species": "16_C_AE18",
+      "core": "FC",
+      "parent_energy": -37.8454590857,
+      "pt2": {
+        "engine": "MP2",
+        "aa": -0.0160393134,
+        "bb": 0.0,
+        "opposite_spin": -0.0729895693,
+        "same_spin": -0.0160393134,
+        "doubles": -0.0890288827,
+        "printed_singles": -2.977e-07,
+        "printed_total": -0.08902918,
+        "closure_error": -4.000000053405728e-10,
+        "singles_scale": 1.0,
+        "singles_excluded_from_feature": true
+      },
+      "output_sha256": "37ac9edfbd9b65904d8eab9dd278b3158d2294ee7a06dbfaa2644e5b60288f1f"
+    }
+  ],
+  "comparisons": [
+    {
+      "species": "SIE4x4_h2o",
+      "ri_minus_conventional_hartree": 1.1580199999972063e-05,
+      "ri_minus_conventional_kcalmol": 0.007266685211492081,
+      "spin_differences": {
+        "same_spin": -1.1277599999998111e-05,
+        "opposite_spin": 2.285779999999793e-05
+      },
+      "all_electron_minus_frozen_core": -0.02765560429999997,
+      "passed": true
+    },
+    {
+      "species": "16_C_AE18",
+      "ri_minus_conventional_hartree": -0.00014789149999999696,
+      "ri_minus_conventional_kcalmol": -0.09280331738294258,
+      "spin_differences": {
+        "same_spin": -0.0002227884999999978,
+        "opposite_spin": 7.489700000000432e-05
+      },
+      "all_electron_minus_frozen_core": -0.051449749200000006,
+      "passed": false
+    }
+  ],
+  "denominator_audit_sha256": "c5b6306f7867f2af0c94433956a2af056e5e2f64ec8039b437310a7240e009a9",
+  "runtime_sha256": "a3f8e27e935bfaeb019d70a41c226a1e0778e2c57481ead9085f60dfb17469ba",
+  "scope": "Two-system canonical RI-UMP2 feature gateway; not full-domain production",
+  "solver_used": false,
+  "singles_convention": "SCS3 unit OS/SS; native libgmbpt still scales singles by .3211, legacy conventional by 1.0. Printed singles are diagnostics and excluded from fitted doubles."
+}
+Traceback (most recent call last):
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/validate_step6.py", line 47, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/validate_step6.py", line 46, in main
+    (R/'results/step6_validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2));assert report['passed']
+                                                                                                                               ~~~~~~^^^^^^^^^^
+AssertionError

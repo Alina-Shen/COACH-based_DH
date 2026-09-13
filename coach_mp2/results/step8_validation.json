@@ -1,0 +1,171 @@
+{
+  "step": 8,
+  "passed": true,
+  "cases": [
+    {
+      "tag": "SIE4x4_h2o_250974",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "968e3a771fa2f6c8d0d091dc7067548ac0346e9682ae8dfb99fe29e093dee44e",
+      "full_matrix_max_error": 8.881784197001252e-16,
+      "independent_selected_max_error": 5.551115123125783e-17,
+      "points": 603880,
+      "complete_blocks": 1,
+      "density_dump_sha256": "51a6f699641f4b96c11b353cb8357fb7b221c0bd65c4b32aa1188243df681d36",
+      "passed": true
+    },
+    {
+      "tag": "SIE4x4_h2o_99590",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "50744ec5955ee7552fb59278998527e3d235fef5865ae159c5222092df9ce6c7",
+      "full_matrix_max_error": 8.881784197001252e-16,
+      "independent_selected_max_error": 5.551115123125783e-17,
+      "points": 145140,
+      "complete_blocks": 1,
+      "density_dump_sha256": "3b9d941a044ef6ca617932852324de411369da648db746e444aa167974b7ee06",
+      "passed": true
+    },
+    {
+      "tag": "SIE4x4_h2o_75302",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "b48332e3f1cddba0602b603c1a52657238642c5bf1299b36620f62fa08f74853",
+      "full_matrix_max_error": 8.881784197001252e-16,
+      "independent_selected_max_error": 2.7755575615628914e-17,
+      "points": 56776,
+      "complete_blocks": 1,
+      "density_dump_sha256": "24129ff868005404abb257b16e14ef1a7270c354fc8a8781dfa0ea3be96c14c8",
+      "passed": true
+    },
+    {
+      "tag": "SIE4x4_h2o_sr_vv",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "3a64b61e37d31a03b387d43415a581a90c1b572696a51766c5e47cf72538b0eb",
+      "passed": true
+    },
+    {
+      "tag": "SIE4x4_h2o_full_hf",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "d3d7ba7cc4ae88c6c3bfeddb8ef168cafe1b4df1d3d31d6dc245941b16aace5a",
+      "passed": true
+    },
+    {
+      "tag": "SIE4x4_h2o_lr_hf",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "1095cbf338f0e78cebcd999806a2f0fd99762ec807d675c66685e8958d09ac5c",
+      "passed": true
+    },
+    {
+      "tag": "16_C_AE18_250974",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "00498fe4d80cbfed6e1bc2d9628209a5a1e9c3f58e37c04e6d13f9270a6207a4",
+      "full_matrix_max_error": 6.661338147750939e-16,
+      "independent_selected_max_error": 1.0408340855860843e-17,
+      "points": 204540,
+      "complete_blocks": 1,
+      "density_dump_sha256": "099190ec9be03e83bc5c579e575d6ef04cdd961690faf13394318a6c4ad9dba9",
+      "passed": true
+    },
+    {
+      "tag": "16_C_AE18_99590",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "730f6de9b2a9409aef925157f24b78b7df251e9c6218dd096d63450ff1ed7633",
+      "full_matrix_max_error": 4.440892098500626e-16,
+      "independent_selected_max_error": 3.469446951953614e-18,
+      "points": 49560,
+      "complete_blocks": 1,
+      "density_dump_sha256": "7aa904c0eb1457ab1c1f3320c128956fd491b2b3c1ab9b1e9740520e81516568",
+      "passed": true
+    },
+    {
+      "tag": "16_C_AE18_75302",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "f3ad096e36e6197347c1e48b9295a21797143fe5af4453f6c9e6f8096fc0f3d8",
+      "full_matrix_max_error": 8.881784197001252e-16,
+      "independent_selected_max_error": 6.938893903907228e-18,
+      "points": 19026,
+      "complete_blocks": 1,
+      "density_dump_sha256": "18a2a74d85edf7f095cd70862ce4a90db14fcbf803f0ac3e3f6ba3431955e968",
+      "passed": true
+    },
+    {
+      "tag": "16_C_AE18_sr_vv",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "c6c913fdb12900a8ad9fb6593287266f404b4b3519fd84d4f44c3c9e1cf7a5f7",
+      "passed": true
+    },
+    {
+      "tag": "16_C_AE18_full_hf",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "e54dedb1e95d521bb499f4328d8e656a76a6cc760d7f0ce43783bcb0929ab345",
+      "passed": true
+    },
+    {
+      "tag": "16_C_AE18_lr_hf",
+      "source_MO_unchanged": true,
+      "density_pass": true,
+      "output_sha256": "b3cc16b9cae55d5427272fef89f86c6c104953d96736798c378f3f7fb02b6bb0",
+      "passed": true
+    }
+  ],
+  "scalars": {
+    "SIE4x4_h2o": {
+      "SRHF": -7.4767920682,
+      "LRHF": -1.4423511168,
+      "full_HF": -8.9191431852,
+      "VV10": 0.0480021929,
+      "PT2_OS": -0.2518552635,
+      "PT2_SS": -0.0790958774,
+      "PT2_total": -0.3309511409,
+      "D4_ATM": 1.468581204251252e-11,
+      "E_fixed": -68.5840768047,
+      "hf_split_error": 2.000000165480742e-10,
+      "parent_reconstruction_errors": {
+        "250974": -3.69298902569426e-09,
+        "99590": -1.8929853240479133e-09,
+        "75302": -7.92979903962987e-10
+      },
+      "carbon_RI_accuracy_deferred": false
+    },
+    "16_C_AE18": {
+      "SRHF": -4.2066900216,
+      "LRHF": -0.8508865536,
+      "full_HF": -5.057576575200001,
+      "VV10": 0.0296270726,
+      "PT2_OS": -0.0729146723,
+      "PT2_SS": -0.0162621019,
+      "PT2_total": -0.0891767742,
+      "D4_ATM": 0.0,
+      "E_fixed": -33.481461722599995,
+      "hf_split_error": 8.881784197001252e-16,
+      "parent_reconstruction_errors": {
+        "250974": 4.429246303061518e-09,
+        "99590": 1.1292442536614544e-09,
+        "75302": -9.707648018775217e-10
+      },
+      "carbon_RI_accuracy_deferred": true
+    }
+  },
+  "d4_nonzero_check": {
+    "species": "ISOL24_i8e",
+    "external": -6.223317835818252e-05,
+    "native": -6.22332e-05,
+    "difference": 2.1641817474931692e-11,
+    "input_sha256": "f45ddee324c0fa4a1fa427cdae48979d3c2098797d9bbcf0681cbde2c443b9c8",
+    "output_sha256": "eb3eac651070e2b4bb69f8852ba24fa3ab1fc8f092076f3930b9c194880576b1"
+  },
+  "d4_helper_sha256": "fef539b1cd360eba3d2bde170175a76df5485340daa32a2261e7b431f3305daa",
+  "feature_manifest_sha256": "b8da16961ef9ae79092c6b628fcda94c5e8d8aea3afdc5a239d845171be7709c",
+  "output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step8_v1/features",
+  "solver_used": false,
+  "scope": "two-species native three-grid/scalar feature gateway; not production"
+}

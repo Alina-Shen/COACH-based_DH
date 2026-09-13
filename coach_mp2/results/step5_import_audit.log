@@ -1,0 +1,8 @@
+Audited receipts 2000
+Audited receipts 4000
+Audited receipts 6000
+Audited receipts 8000
+Audited receipts 10000
+Audited receipts 12000
+Audited receipts 14000
+{'passed': True, 'available_species': 14081, 'files': 178586, 'bytes': 805644039802, 'receipt_manifest_sha256': '39298ac765f7803810628e2dece25e4acf8cd71a568b3f9252c865c7bad2b333', 'verification': 'Each file was SHA256 checked during source streaming and destination readback before atomic publication; this audit independently checks receipts, coverage, permissions and dimensions, not another full 805GB hash scan.', 'gdb9_deferred': 3371, 'native_readiness': 'separate six-case gate', 'historical_basis_identity': 'Not proven by header dimensions'}

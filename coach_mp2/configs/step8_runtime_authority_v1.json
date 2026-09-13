@@ -1,0 +1,29 @@
+{
+  "step": 8,
+  "scope": "validated water/carbon pilot; production remains Step12",
+  "binary": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/build/step8_features_v1/qcprog.exe",
+  "binary_sha256": "fdea9aa17efd6d1884ae03fd4ba7747788cf67109309195e6f107fc50890536a",
+  "local_libks": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/build/step8_features_v1/libks.so",
+  "local_libks_sha256": "e581139ae76fcff93ecd84ea33b207c19a0a7f60099109eeeea7e57ab03d2f57",
+  "runtime_environment": "slurm/run_step8_native.sh",
+  "protocol": "manifests/step8_protocol_v1.json",
+  "omega": 0.27,
+  "selected_rows": [
+    64,
+    154,
+    166
+  ],
+  "columns": 292,
+  "features": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step8_v1/features",
+  "fixed_energy": "nuclear + one-electron + Coulomb + full LR-HF",
+  "scalars": [
+    "SRHF",
+    "VV10",
+    "PT2_total=OS+SS (singles excluded)",
+    "D4_ATM"
+  ],
+  "pt2_authority": "configs/step6_runtime_authority_v1.json",
+  "carbon_deferral": "configs/step6_carbon_accuracy_deferral_v1.json",
+  "source_orbitals": "immutable Step5 project imports; runtime uses separate scratch copies",
+  "solver_required": false
+}

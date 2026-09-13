@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-12",
+  "authority": "User: stick to approved carbon basis, record discrepancy as future TODO, complete Step6",
+  "species": "16_C_AE18",
+  "retained_orbital_basis": "AUG-CC-PCV5Z",
+  "retained_auxiliary_basis": "rimp2-def2-QZVPPD",
+  "observed_error_hartree": -0.00014789149999999696,
+  "observed_error_kcalmol": -0.09280331738294258,
+  "accuracy_tolerance_kcalmol": 0.015,
+  "numerical_accuracy_pass": false,
+  "disposition": "user_accepted_deferral_of_this_accuracy_gate_only",
+  "autoaux_proposal": "not_adopted; diagnostic evidence retained",
+  "scope": "This measured carbon RI approximation discrepancy only; not blanket acceptance of other failures",
+  "validation_sha256": "8570124db065b5b31fb110f051cc3c6f486b570895102a180aaf63370fb3a0dc",
+  "denominator_sha256": "c5b6306f7867f2af0c94433956a2af056e5e2f64ec8039b437310a7240e009a9",
+  "todo": "F01 in COACH-based_mp2.md future TODO chapter"
+}

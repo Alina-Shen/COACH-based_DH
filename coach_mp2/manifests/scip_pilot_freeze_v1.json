@@ -1,0 +1,13 @@
+{
+  "sha256": {
+    "configs/scip_pilot_v1.json": "0af80e95f316784439fefe4a0822a8f06b02fc6d83e4d8feb74f292531e36dc1",
+    "configs/scip_pilot_requirements_v1.txt": "59322c52d45153cf787acde343d1433dc0efb2496cde480901ff82d198f0a643",
+    "configs/scip_pilot_requirements_hashed_v1.txt": "b89ae3db440224f9a1c16778c29715f3470f19d8a0cb91d30377b2adf78a42f1",
+    "scripts/check_scip_pilot.py": "2f89b37c5dab1053c4e2fb0ba7f722c94d9d3246bba0845b07c682d608fb1213",
+    "results/scip_pilot_install_validation.json": "f0d1db80cd9c7cebe5f6fe02d3d7f311d10b9804728e6adf3683f26d31e1ea2c",
+    "results/scip_pilot_install_check_v3.log": "6fb952ec89efc6dcef4fcdb71fcca982fc2093e602c882d22fe2c0c1f0586df5",
+    "results/scip_pilot_ldd_resolved.txt": "14b6154ee8bb21c72026688d1d25b89ddaae386adbad87402abbfc9ac165552e",
+    "results/scip_pilot_installation.md": "e203c6005726320084b8f66531fbee7beae04100cb7cd9f086ba7407485151cb",
+    "manifests/scip_pilot_install_v1.json": "be18b2f1f27bf1289e4fff163bc6bfd5cb43b1e79e612b3e3bdf50d3c53a490a"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "environment": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1",
+  "base_python": "/global/home/users/yaoshen/.conda/envs/dh/bin/python",
+  "base_python_version": "3.11.15",
+  "wheel_and_library_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1/lib/python3.11/site-packages/pyscipopt.libs/libgfortran-83c28eba.so.5.0.0": "e554879fee7eda80055b6ca1407a54d00050874f830cc86b2bf3f50df5c7bb2b",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1/lib/python3.11/site-packages/pyscipopt.libs/libquadmath-2284e583.so.0.0.0": "a9307bbaa353623fa014e8b682d50c4629f5e5c7d61daa9a8652f7d165cd421a",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1/lib/python3.11/site-packages/pyscipopt.libs/libscip-d031042e.so.10.0": "dc58901251b10aaf5a9fb5f85c3009cd57fd59ef69e7858797832c2f02bd1a6c",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1/wheelhouse/numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": "89cd468399cfd2504718f0ba50e410dca55a170b61a02ad92bb18c8a65186e93",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1/wheelhouse/pyscipopt-6.2.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": "2463128979ab81d2f99533fefa555c44008bd6aea5e67a19dfc09ddd3a43b3b4",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1/wheelhouse/scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": "43af8d1f3bea642559019edfe64e9b11192a8978efbd1539d7bc2aaa23d92de4",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1/pyvenv.cfg": "44bb6852b9f40f01f9ad45eb45304b561d741c0f6f0af3881956d0af7747d43a"
+  },
+  "python_environment_note": "venv isolates packages but uses the existing dh Python runtime; wheels pinned for CPython3.11 Linux x86_64",
+  "reinstall": "Use configs/scip_pilot_requirements_hashed_v1.txt with pip --no-index --find-links=<environment>/wheelhouse --require-hashes",
+  "backend": "SoPlex; external-library list and resolved linkage retained; no Gurobi backend used"
+}

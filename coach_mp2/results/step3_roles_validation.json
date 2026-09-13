@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "checks": {
+    "source_hashes": true,
+    "reaction_count_and_unique": true,
+    "source_row_order_stoichiometry_and_references": true,
+    "indices_exact": true,
+    "species_order_identical_reference": true,
+    "dataset_order_identical_reference": true,
+    "137_core_datasets": true,
+    "1498_unique_fitting_entries": true,
+    "fit_global_order": true,
+    "SI count BH28": true,
+    "SI count BHDIV7": true,
+    "SI count BHPERI11": true,
+    "SI count CRBH14": true,
+    "SI count DBH22": true,
+    "SI count PX9": true,
+    "SI count Dip146": true,
+    "SI count HR46": true,
+    "SI count Pol130": true,
+    "SI count EIE22": true,
+    "SI count PCONF21": true,
+    "SI count Styrene42": true,
+    "SI count AlkIsomer11": true,
+    "SI count BUT14DIOL": true,
+    "SI count S66Rel7": true,
+    "SI count Bauza30": true,
+    "SI count CT20": true,
+    "SI count HCP32": true,
+    "SI count TA13": true,
+    "SI count XB25": true,
+    "SI count HW6Cl5": true,
+    "SI count Shields38": true,
+    "SI count A24": true,
+    "SI count DS14": true,
+    "SI count HSG": true,
+    "SI count IHB100": true,
+    "SI count IL16": true,
+    "SI count RG10N1": true,
+    "SI count RG10N2": true,
+    "SI count S22": true,
+    "SI count MB16-43": true,
+    "SI count MX34": true,
+    "SI count AE18": true,
+    "SI count ALK8": true,
+    "SI count AlkAtom19": true,
+    "SI count BDE99nonMR": true,
+    "SI count BSR36": true,
+    "SI count CR20": true,
+    "SI count DIPCS9": true,
+    "SI count G21EA": true,
+    "SI count G21IP": true,
+    "SI count HEAVYSB11": true,
+    "SI count RSE43": true,
+    "SI count TAE_W4-17nonMR": true,
+    "SI count 3d4dIPSS": true,
+    "SI count CUAGAU83": true,
+    "SI count MOR13": true,
+    "SI count TMB11": true,
+    "SI count TMD10": true,
+    "SI_expansion_exact_order_and_weight": true,
+    "all_row_roles_and_weights": true,
+    "energy_species_unique_union": true,
+    "species_membership": true,
+    "coefficient_fitting_counts": true,
+    "model_selection_counts": true,
+    "overfitting_diagnostic_counts": true,
+    "final_assessment_counts": true,
+    "current_database_metadata_membership": true,
+    "OPT_excluded": true,
+    "dataset_membership": true,
+    "dataset_counts": true,
+    "overlap_coefficient_fitting_model_selection": true,
+    "overlap_coefficient_fitting_overfitting_diagnostic": true,
+    "overlap_coefficient_fitting_final_assessment": true,
+    "overlap_model_selection_overfitting_diagnostic": true,
+    "overlap_model_selection_final_assessment": true,
+    "overlap_overfitting_diagnostic_final_assessment": true,
+    "no_final_reaction_leakage": true,
+    "solver_neutral": true,
+    "standard_denominators": true
+  },
+  "counts": {
+    "coefficient_fitting": {
+      "reactions": 1498,
+      "species": 2799
+    },
+    "model_selection": {
+      "reactions": 8377,
+      "species": 13907
+    },
+    "overfitting_diagnostic": {
+      "reactions": 219,
+      "species": 249
+    },
+    "final_assessment": {
+      "reactions": 3462,
+      "species": 3573
+    }
+  },
+  "overlap": {
+    "coefficient_fitting__model_selection": {
+      "reactions": 1498,
+      "species": 2799
+    },
+    "coefficient_fitting__overfitting_diagnostic": {
+      "reactions": 43,
+      "species": 58
+    },
+    "coefficient_fitting__final_assessment": {
+      "reactions": 0,
+      "species": 6
+    },
+    "model_selection__overfitting_diagnostic": {
+      "reactions": 219,
+      "species": 249
+    },
+    "model_selection__final_assessment": {
+      "reactions": 0,
+      "species": 28
+    },
+    "overfitting_diagnostic__final_assessment": {
+      "reactions": 0,
+      "species": 0
+    }
+  },
+  "solver_choice_required": false,
+  "freeze_hashes_pass": true
+}

@@ -1,0 +1,18 @@
+{
+  "status": "validated_six_case_runtime",
+  "binary_manifest": "manifests/step5_no_orientation_build_v1.json",
+  "input_basis_amendment": "configs/input_basis_amendments_v1.json",
+  "import_root": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species",
+  "controls": {
+    "METHOD": "COACH",
+    "SCF_GUESS": "READ",
+    "SCF_GUESS_MIX": 0,
+    "GEN_SCFMAN": "FALSE",
+    "MAX_SCF_CYCLES": 0,
+    "MP2_RESTART_NO_SCF": "TRUE",
+    "NO_ORTHO": "TRUE"
+  },
+  "production_must_use_separate_scratch": true,
+  "legacy_shared_executable_not_accepted_for_strict_MO_gate": true,
+  "MP2_validated": false
+}

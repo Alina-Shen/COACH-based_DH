@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "installed_smoke_validated_separate_pilot",
+  "production_backend_changed": false,
+  "environment": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/environments/scip_pilot_v1",
+  "interface": "PySCIPOpt",
+  "solver": "SCIP",
+  "resources": {
+    "cpus_per_fit": 16,
+    "memory_gib_per_fit": 32,
+    "solver_time_limit_seconds": 7200,
+    "slurm_walltime": "02:30:00",
+    "maximum_concurrent_fits": 2,
+    "maximum_reserved_cpus": 32,
+    "maximum_reserved_memory_gib": 64
+  },
+  "concurrency_reason": "match current Gurobi pilot resource envelope; not a license restriction",
+  "solver_targets": {
+    "relative_gap": 0.0001,
+    "absolute_gap": 1e-10,
+    "feasibility_tolerance": 1e-09
+  },
+  "scientific_acceptance": "retain Step9 independent audits; solver tolerances do not replace them",
+  "threads": "SCIP thread/parallel support must be checked in installed build; allocation is a ceiling, not guaranteed use",
+  "comparison": "user will compare using revwb97m(2) later; no Gurobi comparison requested here",
+  "scope": "install and smoke-test separate pilot; full fitting adapter and production migration remain separately gated",
+  "source_authority": "configs/scientific_spec_v1.json",
+  "installed_versions": {
+    "SCIP": "10.0.2",
+    "SoPlex": "8.0.2",
+    "PySCIPOpt": "6.2.1",
+    "Python": "3.11.15",
+    "NumPy": "2.4.6",
+    "SciPy": "1.17.1"
+  },
+  "installation_validation": "results/scip_pilot_install_validation.json"
+}

@@ -1,0 +1,153 @@
+{
+  "cases": [
+    {
+      "species": "ISOL24_i8e",
+      "source_hashes": {
+        "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/ISOL24_i8e.in": "f71a647461689f06ce028743d79d6fcfd2181d8f70e46d072a4e0ba2ed119c41",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/ISOL24_i8e.in": "a6004b3e0f7f229d878cd998593085fd08eac4fd37b0c08b29775b85be442e6e",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/ISOL24_i8e.out": "253beb22bbf9e033844bb217afc301d5dc0c97cae58832b3da8f414fc2e2599d",
+        "/global/scratch/users/jsliang/COACH3/ISOL24_i8e/819.0": "2fd8157c95a2f919d3b88925e276637a5f032ee887cdb2e9251e070893e894f6"
+      },
+      "geometry_equal": true,
+      "input_diff": "--- GSCDB\n+++ XYGOS5\n@@ -49,14 +49,12 @@\n $rem\n N_FROZEN_CORE FC\n MEM_TOTAL 120000\n+MEM_STATIC 3000\n AUX_BASIS_CORR  RIMP2-def2-QZVPPD\n BASIS def2-QZVPPD\n-SCF_GUESS_MIX 2\n-SCF_GUESS SADMOMEM_STATIC 8000\n+!SCF_GUESS_MIX 2\n SCF_CONVERGENCE 7\n SCF_ALGORITHM  GDM\n-method DSD-PBEPBE-D3\n-GEN_SCFMAN TRUE\n UNRESTRICTED True\n THRESH  14\n SYMMETRY FALSE\n@@ -64,8 +62,11 @@\n max_scf_cycles 200\n \n XC_GRID 000099000590\n+METHOD = XYG-OS5\n+SCF_GUESS = READ\n \n-\n+   !internal_stability   true\n+   !internal_stability_iter 10\n $end\n \n \n@@ -76,4 +77,3 @@\n \n \n \n-\n",
+      "xyg_output_evidence": [
+        " There are 651 shells and 2085 basis functions",
+        " There are 1213 shells and 4819 basis functions",
+        "        *  Thank you very much for using Q-Chem.  Have a nice day.  *"
+      ],
+      "legacy_dimensions": [
+        1884,
+        1884,
+        1111111,
+        0
+      ]
+    },
+    {
+      "species": "He3_47",
+      "source_hashes": {
+        "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/He3_47.in": "c5b77eb0465ed654334cf9efdbcc644b41d7829a0cfca973242786106e23bdfe",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/He3_47.in": "527a85c6dbc88fcf9970f102749b7fc392012030e23e533d0f333f493dc534ae",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/He3_47.out": "efa059991b66951d6229027bd783cdf9871ed0c4bbb0cb86b11b359d50041f4e",
+        "/global/scratch/users/jsliang/COACH3/He3_47/819.0": "238186ed698d571b005ca5fac7cfad7686092b240e61fdd796c1b30c39bd458c"
+      },
+      "geometry_equal": true,
+      "input_diff": "--- GSCDB\n+++ XYGOS5\n@@ -12,8 +12,6 @@\n MEM_STATIC 1500\n AUX_BASIS_CORR rimp2-def2-QZVPPD\n SCF_CONVERGENCE 7\n-method DSD-PBEPBE-D3\n-GEN_SCFMAN TRUE\n UNRESTRICTED True\n THRESH  14\n SYMMETRY FALSE\n@@ -25,8 +23,8 @@\n NL_GRID 000075000302\n BASIS GEN\n PURECART 11111\n-\n-\n+METHOD = XYG-OS5\n+SCF_GUESS = READ\n $end\n \n \n",
+      "xyg_output_evidence": [
+        " There are 75 shells and 315 basis functions",
+        " There are 54 shells and 168 basis functions",
+        " Size of previous SCF MO coefficient file: 198448 (expected); 199080 (actual). ",
+        " Inconsistent size for SCF MO coefficient file.  Please check basis and PURECART setting.",
+        "        *  Thank you very much for using Q-Chem.  Have a nice day.  *"
+      ],
+      "legacy_dimensions": [
+        315,
+        314,
+        11111,
+        0
+      ]
+    },
+    {
+      "species": "He3_48",
+      "source_hashes": {
+        "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/He3_48.in": "4c9759c4e801b85cbd37b93ec94c394fc3848b2c4d5653317f6b6bb55ebdaf0f",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/He3_48.in": "36cc4e24580a9aec0e80b01394cb8396aa3551cae77f2d2184bc0759397275e4",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/He3_48.out": "be78b5dfa79c7576b7c0c4614147f438b1f20a172c966777bc715f6215b6c1d8",
+        "/global/scratch/users/jsliang/COACH3/He3_48/819.0": "238186ed698d571b005ca5fac7cfad7686092b240e61fdd796c1b30c39bd458c"
+      },
+      "geometry_equal": true,
+      "input_diff": "--- GSCDB\n+++ XYGOS5\n@@ -12,8 +12,6 @@\n MEM_STATIC 1500\n AUX_BASIS_CORR rimp2-def2-QZVPPD\n SCF_CONVERGENCE 7\n-method DSD-PBEPBE-D3\n-GEN_SCFMAN TRUE\n UNRESTRICTED True\n THRESH  14\n SYMMETRY FALSE\n@@ -25,8 +23,8 @@\n NL_GRID 000075000302\n BASIS GEN\n PURECART 11111\n-\n-\n+METHOD = XYG-OS5\n+SCF_GUESS = READ\n $end\n \n \n",
+      "xyg_output_evidence": [
+        " There are 75 shells and 315 basis functions",
+        " There are 54 shells and 168 basis functions",
+        " Size of previous SCF MO coefficient file: 198448 (expected); 199080 (actual). ",
+        " Inconsistent size for SCF MO coefficient file.  Please check basis and PURECART setting.",
+        "        *  Thank you very much for using Q-Chem.  Have a nice day.  *"
+      ],
+      "legacy_dimensions": [
+        315,
+        314,
+        11111,
+        0
+      ]
+    },
+    {
+      "species": "He3_49",
+      "source_hashes": {
+        "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/He3_49.in": "64b56ec88241a560c117a16a0ba26cf62b481c95f6fc81a2b7d90a20906d873d",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/He3_49.in": "4b260830b6a53e557affd8ca25082cf19e64e7af68d9d8a5646280dd5e5816d7",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/He3_49.out": "c0032ffeaf6b35766c29a4606b37fe5529b42e0f006cd753a868812a25eabba3",
+        "/global/scratch/users/jsliang/COACH3/He3_49/819.0": "238186ed698d571b005ca5fac7cfad7686092b240e61fdd796c1b30c39bd458c"
+      },
+      "geometry_equal": true,
+      "input_diff": "--- GSCDB\n+++ XYGOS5\n@@ -12,8 +12,6 @@\n MEM_STATIC 1500\n AUX_BASIS_CORR rimp2-def2-QZVPPD\n SCF_CONVERGENCE 7\n-method DSD-PBEPBE-D3\n-GEN_SCFMAN TRUE\n UNRESTRICTED True\n THRESH  14\n SYMMETRY FALSE\n@@ -25,8 +23,8 @@\n NL_GRID 000075000302\n BASIS GEN\n PURECART 11111\n-\n-\n+METHOD = XYG-OS5\n+SCF_GUESS = READ\n $end\n \n \n",
+      "xyg_output_evidence": [
+        " There are 75 shells and 315 basis functions",
+        " There are 54 shells and 168 basis functions",
+        " Size of previous SCF MO coefficient file: 198448 (expected); 199080 (actual). ",
+        " Inconsistent size for SCF MO coefficient file.  Please check basis and PURECART setting.",
+        "        *  Thank you very much for using Q-Chem.  Have a nice day.  *"
+      ],
+      "legacy_dimensions": [
+        315,
+        314,
+        11111,
+        0
+      ]
+    }
+  ],
+  "job_id": "25826223",
+  "ISOL24_element_counts": {
+    "c": 19,
+    "n": 1,
+    "o": 2,
+    "h": 21
+  },
+  "ISOL24_candidate_basis_counts": {
+    "def2-qzvppd": {
+      "per_element": {
+        "c": 63,
+        "n": 63,
+        "o": 66,
+        "h": 33
+      },
+      "total": 2085
+    },
+    "def2-qzvpp": {
+      "per_element": {
+        "c": 57,
+        "n": 57,
+        "o": 57,
+        "h": 30
+      },
+      "total": 1884
+    },
+    "def2-qzvp": {
+      "per_element": {
+        "c": 57,
+        "n": 57,
+        "o": 57,
+        "h": 30
+      },
+      "total": 1884
+    },
+    "def2-tzvppd": {
+      "per_element": {
+        "c": 37,
+        "n": 37,
+        "o": 40,
+        "h": 17
+      },
+      "total": 1177
+    },
+    "def2-tzvpp": {
+      "per_element": {
+        "c": 31,
+        "n": 31,
+        "o": 31,
+        "h": 14
+      },
+      "total": 976
+    }
+  },
+  "ISOL24_inference": "1884 matches non-diffuse def2-QZVPP/QZVP counts; generating basis not proven by count alone."
+}

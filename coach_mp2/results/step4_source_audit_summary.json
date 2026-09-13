@@ -1,0 +1,76 @@
+{
+  "passed": false,
+  "expected": 17452,
+  "validated": 17440,
+  "problems": [
+    {
+      "species": "AE11_Yb",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/AE11_Yb.in",
+      "error": "reference mismatch aux_basis"
+    },
+    {
+      "species": "BH9_05_17TS",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/BH9_05_17TS.in",
+      "error": "malformed rem SCF_GUESS SADMOSCF_CONVERGENCE 7"
+    },
+    {
+      "species": "BH9_05_7TS",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/BH9_05_7TS.in",
+      "error": "malformed rem SCF_GUESS SADMOSCF_CONVERGENCE 7"
+    },
+    {
+      "species": "FH51_n-nonane",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/FH51_n-nonane.in",
+      "error": "malformed rem SCF_GUESS SADMOMEM_STATIC 8000"
+    },
+    {
+      "species": "ISOL24_i8e",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/ISOL24_i8e.in",
+      "error": "malformed rem SCF_GUESS SADMOMEM_STATIC 8000"
+    },
+    {
+      "species": "O24x5_he2_0.9",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/O24x5_he2_0.9.in",
+      "error": "reference mismatch basis"
+    },
+    {
+      "species": "O24x5_he2_1.0",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/O24x5_he2_1.0.in",
+      "error": "reference mismatch basis"
+    },
+    {
+      "species": "O24x5_he2_1.2",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/O24x5_he2_1.2.in",
+      "error": "reference mismatch basis"
+    },
+    {
+      "species": "O24x5_he2_1.5",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/O24x5_he2_1.5.in",
+      "error": "reference mismatch basis"
+    },
+    {
+      "species": "O24x5_he2_2.0",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/O24x5_he2_2.0.in",
+      "error": "reference mismatch basis"
+    },
+    {
+      "species": "O24x5_he2_monA",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/O24x5_he2_monA.in",
+      "error": "reference mismatch basis"
+    },
+    {
+      "species": "O24x5_he2_monB",
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/O24x5_he2_monB.in",
+      "error": "reference mismatch basis"
+    }
+  ],
+  "explicit_method_overrides": [],
+  "source_methods": {
+    "DSD-PBEPBE-D3": 13994,
+    "COACH": 3446
+  },
+  "scope": "energy-role molecular input chemistry only; no archive compatibility or PT2 validation",
+  "source_metadata_sha256": "22e2375e4dc9e2319741eccb73eb3c5c2a0f0b9d04d51ce297e6ef2fefbc26b7",
+  "reference_parser_sha256": "a0b9bc8026e6758d7bf6ee41c36a0abab0be715ae189dea4a1ece195c8df32ba",
+  "historical_full_audit": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step4_inputs_v1/initial_audit.json"
+}

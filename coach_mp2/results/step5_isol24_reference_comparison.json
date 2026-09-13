@@ -1,0 +1,135 @@
+{
+  "species": "ISOL24_i8e",
+  "date": "2026-09-12",
+  "benchmarks": {
+    "wb97m_os_rimp2": {
+      "sources": {
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/ISOL24_i8e.in": "9f4022cc47bee7055c812741d7f29cb915b3084fa19598590558f5e1527e6bf4",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/ISOL24_i8e.out": "09a66768d390621782df2c45cdc3493ac5f112ec5b124579f866da2d9508d05b",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/wb97m_os_rimp2/work/ISOL24_i8e.sh": "723bce583ffd443e830444fdd858b822a681c2da1b2352f733087dd64440643d"
+      },
+      "output_evidence": [
+        {
+          "line": 250,
+          "text": " There are 651 shells and 2085 basis functions"
+        },
+        {
+          "line": 257,
+          "text": " There are 1213 shells and 4819 basis functions"
+        },
+        {
+          "line": 276,
+          "text": " Coulomb attenuation parameter = 0.3 bohr**(-1)"
+        },
+        {
+          "line": 279,
+          "text": " Exchange:     0.1500 Hartree-Fock + 1.0000 wB97M-V + LR-HF"
+        },
+        {
+          "line": 280,
+          "text": " Correlation:  1.0000 wB97M-V"
+        },
+        {
+          "line": 282,
+          "text": " Nonlocal Correlation:  VV10 with C = 0.0100 and b = 6.00 and scale = 1.00000"
+        },
+        {
+          "line": 314,
+          "text": "   15    -941.7730454277      7.31E-08 Convergence criterion met"
+        },
+        {
+          "line": 1011,
+          "text": "        *  Thank you very much for using Q-Chem.  Have a nice day.  *"
+        }
+      ],
+      "rem": "\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 3000\nAUX_BASIS_CORR  RIMP2-def2-QZVPPD\nBASIS def2-QZVPPD\n!SCF_GUESS_MIX 2\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000099000590\nMETHOD = wb97m(os)\nDH_PT2_ENGINE RIMP2\nSCF_GUESS = READ\n\n   !internal_stability   true\n   !internal_stability_iter 10\n"
+    },
+    "xyg_os5": {
+      "sources": {
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/ISOL24_i8e.in": "a6004b3e0f7f229d878cd998593085fd08eac4fd37b0c08b29775b85be442e6e",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/ISOL24_i8e.out": "253beb22bbf9e033844bb217afc301d5dc0c97cae58832b3da8f414fc2e2599d",
+        "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/ISOL24_i8e.sh": "0326f94ee8eb35670be5d366260429c0f18c92a92761e055218dab0e0c4174c9"
+      },
+      "output_evidence": [
+        {
+          "line": 249,
+          "text": " There are 651 shells and 2085 basis functions"
+        },
+        {
+          "line": 256,
+          "text": " There are 1213 shells and 4819 basis functions"
+        },
+        {
+          "line": 276,
+          "text": " Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88"
+        },
+        {
+          "line": 277,
+          "text": " Correlation:  0.1900 VWN1RPA + 0.8100 LYP"
+        },
+        {
+          "line": 300,
+          "text": "    3    -942.1987557866      4.44E-08 Convergence criterion met"
+        },
+        {
+          "line": 1003,
+          "text": "        *  Thank you very much for using Q-Chem.  Have a nice day.  *"
+        }
+      ],
+      "rem": "\nN_FROZEN_CORE FC\nMEM_TOTAL 120000\nMEM_STATIC 3000\nAUX_BASIS_CORR  RIMP2-def2-QZVPPD\nBASIS def2-QZVPPD\n!SCF_GUESS_MIX 2\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000099000590\nMETHOD = XYG-OS5\nSCF_GUESS = READ\n\n   !internal_stability   true\n   !internal_stability_iter 10\n"
+    }
+  },
+  "archives": {
+    "/global/scratch/users/jsliang/COACH3/ISOL24_i8e": {
+      "dimensions": [
+        1884,
+        1884,
+        1111111,
+        0
+      ],
+      "dimensions_sha256": "2fd8157c95a2f919d3b88925e276637a5f032ee887cdb2e9251e070893e894f6",
+      "mo_file_bytes": 56821440,
+      "qarchive_bytes": 800
+    },
+    "/global/scratch/users/jsliang/wB97M-V/ISOL24_i8e": {
+      "dimensions": [
+        1884,
+        1884,
+        1111111,
+        0
+      ],
+      "dimensions_sha256": "2fd8157c95a2f919d3b88925e276637a5f032ee887cdb2e9251e070893e894f6",
+      "mo_file_bytes": 56821440,
+      "qarchive_bytes": 800
+    },
+    "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2/ISOL24_i8e": {
+      "dimensions": [
+        2085,
+        2053,
+        1111111,
+        0
+      ],
+      "dimensions_sha256": "ea8aa87d864eac6b6ca78e10349c605d7b911ae33a9fd030cd7d27e7f34e9982",
+      "mo_file_bytes": 68520928,
+      "qarchive_bytes": 800
+    },
+    "/clusterfs/mhg-data/yaoshen/scf_read/xyg_os5/ISOL24_i8e": {
+      "dimensions": [
+        2085,
+        2053,
+        1111111,
+        0
+      ],
+      "dimensions_sha256": "ea8aa87d864eac6b6ca78e10349c605d7b911ae33a9fd030cd7d27e7f34e9982",
+      "mo_file_bytes": 68520928,
+      "qarchive_bytes": 800
+    }
+  },
+  "revwb97m2": {
+    "authority_path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/qchem_orbitals/qchem_orbital_authority_v1.yaml",
+    "authority_sha256": "4023af161a35a66a771cd3ad746655a9ef48b64499b6ad66b4be1c284c94b39b",
+    "canonical_source": "/clusterfs/mhg-data/yaoshen/scf_read/wb97m_os_rimp2",
+    "scope": "source-selection policy and current source dimensions; not proof of species-specific revwb97m2 feature completion"
+  },
+  "provenance_limit": "Successful outputs show correct-basis SCF, not how the initial read guesses were obtained or how the shared 1884-AO source was superseded. No undocumented projection/repair is inferred."
+}

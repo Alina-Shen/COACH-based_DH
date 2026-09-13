@@ -1,0 +1,11 @@
+test_dimensions_and_geometry (test_step5.TestArchive) ... ok
+test_ghost (test_step5.TestArchive) ... ok
+test_malformed (test_step5.TestArchive) ... ok
+test_nan (test_step5.TestArchive) ... ok
+test_copy_resume_and_corruption (test_step5.TestImport) ... ok
+test_traversal (test_step5.TestImport) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.092s
+
+OK

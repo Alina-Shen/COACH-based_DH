@@ -1,0 +1,43 @@
+{
+  "scope": "Investigate failed carbon RI/conventional gate; no authoritative basis/engine amendment",
+  "cases": [
+    {
+      "tag": "16_C_AE18_RIMP2_legacy",
+      "species": "16_C_AE18",
+      "engine": "RIMP2",
+      "core": "FC",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step6_v1/16_C_AE18_RIMP2_legacy.in",
+      "input_sha256": "7619679bcd78ff3b338d7e5c2c14f243479cb7223371add5423b2ade2e22da41",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step6_v1/16_C_AE18_RIMP2_legacy",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/16_C_AE18",
+      "source_hashes": {
+        "53.0": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+        "54.0": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588",
+        "58.0": "a764569111f230816820bfdb869d1ce8e40edac7eeb868b8b928a03aad6c8a6e",
+        "819.0": "2cd7cfd061897c3e512ea27a88a6540b2f9e25eded6ad51344d2e5f082da602d",
+        "99.0": "85d5c5fabc1926616ee306fd7f40802d073d472dada59b1b88ab1769bff7e5af",
+        "molecule": "22dff7e35eb3bb422c3caf86c98ac4bd1392409416b32ea7f1af90b53f88f17d"
+      },
+      "diagnostic_only": true
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_augQZ",
+      "species": "16_C_AE18",
+      "engine": "RIMP2",
+      "core": "FC",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step6_v1/16_C_AE18_RIMP2_augQZ.in",
+      "input_sha256": "04a449b6355a3830e3b6ab1f9295fb859cc130b8c6d9aa4a2a006353c3825ff6",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step6_v1/16_C_AE18_RIMP2_augQZ",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/16_C_AE18",
+      "source_hashes": {
+        "53.0": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+        "54.0": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588",
+        "58.0": "a764569111f230816820bfdb869d1ce8e40edac7eeb868b8b928a03aad6c8a6e",
+        "819.0": "2cd7cfd061897c3e512ea27a88a6540b2f9e25eded6ad51344d2e5f082da602d",
+        "99.0": "85d5c5fabc1926616ee306fd7f40802d073d472dada59b1b88ab1769bff7e5af",
+        "molecule": "22dff7e35eb3bb422c3caf86c98ac4bd1392409416b32ea7f1af90b53f88f17d"
+      },
+      "diagnostic_only": true
+    }
+  ]
+}

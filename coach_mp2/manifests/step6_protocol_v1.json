@@ -1,0 +1,126 @@
+{
+  "scope": "Closed-shell UKS water and triplet UKS carbon, conventional/RI frozen-core and all-electron RI control; not bulk production",
+  "solver_dependency": false,
+  "omega": 0.27,
+  "ri_conventional_tolerance_hartree": 2.3904021564725822e-05,
+  "spin_sum_tolerance_hartree": 2e-08,
+  "parent_energy_tolerance_hartree": 2e-08,
+  "orbital_invariance": "Entire 53.0 byte identity including orbital energies",
+  "denominators": "Unregularized epsilon_i+epsilon_j-epsilon_a-epsilon_b from unchanged source 53.0; finite strictly negative denominators required",
+  "frozen_core": "FC must resolve to one occupied orbital per spin for O/C; zero frozen virtuals; explicit all-electron RI control",
+  "singles": "Record non-Brillouin singles separately, exclude from OS+SS fitted feature",
+  "source_definition": "EXCHANGE COACH with CORRELATION MP2 or RIMP2, unit spin factors; verify COACH parent energy against Step5",
+  "cases": [
+    {
+      "tag": "SIE4x4_h2o_MP2_FC",
+      "species": "SIE4x4_h2o",
+      "engine": "MP2",
+      "core": "FC",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step6_v1/SIE4x4_h2o_MP2_FC.in",
+      "input_sha256": "523421eadb45621cf1ed7df691463454e6e0b520c0018de4031f9da9d8ab2dc7",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step6_v1/SIE4x4_h2o_MP2_FC",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/SIE4x4_h2o",
+      "source_hashes": {
+        "53.0": "46e87ec532e0f696263a14ab3acaa5c6db7c1177d55f0819faf917b098e2ae38",
+        "54.0": "fad980492c9e13651db7f91526e93dc599f7095bce4b795c01abe4e497fe7ca6",
+        "58.0": "eacf0fc6687416d06abbe3f82089bac4ce6c7c22476f655b4d9abfd5dee3e5ed",
+        "819.0": "0a39970095fa436dfc6915a80552ece60773e79124aef19e914ff008ec02a5c8",
+        "99.0": "8dbab1b7b8936f6f54dbc3c9bec89594e413a000e32f7bd19b345d34245b5a79",
+        "molecule": "2fb6e17dfda5d88ce2c607bea024b3107e3bc89bcd9bbf41f854dff5c007ecb6",
+        "pseudodata": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+      }
+    },
+    {
+      "tag": "SIE4x4_h2o_RIMP2_FC",
+      "species": "SIE4x4_h2o",
+      "engine": "RIMP2",
+      "core": "FC",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step6_v1/SIE4x4_h2o_RIMP2_FC.in",
+      "input_sha256": "52acfeabfe2540301c1d856553426b71bf90de5e5fd3b74b01f54121477e4758",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step6_v1/SIE4x4_h2o_RIMP2_FC",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/SIE4x4_h2o",
+      "source_hashes": {
+        "53.0": "46e87ec532e0f696263a14ab3acaa5c6db7c1177d55f0819faf917b098e2ae38",
+        "54.0": "fad980492c9e13651db7f91526e93dc599f7095bce4b795c01abe4e497fe7ca6",
+        "58.0": "eacf0fc6687416d06abbe3f82089bac4ce6c7c22476f655b4d9abfd5dee3e5ed",
+        "819.0": "0a39970095fa436dfc6915a80552ece60773e79124aef19e914ff008ec02a5c8",
+        "99.0": "8dbab1b7b8936f6f54dbc3c9bec89594e413a000e32f7bd19b345d34245b5a79",
+        "molecule": "2fb6e17dfda5d88ce2c607bea024b3107e3bc89bcd9bbf41f854dff5c007ecb6",
+        "pseudodata": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+      }
+    },
+    {
+      "tag": "SIE4x4_h2o_RIMP2_0",
+      "species": "SIE4x4_h2o",
+      "engine": "RIMP2",
+      "core": "0",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step6_v1/SIE4x4_h2o_RIMP2_0.in",
+      "input_sha256": "721b41eb8dfa90a2ed10de4c3ea5ac4ee2ca67ef823723923ce75ac6a688a97e",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step6_v1/SIE4x4_h2o_RIMP2_0",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/SIE4x4_h2o",
+      "source_hashes": {
+        "53.0": "46e87ec532e0f696263a14ab3acaa5c6db7c1177d55f0819faf917b098e2ae38",
+        "54.0": "fad980492c9e13651db7f91526e93dc599f7095bce4b795c01abe4e497fe7ca6",
+        "58.0": "eacf0fc6687416d06abbe3f82089bac4ce6c7c22476f655b4d9abfd5dee3e5ed",
+        "819.0": "0a39970095fa436dfc6915a80552ece60773e79124aef19e914ff008ec02a5c8",
+        "99.0": "8dbab1b7b8936f6f54dbc3c9bec89594e413a000e32f7bd19b345d34245b5a79",
+        "molecule": "2fb6e17dfda5d88ce2c607bea024b3107e3bc89bcd9bbf41f854dff5c007ecb6",
+        "pseudodata": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+      }
+    },
+    {
+      "tag": "16_C_AE18_MP2_FC",
+      "species": "16_C_AE18",
+      "engine": "MP2",
+      "core": "FC",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step6_v1/16_C_AE18_MP2_FC.in",
+      "input_sha256": "303c6e2c4765df635d89d62e9e24bf7484962513752c2194bcfe341e3066e690",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step6_v1/16_C_AE18_MP2_FC",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/16_C_AE18",
+      "source_hashes": {
+        "53.0": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+        "54.0": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588",
+        "58.0": "a764569111f230816820bfdb869d1ce8e40edac7eeb868b8b928a03aad6c8a6e",
+        "819.0": "2cd7cfd061897c3e512ea27a88a6540b2f9e25eded6ad51344d2e5f082da602d",
+        "99.0": "85d5c5fabc1926616ee306fd7f40802d073d472dada59b1b88ab1769bff7e5af",
+        "molecule": "22dff7e35eb3bb422c3caf86c98ac4bd1392409416b32ea7f1af90b53f88f17d"
+      }
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_FC",
+      "species": "16_C_AE18",
+      "engine": "RIMP2",
+      "core": "FC",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step6_v1/16_C_AE18_RIMP2_FC.in",
+      "input_sha256": "918126a19382a1270225fc97cfa79c4cbd5ed31489136ee1c64ff19ccca795ce",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step6_v1/16_C_AE18_RIMP2_FC",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/16_C_AE18",
+      "source_hashes": {
+        "53.0": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+        "54.0": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588",
+        "58.0": "a764569111f230816820bfdb869d1ce8e40edac7eeb868b8b928a03aad6c8a6e",
+        "819.0": "2cd7cfd061897c3e512ea27a88a6540b2f9e25eded6ad51344d2e5f082da602d",
+        "99.0": "85d5c5fabc1926616ee306fd7f40802d073d472dada59b1b88ab1769bff7e5af",
+        "molecule": "22dff7e35eb3bb422c3caf86c98ac4bd1392409416b32ea7f1af90b53f88f17d"
+      }
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_0",
+      "species": "16_C_AE18",
+      "engine": "RIMP2",
+      "core": "0",
+      "input": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step6_v1/16_C_AE18_RIMP2_0.in",
+      "input_sha256": "279630d3b82bcb0b6641605a4361ab8771fa8e84f09fe44e3b8c5b953f661d35",
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step6_v1/16_C_AE18_RIMP2_0",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/16_C_AE18",
+      "source_hashes": {
+        "53.0": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+        "54.0": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588",
+        "58.0": "a764569111f230816820bfdb869d1ce8e40edac7eeb868b8b928a03aad6c8a6e",
+        "819.0": "2cd7cfd061897c3e512ea27a88a6540b2f9e25eded6ad51344d2e5f082da602d",
+        "99.0": "85d5c5fabc1926616ee306fd7f40802d073d472dada59b1b88ab1769bff7e5af",
+        "molecule": "22dff7e35eb3bb422c3caf86c98ac4bd1392409416b32ea7f1af90b53f88f17d"
+      }
+    }
+  ]
+}

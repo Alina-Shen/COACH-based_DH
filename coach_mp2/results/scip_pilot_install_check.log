@@ -1,0 +1,10 @@
+SCIP version 10.0.2 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: SoPlex 8.0.2] [GitHash: NoGitInfo]
+Copyright (c) 2002-2026 Zuse Institute Berlin (ZIB)
+Traceback (most recent call last):
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/check_scip_pilot.py", line 23, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/check_scip_pilot.py", line 9, in main
+    model=Model('scip_installation_smoke');model.printVersion();model.printExternalCodes();model.hideOutput()
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'pyscipopt.scip.Model' object has no attribute 'printExternalCodes'. Did you mean: 'printExternalCodeVersions'?

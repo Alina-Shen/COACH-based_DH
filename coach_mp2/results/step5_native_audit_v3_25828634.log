@@ -1,0 +1,395 @@
+{
+  "native_job_id": "25827314",
+  "reference": "Immutable project imports, verified against both import receipts and native-staging source hashes; external originals are not rehashed after execution",
+  "completed": 6,
+  "passed": false,
+  "cases": [
+    {
+      "species": "SIE4x4_h2o",
+      "passed": true,
+      "mo_file_byte_unchanged": true,
+      "source_MO_orthonormality_errors": [
+        9.401368572525826e-13,
+        8.306688670245421e-13
+      ],
+      "orthonormality_tolerance": 1e-06,
+      "overlap_sha256": "9880556ead8c7fdf511e93a2bb4006962b4f88088046baf6f11e285783c1b55a",
+      "source_unchanged": true,
+      "density_checks": [
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/SIE4x4_h2o/54.0",
+          "spin": 0,
+          "error": 2.7755575615628914e-17,
+          "bound": 6.948832273184245e-15,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/SIE4x4_h2o/54.0",
+          "spin": 1,
+          "error": 2.7755575615628914e-17,
+          "bound": 6.948832273185067e-15,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/SIE4x4_h2o/54.0",
+          "spin": 0,
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273184245e-15,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/SIE4x4_h2o/54.0",
+          "spin": 1,
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273185067e-15,
+          "passed": true
+        }
+      ],
+      "energy": {
+        "energy_hartree": -76.433517942,
+        "components": {
+          "One-Electron Energy": -122.9651790307,
+          "Total Coulomb Energy": 46.6421676455,
+          "Alpha Exchange Energy": -1.5764824768,
+          "Beta Exchange Energy": -1.5764824768,
+          "DFT Exchange Energy": -5.8761068322,
+          "DFT Correlation Energy": -0.2627204683,
+          "Nuclear Repu. Energy": 9.1812856973
+        },
+        "component_sum_hartree": -76.433517942,
+        "closure_error_hartree": 0.0,
+        "dispersion_hartree": 0.0,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice",
+        "nondispersion_component_sum_hartree": -76.433517942,
+        "dispersion_in_component_sum": true
+      },
+      "prior_parent_energy_difference": 0.0,
+      "output_sha256": "eba9a0622b01e8d87004b6aecd37271af429c9baeef3ea121097949fcf36e2dd"
+    },
+    {
+      "species": "16_C_AE18",
+      "passed": true,
+      "mo_file_byte_unchanged": true,
+      "source_MO_orthonormality_errors": [
+        1.3013146116236385e-11,
+        1.0583756093751617e-12
+      ],
+      "orthonormality_tolerance": 1e-06,
+      "overlap_sha256": "205965340c0e055f513dfa0d25c04f99490f10999f8edac1e54a9834e4ada457",
+      "source_unchanged": true,
+      "density_checks": [
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/16_C_AE18/54.0",
+          "spin": 0,
+          "error": 2.7755575615628914e-17,
+          "bound": 7.75770910528828e-15,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/16_C_AE18/54.0",
+          "spin": 1,
+          "error": 2.7755575615628914e-17,
+          "bound": 5.372469631215248e-15,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/16_C_AE18/54.0",
+          "spin": 0,
+          "error": 8.673617379884035e-19,
+          "bound": 7.75770910528828e-15,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/16_C_AE18/54.0",
+          "spin": 1,
+          "error": 8.673617379884035e-19,
+          "bound": 5.372469631215248e-15,
+          "passed": true
+        }
+      ],
+      "energy": {
+        "energy_hartree": -37.8454590857,
+        "components": {
+          "One-Electron Energy": -50.4222640905,
+          "Total Coulomb Energy": 17.7916889215,
+          "Alpha Exchange Energy": -1.1154537533,
+          "Beta Exchange Energy": -0.6978806111,
+          "DFT Exchange Energy": -3.2917425812,
+          "DFT Correlation Energy": -0.109806971,
+          "Nuclear Repu. Energy": 0.0
+        },
+        "component_sum_hartree": -37.84545908559999,
+        "closure_error_hartree": 1.000088900582341e-10,
+        "dispersion_hartree": 0.0,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice",
+        "nondispersion_component_sum_hartree": -37.84545908559999,
+        "dispersion_in_component_sum": true
+      },
+      "prior_parent_energy_difference": 0.0,
+      "output_sha256": "01ed14e2ebb5624f21cc41bc4f81b06f71450c32e73f3355d4a95446be0100fd"
+    },
+    {
+      "species": "He3_47",
+      "passed": true,
+      "mo_file_byte_unchanged": true,
+      "source_MO_orthonormality_errors": [
+        2.191805847928663e-09,
+        2.1918778951145884e-09
+      ],
+      "orthonormality_tolerance": 1e-06,
+      "overlap_sha256": "46c60c71526ec0a8308ab4f5d13366975998676658568120febb552503ebcd5a",
+      "source_unchanged": true,
+      "density_checks": [
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/He3_47/54.0",
+          "spin": 0,
+          "error": 2.220446049250313e-16,
+          "bound": 1.2790059809173935e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/He3_47/54.0",
+          "spin": 1,
+          "error": 2.220446049250313e-16,
+          "bound": 1.279005980924449e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_47/54.0",
+          "spin": 0,
+          "error": 3.469446951953614e-18,
+          "bound": 1.2790059809173935e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_47/54.0",
+          "spin": 1,
+          "error": 3.469446951953614e-18,
+          "bound": 1.279005980924449e-14,
+          "passed": true
+        }
+      ],
+      "energy": {
+        "energy_hartree": -8.3001208857,
+        "components": {
+          "One-Electron Energy": -23.7489664291,
+          "Total Coulomb Energy": 12.2693097787,
+          "Alpha Exchange Energy": -0.7044804782,
+          "Beta Exchange Energy": -0.7044804782,
+          "DFT Exchange Energy": -1.8415619831,
+          "DFT Correlation Energy": -0.1273209582,
+          "Nuclear Repu. Energy": 6.5573796625
+        },
+        "component_sum_hartree": -8.300120885600002,
+        "closure_error_hartree": 9.99982319171977e-11,
+        "dispersion_hartree": 0.0,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice",
+        "nondispersion_component_sum_hartree": -8.300120885600002,
+        "dispersion_in_component_sum": true
+      },
+      "prior_parent_energy_difference": 0.0,
+      "output_sha256": "1ef32b02d98b05c0f5297ced782949aa271763179e63d0bfb97e4e205d1a8322"
+    },
+    {
+      "species": "He3_48",
+      "passed": true,
+      "mo_file_byte_unchanged": true,
+      "source_MO_orthonormality_errors": [
+        1.3225456285681503e-09,
+        1.3225650403406869e-09
+      ],
+      "orthonormality_tolerance": 1e-06,
+      "overlap_sha256": "f2839663c4ceb281a48e90995bb4bd0e688470a188a2dfc588c0ab530b71a0c9",
+      "source_unchanged": true,
+      "density_checks": [
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/He3_48/54.0",
+          "spin": 0,
+          "error": 2.220446049250313e-16,
+          "bound": 1.3760181683884542e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/He3_48/54.0",
+          "spin": 1,
+          "error": 2.220446049250313e-16,
+          "bound": 1.376018168387607e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_48/54.0",
+          "spin": 0,
+          "error": 3.469446951953614e-18,
+          "bound": 1.3760181683884542e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_48/54.0",
+          "spin": 1,
+          "error": 3.469446951953614e-18,
+          "bound": 1.376018168387607e-14,
+          "passed": true
+        }
+      ],
+      "energy": {
+        "energy_hartree": -8.1442233631,
+        "components": {
+          "One-Electron Energy": -24.5831176627,
+          "Total Coulomb Energy": 12.6601813986,
+          "Alpha Exchange Energy": -0.7068497156,
+          "Beta Exchange Energy": -0.7068497156,
+          "DFT Exchange Energy": -1.8623772638,
+          "DFT Correlation Energy": -0.1308420102,
+          "Nuclear Repu. Energy": 7.1856316062
+        },
+        "component_sum_hartree": -8.144223363100004,
+        "closure_error_hartree": -3.552713678800501e-15,
+        "dispersion_hartree": 0.0,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice",
+        "nondispersion_component_sum_hartree": -8.144223363100004,
+        "dispersion_in_component_sum": true
+      },
+      "prior_parent_energy_difference": 0.0,
+      "output_sha256": "eb49c7bf8056dc42f62820bd4de19bc2590a464b37fed916a235dadac3a39c0f"
+    },
+    {
+      "species": "He3_49",
+      "passed": true,
+      "mo_file_byte_unchanged": true,
+      "source_MO_orthonormality_errors": [
+        6.471788314456328e-09,
+        6.4717141871201145e-09
+      ],
+      "orthonormality_tolerance": 1e-06,
+      "overlap_sha256": "9ab8d50b5d7080eb4b7a90eb64cce91158df342574d3430743a4a0e83883d4f3",
+      "source_unchanged": true,
+      "density_checks": [
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/He3_49/54.0",
+          "spin": 0,
+          "error": 4.440892098500626e-16,
+          "bound": 1.6376456076419464e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/He3_49/54.0",
+          "spin": 1,
+          "error": 2.220446049250313e-16,
+          "bound": 1.6376456076310383e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_49/54.0",
+          "spin": 0,
+          "error": 6.938893903907228e-18,
+          "bound": 1.6376456076419464e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/He3_49/54.0",
+          "spin": 1,
+          "error": 6.938893903907228e-18,
+          "bound": 1.6376456076310383e-14,
+          "passed": true
+        }
+      ],
+      "energy": {
+        "energy_hartree": -7.9113273194,
+        "components": {
+          "One-Electron Energy": -25.5637420686,
+          "Total Coulomb Energy": 13.0913639419,
+          "Alpha Exchange Energy": -0.7090170156,
+          "Beta Exchange Energy": -0.7090170156,
+          "DFT Exchange Energy": -1.88671747,
+          "DFT Correlation Energy": -0.1342008801,
+          "Nuclear Repu. Energy": 8.0000031885
+        },
+        "component_sum_hartree": -7.911327319500003,
+        "closure_error_hartree": -1.000035609877159e-10,
+        "dispersion_hartree": 0.0,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice",
+        "nondispersion_component_sum_hartree": -7.911327319500003,
+        "dispersion_in_component_sum": true
+      },
+      "prior_parent_energy_difference": 0.0,
+      "output_sha256": "ca6e268491227ad1121495c65865e233c0d1a781e52a8de58e3412f2a992ee6c"
+    },
+    {
+      "species": "ISOL24_i8e",
+      "passed": false,
+      "mo_file_byte_unchanged": true,
+      "source_MO_orthonormality_errors": [
+        2.4407541959758916e-12,
+        2.6035198302798435e-12
+      ],
+      "orthonormality_tolerance": 1e-06,
+      "overlap_sha256": "990e1c4679b3ac187d9fbeef07eeefcf77f9c83e5eb606dfa8d53aa2372086e9",
+      "source_unchanged": true,
+      "density_checks": [
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/ISOL24_i8e/54.0",
+          "spin": 0,
+          "error": 5.551115123125783e-17,
+          "bound": 1.0320341987678421e-13,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/ISOL24_i8e/54.0",
+          "spin": 1,
+          "error": 1.1102230246251565e-16,
+          "bound": 1.0320342009517122e-13,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/ISOL24_i8e/54.0",
+          "spin": 0,
+          "error": 6.938893903907228e-18,
+          "bound": 1.0320341987678421e-13,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_native_v2/ISOL24_i8e/54.0",
+          "spin": 1,
+          "error": 6.938893903907228e-18,
+          "bound": 1.0320342009517122e-13,
+          "passed": true
+        }
+      ],
+      "energy": {
+        "energy_hartree": -941.7071527711,
+        "components": {
+          "One-Electron Energy": -4462.8762210321,
+          "Total Coulomb Energy": 2049.9247666415,
+          "Alpha Exchange Energy": -23.3950704099,
+          "Beta Exchange Energy": -23.395070409,
+          "DFT Exchange Energy": -83.4714247831,
+          "DFT Correlation Energy": -4.2614196931,
+          "Nuclear Repu. Energy": 1605.7672869147
+        },
+        "component_sum_hartree": -941.7072150042,
+        "closure_error_hartree": -6.223309992492432e-05,
+        "dispersion_hartree": -6.22332e-05,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice",
+        "nondispersion_component_sum_hartree": -941.707152771,
+        "dispersion_in_component_sum": true
+      },
+      "prior_parent_energy_difference": null,
+      "output_sha256": "eb3eac651070e2b4bb69f8852ba24fa3ab1fc8f092076f3930b9c194880576b1"
+    }
+  ],
+  "scope": "Six fixed-parent read regressions; not MP2 validation or proof of historical basis identity"
+}
+Traceback (most recent call last):
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/check_step5_native_v3.py", line 44, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/check_step5_native_v3.py", line 43, in main
+    if not args.partial:assert report['passed']
+                               ~~~~~~^^^^^^^^^^
+AssertionError

@@ -1,0 +1,76 @@
+{
+  "step": 9,
+  "passed": true,
+  "solver_used": false,
+  "tests": 8,
+  "pilot": "frozen simple algorithmic seed; not a fitted or optimized candidate",
+  "simple_seed_C0": {
+    "checks": {
+      "binary": true,
+      "support": true,
+      "mandatory": true,
+      "semilocal_bounds": true,
+      "scalar_bounds": true,
+      "unselected_zero": true,
+      "ueg": true
+    },
+    "ueg_residual": 0.0,
+    "passed": true
+  },
+  "native_molecular_grid_diagnostics": {
+    "99590": {
+      "checks": {
+        "binary": true,
+        "support": true,
+        "mandatory": true,
+        "semilocal_bounds": true,
+        "scalar_bounds": true,
+        "unselected_zero": true,
+        "ueg": true,
+        "selected_grid": true
+      },
+      "ueg_residual": 0.0,
+      "selected_internal_limit_satisfied": true,
+      "full_grid_violations": [],
+      "full_grid_max_hartree": 1.9423778829241734e-07,
+      "review_required": false,
+      "passed": true
+    },
+    "75302": {
+      "checks": {
+        "binary": true,
+        "support": true,
+        "mandatory": true,
+        "semilocal_bounds": true,
+        "scalar_bounds": true,
+        "unselected_zero": true,
+        "ueg": true,
+        "selected_grid": true
+      },
+      "ueg_residual": 0.0,
+      "selected_internal_limit_satisfied": true,
+      "full_grid_violations": [],
+      "full_grid_max_hartree": 1.0444444290547141e-07,
+      "review_required": false,
+      "passed": true
+    }
+  },
+  "production_grid_selection_frozen": false,
+  "discovery_matrix_shape": [
+    585,
+    584
+  ],
+  "selected_pilot_matrix_shape": [
+    589,
+    584
+  ],
+  "dense_factor_report": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/results/step9_constraint_pilot_v1/simple_seed_dense_factors.json",
+  "numpy_version": "2.4.6",
+  "scipy_version": "1.17.1",
+  "reference_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/mio.py": "544cf9005966062245f3ffbeb091b536ab429495a1c7fed1af44f2bc3c915908",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/selective_grid_v1.py": "339e8eeb9bf87999d6eac0c3a119fa10ea50baaa3b0c07c070add85461b4aeb1",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_spec.py": "913f1d184be37477ba5fe5e58bec2acad6e9b5663d06ac11561d12d87409b078"
+  },
+  "native_feature_manifest_sha256": "b8da16961ef9ae79092c6b628fcda94c5e8d8aea3afdc5a239d845171be7709c"
+}

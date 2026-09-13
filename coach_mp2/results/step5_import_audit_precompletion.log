@@ -1,0 +1,31 @@
+Audited receipts 2000
+Audited receipts 4000
+Audited receipts 6000
+Audited receipts 8000
+Audited receipts 10000
+Audited receipts 12000
+Audited receipts 14000
+Traceback (most recent call last):
+  File "coach_mp2/scripts/audit_step5_import_receipts.py", line 28, in <module>
+    if __name__=='__main__':main()
+  File "coach_mp2/scripts/audit_step5_import_receipts.py", line 21, in main
+    for i,r in enumerate(pool.map(audit,rows)):
+  File "/usr/lib64/python3.6/concurrent/futures/_base.py", line 586, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib64/python3.6/concurrent/futures/_base.py", line 425, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.6/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "coach_mp2/scripts/audit_step5_import_receipts.py", line 7, in audit
+    name=row['species'];p=D/name;f=p/'import.json';data=f.read_bytes();record=json.loads(data);assert record['species']==name
+  File "/usr/lib64/python3.6/pathlib.py", line 1123, in read_bytes
+    with self.open(mode='rb') as f:
+  File "/usr/lib64/python3.6/pathlib.py", line 1117, in open
+    opener=self._opener)
+  File "/usr/lib64/python3.6/pathlib.py", line 961, in _opener
+    return self._accessor.open(self, flags, mode)
+  File "/usr/lib64/python3.6/pathlib.py", line 310, in wrapped
+    return strfunc(str(pathobj), *args)
+FileNotFoundError: [Errno 2] No such file or directory: '/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step5_import_v1/species/vL11_C60-C60_monA/import.json'

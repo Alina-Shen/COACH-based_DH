@@ -1,0 +1,11 @@
+{
+  "imported": 4,
+  "species": [
+    "He3_47",
+    "He3_48",
+    "He3_49",
+    "ISOL24_i8e"
+  ],
+  "basis_amendment": "configs/input_basis_amendments_v1.json",
+  "scope": "Verified immutable source preservation; native gate remains separate"
+}

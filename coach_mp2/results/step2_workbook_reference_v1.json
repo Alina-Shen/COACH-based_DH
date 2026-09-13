@@ -1,0 +1,63 @@
+{
+  "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/paper/COACH_raw_data.xlsx",
+  "source_sha256": "9995f863871f370389613523d17d447aaa71e9d5d66840ef343066a182acb676",
+  "source_authority": "user-supplied COACH paper raw data",
+  "sheets": [
+    "statistics",
+    "Relative_metric_per_set",
+    "raw_data",
+    "GDB_W1-F12"
+  ],
+  "layout": "reaction/property values, not a standalone molecular-energy table",
+  "stoichiometry_authority": "/clusterfs/mhg-data/yaoshen/GSCDB/Info/DatasetEval.csv",
+  "stoichiometry_sha256": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe",
+  "conversion_factor": 627.50947406,
+  "conversion_evidence": "frozen scientific spec; GSCDB/Analysis/analyze.ipynb; workbook Reference column consistency",
+  "carbon": {
+    "reaction": "AE18_6",
+    "sheet": "raw_data",
+    "cell": "D298",
+    "column": "COACH",
+    "stoichiometry": "1,16_C_AE18",
+    "reference_kcal_mol": -23748.38489725949,
+    "reference_hartree": -37.845460314099995,
+    "pilot_hartree": -37.8454603141,
+    "difference_hartree": -7.105427357601002e-15,
+    "tolerance_hartree": 2e-06,
+    "passed": true
+  },
+  "water": {
+    "direct_absolute_comparison_available": false,
+    "related_reactions": [
+      {
+        "Reaction": "SIE4x4_13",
+        "Dataset": "SIE4x4",
+        "Reference": "0.063266025",
+        "Stoichiometry": "1,SIE4x4_h2o,1,SIE4x4_h2o+,-1,SIE4x4_h2o2+_1_0"
+      },
+      {
+        "Reaction": "SIE4x4_14",
+        "Dataset": "SIE4x4",
+        "Reference": "0.046373837",
+        "Stoichiometry": "1,SIE4x4_h2o,1,SIE4x4_h2o+,-1,SIE4x4_h2o2+_1_25"
+      },
+      {
+        "Reaction": "SIE4x4_15",
+        "Dataset": "SIE4x4",
+        "Reference": "0.026931885",
+        "Stoichiometry": "1,SIE4x4_h2o,1,SIE4x4_h2o+,-1,SIE4x4_h2o2+_1_5"
+      },
+      {
+        "Reaction": "SIE4x4_16",
+        "Dataset": "SIE4x4",
+        "Reference": "0.014820505",
+        "Stoichiometry": "1,SIE4x4_h2o,1,SIE4x4_h2o+,-1,SIE4x4_h2o2+_1_75"
+      }
+    ],
+    "reason": "Water enters multicomponent reaction combinations; water-only pilot cannot reconstruct them.",
+    "existing_fixture_comparison": "PASS"
+  },
+  "reference_location_resolved": true,
+  "step2_complete": false,
+  "remaining": "Dedicated zero-update energy evaluator remains unvalidated; historical generating build remains unknown, as accepted."
+}

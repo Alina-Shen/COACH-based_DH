@@ -1,0 +1,20 @@
+test_concatenated_line_rejected (test_step4.InputTests.test_concatenated_line_rejected) ... ok
+test_conflicting_rem_rejected (test_step4.InputTests.test_conflicting_rem_rejected) ... ok
+test_duplicate_blocks_rejected (test_step4.InputTests.test_duplicate_blocks_rejected) ... ok
+test_external_auxiliary_explicit (test_step4.InputTests.test_external_auxiliary_explicit) ... ok
+test_geometry_mutation_rejected (test_step4.InputTests.test_geometry_mutation_rejected) ... ok
+test_ghost_preserved (test_step4.InputTests.test_ghost_preserved) ... ok
+test_grid_mutation_rejected (test_step4.InputTests.test_grid_mutation_rejected) ... ok
+test_incomplete_fragment_rejected (test_step4.InputTests.test_incomplete_fragment_rejected) ... ok
+test_known_line_repair (test_step4.InputTests.test_known_line_repair) ... ok
+test_method_key_boundary (test_step4.InputTests.test_method_key_boundary) ... ok
+test_method_only (test_step4.InputTests.test_method_only) ... ok
+test_missing_rem_rejected (test_step4.InputTests.test_missing_rem_rejected) ... ok
+test_nan_rejected (test_step4.InputTests.test_nan_rejected) ... ok
+test_new_ecp_rejected (test_step4.InputTests.test_new_ecp_rejected) ... ok
+test_valid_cartesian (test_step4.InputTests.test_valid_cartesian) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.024s
+
+OK

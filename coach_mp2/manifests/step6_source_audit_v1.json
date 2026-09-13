@@ -1,0 +1,13 @@
+{
+  "description": "Read-only source audit: automatic auxiliary routing, same COACH Fock pseudocanonicalization, singles scaling and frozen-core windows",
+  "sha256": {
+    "/clusterfs/mhg/yaoshen/qchem/trunk/libgen/rem_setup.C": "376dad5d32e17aa5b25410f13ff9b6e935e38fc16d3accaa3505c1f3c55ae8ff",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/libgmbpt/qchem/rimp2_energy_qchem.C": "d198bb14ae13f1599b57c96df7a98269629cf35fc9668c327c9efcd15ab11ce2",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/libgmbpt/libgmbpt/rimp2/rimp2_energy.C": "e27fd8c7d3d89147d6fe6367dab128c45e564e484c2b6f57271fed6f5d858f8b",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/libgscf/libgscf/scf/posthf_kernels.C": "7dd4682101a4826ee852d67711a16757583c235c94a95bbb2819b494c348567a",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/libgscf/libgscf/util/arma_extra.C": "ed281f947e0d648b6176cbcefd0d4e2d7816a6faef9c73210552491adb5c78e8",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/cdman/premp2.F": "659bfb90313085600facb9e244037c94612434e264482662abb4c953a9560aa7",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/liblas/pseuco.F": "700d514384028ed2a6bb5aaa603d28a2905a8ed0b1873d4d330edfe6b215ea54",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/cdman/demp2.F": "b1c84cfa761c14efdbb02077f4489495bd0826397bb3a45d5336d341f39c7137"
+  }
+}

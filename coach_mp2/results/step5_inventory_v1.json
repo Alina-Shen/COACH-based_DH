@@ -1,0 +1,23 @@
+{
+  "total": 17452,
+  "status": {
+    "structural_pass": 14077,
+    "quarantine": 4,
+    "missing": 3371
+  },
+  "total_available_bytes": 805644039802,
+  "issues": {
+    "53.0_size": 3,
+    "basis_dimension": 1
+  },
+  "scope_status": {
+    "gscdb137:structural_pass": 13903,
+    "auxiliary_only:structural_pass": 99,
+    "gscdb137:quarantine": 4,
+    "BigNC_external:structural_pass": 75,
+    "GDB9_W1_F12_external:missing": 3371
+  },
+  "method_identity": "user attribution and Step2 baseline only; historical outputs/build unavailable",
+  "basis_identity": "dimensions only; legacy archive does not contain full basis definition",
+  "solver_required": false
+}

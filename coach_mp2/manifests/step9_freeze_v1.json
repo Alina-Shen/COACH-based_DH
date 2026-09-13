@@ -1,0 +1,18 @@
+{
+  "step": 9,
+  "sha256": {
+    "scripts/step9_constraints.py": "be5b332287bbcd0127fa17f25f9df61102a832576ca491e9e3614b7ed9403455",
+    "scripts/test_step9.py": "53d5acda501aad52422f0a20bc3ea703b74d8e1217aa039b87c102af123b216a",
+    "scripts/validate_step9.py": "4c99a215b909a56452270af8a1841be8ac6aeb692fe4ce1e2d320d454fd1b3be",
+    "configs/step9_constraint_contract_v1.json": "d9a7af3efcc437b8430d9c615b334ae22aaf228035aaadf933c48729e0d277dd",
+    "results/step9_validation.json": "f3e23ec91936388814b61ef994afa8b072f599369f2bc3e29f9cfd961b157c6f",
+    "results/step9_tests.log": "1fb116638fbcee5b507d1aa8cf2052bca4979a849ae7fdca28b642ecd6998fa3",
+    "results/step9_constraint_pilot_v1/A_eq.npz": "e9d9ab438f620e3c93075ee462d290a41029402ad8dc505c6f36a1cc4e7af937",
+    "results/step9_constraint_pilot_v1/bounds_rhs.npz": "7eaab525ac4425847b19a87de71720ee39671907e21c78ae1c59824c89cb9afc",
+    "results/step9_constraint_pilot_v1/discovery_A_ub.npz": "da2ddd2f51903f8018aff70969a96e3e3f77f2ad7d6a4d7754dc2e2dc97ba7d7",
+    "results/step9_constraint_pilot_v1/selected_A_ub.npz": "c6f89dd08f36510fe22c26b78fd708be8212715c8438f4c33d4bbfe76dbf1cb6",
+    "results/step9_constraint_pilot_v1/simple_seed_dense_factors.json": "de9f824ec599b738f01b2b51152898494551222c9f6378a5f35e781cc202302c",
+    "results/step9_complete.md": "737d581828f3da90ce68549890115baef13910ce8dede772a0145f6904406beb"
+  },
+  "step8_freeze_sha256": "ce64e7195d221f3ca5187eb17e0646472325de8b053bfc4598fef96fe1068ef8"
+}

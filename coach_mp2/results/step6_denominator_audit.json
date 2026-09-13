@@ -1,0 +1,470 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "tag": "SIE4x4_h2o_MP2_FC",
+      "nAO": 132,
+      "nMO": 132,
+      "occupations": [
+        5,
+        5
+      ],
+      "core_per_spin": 1,
+      "virtuals": [
+        127,
+        127
+      ],
+      "source_unchanged": true,
+      "MO_file_unchanged": true,
+      "Fock_vs_COACH_baseline_max_error": 4.440892098500626e-15,
+      "native_spectrum_vs_COACH_baseline_max_error": 2.304378909911975e-12,
+      "saved_eigenvalues_vs_native_spectrum_max_difference": 0.00016507527605824635,
+      "occupied_virtual_Fock_max": [
+        2.343368904208533e-05,
+        2.3433689044567718e-05
+      ],
+      "denominators": {
+        "aa": {
+          "min": -545.7606447171651,
+          "max": -0.9554454650015638,
+          "min_absolute": 0.9554454650015638,
+          "empty": false
+        },
+        "ab": {
+          "min": -545.7606447171615,
+          "max": -0.9554454650015552,
+          "min_absolute": 0.9554454650015552,
+          "empty": false
+        },
+        "bb": {
+          "min": -545.760644717158,
+          "max": -0.9554454650015467,
+          "min_absolute": 0.9554454650015467,
+          "empty": false
+        }
+      },
+      "density": [
+        {
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273184245e-15,
+          "passed": true
+        },
+        {
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273185067e-15,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "fock_sha256": "e59fc246a4be27959820bcc884cdc817f8b4d252ae6373e8ff8d7be7e018b83f",
+      "baseline_fock_sha256": "7e4a92377b1f18e40b6af968253d1999155e67afb986821cab0c523147d47d6a"
+    },
+    {
+      "tag": "SIE4x4_h2o_RIMP2_FC",
+      "nAO": 132,
+      "nMO": 132,
+      "occupations": [
+        5,
+        5
+      ],
+      "core_per_spin": 1,
+      "virtuals": [
+        127,
+        127
+      ],
+      "source_unchanged": true,
+      "MO_file_unchanged": true,
+      "Fock_vs_COACH_baseline_max_error": 7.216449660063518e-15,
+      "native_spectrum_vs_COACH_baseline_max_error": 2.076783189863818e-12,
+      "saved_eigenvalues_vs_native_spectrum_max_difference": 0.00016507527607423356,
+      "occupied_virtual_Fock_max": [
+        2.3433689053310724e-05,
+        2.3433689058029172e-05
+      ],
+      "denominators": {
+        "aa": {
+          "min": -545.7606447171646,
+          "max": -0.9554454650014871,
+          "min_absolute": 0.9554454650014871,
+          "empty": false
+        },
+        "ab": {
+          "min": -545.7606447171618,
+          "max": -0.9554454650014892,
+          "min_absolute": 0.9554454650014892,
+          "empty": false
+        },
+        "bb": {
+          "min": -545.760644717159,
+          "max": -0.9554454650014912,
+          "min_absolute": 0.9554454650014912,
+          "empty": false
+        }
+      },
+      "density": [
+        {
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273184245e-15,
+          "passed": true
+        },
+        {
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273185067e-15,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "fock_sha256": "b3ea4f1b66738cceebafff2c9c0618f7a04ba62fb438b4f67669940b87da9250",
+      "baseline_fock_sha256": "7e4a92377b1f18e40b6af968253d1999155e67afb986821cab0c523147d47d6a"
+    },
+    {
+      "tag": "SIE4x4_h2o_RIMP2_0",
+      "nAO": 132,
+      "nMO": 132,
+      "occupations": [
+        5,
+        5
+      ],
+      "core_per_spin": 0,
+      "virtuals": [
+        127,
+        127
+      ],
+      "source_unchanged": true,
+      "MO_file_unchanged": true,
+      "Fock_vs_COACH_baseline_max_error": 5.329070518200751e-15,
+      "native_spectrum_vs_COACH_baseline_max_error": 1.0611511669367246e-12,
+      "saved_eigenvalues_vs_native_spectrum_max_difference": 0.00016507527613107698,
+      "occupied_virtual_Fock_max": [
+        2.3433689049622702e-05,
+        2.3433689055782705e-05
+      ],
+      "denominators": {
+        "aa": {
+          "min": -582.2130879845786,
+          "max": -0.9554454650015249,
+          "min_absolute": 0.9554454650015249,
+          "empty": false
+        },
+        "ab": {
+          "min": -582.2130879845749,
+          "max": -0.9554454650015201,
+          "min_absolute": 0.9554454650015201,
+          "empty": false
+        },
+        "bb": {
+          "min": -582.2130879845714,
+          "max": -0.9554454650015153,
+          "min_absolute": 0.9554454650015153,
+          "empty": false
+        }
+      },
+      "density": [
+        {
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273184245e-15,
+          "passed": true
+        },
+        {
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273185067e-15,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "fock_sha256": "80984699c1b7b60a4c19db411a234ddd4084fa997156b76a6eb76d6907a68fcc",
+      "baseline_fock_sha256": "7e4a92377b1f18e40b6af968253d1999155e67afb986821cab0c523147d47d6a"
+    },
+    {
+      "tag": "16_C_AE18_MP2_FC",
+      "nAO": 181,
+      "nMO": 181,
+      "occupations": [
+        4,
+        2
+      ],
+      "core_per_spin": 1,
+      "virtuals": [
+        177,
+        179
+      ],
+      "source_unchanged": true,
+      "MO_file_unchanged": true,
+      "Fock_vs_COACH_baseline_max_error": 5.684341886080802e-14,
+      "native_spectrum_vs_COACH_baseline_max_error": 6.775735528208315e-11,
+      "saved_eigenvalues_vs_native_spectrum_max_difference": 0.01145573651928622,
+      "occupied_virtual_Fock_max": [
+        2.2404380923043252e-05,
+        0.0010714151805809526
+      ],
+      "denominators": {
+        "aa": {
+          "min": -2731.976687971859,
+          "max": -0.6239574289724246,
+          "min_absolute": 0.6239574289724246,
+          "empty": false
+        },
+        "ab": {
+          "min": -2763.2710332219535,
+          "max": -0.8592688377390677,
+          "min_absolute": 0.8592688377390677,
+          "empty": false
+        },
+        "bb": {
+          "min": -2794.565378472048,
+          "max": -1.0945802465057108,
+          "min_absolute": 1.0945802465057108,
+          "empty": false
+        }
+      },
+      "density": [
+        {
+          "error": 8.673617379884035e-19,
+          "bound": 7.75770910528828e-15,
+          "passed": true
+        },
+        {
+          "error": 8.673617379884035e-19,
+          "bound": 5.372469631215248e-15,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "fock_sha256": "7b10db9ed7998b435dc4366575b8125c188a6581582bc373d6c329d13e50ac6b",
+      "baseline_fock_sha256": "61399608b1ee37db41b3cd12110af11d470adb4b6159881d93f04b1c1406c5da"
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_FC",
+      "nAO": 181,
+      "nMO": 181,
+      "occupations": [
+        4,
+        2
+      ],
+      "core_per_spin": 1,
+      "virtuals": [
+        177,
+        179
+      ],
+      "source_unchanged": true,
+      "MO_file_unchanged": true,
+      "Fock_vs_COACH_baseline_max_error": 2.842170943040401e-14,
+      "native_spectrum_vs_COACH_baseline_max_error": 4.6838977141305804e-11,
+      "saved_eigenvalues_vs_native_spectrum_max_difference": 0.011455736519273785,
+      "occupied_virtual_Fock_max": [
+        2.2404380979776722e-05,
+        0.0010714151805787586
+      ],
+      "denominators": {
+        "aa": {
+          "min": -2731.976687972019,
+          "max": -0.623957428972425,
+          "min_absolute": 0.623957428972425,
+          "empty": false
+        },
+        "ab": {
+          "min": -2763.2710332219795,
+          "max": -0.8592688377390681,
+          "min_absolute": 0.8592688377390681,
+          "empty": false
+        },
+        "bb": {
+          "min": -2794.5653784719398,
+          "max": -1.0945802465057113,
+          "min_absolute": 1.0945802465057113,
+          "empty": false
+        }
+      },
+      "density": [
+        {
+          "error": 8.673617379884035e-19,
+          "bound": 7.75770910528828e-15,
+          "passed": true
+        },
+        {
+          "error": 8.673617379884035e-19,
+          "bound": 5.372469631215248e-15,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "fock_sha256": "e2fffc2d1489b3833ca02e066836c5657254cbcdd09f55a80832950b57649729",
+      "baseline_fock_sha256": "61399608b1ee37db41b3cd12110af11d470adb4b6159881d93f04b1c1406c5da"
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_0",
+      "nAO": 181,
+      "nMO": 181,
+      "occupations": [
+        4,
+        2
+      ],
+      "core_per_spin": 0,
+      "virtuals": [
+        177,
+        179
+      ],
+      "source_unchanged": true,
+      "MO_file_unchanged": true,
+      "Fock_vs_COACH_baseline_max_error": 5.684341886080802e-14,
+      "native_spectrum_vs_COACH_baseline_max_error": 8.094502845779061e-11,
+      "saved_eigenvalues_vs_native_spectrum_max_difference": 0.01145573651933951,
+      "occupied_virtual_Fock_max": [
+        2.2404381004649194e-05,
+        0.0010714151806018547
+      ],
+      "denominators": {
+        "aa": {
+          "min": -2751.5904078519625,
+          "max": -0.623957428972425,
+          "min_absolute": 0.623957428972425,
+          "empty": false
+        },
+        "ab": {
+          "min": -2782.992923113296,
+          "max": -0.8592688377390685,
+          "min_absolute": 0.8592688377390685,
+          "empty": false
+        },
+        "bb": {
+          "min": -2814.3954383746295,
+          "max": -1.094580246505712,
+          "min_absolute": 1.094580246505712,
+          "empty": false
+        }
+      },
+      "density": [
+        {
+          "error": 8.673617379884035e-19,
+          "bound": 7.75770910528828e-15,
+          "passed": true
+        },
+        {
+          "error": 8.673617379884035e-19,
+          "bound": 5.372469631215248e-15,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "fock_sha256": "1c0ffd8e1d7ff374c3e5626649b103b139d12b389c4090152f655bea5a06f621",
+      "baseline_fock_sha256": "61399608b1ee37db41b3cd12110af11d470adb4b6159881d93f04b1c1406c5da"
+    },
+    {
+      "tag": "SIE4x4_h2o_MP2_4center_FC",
+      "nAO": 132,
+      "nMO": 132,
+      "occupations": [
+        5,
+        5
+      ],
+      "core_per_spin": 1,
+      "virtuals": [
+        127,
+        127
+      ],
+      "source_unchanged": true,
+      "MO_file_unchanged": true,
+      "Fock_vs_COACH_baseline_max_error": 5.329070518200751e-15,
+      "native_spectrum_vs_COACH_baseline_max_error": 2.2026824808563106e-12,
+      "saved_eigenvalues_vs_native_spectrum_max_difference": 0.00016507527616482776,
+      "occupied_virtual_Fock_max": [
+        2.3433689051033033e-05,
+        2.343368906059136e-05
+      ],
+      "denominators": {
+        "aa": {
+          "min": -545.7606447171661,
+          "max": -0.9554454650016783,
+          "min_absolute": 0.9554454650016783,
+          "empty": false
+        },
+        "ab": {
+          "min": -545.7606447171629,
+          "max": -0.9554454650016833,
+          "min_absolute": 0.9554454650016833,
+          "empty": false
+        },
+        "bb": {
+          "min": -545.7606447171596,
+          "max": -0.9554454650016884,
+          "min_absolute": 0.9554454650016884,
+          "empty": false
+        }
+      },
+      "density": [
+        {
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273184245e-15,
+          "passed": true
+        },
+        {
+          "error": 3.469446951953614e-18,
+          "bound": 6.948832273185067e-15,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "fock_sha256": "99d92a7b491fc61f4fe73aeb7dd4c14bf588f7591282ee0dccf174b4ad4f0276",
+      "baseline_fock_sha256": "7e4a92377b1f18e40b6af968253d1999155e67afb986821cab0c523147d47d6a"
+    },
+    {
+      "tag": "16_C_AE18_MP2_4center_FC",
+      "nAO": 181,
+      "nMO": 181,
+      "occupations": [
+        4,
+        2
+      ],
+      "core_per_spin": 1,
+      "virtuals": [
+        177,
+        179
+      ],
+      "source_unchanged": true,
+      "MO_file_unchanged": true,
+      "Fock_vs_COACH_baseline_max_error": 5.684341886080802e-14,
+      "native_spectrum_vs_COACH_baseline_max_error": 3.183231456205249e-11,
+      "saved_eigenvalues_vs_native_spectrum_max_difference": 0.011455736519295101,
+      "occupied_virtual_Fock_max": [
+        2.2404381015426523e-05,
+        0.0010714151805916105
+      ],
+      "denominators": {
+        "aa": {
+          "min": -2731.9766879719537,
+          "max": -0.6239574289724248,
+          "min_absolute": 0.6239574289724248,
+          "empty": false
+        },
+        "ab": {
+          "min": -2763.2710332219617,
+          "max": -0.8592688377390678,
+          "min_absolute": 0.8592688377390678,
+          "empty": false
+        },
+        "bb": {
+          "min": -2794.56537847197,
+          "max": -1.0945802465057108,
+          "min_absolute": 1.0945802465057108,
+          "empty": false
+        }
+      },
+      "density": [
+        {
+          "error": 8.673617379884035e-19,
+          "bound": 7.75770910528828e-15,
+          "passed": true
+        },
+        {
+          "error": 8.673617379884035e-19,
+          "bound": 5.372469631215248e-15,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "fock_sha256": "6e01d0d20f11a84b8f5da6b98216b0b89795dafd2dee4a3f97de1a00fe4dccd9",
+      "baseline_fock_sha256": "61399608b1ee37db41b3cd12110af11d470adb4b6159881d93f04b1c1406c5da"
+    }
+  ],
+  "definition": "Native COACH Fock projected into unchanged source occupied/virtual spaces; eigenvalues of each block. Not blindly archived 53.0 energies. No occupied-virtual rotation, attenuation or regularization."
+}

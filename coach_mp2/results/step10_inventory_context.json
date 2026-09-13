@@ -1,0 +1,65 @@
+{
+  "source": "manifests/step5_inventory_v2.csv",
+  "scope": "structural inventory; not a numerical production feasibility certificate",
+  "with_AO_count": 14081,
+  "counts": {
+    "0<AO<=500": 7153,
+    "500<AO<=1500": 5875,
+    "1500<AO<=3000": 912,
+    "3000<AO<=5000": 127,
+    "5000<AO<=100000": 14
+  },
+  "largest": [
+    {
+      "species": "MME55_AH_int1",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_int2",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_int3",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_int4",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_p",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_r",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_ts1",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_ts2",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_ts3",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    },
+    {
+      "species": "MME55_AH_ts4",
+      "AO": 5135,
+      "source_bytes": 1265766752
+    }
+  ],
+  "caveat": "MOR32 largest-fitting reference representative does not cover every full-domain or BigNC size; cross-stage/class extrapolation remains unvalidated"
+}

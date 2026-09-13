@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-09-12",
+  "authority": "user_supplied_paths",
+  "first_path_normalization": "added_leading_slash_to_global/scratch/users/jsliang/COACH3",
+  "sources": [
+    {
+      "role": "gscdb137",
+      "source_root": "/global/scratch/users/jsliang/COACH3",
+      "directory_readable": true,
+      "examples": [
+        {
+          "directory": "G2RC_39",
+          "qarchive_present": true,
+          "qarchive_readable": true
+        },
+        {
+          "directory": "Pol130_BeH20+",
+          "qarchive_present": true,
+          "qarchive_readable": true
+        },
+        {
+          "directory": "Pol130_PS0+",
+          "qarchive_present": true,
+          "qarchive_readable": true
+        }
+      ]
+    },
+    {
+      "role": "BigNC",
+      "source_root": "/global/scratch/users/jsliang/BigNC/COACH",
+      "directory_readable": true,
+      "examples": [
+        {
+          "directory": "L14_PHE",
+          "qarchive_present": true,
+          "qarchive_readable": true
+        },
+        {
+          "directory": "vL11_3a",
+          "qarchive_present": true,
+          "qarchive_readable": true
+        },
+        {
+          "directory": "L14_2b_monA",
+          "qarchive_present": true,
+          "qarchive_readable": true
+        }
+      ]
+    }
+  ],
+  "scope": "directory_and_three_archive_path_readability_samples_only",
+  "inventory_complete": false,
+  "method_and_archive_contents_verified": false,
+  "copy_performed": false,
+  "source_read_only": true,
+  "destination_scratch_root": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2",
+  "other_external_roles": "coverage_not_yet_inventoried",
+  "binding_to": "configs/scientific_spec_v1.json"
+}

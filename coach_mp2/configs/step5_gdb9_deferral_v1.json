@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-12",
+  "authority": "User explicitly deferred currently unavailable GDB9-W1-F12 COACH orbitals to a future TODO",
+  "species_count": 3371,
+  "role": "final_assessment_only",
+  "excluded_from": ["coefficient_fitting", "model_selection", "overfitting_diagnostic"],
+  "needed_for": "Step 17 independent final assessment, after Step 16 model freeze",
+  "future_todo": "Obtain or generate COACH orbitals, then perform deferred Step 5 inventory/import and relevant molecular feature and Step 13 assembly gates before Step 17 scoring.",
+  "generation_authorized_now": false,
+  "blocks_current_development": false,
+  "drop_from_frozen_assessment": false,
+  "completion_semantics": "Track Step 5 available-source scope separately from deferred GDB9 coverage; never claim full final-domain readiness while pending."
+}

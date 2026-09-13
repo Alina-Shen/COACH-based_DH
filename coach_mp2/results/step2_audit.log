@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "fixtures": [
+    {
+      "name": "SIE4x4_h2o",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/qchem_outputs/SIE4x4_h2o.out",
+      "sha256": "9649ff1ad7cd77ee4c668ac9bd92a536a2d33f1d54ff31f7c17f0f0868b4465f",
+      "method_coach": true,
+      "build_banner": "Q-Chem 5.4.2 for Intel X86 EM64T Linux",
+      "printed_component_closure": {
+        "terms": {
+          "Alpha HF Exchange Energy": -1.57648220359856,
+          "Beta HF Exchange Energy": -1.57648220359855,
+          "DFT Correlation Energy": -0.31072247739992,
+          "DFT Exchange Energy": -5.87610598291253,
+          "DFT Non-Local Correlation Energy": 0.04800219050775,
+          "Total Coulomb Energy": 46.64215506796162,
+          "Nuclear Repulsion Energy": 9.181285695624,
+          "One-Electron (alpha) Energy": -61.48258401518684,
+          "One-Electron (beta) Energy": -61.48258401518667
+        },
+        "reconstructed_hartree": -76.4335179437897,
+        "printed_scf_hartree": -76.4335179439,
+        "residual_hartree": 1.1030465429939795e-10,
+        "tolerance_hartree": 2e-09,
+        "passed": true
+      }
+    },
+    {
+      "name": "16_C_AE18",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/qchem_outputs/16_C_AE18.out",
+      "sha256": "871daeb2d22e0c2efa8e778573e3154a463c269bff4c194b80535c26abe5cfd6",
+      "method_coach": true,
+      "build_banner": "Q-Chem 5.4.2 for Intel X86 EM64T Linux",
+      "printed_component_closure": {
+        "terms": {
+          "Alpha HF Exchange Energy": -1.11542606093197,
+          "Beta HF Exchange Energy": -0.6979453075597,
+          "DFT Correlation Energy": -0.13945691199344,
+          "DFT Exchange Energy": -3.29184622414612,
+          "DFT Non-Local Correlation Energy": 0.0296271726475,
+          "Total Coulomb Energy": 17.79234754259642,
+          "Nuclear Repulsion Energy": 0.0,
+          "Kinetic (alpha) Energy": 20.12079112105723,
+          "Kinetic (beta) Energy": 17.64252435209274,
+          "Nuclear Attraction (alpha) Energy": -48.77715475871178,
+          "Nuclear Attraction (beta) Energy": -39.40892123913793,
+          "SEOQF Energy": -4.633e-11
+        },
+        "reconstructed_hartree": -37.845460314133376,
+        "printed_scf_hartree": -37.8454603141,
+        "residual_hartree": -3.3374192298651906e-11,
+        "tolerance_hartree": 2e-09,
+        "passed": true
+      }
+    },
+    {
+      "name": "L14_2a",
+      "source": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/qchem_outputs/L14_2a.out",
+      "sha256": "5fc8b51b3809a44d5362fde17bc2bee8c2f468fd3b6efcf7fdd12f74ff74decc",
+      "method_coach": true,
+      "build_banner": "Q-Chem 6.3.1 for Intel X86 EM64T Linux",
+      "d4_geometry_reconstruction": {
+        "calculated_hartree": 0.004951882402162612,
+        "printed_hartree": 0.0049518824,
+        "residual_hartree": 2.1626121032847223e-12,
+        "tolerance_hartree": 1e-10,
+        "passed": true
+      },
+      "full_energy_reconstruction": "unavailable: no full component breakdown in fixture"
+    }
+  ],
+  "scope": "printed Q-Chem component closure and independent geometry-only D4; no SCF or orbital import",
+  "step2_complete": false,
+  "blockers": [
+    "Generating input/output and exact COACH build identity not supplied or verified.",
+    "Three sampled GSCDB137 qarchive.h5 files are empty; three BigNC qarchive.h5 files contain data. GSCDB137 legacy scratch needs a verified native reader.",
+    "Parent energy has not been reconstructed from supplied production orbitals."
+  ]
+}

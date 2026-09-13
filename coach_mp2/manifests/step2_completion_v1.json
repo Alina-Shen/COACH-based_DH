@@ -1,0 +1,15 @@
+{
+  "step": 2,
+  "status": "complete",
+  "date": "2026-09-12",
+  "files": {
+    "results/step2_complete.md": "2406aab20222205bf07ccab2f31265a59225c174d117adeb73cb08a3becc8aa8",
+    "scripts/validate_step2_fixed.py": "58a45d0c596cd4e843c1192b96f680ed7611b98e29e42eb7075fef159fcbaade",
+    "tests/test_step2_fixed.py": "4937c3a96aa1acc820af08f0eee9fb3e9af16682583fa8511f01a3069666c806",
+    "results/step2_fixed_v3_validation.json": "3affbd87080d71bbcfd0c505c0d58fbb16024e74cfc7f5f6f31cde6e305d0898",
+    "results/step2_fixed_tests.log": "21a2b1ac8bb894b5b9060a164aded47a2a868e277dad3b44fcfbedce6e256712",
+    "manifests/step2_fixed_v3.json": "3ee88f7791e99f221d60aabcc4616a29a9a636b2604a1d9c44218e466dbc5077",
+    "slurm/run_step2_fixed_v3.sh": "5b6db53ba308e0e5e518d8a0b2188b7b6a9a9a44e3817e26f5cc20831bfed088",
+    "configs/step2_validation_protocol_v1.json": "5740e72933ea168237d83fe87e5b7c60973ea9c87703d903a1f863be3fb2872a"
+  }
+}

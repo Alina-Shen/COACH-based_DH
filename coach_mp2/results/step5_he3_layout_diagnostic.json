@@ -1,0 +1,92 @@
+[
+  {
+    "species": "He3_47",
+    "finite": true,
+    "layouts": {
+      "packed_reduced": [
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.2790059809173935e-14,
+          "passed": true
+        },
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.279005980924449e-14,
+          "passed": true
+        }
+      ],
+      "square_padded": [
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.2790059809173935e-14,
+          "passed": true
+        },
+        {
+          "error": 0.32343142142523207,
+          "bound": 1.3091149333835274e-14,
+          "passed": false
+        }
+      ]
+    }
+  },
+  {
+    "species": "He3_48",
+    "finite": true,
+    "layouts": {
+      "packed_reduced": [
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.3760181683884542e-14,
+          "passed": true
+        },
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.376018168387607e-14,
+          "passed": true
+        }
+      ],
+      "square_padded": [
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.3760181683884542e-14,
+          "passed": true
+        },
+        {
+          "error": 0.33906838526555017,
+          "bound": 1.351531485566223e-14,
+          "passed": false
+        }
+      ]
+    }
+  },
+  {
+    "species": "He3_49",
+    "finite": true,
+    "layouts": {
+      "packed_reduced": [
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.6376456076419464e-14,
+          "passed": true
+        },
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.6376456076310383e-14,
+          "passed": true
+        }
+      ],
+      "square_padded": [
+        {
+          "error": 2.220446049250313e-16,
+          "bound": 1.6376456076419464e-14,
+          "passed": true
+        },
+        {
+          "error": 0.36464718537975915,
+          "bound": 1.5559773072869857e-14,
+          "passed": false
+        }
+      ]
+    }
+  }
+]

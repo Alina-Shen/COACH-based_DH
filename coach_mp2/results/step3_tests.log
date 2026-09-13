@@ -1,0 +1,23 @@
+test_dipole_floor (test_step3.MetricsTests) ... ok
+test_duplicate (test_step3.MetricsTests) ... ok
+test_final_or_extra_predictions_rejected (test_step3.MetricsTests) ... ok
+test_mae_not_rmse (test_step3.MetricsTests) ... ok
+test_missing_predictions_rejected (test_step3.MetricsTests) ... ok
+test_nonfinite (test_step3.MetricsTests) ... ok
+test_overall_not_mean_of_categories (test_step3.MetricsTests) ... ok
+test_relative (test_step3.MetricsTests) ... ok
+test_weighted_missing_row (test_step3.MetricsTests) ... ok
+test_weighted_sum_plus_offset (test_step3.MetricsTests) ... ok
+test_zero_relative_reference (test_step3.MetricsTests) ... ok
+test_zero_standard (test_step3.MetricsTests) ... ok
+test_bad_stoichiometry (test_step3.RoleTests) ... ok
+test_dropped_row (test_step3.RoleTests) ... ok
+test_final_leakage (test_step3.RoleTests) ... ok
+test_reordered_rows (test_step3.RoleTests) ... ok
+test_species_role_tampering (test_step3.RoleTests) ... ok
+test_weight_not_squared (test_step3.RoleTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 4.045s
+
+OK

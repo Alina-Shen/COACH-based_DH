@@ -1,0 +1,134 @@
+{
+  "cases": [
+    {
+      "species": "SIE4x4_h2o",
+      "mode": "fixed",
+      "input": {
+        "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step2_fixed_v3/SIE4x4_h2o_fixed.in",
+        "sha256": "48f6ddde4afe437da2f42e3ee56dec3e39dedfdc5770f2959690455e3d31cd39",
+        "bytes": 551
+      },
+      "source_input": {
+        "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/SIE4x4_h2o.in",
+        "sha256": "186aef420785a2255fee1e92bd0b6cf8470a5b99b6054189b09ac573d50b05eb",
+        "bytes": 489
+      },
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step2_fixed_v3/SIE4x4_h2o_fixed",
+      "source_files": [
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/53.0",
+          "sha256": "46e87ec532e0f696263a14ab3acaa5c6db7c1177d55f0819faf917b098e2ae38",
+          "bytes": 280896
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/54.0",
+          "sha256": "fad980492c9e13651db7f91526e93dc599f7095bce4b795c01abe4e497fe7ca6",
+          "bytes": 278784
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/58.0",
+          "sha256": "eacf0fc6687416d06abbe3f82089bac4ce6c7c22476f655b4d9abfd5dee3e5ed",
+          "bytes": 278784
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/819.0",
+          "sha256": "0a39970095fa436dfc6915a80552ece60773e79124aef19e914ff008ec02a5c8",
+          "bytes": 16
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/99.0",
+          "sha256": "8dbab1b7b8936f6f54dbc3c9bec89594e413a000e32f7bd19b345d34245b5a79",
+          "bytes": 96
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/molecule",
+          "sha256": "2fb6e17dfda5d88ce2c607bea024b3107e3bc89bcd9bbf41f854dff5c007ecb6",
+          "bytes": 220
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/SIE4x4_h2o/pseudodata",
+          "sha256": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e",
+          "bytes": 288
+        }
+      ]
+    },
+    {
+      "species": "16_C_AE18",
+      "mode": "fixed",
+      "input": {
+        "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step2_fixed_v3/16_C_AE18_fixed.in",
+        "sha256": "acfbcd431940f65a8735a6d447d9cc38073a4097007494631c6547cd62784f98",
+        "bytes": 404
+      },
+      "source_input": {
+        "path": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs/16_C_AE18.in",
+        "sha256": "5a2f86874b0e9612832857445aea70669499438af270f30b5af2e9be2ca40891",
+        "bytes": 342
+      },
+      "scratch": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step2_fixed_v3/16_C_AE18_fixed",
+      "source_files": [
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/16_C_AE18/53.0",
+          "sha256": "d9b8fe2c38680de44e15190d7d652b81eb8bd10ad22c3095a8208bf40653d53b",
+          "bytes": 527072
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/16_C_AE18/54.0",
+          "sha256": "87bc1365569cfee6892ce285ff0de3058d0d5003d3e3261273d4ccea97fca588",
+          "bytes": 524176
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/16_C_AE18/58.0",
+          "sha256": "a764569111f230816820bfdb869d1ce8e40edac7eeb868b8b928a03aad6c8a6e",
+          "bytes": 524176
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/16_C_AE18/819.0",
+          "sha256": "2cd7cfd061897c3e512ea27a88a6540b2f9e25eded6ad51344d2e5f082da602d",
+          "bytes": 16
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/16_C_AE18/99.0",
+          "sha256": "85d5c5fabc1926616ee306fd7f40802d073d472dada59b1b88ab1769bff7e5af",
+          "bytes": 96
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/16_C_AE18/molecule",
+          "sha256": "22dff7e35eb3bb422c3caf86c98ac4bd1392409416b32ea7f1af90b53f88f17d",
+          "bytes": 86
+        }
+      ]
+    }
+  ],
+  "scope": "two species; no-diagonalization fixed COACH energy evaluation",
+  "reference": "COACH fixtures plus paper workbook AE18_6 carbon reference",
+  "tolerance_hartree": 2e-06,
+  "runtime": [
+    {
+      "path": "/clusterfs/mhg/yaoshen/qchem/trunk/bin/qchem",
+      "sha256": "2f5bae05d80f12db9d9e5dd59d9eb2b2ebe983faae885d49bab02e0c7573751a",
+      "bytes": 13031
+    },
+    {
+      "path": "/clusterfs/mhg/yaoshen/qchem/trunk/build/qcprog.exe",
+      "sha256": "5183b97f1cf410b16c3606f9ef811cbff4b4c67ca7a22f0cee0906b601551410",
+      "bytes": 194770688
+    },
+    {
+      "path": "/clusterfs/mhg/yaoshen/qchem/trunk/libdft/xcfunctionals.C",
+      "sha256": "f9f28e7341e5dddbd3a6606ee0195ada2a550ea94517b87e6b951e971747613c",
+      "bytes": 60266
+    },
+    {
+      "path": "/clusterfs/mhg/yaoshen/qchem/trunk/scfman/scfman.C",
+      "sha256": "c631f0e740ee1b79755e01ebea8aa2aed33b23c6d49ed513dd3d97fb0e216262",
+      "bytes": 224434
+    },
+    {
+      "path": "/clusterfs/mhg/yaoshen/qchem/trunk/gesman/GuessMan.C",
+      "sha256": "5d3a92d2687fef575e22db48a0c1648473c156b8e0726b032dc7faf76ef3127b",
+      "bytes": 50041
+    }
+  ],
+  "staged": true
+}

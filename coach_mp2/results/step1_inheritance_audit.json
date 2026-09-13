@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": {
+    "semilocal_matches_except_declared_omega_and_explicit_order": true,
+    "data_roles_identical": true,
+    "solver_tolerances_identical": true,
+    "dispersion_parameters_identical": true,
+    "VV10_b_C_identical": true,
+    "coefficient_bounds_identical": true
+  },
+  "declared_scientific_changes": [
+    "COACH_parent_instead_of_omegaB97M_V",
+    "target_omega_0.27_instead_of_0.30"
+  ],
+  "later_implementation_overrides": [
+    "expanded_quadratic",
+    "remaining_row_grid_selection",
+    "all_integer_K14_to_82"
+  ],
+  "chemistry_validated": false
+}

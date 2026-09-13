@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "step": 4,
+  "base_specification_sha256": "f4977550a9905cb630aaeea1039bffab0ae500f4ee86c627ecb10d3fb62e5aae",
+  "policy": "versioned reconciliation overlay; mirror latest revwb97m2 basis authority without modifying frozen Step1 or source files",
+  "source_root": "/clusterfs/mhg-data/yaoshen/GSCDB",
+  "target_method": "COACH",
+  "scope": "17452 energy-role species; OPT excluded",
+  "repairs": {
+    "concatenated_rem_lines": [
+      "BH9_05_17TS",
+      "BH9_05_7TS",
+      "FH51_n-nonane",
+      "ISOL24_i8e"
+    ],
+    "AE11_Yb": "Use pinned explicit auxiliary block, AUX_BASIS_CORR GEN; preserve all-electron orbital basis and source N_FROZEN_CORE 0",
+    "O24x5_helium_seven": "Use pinned explicit orbital basis and PURECART 111 instead of source named d-aug-cc-pV5Z; require archive basis identity in Step5"
+  },
+  "missing_auxiliary_assignments": {
+    "BigNC_external": "rimp2-def2-TZVPPD",
+    "GDB9_W1_F12_external": "rimp2-def2-TZVP"
+  },
+  "automatic_auxiliary_generation": false,
+  "preserve_all_other_source_blocks": true,
+  "geometry_or_spin_changes": false,
+  "frozen_core_policy": "Preserve source controls in input templates; actual PT2 core conventions validated in Step6",
+  "runtime_controls": "These are scientific input templates, not released jobs; derive zero-cycle/NO_ORTHO/grids/resource controls per execution stage",
+  "solver_choice_required": false,
+  "archive_compatibility": "Step5; input metadata validation does not prove imported orbitals used these definitions"
+}

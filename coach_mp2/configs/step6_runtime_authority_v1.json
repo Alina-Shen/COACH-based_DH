@@ -1,0 +1,30 @@
+{
+  "status": "gateway_complete_with_carbon_accuracy_deferral",
+  "scope": "two-species feature gateway, not full production readiness",
+  "runtime_manifest": "manifests/step5_no_orientation_build_v1.json",
+  "basis_authority": "configs/input_basis_amendments_v1.json",
+  "carbon_deferral": "configs/step6_carbon_accuracy_deferral_v1.json",
+  "controls": {
+    "EXCHANGE": "COACH",
+    "CORRELATION": "RIMP2",
+    "N_FROZEN_CORE": "FC",
+    "N_FROZEN_VIRTUAL": 0,
+    "SCS": 3,
+    "SSS_FACTOR": 1000000,
+    "SOS_FACTOR": 1000000,
+    "SCF_GUESS": "READ",
+    "SCF_GUESS_MIX": 0,
+    "GEN_SCFMAN": "FALSE",
+    "MAX_SCF_CYCLES": 0,
+    "MP2_RESTART_NO_SCF": "TRUE",
+    "NO_ORTHO": "TRUE"
+  },
+  "remove_METHOD": true,
+  "omega": 0.27,
+  "auxiliary_basis": "authoritative per-species basis, no AutoAux substitution",
+  "feature": "unscaled OS+SS doubles; printed singles excluded",
+  "singles": "SCS3 libgmbpt printed singles multiplier .3211; record separately",
+  "denominators": "native COACH Fock occupied/virtual block spectra, no regularization or attenuation",
+  "scratch": "separate working copies under scf_read/coach_mp2",
+  "solver_dependency": false
+}

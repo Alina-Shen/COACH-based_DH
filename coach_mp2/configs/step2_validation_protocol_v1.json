@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "scientific_specification": "configs/scientific_spec_v1.json",
+  "step_id": 2,
+  "historical_outputs_required": false,
+  "historical_build_policy": "Record unknown honestly; do not equate current reproduction build with the original generator.",
+  "input_authority": "/clusterfs/mhg-data/yaoshen/GSCDB/qchem_inputs",
+  "user_authorized_method_replacement": "METHOD COACH",
+  "user_authorized_diagnostic_scf": true,
+  "production_orbital_updates_authorized": false,
+  "pilot_species": [
+    "SIE4x4_h2o",
+    "16_C_AE18"
+  ],
+  "pilot_modes": [
+    "native legacy read with MAX_SCF_CYCLES 0",
+    "separate SCF repeatability from a separate legacy copy"
+  ],
+  "energy_tolerance_hartree": 2e-06,
+  "tolerance_origin": "existing COACH regression tests; declared before pilot submission",
+  "provisional_reference": "coach/FunctionalCOACH/tests/qchem_outputs matched input fixtures",
+  "requested_reference": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/paper/COACH_raw_data.xlsx",
+  "requested_reference_status": "Resolved by user; raw_data!D298 AE18_6 matches carbon pilot; water absolute energy unavailable in reaction-level workbook.",
+  "empty_hdf5_policy": "Not an orbital-loss failure if native legacy files can be validated.",
+  "zero_cycle_caveat": "Current GEN_SCFMAN TRUE skips energy evaluation; normal termination verifies reading only.",
+  "completion_policy": "Report repeatability separately from a validated zero-update energy reconstruction and from full archive inventory.",
+  "completion_status": "complete",
+  "validated_fixed_controls": {
+    "METHOD": "COACH",
+    "SCF_GUESS": "READ",
+    "GEN_SCFMAN": "FALSE",
+    "MAX_SCF_CYCLES": 0,
+    "MP2_RESTART_NO_SCF": "TRUE",
+    "NO_ORTHO": "TRUE"
+  },
+  "final_integrity_rule": "53.0 exact SHA-256; both source/output 54.0 independently reconstruct from unchanged occupied MOs within 16*epsilon*||C_occ||_F^2 normwise bound",
+  "integrity_rule_explanation": "54.0 is recomputed; observed serialization rounding 2.77556e-17. Replaces byte-identity expectation for density only. MO byte invariance retained."
+}

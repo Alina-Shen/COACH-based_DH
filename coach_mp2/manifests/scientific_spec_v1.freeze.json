@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "frozen_on": "2026-09-12",
+  "files": {
+    "configs/scientific_spec_v1.json": "f4977550a9905cb630aaeea1039bffab0ae500f4ee86c627ecb10d3fb62e5aae",
+    "configs/step_index_v1.json": "29383d65b257fa04d5b1d56cd4d75800aa0f8a335a9116aabcd281ca4ae590fa",
+    "manifests/step_index_v1.freeze.json": "0efda1f111dde81e39d17dcf1f45deb0e52308b175d16ccd2193cc904d529711",
+    "manifests/step1_sources_v1.json": "482782e1940a60876cbeaafb186e4b2b651f3959bf85039731fd4d8b089c8614",
+    "scripts/build_scientific_spec_v1.py": "5c858d3b65046193d059bcb0b2b7037f141c91a3be44245190654318ea832a17",
+    "scripts/validate_scientific_spec.py": "ed4d45278d7ca04a475887dca4e3ffe5d6ea1667d42ceb77150bba99821aae00",
+    "scripts/freeze_scientific_spec.py": "ee47e70f7ef318386e2c5aef7aefe179a6d8fe457bf1f977681970be2fae9710",
+    "tests/test_scientific_spec.py": "8432214c601a86afd1e366b7f09ad7ae5235ddaf6f902058ba3cc9c61989faaf",
+    "docs/scientific_specification.md": "b28026c2ecdcab9f875b1aaf59b4343d74ae6c1b9d0bc58e3d4c27453b4984c1",
+    "docs/storage_layout.md": "6c419aa61ad1459cc820abc3df09b05fbf469467729b47b6013d7518b8d35dae",
+    "results/step1_database_comparison.json": "fbb9fee90b0c7fce9bc9d95d52deb263a8694b495350f95583808a51a1ceb670",
+    "results/step1_inheritance_audit.json": "a60baa2406cc72598fe5c13d296c58763d27f92c901c680f0cbb173bcf8935b0",
+    "results/step1_tests.json": "d78d665cda70e9349ffba9c0aa4390a7352cbcff258655978c76eca8f33c347f",
+    "results/step1_tests.log": "0a1e116fddb7bfafdaed6a3ec463931a4fb9ad9fa29b4684b26e836f93b8bf81"
+  },
+  "scope": "scientific_specification_not_runtime_release",
+  "git_commit_performed": false
+}

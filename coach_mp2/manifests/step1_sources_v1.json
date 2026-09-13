@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "repository_head": "f69b3a3313c2b779fb7e1708157805739ed9a6ff",
+  "files": [
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/1_data_generation/pyscf_integrated_dv.py",
+      "sha256": "f8d07674c17fd254b61b5ddddb0b6d6dbf025def89235758a5b9fdcff01e9ef7",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/1_data_generation/qchem_codes_insert.C",
+      "sha256": "73717cf629e5c56a584ada7de671cc6b64e502bccef39a54b327f8db77b216e6",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/COACH.md",
+      "sha256": "688021dec5382ff3582d99bd59609e86ab323fe22d998163fdeabf708444e893",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/coach_pyscf.py",
+      "sha256": "341c35173451ea8a7993b5b966c1cb1a3f4540c31964c6a148f099aaafde9f7a",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/paper/COACH_2026MHG.pdf",
+      "sha256": "84aafcc55f566837f0ec34b04a32a2d338848af652bedde2a7758baccbfe03f1",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/paper/SI_COACH_2026MHG.pdf",
+      "sha256": "751b32e29c5a0cfb660d2f912be7d447014697294e9ef317eedd07f26d61956b",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/configs/scientific_spec.yaml",
+      "sha256": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/discovery_extension_v1.py",
+      "sha256": "732b3749b64fc899ebc8a7108397dba63b79187e65658b894c5fdd424fc3cda1",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/environment/baseline.json",
+      "sha256": "270bf22e293c2c9b894869fc0ec3ed8821f49c51aa7f41bc6930a8d3ac8e27fc",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/expanded_adapter.py",
+      "sha256": "b0bfea341f4123675975d790edf10221b0ec6deef42d8529adb5cdeb34d33da2",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/fit_spec.py",
+      "sha256": "913f1d184be37477ba5fe5e58bec2acad6e9b5663d06ac11561d12d87409b078",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/integrated_dv.py",
+      "sha256": "d3b56a6a0b45967dd7caccc379517777379466c85963203f4fd5782d30d3ff2e",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/revwb97m2_data_roles_v2.yaml",
+      "sha256": "d526cc34fa4d9e959d9b2a815ac06aece10618114b99c7383dcf196ed3e1fb1f",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/discovery_extension_v1/plan.json",
+      "sha256": "5655b58810624f499b5902a509da103f480f80a36a7ba563ad375704ca3cc8ea",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/gscdb137/source/DatasetEval.csv",
+      "sha256": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/gscdb137/source/Datasets.csv",
+      "sha256": "1d828b5e65bf3b14b2f64aef40235e389be1934148057d3818a4b4387bf3817e",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/gscdb137/source/Standard_errors.csv",
+      "sha256": "dcc065a43deadba99265bbdfdb8d7b4b43f8f8eddf547448fd3f308a0e478863",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/gscdb137/species_manifest.csv",
+      "sha256": "71e53daa9ffcf5cd6a2415bf3d3e77983db385e454a680f2838cb0814b7176de",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/selected_full_v1/plan.json",
+      "sha256": "6503dfe32d2cd597a608d54558bc048ccb4c42951b63c60b3db52d337d679b27",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv",
+      "sha256": "2d8a1e2340d980c0e236bdd0c425abd9b0c4654a1610f94b4de2644e0b73abcf",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/weights/coach_si_table2_final_cycle_training_weights.csv",
+      "sha256": "d4279ee9cb19144685ae45b92d0f1af1d87f62d135e63625120158ff12c3f474",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/mio.py",
+      "sha256": "544cf9005966062245f3ffbeb091b536ab429495a1c7fed1af44f2bc3c915908",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/production_multistart_plan_v1.py",
+      "sha256": "4fac1a8287483e7642161eabc643919f48159cd9ba4f23d9f0e53ec76770cf35",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/production_multistart_v1.py",
+      "sha256": "5721dc85d9031843f055b6954ac5db92110952fea6db54edf4653c9825e2fb36",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_scalar_features.py",
+      "sha256": "fef539b1cd360eba3d2bde170175a76df5485340daa32a2261e7b431f3305daa",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/expanded_objective_v1.py",
+      "sha256": "c0c2acf3d4dfc7e93b7aaac214df27099a3941abf158aba5f81247c9430f8d9f",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/safe_copy_orbitals.py",
+      "sha256": "093740c1cfa7ebf595697119e3638ec17c9f5696bdcb414465c19b262965dfd2",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/selected_full_v1.py",
+      "sha256": "402667724264098c0674cf16380080c8102c6349990dd13b6f8e505bfa7b47ac",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/selective_grid_v1.py",
+      "sha256": "339e8eeb9bf87999d6eac0c3a119fa10ea50baaa3b0c07c070add85461b4aeb1",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/selective_readback_v2.py",
+      "sha256": "cec6f249b8e1d347177c4e3d18693e8b6f810811071e2dd6c1b01e44e64c3121",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/Info/DatasetEval.csv",
+      "sha256": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe",
+      "role": "user_named_database_authority"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/Info/Datasets.csv",
+      "sha256": "1d828b5e65bf3b14b2f64aef40235e389be1934148057d3818a4b4387bf3817e",
+      "role": "user_named_database_authority"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/GSCDB/Info/Standard_errors.csv",
+      "sha256": "dcc065a43deadba99265bbdfdb8d7b4b43f8f8eddf547448fd3f308a0e478863",
+      "role": "user_named_database_authority"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/2_optimization/coachopt/analysis.py",
+      "sha256": "b26654d799ce1f8fbfbfa9e4ee2f5017a900ad3d7b5c00f3ffd034f68bcb4ac6",
+      "role": "read_only_scientific_or_implementation_reference"
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/2_optimization/coachopt/select_diff_constraints.py",
+      "sha256": "dab26f3a16caf7d2893d19a6e180485160e23fefe205efec503b46c674bf1f72",
+      "role": "read_only_scientific_or_implementation_reference"
+    }
+  ],
+  "runtime_dependency_lock": false,
+  "reference_projects_modified": false
+}

@@ -1,0 +1,59 @@
+{
+  "scope": "Diagnostics only; original auxiliary authority remains unchanged",
+  "cases": [
+    {
+      "tag": "16_C_AE18_RIMP2_legacy",
+      "status": "failed_before_PT2",
+      "reason": "COACH DFT path unsupported with USE_LIBQINTS FALSE",
+      "output_sha256": "4db2a3a8001f6dff293d29c0df4a1a0077211f9ead4e9ee363129e8710455d77"
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_augQZ",
+      "status": "normal",
+      "pt2": {
+        "engine": "RIMP2",
+        "aa": -0.0161627982,
+        "bb": -0.0,
+        "opposite_spin": -0.0729600428,
+        "same_spin": -0.0161627982,
+        "doubles": -0.08912284100000001,
+        "printed_singles": -9.56e-08,
+        "printed_total": -0.0891229366,
+        "closure_error": -1.3877787807814457e-17,
+        "singles_scale": 0.3211,
+        "singles_excluded_from_feature": true
+      },
+      "ri_minus_conventional_kcalmol": -0.05895972341657305,
+      "within_predeclared_accuracy": false,
+      "MO_file_unchanged": true,
+      "source_hashes_unchanged": true,
+      "parent_energy_difference": 0.0,
+      "native_spectrum_difference": 7.275957614183426e-11,
+      "output_sha256": "e34d13fa8fcb8af7fd68ccc1a43d0624a179859260bb653815a601d8c1b343c6"
+    },
+    {
+      "tag": "16_C_AE18_RIMP2_autoaux_v2",
+      "status": "normal",
+      "pt2": {
+        "engine": "RIMP2",
+        "aa": -0.0160428174,
+        "bb": -0.0,
+        "opposite_spin": -0.0729801234,
+        "same_spin": -0.0160428174,
+        "doubles": -0.0890229408,
+        "printed_singles": -9.56e-08,
+        "printed_total": -0.0890230364,
+        "closure_error": 0.0,
+        "singles_scale": 0.3211,
+        "singles_excluded_from_feature": true
+      },
+      "ri_minus_conventional_kcalmol": 0.0037285985439174277,
+      "within_predeclared_accuracy": true,
+      "MO_file_unchanged": true,
+      "source_hashes_unchanged": true,
+      "parent_energy_difference": 0.0,
+      "native_spectrum_difference": 9.00399754755199e-11,
+      "output_sha256": "6caadfe63059acd98362dbd1af48be989bc8adf811ea64506868520e165941d1"
+    }
+  ]
+}

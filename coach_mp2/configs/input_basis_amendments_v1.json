@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "authority": "explicit user instruction",
+  "precedence": "This species-specific amendment supersedes the Step4 v1 orbital basis for ISOL24_i8e only; previous frozen evidence is historical.",
+  "base_manifest": "manifests/step4_inputs_v1.csv",
+  "base_manifest_sha256": "6058e0cad4c5062ae8e5dd3bfb2a0dae350348825122032435ba1eb35c7822c4",
+  "overrides": {
+    "ISOL24_i8e": {
+      "species": "ISOL24_i8e",
+      "orbital_basis": "def2-QZVPP",
+      "orbital_spherical_aos": "1884",
+      "orbital_shells": "584",
+      "derived_sha256": "1ac9cdd6642f9c1a58ebb2d18c14bd28346ec9653fd23f6a4e2678fc04fe5947"
+    }
+  },
+  "input_overrides": {
+    "ISOL24_i8e": {
+      "path": "inputs/basis_exceptions_v1/ISOL24_i8e.in",
+      "sha256": "1ac9cdd6642f9c1a58ebb2d18c14bd28346ec9653fd23f6a4e2678fc04fe5947"
+    }
+  },
+  "old_orbital_basis": "def2-QZVPPD",
+  "auxiliary_basis": "RIMP2-def2-QZVPPD",
+  "auxiliary_policy": "Existing RIMP2-def2-QZVPPD auxiliary assignment retained; user changed orbital basis only.",
+  "source_dimensions": [
+    1884,
+    1884,
+    1111111,
+    0
+  ],
+  "source_dimensions_sha256": "2fd8157c95a2f919d3b88925e276637a5f032ee887cdb2e9251e070893e894f6",
+  "basis_identity": "AO count agrees; full generating-basis identity and native compatibility remain unproven",
+  "comparison_caveat": "Intentional single-species departure from revwb97m2/XYG-OS5/wb97m_os_rimp2 orbital basis; report in reproducibility and benchmark limitations",
+  "new_scf_authorized": false
+}

@@ -1,0 +1,1544 @@
+{
+  "schema_version": 1,
+  "project": "coach_mp2",
+  "step": 3,
+  "solver_neutral": true,
+  "counts": {
+    "coefficient_fitting": {
+      "reactions": 1498,
+      "species": 2799
+    },
+    "model_selection": {
+      "reactions": 8377,
+      "species": 13907
+    },
+    "overfitting_diagnostic": {
+      "reactions": 219,
+      "species": 249
+    },
+    "final_assessment": {
+      "reactions": 3462,
+      "species": 3573
+    }
+  },
+  "energy_species_union": 17452,
+  "metadata_count": 17658,
+  "excluded_OPT": [
+    "SE_1_2_3_thiadiazole",
+    "SE_1_2_4_thiadiazole",
+    "SE_1_2_5_thiadiazole",
+    "SE_1_3_4_oxadiazole",
+    "SE_1_3_4_thiadiazole",
+    "SE_1_chloro_1_fluoroethene",
+    "SE_1_chloro_2_2_difluoroethene",
+    "SE_1_chloro_2_fluoroethene",
+    "SE_1_phosphapropyne",
+    "SE_2_fluoropyridine",
+    "SE_2_thiouracil",
+    "SE_3_fluoropyridine",
+    "SE_aminoacetonitrile",
+    "SE_aziridine",
+    "SE_benzene",
+    "SE_benzonitrile",
+    "SE_borane_ammonia",
+    "SE_borinic_acid",
+    "SE_butadiene",
+    "SE_butadiyne",
+    "SE_chlorodifluoromethane",
+    "SE_chlorofluoromethane",
+    "SE_cis_1_chloro_2_fluoroethylene",
+    "SE_cis_acrolein",
+    "SE_cis_formic_acid",
+    "SE_cis_hexatriene",
+    "SE_cis_methyl_formate",
+    "SE_cyclobutene",
+    "SE_cyclohexane",
+    "SE_cyclopropane",
+    "SE_cyclopropenone",
+    "SE_dichlorodifluoromethane",
+    "SE_dihydroxyborane",
+    "SE_dimethyl_ether",
+    "SE_dimethyl_sulfoxide",
+    "SE_dimethylsulfide",
+    "SE_ethenol",
+    "SE_fluoroboranol",
+    "SE_formaldehyde_oxide",
+    "SE_formaldoxime",
+    "SE_formyl_cation",
+    "SE_formyl_chloride",
+    "SE_furan",
+    "SE_glycidol",
+    "SE_glycine_Ip",
+    "SE_glycolaldehyde",
+    "SE_glycolic_acid",
+    "SE_glyoxylic_acid",
+    "SE_hydrogen_disulfide",
+    "SE_hydroxylamine",
+    "SE_imidazole",
+    "SE_isothiocyanic_acid",
+    "SE_isoxazole",
+    "SE_maleic_anhydride",
+    "SE_methylene_chloride",
+    "SE_o_benzyne",
+    "SE_oxazole",
+    "SE_oxophosphane",
+    "SE_peroxyformic_acid",
+    "SE_phenol",
+    "SE_phenyl_radical",
+    "SE_phenylacetylene",
+    "SE_phosphaethene",
+    "SE_piperidine",
+    "SE_propadienone",
+    "SE_propadienthione",
+    "SE_propanal",
+    "SE_protonated_cyanogen",
+    "SE_pyrazole",
+    "SE_pyridazine",
+    "SE_pyridine",
+    "SE_pyrimidine",
+    "SE_pyrrole",
+    "SE_pyruvic_acid",
+    "SE_succinic_anhydride",
+    "SE_sulfine",
+    "SE_sulfonium",
+    "SE_thiazole",
+    "SE_thiirane",
+    "SE_thioformaldehyde",
+    "SE_thioketene",
+    "SE_thiophene",
+    "SE_trans_acrolein",
+    "SE_uracil",
+    "W4-11-GEOM_acetaldehyde",
+    "W4-11-GEOM_acetic",
+    "W4-11-GEOM_alcl",
+    "W4-11-GEOM_alcl3",
+    "W4-11-GEOM_alf",
+    "W4-11-GEOM_alf3",
+    "W4-11-GEOM_alh",
+    "W4-11-GEOM_alh3",
+    "W4-11-GEOM_allene",
+    "W4-11-GEOM_b2h6",
+    "W4-11-GEOM_bf",
+    "W4-11-GEOM_bf3",
+    "W4-11-GEOM_bh",
+    "W4-11-GEOM_bh3",
+    "W4-11-GEOM_bhf2",
+    "W4-11-GEOM_bn3pi",
+    "W4-11-GEOM_c-hcoh",
+    "W4-11-GEOM_c-hono",
+    "W4-11-GEOM_c-n2h2",
+    "W4-11-GEOM_c2h2",
+    "W4-11-GEOM_c2h3f",
+    "W4-11-GEOM_c2h4",
+    "W4-11-GEOM_c2h5f",
+    "W4-11-GEOM_c2h6",
+    "W4-11-GEOM_cch",
+    "W4-11-GEOM_ccl2",
+    "W4-11-GEOM_cf",
+    "W4-11-GEOM_cf2",
+    "W4-11-GEOM_cf4",
+    "W4-11-GEOM_ch",
+    "W4-11-GEOM_ch2-sing",
+    "W4-11-GEOM_ch2-trip",
+    "W4-11-GEOM_ch2c",
+    "W4-11-GEOM_ch2ch",
+    "W4-11-GEOM_ch2f2",
+    "W4-11-GEOM_ch2nh",
+    "W4-11-GEOM_ch2nh2",
+    "W4-11-GEOM_ch3",
+    "W4-11-GEOM_ch3f",
+    "W4-11-GEOM_ch3nh",
+    "W4-11-GEOM_ch3nh2",
+    "W4-11-GEOM_ch4",
+    "W4-11-GEOM_cl2",
+    "W4-11-GEOM_clcn",
+    "W4-11-GEOM_clf",
+    "W4-11-GEOM_clo",
+    "W4-11-GEOM_cn",
+    "W4-11-GEOM_co",
+    "W4-11-GEOM_co2",
+    "W4-11-GEOM_cs",
+    "W4-11-GEOM_cs2",
+    "W4-11-GEOM_dioxirane",
+    "W4-11-GEOM_ethanol",
+    "W4-11-GEOM_f2",
+    "W4-11-GEOM_f2co",
+    "W4-11-GEOM_fccf",
+    "W4-11-GEOM_formic",
+    "W4-11-GEOM_glyoxal",
+    "W4-11-GEOM_h2",
+    "W4-11-GEOM_h2cn",
+    "W4-11-GEOM_h2co",
+    "W4-11-GEOM_h2o",
+    "W4-11-GEOM_h2s",
+    "W4-11-GEOM_hccf",
+    "W4-11-GEOM_hcl",
+    "W4-11-GEOM_hcn",
+    "W4-11-GEOM_hcnh",
+    "W4-11-GEOM_hcno",
+    "W4-11-GEOM_hco",
+    "W4-11-GEOM_hcof",
+    "W4-11-GEOM_hf",
+    "W4-11-GEOM_hnc",
+    "W4-11-GEOM_hnco",
+    "W4-11-GEOM_hnnn",
+    "W4-11-GEOM_hno",
+    "W4-11-GEOM_hocl",
+    "W4-11-GEOM_hocn",
+    "W4-11-GEOM_hof",
+    "W4-11-GEOM_honc",
+    "W4-11-GEOM_hoo",
+    "W4-11-GEOM_hooh",
+    "W4-11-GEOM_hs",
+    "W4-11-GEOM_ketene",
+    "W4-11-GEOM_methanol",
+    "W4-11-GEOM_n2",
+    "W4-11-GEOM_n2h",
+    "W4-11-GEOM_n2h4",
+    "W4-11-GEOM_n2o",
+    "W4-11-GEOM_nccn",
+    "W4-11-GEOM_nh",
+    "W4-11-GEOM_nh2",
+    "W4-11-GEOM_nh2cl",
+    "W4-11-GEOM_nh3",
+    "W4-11-GEOM_no",
+    "W4-11-GEOM_no2",
+    "W4-11-GEOM_o2",
+    "W4-11-GEOM_ocs",
+    "W4-11-GEOM_oh",
+    "W4-11-GEOM_oxirane",
+    "W4-11-GEOM_oxirene",
+    "W4-11-GEOM_p2",
+    "W4-11-GEOM_p4",
+    "W4-11-GEOM_ph3",
+    "W4-11-GEOM_propane",
+    "W4-11-GEOM_propene",
+    "W4-11-GEOM_propyne",
+    "W4-11-GEOM_s2",
+    "W4-11-GEOM_s2o",
+    "W4-11-GEOM_si2h6",
+    "W4-11-GEOM_sif",
+    "W4-11-GEOM_sif4",
+    "W4-11-GEOM_sih",
+    "W4-11-GEOM_sih3f",
+    "W4-11-GEOM_sih4",
+    "W4-11-GEOM_sio",
+    "W4-11-GEOM_so",
+    "W4-11-GEOM_so2",
+    "W4-11-GEOM_so3",
+    "W4-11-GEOM_ssh",
+    "W4-11-GEOM_t-hcoh",
+    "W4-11-GEOM_t-hono",
+    "W4-11-GEOM_t-n2h2"
+  ],
+  "overlap": {
+    "coefficient_fitting__model_selection": {
+      "reactions": 1498,
+      "species": 2799
+    },
+    "coefficient_fitting__overfitting_diagnostic": {
+      "reactions": 43,
+      "species": 58
+    },
+    "coefficient_fitting__final_assessment": {
+      "reactions": 0,
+      "species": 6
+    },
+    "model_selection__overfitting_diagnostic": {
+      "reactions": 219,
+      "species": 249
+    },
+    "model_selection__final_assessment": {
+      "reactions": 0,
+      "species": 28
+    },
+    "overfitting_diagnostic__final_assessment": {
+      "reactions": 0,
+      "species": 0
+    }
+  },
+  "fitting_order": "source/coach_si_table2_final_cycle_entries.csv global_index",
+  "reaction_order": "core DatasetEval then BigNC then GDB9-W1-F12, each in source order",
+  "fitting_objective": "sum(w*r_hartree^2); multiply rows/residual by sqrt(w), not w",
+  "final_gate": "final-only rows cannot enter fitting/model choice; evaluate after model and K freeze",
+  "intentional_overlap": "fitting overlaps model selection; MB16-43 overlaps diagnostic; neither is an independent holdout",
+  "bignc_caveat": "Original COACH tuned D4-ATM on BigNC; preserve inherited exposure disclosure",
+  "input_chemistry_validation": "Step4; metadata role membership here does not certify inputs or orbitals",
+  "metric_input": "physical property values in benchmark reporting units, after dataset-specific property transformations; Step13 owns transforms",
+  "metrics": {
+    "datasets": [
+      {
+        "dataset": "BH28",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.174950884973305,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BH46",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.313773195348638,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BH876",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.612891238481361,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BHDIV7",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.155611986799034,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BHPERI11",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.10234303263047,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BHROT27",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 0.30150099953296,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "CRBH14",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 0.8623415037332111,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "DBH22",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.206541418769373,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "INV23",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.124860652761662,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ORBH35",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 2.266070964015759,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "PX9",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.146826142817702,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "WCPT26",
+        "category": "BH",
+        "kind": "MAE",
+        "standard_metric": 1.262107330084094,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "Dip146",
+        "category": "EF",
+        "kind": "regularized_MAE",
+        "standard_metric": 0.03477625881083744,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HR46",
+        "category": "EF",
+        "kind": "MARE",
+        "standard_metric": 0.01262463809028224,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "OEEF",
+        "category": "EF",
+        "kind": "MARE",
+        "standard_metric": 0.08761927795136969,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "Pol130",
+        "category": "EF",
+        "kind": "MARE",
+        "standard_metric": 0.02377130338585969,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "T144",
+        "category": "EF",
+        "kind": "MARE",
+        "standard_metric": 0.01393295223193369,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "V30",
+        "category": "FREQ",
+        "kind": "MAE",
+        "standard_metric": 30.04978099978528,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ACONF",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.04732497243293058,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "Amino20x4",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.193032731157904,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BUT14DIOL",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.08643202832281964,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ICONF",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.2309765896864169,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "IDISP",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 1.542349022330761,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "MCONF",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.2276417240984313,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "PCONF21",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.2837468471147271,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "Pentane13",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.08066624803541583,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "SCONF",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.1533801504114762,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "UPU23",
+        "category": "INC",
+        "kind": "MAE",
+        "standard_metric": 0.4662931216726505,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "AlkIsomer11",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 0.1318924441475725,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "C20C246",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 9.354917374535233,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "C60ISO7",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 1.97441912098719,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "DIE60",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 0.5383447583043153,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "EIE22",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 0.3118855125097666,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ISO34",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 0.8677496629213834,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ISOL23",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 1.813936964022825,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ISOMERIZATION20",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 1.307717895673263,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "PArel",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 0.679906640856077,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "Styrene42",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 1.816744005487891,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "TAUT15",
+        "category": "ISO",
+        "kind": "MAE",
+        "standard_metric": 0.613296790522916,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "3B-69",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.057484404613565,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "3BHET",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1384851258440553,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "A19Rel6",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.07232670165778747,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "A24",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1000620290139482,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ADIM6",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1136901985619618,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "AHB21",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.3077044999282589,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "Bauza30",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.5770324371044778,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BzDC215",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1414761735805692,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "CARBHB8",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1472016876447619,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "CHB6",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.5400467032410349,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "CT20",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.08937685088084137,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "DS14",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1132326133603672,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "FmH2O10",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 1.018304854533095,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "H2O16Rel4",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.2654134247712663,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "H2O20Rel9",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1336276741400347,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HB262",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1809753739490524,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HB49",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.2375355865658054,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HCP32",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.5719098693602079,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HEAVY28",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1890334305732266,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HSG",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1249911227682356,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HW30",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1337450559865431,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HW6Cl5",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.3733280307964158,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HW6F",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.4502032525571478,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "He3",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1762081127955191,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "IHB100",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.3026985350300668,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "IHB100x2",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.3589082649264985,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "IL16",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.3680900735735927,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "NBC10",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1518243460762598,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "NC11",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.05436912994051551,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "O24",
+        "category": "NC",
+        "kind": "weighted_absolute_sum",
+        "standard_metric": 1.12470266186366,
+        "offset": 0.0,
+        "weights": {
+          "O24_1": 0.9789412992337664,
+          "O24_2": 1.068906018821192,
+          "O24_3": 0.3234812705056669,
+          "O24_4": 0.7989936927523217,
+          "O24_5": 0.8570946826716632,
+          "O24_6": 1.366517955841758,
+          "O24_7": 1.032361154557349,
+          "O24_8": 0.06157514173053016,
+          "O24_9": 0.3641934458758299,
+          "O24_10": 1.227860007461013,
+          "O24_11": 1.025161160703826,
+          "O24_12": 0.3337263581505657,
+          "O24_13": 0.03041466660380857,
+          "O24_14": 0.005735665621685202,
+          "O24_15": 0.0432036167478627,
+          "O24_16": 0.1229648343582478,
+          "O24_17": 0.2660149623492774,
+          "O24_18": 0.03744514562706038,
+          "O24_19": 1.866528143898204,
+          "O24_20": 1.50899159711014,
+          "O24_21": 0.6050121741269812,
+          "O24_22": 0.9435901896227161,
+          "O24_23": 1.515627691091412,
+          "O24_24": 1.305859318724453
+        }
+      },
+      {
+        "dataset": "O24x4",
+        "category": "NC",
+        "kind": "weighted_absolute_sum",
+        "standard_metric": 0.7010907515243213,
+        "offset": 0.0,
+        "weights": {
+          "O24x4_1": 0.2447353248084416,
+          "O24x4_2": 0.2447353248084416,
+          "O24x4_3": 0.2447353248084416,
+          "O24x4_4": 0.2447353248084416,
+          "O24x4_5": 0.2672265047052981,
+          "O24x4_6": 0.2672265047052981,
+          "O24x4_7": 0.2672265047052981,
+          "O24x4_8": 0.2672265047052981,
+          "O24x4_9": 0.08087031762641674,
+          "O24x4_10": 0.08087031762641674,
+          "O24x4_11": 0.08087031762641674,
+          "O24x4_12": 0.08087031762641674,
+          "O24x4_13": 0.1997484231880804,
+          "O24x4_14": 0.1997484231880804,
+          "O24x4_15": 0.1997484231880804,
+          "O24x4_16": 0.1997484231880804,
+          "O24x4_17": 0.2142736706679158,
+          "O24x4_18": 0.2142736706679158,
+          "O24x4_19": 0.2142736706679158,
+          "O24x4_20": 0.2142736706679158,
+          "O24x4_21": 0.3416294889604396,
+          "O24x4_22": 0.3416294889604396,
+          "O24x4_23": 0.3416294889604396,
+          "O24x4_24": 0.3416294889604396,
+          "O24x4_25": 0.2580902886393374,
+          "O24x4_26": 0.2580902886393374,
+          "O24x4_27": 0.2580902886393374,
+          "O24x4_28": 0.2580902886393374,
+          "O24x4_29": 0.01539378543263254,
+          "O24x4_30": 0.01539378543263254,
+          "O24x4_31": 0.01539378543263254,
+          "O24x4_32": 0.01539378543263254,
+          "O24x4_33": 0.09104836146895746,
+          "O24x4_34": 0.09104836146895746,
+          "O24x4_35": 0.09104836146895746,
+          "O24x4_36": 0.09104836146895746,
+          "O24x4_37": 0.3069650018652532,
+          "O24x4_38": 0.3069650018652532,
+          "O24x4_39": 0.3069650018652532,
+          "O24x4_40": 0.3069650018652532,
+          "O24x4_41": 0.2562902901759565,
+          "O24x4_42": 0.2562902901759565,
+          "O24x4_43": 0.2562902901759565,
+          "O24x4_44": 0.2562902901759565,
+          "O24x4_45": 0.08343158953764142,
+          "O24x4_46": 0.08343158953764142,
+          "O24x4_47": 0.08343158953764142,
+          "O24x4_48": 0.08343158953764142,
+          "O24x4_49": 0.007603666650952142,
+          "O24x4_50": 0.007603666650952142,
+          "O24x4_51": 0.007603666650952142,
+          "O24x4_52": 0.007603666650952142,
+          "O24x4_53": 0.0014339164054213,
+          "O24x4_54": 0.0014339164054213,
+          "O24x4_55": 0.0014339164054213,
+          "O24x4_56": 0.0014339164054213,
+          "O24x4_57": 0.01080090418696567,
+          "O24x4_58": 0.01080090418696567,
+          "O24x4_59": 0.01080090418696567,
+          "O24x4_60": 0.01080090418696567,
+          "O24x4_61": 0.03074120858956195,
+          "O24x4_62": 0.03074120858956195,
+          "O24x4_63": 0.03074120858956195,
+          "O24x4_64": 0.03074120858956195,
+          "O24x4_65": 0.06650374058731935,
+          "O24x4_66": 0.06650374058731935,
+          "O24x4_67": 0.06650374058731935,
+          "O24x4_68": 0.06650374058731935,
+          "O24x4_69": 0.009361286406765095,
+          "O24x4_70": 0.009361286406765095,
+          "O24x4_71": 0.009361286406765095,
+          "O24x4_72": 0.009361286406765095,
+          "O24x4_73": 0.4666320359745511,
+          "O24x4_74": 0.4666320359745511,
+          "O24x4_75": 0.4666320359745511,
+          "O24x4_76": 0.4666320359745511,
+          "O24x4_77": 0.377247899277535,
+          "O24x4_78": 0.377247899277535,
+          "O24x4_79": 0.377247899277535,
+          "O24x4_80": 0.377247899277535,
+          "O24x4_81": 0.1512530435317453,
+          "O24x4_82": 0.1512530435317453,
+          "O24x4_83": 0.1512530435317453,
+          "O24x4_84": 0.1512530435317453,
+          "O24x4_85": 0.235897547405679,
+          "O24x4_86": 0.235897547405679,
+          "O24x4_87": 0.235897547405679,
+          "O24x4_88": 0.235897547405679,
+          "O24x4_89": 0.3789069227728529,
+          "O24x4_90": 0.3789069227728529,
+          "O24x4_91": 0.3789069227728529,
+          "O24x4_92": 0.3789069227728529,
+          "O24x4_93": 0.3264648296811133,
+          "O24x4_94": 0.3264648296811133,
+          "O24x4_95": 0.3264648296811133,
+          "O24x4_96": 0.3264648296811133
+        }
+      },
+      {
+        "dataset": "PNICO23",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.2158999722681703,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "RG10N",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1062802902756736,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "RG18",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.07110595115371617,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "S22",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.2371118979237902,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "S66",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1689582479589781,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "S66Rel7",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.1200838698854348,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "SW49Bind22",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.2831359018993541,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "SW49Rel28",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.127720467078279,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "Shields38",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.5125089834489133,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "TA13",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 1.356982395772657,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "WATER27",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.9018188402156619,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "X40",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.182094206893113,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "X40x5",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.2968718950723668,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "XB25",
+        "category": "NC",
+        "kind": "MAE",
+        "standard_metric": 0.3415932650863598,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "AE11",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 116.9657393697381,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "AE18",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 4.951586087331369,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "AL2X6",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 0.9578029946347385,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ALK8",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 2.291862608084174,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "ALKBDE10",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 3.255146458172462,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "AlkAtom19",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.423698570682299,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "AlkIsod14",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 0.8040966288725685,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BDE99MR",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 3.314104787854086,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BDE99nonMR",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.930809315364183,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BH76RC",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.006338025915779,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "BSR36",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 0.5994907677537084,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "CR20",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 0.8793954453256537,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "DARC",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.365807656411657,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "DC13",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 5.434788904293058,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "DIPCS9",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 3.382089355723721,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "EA50",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.848985414455162,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "FH51",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.137318028449862,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "G21EA",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.368372659707526,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "G21IP",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 2.747846425789931,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "G2RC24",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 2.214517050576578,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HAT707MR",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 3.212671141562121,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HAT707nonMR",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 2.364583621926668,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HEAVYSB11",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.985603316548405,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "HNBrBDE18",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.635038054769694,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "IP23",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 2.54050255903928,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "IP30",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 3.401931586971472,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "MB08-165",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 4.573353443431814,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "MB16-43",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 12.01002170252576,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "MX34",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 10.2967803045011,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "NBPRC",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.228716278816153,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "P34AE",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 3.465999264784183,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "P34EA",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.570494885535564,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "P34IP",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 2.015763592177814,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "PA26",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.249001011107978,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "PlatonicRE18",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 5.037011349826424,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "PlatonicTAE6",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 4.715275528567645,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "RC21",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.625124128209805,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "RSE43",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 0.7385734502330391,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "SIE4x4",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 9.176941603098477,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "SN13",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 0.6311684500932003,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "TAE_W4-17MR",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 3.076167135552818,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "TAE_W4-17nonMR",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 2.297449622752158,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "WCPT6",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 0.6630951223130768,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "YBDE18",
+        "category": "TC",
+        "kind": "MAE",
+        "standard_metric": 1.727651721197919,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "3d4dIPSS",
+        "category": "TM",
+        "kind": "MAE",
+        "standard_metric": 5.193466247976917,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "CUAGAU83",
+        "category": "TM",
+        "kind": "MAE",
+        "standard_metric": 3.838685949180172,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "DAPD",
+        "category": "TM",
+        "kind": "MAE",
+        "standard_metric": 2.77676239494215,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "MME52",
+        "category": "TM",
+        "kind": "MAE",
+        "standard_metric": 2.755491955852249,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "MOBH28",
+        "category": "TM",
+        "kind": "MAE",
+        "standard_metric": 1.660350879510097,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "MOR13",
+        "category": "TM",
+        "kind": "weighted_absolute_sum",
+        "standard_metric": 2.328361954355179,
+        "offset": 0.2417767,
+        "weights": {
+          "MOR13_1": 0.1455295,
+          "MOR13_2": 0.0272714,
+          "MOR13_3": 0.1209988,
+          "MOR13_4": 0.0647332,
+          "MOR13_5": 0.0603818,
+          "MOR13_6": 0.0838529,
+          "MOR13_7": 0.214621,
+          "MOR13_8": 0.0604527,
+          "MOR13_9": 0.0955918,
+          "MOR13_10": 0.0693952,
+          "MOR13_11": 0.0380468,
+          "MOR13_12": 0.0357797,
+          "MOR13_13": 0.0151755
+        }
+      },
+      {
+        "dataset": "ROST61",
+        "category": "TM",
+        "kind": "MAE",
+        "standard_metric": 2.752369590407213,
+        "offset": 0.0,
+        "weights": {}
+      },
+      {
+        "dataset": "TMB11",
+        "category": "TM",
+        "kind": "weighted_absolute_sum",
+        "standard_metric": 1.481498656396261,
+        "offset": 0.23812677,
+        "weights": {
+          "TMB11_1": 0.0877798,
+          "TMB11_2": 0.0450308,
+          "TMB11_3": 0.069258,
+          "TMB11_4": 0.0576931,
+          "TMB11_5": 0.1444151,
+          "TMB11_6": 0.02196,
+          "TMB11_7": 0.0673713,
+          "TMB11_8": 0.1223129,
+          "TMB11_9": 0.1631231,
+          "TMB11_10": 0.0650399,
+          "TMB11_11": 0.0910995
+        }
+      },
+      {
+        "dataset": "TMD10",
+        "category": "TM",
+        "kind": "weighted_absolute_sum",
+        "standard_metric": 5.643614741210356,
+        "offset": 2.3309334,
+        "weights": {
+          "TMD10_1": 0.037155,
+          "TMD10_2": 0.140992,
+          "TMD10_3": 0.0669843,
+          "TMD10_4": 0.0434399,
+          "TMD10_5": 0.1446704,
+          "TMD10_6": 0.0457048,
+          "TMD10_7": 0.0628946,
+          "TMD10_8": 0.1856838,
+          "TMD10_9": 0.0552455,
+          "TMD10_10": 0.0832721
+        }
+      }
+    ],
+    "overall": "unweighted mean of 137 dataset NERs, not mean of category means",
+    "category": "unweighted mean of dataset NERs within category",
+    "diagnostic": "unweighted mean of AE11/MB08-165/MB16-43 NERs",
+    "ner": "dataset-specific metric / Standard_errors.Metric",
+    "missing": "reject missing/duplicate/nonfinite rows; never silently shrink",
+    "gdb_final": [
+      "MAE",
+      "mean_signed_error",
+      "population_SD"
+    ]
+  },
+  "species_and_dataset_order": "identical to pinned revwb97m2 species_roles.csv and dataset_roles.csv",
+  "metadata_sources": {
+    "GSCDB": "/clusterfs/mhg-data/yaoshen/GSCDB/Allmols_info.json",
+    "BigNC": "/clusterfs/mhg-data/yaoshen/GSCDB/AdditionalSets/BigNC/Allmols_info.json",
+    "GDB9-W1-F12": "/clusterfs/mhg-data/yaoshen/GSCDB/AdditionalSets/GDB9-W1-F12/Allmols_info.json",
+    "OPT": "/clusterfs/mhg-data/yaoshen/GSCDB/AdditionalSets/OPT/Allmols_info.json"
+  }
+}

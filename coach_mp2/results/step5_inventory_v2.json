@@ -1,0 +1,11 @@
+{
+  "total": 17452,
+  "status": {
+    "structural_pass": 14078,
+    "structural_pass_known_trailing_bytes": 3,
+    "missing": 3371
+  },
+  "basis_amendment": "configs/input_basis_amendments_v1.json",
+  "gdb9": "deferred before Step17, not current development blocker",
+  "prior_inventory_preserved": true
+}

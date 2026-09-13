@@ -1,0 +1,20 @@
+{
+  "structural_pass": {
+    "coefficient_fitting": 2799,
+    "model_selection": 13903,
+    "overfitting_diagnostic": 249,
+    "final_assessment": 202
+  },
+  "quarantine": {
+    "coefficient_fitting": 0,
+    "model_selection": 4,
+    "overfitting_diagnostic": 0,
+    "final_assessment": 0
+  },
+  "missing": {
+    "coefficient_fitting": 0,
+    "model_selection": 0,
+    "overfitting_diagnostic": 0,
+    "final_assessment": 3371
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "completed_cases": [
+    {
+      "species": "He3_47",
+      "spins": [
+        {
+          "exact_columns": 280,
+          "changed_columns": 34,
+          "max_error_after_sign_alignment": 1.7460042300854184e-09,
+          "occupied_max_error_after_sign_alignment": 3.398045733682409e-12
+        },
+        {
+          "exact_columns": 280,
+          "changed_columns": 34,
+          "max_error_after_sign_alignment": 1.7352483894228499e-09,
+          "occupied_max_error_after_sign_alignment": 3.3980734892580244e-12
+        }
+      ],
+      "orbital_energies_byte_identical": true,
+      "trailing_bytes_identical": true,
+      "source_sha256": "f61186c087b541b13b98b50aa3e85ccf40c4280303f8c185a0940421c652de07",
+      "output_sha256": "61bc22024f5e985adba07bdb57b2fd4625914f8925d75cca1799cfb91b24674d"
+    },
+    {
+      "species": "He3_48",
+      "spins": [
+        {
+          "exact_columns": 284,
+          "changed_columns": 30,
+          "max_error_after_sign_alignment": 2.0151742496921088e-09,
+          "occupied_max_error_after_sign_alignment": 2.3492041645312156e-12
+        },
+        {
+          "exact_columns": 284,
+          "changed_columns": 30,
+          "max_error_after_sign_alignment": 2.0144996781823465e-09,
+          "occupied_max_error_after_sign_alignment": 2.3487600753213655e-12
+        }
+      ],
+      "orbital_energies_byte_identical": true,
+      "trailing_bytes_identical": true,
+      "source_sha256": "96c13680c6786d044715b8e2dd29a8b168c190da74d8373113a2b1b2e9b69868",
+      "output_sha256": "c38c3a3d68145910e909add8c07b9ea33a6459f42e719ffb77d1446e29121abc"
+    },
+    {
+      "species": "He3_49",
+      "spins": [
+        {
+          "exact_columns": 292,
+          "changed_columns": 22,
+          "max_error_after_sign_alignment": 8.38627833843475e-09,
+          "occupied_max_error_after_sign_alignment": 1.1558781709553045e-11
+        },
+        {
+          "exact_columns": 292,
+          "changed_columns": 22,
+          "max_error_after_sign_alignment": 8.418464148007843e-09,
+          "occupied_max_error_after_sign_alignment": 1.155919804318728e-11
+        }
+      ],
+      "orbital_energies_byte_identical": true,
+      "trailing_bytes_identical": true,
+      "source_sha256": "ce5185aa1adf42cf06b49877650e008c600961904fa549c0878d6a40bbd49fb2",
+      "output_sha256": "a583b888a37ee454f6a89770d77fa7982df338e01ae36384d91d792cdb783b33"
+    }
+  ],
+  "source_evidence": {
+    "/clusterfs/mhg/yaoshen/qchem/trunk/scfman/scfman.C": "c631f0e740ee1b79755e01ebea8aa2aed33b23c6d49ed513dd3d97fb0e216262",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/libsym/oriorb.F": "608454f511bdbfc27745513365d1252239c9e5f45f1d1bd13d9eb235b85f78f3",
+    "/clusterfs/mhg/yaoshen/qchem/trunk/gesman/GuessMan.C": "5d3a92d2687fef575e22db48a0c1648473c156b8e0726b032dc7faf76ef3127b"
+  },
+  "interpretation": "Post-SCF orimo call in scfman.C invokes degenerate orbital orientation and coefficient writeback in oriorb.F. Consistent with observed energy-preserving coefficient changes; strict frozen-MO gate remains failed.",
+  "contract_relaxed": false
+}

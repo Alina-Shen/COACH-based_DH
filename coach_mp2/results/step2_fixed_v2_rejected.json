@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "job_id": "25821443",
+  "checks": [
+    {
+      "species": "SIE4x4_h2o",
+      "hash_matches": {
+        "53.0": false,
+        "54.0": false
+      }
+    },
+    {
+      "species": "16_C_AE18",
+      "hash_matches": {
+        "53.0": false,
+        "54.0": false
+      }
+    }
+  ],
+  "reason": "Read-in GDM guess reorthonormalizes MOs before energy evaluation. Exact file invariance failed.",
+  "resolution": "New isolated v3 adds NO_ORTHO TRUE; no acceptance tolerance relaxed."
+}

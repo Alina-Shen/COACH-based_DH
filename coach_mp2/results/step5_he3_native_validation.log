@@ -1,0 +1,185 @@
+{
+  "job_id": "25826223",
+  "passed": false,
+  "completed_cases": 3,
+  "completed_cases_passed": false,
+  "cases": [
+    {
+      "species": "He3_47",
+      "passed": false,
+      "source_unchanged": true,
+      "mo_file_byte_unchanged": false,
+      "energy": {
+        "energy_hartree": -8.3001208857,
+        "components": {
+          "One-Electron Energy": -23.7489664291,
+          "Total Coulomb Energy": 12.2693097787,
+          "Alpha Exchange Energy": -0.7044804782,
+          "Beta Exchange Energy": -0.7044804782,
+          "DFT Exchange Energy": -1.8415619831,
+          "DFT Correlation Energy": -0.1273209582,
+          "Nuclear Repu. Energy": 6.5573796625
+        },
+        "component_sum_hartree": -8.300120885600002,
+        "closure_error_hartree": 9.99982319171977e-11,
+        "dispersion_hartree": 0.0,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice"
+      },
+      "density_checks": [
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/He3_47/54.0",
+          "spin": 0,
+          "error": 2.220446049250313e-16,
+          "bound": 1.2790059809173935e-14,
+          "passed": true
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/He3_47/54.0",
+          "spin": 1,
+          "error": 2.220446049250313e-16,
+          "bound": 1.279005980924449e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_he3_v1/He3_47/54.0",
+          "spin": 0,
+          "error": 2.7755575615628914e-17,
+          "bound": 1.2790059809173935e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_he3_v1/He3_47/54.0",
+          "spin": 1,
+          "error": 2.7755575615628914e-17,
+          "bound": 1.279005980924449e-14,
+          "passed": true
+        }
+      ],
+      "active_orbital_energies_finite": true,
+      "output_sha256": "65b93cb0399bd2455ed8e05b35acce216aa9c31674861a1c441dad272ca0b7a9",
+      "trailing_bytes_preserved": 5056
+    },
+    {
+      "species": "He3_48",
+      "passed": false,
+      "source_unchanged": true,
+      "mo_file_byte_unchanged": false,
+      "energy": {
+        "energy_hartree": -8.1442233631,
+        "components": {
+          "One-Electron Energy": -24.5831176627,
+          "Total Coulomb Energy": 12.6601813986,
+          "Alpha Exchange Energy": -0.7068497156,
+          "Beta Exchange Energy": -0.7068497156,
+          "DFT Exchange Energy": -1.8623772638,
+          "DFT Correlation Energy": -0.1308420102,
+          "Nuclear Repu. Energy": 7.1856316062
+        },
+        "component_sum_hartree": -8.144223363100004,
+        "closure_error_hartree": -3.552713678800501e-15,
+        "dispersion_hartree": 0.0,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice"
+      },
+      "density_checks": [
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/He3_48/54.0",
+          "spin": 0,
+          "error": 2.220446049250313e-16,
+          "bound": 1.3760181683884542e-14,
+          "passed": true
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/He3_48/54.0",
+          "spin": 1,
+          "error": 2.220446049250313e-16,
+          "bound": 1.376018168387607e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_he3_v1/He3_48/54.0",
+          "spin": 0,
+          "error": 2.7755575615628914e-17,
+          "bound": 1.3760181683884542e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_he3_v1/He3_48/54.0",
+          "spin": 1,
+          "error": 2.220446049250313e-16,
+          "bound": 1.376018168387607e-14,
+          "passed": true
+        }
+      ],
+      "active_orbital_energies_finite": true,
+      "output_sha256": "bd69da554adb20e543b382d879351ef6903b2b9da47117db8efa7e98b491e157",
+      "trailing_bytes_preserved": 5056
+    },
+    {
+      "species": "He3_49",
+      "passed": false,
+      "source_unchanged": true,
+      "mo_file_byte_unchanged": false,
+      "energy": {
+        "energy_hartree": -7.9113273194,
+        "components": {
+          "One-Electron Energy": -25.5637420686,
+          "Total Coulomb Energy": 13.0913639419,
+          "Alpha Exchange Energy": -0.7090170156,
+          "Beta Exchange Energy": -0.7090170156,
+          "DFT Exchange Energy": -1.88671747,
+          "DFT Correlation Energy": -0.1342008801,
+          "Nuclear Repu. Energy": 8.0000031885
+        },
+        "component_sum_hartree": -7.911327319500003,
+        "closure_error_hartree": -1.000035609877159e-10,
+        "dispersion_hartree": 0.0,
+        "iteration_semantics": "one Fock evaluation, no orbital optimization",
+        "correlation_convention": "DFT Correlation includes VV10; do not add it twice"
+      },
+      "density_checks": [
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/He3_49/54.0",
+          "spin": 0,
+          "error": 2.220446049250313e-16,
+          "bound": 1.6376456076419464e-14,
+          "passed": true
+        },
+        {
+          "path": "/global/scratch/users/jsliang/COACH3/He3_49/54.0",
+          "spin": 1,
+          "error": 2.220446049250313e-16,
+          "bound": 1.6376456076310383e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_he3_v1/He3_49/54.0",
+          "spin": 0,
+          "error": 2.220446049250313e-16,
+          "bound": 1.6376456076419464e-14,
+          "passed": true
+        },
+        {
+          "path": "/clusterfs/mhg-data/yaoshen/scf_read/coach_mp2/step5_he3_v1/He3_49/54.0",
+          "spin": 1,
+          "error": 5.551115123125783e-17,
+          "bound": 1.6376456076310383e-14,
+          "passed": true
+        }
+      ],
+      "active_orbital_energies_finite": true,
+      "output_sha256": "cbab75b028776eabc0b5919781daf59f82e5a2715327d7bd290a460aba849ba8",
+      "trailing_bytes_preserved": 5056
+    }
+  ],
+  "scope": "native fixed-parent read and unchanged legacy MO/energy bytes; not MP2 or virtual-space completeness validation"
+}
+Traceback (most recent call last):
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/check_step5_he3.py", line 23, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/check_step5_he3.py", line 22, in main
+    (R/'results/step5_he3_native_validation.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2));assert report['completed_cases_passed'] if args.partial else report['passed']
+                                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

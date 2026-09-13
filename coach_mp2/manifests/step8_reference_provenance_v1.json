@@ -1,0 +1,7 @@
+{
+  "source_sha256": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/integrated_dv.py": "d3b56a6a0b45967dd7caccc379517777379466c85963203f4fd5782d30d3ff2e",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/qchem_integrated_dv_reference.py": "b1eda8e7e0f6bb652a466c374c5e31a5488027b0933fc9eddd4657eef21f4493"
+  },
+  "adaptation": "omega=.27; no changes to mathematical formulas or row semantics"
+}

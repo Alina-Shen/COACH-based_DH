@@ -1,0 +1,24 @@
+{
+  "scope": "three_metadata_tables_only_not_full_role_or_orbital_validation",
+  "tables": {
+    "DatasetEval.csv": {
+      "byte_identical": true,
+      "parsed_records_identical": true,
+      "database_rows": 8448,
+      "reference_rows": 8448
+    },
+    "Datasets.csv": {
+      "byte_identical": true,
+      "parsed_records_identical": true,
+      "database_rows": 142,
+      "reference_rows": 142
+    },
+    "Standard_errors.csv": {
+      "byte_identical": true,
+      "parsed_records_identical": true,
+      "database_rows": 137,
+      "reference_rows": 137
+    }
+  },
+  "all_parsed_records_identical": true
+}

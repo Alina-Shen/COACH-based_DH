@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "tests_run": 17,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 0.1145367359276861,
+  "python": "3.9.25 (main, Dec 18 2025, 08:36:10) \n[GCC 8.5.0 20210514 (Red Hat 8.5.0-28)]",
+  "test_sha256": "8432214c601a86afd1e366b7f09ad7ae5235ddaf6f902058ba3cc9c61989faaf",
+  "validator_sha256": "ed4d45278d7ca04a475887dca4e3ffe5d6ea1667d42ceb77150bba99821aae00"
+}

@@ -1,0 +1,15 @@
+TMB28_C1 250974 PASS 2535.623476315057
+TMB28_C1 99590 PASS 1201.730534373084
+TMB28_C1 75302 PASS 985.8504302960355
+TMB28_C1 sr_vv PASS 1501.4836537339725
+TMB28_C1 full_hf PASS 718.4526392070111
+TMB28_C1 lr_hf PASS 1442.4131934160832
+TMB28_C1 RIMP2 PASS 2182.4406581050716
+Traceback (most recent call last):
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/run_step10.py", line 51, in <module>
+    if __name__=='__main__':main(sys.argv[1])
+                            ^^^^^^^^^^^^^^^^^
+  File "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/scripts/run_step10.py", line 46, in main
+    errors={g:fixed+.22878981*hf(sr)+scalar(texts[g],r'DFT\s+Exchange\s+Energy')+scalar(texts[g],r'DFT\s+Correlation\s+Energy')-scalar(texts[g],r'SCF\s+energy') for g in ['250974','99590','75302']};assert max(map(abs,errors.values()))<=1e-8
+                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "/clusterfs/mhg-data/yaoshen/GSCDB/Info/DatasetEval.csv": "0b95de0d35308e7ea39e1f73ed68d7ab5a65f4195212ee6295383fbf22281fbe",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/Info/Datasets.csv": "1d828b5e65bf3b14b2f64aef40235e389be1934148057d3818a4b4387bf3817e",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/Info/Standard_errors.csv": "dcc065a43deadba99265bbdfdb8d7b4b43f8f8eddf547448fd3f308a0e478863",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/Info/DatasetEval_TMC34_weight.csv": "fc1353bfe8297808502451a17866a3dbcd58f23482a745aad5a5b0b0c44c5049",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/Info/DatasetEval_O24x5_weight.csv": "fb345379a0dc3d576ae9d51a84b41c7965e3ca591d1c5e80f169c75bb33b0df3",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/AdditionalSets/BigNC/DatasetEval.csv": "2a54ebde09cd60ed9d37d714d9b912b992e44f098896a092d85d56510449d7fa",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/AdditionalSets/GDB9-W1-F12/DatasetEval.csv": "b8829847420390137015a7b55c2a6fc3d6f74bd9cbb9839695227b4d3a8dc303",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv": "2d8a1e2340d980c0e236bdd0c425abd9b0c4654a1610f94b4de2644e0b73abcf",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/weights/coach_si_table2_final_cycle_training_weights.csv": "d4279ee9cb19144685ae45b92d0f1af1d87f62d135e63625120158ff12c3f474",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/weights/coach_si_table2_final_cycle.yaml": "007783da520e0707fba3f592f2b14331944da433aff115c087501c3b2af885f1",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/paper/SI_COACH_2026MHG.pdf": "751b32e29c5a0cfb660d2f912be7d447014697294e9ef317eedd07f26d61956b",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/reaction_roles.csv": "7e0c87da5c8492c489b41f0c0416c49237c89021cb8a70260a0ea38ad24a3d59",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/species_roles.csv": "3a52626136d3f16f0bac9fdcc91c4573aea7de2c667ccf8be704ee7977909b4e",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/qchem_input_metadata.csv": "22e2375e4dc9e2319741eccb73eb3c5c2a0f0b9d04d51ce297e6ef2fefbc26b7",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/revwb97m2_data_roles_v2.yaml": "d526cc34fa4d9e959d9b2a815ac06aece10618114b99c7383dcf196ed3e1fb1f",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/Analysis/analyze.ipynb": "b5700a86c0bf3f75d344ffb9d77199df26c9020e1dcc1836a2a2faa77bae67a6",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/configs/scientific_spec_v1.json": "f4977550a9905cb630aaeea1039bffab0ae500f4ee86c627ecb10d3fb62e5aae",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/dataset_roles.csv": "eb7fcce6075bafaac4d75fa62e31f20356e6688f3571efa5f40fa7a8baefc09d",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/Allmols_info.json": "6e08be8e52bf5e075e0af6b35e920f683f2b3fdc27976de6739e87924f7ac0dd",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/AdditionalSets/BigNC/Allmols_info.json": "7dd4b905d8f94818537e57d4ba55feeb523185df938d140b73ffa8b51c46adeb",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/AdditionalSets/GDB9-W1-F12/Allmols_info.json": "75aa8f24ead7d3ba2b8fca76f7aa1e203490e9396b2deeaa0d758ba90ab02cd6",
+    "/clusterfs/mhg-data/yaoshen/GSCDB/AdditionalSets/OPT/Allmols_info.json": "1d65870451d8b4518eccdb1723afe7186c37c5878ab62291b4f35cce59f4888f"
+  },
+  "input_chemistry_or_orbital_validation": false,
+  "no_solver_or_jobs_used": true
+}

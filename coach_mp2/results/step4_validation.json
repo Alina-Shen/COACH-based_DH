@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "validated_inputs": 17452,
+  "archive_members": 34904,
+  "checks_per_input": [
+    "source hashes",
+    "derived hashes",
+    "allowed transformations only",
+    "geometry charge spin",
+    "basis auxiliary ECP",
+    "reference definition hashes and dimensions",
+    "electron spin parity",
+    "role order and membership"
+  ],
+  "changes": {
+    "method_to_COACH": 14006,
+    "inherit_pinned_aux_basis_definition": 1,
+    "split_concatenated_rem_line": 4,
+    "inherit_pinned_basis_definition": 7,
+    "inherit_explicit_external_auxiliary_assignment": 3446
+  },
+  "ecp_resolutions": {
+    "not_applicable": 16988,
+    "implicit_named_def2_ecp": 367,
+    "embedded_qchem_block": 97
+  },
+  "embedded_orbital_count": 593,
+  "embedded_auxiliary_count": 1,
+  "auxiliary_library_checks": {
+    "rimp2-def2-QZVPP": true,
+    "rimp2-def2-QZVPPD": true,
+    "rimp2-def2-TZVP": true,
+    "rimp2-def2-TZVPPD": true
+  },
+  "current_runtime_auxiliary_library_checks": {
+    "/global/home/groups-sw/mhg/qchem_public/qchem_620/qcaux/basis/rimp2-def2-QZVPP.bas": true,
+    "/global/home/groups-sw/mhg/qchem_public/qchem_620/qcaux/basis/rimp2-def2-QZVPPD.bas": true,
+    "/global/home/groups-sw/mhg/qchem_public/qchem_620/qcaux/basis/rimp2-def2-TZVP.bas": true,
+    "/global/home/groups-sw/mhg/qchem_public/qchem_620/qcaux/basis/rimp2-def2-TZVPPD.bas": true
+  },
+  "solver_used": false,
+  "orbital_compatibility_validated": false,
+  "OPT_included": false
+}

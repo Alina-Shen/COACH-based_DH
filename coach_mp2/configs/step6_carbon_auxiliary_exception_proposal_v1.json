@@ -1,0 +1,19 @@
+{
+  "status": "proposed_not_active_requires_user_decision",
+  "species": "16_C_AE18",
+  "orbital_basis_unchanged": "AUG-CC-PCV5Z",
+  "original_auxiliary_basis": "rimp2-def2-QZVPPD",
+  "proposed_auxiliary_basis": "GEN with exact 525-function AutoAux definition",
+  "proposed_input": "inputs/basis_exception_candidates_v1/16_C_AE18_autoaux.in",
+  "proposed_input_sha256": "3917670762b792dd210f9c27249f2659c6ac455733368f0a656e0b371aa69549",
+  "base_input": "inputs/step5_native_v2/16_C_AE18.in",
+  "base_input_sha256": "4b8a4874f40e05c54642b8d348a0b9af5479f9c49573e8e041d3cd40b9f2627f",
+  "allowed_difference": "AUX_BASIS_CORR and added aux_basis block only; parent/orbital basis/geometry/spin preserved",
+  "provenance": "manifests/step6_autoaux_diagnostic_v2.json",
+  "validation": "results/step6_diagnostics.json",
+  "ri_conventional_error_kcalmol": 0.0037285985439174277,
+  "threshold_kcalmol": 0.015,
+  "apply_to_other_species": false,
+  "future_todo": "Audit analogous AE18/AUG-CC-PCV5Z auxiliary combinations before broadening the exception",
+  "rationale": "Preserve COACH orbitals and canonical RI-MP2 while meeting unchanged gateway tolerance; explicit departure from mirrored auxiliary authority"
+}

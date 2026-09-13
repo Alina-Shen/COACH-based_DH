@@ -1,0 +1,11 @@
+test_actual_output (test_step2_fixed.FixedTests) ... ok
+test_density_change_rejected (test_step2_fixed.FixedTests) ... ok
+test_missing_bypass_rejected (test_step2_fixed.FixedTests) ... ok
+test_missing_component_rejected (test_step2_fixed.FixedTests) ... ok
+test_nonfinite_rejected (test_step2_fixed.FixedTests) ... ok
+test_truncated_output_rejected (test_step2_fixed.FixedTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.043s
+
+OK

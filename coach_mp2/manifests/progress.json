@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-09-12",
+  "index": "configs/step_index_v1.json",
+  "index_sha256": "29383d65b257fa04d5b1d56cd4d75800aa0f8a335a9116aabcd281ca4ae590fa",
+  "steps": [
+    {
+      "id": 1,
+      "status": "complete",
+      "evidence": [
+        "results/step1_validation.json",
+        "results/step1_tests.json"
+      ]
+    },
+    {
+      "id": 2,
+      "status": "complete",
+      "evidence": [
+        "results/step2_progress.md",
+        "results/step2_baseline_audit_v1.json",
+        "manifests/step2_provenance_audit_v1.json",
+        "results/step2_tests.log",
+        "manifests/step2_pilot_v1.json",
+        "slurm/run_step2_pilot_v1.sh",
+        "results/step2_pilot_v1.json",
+        "configs/step2_validation_protocol_v1.json",
+        "results/step2_workbook_reference_v1.json",
+        "results/step2_fixed_v3_validation.json",
+        "results/step2_fixed_tests.log",
+        "results/step2_complete.md"
+      ],
+      "remaining_gate": null,
+      "pilot_job_id": "25820274",
+      "pilot_status": "COMPLETED 0:0; both SCF fixture comparisons PASS",
+      "completion_report": "results/step2_complete.md",
+      "fixed_job_id": "25821657"
+    },
+    {
+      "id": 3,
+      "status": "complete",
+      "evidence": [
+        "manifests/step3_freeze_v1.json",
+        "results/step3_roles_validation.json",
+        "results/step3_metrics_validation.json",
+        "results/step3_tests.log",
+        "results/step3_complete.md"
+      ]
+    },
+    {
+      "id": 4,
+      "status": "complete",
+      "evidence": [
+        "results/step4_complete.md",
+        "results/step4_validation.json",
+        "results/step4_tests.log",
+        "manifests/step4_freeze_v1.json"
+      ]
+    },
+    {
+      "id": 5,
+      "status": "complete_available_scope",
+      "evidence": [
+        "manifests/step5_freeze_v1.json",
+        "results/step5_complete.md"
+      ],
+      "remaining_gate": "GDB9 3371 species user-deferred before Step17; later MP2 and full production gates remain separate",
+      "deferred_scope": "3371 GDB9 final-only species: future acquisition/generation and validation before Step17; not a current development blocker",
+      "diagnostic_job": "25826223",
+      "diagnostic_status": "Historical unpatched He3 failure superseded by six-case patched v4 PASS",
+      "native_job_id": "25827314",
+      "native_audit_job_id": "25828892",
+      "build_job_id": "25827268",
+      "build_status": "passed: isolated post-SCF orientation bypass for NoSCF",
+      "completion_job_id": "25829213",
+      "unit_tests": "8 PASS: six input/copy, actual nonzero-D4 SCF closure, idempotent bookkeeping",
+      "native_status": "COMPLETED; all six native outputs normal",
+      "native_audit_status": "COMPLETED 0:0; six cases PASS"
+    },
+    {
+      "id": 6,
+      "status": "complete_with_user_deferred_accuracy_issue",
+      "evidence": [
+        "results/step6_complete.md",
+        "manifests/step6_freeze_v1.json"
+      ],
+      "native_job_id": "25829462",
+      "remaining_gate": null,
+      "conventional_job_id": "25829605",
+      "denominator_job_id": "25829648",
+      "diagnostic_jobs": [
+        "25829818",
+        "25829827",
+        "25829897",
+        "25829953",
+        "25829954"
+      ],
+      "proposal": "configs/step6_carbon_auxiliary_exception_proposal_v1.json",
+      "deferred_issue": "F01 carbon RI accuracy; approved auxiliary retained by user",
+      "proposal_disposition": "AutoAux not adopted"
+    },
+    {
+      "id": 7,
+      "status": "deferred_optional",
+      "evidence": []
+    },
+    {
+      "id": 8,
+      "status": "complete",
+      "evidence": [
+        "results/step8_complete.md",
+        "results/step8_validation.json",
+        "manifests/step8_freeze_v1.json"
+      ],
+      "validation_job_id": "25833319",
+      "build_job_id": "25832707",
+      "native_job_id": "25832918"
+    },
+    {
+      "id": 9,
+      "status": "complete",
+      "evidence": [
+        "results/step9_complete.md",
+        "results/step9_validation.json",
+        "manifests/step9_freeze_v1.json"
+      ],
+      "solver_required": false
+    },
+    {
+      "id": 10,
+      "status": "in_progress_native_resource_pilots_submitted",
+      "evidence": [
+        "manifests/step10_protocol_v1.json",
+        "manifests/step10_preflight_freeze_v1.json",
+        "manifests/step10_jobs_v1.json"
+      ],
+      "remaining_gate": "Three native pilots and terminal accounting, then capacity review",
+      "solver_required": false
+    },
+    {
+      "id": 11,
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": 12,
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": 13,
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": 14,
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": 15,
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": 16,
+      "status": "pending",
+      "evidence": []
+    },
+    {
+      "id": 17,
+      "status": "pending",
+      "evidence": [],
+      "remaining_gate": "Before final assessment, obtain/generate and validate 3371 deferred GDB9 COACH orbitals and features."
+    },
+    {
+      "id": 18,
+      "status": "pending",
+      "evidence": []
+    }
+  ],
+  "next_step": 10,
+  "orbital_source_path_pending": false,
+  "runtime_ready": true,
+  "orbital_sources": "manifests/orbital_source_locations_v1.json",
+  "orbital_inventory_complete": false,
+  "solver_alternatives_research": "results/2026-09-12-open-source-mio-solvers.md",
+  "solver_selection": "SCIP selected for separate pilot and installed; production migration not yet approved/validated",
+  "maintenance_rule": "Update COACH-based_mp2.md, especially the frozen-index status table, after every future progress increment.",
+  "coach_reference_workbook": "../coach/paper/COACH_raw_data.xlsx",
+  "solver_decision_gate": "Separate SCIP pilot authorized; Step14 adapter validation still required before production. Gurobi comparison deferred to revwb97m(2) by user.",
+  "orbital_inventory_scan_complete": true,
+  "deferred_gdb9": "configs/step5_gdb9_deferral_v1.json",
+  "active_input_basis_amendments": "configs/input_basis_amendments_v1.json",
+  "runtime_readiness_scope": "Step5 fixed-parent and Step6 two-species RI-MP2 gateway, with explicit carbon accuracy deferral; bulk validation pending",
+  "available_orbital_inventory_complete": true,
+  "scip_pilot": "configs/scip_pilot_v1.json"
+}

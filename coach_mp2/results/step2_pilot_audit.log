@@ -1,0 +1,78 @@
+{
+  "job_id": "25820274",
+  "cases": [
+    {
+      "species": "SIE4x4_h2o",
+      "mode": "fixed",
+      "output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step2_pilot_v1/SIE4x4_h2o_fixed.out",
+      "sha256": "979f7672d369e082bb66665adb63fd2d4d38f4adcbbc055387c6566bace52419",
+      "normal_termination": true,
+      "reference_hartree": -76.4335179439,
+      "reference_source": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/qchem_outputs/SIE4x4_h2o.out",
+      "reference_scope": "COACH regression fixture; not GSCDB Analysis",
+      "cycle_count": 0,
+      "converged": false,
+      "skip_scf": true,
+      "energy_reconstruction_pass": false,
+      "limitation": "GEN_SCFMAN TRUE / MAX_SCF_CYCLES 0 skips energy evaluation in this build; normal termination is only a native scratch-read check."
+    },
+    {
+      "species": "SIE4x4_h2o",
+      "mode": "scf",
+      "output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step2_pilot_v1/SIE4x4_h2o_scf.out",
+      "sha256": "859a5a5ad085d4317f9cf97bff4caced1b558a72d6938ed74908815bdd28c880",
+      "normal_termination": true,
+      "reference_hartree": -76.4335179439,
+      "reference_source": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/qchem_outputs/SIE4x4_h2o.out",
+      "reference_scope": "COACH regression fixture; not GSCDB Analysis",
+      "cycle_count": 5,
+      "converged": true,
+      "first_cycle_hartree": -76.4335179421,
+      "first_cycle_minus_reference_hartree": 1.8000037016463466e-09,
+      "converged_hartree": -76.433517944,
+      "difference_hartree": -1.000017846308765e-10,
+      "tolerance_hartree": 2e-06,
+      "repeatability_pass": true
+    },
+    {
+      "species": "16_C_AE18",
+      "mode": "fixed",
+      "output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step2_pilot_v1/16_C_AE18_fixed.out",
+      "sha256": "c7e180629413a6e2c0b2a3e86e50e75406f8b6aa9d3e16e9032e65cf6134ad84",
+      "normal_termination": true,
+      "reference_hartree": -37.8454603141,
+      "reference_source": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/qchem_outputs/16_C_AE18.out",
+      "reference_scope": "COACH regression fixture; not GSCDB Analysis",
+      "cycle_count": 0,
+      "converged": false,
+      "skip_scf": true,
+      "energy_reconstruction_pass": false,
+      "limitation": "GEN_SCFMAN TRUE / MAX_SCF_CYCLES 0 skips energy evaluation in this build; normal termination is only a native scratch-read check."
+    },
+    {
+      "species": "16_C_AE18",
+      "mode": "scf",
+      "output": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step2_pilot_v1/16_C_AE18_scf.out",
+      "sha256": "fc92bf7053bda5fdf169ce901f7c2afef35b78018b84078ec89bb52d2f416de5",
+      "normal_termination": true,
+      "reference_hartree": -37.8454603141,
+      "reference_source": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/qchem_outputs/16_C_AE18.out",
+      "reference_scope": "COACH regression fixture; not GSCDB Analysis",
+      "cycle_count": 7,
+      "converged": true,
+      "first_cycle_hartree": -37.8454598849,
+      "first_cycle_minus_reference_hartree": 4.2919999998503044e-07,
+      "converged_hartree": -37.8454603141,
+      "difference_hartree": 0.0,
+      "tolerance_hartree": 2e-06,
+      "repeatability_pass": true
+    }
+  ],
+  "step2_complete": false,
+  "remaining": [
+    "Dedicated zero-update energy reconstruction remains unverified; skip-SCF mode provides no energy.",
+    "Exact historical source build unknown; current reproduction runtime is hashed."
+  ],
+  "workbook_reference_report": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/results/step2_workbook_reference_v1.json",
+  "reference_location_resolved": true
+}

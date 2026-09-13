@@ -1,0 +1,1245 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "reference_files": [
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/COACH.md",
+      "sha256": "688021dec5382ff3582d99bd59609e86ab323fe22d998163fdeabf708444e893",
+      "size_bytes": 9444
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/coach_cos.py",
+      "sha256": "dac4978fa7f887c4333cac71cc4199a64c9db837b6ec8d18562a169f2a1eee1a",
+      "size_bytes": 20290
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/coach_css.py",
+      "sha256": "6894592928cf703d6eafd32f5d0d9d7e509be51fedb269c7afa5bc3f73a85978",
+      "size_bytes": 9127
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/coach_pyscf.py",
+      "sha256": "341c35173451ea8a7993b5b966c1cb1a3f4540c31964c6a148f099aaafde9f7a",
+      "size_bytes": 8231
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/coach_x.py",
+      "sha256": "a272d1f55f1eeb09bcda203d54052b91cd49b68a59d7722282833d2a413ced6e",
+      "size_bytes": 7896
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/test_coach_regression.py",
+      "sha256": "10898aa7583b7d0232c57d10737b31615667e18a044ebb1ad9ad211e336cec5a",
+      "size_bytes": 5824
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/xyzfiles/16_C_AE18.xyz",
+      "sha256": "728046fd488830ebedde5e7d53661b3bd29e8abb245fbbdd4b45b6f09124a90d",
+      "size_bytes": 187
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/xyzfiles/L14_2a.xyz",
+      "sha256": "26f2d1f7eb9c1281fa262e84940e51b8a20abdda7243c9a354f0fb29d78ad4ab",
+      "size_bytes": 2746
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/FunctionalCOACH/tests/xyzfiles/SIE4x4_h2o.xyz",
+      "sha256": "b3b6fb9196aa76e8290f079349b1fc36ec42ab1486b030b5c62f85a6892fd7b6",
+      "size_bytes": 253
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/paper/COACH_2026MHG.pdf",
+      "sha256": "84aafcc55f566837f0ec34b04a32a2d338848af652bedde2a7758baccbfe03f1",
+      "size_bytes": 730189
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/paper/GSCDB137_benchmark_final.pdf",
+      "sha256": "bc2888317860cc0ba13225baad5580bd2b9eb8e13c8687f70b59c681d19927ef",
+      "size_bytes": 3246967
+    },
+    {
+      "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach/paper/SI_COACH_2026MHG.pdf",
+      "sha256": "751b32e29c5a0cfb660d2f912be7d447014697294e9ef317eedd07f26d61956b",
+      "size_bytes": 4523913
+    }
+  ],
+  "source_samples": [
+    {
+      "role": "gscdb137",
+      "directory": "/global/scratch/users/jsliang/COACH3/G2RC_39",
+      "files": [
+        {
+          "name": "qarchive.h5",
+          "exists": true,
+          "size_bytes": 800,
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+          "root_keys": [],
+          "root_attributes": [],
+          "datasets": [],
+          "dataset_shapes": {},
+          "scalar_values": {}
+        },
+        {
+          "name": "archive.h5",
+          "exists": true,
+          "size_bytes": 800,
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+          "root_keys": [],
+          "root_attributes": [],
+          "datasets": [],
+          "dataset_shapes": {},
+          "scalar_values": {}
+        },
+        {
+          "name": "53.0",
+          "exists": true,
+          "size_bytes": 280896,
+          "sha256": "3de512c5c8948657dddaa77090bfc1a35cbcae829b6690e77c0beb63cb6dc4b5"
+        },
+        {
+          "name": "54.0",
+          "exists": true,
+          "size_bytes": 278784,
+          "sha256": "5ffd2a5a2e6ff9b1e9e1158e73c7c31c16a0c622243a97865c5373e1937efd80"
+        },
+        {
+          "name": "58.0",
+          "exists": true,
+          "size_bytes": 278784,
+          "sha256": "aa3933bfb31d236a9f27ca6ede92b22cfb98ea136cbbdc89474f2beddd492c4b"
+        },
+        {
+          "name": "819.0",
+          "exists": true,
+          "size_bytes": 16,
+          "sha256": "0a39970095fa436dfc6915a80552ece60773e79124aef19e914ff008ec02a5c8"
+        },
+        {
+          "name": "99.0",
+          "exists": true,
+          "size_bytes": 96,
+          "sha256": "a8fe0ea9db801847655833a03920a6e9e2a13d387b81d6b05dcfbcaac7d401f2"
+        },
+        {
+          "name": "molecule",
+          "exists": true,
+          "size_bytes": 153,
+          "sha256": "47faaa4ebb071bfef1a47c4ef10b4eff2876cc10aed4d743a674f1d0cfc11d84",
+          "text": "$molecule\n0 1\nF     0.0000000000000000   0.0000000000000000  -0.7008937976339998\nF     0.0000000000000000   0.0000000000000000   0.7008937976339998\n$end\n"
+        },
+        {
+          "name": "pseudodata",
+          "exists": true,
+          "size_bytes": 288,
+          "sha256": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+        }
+      ],
+      "original_input_output_present": []
+    },
+    {
+      "role": "gscdb137",
+      "directory": "/global/scratch/users/jsliang/COACH3/Pol130_BeH20+",
+      "files": [
+        {
+          "name": "qarchive.h5",
+          "exists": true,
+          "size_bytes": 800,
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+          "root_keys": [],
+          "root_attributes": [],
+          "datasets": [],
+          "dataset_shapes": {},
+          "scalar_values": {}
+        },
+        {
+          "name": "archive.h5",
+          "exists": true,
+          "size_bytes": 800,
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+          "root_keys": [],
+          "root_attributes": [],
+          "datasets": [],
+          "dataset_shapes": {},
+          "scalar_values": {}
+        },
+        {
+          "name": "53.0",
+          "exists": true,
+          "size_bytes": 352832,
+          "sha256": "d174ee0e74f14bd980d6090f39a0b3406985897b578d0e4fc9c920a67b93501f"
+        },
+        {
+          "name": "54.0",
+          "exists": true,
+          "size_bytes": 350464,
+          "sha256": "d22e7ee6c0561c92b75e4883d61f0081d0a962f01f8b66f8c1bee425c2299d94"
+        },
+        {
+          "name": "58.0",
+          "exists": true,
+          "size_bytes": 350464,
+          "sha256": "08c13060c3cc6fd6217c532a4c0e68032766178b05791e4f2b7306a7b940e254"
+        },
+        {
+          "name": "819.0",
+          "exists": true,
+          "size_bytes": 16,
+          "sha256": "b949eb9b12b180c7aa5b6424c116a25e3dabbccb80eef0d0c0874553bbc4f431"
+        },
+        {
+          "name": "99.0",
+          "exists": true,
+          "size_bytes": 96,
+          "sha256": "d6197b09f2fefd3ecf8165cfde0bf154292b9e8c437039c49d7d695bf1b06e16"
+        },
+        {
+          "name": "molecule",
+          "exists": true,
+          "size_bytes": 220,
+          "sha256": "62de9dd80b0ca8db068990f58fa3972f53347b2f9baabc18ec89af5cd2f49908",
+          "text": "$molecule\n0 1\nBe    0.0000000000000000   0.0000000000000000   0.0000000000000000\nH     0.0000000000000000   0.0000000000000000   1.3264000000000002\nH     0.0000000000000000   0.0000000000000000  -1.3264000000000002\n$end\n"
+        },
+        {
+          "name": "pseudodata",
+          "exists": false
+        }
+      ],
+      "original_input_output_present": []
+    },
+    {
+      "role": "gscdb137",
+      "directory": "/global/scratch/users/jsliang/COACH3/Pol130_PS0+",
+      "files": [
+        {
+          "name": "qarchive.h5",
+          "exists": true,
+          "size_bytes": 800,
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+          "root_keys": [],
+          "root_attributes": [],
+          "datasets": [],
+          "dataset_shapes": {},
+          "scalar_values": {}
+        },
+        {
+          "name": "archive.h5",
+          "exists": true,
+          "size_bytes": 800,
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+          "root_keys": [],
+          "root_attributes": [],
+          "datasets": [],
+          "dataset_shapes": {},
+          "scalar_values": {}
+        },
+        {
+          "name": "53.0",
+          "exists": true,
+          "size_bytes": 509792,
+          "sha256": "26ad5d8530106ed2cfa60bf0570122fc6764ef6f059ae57d162afdf9219b8fac"
+        },
+        {
+          "name": "54.0",
+          "exists": true,
+          "size_bytes": 506944,
+          "sha256": "6200683607b82470690d8ea8a194e9922e7de424e63cffa57c0ec63ae7f484a5"
+        },
+        {
+          "name": "58.0",
+          "exists": true,
+          "size_bytes": 506944,
+          "sha256": "12a66bcae59d92340f69c28fd086e4f006e3c72c687a11403c4d94b2cb007c84"
+        },
+        {
+          "name": "819.0",
+          "exists": true,
+          "size_bytes": 16,
+          "sha256": "49b12371afbbce14f8e6d2aab5be92252e1d0e0f4bade159ca99a6db3a879876"
+        },
+        {
+          "name": "99.0",
+          "exists": true,
+          "size_bytes": 96,
+          "sha256": "500ae950d48a097db84e20513893586ec4aba0fe513ea5fe90632d45b5215427"
+        },
+        {
+          "name": "molecule",
+          "exists": true,
+          "size_bytes": 153,
+          "sha256": "f9bd2f5e6b1e4f00f7273948bc9764c78a2ef8cd4e1de2ffe1eaf5bfe2197280",
+          "text": "$molecule\n0 2\nS     0.0000000000000000   0.0000000000000000   0.0000000000000000\nP     0.0000000000000000   0.0000000000000000   1.9000000000000001\n$end\n"
+        },
+        {
+          "name": "pseudodata",
+          "exists": false
+        }
+      ],
+      "original_input_output_present": []
+    },
+    {
+      "role": "BigNC",
+      "directory": "/global/scratch/users/jsliang/BigNC/COACH/L14_PHE",
+      "files": [
+        {
+          "name": "qarchive.h5",
+          "exists": true,
+          "size_bytes": 826726244,
+          "sha256": "52925134b625938c901d6407a4bcf3d1e32569ce8c12873348b37db56ef41293",
+          "root_keys": [
+            ".counters",
+            "job",
+            "libarchive::impl::schema::atomic_charges_theory",
+            "libarchive::impl::schema::molecular_orbital_type"
+          ],
+          "root_attributes": [],
+          "datasets": [
+            ".counters/job",
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole",
+            ".counters/job\\1\\sp\\energy_function",
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges",
+            "job/1/sp/aobasis/contraction_coefficients",
+            "job/1/sp/aobasis/integrals/core_hamiltonian",
+            "job/1/sp/aobasis/integrals/kinetic_energy",
+            "job/1/sp/aobasis/integrals/multipole/1/matrix",
+            "job/1/sp/aobasis/integrals/multipole/1/order",
+            "job/1/sp/aobasis/integrals/multipole/2/matrix",
+            "job/1/sp/aobasis/integrals/multipole/2/order",
+            "job/1/sp/aobasis/integrals/multipole/3/matrix",
+            "job/1/sp/aobasis/integrals/multipole/3/order",
+            "job/1/sp/aobasis/integrals/multipole/4/matrix",
+            "job/1/sp/aobasis/integrals/multipole/4/order",
+            "job/1/sp/aobasis/integrals/multipole/5/matrix",
+            "job/1/sp/aobasis/integrals/multipole/5/order",
+            "job/1/sp/aobasis/integrals/multipole/6/matrix",
+            "job/1/sp/aobasis/integrals/multipole/6/order",
+            "job/1/sp/aobasis/integrals/multipole/7/matrix",
+            "job/1/sp/aobasis/integrals/multipole/7/order",
+            "job/1/sp/aobasis/integrals/multipole/8/matrix",
+            "job/1/sp/aobasis/integrals/multipole/8/order",
+            "job/1/sp/aobasis/integrals/multipole/9/matrix",
+            "job/1/sp/aobasis/integrals/multipole/9/order",
+            "job/1/sp/aobasis/integrals/nuclear_attraction",
+            "job/1/sp/aobasis/nbasis",
+            "job/1/sp/aobasis/nprim",
+            "job/1/sp/aobasis/nshells",
+            "job/1/sp/aobasis/orthonormalization_matrix",
+            "job/1/sp/aobasis/overlap_matrix",
+            "job/1/sp/aobasis/primitive_exponents",
+            "job/1/sp/aobasis/primitives_per_shell",
+            "job/1/sp/aobasis/shell_coordinates",
+            "job/1/sp/aobasis/shell_to_atom_map",
+            "job/1/sp/aobasis/shell_types",
+            "job/1/sp/aobasis/sp_contraction_coefficients",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/charges",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/spin",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory",
+            "job/1/sp/energy_function/1/density_matrix/nsets",
+            "job/1/sp/energy_function/1/density_matrix/opdm",
+            "job/1/sp/energy_function/1/energy",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_coefficients",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_energies",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets",
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge",
+            "job/1/sp/energy_function/1/observables/multipole_moments/dipole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/hexadecapole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/octopole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/quadrupole",
+            "job/1/sp/structure/charge",
+            "job/1/sp/structure/coordinates",
+            "job/1/sp/structure/nalpha",
+            "job/1/sp/structure/natoms",
+            "job/1/sp/structure/nbeta",
+            "job/1/sp/structure/nuclei"
+          ],
+          "dataset_shapes": {
+            ".counters/job": [],
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole": [],
+            ".counters/job\\1\\sp\\energy_function": [],
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges": [],
+            "job/1/sp/aobasis/contraction_coefficients": [
+              1374
+            ],
+            "job/1/sp/aobasis/integrals/core_hamiltonian": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/kinetic_energy": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/1/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/1/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/2/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/2/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/3/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/3/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/4/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/4/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/5/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/5/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/6/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/6/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/7/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/7/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/8/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/8/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/9/matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/integrals/multipole/9/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/nuclear_attraction": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/nbasis": [],
+            "job/1/sp/aobasis/nprim": [],
+            "job/1/sp/aobasis/nshells": [],
+            "job/1/sp/aobasis/orthonormalization_matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/overlap_matrix": [
+              2397,
+              2397
+            ],
+            "job/1/sp/aobasis/primitive_exponents": [
+              1374
+            ],
+            "job/1/sp/aobasis/primitives_per_shell": [
+              885
+            ],
+            "job/1/sp/aobasis/shell_coordinates": [
+              885,
+              3
+            ],
+            "job/1/sp/aobasis/shell_to_atom_map": [
+              885
+            ],
+            "job/1/sp/aobasis/shell_types": [
+              885
+            ],
+            "job/1/sp/aobasis/sp_contraction_coefficients": [
+              1374
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/charges": [
+              87
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/spin": [
+              87
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory": [],
+            "job/1/sp/energy_function/1/density_matrix/nsets": [],
+            "job/1/sp/energy_function/1/density_matrix/opdm": [
+              2,
+              2397,
+              2397
+            ],
+            "job/1/sp/energy_function/1/energy": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_coefficients": [
+              2,
+              2397,
+              2376
+            ],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_energies": [
+              2376,
+              2
+            ],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets": [],
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge": [],
+            "job/1/sp/energy_function/1/observables/multipole_moments/dipole": [
+              3
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/hexadecapole": [
+              15
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/octopole": [
+              10
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/quadrupole": [
+              6
+            ],
+            "job/1/sp/structure/charge": [],
+            "job/1/sp/structure/coordinates": [
+              87,
+              3
+            ],
+            "job/1/sp/structure/nalpha": [],
+            "job/1/sp/structure/natoms": [],
+            "job/1/sp/structure/nbeta": [],
+            "job/1/sp/structure/nuclei": [
+              87
+            ]
+          },
+          "scalar_values": {
+            ".counters/job": 1,
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole": 9,
+            ".counters/job\\1\\sp\\energy_function": 1,
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges": 1,
+            "job/1/sp/aobasis/nbasis": 2397,
+            "job/1/sp/aobasis/nprim": 1374,
+            "job/1/sp/aobasis/nshells": 885,
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory": 0,
+            "job/1/sp/energy_function/1/density_matrix/nsets": 2,
+            "job/1/sp/energy_function/1/energy": -2062.9291605541794,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind": 0,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb": 2376,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets": 2,
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge": 1.3932749457814853e-08,
+            "job/1/sp/structure/charge": 0,
+            "job/1/sp/structure/nalpha": 165,
+            "job/1/sp/structure/natoms": 87,
+            "job/1/sp/structure/nbeta": 165
+          }
+        },
+        {
+          "name": "archive.h5",
+          "exists": true,
+          "size_bytes": 800,
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+          "root_keys": [],
+          "root_attributes": [],
+          "datasets": [],
+          "dataset_shapes": {},
+          "scalar_values": {}
+        },
+        {
+          "name": "53.0",
+          "exists": true,
+          "size_bytes": 91162368,
+          "sha256": "1cc45aab6b0d00cdfc6022ab09a654d274278ce534846757e7e417f4f16fcfe2"
+        },
+        {
+          "name": "54.0",
+          "exists": true,
+          "size_bytes": 91929744,
+          "sha256": "5be2b2178ed37610f6a1e24b87c2fbfe445880e69afd572e7114c10f3426e4b3"
+        },
+        {
+          "name": "58.0",
+          "exists": true,
+          "size_bytes": 91929744,
+          "sha256": "5b7c4463f35fa20441cfefec98af96390eb8f13a996fccbdf7bfb55481cd046c"
+        },
+        {
+          "name": "819.0",
+          "exists": true,
+          "size_bytes": 16,
+          "sha256": "78e4761a46bf4f48f9538f3391caef6bcc5bf391ef3ab87e4b164a427a72ecda"
+        },
+        {
+          "name": "99.0",
+          "exists": true,
+          "size_bytes": 288,
+          "sha256": "e89ff8a3f80d13cde55e03f6319439d29be4152393ea4b2e6e2cf47459e10041"
+        },
+        {
+          "name": "molecule",
+          "exists": true,
+          "size_bytes": 5848,
+          "sha256": "20175e249ac5d6fa205f8c3d3eb0ef9d06ba81882e1cf4bad23537645dcb0b82",
+          "text": "$molecule\n0 1\nC    -4.1275378699999994  -8.2735466159999991 -15.2248871359999960\nC    -4.9973044499999988  -7.6827999459999985 -16.1502625269999953\nC    -6.0564022639999990  -8.4505036769999986 -16.6532665669999957\nC    -6.2602548429999993  -9.7596944819999987 -16.2176930569999982\nC    -5.4008472709999991 -10.3269777889999990 -15.2758820399999991\nC    -4.3266288639999990  -9.5828903979999982 -14.7880455409999989\nC    -4.8206152539999998  -6.2401432789999989 -16.5581527499999979\nC    -5.6970861969999991  -5.2589392829999992 -15.7188664829999976\nC    -5.4147119239999988  -3.8177559779999997 -16.1796784489999972\nC    -7.9387894489999988  -6.0415883419999989 -14.9980998459999970\nC    -9.3972679909999979  -6.1781336439999990 -15.3941504519999981\nN    -4.4742196869999988  -3.1600806519999995 -15.4614055839999978\nN    -7.1207640019999987  -5.4927560629999990 -15.9253998139999986\nO    -7.5342958199999979  -6.4413575839999995 -13.8927267569999984\nO    -5.9896254729999994  -3.3541336339999996 -17.1694266359999972\nH    -9.6326404709999984  -7.2433841779999986 -15.4859831969999959\nH    -4.2676058239999994  -2.2021968169999995 -15.7164119939999960\nH   -10.0222544730000003  -5.7666576549999995 -14.5968091149999974\nH    -9.6405264759999980  -5.6798986879999989 -16.3369603509999983\nH    -7.5044699199999982  -5.0592416399999989 -16.7612183639999976\nH    -5.4827557289999991  -5.3891877229999992 -14.6565555829999976\nH    -5.0748936539999994  -6.0990818659999988 -17.6150769879999949\nH    -3.7767120269999990  -5.9363982859999993 -16.4261666739999974\nH    -6.7270903739999985  -8.0128598069999981 -17.3888685589999987\nH    -3.2883162429999997  -7.6991076799999982 -14.8389541219999987\nH    -7.0896633019999991 -10.3385854550000005 -16.6155269489999959\nH    -3.6506571149999996 -10.0178182919999976 -14.0574452259999987\nH    -5.5637807689999992 -11.3424661229999977 -14.9270658179999973\nH    -4.1701842229999988  -3.5121492089999995 -14.5514707959999985\nC    -3.9698503859999996  -4.9237239099999988 -11.7580473289999983\nC    -4.8511072869999987  -6.0249748159999994 -11.1465895709999980\nC    -7.1596862959999994  -5.6493459919999989 -10.3667775459999980\nC    -4.4564979009999997  -7.3858280899999995 -11.7892621259999988\nC    -5.1806058639999994  -8.5571110829999988 -11.1713936859999983\nC    -6.4421626679999990  -8.9462218459999985 -11.6434160909999989\nC    -7.1328213349999992  -9.9923297669999975 -11.0296972199999974\nC    -6.5728511249999988 -10.6660291559999987  -9.9428159179999991\nC    -5.3092067999999992 -10.2980356579999981  -9.4787946739999978\nC    -4.6194187350000000  -9.2536553939999990 -10.0932855869999987\nC    -8.6097396310000001  -5.5271684529999989 -10.7925933869999984\nN    -6.2610562179999993  -5.7439575759999988 -11.3751040769999996\nN    -2.9822006619999994  -4.4696100109999994 -10.9628433810000008\nO    -4.1395874459999993  -4.5327932389999992 -12.9244949079999980\nO    -6.8363624229999980  -5.6451937669999994  -9.1647669749999974\nH    -2.3364849979999995  -3.7875248119999996 -11.3414772589999977\nH    -2.8549144929999994  -4.7847667170000001  -9.9947735469999976\nH    -9.1999420889999985  -6.2497156159999987 -10.2223063979999989\nH    -8.9694205379999996  -4.5249491759999989 -10.5361144829999986\nH    -8.7466919729999990  -5.7042292259999989 -11.8616565589999983\nH    -6.6152313969999978  -5.8613171609999988 -12.3299451619999978\nH    -4.7073877250000002  -6.0610116259999991 -10.0659014509999984\nH    -4.6784283549999994  -7.3243905129999991 -12.8585045949999977\nH    -3.3727687279999996  -7.5071976409999994 -11.6783203579999988\nH    -6.8783664399999989  -8.4267369109999990 -12.4921009559999980\nH    -3.6357392839999996  -8.9679340920000001  -9.7277436289999990\nH    -8.1110243539999978 -10.2830614209999975 -11.4038704419999988\nH    -4.8676310279999999 -10.8142727689999987  -8.6316754389999986\nH    -7.1157988609999991 -11.4726771539999977  -9.4585939089999975\nC    -3.1667995059999989  -5.1166869169999991  -7.1344876319999990\nC    -4.3019756389999992  -5.9569288689999995  -6.5028130339999990\nC    -5.9428668509999989  -4.2717254039999988  -5.7660630809999995\nC    -4.3947939389999995  -7.3583984729999994  -7.1274385169999990\nC    -5.3943504899999990  -8.2558244729999988  -6.4328510089999993\nC    -5.0241131159999988  -9.0029658329999975  -5.3073426509999990\nC    -5.9436638579999990  -9.8320479499999980  -4.6648634670000000\nC    -7.2518228369999980  -9.9259289809999984  -5.1433213079999991\nC    -7.6302868369999990  -9.1865509449999987  -6.2648393729999992\nC    -6.7085024189999993  -8.3591501879999974  -6.9058295109999985\nC    -7.3244772349999989  -3.6872969409999996  -5.9875307609999995\nN    -2.7610634159999994  -4.0897190099999987  -6.3519891079999979\nN    -5.5656729799999995  -5.2314037769999988  -6.6489391519999987\nO    -2.6837735109999996  -5.3628261569999989  -8.2504221419999997\nO    -5.2117445199999990  -3.9096265779999997  -4.8259791359999999\nH    -7.9752528439999981  -4.0216139449999995  -5.1724589319999996\nH    -2.1209343279999997  -3.4066502549999997  -6.7394608959999989\nH    -7.2660463169999989  -2.5965489969999997  -5.9413467949999994\nH    -7.7618999509999993  -3.9977886729999996  -6.9398960669999985\nH    -6.1113090089999993  -5.3968267049999987  -7.5005474959999985\nH    -4.1104905749999991  -6.0388443199999990  -5.4274806009999992\nH    -4.6571553889999997  -7.2655909759999995  -8.1836700639999975\nH    -3.3957144599999993  -7.8045393089999990  -7.0832158249999990\nH    -7.0021674409999992  -7.7951409749999989  -7.7869224319999981\nH    -4.0036629809999988  -8.9384221820000000  -4.9339352089999995\nH    -8.6447986809999975  -9.2597682449999983  -6.6475360959999987\nH    -5.6385338869999995 -10.4080230359999977  -3.7951327649999995\nH    -7.9688548889999984 -10.5742567609999973  -4.6471016919999988\nH    -3.3477887819999994  -3.8358395799999991  -5.5495698589999991\n$end\n"
+        },
+        {
+          "name": "pseudodata",
+          "exists": true,
+          "size_bytes": 288,
+          "sha256": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+        }
+      ],
+      "original_input_output_present": []
+    },
+    {
+      "role": "BigNC",
+      "directory": "/global/scratch/users/jsliang/BigNC/COACH/vL11_3a",
+      "files": [
+        {
+          "name": "qarchive.h5",
+          "exists": true,
+          "size_bytes": 2051407572,
+          "sha256": "eb481a9a7b9c43526a1c9ce51e6c18f13139093a075f78e3e6e9f45084357bfe",
+          "root_keys": [
+            ".counters",
+            "job",
+            "libarchive::impl::schema::atomic_charges_theory",
+            "libarchive::impl::schema::molecular_orbital_type"
+          ],
+          "root_attributes": [],
+          "datasets": [
+            ".counters/job",
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole",
+            ".counters/job\\1\\sp\\energy_function",
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges",
+            "job/1/sp/aobasis/contraction_coefficients",
+            "job/1/sp/aobasis/integrals/core_hamiltonian",
+            "job/1/sp/aobasis/integrals/kinetic_energy",
+            "job/1/sp/aobasis/integrals/multipole/1/matrix",
+            "job/1/sp/aobasis/integrals/multipole/1/order",
+            "job/1/sp/aobasis/integrals/multipole/2/matrix",
+            "job/1/sp/aobasis/integrals/multipole/2/order",
+            "job/1/sp/aobasis/integrals/multipole/3/matrix",
+            "job/1/sp/aobasis/integrals/multipole/3/order",
+            "job/1/sp/aobasis/integrals/multipole/4/matrix",
+            "job/1/sp/aobasis/integrals/multipole/4/order",
+            "job/1/sp/aobasis/integrals/multipole/5/matrix",
+            "job/1/sp/aobasis/integrals/multipole/5/order",
+            "job/1/sp/aobasis/integrals/multipole/6/matrix",
+            "job/1/sp/aobasis/integrals/multipole/6/order",
+            "job/1/sp/aobasis/integrals/multipole/7/matrix",
+            "job/1/sp/aobasis/integrals/multipole/7/order",
+            "job/1/sp/aobasis/integrals/multipole/8/matrix",
+            "job/1/sp/aobasis/integrals/multipole/8/order",
+            "job/1/sp/aobasis/integrals/multipole/9/matrix",
+            "job/1/sp/aobasis/integrals/multipole/9/order",
+            "job/1/sp/aobasis/integrals/nuclear_attraction",
+            "job/1/sp/aobasis/nbasis",
+            "job/1/sp/aobasis/nprim",
+            "job/1/sp/aobasis/nshells",
+            "job/1/sp/aobasis/orthonormalization_matrix",
+            "job/1/sp/aobasis/overlap_matrix",
+            "job/1/sp/aobasis/primitive_exponents",
+            "job/1/sp/aobasis/primitives_per_shell",
+            "job/1/sp/aobasis/shell_coordinates",
+            "job/1/sp/aobasis/shell_to_atom_map",
+            "job/1/sp/aobasis/shell_types",
+            "job/1/sp/aobasis/sp_contraction_coefficients",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/charges",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/spin",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory",
+            "job/1/sp/energy_function/1/density_matrix/nsets",
+            "job/1/sp/energy_function/1/density_matrix/opdm",
+            "job/1/sp/energy_function/1/energy",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_coefficients",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_energies",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets",
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge",
+            "job/1/sp/energy_function/1/observables/multipole_moments/dipole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/hexadecapole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/octopole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/quadrupole",
+            "job/1/sp/structure/charge",
+            "job/1/sp/structure/coordinates",
+            "job/1/sp/structure/nalpha",
+            "job/1/sp/structure/natoms",
+            "job/1/sp/structure/nbeta",
+            "job/1/sp/structure/nuclei"
+          ],
+          "dataset_shapes": {
+            ".counters/job": [],
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole": [],
+            ".counters/job\\1\\sp\\energy_function": [],
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges": [],
+            "job/1/sp/aobasis/contraction_coefficients": [
+              2180
+            ],
+            "job/1/sp/aobasis/integrals/core_hamiltonian": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/kinetic_energy": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/1/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/1/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/2/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/2/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/3/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/3/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/4/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/4/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/5/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/5/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/6/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/6/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/7/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/7/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/8/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/8/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/9/matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/integrals/multipole/9/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/nuclear_attraction": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/nbasis": [],
+            "job/1/sp/aobasis/nprim": [],
+            "job/1/sp/aobasis/nshells": [],
+            "job/1/sp/aobasis/orthonormalization_matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/overlap_matrix": [
+              3779,
+              3779
+            ],
+            "job/1/sp/aobasis/primitive_exponents": [
+              2180
+            ],
+            "job/1/sp/aobasis/primitives_per_shell": [
+              1375
+            ],
+            "job/1/sp/aobasis/shell_coordinates": [
+              1375,
+              3
+            ],
+            "job/1/sp/aobasis/shell_to_atom_map": [
+              1375
+            ],
+            "job/1/sp/aobasis/shell_types": [
+              1375
+            ],
+            "job/1/sp/aobasis/sp_contraction_coefficients": [
+              2180
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/charges": [
+              126
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/spin": [
+              126
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory": [],
+            "job/1/sp/energy_function/1/density_matrix/nsets": [],
+            "job/1/sp/energy_function/1/density_matrix/opdm": [
+              2,
+              3779,
+              3779
+            ],
+            "job/1/sp/energy_function/1/energy": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_coefficients": [
+              2,
+              3779,
+              3692
+            ],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_energies": [
+              3692,
+              2
+            ],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets": [],
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge": [],
+            "job/1/sp/energy_function/1/observables/multipole_moments/dipole": [
+              3
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/hexadecapole": [
+              15
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/octopole": [
+              10
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/quadrupole": [
+              6
+            ],
+            "job/1/sp/structure/charge": [],
+            "job/1/sp/structure/coordinates": [
+              126,
+              3
+            ],
+            "job/1/sp/structure/nalpha": [],
+            "job/1/sp/structure/natoms": [],
+            "job/1/sp/structure/nbeta": [],
+            "job/1/sp/structure/nuclei": [
+              126
+            ]
+          },
+          "scalar_values": {
+            ".counters/job": 1,
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole": 9,
+            ".counters/job\\1\\sp\\energy_function": 1,
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges": 1,
+            "job/1/sp/aobasis/nbasis": 3779,
+            "job/1/sp/aobasis/nprim": 2180,
+            "job/1/sp/aobasis/nshells": 1375,
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory": 0,
+            "job/1/sp/energy_function/1/density_matrix/nsets": 2,
+            "job/1/sp/energy_function/1/energy": -3827.365037700203,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind": 0,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb": 3692,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets": 2,
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge": -6.005634795688557e-08,
+            "job/1/sp/structure/charge": 0,
+            "job/1/sp/structure/nalpha": 282,
+            "job/1/sp/structure/natoms": 126,
+            "job/1/sp/structure/nbeta": 282
+          }
+        },
+        {
+          "name": "archive.h5",
+          "exists": true,
+          "size_bytes": 800,
+          "sha256": "26c4d449632ea072317c16e9d4857e419b67e1b7751f81a89a87c8e75fe9484e",
+          "root_keys": [],
+          "root_attributes": [],
+          "datasets": [],
+          "dataset_shapes": {},
+          "scalar_values": {}
+        },
+        {
+          "name": "53.0",
+          "exists": true,
+          "size_bytes": 223292160,
+          "sha256": "16da312969fe8528da4742c4d8ca611fc36ffa6a53779f1b9353e80cd91ad9f0"
+        },
+        {
+          "name": "54.0",
+          "exists": true,
+          "size_bytes": 228493456,
+          "sha256": "7de35c7dd25b89b73f75d9b7a44d37f4515c21cc3717a907261a3b56d1370f47"
+        },
+        {
+          "name": "58.0",
+          "exists": true,
+          "size_bytes": 228493456,
+          "sha256": "3c787043719226c7cd8dcfbe07de7bd4880e86ca44f7867054cd5be800026665"
+        },
+        {
+          "name": "819.0",
+          "exists": true,
+          "size_bytes": 16,
+          "sha256": "9fd342eb7cf6b5146a0975bc73d15e740d4811ce7e90d592852264738cf12572"
+        },
+        {
+          "name": "99.0",
+          "exists": true,
+          "size_bytes": 288,
+          "sha256": "66367ec1825f93287a39ae1b8039829c8b48e84acb0393b853cf9eac5d652647"
+        },
+        {
+          "name": "molecule",
+          "exists": true,
+          "size_bytes": 8461,
+          "sha256": "8e43e67342ee5eba0707df0ee921799f1d8fef00f0e939c9ce98105fe9a6e464",
+          "text": "$molecule\n0 1\nO     0.9730799999999998   4.0295399999999990   0.0217295000000000\nO     5.2281499999999994   4.2984199999999992   0.5521280000000000\nO     5.4557499999999992   2.8870899999999997  -1.5010099999999995\nH     5.6550500000000001   3.4284599999999994  -0.6591479999999998\nO     1.6308099999999996   1.3976399999999998  -3.8161899999999997\nH     0.6417770000000000   1.2878899999999998  -3.6312999999999991\nO    -0.8542369999999999   1.1327999999999998  -3.0237099999999990\nO    -3.6348499999999997   3.0180499999999997   0.3784390000000000\nO     0.9420329999999998  -4.1245899999999995  -0.0116494000000000\nO     5.2275399999999994  -4.1231299999999989  -0.1923590000000000\nO     5.1997299999999997  -2.7594399999999997   1.9067599999999998\nH     5.4990799999999993  -3.2873599999999996   1.0874099999999998\nO     1.1037100000000000  -1.4316400000000000   3.8309899999999995\nH     0.1338150000000000  -1.3734699999999997   3.5479499999999997\nO    -1.3134899999999998  -1.3115499999999998   2.8129099999999996\nO    -3.6547999999999989  -3.3723199999999993  -0.8105589999999999\nN    -4.5523399999999992   1.0944899999999997  -0.9969539999999998\nH    -4.5406100000000000   1.9082699999999997  -0.3308550000000000\nN    -4.7664799999999987  -1.4423099999999998   0.3914409999999999\nH    -4.6520899999999994  -2.2656499999999995  -0.2543920000000000\nC     1.9434299999999998   3.4305699999999995  -0.8041589999999998\nC     3.3261599999999993   3.5426699999999998  -0.6030589999999999\nC     4.1221499999999995   2.8675399999999995  -1.6009699999999998\nC     3.5674099999999993   2.1674499999999997  -2.6870599999999998\nC     2.1700300000000001   2.0891899999999994  -2.7964199999999995\nC     1.3571199999999999   2.7241599999999995  -1.8350999999999997\nC    -0.1261110000000000   3.0272299999999994  -1.8068699999999998\nC    -1.1276399999999998   1.9076399999999998  -2.0782799999999999\nC    -2.3550099999999996   1.9170999999999996  -1.3284599999999998\nC    -2.5430899999999994   2.9029999999999996  -0.2439020000000000\nC    -1.4041399999999997   3.6778599999999995   0.2398349999999999\nH    -1.5088199999999998   4.1676799999999989   1.2010599999999998\nC    -0.2512059999999999   3.6202099999999997  -0.4432959999999999\nC     3.9804899999999996   4.2904999999999998   0.4642510000000000\nC     3.1842999999999995   5.0818999999999992   1.4720799999999998\nH     3.8793499999999996   5.5419099999999988   2.1750499999999997\nH     2.4802399999999993   4.4397399999999987   2.0074100000000001\nH     2.5897599999999996   5.8532699999999993   0.9716719999999999\nC     4.4675599999999989   1.5272199999999998  -3.7089499999999997\nH     5.3653299999999993   1.1223899999999998  -3.2357999999999993\nH     4.8023899999999990   2.2657600000000002  -4.4478999999999989\nH     3.9382399999999995   0.7368799999999999  -4.2443099999999987\nC    -0.4528820000000000   4.1330600000000004  -2.8735999999999997\nH    -1.4993699999999999   4.4391299999999996  -2.7894999999999994\nH    -0.2672809999999999   3.7257499999999992  -3.8703899999999991\nH     0.1946820000000000   4.9977699999999992  -2.7099699999999998\nC    -3.3827299999999996   0.9582439999999999  -1.6167999999999998\nC    -3.1644999999999994  -0.1781080000000000  -2.5682800000000001\nH    -3.9960399999999994  -0.8806209999999999  -2.5637799999999995\nH    -2.2495200000000000  -0.7103489999999999  -2.3025199999999999\nH    -3.0075099999999995   0.2052050000000000  -3.5801799999999995\nC    -5.7518699999999994   0.2739070000000000  -1.0783799999999997\nH    -5.6680599999999988  -0.4122189999999999  -1.9246499999999997\nC    -6.9815799999999992   1.1720599999999999  -1.2834600000000000\nH    -7.0405599999999993   1.8883099999999997  -0.4526240000000000\nH    -6.8450599999999993   1.7543799999999998  -2.2007099999999999\nC    -8.2666499999999985   0.3382089999999999  -1.3482799999999997\nH    -8.2350999999999992  -0.3081229999999999  -2.2360399999999996\nH    -9.1296999999999979   1.0013599999999998  -1.4693299999999998\nC     1.7960199999999997  -3.4727799999999993   0.8937639999999999\nC     3.1958899999999995  -3.5142099999999994   0.8187189999999998\nC     3.8625299999999996  -2.7949299999999995   1.8784699999999999\nC     3.1761099999999995  -2.1067599999999995   2.8951399999999996\nC     1.7697099999999997  -2.1039299999999996   2.8770399999999996\nC     1.0810599999999997  -2.7942899999999997   1.8604599999999998\nC    -0.3756019999999999  -3.1841599999999994   1.7056299999999995\nC    -1.4594599999999998  -2.1221799999999997   1.8676299999999997\nC    -2.6117999999999997  -2.2094799999999997   1.0118799999999997\nC    -2.6374499999999994  -3.1982599999999994  -0.0865579000000000\nC    -1.4154999999999998  -3.9055399999999993  -0.4547179999999999\nH    -1.3917999999999997  -4.3838599999999994  -1.4264999999999999\nC    -0.3440650000000000  -3.7861799999999990   0.3397919999999999\nC     3.9753199999999995  -4.1952899999999991  -0.2026500000000000\nC     3.3172399999999995  -5.0024899999999990  -1.2945899999999997\nH     4.0951199999999988  -5.3795799999999998  -1.9588399999999995\nH     2.6035599999999994  -4.3977399999999989  -1.8605499999999997\nH     2.7516299999999996  -5.8360799999999990  -0.8649449999999999\nC     3.9419099999999991  -1.4097700000000000   3.9873299999999996\nH     4.8336299999999994  -0.9215089999999999   3.5881299999999996\nH     4.2764899999999990  -2.1299199999999998   4.7441899999999988\nH     3.3084099999999994  -0.6722499999999999   4.4827499999999993\nC    -0.7305549999999998  -4.2985599999999993   2.7528099999999998\nH    -0.6569829999999999  -3.8750999999999993   3.7574699999999996\nH    -0.0231534000000000  -5.1259299999999994   2.6575099999999994\nH    -1.7463299999999997  -4.6657999999999999   2.5819599999999996\nC    -3.6913299999999993  -1.2817599999999998   1.1596399999999998\nC    -3.6383699999999992  -0.1445890000000000   2.1363399999999997\nH    -4.5287899999999999   0.4793749999999999   2.0903099999999997\nH    -2.7662199999999997   0.4789109999999999   1.9353599999999997\nH    -3.5056599999999998  -0.5290089999999998   3.1498199999999996\nC    -5.9187699999999994  -0.5731269999999999   0.2122120000000000\nH    -6.0005099999999993   0.1135230000000000   1.0587699999999998\nC    -7.1997699999999991  -1.4158399999999998   0.1295460000000000\nH    -7.2988399999999993  -1.9995599999999998   1.0506699999999998\nH    -7.1001399999999988  -2.1325500000000002  -0.6970659999999999\nC    -8.4293199999999988  -0.5277679999999999  -0.0934826000000000\nH    -9.3250600000000006  -1.1525599999999998  -0.1741410000000000\nH    -8.5720699999999983   0.1209970000000000   0.7815439999999999\nO    -0.4148330000000000   3.0958799999999997   4.5800999999999989\nO     1.7115799999999999   3.2807799999999996   5.0719899999999996\nO     5.1734899999999993   0.9768659999999999   1.7034199999999997\nO     6.4379299999999988  -1.6924599999999999  -2.6935699999999994\nO     4.7952599999999990  -2.6840799999999994  -3.7528899999999989\nO     0.3510599999999999  -1.8153299999999997  -2.7047599999999998\nO    -0.2745130000000000  -0.9589429999999999  -0.8045359999999999\nN     0.7819829999999999   2.8739899999999996   4.3703799999999999\nN     5.2492299999999990  -1.9582899999999996  -2.8644699999999994\nN     0.5914620000000000  -1.2524399999999998  -1.6373199999999999\nC     1.7280499999999999   0.5604129999999999   0.9208659999999997\nC     0.3980069999999999   0.8490159999999999   1.2278800000000001\nH    -0.4103450000000000   0.4994069999999999   0.6086289999999999\nC     0.1080540000000000   1.6042599999999998   2.3654099999999993\nH    -0.9154819999999999   1.8341199999999995   2.6312499999999996\nC     1.1308800000000001   2.0693799999999998   3.1819899999999994\nC     2.4729899999999994   1.8148999999999997   2.9046699999999994\nH     3.2654899999999993   2.1881599999999994   3.5427099999999996\nC     2.7425699999999997   1.0713799999999998   1.7724799999999998\nC     4.0795599999999990   0.7010099999999999   1.2456899999999997\nC     3.7962999999999996  -0.0885377000000000   0.0118076000000000\nC     4.7491199999999996  -0.6412990000000000  -0.8212539999999999\nH     5.8077699999999988  -0.5261539999999999  -0.6215209999999999\nC     4.2824299999999988  -1.3480599999999998  -1.9253399999999998\nC     2.9307399999999997  -1.5006399999999998  -2.1763800000000000\nH     2.5931899999999994  -2.0512999999999995  -3.0437599999999994\nC     1.9920799999999999  -0.9450889999999998  -1.3032599999999999\nC     2.3929899999999997  -0.1974050000000000  -0.1810410000000000\n$end\n"
+        },
+        {
+          "name": "pseudodata",
+          "exists": true,
+          "size_bytes": 288,
+          "sha256": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+        }
+      ],
+      "original_input_output_present": []
+    },
+    {
+      "role": "BigNC",
+      "directory": "/global/scratch/users/jsliang/BigNC/COACH/L14_2b_monA",
+      "files": [
+        {
+          "name": "qarchive.h5",
+          "exists": true,
+          "size_bytes": 899447016,
+          "sha256": "ca37aa86fac0f66de9976dcba4c638bb3028f3a91a992ddb10eb9948e9f3a0e2",
+          "root_keys": [
+            ".counters",
+            "job",
+            "libarchive::impl::schema::atomic_charges_theory",
+            "libarchive::impl::schema::molecular_orbital_type"
+          ],
+          "root_attributes": [],
+          "datasets": [
+            ".counters/job",
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole",
+            ".counters/job\\1\\sp\\energy_function",
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges",
+            "job/1/sp/aobasis/contraction_coefficients",
+            "job/1/sp/aobasis/integrals/core_hamiltonian",
+            "job/1/sp/aobasis/integrals/kinetic_energy",
+            "job/1/sp/aobasis/integrals/multipole/1/matrix",
+            "job/1/sp/aobasis/integrals/multipole/1/order",
+            "job/1/sp/aobasis/integrals/multipole/2/matrix",
+            "job/1/sp/aobasis/integrals/multipole/2/order",
+            "job/1/sp/aobasis/integrals/multipole/3/matrix",
+            "job/1/sp/aobasis/integrals/multipole/3/order",
+            "job/1/sp/aobasis/integrals/multipole/4/matrix",
+            "job/1/sp/aobasis/integrals/multipole/4/order",
+            "job/1/sp/aobasis/integrals/multipole/5/matrix",
+            "job/1/sp/aobasis/integrals/multipole/5/order",
+            "job/1/sp/aobasis/integrals/multipole/6/matrix",
+            "job/1/sp/aobasis/integrals/multipole/6/order",
+            "job/1/sp/aobasis/integrals/multipole/7/matrix",
+            "job/1/sp/aobasis/integrals/multipole/7/order",
+            "job/1/sp/aobasis/integrals/multipole/8/matrix",
+            "job/1/sp/aobasis/integrals/multipole/8/order",
+            "job/1/sp/aobasis/integrals/multipole/9/matrix",
+            "job/1/sp/aobasis/integrals/multipole/9/order",
+            "job/1/sp/aobasis/integrals/nuclear_attraction",
+            "job/1/sp/aobasis/nbasis",
+            "job/1/sp/aobasis/nprim",
+            "job/1/sp/aobasis/nshells",
+            "job/1/sp/aobasis/orthonormalization_matrix",
+            "job/1/sp/aobasis/overlap_matrix",
+            "job/1/sp/aobasis/primitive_exponents",
+            "job/1/sp/aobasis/primitives_per_shell",
+            "job/1/sp/aobasis/shell_coordinates",
+            "job/1/sp/aobasis/shell_to_atom_map",
+            "job/1/sp/aobasis/shell_types",
+            "job/1/sp/aobasis/sp_contraction_coefficients",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/charges",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/spin",
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory",
+            "job/1/sp/energy_function/1/density_matrix/nsets",
+            "job/1/sp/energy_function/1/density_matrix/opdm",
+            "job/1/sp/energy_function/1/energy",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_coefficients",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_energies",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb",
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets",
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge",
+            "job/1/sp/energy_function/1/observables/multipole_moments/dipole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/hexadecapole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/octopole",
+            "job/1/sp/energy_function/1/observables/multipole_moments/quadrupole",
+            "job/1/sp/structure/charge",
+            "job/1/sp/structure/coordinates",
+            "job/1/sp/structure/nalpha",
+            "job/1/sp/structure/natoms",
+            "job/1/sp/structure/nbeta",
+            "job/1/sp/structure/nuclei"
+          ],
+          "dataset_shapes": {
+            ".counters/job": [],
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole": [],
+            ".counters/job\\1\\sp\\energy_function": [],
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges": [],
+            "job/1/sp/aobasis/contraction_coefficients": [
+              1450
+            ],
+            "job/1/sp/aobasis/integrals/core_hamiltonian": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/kinetic_energy": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/1/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/1/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/2/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/2/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/3/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/3/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/4/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/4/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/5/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/5/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/6/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/6/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/7/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/7/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/8/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/8/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/multipole/9/matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/integrals/multipole/9/order": [
+              3
+            ],
+            "job/1/sp/aobasis/integrals/nuclear_attraction": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/nbasis": [],
+            "job/1/sp/aobasis/nprim": [],
+            "job/1/sp/aobasis/nshells": [],
+            "job/1/sp/aobasis/orthonormalization_matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/overlap_matrix": [
+              2502,
+              2502
+            ],
+            "job/1/sp/aobasis/primitive_exponents": [
+              1450
+            ],
+            "job/1/sp/aobasis/primitives_per_shell": [
+              914
+            ],
+            "job/1/sp/aobasis/shell_coordinates": [
+              914,
+              3
+            ],
+            "job/1/sp/aobasis/shell_to_atom_map": [
+              914
+            ],
+            "job/1/sp/aobasis/shell_types": [
+              914
+            ],
+            "job/1/sp/aobasis/sp_contraction_coefficients": [
+              1450
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/charges": [
+              86
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/spin": [
+              86
+            ],
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory": [],
+            "job/1/sp/energy_function/1/density_matrix/nsets": [],
+            "job/1/sp/energy_function/1/density_matrix/opdm": [
+              2,
+              2502,
+              2502
+            ],
+            "job/1/sp/energy_function/1/energy": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_coefficients": [
+              2,
+              2502,
+              2448
+            ],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/mo_energies": [
+              2448,
+              2
+            ],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb": [],
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets": [],
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge": [],
+            "job/1/sp/energy_function/1/observables/multipole_moments/dipole": [
+              3
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/hexadecapole": [
+              15
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/octopole": [
+              10
+            ],
+            "job/1/sp/energy_function/1/observables/multipole_moments/quadrupole": [
+              6
+            ],
+            "job/1/sp/structure/charge": [],
+            "job/1/sp/structure/coordinates": [
+              86,
+              3
+            ],
+            "job/1/sp/structure/nalpha": [],
+            "job/1/sp/structure/natoms": [],
+            "job/1/sp/structure/nbeta": [],
+            "job/1/sp/structure/nuclei": [
+              86
+            ]
+          },
+          "scalar_values": {
+            ".counters/job": 1,
+            ".counters/job\\1\\sp\\aobasis\\integrals\\multipole": 9,
+            ".counters/job\\1\\sp\\energy_function": 1,
+            ".counters/job\\1\\sp\\energy_function\\1\\analysis\\atomic_charges": 1,
+            "job/1/sp/aobasis/nbasis": 2502,
+            "job/1/sp/aobasis/nprim": 1450,
+            "job/1/sp/aobasis/nshells": 914,
+            "job/1/sp/energy_function/1/analysis/atomic_charges/1/theory": 0,
+            "job/1/sp/energy_function/1/density_matrix/nsets": 2,
+            "job/1/sp/energy_function/1/energy": -1618.5021833019437,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/kind": 0,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/norb": 2448,
+            "job/1/sp/energy_function/1/method/scf/molecular_orbitals/nsets": 2,
+            "job/1/sp/energy_function/1/observables/multipole_moments/charge": -1.7659616596736524e-09,
+            "job/1/sp/structure/charge": 0,
+            "job/1/sp/structure/nalpha": 141,
+            "job/1/sp/structure/natoms": 86,
+            "job/1/sp/structure/nbeta": 141
+          }
+        },
+        {
+          "name": "archive.h5",
+          "exists": false
+        },
+        {
+          "name": "53.0",
+          "exists": true,
+          "size_bytes": 98037504,
+          "sha256": "77774bf34919eb79d6811cd12b6e15d21a429747ec0e9a963c27c352afed9da7"
+        },
+        {
+          "name": "54.0",
+          "exists": true,
+          "size_bytes": 100160064,
+          "sha256": "53e6df54a9ec68ac1d7b1dd777c606a4dbf888785f86fc9cd9110902043c660c"
+        },
+        {
+          "name": "58.0",
+          "exists": true,
+          "size_bytes": 100160064,
+          "sha256": "66860225cec45c084c84c3771b01449bee819a5af9224e40194afbd9d3e5ad71"
+        },
+        {
+          "name": "819.0",
+          "exists": true,
+          "size_bytes": 16,
+          "sha256": "619af06e01de699ed67409ab7d34ce556afa49bfcb75d6b5b2d3e9914f0830d7"
+        },
+        {
+          "name": "99.0",
+          "exists": true,
+          "size_bytes": 288,
+          "sha256": "338e39f1dd2af1f36f97846aedc6b1fb8392a3230b8088c88f579fec022c9cc8"
+        },
+        {
+          "name": "molecule",
+          "exists": true,
+          "size_bytes": 5795,
+          "sha256": "7fc1308b6456ee0f9c18fc9de76f92ff6966b583fa6281a00c85e0c5b68f0301",
+          "text": "$molecule\n0 1\nC    -0.1457560000000000   3.4391599999999998  -0.4954049999999999\nC    -1.3084199999999997   3.2024499999999994  -1.2294899999999997\nC    -2.4754099999999997   2.9622699999999997  -0.5031169999999999\nC    -2.4703800000000000   2.9307499999999997   0.9030269999999999\nC    -1.3059399999999999   3.1406099999999997   1.6369899999999997\nC    -0.1512680000000000   3.4195999999999991   0.9098239999999999\nC    -3.9079099999999998   2.6171399999999996  -0.9370789999999999\nC    -4.1096199999999987   1.1538400000000000  -0.5273659999999999\nC    -4.0857399999999995   1.1262399999999997   0.8796069999999999\nC    -3.8917399999999995   2.5718200000000002   1.3408100000000001\nC    -4.1841199999999992  -0.0199031000000000  -1.2759799999999999\nC    -4.2182399999999989  -1.2194199999999997  -0.5664420000000000\nC    -4.1782199999999987  -1.2449299999999999   0.8391099999999999\nC    -4.1081099999999999  -0.0728554000000000   1.5896199999999998\nC    -4.6903399999999991   3.3071199999999994   0.2218340000000000\nC     1.2792399999999999   3.8128399999999996  -0.9184049999999999\nC     1.2558499999999997   3.7999699999999992   1.3616099999999998\nC     2.2041999999999997   2.6827499999999995   0.9304399999999998\nC     2.2306499999999998   2.6926899999999998  -0.4752929999999999\nC     3.0190199999999994   1.8343099999999999   1.6756399999999996\nC     3.9168999999999996   1.0457200000000000   0.9604129999999999\nC     3.9635299999999996   1.0647699999999998  -0.4439830000000000\nC     3.0991399999999993   1.8674099999999996  -1.1907399999999997\nC     1.5908199999999997   4.8300899999999993   0.2310150000000000\nC     5.1131299999999991   0.1317870000000000  -0.8524229999999999\nC     4.7038599999999988  -1.2849600000000001  -0.4479649999999999\nC     4.6338900000000001  -1.2972299999999999   0.9591039999999998\nC     5.0261999999999993   0.1023410000000000   1.4278599999999997\nC     4.4059499999999998  -2.4218699999999997  -1.1821500000000000\nC     4.0058899999999991  -3.5783799999999997  -0.4919989999999999\nC     3.9129499999999990  -3.5815399999999995   0.8993859999999998\nC     4.2312999999999992  -2.4329900000000002   1.6435599999999995\nC     6.0898399999999988   0.4333489999999999   0.3309199999999999\nC    -4.1306499999999993  -2.7177300000000000   1.2496200000000000\nC    -2.7691299999999996  -3.2251299999999996   0.7681319999999999\nC    -2.8060899999999998  -3.2005499999999993  -0.6381179999999999\nC    -4.1913199999999993  -2.6775599999999997  -1.0302399999999998\nC    -1.6238799999999998  -3.6107099999999996   1.4456599999999995\nC    -0.5047460000000000  -3.9961499999999992   0.6909279999999999\nC    -0.5408720000000000  -3.9723999999999990  -0.7023609999999999\nC    -1.6969599999999996  -3.5623899999999997  -1.3854399999999998\nC    -5.0271899999999992  -3.3182599999999995   0.1218750000000000\nH    -1.3075799999999997   3.2222899999999997  -2.3170099999999993\nH    -1.3023499999999997   3.1118199999999989   2.7238199999999995\nH    -4.1784399999999993   2.8752799999999996  -1.9616899999999995\nH    -4.1459400000000004   2.7871500000000000   2.3791799999999999\nH    -4.2005599999999994  -0.0031642800000000  -2.3636799999999996\nH    -4.0558299999999994  -0.0933126000000000   2.6754299999999995\nH    -4.5471799999999991   4.3916499999999994   0.2429099999999999\nH    -5.7545299999999990   3.0518899999999998   0.2234410000000000\nH     1.3971999999999998   4.1575399999999991  -1.9464599999999999\nH     1.3512699999999997   4.1304999999999987   2.3965799999999997\nH     2.9918499999999995   1.8264699999999998   2.7623099999999994\nH     3.1361799999999995   1.8864699999999996  -2.2775099999999995\nH     0.9160269999999999   5.6920799999999998   0.2289820000000000\nH     2.6376199999999996   5.1497799999999989   0.2437620000000000\nH     5.4909999999999997   0.2524589999999999  -1.8683399999999997\nH     5.3239499999999991   0.1939220000000000   2.4728399999999997\nH     4.4787899999999992  -2.4284699999999995  -2.2672099999999999\nH     3.7659799999999994  -4.4798699999999991  -1.0486199999999999\nH     3.5968999999999993  -4.4842399999999989   1.4144999999999999\nH     4.1578199999999992  -2.4422500000000000   2.7276899999999995\nH     6.4120299999999988   1.4784099999999998   0.3576710000000000\nH     6.9497199999999983  -0.2438990000000000   0.3536940000000000\nH    -4.3914400000000002  -2.9397299999999995   2.2848399999999995\nH    -4.5064499999999992  -2.8651399999999994  -2.0573099999999998\nH    -1.5808399999999998  -3.6104799999999995   2.5313199999999996\nH     0.4062049999999999  -4.2999400000000003   1.1988699999999999\nH     0.3414880000000000  -4.2610699999999992  -1.2661499999999999\nH    -1.7123899999999996  -3.5338599999999993  -2.4719499999999996\nH    -6.0555899999999978  -2.9456499999999997   0.1554630000000000\nH    -5.0069299999999988  -4.4121100000000002   0.1020040000000000\n@C     0.2400849999999999  -0.5407209999999999  -2.3457199999999996\n@C     1.3311099999999998  -1.0807000000000000  -1.6482099999999997\n@C     1.3230799999999998  -1.1077999999999997  -0.2641950000000000\n@C     0.2233150000000000  -0.5881879999999999   0.4358429999999999\n@C    -0.8762659999999999  -0.0654581000000000  -0.2582650000000000\n@C    -0.8647389999999999  -0.0395840000000000  -1.6428999999999998\n@C     0.2519899999999999  -0.5034169999999999  -3.7729099999999995\n@C     0.2201220000000000  -0.5956899999999999   1.8639999999999999\n@H     2.1796899999999995  -1.4752699999999999  -2.1922999999999995\n@H     2.1600099999999998  -1.5284099999999998   0.2777459999999999\n@H    -1.7271499999999997   0.3237479999999999   0.2861130000000000\n@H    -1.7090999999999998   0.3683429999999999  -2.1825099999999997\n@N     0.2603070000000000  -0.4696669999999999  -4.9356399999999994\n@N     0.2192880000000000  -0.5958519999999999   3.0265599999999995\n$end\n"
+        },
+        {
+          "name": "pseudodata",
+          "exists": true,
+          "size_bytes": 288,
+          "sha256": "302b2fb91c9337fccac529b8ccd987165df319d65698d47dcf56374fbee8020e"
+        }
+      ],
+      "original_input_output_present": []
+    }
+  ],
+  "sampling_scope": "three previously declared examples per source; not exhaustive inventory",
+  "source_inputs_and_build_verified": false,
+  "production_orbital_energy_reconstruction": false,
+  "reference_constants": {
+    "omega": 0.27,
+    "c_sr_hf": 0.22878980716640696,
+    "d4": {
+      "s6": 0.0,
+      "s8": 0.0,
+      "s9": 1.0,
+      "a1": 0.215,
+      "a2": 5.8,
+      "alp": 16.0
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "species": "ISOL24_i8e",
+  "scope": "Single-species structural recheck under user-approved basis exception; not a new full-domain inventory",
+  "source": "/global/scratch/users/jsliang/COACH3/ISOL24_i8e",
+  "status": "structural_pass",
+  "issues": "",
+  "bytes": 170408932,
+  "nbasis": 1884,
+  "nmo": 1884,
+  "files": 9,
+  "geometry_max_error": 8.881784197001252e-16,
+  "basis_identity_verified": false,
+  "authority": "configs/input_basis_amendments_v1.json"
+}

@@ -1,0 +1,127 @@
+schema_version: 1
+manifest_role: authoritative_transcription_of_updated_coach_si_table_2
+source:
+  path: coach/paper/SI_COACH_2026MHG.pdf
+  sha256: 751b32e29c5a0cfb660d2f912be7d447014697294e9ef317eedd07f26d61956b
+  section: "3.5 Training cycles, data selection, and weighting"
+  table: 2
+  pdf_pages: [18, 19, 20]
+selection_semantics:
+  all: every DatasetEval.csv row whose Dataset equals dataset_eval_dataset, in file order
+  indices: ordered SI reaction numbers mapped through reaction_id_template
+weight_semantics:
+  constant: objective weight multiplying the squared residual in SI equation 43
+  ae18_shrink: "the jth listed atom has objective weight 1/sqrt(j), j=1,...,18"
+expected:
+  row_count: 49
+  entry_count: 1498
+rows:
+  - {set_or_subset: BH28, class: BH, count: 28, weight: 10, dataset_eval_dataset: BH28, selection: all}
+  - {set_or_subset: BHDIV7, class: BH, count: 7, weight: 16, dataset_eval_dataset: BHDIV7, selection: all}
+  - {set_or_subset: BHPERI11, class: BH, count: 11, weight: 30, dataset_eval_dataset: BHPERI11, selection: all}
+  - {set_or_subset: CRBH14, class: BH, count: 14, weight: 10, dataset_eval_dataset: CRBH14, selection: all}
+  - {set_or_subset: DBH22, class: BH, count: 22, weight: 30, dataset_eval_dataset: DBH22, selection: all}
+  - {set_or_subset: PX9, class: BH, count: 9, weight: 20, dataset_eval_dataset: PX9, selection: all}
+  - set_or_subset: Dip146
+    class: EF
+    count: 63
+    weight: 1600
+    dataset_eval_dataset: Dip146
+    reaction_id_template: "Dip146_{index}"
+    selection: [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 32, 35, 38, 41, 44, 47, 50, 53, 56, 59, 62, 65, 68, 71, 74, 77, 80, 83, 86, 89, 92, 95, 98, 101, 104, 107, 110, 113, 116, 119, 122, 125, 128, 131, 134, 137, 140, 143, 146, 149, 152, 155, 158, 161, 164, 167, 170, 173, 176, 179, 182, 185, 188]
+  - set_or_subset: HR46
+    class: EF
+    count: 45
+    weight: 10000
+    dataset_eval_dataset: HR46
+    reaction_id_template: "HR46_{index}"
+    selection: [1, 4, 5, 8, 10, 12, 13, 17, 20, 23, 28, 30, 34, 37, 38, 42, 45, 48, 51, 53, 57, 59, 62, 66, 70, 71, 75, 76, 80, 82, 86, 87, 91, 94, 97, 99, 104, 105, 110, 113, 114, 119, 120, 123, 126]
+  - set_or_subset: Pol130
+    class: EF
+    count: 95
+    weight: 6400
+    dataset_eval_dataset: Pol130
+    reaction_id_template: "Pol130_{index}"
+    selection: [1, 4, 11, 12, 16, 20, 22, 24, 26, 28, 33, 36, 39, 42, 44, 48, 51, 54, 56, 59, 62, 66, 68, 70, 74, 81, 85, 91, 95, 98, 101, 102, 105, 107, 111, 115, 116, 121, 123, 126, 128, 130, 132, 137, 142, 144, 145, 147, 149, 153, 157, 158, 161, 165, 167, 170, 171, 173, 176, 180, 182, 185, 188, 192, 197, 200, 203, 204, 209, 211, 214, 217, 223, 227, 229, 231, 234, 237, 242, 245, 248, 250, 254, 257, 261, 262, 267, 273, 276, 279, 282, 284, 290, 294, 296]
+  - {set_or_subset: EIE22, class: ISO, count: 22, weight: 20, dataset_eval_dataset: EIE22, selection: all}
+  - {set_or_subset: PCONF21, class: INC, count: 18, weight: 50, dataset_eval_dataset: PCONF21, selection: all}
+  - {set_or_subset: Styrene42, class: ISO, count: 42, weight: 5, dataset_eval_dataset: Styrene42, selection: all}
+  - {set_or_subset: AlkIsomer11, class: ISO, count: 11, weight: 50, dataset_eval_dataset: AlkIsomer11, selection: all}
+  - set_or_subset: BUT14DIOL
+    class: INC
+    count: 14
+    weight: 200
+    dataset_eval_dataset: BUT14DIOL
+    reaction_id_template: "BUT14DIOL_{index}"
+    selection: [3, 4, 9, 14, 17, 25, 37, 38, 40, 43, 46, 47, 58, 60]
+  - set_or_subset: S66Rel7
+    class: NC
+    count: 74
+    weight: 60
+    dataset_eval_dataset: S66Rel7
+    reaction_id_template: "S66Rel7_{index}"
+    selection: [1, 8, 15, 22, 29, 36, 43, 50, 57, 64, 71, 78, 85, 92, 97, 99, 113, 118, 120, 127, 134, 139, 141, 146, 148, 153, 155, 160, 162, 167, 169, 176, 183, 188, 190, 197, 204, 209, 211, 218, 223, 225, 230, 232, 239, 246, 253, 267, 274, 279, 281, 288, 295, 309, 316, 323, 330, 337, 344, 351, 358, 365, 372, 377, 379, 393, 405, 407, 414, 419, 421, 435, 442, 449]
+  - {set_or_subset: Bauza30, class: NC, count: 30, weight: 20, dataset_eval_dataset: Bauza30, selection: all}
+  - {set_or_subset: CT20, class: NC, count: 20, weight: 400, dataset_eval_dataset: CT20, selection: all}
+  - {set_or_subset: HCP32, class: NC, count: 32, weight: 60, dataset_eval_dataset: HCP32, selection: all}
+  - {set_or_subset: TA13, class: NC, count: 13, weight: 8, dataset_eval_dataset: TA13, selection: all}
+  - set_or_subset: XB25
+    class: NC
+    count: 8
+    weight: 200
+    dataset_eval_dataset: XB25
+    reaction_id_template: "XB25_{index}"
+    selection: [1, 2, 3, 4, 5, 6, 7, 8]
+  - {set_or_subset: HW6Cl5, class: NC, count: 5, weight: 120, dataset_eval_dataset: HW6Cl5, selection: all}
+  - set_or_subset: Shields38
+    class: NC
+    count: 8
+    weight: 100
+    dataset_eval_dataset: Shields38
+    reaction_id_template: "Shields38_{index}"
+    selection: [14, 15, 16, 17, 18, 19, 20, 21]
+  - {set_or_subset: A24, class: NC, count: 24, weight: 400, dataset_eval_dataset: A24, selection: all}
+  - {set_or_subset: DS14, class: NC, count: 14, weight: 60, dataset_eval_dataset: DS14, selection: all}
+  - {set_or_subset: HSG, class: NC, count: 21, weight: 150, dataset_eval_dataset: HSG, selection: all}
+  - {set_or_subset: IHB100, class: NC, count: 100, weight: 80, dataset_eval_dataset: IHB100, selection: all}
+  - {set_or_subset: IL16, class: NC, count: 16, weight: 120, dataset_eval_dataset: IL16, selection: all}
+  - set_or_subset: RG10N1
+    class: NC
+    count: 23
+    weight: 25
+    dataset_eval_dataset: RG10N
+    reaction_id_template: "RG10N_{index}"
+    selection: [1, 8, 31, 33, 58, 59, 61, 63, 92, 93, 95, 125, 147, 149, 176, 177, 179, 181, 210, 212, 240, 242, 244]
+  - set_or_subset: RG10N2
+    class: NC
+    count: 17
+    weight: 800
+    dataset_eval_dataset: RG10N
+    reaction_id_template: "RG10N_{index}"
+    selection: [3, 9, 11, 40, 71, 102, 105, 128, 131, 151, 153, 184, 189, 216, 218, 249, 253]
+  - {set_or_subset: S22, class: NC, count: 22, weight: 120, dataset_eval_dataset: S22, selection: all}
+  - {set_or_subset: MB16-43, class: TC, count: 43, weight: 0.05, dataset_eval_dataset: MB16-43, selection: all}
+  - {set_or_subset: MX34, class: TC, count: 34, weight: 0.02, dataset_eval_dataset: MX34, selection: all}
+  - {set_or_subset: AE18, class: TC, count: 18, weight: "1/sqrt(j)", dataset_eval_dataset: AE18, selection: all}
+  - {set_or_subset: ALK8, class: TC, count: 8, weight: 2, dataset_eval_dataset: ALK8, selection: all}
+  - {set_or_subset: AlkAtom19, class: TC, count: 19, weight: 1, dataset_eval_dataset: AlkAtom19, selection: all}
+  - {set_or_subset: BDE99nonMR, class: TC, count: 83, weight: 1.2, dataset_eval_dataset: BDE99nonMR, selection: all}
+  - {set_or_subset: BSR36, class: TC, count: 36, weight: 8, dataset_eval_dataset: BSR36, selection: all}
+  - {set_or_subset: CR20, class: TC, count: 20, weight: 15, dataset_eval_dataset: CR20, selection: all}
+  - {set_or_subset: DIPCS9, class: TC, count: 9, weight: 0.6, dataset_eval_dataset: DIPCS9, selection: all}
+  - {set_or_subset: G21EA, class: TC, count: 25, weight: 9, dataset_eval_dataset: G21EA, selection: all}
+  - {set_or_subset: G21IP, class: TC, count: 36, weight: 1.4, dataset_eval_dataset: G21IP, selection: all}
+  - {set_or_subset: HEAVYSB11, class: TC, count: 11, weight: 0.8, dataset_eval_dataset: HEAVYSB11, selection: all}
+  - {set_or_subset: RSE43, class: TC, count: 43, weight: 2, dataset_eval_dataset: RSE43, selection: all}
+  - {set_or_subset: TAE_W4-17nonMR, published_label: "TAE W4-17nonMR", class: TC, count: 183, weight: 0.8, dataset_eval_dataset: TAE_W4-17nonMR, selection: all}
+  - {set_or_subset: 3d4dIPSS, class: TM, count: 32, weight: 1.5, dataset_eval_dataset: 3d4dIPSS, selection: all}
+  - set_or_subset: CUAGAU83
+    class: TM
+    count: 36
+    weight: 1.5
+    dataset_eval_dataset: CUAGAU83
+    reaction_id_template: "CUAGAU_{index}"
+    selection: [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 36, 37, 38, 39, 40, 41, 42]
+  - {set_or_subset: MOR13, class: TM, count: 13, weight: 10, dataset_eval_dataset: MOR13, selection: all}
+  - {set_or_subset: TMB11, class: TM, count: 11, weight: 10, dataset_eval_dataset: TMB11, selection: all}
+  - {set_or_subset: TMD10, class: TM, count: 10, weight: 10, dataset_eval_dataset: TMD10, selection: all}

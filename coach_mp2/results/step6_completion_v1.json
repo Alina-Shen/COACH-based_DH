@@ -1,0 +1,9 @@
+{
+  "step": 6,
+  "status": "complete_with_user_deferred_accuracy_issue",
+  "scientific_checks_pass_except_recorded_carbon_RI_error": true,
+  "raw_numerical_pass": false,
+  "completion_authorized": true,
+  "deferral": "configs/step6_carbon_accuracy_deferral_v1.json",
+  "solver_required": false
+}

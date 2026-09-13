@@ -1,0 +1,46 @@
+{
+  "status": "validated",
+  "species": 17452,
+  "changes": {
+    "method_to_COACH": 14006,
+    "inherit_pinned_aux_basis_definition": 1,
+    "split_concatenated_rem_line": 4,
+    "inherit_pinned_basis_definition": 7,
+    "inherit_explicit_external_auxiliary_assignment": 3446
+  },
+  "snapshot": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/coach_mp2/step4_inputs_v1",
+  "artifacts": {
+    "initial_audit.json": "6b785005e2ba28ab5e502a69eaa055e30598d4a3ebf55da669a8d63196c7747d",
+    "inputs.tar": "fcc13f84943c012e924aec28c2b1b1142d5b880e7ac3eb293440d13360ed768d",
+    "metadata.jsonl": "36a3d82ee4f3aaf4ef5aed22b76e97c393c7b555b6cdc44bef946e4f2b288ece"
+  },
+  "source_pins": {
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/AE11_Yb/input0": "73747ab34844db86d4f10ef83edd1499de06cd1a4e1ec9a4138facc90b1c91d2",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/O24x5_he2_0.9/input0": "8c194918abe380c7755e4567daadede3f3323973111968b381478a04dc6d0a22",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/O24x5_he2_1.0/input0": "d40b69e25abf46ee8cfdc8bb385cb869a137041e96a337307961336ed92c30d7",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/O24x5_he2_1.2/input0": "81f7c4881792e24b9880b01ee56835f7e23f5334b45e96576d515e32ea1069d5",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/O24x5_he2_1.5/input0": "e67e26619132c908bdd5ff48ea558be22cef1c41d5f20070bc4b85f03354459d",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/O24x5_he2_2.0/input0": "f407d76d9f86cea526ccdf3578474a6cd6add9f4379ef56edf718ade8ed91d85",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/O24x5_he2_monA/input0": "634f5fbb4f4109c44a099c433320ebe324959a8d7480da218cf75d4490efe00a",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/authoritative_inputs/qchem/gscdb137_v1/species/O24x5_he2_monB/input0": "1dbec8797d8a5910ba812308f99739809b2ed22acb3bdf3f398027dad4c9f1be",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/configs/scientific_spec.yaml": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/data_roles/qchem_input_metadata.csv": "22e2375e4dc9e2319741eccb73eb3c5c2a0f0b9d04d51ce297e6ef2fefbc26b7",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/basis_bridge/resolved_basis_records.csv": "cb6f331cd143ee7f1e4bc15fdaef4863e4bba8f00742f08b156ece1c3223ccb6",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/manifests/basis_bridge/step6_basis_bridge_v1.yaml": "d4a100fc725af6711604b30a78f8013f62e8841bfc3254c8eaaf875ad772ba98",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/pyscf_basis_bridge.py": "738b4fa05fec28f7928f7313cf667f5b2a99166c649f14ee64cd20af9e1aec2a",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/build_basis_bridge.py": "e73f42c3612335228fd6eec04792814ee27409bb182b3c4d00092af0e9f9bb07",
+    "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/build_data_role_manifests.py": "a0b9bc8026e6758d7bf6ee41c36a0abab0be715ae189dea4a1ece195c8df32ba",
+    "/global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis/rimp2-def2-TZVPPD.bas": "76f734580105743aa6c21cbc6ea22fe98efd02c3670df373a7dc63b7e8ef13ff",
+    "/global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis/rimp2-def2-QZVPPD.bas": "ffbdd2221fabb9bf68b436a26d4385bc15a28577b44477e900654a2722f1f74b",
+    "/global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis/rimp2-def2-TZVP.bas": "091bc773c09376b6c80fb0d075e49b27f49538026cd6f65f4cda0a6dc9111e0c",
+    "/global/home/groups-sw/mhg/qcaux_public/qcaux_6p00/basis/rimp2-def2-QZVPP.bas": "994a9e828ec2ec59ee3a09e1e421c68cb925a1958840be55d2c255ee7af03cc4"
+  },
+  "manifest_sha256": "6058e0cad4c5062ae8e5dd3bfb2a0dae350348825122032435ba1eb35c7822c4",
+  "no_solver_used": true,
+  "no_orbitals_read": true,
+  "no_quantum_jobs": true,
+  "definition_cache_entries": 994,
+  "auxiliary_library_policy": "hash-pinned reference Q-Chem assets; no runtime automatic generation",
+  "production_templates": false,
+  "validation_report": "results/step4_validation.json"
+}

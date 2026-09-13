@@ -1,0 +1,13 @@
+{
+  "scope": "Six-case fixed-parent regression, not MP2 completion",
+  "same_parent_energy_tolerance_hartree": 2e-08,
+  "component_closure_tolerance_hartree": 2e-08,
+  "MO_invariance": "Exact SHA256 of all 53.0 bytes, including trailing data",
+  "density_closure": "16 epsilon ||Coccupied||F^2 normwise bound, independently for source/output",
+  "basis_compatibility": "Native overlap file 320.0, require max absolute Ctranspose S C minus I <= 1e-6 across both spin sets; supplementary numerical compatibility, not historical basis provenance",
+  "basis_tolerance_rationale": "Conservative numerical compatibility gate for diffuse/reduced-rank basis; previous He3_47 source tested near 2.2e-9. Declared before the six-case v2 audit and ISOL24 results.",
+  "source_updates_allowed": false,
+  "NoSCF_patch": "Skip post-SCF orimo only when NoSCF; all normal SCF paths retain orientation",
+  "component_closure_equation": "Seven printed electronic/nuclear terms against native SCF-cycle energy. Printed D4 is retained separately, not added to SCF closure. DFT correlation contains VV10.",
+  "nonzero_dispersion_case": "ISOL24_i8e printed D4=-0.0000622332 Eh; seven components already close to SCF cycle within 1e-10 Eh. Superseded v3 audit incorrectly added D4 and failed exactly by its value. No tolerance changed."
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-09-12",
+  "repository_head": "f69b3a3313c2b779fb7e1708157805739ed9a6ff",
+  "purpose": "preparation_reference_only_not_a_complete_runtime_dependency_lock",
+  "files": {
+    "revwb97m2/configs/scientific_spec.yaml": "32c64b5d4cec1641c1b77e094e776a0aaa62fb20a9dd101c7736dfd92ac942fc",
+    "revwb97m2/integrated_dv.py": "d3b56a6a0b45967dd7caccc379517777379466c85963203f4fd5782d30d3ff2e",
+    "revwb97m2/qchem_scalar_features.py": "fef539b1cd360eba3d2bde170175a76df5485340daa32a2261e7b431f3305daa",
+    "revwb97m2/scripts/safe_copy_orbitals.py": "093740c1cfa7ebf595697119e3638ec17c9f5696bdcb414465c19b262965dfd2",
+    "revwb97m2/scripts/expanded_objective_v1.py": "c0c2acf3d4dfc7e93b7aaac214df27099a3941abf158aba5f81247c9430f8d9f",
+    "revwb97m2/selective_readback_v2.py": "cec6f249b8e1d347177c4e3d18693e8b6f810811071e2dd6c1b01e44e64c3121",
+    "revwb97m2/production_multistart_plan_v1.py": "4fac1a8287483e7642161eabc643919f48159cd9ba4f23d9f0e53ec76770cf35",
+    "revwb97m2/production_multistart_v1.py": "5721dc85d9031843f055b6954ac5db92110952fea6db54edf4653c9825e2fb36",
+    "revwb97m2/discovery_extension_v1.py": "732b3749b64fc899ebc8a7108397dba63b79187e65658b894c5fdd424fc3cda1",
+    "revwb97m2/selected_full_v1.py": "402667724264098c0674cf16380080c8102c6349990dd13b6f8e505bfa7b47ac",
+    "revwb97m2/manifests/selected_full_v1/plan.json": "6503dfe32d2cd597a608d54558bc048ccb4c42951b63c60b3db52d337d679b27",
+    "revwb97m2/manifests/discovery_extension_v1/plan.json": "5655b58810624f499b5902a509da103f480f80a36a7ba563ad375704ca3cc8ea",
+    "revwb97m2/manifests/data_roles/revwb97m2_data_roles_v2.yaml": "d526cc34fa4d9e959d9b2a815ac06aece10618114b99c7383dcf196ed3e1fb1f",
+    "revwb97m2/manifests/weights/coach_si_table2_final_cycle_entries.csv": "2d8a1e2340d980c0e236bdd0c425abd9b0c4654a1610f94b4de2644e0b73abcf",
+    "revwb97m2/manifests/weights/coach_si_table2_final_cycle_training_weights.csv": "d4279ee9cb19144685ae45b92d0f1af1d87f62d135e63625120158ff12c3f474",
+    "revwb97m2/manifests/gscdb137/species_manifest.csv": "71e53daa9ffcf5cd6a2415bf3d3e77983db385e454a680f2838cb0814b7176de",
+    "coach/FunctionalCOACH/COACH.md": "688021dec5382ff3582d99bd59609e86ab323fe22d998163fdeabf708444e893"
+  }
+}

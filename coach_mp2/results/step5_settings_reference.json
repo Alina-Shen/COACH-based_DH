@@ -1,0 +1,21 @@
+[
+  {
+    "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/coach_mp2/inputs/step2_fixed_v3/16_C_AE18_fixed.in",
+    "sha256": "acfbcd431940f65a8735a6d447d9cc38073a4097007494631c6547cd62784f98",
+    "rem": [
+      "NO_ORTHO TRUE\nMP2_RESTART_NO_SCF TRUE\nSCF_GUESS READ\nSCF_FINAL_PRINT 1\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nMEM_TOTAL 3750\nMEM_STATIC 1500\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nMETHOD COACH\nGEN_SCFMAN FALSE\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nMAX_SCF_CYCLES 0\n\nXC_GRID 000500000974\nBASIS AUG-CC-PCV5Z\n\n\n"
+    ]
+  },
+  {
+    "path": "/clusterfs/mhg-data/yaoshen/wb97m_os/GSCDB/xyg_os5/work/01a_water_dimBC_3B-69.in",
+    "sha256": "de0f9ce1aea852298c6269cf83e55b4053a2902b65c4945327e0fea6a1f3f8f2",
+    "rem": [
+      "N_FROZEN_CORE FC\nMEM_TOTAL 3750\nMEM_STATIC 1500\nAUX_BASIS_CORR rimp2-def2-QZVPPD\nSCF_CONVERGENCE 7\nSCF_ALGORITHM  GDM\nUNRESTRICTED True\nTHRESH  14\nSYMMETRY FALSE\nSYM_IGNORE TRUE\nmax_scf_cycles 200\n\nXC_GRID 000099000590\nBASIS DEF2-QZVPPD\nMETHOD = XYG-OS5\nSCF_GUESS = READ\n"
+    ]
+  },
+  {
+    "path": "/clusterfs/mhg-data/yaoshen/coach-based_dh/revwb97m2/scripts/safe_copy_orbitals.py",
+    "sha256": "093740c1cfa7ebf595697119e3638ec17c9f5696bdcb414465c19b262965dfd2",
+    "rem": []
+  }
+]

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "frozen_on": "2026-09-12",
+  "numbering_policy": "Never renumber or reuse IDs; add substeps or append new IDs with a versioned amendment.",
+  "dependency_semantics": "IDs are stable tracking identifiers, not a strict chronological schedule. Step13/14 pilot milestones precede Step12 bulk; their full-data completion follows Step12.",
+  "changes_before_freeze": [
+    "Step5 renamed from checkpoint driver to archive inventory/import.",
+    "Step9 explicitly names constraint implementation; definitions freeze in Step1.",
+    "Step16 renamed to model selection/final model freeze; selection policy freezes in Step1."
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "title": "Authoritative scientific specification",
+      "exit_criterion": "Versioned scientific contract, semantic validator, adversarial tests and hash freeze pass; runtime gates remain separate.",
+      "prerequisites": [],
+      "optional": false
+    },
+    {
+      "id": 2,
+      "title": "COACH baseline and provenance",
+      "exit_criterion": "Verify COACH source method/build/input provenance and parent energy reconstruction.",
+      "prerequisites": [
+        1
+      ],
+      "optional": false
+    },
+    {
+      "id": 3,
+      "title": "Immutable data roles and metrics",
+      "exit_criterion": "Validate exact role, weight, row and metric manifests; preserve final-only exclusions.",
+      "prerequisites": [
+        1
+      ],
+      "optional": false
+    },
+    {
+      "id": 4,
+      "title": "Molecular input and basis authority",
+      "exit_criterion": "Match geometry, charge, spin, basis, auxiliary basis and ECP to authoritative records.",
+      "prerequisites": [
+        1,
+        3
+      ],
+      "optional": false
+    },
+    {
+      "id": 5,
+      "title": "COACH-UKS archive inventory and import",
+      "exit_criterion": "Inventory supplied archives by role, verify source/copy hashes, publish isolated imports without new SCF.",
+      "prerequisites": [
+        2,
+        4
+      ],
+      "optional": false
+    },
+    {
+      "id": 6,
+      "title": "MP2 and RI-MP2 feature gate",
+      "exit_criterion": "Pass same-orbital conventional/RI and OS+SS/denominator/frozen-core checks.",
+      "prerequisites": [
+        5
+      ],
+      "optional": false
+    },
+    {
+      "id": 7,
+      "title": "Future LMP2 acceleration gate",
+      "exit_criterion": "Optional later backend validation; never a prerequisite for canonical RI-MP2.",
+      "prerequisites": [
+        6
+      ],
+      "optional": true
+    },
+    {
+      "id": 8,
+      "title": "Named semilocal/HF/dispersion/PT2 features",
+      "exit_criterion": "Pass native three-grid and scalar/fixed-energy identities at omega=0.27.",
+      "prerequisites": [
+        5,
+        6
+      ],
+      "optional": false
+    },
+    {
+      "id": 9,
+      "title": "DH physical/numerical constraint implementation",
+      "exit_criterion": "Implement/audit C0, UEG, big-M, scalar bounds and selected-grid constraints.",
+      "prerequisites": [
+        1
+      ],
+      "optional": false
+    },
+    {
+      "id": 10,
+      "title": "Resource feasibility tiers",
+      "exit_criterion": "Measure representative native resource tiers and review capacity before bulk.",
+      "prerequisites": [
+        6,
+        8
+      ],
+      "optional": false
+    },
+    {
+      "id": 11,
+      "title": "Resumable production pipeline",
+      "exit_criterion": "Pass atomic publication, restart, source mismatch and isolated-path checks.",
+      "prerequisites": [
+        5,
+        8,
+        9
+      ],
+      "optional": false
+    },
+    {
+      "id": 12,
+      "title": "Full-domain molecular production",
+      "exit_criterion": "Generate approved complete energy-role populations; record failures and coverage.",
+      "prerequisites": [
+        10,
+        11
+      ],
+      "optional": false
+    },
+    {
+      "id": 13,
+      "title": "Reaction/property assembly",
+      "exit_criterion": "Pass pilot stoichiometric/energy identities before bulk; complete role matrices after production.",
+      "prerequisites": [
+        3,
+        8
+      ],
+      "optional": false
+    },
+    {
+      "id": 14,
+      "title": "Schema-aware MIO optimizer",
+      "exit_criterion": "Pass build/solver/readback pilot with exact schema and full-precision audits.",
+      "prerequisites": [
+        9,
+        13
+      ],
+      "optional": false
+    },
+    {
+      "id": 15,
+      "title": "Predeclared M2-total design experiment",
+      "exit_criterion": "Run/audit 138 discovery and 414 selected fits using shared COACH grid rows.",
+      "prerequisites": [
+        12,
+        13,
+        14
+      ],
+      "optional": false
+    },
+    {
+      "id": 16,
+      "title": "Model selection and final model freeze",
+      "exit_criterion": "Apply predeclared NER/diagnostic protocol, resolve review details and freeze final model/K.",
+      "prerequisites": [
+        15
+      ],
+      "optional": false
+    },
+    {
+      "id": 17,
+      "title": "Independent final assessment",
+      "exit_criterion": "Evaluate external roles once after model freeze; record failures and inherited exposure.",
+      "prerequisites": [
+        16
+      ],
+      "optional": false
+    },
+    {
+      "id": 18,
+      "title": "Energy-only implementation and release",
+      "exit_criterion": "Publish reproducible energy evaluator/model/provenance and regression fixtures.",
+      "prerequisites": [
+        17
+      ],
+      "optional": false
+    }
+  ]
+}

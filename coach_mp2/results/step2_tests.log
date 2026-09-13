@@ -1,0 +1,10 @@
+test_carbon_kinetic_attraction_convention (test_step2_baseline.BaselineTests.test_carbon_kinetic_attraction_convention) ... ok
+test_fortran_exponent (test_step2_baseline.BaselineTests.test_fortran_exponent) ... ok
+test_missing_component_rejected (test_step2_baseline.BaselineTests.test_missing_component_rejected) ... ok
+test_perturbed_component_fails (test_step2_baseline.BaselineTests.test_perturbed_component_fails) ... ok
+test_water_closes (test_step2_baseline.BaselineTests.test_water_closes) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.009s
+
+OK
