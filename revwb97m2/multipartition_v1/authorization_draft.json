@@ -1,0 +1,12 @@
+{
+  "released": false,
+  "capacity": 20,
+  "migration_verified": false,
+  "ledger_initialized": false,
+  "indices": {"discovery": [], "selected": []},
+  "source_hashes": {},
+  "ledger": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/dispatch/multipartition_v1/ledger",
+  "receipts": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/dispatch/multipartition_v1/receipts",
+  "discovery_gate": "/clusterfs/mhg-data/yaoshen/coach-based_dh_data/revwb97m2/dispatch/multipartition_v1/discovery_gate.json",
+  "note": "Non-runnable draft. Freeze sources and exact pending indices only after commit and migration-controller validation. Never edit original scientific releases."
+}
