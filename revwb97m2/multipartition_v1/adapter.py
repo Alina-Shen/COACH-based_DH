@@ -18,13 +18,19 @@ def checked_authorization(path):
     if auth.get('released') is not True or auth.get('capacity') != 20:
         raise ValueError('dispatch release not authorized')
     if set(auth['source_hashes']) != {'revwb97m2/multipartition_v1/'+n for n in
-            ('__init__.py', 'policy.py', 'leases.py', 'adapter.py', 'audit.py', 'run.sh')}:
+            ('__init__.py', 'policy.py', 'leases.py', 'adapter.py', 'audit.py', 'run.sh', 'smoke_model.py')}:
         raise ValueError('incomplete dispatch source identity')
     for name, sha in auth['source_hashes'].items():
         if hashlib.sha256((ROOT/name).read_bytes()).hexdigest() != sha:
             raise ValueError('dispatch source changed')
-    if not auth.get('migration_verified') or not auth.get('ledger_initialized'):
+    smoke = auth.get('purpose') == 'smoke'
+    if not smoke and auth.get('baseline_confirmed') is not True:
+        raise ValueError('unconfirmed WLS baseline for production dispatch')
+    if (not smoke and not auth.get('migration_verified')) or not auth.get('ledger_initialized'):
         raise ValueError('migration/admission gate closed')
+    if smoke and (auth['indices'] != {'discovery': [0], 'selected': []}
+                  or DATA/'dispatch' not in Path(auth['smoke_root']).resolve().parents):
+        raise ValueError('invalid isolated smoke authorization')
     for phase, size in (('discovery', 124), ('selected', 414)):
         indices = auth['indices'][phase]
         if (not isinstance(indices, list) or any(type(i) is not int or not 0 <= i < size for i in indices)
@@ -47,22 +53,30 @@ def run(authorization, phase, index):
         raise ValueError('task outside dispatch authorization')
     release = ROOT / ('revwb97m2/manifests/' +
         ('discovery_extension_v1' if phase == 'discovery' else 'selected_full_v1') + '/release_20260911.json')
-    owner = os.environ['SLURM_JOB_ID']+':'+phase+':'+str(index)
+    job_key = (os.environ['SLURM_ARRAY_JOB_ID']+'_'+os.environ['SLURM_ARRAY_TASK_ID']
+               if 'SLURM_ARRAY_JOB_ID' in os.environ else os.environ['SLURM_JOB_ID'])
+    owner = job_key+':'+phase+':'+str(index)
     receipts = Path(auth['receipts'])
     receipts.mkdir(parents=True, exist_ok=True)
     receipt = receipts/(phase+'_'+str(index)+'.json')
     ledger = Ledger(auth['ledger'])
     # A launcher must bound admissions; do not consume an untracked WLS token.
-    deadline = time.monotonic()+600
-    while not ledger.acquire(owner):
-        if time.monotonic() >= deadline:
-            raise RuntimeError('WLS admission timeout; no license environment opened')
-        time.sleep(10)
+    if auth.get('require_reserved_lease'):
+        ledger.activate(owner)
+    else:
+        deadline = time.monotonic()+600
+        while not ledger.acquire(owner):
+            if time.monotonic() >= deadline:
+                raise RuntimeError('WLS admission timeout; no license environment opened')
+            time.sleep(10)
     try:
         p, record, graph, root = e.check(release) if phase == 'discovery' else s.check(release)
         if phase == 'discovery':
             root = Path(p['output_root'])
             task = p['additional_tasks'][index]
+            if auth.get('purpose') == 'smoke':
+                root = Path(auth['smoke_root'])
+                task = {**task, 'seconds': 120}
         else:
             task = [t for t in graph['tasks'] if t['phase'] == 2][index]
             # Refuse a mere grid-file existence test: revalidate the full snapshot.
@@ -96,7 +110,13 @@ def run(authorization, phase, index):
             for key, value in fields.items():
                 env.setParam(key, int(value) if key == 'LICENSEID' else value)
             env.start()
-            old.solve(task, root, graph, arrays, ids, settings, rows, env)
+            if auth.get('purpose') == 'smoke':
+                from .smoke_model import solve
+                solve(old, task, root, graph, arrays, ids, settings, rows, env)
+            else:
+                old.solve(task, root, graph, arrays, ids, settings, rows, env)
+        if auth.get('purpose') == 'smoke':
+            old.c.write(receipts/'smoke_pass.json', {'passed': True, 'job': os.environ['SLURM_JOB_ID']})
     finally:
         # After context-manager disposal, keep the slot occupied for expiry margin.
         ledger.close(owner)

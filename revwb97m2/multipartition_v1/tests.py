@@ -47,8 +47,8 @@ def test_legacy_cooldown_and_crash_fail_closed(tmp_path):
     ledger.seed_legacy(['old_'+str(i) for i in range(3)])
     assert sum(ledger.acquire('new_'+str(i), now=0) for i in range(20)) == 17
     ledger.close('old_0', now=100)
-    assert not ledger.acquire('early', now=429)
-    assert ledger.acquire('after_expiry', now=430)
+    assert not ledger.acquire('early', now=3699)
+    assert ledger.acquire('after_expiry', now=3700)
     assert not ledger.acquire('crashed_owner_not_expired', now=1000000)
     with pytest.raises(ValueError): ledger.seed_legacy([])
 
@@ -59,6 +59,15 @@ def test_duplicate_owner_is_not_double_counted(tmp_path):
     with pytest.raises(ValueError): ledger.acquire('one', now=1)
     ledger.close('one', now=2)
     with pytest.raises(ValueError): ledger.close('one', now=3)
+
+
+def test_dispatch_reservation_handoff(tmp_path):
+    ledger = Ledger(tmp_path)
+    assert ledger.acquire('queued', now=0, reserved=True)
+    ledger.activate('queued')
+    assert not ledger.snapshot()['queued']['reserved']
+    with pytest.raises(ValueError): ledger.activate('queued')
+    with pytest.raises(ValueError): ledger.activate('unknown')
 
 
 def test_unreleased_authorization_rejected(tmp_path):
@@ -75,6 +84,13 @@ def test_expiry_boundary():
     assert occupied({'closed':10}, 339)
     assert not occupied({'closed':10}, 340)
     assert occupied({'closed':None}, 1000000)
+
+
+def test_smoke_reads_gurobi_tupledict_values_not_keys():
+    from types import SimpleNamespace
+    from .smoke_model import values
+    mapping = {j: SimpleNamespace(X=float(j)) for j in range(292)}
+    assert list(values(mapping)) == list(range(292))
 
 
 @pytest.mark.parametrize('solve_fails', [False, True])

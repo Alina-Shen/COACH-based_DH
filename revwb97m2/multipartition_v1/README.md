@@ -1,5 +1,18 @@
 # Multi-partition / 20-session launch update — pre-activation checkpoint
 
+## Latest outcome — activation stopped on license baseline, 2026-09-14
+
+The server rejected job25884706 with **"Too many sessions, 5 active sessions
+for a baseline of 2"**. Earlier brief concurrency success did not establish a
+20-session entitlement. No migration/controller activation occurred. Restored
+only existing array dispatch ceilings to2; running jobs and coach_mp2 unchanged.
+Nineteen local tests pass; cross-node lock checks passed, but corrected real
+adapter solve/readback is not yet fully validated. See [activation report](./ACTIVATION_REPORT.md).
+
+The earlier pre-activation description below is historical. Current code now
+includes a reservation-aware migration controller, chunked pending replacement
+and a mandatory explicit baseline-confirmation gate. Those are **not live**.
+
 Prepared 2026-09-14 following user approval. **Not released or activated.**
 No live jobs held, cancelled, moved or resubmitted in this turn. Existing
 10-fit throttles and original dependency jobs remain intact. All previous

@@ -13,4 +13,7 @@ set -euo pipefail
 cd /clusterfs/mhg-data/yaoshen/coach-based_dh
 export GRB_LICENSE_FILE=/global/home/users/yaoshen/tools/gurobi.lic
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1
+if [[ -n "${SLURM_ARRAY_TASK_ID:-}" ]]; then
+    set -- "$@" --index "$SLURM_ARRAY_TASK_ID"
+fi
 exec /global/home/users/yaoshen/.conda/envs/dh/bin/python -B -u -m revwb97m2.multipartition_v1.adapter "$@"

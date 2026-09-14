@@ -11,7 +11,7 @@ COOLDOWN = 330
 
 
 def occupied(record, now):
-    return record['closed'] is None or now < record['closed'] + COOLDOWN
+    return record['closed'] is None or now < record['closed'] + record.get('cooldown', COOLDOWN)
 
 
 class Ledger:
@@ -33,15 +33,25 @@ class Ledger:
                 os.fsync(stream.fileno())
             os.replace(temp, path)
 
-    def acquire(self, owner, now=None):
+    def acquire(self, owner, now=None, reserved=False):
         now = time.time() if now is None else now
         with self.transaction() as state:
             if owner in state:
                 raise ValueError('lease owner cannot be reused')
             if sum(occupied(r, now) for r in state.values()) >= CAPACITY:
                 return False
-            state[owner] = {'opened': now, 'closed': None}
+            state[owner] = {'opened': now, 'closed': None, 'reserved': reserved}
             return True
+
+    def activate(self, owner):
+        with self.transaction() as state:
+            if owner not in state or not state[owner].get('reserved') or state[owner]['closed'] is not None:
+                raise ValueError('missing or invalid dispatcher reservation')
+            state[owner]['reserved'] = False
+
+    def snapshot(self):
+        with self.transaction() as state:
+            return dict(state)
 
     def close(self, owner, now=None):
         with self.transaction() as state:
@@ -58,4 +68,4 @@ class Ledger:
             if state:
                 raise ValueError('ledger already initialized')
             for owner in owners:
-                state[owner] = {'opened': time.time(), 'closed': None}
+                state[owner] = {'opened': time.time(), 'closed': None, 'cooldown': 3600}
