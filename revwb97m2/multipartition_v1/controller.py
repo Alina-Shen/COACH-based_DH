@@ -91,9 +91,13 @@ def compute_gate(smoke_job, live):
     return reports
 
 
-def activate(root, smoke_job, baseline_confirmed=False):
+def activate(root, smoke_job, baseline_confirmed=False, partition='lr8'):
     if not baseline_confirmed:
         raise ValueError('Gurobi baseline20 must be confirmed for the exact license file before activation')
+    if partition not in ROUTES:
+        raise ValueError('unapproved dispatch partition')
+    account, qos = ROUTES[partition]
+    route_args = ('--partition='+partition, '--account='+account, '--qos='+qos)
     if DATA/'dispatch' not in root.resolve().parents:
         raise ValueError('out-of-scope state root')
     if root.exists(): raise ValueError('state root exists; inspect before resuming')
@@ -108,6 +112,7 @@ def activate(root, smoke_job, baseline_confirmed=False):
     for job in selected: scoped(live,job,'r2_selected_full')
     root.mkdir(parents=True)
     state=dict(stage='preparing', smoke_job=smoke_job, before=live, jobs=[], legacy=[],
+               initial_route=dict(partition=partition, account=account, qos=qos),
                controller_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
     write(root/'state.json',state)
     # Protect descendants before changing/cancelling their dependency parents.
@@ -154,14 +159,14 @@ def activate(root, smoke_job, baseline_confirmed=False):
     write(root/'authorization.json',auth)
     state.update(legacy=legacy, pending_originals=pending, indices=indices)
     write(root/'state.json',state)
-    # Replacement arrays start HELD. lr8 validated by this activation's real smoke.
+    # Replacement arrays start HELD on the explicitly reviewed initial route.
     state['selected_arrays']=[]
     for phase,all_ids in auth['indices'].items():
         for offset in range(0,len(all_ids),200):
             ids=all_ids[offset:offset+200]
             if len(queue())+len(ids)>=999: raise RuntimeError('temporary queue limit would be exceeded')
             job=cmd('sbatch','--parsable','--hold','--array='+','.join(map(str,ids)),
-                '--partition=lr8','--account=lr_mhg2','--qos=mhg2_lr8_normal',
+                *route_args,
                 str(SCRIPT/'run.sh'),'--authorization',str(root/'authorization.json'),'--phase',phase).split(';')[0]
             if phase=='discovery': state['discovery_array']=job
             else: state['selected_arrays'].append(job)
@@ -175,7 +180,7 @@ def activate(root, smoke_job, baseline_confirmed=False):
                 for old_job in old_ids: scoped(now,old_job,'r2_selected_full')
                 cmd('scancel','--state=PENDING',*old_ids)
                 event(root,action='cancel_replaced_selected_leaves',jobs=old_ids,replacement=job)
-    audit=cmd('sbatch','--parsable','--hold','--dependency='+dependency('audit',terminal_jobs=[DISCOVERY,state['discovery_array']]),
+    audit=cmd('sbatch','--parsable','--hold',*route_args,'--dependency='+dependency('audit',terminal_jobs=[DISCOVERY,state['discovery_array']]),
         str(SCRIPT/'audit_job.sh'),'--authorization',str(root/'authorization.json'),
         '--output',str(root/'discovery_gate.json')).split(';')[0]
     state['audit']=audit; write(root/'state.json',state)
@@ -263,6 +268,8 @@ if __name__=='__main__':
     p.add_argument('action',choices=['activate','monitor','once'])
     p.add_argument('--root',type=Path,required=True); p.add_argument('--smoke-job')
     p.add_argument('--baseline-confirmed',action='store_true',help='Only after Support/dashboard confirms baseline20 for the license in use')
+    p.add_argument('--partition', choices=sorted(ROUTES), default='lr8',
+                   help='Reviewed initial replacement/audit route; does not move running jobs')
     a=p.parse_args()
-    if a.action=='activate': activate(a.root,a.smoke_job,a.baseline_confirmed)
+    if a.action=='activate': activate(a.root,a.smoke_job,a.baseline_confirmed,a.partition)
     else: monitor(a.root,once=a.action=='once')

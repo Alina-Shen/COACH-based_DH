@@ -1,5 +1,17 @@
 # Multi-partition / 20-session launch update — pre-activation checkpoint
 
+## Current checkpoint — WLS passed; adapter retest submitted, 2026-09-14
+
+Sustained WLS job 25895401 passed with 16 additional concurrent environments
+alongside two production fits. Adapter/shared-lock retest **25895492** is now
+submitted on cm1 after lr8 hit its shared QOS CPU cap; compute outcome pending.
+Added explicit initial activation `--partition` selection; 24 local tests pass.
+No production migration or throttle changes. Route correction requires commit
+before activation. See [current report](./REACTIVATION_CHECKPOINT.md).
+
+The baseline-two rejection below is a historical checkpoint, superseded by the
+sustained retest for tested access; remaining adapter/activation gates still apply.
+
 ## Latest outcome — activation stopped on license baseline, 2026-09-14
 
 The server rejected job25884706 with **"Too many sessions, 5 active sessions

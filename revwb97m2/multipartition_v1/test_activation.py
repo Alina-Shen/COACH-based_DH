@@ -92,3 +92,28 @@ def test_entitlement_confirmation_required_before_any_scheduler_mutation(simulat
     root,q,events,_=simulation
     with pytest.raises(ValueError,match='baseline20'): c.activate(root,'999')
     assert not events and not root.exists()
+
+
+@pytest.mark.parametrize('partition', list(c.ROUTES))
+def test_explicit_initial_route_for_all_new_submissions(simulation, partition):
+    root,q,events,_=simulation
+    c.activate(root,'999',baseline_confirmed=True,partition=partition)
+    account,qos=c.ROUTES[partition]
+    submissions=[args for args in events if args[0]=='sbatch']
+    assert len(submissions)==5  # discovery, three selected chunks, scientific audit
+    for args in submissions:
+        assert '--partition='+partition in args
+        assert '--account='+account in args
+        assert '--qos='+qos in args
+        assert not any('lowprio' in arg for arg in args)
+    state=json.loads((root/'state.json').read_text())
+    assert state['initial_route']==dict(partition=partition,account=account,qos=qos)
+    assert q[c.DISCOVERY+'_0']['state']=='RUNNING'
+    assert q['25837199']['state']=='RUNNING'
+
+
+def test_invalid_initial_route_before_any_scheduler_mutation(simulation):
+    root,q,events,_=simulation
+    with pytest.raises(ValueError,match='unapproved dispatch partition'):
+        c.activate(root,'999',baseline_confirmed=True,partition='lr_lowprio')
+    assert not events and not root.exists()
