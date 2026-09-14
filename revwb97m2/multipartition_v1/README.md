@@ -1,5 +1,14 @@
 # Multi-partition / 20-session launch update — pre-activation checkpoint
 
+## LIVE — production dispatch activated, 2026-09-14
+
+25895492 and independent compute_gate readback passed. Activated pending-only
+mhg migration: discovery 25895832, selected 25895833/34/35, audit 25895836.
+Original running fits untouched. Shared global20 admission and tmux monitor
+are live; all selected tasks remain behind successful discovery/build/grid gates.
+See [live mapping, verification and monitoring details](./LIVE_ACTIVATION_20260914.md).
+Earlier non-activation checkpoints below are historical.
+
 ## Current checkpoint — WLS passed; adapter retest submitted, 2026-09-14
 
 Sustained WLS job 25895401 passed with 16 additional concurrent environments
